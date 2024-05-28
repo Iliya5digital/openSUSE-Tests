@@ -1,0 +1,743 @@
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:c4C+Jhub5hRX+SLuAoLnaMmENJ9EMNip/AbAWnn2LOQ (RSA)
+SSH host key: SHA256:DDEzgfJjrcpPyM6CVHdjcmY2XNIKLQmAthQeS1THPr8 (ECDSA)
+SSH host key: SHA256:iHl7Wsv9SJKPUUsDr1Oz2plvljLlIwDPF1bk6S6WFU4 (ED25519)
+ens4: 10.0.2.15 fec0::bf82:94a3:f80e:9b38
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:29:38 localhost.localdomain kernel: audit: type=1400 audit(1716881377.653:4): avc:  denied  { map_read map_write } for  pid=1827 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:29:38 localhost.localdomain kernel: audit: type=1400 audit(1716881377.663:5): avc:  denied  { map_read map_write } for  pid=1829 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+1w08R-0-
+hcwl9-0-
+8I3L6-0-
+UfVk_-0-
+OSm16
+SCRIPT_FINISHEDOSm16-1-
+WgXp8-0-
+c6eFV-0-
+unneed_repos_removed
+JL9pQ-0-
+c6eFV-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716881454.717:99): avc:  denied  { map_read map_write } for  pid=2452 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881454.730:100): avc:  denied  { map_read map_write } for  pid=2455 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+1xBk1-0-
+GfrcR-0-
+fDmt2-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716881454.717:99): avc:  denied  { map_read map_write } for  pid=2452 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881454.730:100): avc:  denied  { map_read map_write } for  pid=2455 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+4E2lC-0-
+ksEiS
+# If you change this file, run 'grub2-mkconfig -o /boot/grub2/grub.cfg' afterwards to update
+# /boot/grub2/grub.cfg.
+
+# Uncomment to set your own custom distributor. If you leave it unset or empty, the default
+# policy is to determine the value from /etc/os-release
+# GRUB_DISTRIBUTOR=""
+
+GRUB_DEFAULT=0
+GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_TIMEOUT=-1
+GRUB_CMDLINE_LINUX_DEFAULT="quiet systemd.show_status=yes console=ttyS0,115200 console=tty0 ignition.platform.id=qemu security=selinux selinux=1"
+GRUB_CMDLINE_LINUX=""
+
+# Uncomment to automatically save last booted menu entry in GRUB2 environment
+# variable `saved_entry'
+#GRUB_SAVEDEFAULT="true"
+
+# Uncomment to enable BadRAM filtering, modify to suit your needs
+# This works with Linux (no patch required) and with any kernel that obtains
+# the memory map information from GRUB (GNU Mach, kernel of FreeBSD ...)
+#GRUB_BADRAM="0x01234567,0xfefefefe,0x89abcdef,0xefefefef"
+
+# Uncomment to disable graphical terminal (grub-pc only)
+#GRUB_TERMINAL=console
+
+# The resolution used on graphical terminal
+# note that you can use only modes which your graphic card supports via VBE
+# you can see them in real GRUB with the command `vbeinfo'
+#GRUB_GFXMODE=640x480
+
+# Uncomment if you don't want GRUB to pass "root=UUID=xxx" parameter to Linux
+#GRUB_DISABLE_LINUX_UUID=true
+
+# Uncomment to disable generation of recovery mode menu entries
+#GRUB_DISABLE_RECOVERY="true"
+
+# Uncomment to get a beep at grub start
+#GRUB_INIT_TUNE="480 440 1"
+GRUB_BACKGROUND=
+GRUB_THEME=/boot/grub2/themes/openSUSE/theme.txt
+GRUB_DISTRIBUTOR="openSUSE MicroOS"
+GRUB_GFXMODE=auto
+GRUB_TERMINAL_INPUT="console"
+GRUB_TERMINAL_OUTPUT="gfxterm"
+SUSE_BTRFS_SNAPSHOT_BOOTING=true
+SCRIPT_FINISHEDksEiS-0-
+qPcwv-0-
+[  218.295399][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:c4C+Jhub5hRX+SLuAoLnaMmENJ9EMNip/AbAWnn2LOQ (RSA)
+SSH host key: SHA256:DDEzgfJjrcpPyM6CVHdjcmY2XNIKLQmAthQeS1THPr8 (ECDSA)
+SSH host key: SHA256:iHl7Wsv9SJKPUUsDr1Oz2plvljLlIwDPF1bk6S6WFU4 (ED25519)
+ens4: 10.0.2.15 fe80::a2ca:234:2e97:11c6
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:c4C+Jhub5hRX+SLuAoLnaMmENJ9EMNip/AbAWnn2LOQ (RSA)
+SSH host key: SHA256:DDEzgfJjrcpPyM6CVHdjcmY2XNIKLQmAthQeS1THPr8 (ECDSA)
+SSH host key: SHA256:iHl7Wsv9SJKPUUsDr1Oz2plvljLlIwDPF1bk6S6WFU4 (ED25519)
+ens4: 10.0.2.15 fec0::355e:7b3:fc3b:c04f
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:32:55 localhost kernel: audit: type=1400 audit(1716881574.596:4): avc:  denied  { map_read map_write } for  pid=1027 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:32:55 localhost kernel: audit: type=1400 audit(1716881574.609:5): avc:  denied  { map_read map_write } for  pid=1029 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+7sEnU
+Repository priorities are without effect. All enabled repositories share the same priority.
+
+# | Alias         | Name                                   | Enabled | GPG Check | Refresh | URI
+--+---------------+----------------------------------------+---------+-----------+---------+-------------------------------------------------------------------------------------------------
+1 | NON_OSS       | NON_OSS                                | Yes     | (r ) Yes  | No      | http://openqa.opensuse.org/assets/repo/openSUSE-Tumbleweed-non-oss-x86_64-Snapshot20240527
+2 | OSS           | OSS                                    | Yes     | (r ) Yes  | No      | http://openqa.opensuse.org/assets/repo/openSUSE-Tumbleweed-oss-x86_64-Snapshot20240527
+3 | OSS_DEBUGINFO | OSS_DEBUGINFO                          | Yes     | (r ) Yes  | No      | http://openqa.opensuse.org/assets/repo/openSUSE-Tumbleweed-oss-x86_64-Snapshot20240527-debuginfo
+4 | repo-openh264 | Open H.264 Codec (openSUSE Tumbleweed) | Yes     | (r ) Yes  | Yes     | http://codecs.opensuse.org/openh264/openSUSE_Tumbleweed
+SCRIPT_FINISHED7sEnU-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716881454.717:99): avc:  denied  { map_read map_write } for  pid=2452 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881454.730:100): avc:  denied  { map_read map_write } for  pid=2455 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+[   86.547441][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:DDEzgfJjrcpPyM6CVHdjcmY2XNIKLQmAthQeS1THPr8 (ECDSA)
+SSH host key: SHA256:iHl7Wsv9SJKPUUsDr1Oz2plvljLlIwDPF1bk6S6WFU4 (ED25519)
+SSH host key: SHA256:c4C+Jhub5hRX+SLuAoLnaMmENJ9EMNip/AbAWnn2LOQ (RSA)
+ens4: 10.0.2.15 fec0::d309:9269:2099:5aa0
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:34:32 localhost kernel: audit: type=1400 audit(1716881669.039:4): avc:  denied  { map_read map_write } for  pid=771 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:34:32 localhost kernel: audit: type=1400 audit(1716881669.053:5): avc:  denied  { map_read map_write } for  pid=773 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+OZZyN-0-
+3_jJd
+3.1.4
+SCRIPT_FINISHED3_jJd-0-
+AiHP4-0-
+JgRME-0-
+qFsrT
+Invalid Hash: 0
+SCRIPT_FINISHEDqFsrT-0-
+TCOjS-0-
+JgRME-0-
+2Tq91
+Invalid Pubkey: 0
+SCRIPT_FINISHED2Tq91-1-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716881454.717:99): avc:  denied  { map_read map_write } for  pid=2452 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881454.730:100): avc:  denied  { map_read map_write } for  pid=2455 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+GuucX-2-
+dnjp7-0-
+P5lm3-0-
+juTEW
+dialout
+SCRIPT_FINISHEDjuTEW-0-
+K5iGi-0-
+aReqK-0-
+lOVbB-0-
+YpuUt-0-
+DBgF5
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:C = DE, L = Nue, O = SUSE, CN = security.suse.de
+   i:C = DE, L = Nue, O = SUSE, CN = security.suse.de
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: May 28 07:36:47 2024 GMT; NotAfter: May 28 07:36:47 2025 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIULGpfPHKODR7yP29Iy7+vWO2NIT4wDQYJKoZIhvcNAQEL
+BQAwRTELMAkGA1UEBhMCREUxDDAKBgNVBAcMA051ZTENMAsGA1UECgwEU1VTRTEZ
+MBcGA1UEAwwQc2VjdXJpdHkuc3VzZS5kZTAeFw0yNDA1MjgwNzM2NDdaFw0yNTA1
+MjgwNzM2NDdaMEUxCzAJBgNVBAYTAkRFMQwwCgYDVQQHDANOdWUxDTALBgNVBAoM
+BFNVU0UxGTAXBgNVBAMMEHNlY3VyaXR5LnN1c2UuZGUwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQC1nqygnwd0bxCbGQHk9LX+J53DanICFjAClYjVK2cK
+3/+eWqaD6mYUgCqfU8oo49/OwjsQEJ/m3KA3PTiScZYChskGgYGu+xhmGC1mBe9A
+PRa6pN8iH5y+N7F65GfJtKzXD3vaAQ1oemx9mF4NS2MVjvDRuFP/etLRmpAl9yDt
+RFxjU+5YbB5Q8TnHulXkq7EBo4DFeyPRY4nKAgFT9Z8quJmKfTMnRoH5WY+inXZ4
+zjn3fyLSXWoVLQR+oxpBfiYHg1CQrqnBOsBBA20ZwslMR09v+kxc3G1io2tDZCX8
+YFzsNS0RMye74+j0qAtj926xViDGA6tyDjF5PB/AsicdAgMBAAGjUzBRMB0GA1Ud
+DgQWBBRa4NvNtNrLDm1lFnEQlpGP/sADKzAfBgNVHSMEGDAWgBRa4NvNtNrLDm1l
+FnEQlpGP/sADKzAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCI
+v1sUBDD4jVjh079pUOPtcuW9ObGwYFP/NRxkSZPUIww5ksd6WzdCa5QPKD+67s06
+wECXA+ypHkNVXo9x4tyt49XDTjg9Tvke+u3c1ResXfsJAX8/xnjjYbzLD3R0eH0i
+AbtJ473zIVbRA/T7SVB5CYDP/yuVFiaFeQNaOGhvepEoGj3bgbqcBzyLlySTdJwq
+9R57BT+QeXnjBwi+JO25z4Sc1FU0bSJPKX7Kd7gY/So3k3IvVwRTppeX5biY2TiC
+ljQJci66V7bVW8NbH84LOXN6SLNaCrIOTSb7TTMCKBn5zEtPPoTiELzZBf7hQTOR
+KwAB96Aj4EBiTPpg5C3d
+-----END CERTIFICATE-----
+subject=C = DE, L = Nue, O = SUSE, CN = security.suse.de
+issuer=C = DE, L = Nue, O = SUSE, CN = security.suse.de
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: RSA-PSS
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1435 bytes and written 363 bytes
+Verification error: self-signed certificate
+---
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Server public key is 2048 bit
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 18 (self-signed certificate)
+---
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: E5D52DB2940DAD47087C05347085F0B901BDC01777CD387A9BA9F4F48EA3E621
+    Session-ID-ctx: 
+    Resumption PSK: DF87F73FF1B32E4FF696CCF62C1A2FB26BE77FAD8075523C0DF3EC6559F95F7CE5D1D88716B0C7F6E9B06F8D1EB5989E
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 7200 (seconds)
+    TLS session ticket:
+    0000 - 9d 1e 4b 54 0e a9 8d fa-bc 88 28 4b bc cd 17 43   ..KT......(K...C
+    0010 - cd 34 95 a8 67 32 55 ed-2a c5 35 0b 5b 5f d3 81   .4..g2U.*.5.[_..
+    0020 - f6 de a6 21 66 6e 5c 61-ed 43 5e df 65 e5 78 0e   ...!fn\a.C^.e.x.
+    0030 - 40 2e 93 f8 15 ba 0c da-3f 3f c8 bf 7f e1 17 00   @.......??......
+    0040 - fa 14 b4 e8 34 1b a2 c2-2c f8 13 1c 52 34 b4 fa   ....4...,...R4..
+    0050 - 91 56 02 15 b7 44 8f 98-89 1d 22 e7 11 d0 3b 3b   .V...D...."...;;
+    0060 - 81 e0 02 74 16 89 83 88-e6 f1 25 44 12 8a 98 f4   ...t......%D....
+    0070 - 06 b8 b6 b9 ea f9 17 8a-36 30 7b e7 6a 60 e9 d3   ........60{.j`..
+    0080 - 27 7b 30 8e e5 41 69 59-55 b3 13 49 43 9d 4b 0c   '{0..AiYU..IC.K.
+    0090 - 32 2a d8 82 ed 86 ec 6a-13 e1 23 c1 01 73 3c 96   2*.....j..#..s<.
+    00a0 - 14 ba c1 fb 65 53 ca 98-dc 20 27 51 60 22 0b 60   ....eS... 'Q`".`
+    00b0 - 96 94 93 90 6b 0a 51 3c-7d c0 2a 9e d6 22 7a 80   ....k.Q<}.*.."z.
+    00c0 - 46 21 49 26 63 1f 3e ce-9f fd 56 b6 ac 48 fd de   F!I&c.>...V..H..
+
+    Start Time: 1716881834
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self-signed certificate)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: F2518FBE635499FBB57C7D0500D17CBE5E1A18A4D7B436CFA64C7250AA5A9183
+    Session-ID-ctx: 
+    Resumption PSK: 8055F4A84A0449F6EDC0B21C5DDEB7C7081442B3D371CD833CBCCF930FA206E52AB8FEEFD2D186FCAD0D7674ADE121DE
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 7200 (seconds)
+    TLS session ticket:
+    0000 - 9d 1e 4b 54 0e a9 8d fa-bc 88 28 4b bc cd 17 43   ..KT......(K...C
+    0010 - d3 87 26 bd 2a 76 f0 96-b9 8d 99 0c 0a 2d 4b 43   ..&.*v.......-KC
+    0020 - 85 a5 b0 6c 7c 79 d9 e1-3d 96 f3 9f b4 4b f0 85   ...l|y..=....K..
+    0030 - 29 af d5 ec 8a c9 bb e9-78 dc 6f d5 85 61 18 25   ).......x.o..a.%
+    0040 - 0f b8 39 24 9a 7e a4 5b-cb 3a 19 4a 77 1c 08 d0   ..9$.~.[.:.Jw...
+    0050 - d8 f1 f2 72 b1 2c 68 ec-95 0e 66 99 2a 7e 57 6d   ...r.,h...f.*~Wm
+    0060 - fe 00 ae 6b a5 36 3b ed-ed f4 02 3f 26 37 1e c5   ...k.6;....?&7..
+    0070 - 23 a2 61 83 cd a2 1f f9-65 66 97 58 14 1d 22 b5   #.a.....ef.X..".
+    0080 - cf 44 81 36 ae 0f 0d 7f-2a 72 e0 66 80 7b b5 59   .D.6....*r.f.{.Y
+    0090 - 61 04 e1 aa 7e e8 f0 2c-70 51 4f 44 04 dd 08 53   a...~..,pQOD...S
+    00a0 - 35 e1 a8 7a 56 d3 07 b5-8b f3 96 83 81 9f 8e f7   5..zV...........
+    00b0 - b1 c1 f4 a9 b1 f5 ec 08-44 b2 10 8d 78 d1 83 b6   ........D...x...
+    00c0 - 27 69 b6 9b c7 d4 1d ec-e7 71 15 6e dc 4f 7f 35   'i.......q.n.O.5
+
+    Start Time: 1716881834
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self-signed certificate)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+SCRIPT_FINISHEDDBgF5-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716881454.717:99): avc:  denied  { map_read map_write } for  pid=2452 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881454.730:100): avc:  denied  { map_read map_write } for  pid=2455 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+YpuUt-0-
+JVkhV-1-
+ePvCv-0-
+FDp6k-0-
+[  108.552138][    C0] sysrq: Show State
+[  108.954472][    C0] sysrq: Show Blocked State
+zDBFr-0-
+[   79.101561][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:DDEzgfJjrcpPyM6CVHdjcmY2XNIKLQmAthQeS1THPr8 (ECDSA)
+SSH host key: SHA256:iHl7Wsv9SJKPUUsDr1Oz2plvljLlIwDPF1bk6S6WFU4 (ED25519)
+SSH host key: SHA256:c4C+Jhub5hRX+SLuAoLnaMmENJ9EMNip/AbAWnn2LOQ (RSA)
+ens4: 10.0.2.15 fec0::3964:77f1:5181:877d
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:39:43 localhost kernel: audit: type=1400 audit(1716881980.629:4): avc:  denied  { map_read map_write } for  pid=773 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:39:43 localhost kernel: audit: type=1400 audit(1716881980.629:5): avc:  denied  { map_read map_write } for  pid=775 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+Cipher suites:
+TLS_AES_128_GCM_SHA256                            	0x13, 0x01	TLS1.3
+TLS_AES_256_GCM_SHA384                            	0x13, 0x02	TLS1.3
+TLS_CHACHA20_POLY1305_SHA256                      	0x13, 0x03	TLS1.3
+TLS_AES_128_CCM_SHA256                            	0x13, 0x04	TLS1.3
+TLS_AES_128_CCM_8_SHA256                          	0x13, 0x05	TLS1.3
+TLS_RSA_NULL_MD5                                  	0x00, 0x01	TLS1.0
+TLS_RSA_NULL_SHA1                                 	0x00, 0x02	TLS1.0
+TLS_RSA_NULL_SHA256                               	0x00, 0x3b	TLS1.2
+TLS_RSA_ARCFOUR_128_SHA1                          	0x00, 0x05	TLS1.0
+TLS_RSA_ARCFOUR_128_MD5                           	0x00, 0x04	TLS1.0
+TLS_RSA_3DES_EDE_CBC_SHA1                         	0x00, 0x0a	TLS1.0
+TLS_RSA_AES_128_CBC_SHA1                          	0x00, 0x2f	TLS1.0
+TLS_RSA_AES_256_CBC_SHA1                          	0x00, 0x35	TLS1.0
+TLS_RSA_CAMELLIA_128_CBC_SHA256                   	0x00, 0xba	TLS1.2
+TLS_RSA_CAMELLIA_256_CBC_SHA256                   	0x00, 0xc0	TLS1.2
+TLS_RSA_CAMELLIA_128_CBC_SHA1                     	0x00, 0x41	TLS1.0
+TLS_RSA_CAMELLIA_256_CBC_SHA1                     	0x00, 0x84	TLS1.0
+TLS_RSA_AES_128_CBC_SHA256                        	0x00, 0x3c	TLS1.2
+TLS_RSA_AES_256_CBC_SHA256                        	0x00, 0x3d	TLS1.2
+TLS_RSA_AES_128_GCM_SHA256                        	0x00, 0x9c	TLS1.2
+TLS_RSA_AES_256_GCM_SHA384                        	0x00, 0x9d	TLS1.2
+TLS_RSA_CAMELLIA_128_GCM_SHA256                   	0xc0, 0x7a	TLS1.2
+TLS_RSA_CAMELLIA_256_GCM_SHA384                   	0xc0, 0x7b	TLS1.2
+TLS_RSA_AES_128_CCM                               	0xc0, 0x9c	TLS1.2
+TLS_RSA_AES_256_CCM                               	0xc0, 0x9d	TLS1.2
+TLS_RSA_AES_128_CCM_8                             	0xc0, 0xa0	TLS1.2
+TLS_RSA_AES_256_CCM_8                             	0xc0, 0xa1	TLS1.2
+TLS_DHE_DSS_ARCFOUR_128_SHA1                      	0x00, 0x66	TLS1.0
+TLS_DHE_DSS_3DES_EDE_CBC_SHA1                     	0x00, 0x13	TLS1.0
+TLS_DHE_DSS_AES_128_CBC_SHA1                      	0x00, 0x32	TLS1.0
+TLS_DHE_DSS_AES_256_CBC_SHA1                      	0x00, 0x38	TLS1.0
+TLS_DHE_DSS_CAMELLIA_128_CBC_SHA256               	0x00, 0xbd	TLS1.2
+TLS_DHE_DSS_CAMELLIA_256_CBC_SHA256               	0x00, 0xc3	TLS1.2
+TLS_DHE_DSS_CAMELLIA_128_CBC_SHA1                 	0x00, 0x44	TLS1.0
+TLS_DHE_DSS_CAMELLIA_256_CBC_SHA1                 	0x00, 0x87	TLS1.0
+TLS_DHE_DSS_AES_128_CBC_SHA256                    	0x00, 0x40	TLS1.2
+TLS_DHE_DSS_AES_256_CBC_SHA256                    	0x00, 0x6a	TLS1.2
+TLS_DHE_DSS_AES_128_GCM_SHA256                    	0x00, 0xa2	TLS1.2
+TLS_DHE_DSS_AES_256_GCM_SHA384                    	0x00, 0xa3	TLS1.2
+TLS_DHE_DSS_CAMELLIA_128_GCM_SHA256               	0xc0, 0x80	TLS1.2
+TLS_DHE_DSS_CAMELLIA_256_GCM_SHA384               	0xc0, 0x81	TLS1.2
+TLS_DHE_RSA_3DES_EDE_CBC_SHA1                     	0x00, 0x16	TLS1.0
+TLS_DHE_RSA_AES_128_CBC_SHA1                      	0x00, 0x33	TLS1.0
+TLS_DHE_RSA_AES_256_CBC_SHA1                      	0x00, 0x39	TLS1.0
+TLS_DHE_RSA_CAMELLIA_128_CBC_SHA256               	0x00, 0xbe	TLS1.2
+TLS_DHE_RSA_CAMELLIA_256_CBC_SHA256               	0x00, 0xc4	TLS1.2
+TLS_DHE_RSA_CAMELLIA_128_CBC_SHA1                 	0x00, 0x45	TLS1.0
+TLS_DHE_RSA_CAMELLIA_256_CBC_SHA1                 	0x00, 0x88	TLS1.0
+TLS_DHE_RSA_AES_128_CBC_SHA256                    	0x00, 0x67	TLS1.2
+TLS_DHE_RSA_AES_256_CBC_SHA256                    	0x00, 0x6b	TLS1.2
+TLS_DHE_RSA_AES_128_GCM_SHA256                    	0x00, 0x9e	TLS1.2
+TLS_DHE_RSA_AES_256_GCM_SHA384                    	0x00, 0x9f	TLS1.2
+TLS_DHE_RSA_CAMELLIA_128_GCM_SHA256               	0xc0, 0x7c	TLS1.2
+TLS_DHE_RSA_CAMELLIA_256_GCM_SHA384               	0xc0, 0x7d	TLS1.2
+TLS_DHE_RSA_CHACHA20_POLY1305                     	0xcc, 0xaa	TLS1.2
+TLS_DHE_RSA_AES_128_CCM                           	0xc0, 0x9e	TLS1.2
+TLS_DHE_RSA_AES_256_CCM                           	0xc0, 0x9f	TLS1.2
+TLS_DHE_RSA_AES_128_CCM_8                         	0xc0, 0xa2	TLS1.2
+TLS_DHE_RSA_AES_256_CCM_8                         	0xc0, 0xa3	TLS1.2
+TLS_ECDHE_RSA_NULL_SHA1                           	0xc0, 0x10	TLS1.0
+TLS_ECDHE_RSA_3DES_EDE_CBC_SHA1                   	0xc0, 0x12	TLS1.0
+TLS_ECDHE_RSA_AES_128_CBC_SHA1                    	0xc0, 0x13	TLS1.0
+TLS_ECDHE_RSA_AES_256_CBC_SHA1                    	0xc0, 0x14	TLS1.0
+TLS_ECDHE_RSA_AES_256_CBC_SHA384                  	0xc0, 0x28	TLS1.2
+TLS_ECDHE_RSA_ARCFOUR_128_SHA1                    	0xc0, 0x11	TLS1.0
+TLS_ECDHE_RSA_CAMELLIA_128_CBC_SHA256             	0xc0, 0x76	TLS1.2
+TLS_ECDHE_RSA_CAMELLIA_256_CBC_SHA384             	0xc0, 0x77	TLS1.2
+TLS_ECDHE_ECDSA_NULL_SHA1                         	0xc0, 0x06	TLS1.0
+TLS_ECDHE_ECDSA_3DES_EDE_CBC_SHA1                 	0xc0, 0x08	TLS1.0
+TLS_ECDHE_ECDSA_AES_128_CBC_SHA1                  	0xc0, 0x09	TLS1.0
+TLS_ECDHE_ECDSA_AES_256_CBC_SHA1                  	0xc0, 0x0a	TLS1.0
+TLS_ECDHE_ECDSA_ARCFOUR_128_SHA1                  	0xc0, 0x07	TLS1.0
+TLS_ECDHE_ECDSA_CAMELLIA_128_CBC_SHA256           	0xc0, 0x72	TLS1.2
+TLS_ECDHE_ECDSA_CAMELLIA_256_CBC_SHA384           	0xc0, 0x73	TLS1.2
+TLS_ECDHE_ECDSA_AES_128_CBC_SHA256                	0xc0, 0x23	TLS1.2
+TLS_ECDHE_RSA_AES_128_CBC_SHA256                  	0xc0, 0x27	TLS1.2
+TLS_ECDHE_ECDSA_CAMELLIA_128_GCM_SHA256           	0xc0, 0x86	TLS1.2
+TLS_ECDHE_ECDSA_CAMELLIA_256_GCM_SHA384           	0xc0, 0x87	TLS1.2
+TLS_ECDHE_ECDSA_AES_128_GCM_SHA256                	0xc0, 0x2b	TLS1.2
+TLS_ECDHE_ECDSA_AES_256_GCM_SHA384                	0xc0, 0x2c	TLS1.2
+TLS_ECDHE_RSA_AES_128_GCM_SHA256                  	0xc0, 0x2f	TLS1.2
+TLS_ECDHE_RSA_AES_256_GCM_SHA384                  	0xc0, 0x30	TLS1.2
+TLS_ECDHE_ECDSA_AES_256_CBC_SHA384                	0xc0, 0x24	TLS1.2
+TLS_ECDHE_RSA_CAMELLIA_128_GCM_SHA256             	0xc0, 0x8a	TLS1.2
+TLS_ECDHE_RSA_CAMELLIA_256_GCM_SHA384             	0xc0, 0x8b	TLS1.2
+TLS_ECDHE_RSA_CHACHA20_POLY1305                   	0xcc, 0xa8	TLS1.2
+TLS_ECDHE_ECDSA_CHACHA20_POLY1305                 	0xcc, 0xa9	TLS1.2
+TLS_ECDHE_ECDSA_AES_128_CCM                       	0xc0, 0xac	TLS1.2
+TLS_ECDHE_ECDSA_AES_256_CCM                       	0xc0, 0xad	TLS1.2
+TLS_ECDHE_ECDSA_AES_128_CCM_8                     	0xc0, 0xae	TLS1.2
+TLS_ECDHE_ECDSA_AES_256_CCM_8                     	0xc0, 0xaf	TLS1.2
+TLS_ECDHE_PSK_3DES_EDE_CBC_SHA1                   	0xc0, 0x34	TLS1.0
+TLS_ECDHE_PSK_AES_128_CBC_SHA1                    	0xc0, 0x35	TLS1.0
+TLS_ECDHE_PSK_AES_256_CBC_SHA1                    	0xc0, 0x36	TLS1.0
+TLS_ECDHE_PSK_AES_128_CBC_SHA256                  	0xc0, 0x37	TLS1.2
+TLS_ECDHE_PSK_AES_256_CBC_SHA384                  	0xc0, 0x38	TLS1.2
+TLS_ECDHE_PSK_ARCFOUR_128_SHA1                    	0xc0, 0x33	TLS1.0
+TLS_ECDHE_PSK_NULL_SHA1                           	0xc0, 0x39	TLS1.0
+TLS_ECDHE_PSK_NULL_SHA256                         	0xc0, 0x3a	TLS1.2
+TLS_ECDHE_PSK_NULL_SHA384                         	0xc0, 0x3b	TLS1.0
+TLS_ECDHE_PSK_CAMELLIA_128_CBC_SHA256             	0xc0, 0x9a	TLS1.2
+TLS_ECDHE_PSK_CAMELLIA_256_CBC_SHA384             	0xc0, 0x9b	TLS1.2
+TLS_PSK_ARCFOUR_128_SHA1                          	0x00, 0x8a	TLS1.0
+TLS_PSK_3DES_EDE_CBC_SHA1                         	0x00, 0x8b	TLS1.0
+TLS_PSK_AES_128_CBC_SHA1                          	0x00, 0x8c	TLS1.0
+TLS_PSK_AES_256_CBC_SHA1                          	0x00, 0x8d	TLS1.0
+TLS_PSK_AES_128_CBC_SHA256                        	0x00, 0xae	TLS1.2
+TLS_PSK_AES_256_GCM_SHA384                        	0x00, 0xa9	TLS1.2
+TLS_PSK_CAMELLIA_128_GCM_SHA256                   	0xc0, 0x8e	TLS1.2
+TLS_PSK_CAMELLIA_256_GCM_SHA384                   	0xc0, 0x8f	TLS1.2
+TLS_PSK_AES_128_GCM_SHA256                        	0x00, 0xa8	TLS1.2
+TLS_PSK_NULL_SHA1                                 	0x00, 0x2c	TLS1.0
+TLS_PSK_NULL_SHA256                               	0x00, 0xb0	TLS1.2
+TLS_PSK_CAMELLIA_128_CBC_SHA256                   	0xc0, 0x94	TLS1.2
+TLS_PSK_CAMELLIA_256_CBC_SHA384                   	0xc0, 0x95	TLS1.2
+TLS_PSK_AES_256_CBC_SHA384                        	0x00, 0xaf	TLS1.2
+TLS_PSK_NULL_SHA384                               	0x00, 0xb1	TLS1.2
+TLS_RSA_PSK_ARCFOUR_128_SHA1                      	0x00, 0x92	TLS1.0
+TLS_RSA_PSK_3DES_EDE_CBC_SHA1                     	0x00, 0x93	TLS1.0
+TLS_RSA_PSK_AES_128_CBC_SHA1                      	0x00, 0x94	TLS1.0
+TLS_RSA_PSK_AES_256_CBC_SHA1                      	0x00, 0x95	TLS1.0
+TLS_RSA_PSK_CAMELLIA_128_GCM_SHA256               	0xc0, 0x92	TLS1.2
+TLS_RSA_PSK_CAMELLIA_256_GCM_SHA384               	0xc0, 0x93	TLS1.2
+TLS_RSA_PSK_AES_128_GCM_SHA256                    	0x00, 0xac	TLS1.2
+TLS_RSA_PSK_AES_128_CBC_SHA256                    	0x00, 0xb6	TLS1.2
+TLS_RSA_PSK_NULL_SHA1                             	0x00, 0x2e	TLS1.0
+TLS_RSA_PSK_NULL_SHA256                           	0x00, 0xb8	TLS1.2
+TLS_RSA_PSK_AES_256_GCM_SHA384                    	0x00, 0xad	TLS1.2
+TLS_RSA_PSK_AES_256_CBC_SHA384                    	0x00, 0xb7	TLS1.2
+TLS_RSA_PSK_NULL_SHA384                           	0x00, 0xb9	TLS1.2
+TLS_RSA_PSK_CAMELLIA_128_CBC_SHA256               	0xc0, 0x98	TLS1.2
+TLS_RSA_PSK_CAMELLIA_256_CBC_SHA384               	0xc0, 0x99	TLS1.2
+TLS_DHE_PSK_ARCFOUR_128_SHA1                      	0x00, 0x8e	TLS1.0
+TLS_DHE_PSK_3DES_EDE_CBC_SHA1                     	0x00, 0x8f	TLS1.0
+TLS_DHE_PSK_AES_128_CBC_SHA1                      	0x00, 0x90	TLS1.0
+TLS_DHE_PSK_AES_256_CBC_SHA1                      	0x00, 0x91	TLS1.0
+TLS_DHE_PSK_AES_128_CBC_SHA256                    	0x00, 0xb2	TLS1.2
+TLS_DHE_PSK_AES_128_GCM_SHA256                    	0x00, 0xaa	TLS1.2
+TLS_DHE_PSK_NULL_SHA1                             	0x00, 0x2d	TLS1.0
+TLS_DHE_PSK_NULL_SHA256                           	0x00, 0xb4	TLS1.2
+TLS_DHE_PSK_NULL_SHA384                           	0x00, 0xb5	TLS1.2
+TLS_DHE_PSK_AES_256_CBC_SHA384                    	0x00, 0xb3	TLS1.2
+TLS_DHE_PSK_AES_256_GCM_SHA384                    	0x00, 0xab	TLS1.2
+TLS_DHE_PSK_CAMELLIA_128_CBC_SHA256               	0xc0, 0x96	TLS1.2
+TLS_DHE_PSK_CAMELLIA_256_CBC_SHA384               	0xc0, 0x97	TLS1.2
+TLS_DHE_PSK_CAMELLIA_128_GCM_SHA256               	0xc0, 0x90	TLS1.2
+TLS_DHE_PSK_CAMELLIA_256_GCM_SHA384               	0xc0, 0x91	TLS1.2
+TLS_PSK_AES_128_CCM                               	0xc0, 0xa4	TLS1.2
+TLS_PSK_AES_256_CCM                               	0xc0, 0xa5	TLS1.2
+TLS_DHE_PSK_AES_128_CCM                           	0xc0, 0xa6	TLS1.2
+TLS_DHE_PSK_AES_256_CCM                           	0xc0, 0xa7	TLS1.2
+TLS_PSK_AES_128_CCM_8                             	0xc0, 0xa8	TLS1.2
+TLS_PSK_AES_256_CCM_8                             	0xc0, 0xa9	TLS1.2
+TLS_DHE_PSK_AES_128_CCM_8                         	0xc0, 0xaa	TLS1.2
+TLS_DHE_PSK_AES_256_CCM_8                         	0xc0, 0xab	TLS1.2
+TLS_DHE_PSK_CHACHA20_POLY1305                     	0xcc, 0xad	TLS1.2
+TLS_ECDHE_PSK_CHACHA20_POLY1305                   	0xcc, 0xac	TLS1.2
+TLS_RSA_PSK_CHACHA20_POLY1305                     	0xcc, 0xae	TLS1.2
+TLS_PSK_CHACHA20_POLY1305                         	0xcc, 0xab	TLS1.2
+TLS_DH_ANON_ARCFOUR_128_MD5                       	0x00, 0x18	TLS1.0
+TLS_DH_ANON_3DES_EDE_CBC_SHA1                     	0x00, 0x1b	TLS1.0
+TLS_DH_ANON_AES_128_CBC_SHA1                      	0x00, 0x34	TLS1.0
+TLS_DH_ANON_AES_256_CBC_SHA1                      	0x00, 0x3a	TLS1.0
+TLS_DH_ANON_CAMELLIA_128_CBC_SHA256               	0x00, 0xbf	TLS1.2
+TLS_DH_ANON_CAMELLIA_256_CBC_SHA256               	0x00, 0xc5	TLS1.2
+TLS_DH_ANON_CAMELLIA_128_CBC_SHA1                 	0x00, 0x46	TLS1.0
+TLS_DH_ANON_CAMELLIA_256_CBC_SHA1                 	0x00, 0x89	TLS1.0
+TLS_DH_ANON_AES_128_CBC_SHA256                    	0x00, 0x6c	TLS1.2
+TLS_DH_ANON_AES_256_CBC_SHA256                    	0x00, 0x6d	TLS1.2
+TLS_DH_ANON_AES_128_GCM_SHA256                    	0x00, 0xa6	TLS1.2
+TLS_DH_ANON_AES_256_GCM_SHA384                    	0x00, 0xa7	TLS1.2
+TLS_DH_ANON_CAMELLIA_128_GCM_SHA256               	0xc0, 0x84	TLS1.2
+TLS_DH_ANON_CAMELLIA_256_GCM_SHA384               	0xc0, 0x85	TLS1.2
+TLS_ECDH_ANON_NULL_SHA1                           	0xc0, 0x15	TLS1.0
+TLS_ECDH_ANON_3DES_EDE_CBC_SHA1                   	0xc0, 0x17	TLS1.0
+TLS_ECDH_ANON_AES_128_CBC_SHA1                    	0xc0, 0x18	TLS1.0
+TLS_ECDH_ANON_AES_256_CBC_SHA1                    	0xc0, 0x19	TLS1.0
+TLS_ECDH_ANON_ARCFOUR_128_SHA1                    	0xc0, 0x16	TLS1.0
+TLS_SRP_SHA_3DES_EDE_CBC_SHA1                     	0xc0, 0x1a	TLS1.0
+TLS_SRP_SHA_AES_128_CBC_SHA1                      	0xc0, 0x1d	TLS1.0
+TLS_SRP_SHA_AES_256_CBC_SHA1                      	0xc0, 0x20	TLS1.0
+TLS_SRP_SHA_DSS_3DES_EDE_CBC_SHA1                 	0xc0, 0x1c	TLS1.0
+TLS_SRP_SHA_RSA_3DES_EDE_CBC_SHA1                 	0xc0, 0x1b	TLS1.0
+TLS_SRP_SHA_DSS_AES_128_CBC_SHA1                  	0xc0, 0x1f	TLS1.0
+TLS_SRP_SHA_RSA_AES_128_CBC_SHA1                  	0xc0, 0x1e	TLS1.0
+TLS_SRP_SHA_DSS_AES_256_CBC_SHA1                  	0xc0, 0x22	TLS1.0
+TLS_SRP_SHA_RSA_AES_256_CBC_SHA1                  	0xc0, 0x21	TLS1.0
+TLS_GOSTR341112_256_28147_CNT_IMIT                	0xc1, 0x02	TLS1.2
+
+Certificate types: CTYPE-X.509, CTYPE-Raw Public Key
+Protocols: VERS-TLS1.2, VERS-TLS1.3, VERS-DTLS1.2
+Ciphers: AES-256-CBC, AES-192-CBC, AES-128-CBC, AES-128-GCM, AES-192-GCM, AES-256-GCM, AES-128-CCM, AES-256-CCM, AES-128-CCM-8, AES-256-CCM-8, AES-128-CFB8, AES-192-CFB8, AES-256-CFB8, AES-128-XTS, AES-256-XTS, NULL
+MACs: SHA1, MD5+SHA1, SHA256, SHA384, SHA512, SHA224, UMAC-96, UMAC-128, AEAD, MD5, MD2, RIPEMD160, GOSTR341194, STREEBOG-256, STREEBOG-512, AES-CMAC-128, AES-CMAC-256, AES-GMAC-128, AES-GMAC-192, AES-GMAC-256, GOST28147-TC26Z-IMIT, SHAKE-128, SHAKE-256, OMAC-MAGMA, OMAC-KUZNYECHIK, MAC-NULL
+Digests: SHA1, SHA256, SHA384, SHA512, SHA224, MD5, MD2, RIPEMD160, GOSTR341194, STREEBOG-256, STREEBOG-512, SHAKE-128, SHAKE-256
+Key exchange algorithms: ECDHE-RSA, ECDHE-ECDSA, RSA, DHE-RSA, DHE-DSS, PSK, RSA-PSK, DHE-PSK, ECDHE-PSK, SRP-DSS, SRP-RSA, SRP, ANON-DH, ANON-ECDH, VKO-GOST-12, RSA-EXPORT
+Compression: COMP-NULL, COMP-ZLIB
+Groups: GROUP-SECP256R1, GROUP-SECP384R1, GROUP-SECP521R1, GROUP-X25519, GROUP-X448, GROUP-FFDHE2048, GROUP-FFDHE3072, GROUP-FFDHE4096, GROUP-FFDHE6144, GROUP-FFDHE8192
+Public Key Systems: RSA, RSA-PSS, RSA-OAEP, RSA, DSA, GOST R 34.10-2012-512, GOST R 34.10-2012-256, GOST R 34.10-2001, EC/ECDSA, EdDSA (Ed25519), EdDSA (Ed448), DH, ECDH (X25519), ECDH (X448)
+PK-signatures: SIGN-RSA-SHA256, SIGN-RSA-SHA384, SIGN-RSA-SHA512, SIGN-RSA-PSS-SHA256, SIGN-RSA-PSS-RSAE-SHA256, SIGN-RSA-PSS-SHA384, SIGN-RSA-PSS-RSAE-SHA384, SIGN-RSA-PSS-SHA512, SIGN-RSA-PSS-RSAE-SHA512, SIGN-EdDSA-Ed25519, SIGN-EdDSA-Ed448, SIGN-ECDSA-SHA256, SIGN-ECDSA-SHA384, SIGN-ECDSA-SHA512, SIGN-ECDSA-SECP256R1-SHA256, SIGN-ECDSA-SECP384R1-SHA384, SIGN-ECDSA-SECP521R1-SHA512, SIGN-ECDSA-SHA3-224, SIGN-ECDSA-SHA3-256, SIGN-ECDSA-SHA3-384, SIGN-ECDSA-SHA3-512, SIGN-RSA-SHA3-224, SIGN-RSA-SHA3-256, SIGN-RSA-SHA3-384, SIGN-RSA-SHA3-512, SIGN-DSA-SHA3-224, SIGN-DSA-SHA3-256, SIGN-DSA-SHA3-384, SIGN-DSA-SHA3-512, SIGN-RSA-RAW, SIGN-RSA-SHA1, SIGN-RSA-SHA1, SIGN-RSA-SHA224, SIGN-RSA-RMD160, SIGN-DSA-SHA1, SIGN-DSA-SHA1, SIGN-DSA-SHA224, SIGN-DSA-SHA256, SIGN-RSA-MD5, SIGN-RSA-MD5, SIGN-RSA-MD2, SIGN-ECDSA-SHA1, SIGN-ECDSA-SHA224, SIGN-GOSTR341012-512, SIGN-GOSTR341012-256, SIGN-GOSTR341001, SIGN-DSA-SHA384, SIGN-DSA-SHA512
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+65HkF-0-
+[   84.153230][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:DDEzgfJjrcpPyM6CVHdjcmY2XNIKLQmAthQeS1THPr8 (ECDSA)
+SSH host key: SHA256:iHl7Wsv9SJKPUUsDr1Oz2plvljLlIwDPF1bk6S6WFU4 (ED25519)
+SSH host key: SHA256:c4C+Jhub5hRX+SLuAoLnaMmENJ9EMNip/AbAWnn2LOQ (RSA)
+ens4: 10.0.2.15 fec0::3260:349b:47b7:d546
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:41:12 localhost kernel: audit: type=1400 audit(1716882069.396:4): avc:  denied  { map_read map_write } for  pid=763 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:41:12 localhost kernel: audit: type=1400 audit(1716882069.416:5): avc:  denied  { map_read map_write } for  pid=765 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+3FycY-0-
+_Cmnc-0-
+HSVQw-0-
+1y9mc-0-
+d5bdZ-0-
+lTl0M-0-
+SSe8R-0-
+ITYlW-0-
+_T~2c-0-
+C3hXl-0-
+IaUFF-0-
+ejnEq-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716881454.717:99): avc:  denied  { map_read map_write } for  pid=2452 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881454.730:100): avc:  denied  { map_read map_write } for  pid=2455 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+u3mbW
+gpg (GnuPG) 2.4.5
+libgcrypt 1.10.3
+Copyright (C) 2024 g10 Code GmbH
+License GNU GPL-3.0-or-later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: /root/.gnupg
+Supported algorithms:
+Pubkey: RSA, ECDH, ECDSA, EDDSA
+Cipher: AES, AES192, AES256
+Hash: SHA1, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+SCRIPT_FINISHEDu3mbW-0-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+HZYms-0-
+[  181.247878][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:DDEzgfJjrcpPyM6CVHdjcmY2XNIKLQmAthQeS1THPr8 (ECDSA)
+SSH host key: SHA256:iHl7Wsv9SJKPUUsDr1Oz2plvljLlIwDPF1bk6S6WFU4 (ED25519)
+SSH host key: SHA256:c4C+Jhub5hRX+SLuAoLnaMmENJ9EMNip/AbAWnn2LOQ (RSA)
+ens4: 10.0.2.15 fec0::6c8f:96cd:ecf1:9684
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:44:48 localhost kernel: audit: type=1400 audit(1716882286.323:4): avc:  denied  { map_read map_write } for  pid=762 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:44:48 localhost kernel: audit: type=1400 audit(1716882286.336:5): avc:  denied  { map_read map_write } for  pid=764 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+c40Bj
+1.10.3
+SCRIPT_FINISHEDc40Bj-0-
+FmzV0
+1.10.3
+SCRIPT_FINISHEDFmzV0-0-
+_Evfn-0-
+rggAt-0-
+ElE2N-0-
+zuypF-0-
+gpg: enabled compatibility flags:
+gpg: keybox '/root/.gnupg/pubring.kbx' created
+gpg: invalid item 'S2' in preference string
+gpg: pinentry launched (1383 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: pinentry launched (1385 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: pinentry launched (1387 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: pinentry launched (1389 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: agent_genkey failed: Invalid value
+gpg: key generation failed: Invalid value
+gpg-finished-2
+_Evfn-0-
+rggAt-0-
+ElE2N-0-
+zuypF-0-
+gpg: enabled compatibility flags:
+gpg: invalid item 'S2' in preference string
+gpg: pinentry launched (1402 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: pinentry launched (1404 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: pinentry launched (1406 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: pinentry launched (1408 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: writing self signature
+gpg: invalid item 'S2' in preference string
+gpg: RSA/SHA256 signature from: "304C64E00DF284D5 [?]"
+gpg: writing key binding signature
+gpg: RSA/SHA256 signature from: "304C64E00DF284D5 [?]"
+gpg: RSA/SHA256 signature from: "77CF00D137A99728 [?]"
+gpg: writing public key to '/root/.gnupg/pubring.kbx'
+gpg: /root/.gnupg/trustdb.gpg: trustdb created
+gpg: using pgp trust model
+gpg: key 304C64E00DF284D5: accepted as trusted key
+gpg: directory '/root/.gnupg/openpgp-revocs.d' created
+gpg: writing to '/root/.gnupg/openpgp-revocs.d/7088A1BAE4E3E3733A23077A304C64E00DF284D5.rev'
+gpg: RSA/SHA256 signature from: "304C64E00DF284D5 SUSE Tester 2048 <user@suse.de>"
+gpg: revocation certificate stored as '/root/.gnupg/openpgp-revocs.d/7088A1BAE4E3E3733A23077A304C64E00DF284D5.rev'
+gpg-finished-0
+l9~2P-0-
+ssyut-0-
+a00tB-0-
+1sus1-0-
+gpg: encrypted with rsa2048 key, ID 77CF00D137A99728, created 2024-05-28
+      "SUSE Tester 2048 <user@suse.de>"
+gpg: WARNING: cipher algorithm AES not found in recipient preferences
+foo test content
+ZE~kq-0-
+FHT6K-0-
+_4j~g-0-
+bsF0o-0-
+owAl8-0-
+AZVBz-0-
+_Evfn-0-
+rggAt-0-
+ElE2N-0-
+zuypF-0-
+gpg: enabled compatibility flags:
+gpg: invalid item 'S2' in preference string
+gpg: pinentry launched (1456 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: pinentry launched (1458 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: pinentry launched (1460 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: pinentry launched (1462 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: writing self signature
+gpg: invalid item 'S2' in preference string
+gpg: RSA/SHA256 signature from: "AC7F73B49E321DA8 [?]"
+gpg: writing key binding signature
+gpg: RSA/SHA256 signature from: "AC7F73B49E321DA8 [?]"
+gpg: RSA/SHA256 signature from: "DC1625FB3ACFE33B [?]"
+gpg: writing public key to '[keyboxd]'
+gpg: using pgp trust model
+gpg: key AC7F73B49E321DA8: accepted as trusted key
+gpg: directory '/root/.gnupg/openpgp-revocs.d' created
+gpg: writing to '/root/.gnupg/openpgp-revocs.d/661449011996B9A6C5D20237AC7F73B49E321DA8.rev'
+gpg: RSA/SHA256 signature from: "AC7F73B49E321DA8 SUSE Tester 3072 <user@suse.de>"
+gpg: revocation certificate stored as '/root/.gnupg/openpgp-revocs.d/661449011996B9A6C5D20237AC7F73B49E321DA8.rev'
+gpg-finished-0
+GNlAg-0-
+ssyut-0-
+a00tB-0-
+1sus1-0-
+gpg: encrypted with rsa3072 key, ID DC1625FB3ACFE33B, created 2024-05-28
+      "SUSE Tester 3072 <user@suse.de>"
+gpg: WARNING: cipher algorithm AES not found in recipient preferences
+foo test content
+ZE~kq-0-
+FHT6K-0-
+_4j~g-0-
+bsF0o-0-
+owAl8-0-
+AZVBz-0-
+_Evfn-0-
+rggAt-0-
+ElE2N-0-
+zuypF-0-
+gpg: enabled compatibility flags:
+gpg: invalid item 'S2' in preference string
+gpg: pinentry launched (1525 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: pinentry launched (1527 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: pinentry launched (1529 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: pinentry launched (1531 curses 1.2.1 /dev/tty2 linux - 20620/0/5 0/0 -)
+gpg: writing self signature
+gpg: invalid item 'S2' in preference string
+gpg: RSA/SHA256 signature from: "039522DC27C767FA [?]"
+gpg: writing key binding signature
+gpg: RSA/SHA256 signature from: "039522DC27C767FA [?]"
+gpg: RSA/SHA256 signature from: "A8D27EE11EEAC4AC [?]"
+gpg: writing public key to '[keyboxd]'
+gpg: using pgp trust model
+gpg: key 039522DC27C767FA: accepted as trusted key
+gpg: directory '/root/.gnupg/openpgp-revocs.d' created
+gpg: writing to '/root/.gnupg/openpgp-revocs.d/0A40BA332A7BB094B6A2DAB2039522DC27C767FA.rev'
+gpg: RSA/SHA256 signature from: "039522DC27C767FA SUSE Tester 4096 <user@suse.de>"
+gpg: revocation certificate stored as '/root/.gnupg/openpgp-revocs.d/0A40BA332A7BB094B6A2DAB2039522DC27C767FA.rev'
+gpg-finished-0
+y8sXe-0-
+ssyut-0-
+a00tB-0-
+1sus1-0-
+gpg: encrypted with rsa4096 key, ID A8D27EE11EEAC4AC, created 2024-05-28
+      "SUSE Tester 4096 <user@suse.de>"
+gpg: WARNING: cipher algorithm AES not found in recipient preferences
+foo test content
+ZE~kq-0-
+FHT6K-0-
+_4j~g-0-
+bsF0o-0-
+owAl8-0-
+AZVBz-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716881454.717:99): avc:  denied  { map_read map_write } for  pid=2452 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881454.730:100): avc:  denied  { map_read map_write } for  pid=2455 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+IblXB-0-
+[  383.213989][    T1] reboot: Power down

@@ -1,0 +1,54 @@
+● localhost.localdomain
+    State: degraded
+    Units: 386 loaded (incl. loaded aliases)
+     Jobs: 0 queued
+   Failed: 1 units
+    Since: Tue 2024-05-28 07:34:28 UTC; 1min 12s ago
+  systemd: 255.6+suse.30.g3ea0e1dff3
+   CGroup: /
+           ├─init.scope
+           │ └─1 /usr/lib/systemd/systemd --switched-root --system --deserialize=36
+           ├─system.slice
+           │ ├─ModemManager.service
+           │ │ └─1038 /usr/sbin/ModemManager
+           │ ├─NetworkManager.service
+           │ │ └─1011 /usr/sbin/NetworkManager --no-daemon
+           │ ├─auditd.service
+           │ │ └─945 /sbin/auditd
+           │ ├─chronyd.service
+           │ │ └─1125 /usr/sbin/chronyd
+           │ ├─dbus.service
+           │ │ └─954 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+           │ ├─polkit.service
+           │ │ └─958 /usr/libexec/polkit-1/polkitd --no-debug
+           │ ├─rebootmgr.service
+           │ │ └─1016 /usr/sbin/rebootmgrd --verbose
+           │ ├─system-getty.slice
+           │ │ └─getty@tty1.service
+           │ │   └─1212 /sbin/agetty -o "-p -- \\u" --noclear - linux
+           │ ├─system-serial\x2dgetty.slice
+           │ │ └─serial-getty@ttyS0.service
+           │ │   └─1218 /sbin/agetty -o "-p -- \\u" --keep-baud 115200,57600,38400,9600 - vt220
+           │ ├─systemd-hostnamed.service
+           │ │ └─1474 /usr/lib/systemd/systemd-hostnamed
+           │ ├─systemd-journald.service
+           │ │ └─796 /usr/lib/systemd/systemd-journald
+           │ ├─systemd-logind.service
+           │ │ └─959 /usr/lib/systemd/systemd-logind
+           │ └─systemd-udevd.service
+           │   └─udev
+           │     └─835 /usr/lib/systemd/systemd-udevd
+           └─user.slice
+             └─user-0.slice
+               ├─session-1.scope
+               │ ├─1302 "login -- root"
+               │ └─1320 -bash
+               ├─session-3.scope
+               │ ├─ 1216 "login -- root"
+               │ ├─ 1362 /bin/bash
+               │ ├─12462 systemctl status
+               │ └─12463 tee /tmp/systemctl_status.log
+               └─user@0.service
+                 └─init.scope
+                   ├─1309 /usr/lib/systemd/systemd --user
+                   └─1311 "(sd-pam)"

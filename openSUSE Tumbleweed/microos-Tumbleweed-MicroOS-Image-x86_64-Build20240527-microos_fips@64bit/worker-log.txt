@@ -1,0 +1,23 @@
+[2024-05-28T07:28:42.776776Z] [info] Preparing cgroup to start isotovideo
+[2024-05-28T07:28:42.777360Z] [info] Using cgroup /sys/fs/cgroup/systemd/openqa.slice/openqa-worker.slice/openqa-worker-auto-restart@2.service/4227097
+[2024-05-28T07:28:42.777586Z] [info] Starting isotovideo container
+[2024-05-28T07:28:42.779937Z] [info] isotovideo has been started (PID: 2131)
+[2024-05-28T07:28:42.780776Z] [info] 2131: WORKING 4227097
+[2024-05-28T07:51:02.570804Z] [info] Uploading disk_boot-k-audit.log
+[2024-05-28T07:51:02.610525Z] [info] Uploading journal_check-audit.tar
+[2024-05-28T07:51:02.650313Z] [info] Uploading journal_check-full_journal.log
+[2024-05-28T07:51:02.687681Z] [info] Uploading openssl_pubkey_dsa-basic_health_check.txt
+[2024-05-28T07:51:02.718326Z] [info] Uploading openssl_pubkey_dsa-dmesg.log
+[2024-05-28T07:51:02.746587Z] [info] Uploading openssl_pubkey_dsa-ip-addr-show.log
+[2024-05-28T07:51:02.803268Z] [info] Uploading openssl_pubkey_dsa-journal.log
+[2024-05-28T07:51:02.880068Z] [info] Uploading openssl_pubkey_dsa-loadavg.txt
+[2024-05-28T07:51:02.910978Z] [info] Uploading openssl_pubkey_dsa-problem_detection_logs.tar.xz
+[2024-05-28T07:51:02.946379Z] [info] Uploading openssl_pubkey_dsa-psaxf.log
+[2024-05-28T07:51:02.993882Z] [info] Uploading openssl_pubkey_dsa-resolv-conf.log
+[2024-05-28T07:51:03.052469Z] [info] Uploading openssl_pubkey_dsa-sysconfig.tar.gz
+[2024-05-28T07:51:03.131646Z] [info] Uploading openssl_pubkey_dsa-systemctl.log
+[2024-05-28T07:51:03.169419Z] [info] Uploading openssl_pubkey_dsa-systemctl_status.log
+[2024-05-28T07:51:03.208597Z] [info] Uploading openssl_pubkey_dsa-systemctl_unit-files.log
+[2024-05-28T07:51:04.501838Z] [info] Uploading video.webm
+[2024-05-28T07:51:04.641193Z] [info] Uploading autoinst-log.txt
+[2024-05-28T07:51:04.705783Z] [info] Uploading worker-log.txt
