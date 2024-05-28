@@ -1,0 +1,2750 @@
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+ens4: 10.0.2.15 fec0::a11e:3bbc:5866:9d29
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:30:40 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# zypper -n ref | cat; ( exit ${PIPESTATUS[0]} ); echo gWclj-$?-
+Retrieving repository 'NON_OSS' metadata [..........done]
+Building repository 'NON_OSS' cache [...done]
+Retrieving repository 'OSS' metadata [...........done]
+Building repository 'OSS' cache [....done]
+Retrieving repository 'OSS_DEBUGINFO' metadata [.........done]
+Building repository 'OSS_DEBUGINFO' cache [....done]
+Repository 'Open H.264 Codec (openSUSE Tumbleweed)' is up to date.
+All repositories have been refreshed.
+gWclj-0-
+# zypper -n --gpg-auto-import-keys ref | cat; ( exit ${PIPESTATUS[0]} ); echo 9AZRZ-$?-
+Repository 'NON_OSS' is up to date.
+Repository 'OSS' is up to date.
+Repository 'OSS_DEBUGINFO' is up to date.
+Repository 'Open H.264 Codec (openSUSE Tumbleweed)' is up to date.
+All repositories have been refreshed.
+9AZRZ-0-
+# cd
+# test -f /var/log/audit/audit.log; echo UfVk_-$?-
+UfVk_-0-
+# cat > /tmp/scriptOSm16.sh << 'EOT_OSm16'; echo OSm16-$?-
+> ausearch -m avc -r
+> EOT_OSm16
+OSm16-0-
+# echo OSm16; bash -oe pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-$?-
+OSm16
+type=AVC msg=audit(1716881489.695:99): avc:  denied  { map_read map_write } for  pid=2445 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881489.705:100): avc:  denied  { map_read map_write } for  pid=2448 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+# clear
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+ens4: 10.0.2.15 fec0::ac3e:e6c5:d2c:e09b
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::5777:921:e022:e125
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:36:21 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# grep -E -x "^solver.onlyRequires ?= ?true" /etc/zypp/zypp.conf; echo FOVbo-$?-
+solver.onlyRequires = true
+FOVbo-0-
+# grep -E -x "^rpm.install.excludedocs ?= ?yes" /etc/zypp/zypp.conf; echo iE2kn-$?-
+rpm.install.excludedocs = yes
+iE2kn-0-
+# grep -E -x "^multiversion ?=" /etc/zypp/zypp.conf; echo jViF3-$?-
+multiversion =
+jViF3-0-
+# cd
+# test -f /var/log/audit/audit.log; echo UfVk_-$?-
+UfVk_-0-
+# cat > /tmp/scriptOSm16.sh << 'EOT_OSm16'; echo OSm16-$?-
+> ausearch -m avc -r
+> EOT_OSm16
+OSm16-0-
+# echo OSm16; bash -oe pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-$?-
+OSm16
+type=AVC msg=audit(1716881489.695:99): avc:  denied  { map_read map_write } for  pid=2445 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881489.705:100): avc:  denied  { map_read map_write } for  pid=2448 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+# clear
+# rpm -q perl-Bootloader; echo kCrQm-$?-
+perl-Bootloader-1.13-1.2.x86_64
+kCrQm-0-
+# cat > /tmp/script4iJyf.sh << 'EOT_4iJyf'; echo 4iJyf-$?-
+> rpm -q --qf '%{version}' perl-Bootloader
+> EOT_4iJyf
+4iJyf-0-
+# echo 4iJyf; bash -oe pipefail /tmp/script4iJyf.sh ; echo SCRIPT_FINISHED4iJyf-$?-
+4iJyf
+1.13SCRIPT_FINISHED4iJyf-0-
+# pbl --loader grub2; echo D0H3_-$?-
+D0H3_-0-
+# cat > /tmp/scriptGfWx0.sh << 'EOT_GfWx0'; echo GfWx0-$?-
+> cat /etc/sysconfig/bootloader
+> EOT_GfWx0
+GfWx0-0-
+# echo GfWx0; bash -oe pipefail /tmp/scriptGfWx0.sh ; echo SCRIPT_FINISHEDGfWx0-$?-
+GfWx0
+DEFAULT_APPEND="root=UUID=867e78f3-c199-421a-aaea-06b442c929ea "
+FAILSAFE_APPEND="root=UUID=867e78f3-c199-421a-aaea-06b442c929ea  ide=nodma apm=off noresume edd=off nomodeset 3 "
+LOADER_LOCATION=none
+LOADER_TYPE="grub2"
+SECURE_BOOT=yes
+SCRIPT_FINISHEDGfWx0-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n run pbl --install; echo DmYu~-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n run pbl --install
+Separate /var detected.
+2024-05-28 07:39:38 tukit 4.6.8 started
+2024-05-28 07:39:38 Options: -c4 open 
+2024-05-28 07:39:38 Using snapshot 4 as base for new snapshot 5.
+2024-05-28 07:39:38 /var/lib/overlay/4/etc
+2024-05-28 07:39:38 Syncing /etc of previous snapshot 3 as base into new snapshot "/.snapshots/5/snapshot"
+2024-05-28 07:39:38 SELinux is enabled.
+ID: 5
+2024-05-28 07:39:39 Transaction completed.
+2024-05-28 07:39:39 tukit 4.6.8 started
+2024-05-28 07:39:39 Options: call 5 pbl --install 
+2024-05-28 07:39:40 Executing `pbl --install`:
+2024-05-28 07:39:40 Application returned with exit status 0.
+2024-05-28 07:39:40 Transaction completed.
+2024-05-28 07:39:40 tukit 4.6.8 started
+2024-05-28 07:39:40 Options: close 5 
+2024-05-28 07:39:41 New default snapshot is #5 (/.snapshots/5/snapshot).
+2024-05-28 07:39:41 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #5 (/.snapshots/5/snapshot).
+transactional-update finished
+DmYu~-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882008; echo RHr9b-$?-
+RHr9b-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882008; echo UEj28-$?-
+UEj28-0-
+# diff mnt-1716882008 def-1716882008; echo UNuHO-$?-
+1c1
+< 270
+---
+> 271
+UNuHO-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::4039:1f26:7646:61b2
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:40:57 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n run pbl --config; echo 23SME-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n run pbl --config
+Separate /var detected.
+2024-05-28 07:41:15 tukit 4.6.8 started
+2024-05-28 07:41:15 Options: -c5 open 
+2024-05-28 07:41:15 Using snapshot 5 as base for new snapshot 6.
+2024-05-28 07:41:15 /var/lib/overlay/5/etc
+2024-05-28 07:41:15 Syncing /etc of previous snapshot 4 as base into new snapshot "/.snapshots/6/snapshot"
+2024-05-28 07:41:15 SELinux is enabled.
+ID: 6
+2024-05-28 07:41:16 Transaction completed.
+2024-05-28 07:41:16 tukit 4.6.8 started
+2024-05-28 07:41:16 Options: call 6 pbl --config 
+2024-05-28 07:41:16 Executing `pbl --config`:
+2024-05-28 07:41:17 Application returned with exit status 0.
+2024-05-28 07:41:17 Transaction completed.
+2024-05-28 07:41:17 tukit 4.6.8 started
+2024-05-28 07:41:17 Options: close 6 
+2024-05-28 07:41:18 New default snapshot is #6 (/.snapshots/6/snapshot).
+2024-05-28 07:41:18 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #6 (/.snapshots/6/snapshot).
+transactional-update finished
+23SME-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882078; echo XTcor-$?-
+XTcor-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882078; echo uAnPd-$?-
+uAnPd-0-
+# diff mnt-1716882078 def-1716882078; echo xQY_I-$?-
+1c1
+< 271
+---
+> 272
+xQY_I-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::23d:c249:b38a:f3a3
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:42:07 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# pbl --add-option TEST_OPTION="test_value"; echo HuHS0-$?-
+HuHS0-0-
+# cat > /tmp/scriptksEiS.sh << 'EOT_ksEiS'; echo ksEiS-$?-
+> cat /etc/default/grub
+> EOT_ksEiS
+ksEiS-0-
+# echo ksEiS; bash -oe pipefail /tmp/scriptksEiS.sh ; echo SCRIPT_FINISHEDksEiS-$?-
+ksEiS
+# If you change this file, run 'grub2-mkconfig -o /boot/grub2/grub.cfg' afterwards to update
+# /boot/grub2/grub.cfg.
+
+# Uncomment to set your own custom distributor. If you leave it unset or empty, the default
+# policy is to determine the value from /etc/os-release
+# GRUB_DISTRIBUTOR=""
+
+GRUB_DEFAULT=0
+GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_TIMEOUT=-1
+GRUB_CMDLINE_LINUX_DEFAULT="quiet systemd.show_status=yes console=ttyS0,115200 console=tty0 ignition.platform.id=qemu security=selinux selinux=1 TEST_OPTION=test_value"
+GRUB_CMDLINE_LINUX=""
+
+# Uncomment to automatically save last booted menu entry in GRUB2 environment
+# variable `saved_entry'
+#GRUB_SAVEDEFAULT="true"
+
+# Uncomment to enable BadRAM filtering, modify to suit your needs
+# This works with Linux (no patch required) and with any kernel that obtains
+# the memory map information from GRUB (GNU Mach, kernel of FreeBSD ...)
+#GRUB_BADRAM="0x01234567,0xfefefefe,0x89abcdef,0xefefefef"
+
+# Uncomment to disable graphical terminal (grub-pc only)
+#GRUB_TERMINAL=console
+
+# The resolution used on graphical terminal
+# note that you can use only modes which your graphic card supports via VBE
+# you can see them in real GRUB with the command `vbeinfo'
+#GRUB_GFXMODE=640x480
+
+# Uncomment if you don't want GRUB to pass "root=UUID=xxx" parameter to Linux
+#GRUB_DISABLE_LINUX_UUID=true
+
+# Uncomment to disable generation of recovery mode menu entries
+#GRUB_DISABLE_RECOVERY="true"
+
+# Uncomment to get a beep at grub start
+#GRUB_INIT_TUNE="480 440 1"
+GRUB_BACKGROUND=
+GRUB_THEME=/boot/grub2/themes/openSUSE/theme.txt
+GRUB_DISTRIBUTOR="openSUSE MicroOS"
+GRUB_GFXMODE=auto
+GRUB_TERMINAL_INPUT="console"
+GRUB_TERMINAL_OUTPUT="gfxterm"
+SUSE_BTRFS_SNAPSHOT_BOOTING=true
+SCRIPT_FINISHEDksEiS-0-
+# pbl --del-option "TEST_OPTION"; echo tzGil-$?-
+tzGil-0-
+# ! grep -q "TEST_OPTION" /etc/default/grub; echo x0ONG-$?-
+x0ONG-0-
+# pbl --log /var/log/pbl-test.log --add-option LOG_OPTION="log_value"; echo lywgI-$?-
+lywgI-0-
+# cat > /tmp/scriptX~8bf.sh << 'EOT_X~8bf'; echo X~8bf-$?-
+> cat /var/log/pbl-test.log
+> EOT_X~8bf
+X~8bf-0-
+# echo X~8bf; bash -oe pipefail /tmp/scriptX~8bf.sh ; echo SCRIPT_FINISHEDX~8bf-$?-
+X~8bf
+2024-05-28 07:42:24 <1> pbl-1663: '/usr/lib/bootloader/grub2/add-option LOG_OPTION=log_value' = 0, output:
+>>>>>>>>>>>>>>>>
+cmdline (old): quiet systemd.show_status=yes console=ttyS0,115200 console=tty0 ignition.platform.id=qemu security=selinux selinux=1
+cmdline (new): quiet systemd.show_status=yes console=ttyS0,115200 console=tty0 ignition.platform.id=qemu security=selinux selinux=1 LOG_OPTION=log_value
+<<<<<<<<<<<<<<<<
+SCRIPT_FINISHEDX~8bf-0-
+# cat > /tmp/scriptLWzcL.sh << 'EOT_LWzcL'; echo LWzcL-$?-
+> pbl --default-settings
+> EOT_LWzcL
+LWzcL-0-
+# echo LWzcL; bash -oe pipefail /tmp/scriptLWzcL.sh ; echo SCRIPT_FINISHEDLWzcL-$?-
+LWzcL
+kernel=/usr/lib/modules/6.9.1-1-default/vmlinuz
+initrd=/boot/initrd-6.9.1-1-default
+append="quiet systemd.show_status=yes console=ttyS0,115200 console=tty0 ignition.platform.id=qemu security=selinux selinux=1 LOG_OPTION=log_value"
+SCRIPT_FINISHEDLWzcL-0-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::9f2c:adb7:10ce:fee
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:42:24 UTC 2024 on hvc0
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# getent passwd bernhard; echo GuucX-$?-
+GuucX-2-
+# useradd -m bernhard; echo dnjp7-$?-
+dnjp7-0-
+# echo 'bernhard:nots3cr3t' | chpasswd; echo P5lm3-$?-
+P5lm3-0-
+# chown bernhard /dev/ttyS0 && usermod -a -G tty,dialout,$(stat -c %G /dev/ttyS0) bernhard; echo avWL9-$?-
+avWL9-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n pkg install ansible git-core python3-yamllint ansible-test sudo; echo RNKLS-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n pkg install ansible git-core python3-yamllint ansible-test sudo
+Separate /var detected.
+2024-05-28 07:42:56 tukit 4.6.8 started
+2024-05-28 07:42:56 Options: -c6 open 
+2024-05-28 07:42:56 Using snapshot 6 as base for new snapshot 7.
+2024-05-28 07:42:56 /var/lib/overlay/6/etc
+2024-05-28 07:42:56 Syncing /etc of previous snapshot 5 as base into new snapshot "/.snapshots/7/snapshot"
+2024-05-28 07:42:56 SELinux is enabled.
+ID: 7
+2024-05-28 07:42:57 Transaction completed.
+Calling zypper install
+2024-05-28 07:42:58 tukit 4.6.8 started
+2024-05-28 07:42:58 Options: callext 7 zypper -R {} install -y --auto-agree-with-product-licenses ansible git-core python3-yamllint ansible-test sudo 
+2024-05-28 07:42:59 Executing `zypper -R /tmp/transactional-update-1gHDO4 install -y --auto-agree-with-product-licenses ansible git-core python3-yamllint ansible-test sudo`:
+Loading repository data...
+Reading installed packages...
+'sudo' is already installed.
+No update candidate for 'sudo-1.9.15p5-1.3.x86_64'. The highest available version is already installed.
+'python3-yamllint' not found in package names. Trying capabilities.
+Resolving package dependencies...
+
+The following 25 NEW packages are going to be installed:
+  ansible ansible-core ansible-test git-core libmpdec3 libpython3_11-1_0 libsha1detectcoll1 libyaml-0-2 python311 python311-Jinja2 python311-MarkupSafe python311-PyYAML python311-base python311-cffi python311-cryptography python311-distlib python311-filelock python311-packaging python311-pathspec python311-platformdirs python311-pycparser python311-resolvelib python311-virtualenv python311-yamllint update-alternatives
+
+25 new packages to install.
+Overall download size: 77.3 MiB. Already cached: 0 B. After the operation, additional 456.6 MiB will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 25 packages had to be excluded from file conflicts check because they are not yet downloaded.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: libmpdec3-2.5.1-2.19.x86_64 (repo1) (1/25),  83.1 KiB    
+Retrieving: libmpdec3-2.5.1-2.19.x86_64.rpm [.done]
+( 1/25) Installing: libmpdec3-2.5.1-2.19.x86_64 [..done]
+Retrieving: libsha1detectcoll1-1.0.3-5.1.x86_64 (repo1) (2/25),  25.4 KiB    
+Retrieving: libsha1detectcoll1-1.0.3-5.1.x86_64.rpm [.done]
+( 2/25) Installing: libsha1detectcoll1-1.0.3-5.1.x86_64 [..done]
+Retrieving: libyaml-0-2-0.2.5-2.5.x86_64 (repo1) (3/25),  57.7 KiB    
+Retrieving: libyaml-0-2-0.2.5-2.5.x86_64.rpm [.done]
+( 3/25) Installing: libyaml-0-2-0.2.5-2.5.x86_64 [..done]
+Retrieving: update-alternatives-1.22.6-1.1.x86_64 (repo1) (4/25), 137.3 KiB    
+Retrieving: update-alternatives-1.22.6-1.1.x86_64.rpm [.done]
+( 4/25) Installing: update-alternatives-1.22.6-1.1.x86_64 [..done]
+Retrieving: python311-base-3.11.9-2.1.x86_64 (repo1) (5/25),  10.9 MiB    
+Retrieving: python311-base-3.11.9-2.1.x86_64.rpm [.done]
+( 5/25) Installing: python311-base-3.11.9-2.1.x86_64 [..............done]
+Retrieving: libpython3_11-1_0-3.11.9-2.1.x86_64 (repo1) (6/25),   1.6 MiB    
+Retrieving: libpython3_11-1_0-3.11.9-2.1.x86_64.rpm [.done]
+( 6/25) Installing: libpython3_11-1_0-3.11.9-2.1.x86_64 [..done]
+Retrieving: git-core-2.45.1-1.1.x86_64 (repo1) (7/25),   5.6 MiB    
+Retrieving: git-core-2.45.1-1.1.x86_64.rpm [.done]
+( 7/25) Installing: git-core-2.45.1-1.1.x86_64 [...done]
+Retrieving: python311-3.11.9-2.1.x86_64 (repo1) (8/25), 222.4 KiB    
+Retrieving: python311-3.11.9-2.1.x86_64.rpm [.done]
+( 8/25) Installing: python311-3.11.9-2.1.x86_64 [..done]
+Retrieving: python311-resolvelib-1.0.1-1.5.noarch (repo1) (9/25),  44.7 KiB    
+Retrieving: python311-resolvelib-1.0.1-1.5.noarch.rpm [.done]
+( 9/25) Installing: python311-resolvelib-1.0.1-1.5.noarch [..done]
+Retrieving: python311-pycparser-2.22-1.1.noarch (repo1) (10/25), 266.0 KiB    
+Retrieving: python311-pycparser-2.22-1.1.noarch.rpm [.done]
+(10/25) Installing: python311-pycparser-2.22-1.1.noarch [..done]
+Retrieving: python311-platformdirs-4.2.1-1.1.noarch (repo1) (11/25),  47.7 KiB    
+Retrieving: python311-platformdirs-4.2.1-1.1.noarch.rpm [.done]
+(11/25) Installing: python311-platformdirs-4.2.1-1.1.noarch [..done]
+Retrieving: python311-pathspec-0.12.1-1.5.noarch (repo1) (12/25),  62.3 KiB    
+Retrieving: python311-pathspec-0.12.1-1.5.noarch.rpm [.done]
+(12/25) Installing: python311-pathspec-0.12.1-1.5.noarch [..done]
+Retrieving: python311-packaging-24.0-1.1.noarch (repo1) (13/25),  63.1 KiB    
+Retrieving: python311-packaging-24.0-1.1.noarch.rpm [.done]
+(13/25) Installing: python311-packaging-24.0-1.1.noarch [..done]
+Retrieving: python311-filelock-3.14.0-1.1.noarch (repo1) (14/25),  36.6 KiB    
+Retrieving: python311-filelock-3.14.0-1.1.noarch.rpm [.done]
+(14/25) Installing: python311-filelock-3.14.0-1.1.noarch [..done]
+Retrieving: python311-distlib-0.3.8-1.5.noarch (repo1) (15/25), 274.4 KiB    
+Retrieving: python311-distlib-0.3.8-1.5.noarch.rpm [.done]
+(15/25) Installing: python311-distlib-0.3.8-1.5.noarch [..done]
+Retrieving: python311-PyYAML-6.0.1-3.2.x86_64 (repo1) (16/25), 209.0 KiB    
+Retrieving: python311-PyYAML-6.0.1-3.2.x86_64.rpm [.done]
+(16/25) Installing: python311-PyYAML-6.0.1-3.2.x86_64 [..done]
+Retrieving: python311-MarkupSafe-2.1.5-1.2.x86_64 (repo1) (17/25),  34.7 KiB    
+Retrieving: python311-MarkupSafe-2.1.5-1.2.x86_64.rpm [.done]
+(17/25) Installing: python311-MarkupSafe-2.1.5-1.2.x86_64 [..done]
+Retrieving: python311-cffi-1.16.0-2.2.x86_64 (repo1) (18/25), 367.0 KiB    
+Retrieving: python311-cffi-1.16.0-2.2.x86_64.rpm [.done]
+(18/25) Installing: python311-cffi-1.16.0-2.2.x86_64 [..done]
+Retrieving: python311-virtualenv-20.26.1-1.1.noarch (repo1) (19/25),   3.5 MiB    
+Retrieving: python311-virtualenv-20.26.1-1.1.noarch.rpm [.done]
+(19/25) Installing: python311-virtualenv-20.26.1-1.1.noarch [...done]
+Retrieving: python311-yamllint-1.35.1-1.2.noarch (repo1) (20/25), 110.8 KiB    
+Retrieving: python311-yamllint-1.35.1-1.2.noarch.rpm [.done]
+(20/25) Installing: python311-yamllint-1.35.1-1.2.noarch [..done]
+Retrieving: python311-Jinja2-3.1.4-1.1.x86_64 (repo1) (21/25), 320.4 KiB    
+Retrieving: python311-Jinja2-3.1.4-1.1.x86_64.rpm [.done]
+(21/25) Installing: python311-Jinja2-3.1.4-1.1.x86_64 [..done]
+Retrieving: python311-cryptography-42.0.7-1.1.x86_64 (repo1) (22/25),   1.2 MiB    
+Retrieving: python311-cryptography-42.0.7-1.1.x86_64.rpm [.done]
+(22/25) Installing: python311-cryptography-42.0.7-1.1.x86_64 [...done]
+Retrieving: ansible-core-2.16.7-1.1.noarch (repo1) (23/25),   2.6 MiB    
+Retrieving: ansible-core-2.16.7-1.1.noarch.rpm [.done]
+(23/25) Installing: ansible-core-2.16.7-1.1.noarch [.........done]
+Retrieving: ansible-test-2.16.7-1.1.noarch (repo1) (24/25), 958.8 KiB    
+Retrieving: ansible-test-2.16.7-1.1.noarch.rpm [.done]
+(24/25) Installing: ansible-test-2.16.7-1.1.noarch [.....done]
+Retrieving: ansible-9.6.0-1.1.noarch (repo1) (25/25),  48.7 MiB    
+Retrieving: ansible-9.6.0-1.1.noarch.rpm [..done (27.1 MiB/s)]
+(25/25) Installing: ansible-9.6.0-1.1.noarch [......................................................................................................done]
+2024-05-28 07:43:27 Application returned with exit status 0.
+2024-05-28 07:43:27 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:43:28 tukit 4.6.8 started
+2024-05-28 07:43:28 Options: close 7 
+2024-05-28 07:43:28 New default snapshot is #7 (/.snapshots/7/snapshot).
+2024-05-28 07:43:28 Transaction completed.
+
+Warning: The following files were changed in the snapshot, but are shadowed by
+other mounts and will not be visible to the system:
+/.snapshots/7/snapshot/var/lib/alternatives/virtualenv
+/.snapshots/7/snapshot/var/lib/alternatives/yamllint
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #7 (/.snapshots/7/snapshot).
+transactional-update finished
+RNKLS-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882208; echo GrqsO-$?-
+GrqsO-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882208; echo YJ88O-$?-
+YJ88O-0-
+# diff mnt-1716882208 def-1716882208; echo bhpPI-$?-
+1c1
+< 272
+---
+> 273
+bhpPI-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::9bbd:fe9d:4c03:c185
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:44:28 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# systemctl --no-pager start sshd; echo M1XhL-$?-
+M1XhL-0-
+# echo 'bernhard ALL=(ALL:ALL) NOPASSWD: ALL' | tee -a /etc/sudoers.d/ansible; echo lxl~S-$?-
+bernhard ALL=(ALL:ALL) NOPASSWD: ALL
+lxl~S-0-
+# ssh-keygen -b 2048 -t rsa -N "" -f ~/.ssh/ansible_rsa; echo xX73H-$?-
+Generating public/private rsa key pair.
+Your identification has been saved in /root/.ssh/ansible_rsa
+Your public key has been saved in /root/.ssh/ansible_rsa.pub
+The key fingerprint is:
+SHA256:f/Pf/XOX1jt2QjfXpJ6UQVhzP/xo/HTdUaZbMK3IHbM root@localhost.localdomain
+The key's randomart image is:
++---[RSA 2048]----+
+|             o=.+|
+|            . =B+|
+|           . +.Oo|
+|            o.E+B|
+|        S     ==B|
+|         .   .=+=|
+|          . o+ o*|
+|           . o+*B|
+|              ++&|
++----[SHA256]-----+
+xX73H-0-
+# install -o bernhard -g users -m 0700 -dD /home/bernhard/.ssh; echo 5Lqmy-$?-
+5Lqmy-0-
+# install -o bernhard -g users -m 0644 ~/.ssh/ansible_rsa.pub /home/bernhard/.ssh/authorized_keys; echo P4bj~-$?-
+P4bj~-0-
+# ssh-keyscan localhost >> ~/.ssh/known_hosts; echo ~0kmk-$?-
+# localhost:22 SSH-2.0-OpenSSH_9.6
+# localhost:22 SSH-2.0-OpenSSH_9.6
+# localhost:22 SSH-2.0-OpenSSH_9.6
+# localhost:22 SSH-2.0-OpenSSH_9.6
+# localhost:22 SSH-2.0-OpenSSH_9.6
+~0kmk-0-
+# cat > /tmp/scriptjz3fV.sh << 'EOT_jz3fV'; echo jz3fV-$?-
+> ssh -i ~/.ssh/ansible_rsa bernhard@localhost whoami
+> EOT_jz3fV
+jz3fV-0-
+# echo jz3fV; bash -oe pipefail /tmp/scriptjz3fV.sh ; echo SCRIPT_FINISHEDjz3fV-$?-
+jz3fV
+bernhard
+SCRIPT_FINISHEDjz3fV-0-
+# cat > /tmp/scriptm2lZI.sh << 'EOT_m2lZI'; echo m2lZI-$?-
+> ssh -i ~/.ssh/ansible_rsa bernhard@localhost sudo whoami
+> EOT_m2lZI
+m2lZI-0-
+# echo m2lZI; bash -oe pipefail /tmp/scriptm2lZI.sh ; echo SCRIPT_FINISHEDm2lZI-$?-
+m2lZI
+root
+SCRIPT_FINISHEDm2lZI-0-
+# curl http://10.0.2.2:20303/cjCTJivJDdRIkYXu/data/console/ansible/ | cpio -id; echo 4N1Eu-$?-
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  3292  100  3292    0     0   280k      0 --:--:-- --:--:-- --:--:--  292k
+7 blocks
+4N1Eu-0-
+# mkdir -p ~/ansible_collections/openqa; echo Dikub-$?-
+Dikub-0-
+# mv data ~/ansible_collections/openqa/ansible; echo j6v2l-$?-
+j6v2l-0-
+# cd ~/ansible_collections/openqa/ansible; echo qAJTt-$?-
+qAJTt-0-
+# sed -E 's/ANSIBLEUSER/bernhard/' -i hosts; echo rWpC~-$?-
+rWpC~-0-
+# sed -E 's/COMMUNITYGENERAL//' -i roles/test/tasks/main.yaml; echo 7ZSiV-$?-
+7ZSiV-0-
+# cat > /tmp/scriptnDMmL.sh << 'EOT_nDMmL'; echo nDMmL-$?-
+> ansible --version
+> EOT_nDMmL
+nDMmL-0-
+# echo nDMmL; bash -oe pipefail /tmp/scriptnDMmL.sh ; echo SCRIPT_FINISHEDnDMmL-$?-
+nDMmL
+ansible [core 2.16.7]
+  config file = None
+  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.11/site-packages/ansible
+  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible
+  python version = 3.11.9 (main, Apr 08 2024, 06:18:15) [GCC] (/usr/bin/python3.11)
+  jinja version = 3.1.4
+  libyaml = True
+SCRIPT_FINISHEDnDMmL-0-
+# cat > /tmp/scriptdGK7q.sh << 'EOT_dGK7q'; echo dGK7q-$?-
+> hostnamectl --static
+> EOT_dGK7q
+dGK7q-0-
+# echo dGK7q; bash -oe pipefail /tmp/scriptdGK7q.sh ; echo SCRIPT_FINISHEDdGK7q-$?-
+dGK7q
+
+SCRIPT_FINISHEDdGK7q-0-
+# cat > /tmp/scriptAjD2p.sh << 'EOT_AjD2p'; echo AjD2p-$?-
+> ansible -m setup localhost | grep ansible_hostname
+> EOT_AjD2p
+AjD2p-0-
+# echo AjD2p; bash -oe pipefail /tmp/scriptAjD2p.sh ; echo SCRIPT_FINISHEDAjD2p-$?-
+AjD2p
+[WARNING]: No inventory was parsed, only implicit localhost is available
+        "ansible_hostname": "localhost",
+SCRIPT_FINISHEDAjD2p-0-
+# cat > /tmp/scriptNS758.sh << 'EOT_NS758'; echo NS758-$?-
+> ansible -m setup localhost | grep ansible_architecture
+> EOT_NS758
+NS758-0-
+# echo NS758; bash -oe pipefail /tmp/scriptNS758.sh ; echo SCRIPT_FINISHEDNS758-$?-
+NS758
+[WARNING]: No inventory was parsed, only implicit localhost is available
+        "ansible_architecture": "x86_64",
+SCRIPT_FINISHEDNS758-0-
+# ansible-galaxy install ansible-network.config_manager; echo Jw99T-$?-
+Starting galaxy role install process
+- downloading role 'config_manager', owned by ansible-network
+- downloading role from https://github.com/ansible-network/config_manager/archive/v2.6.2.tar.gz
+- extracting ansible-network.config_manager to /root/.ansible/roles/ansible-network.config_manager
+- ansible-network.config_manager (v2.6.2) was installed successfully
+- adding dependency: ansible-network.network-engine (v2.6.4)
+- extracting ansible-network.network-engine to /root/.ansible/roles/ansible-network.network-engine
+- ansible-network.network-engine (v2.6.4) was installed successfully
+Jw99T-0-
+# cat > /tmp/scriptca8R3.sh << 'EOT_ca8R3'; echo ca8R3-$?-
+> ansible-galaxy list
+> EOT_ca8R3
+ca8R3-0-
+# echo ca8R3; bash -oe pipefail /tmp/scriptca8R3.sh ; echo SCRIPT_FINISHEDca8R3-$?-
+ca8R3
+# /root/.ansible/roles
+- ansible-network.config_manager, v2.6.2
+- ansible-network.network-engine, v2.6.4
+# /usr/share/ansible/roles
+[1;35m[WARNING]: - the configured path /etc/ansible/roles does not exist.[0m
+SCRIPT_FINISHEDca8R3-0-
+# ansible-doc -l community.general | grep zypper; echo yFaVr-$?-
+community.general.zypper                                   Manage packages ...
+community.general.zypper_repository                        Add and remove Z...
+yFaVr-0-
+# which ansible-community; echo Z43ri-$?-
+/usr/bin/ansible-community
+Z43ri-0-
+# ansible-community --version; echo uZ402-$?-
+Ansible community version 9.6.0
+uZ402-0-
+# ansible-playbook -i hosts main.yaml --check; echo h8hEv-$?-
+
+PLAY [openQA Ansible test] *****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] *********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[1;35m[WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.16/reference_appendices/interpreter_discovery.html for more information.[0m
+[0;32mok: [localhost][0m
+
+TASK [test : ansible.builtin.file] *********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [test : Prepare /tmp/ansible/uname.txt using builtin.command module] ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;36mskipping: [localhost][0m
+
+TASK [test : Populate /tmp/ansible/uname.txt using builtin.shell module] *******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;36mskipping: [localhost][0m
+
+TASK [test : Add the user 'johnd' with a specific uid and a primary group] *****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [test : Link /etc/os-release to /tmp/ansible/os-release] ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [test : Copy static file to /tmp/ansible/static.txt] **********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [test : Install ed] *******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mchanged: [localhost][0m
+
+RUNNING HANDLER [test : Create John's README] **********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mchanged: [localhost][0m
+
+PLAY RECAP *********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mlocalhost[0m                  : [0;32mok=7   [0m [0;33mchanged=6   [0m unreachable=0    failed=0    [0;36mskipped=2   [0m rescued=0    ignored=0   
+
+h8hEv-0-
+# ansible-test --help; echo jPMdH-$?-
+usage: ansible-test [-h] [--version] COMMAND ...
+
+positional arguments:
+  COMMAND
+    coverage           code coverage management and reporting
+    env                show information about the test environment
+    shell              open an interactive shell
+    integration        posix integration tests
+    network-integration
+                       network integration tests
+    windows-integration
+                       windows integration tests
+    sanity             sanity tests
+    units              unit tests
+
+options:
+  -h, --help           show this help message and exit
+  --version            show program's version number and exit
+
+Install the "argcomplete" python package to enable tab completion.
+jPMdH-0-
+# ansible-test sanity; echo NLfh1-$?-
+Running sanity test "action-plugin-docs"
+Running sanity test "ansible-doc"
+Running sanity test "changelog"
+Running sanity test "compile" on Python 2.7
+Running sanity test "compile" on Python 3.6
+Running sanity test "compile" on Python 3.7
+Running sanity test "compile" on Python 3.8
+Running sanity test "compile" on Python 3.9
+Running sanity test "compile" on Python 3.10
+Running sanity test "compile" on Python 3.11
+Running sanity test "compile" on Python 3.12
+Running sanity test "empty-init"
+Running sanity test "future-import-boilerplate"
+Running sanity test "ignores"
+Running sanity test "import" on Python 2.7
+Running sanity test "import" on Python 3.6
+Running sanity test "import" on Python 3.7
+Running sanity test "import" on Python 3.8
+Running sanity test "import" on Python 3.9
+Running sanity test "import" on Python 3.10
+Running sanity test "import" on Python 3.11
+Running sanity test "import" on Python 3.12
+Running sanity test "line-endings"
+Installing requirements for Python 3.11 [venv]
+Running sanity test "metaclass-boilerplate"
+Running sanity test "no-assert"
+Running sanity test "no-basestring"
+Running sanity test "no-dict-iteritems"
+Running sanity test "no-dict-iterkeys"
+Running sanity test "no-dict-itervalues"
+Running sanity test "no-get-exception"
+Running sanity test "no-illegal-filenames"
+Running sanity test "no-main-display"
+Running sanity test "no-smart-quotes"
+Running sanity test "no-unicode-literals"
+Running sanity test "pep8"
+Running sanity test "pslint"
+Running sanity test "pylint"
+Running sanity test "replace-urlopen"
+Running sanity test "runtime-metadata"
+Running sanity test "shebang"
+Running sanity test "shellcheck"
+Running sanity test "symlinks"
+Running sanity test "use-argspec-type-path"
+Running sanity test "use-compat-six"
+Running sanity test "validate-modules"
+Running sanity test "yamllint"
+Installing requirements for Python 3.11 [venv]
+Downloading pip 23.1.2 bootstrap script: https://ci-files.testing.ansible.com/ansible-test/get-pip-23.1.2.py
+Cached pip 23.1.2 bootstrap script: /root/.ansible/test/cache/get_pip_23_1_2.py
+Collecting pip==23.1.2
+  Downloading pip-23.1.2-py3-none-any.whl (2.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 42.4 MB/s eta 0:00:00
+Collecting setuptools==67.7.2
+  Downloading setuptools-67.7.2-py3-none-any.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 108.2 MB/s eta 0:00:00
+Collecting wheel==0.37.1
+  Downloading wheel-0.37.1-py2.py3-none-any.whl (35 kB)
+Installing collected packages: wheel, setuptools, pip
+Successfully installed pip-23.1.2 setuptools-67.7.2 wheel-0.37.1
+Collecting pathspec==0.11.2 (from -r requirements/sanity.yamllint.txt (line 2))
+  Downloading pathspec-0.11.2-py3-none-any.whl (29 kB)
+Collecting PyYAML==6.0.1 (from -r requirements/sanity.yamllint.txt (line 3))
+  Downloading PyYAML-6.0.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (757 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 757.7/757.7 kB 27.3 MB/s eta 0:00:00
+Collecting yamllint==1.32.0 (from -r requirements/sanity.yamllint.txt (line 4))
+  Downloading yamllint-1.32.0-py3-none-any.whl (65 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.4/65.4 kB 31.5 MB/s eta 0:00:00
+Installing collected packages: PyYAML, pathspec, yamllint
+Successfully installed PyYAML-6.0.1 pathspec-0.11.2 yamllint-1.32.0
+NLfh1-0-
+# ansible -i hosts all --list-hosts; echo G8Nyl-$?-
+  hosts (1):
+    localhost
+G8Nyl-0-
+# ansible-playbook -i hosts main.yaml; echo Udp0a-$?-
+
+PLAY [openQA Ansible test] *****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] *********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[1;35m[WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.16/reference_appendices/interpreter_discovery.html for more information.[0m
+[0;32mok: [localhost][0m
+
+TASK [test : ansible.builtin.file] *********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [test : Prepare /tmp/ansible/uname.txt using builtin.command module] ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [test : Populate /tmp/ansible/uname.txt using builtin.shell module] *******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [test : Add the user 'johnd' with a specific uid and a primary group] *****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [test : Link /etc/os-release to /tmp/ansible/os-release] ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [test : Copy static file to /tmp/ansible/static.txt] **********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [test : Install ed] *******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mchanged: [localhost][0m
+
+RUNNING HANDLER [test : Create John's README] **********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mchanged: [localhost][0m
+
+PLAY RECAP *********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+[0;33mlocalhost[0m                  : [0;32mok=9   [0m [0;33mchanged=8   [0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+Udp0a-0-
+# cat > /tmp/scriptX6yxj.sh << 'EOT_X6yxj'; echo X6yxj-$?-
+> uname -r
+> EOT_X6yxj
+X6yxj-0-
+# echo X6yxj; bash -oe pipefail /tmp/scriptX6yxj.sh ; echo SCRIPT_FINISHEDX6yxj-$?-
+X6yxj
+6.9.1-1-default
+SCRIPT_FINISHEDX6yxj-0-
+# cat > /tmp/scriptgUT2o.sh << 'EOT_gUT2o'; echo gUT2o-$?-
+> cat /tmp/ansible/uname.txt
+> EOT_gUT2o
+gUT2o-0-
+# echo gUT2o; bash -oe pipefail /tmp/scriptgUT2o.sh ; echo SCRIPT_FINISHEDgUT2o-$?-
+gUT2o
+6.9.1-1-default
+SCRIPT_FINISHEDgUT2o-0-
+# cat > /tmp/scriptiEDXZ.sh << 'EOT_iEDXZ'; echo iEDXZ-$?-
+> cat /tmp/ansible/static.txt
+> EOT_iEDXZ
+iEDXZ-0-
+# echo iEDXZ; bash -oe pipefail /tmp/scriptiEDXZ.sh ; echo SCRIPT_FINISHEDiEDXZ-$?-
+iEDXZ
+I will stay the same.
+SCRIPT_FINISHEDiEDXZ-0-
+# cat > /tmp/scriptv6owO.sh << 'EOT_v6owO'; echo v6owO-$?-
+> readlink /tmp/ansible/os-release
+> EOT_v6owO
+v6owO-0-
+# echo v6owO; bash -oe pipefail /tmp/scriptv6owO.sh ; echo SCRIPT_FINISHEDv6owO-$?-
+v6owO
+/etc/os-release
+SCRIPT_FINISHEDv6owO-0-
+# cat > /tmp/script0ZyY~.sh << 'EOT_0ZyY~'; echo 0ZyY~-$?-
+> sudo -u johnd cat /home/johnd/README.txt
+> EOT_0ZyY~
+0ZyY~-0-
+# echo 0ZyY~; bash -oe pipefail /tmp/script0ZyY~.sh ; echo SCRIPT_FINISHED0ZyY~-$?-
+0ZyY~
+Welcome to my x86_64 dynamic kingdom!
+SCRIPT_FINISHED0ZyY~-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882333; echo J5SmG-$?-
+J5SmG-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882333; echo Wn6ET-$?-
+Wn6ET-0-
+# diff mnt-1716882333 def-1716882333; echo Q9Rlu-$?-
+1c1
+< 273
+---
+> 277
+Q9Rlu-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::f693:9f9f:c48e:fe2
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:46:23 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# which ed; echo QPCd5-$?-
+/usr/bin/ed
+QPCd5-0-
+# echo '0Rs36NA3' > ./ranom_password.txt; echo Hlope-$?-
+Hlope-0-
+# echo 'Qts01RHzthejXcGVC2Ln1VJj21wQ1t' > ./ranom_content.txt; echo VvIXA-$?-
+VvIXA-0-
+# echo "---" > ./encrypted_content.yaml; echo IFmMJ-$?-
+IFmMJ-0-
+# cat ./ranom_content.txt | ansible-vault encrypt_string --vault-password-file ./ranom_password.txt --stdin-name random_content | tee -a ./encrypted_content.yaml; echo 3KchO-$?-
+random_content: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          32316338616234666539313065343566373534666332653331636630663733363062616133626462
+          6364653537303064616562366531336663353436643165300a623464303462623432323965336466
+          65323736666463363237653636636534643663353961613337303832306565343238633231303662
+          3838393234656331650a646537306235646634396532643139626162323861383262646266356434
+          39653733346262663966653832666538333534386661333036666530663730376339
+3KchO-0-
+# cat > /tmp/scriptS3Iqi.sh << 'EOT_S3Iqi'; echo S3Iqi-$?-
+> ansible localhost --vault-password-file ./ranom_password.txt -e "@./encrypted_content.yaml" -m debug -a var=random_content
+> EOT_S3Iqi
+S3Iqi-0-
+# echo S3Iqi; bash -oe pipefail /tmp/scriptS3Iqi.sh ; echo SCRIPT_FINISHEDS3Iqi-$?-
+S3Iqi
+[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available[0m
+[0;32mlocalhost | SUCCESS => {[0m
+[0;32m    "random_content": "Qts01RHzthejXcGVC2Ln1VJj21wQ1t\n"[0m
+[0;32m}[0m
+SCRIPT_FINISHEDS3Iqi-0-
+# cd; echo SYy2c-$?-
+SYy2c-0-
+# rm -rf ~/ansible_collections/ /tmp/ansible/; echo VsmVB-$?-
+VsmVB-0-
+# rm -rf /etc/sudoers.d/ansible; echo WDK8E-$?-
+WDK8E-0-
+# rm -rf ~/.ssh/ansible_rsa*; echo vvKHD-$?-
+vvKHD-0-
+# userdel -rf johnd; echo 8qIyQ-$?-
+8qIyQ-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n pkg remove ansible git-core python3-yamllint ansible-test ed; echo 2vbii-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n pkg remove ansible git-core python3-yamllint ansible-test ed
+Separate /var detected.
+2024-05-28 07:46:41 tukit 4.6.8 started
+2024-05-28 07:46:41 Options: -c8 open 
+2024-05-28 07:46:42 Using snapshot 8 as base for new snapshot 9.
+2024-05-28 07:46:42 /var/lib/overlay/8/etc
+2024-05-28 07:46:42 Syncing /etc of previous snapshot 7 as base into new snapshot "/.snapshots/9/snapshot"
+2024-05-28 07:46:42 SELinux is enabled.
+ID: 9
+2024-05-28 07:46:42 Transaction completed.
+Calling zypper remove
+2024-05-28 07:46:43 tukit 4.6.8 started
+2024-05-28 07:46:43 Options: callext 9 zypper -R {} remove -y ansible git-core python3-yamllint ansible-test ed 
+2024-05-28 07:46:44 Executing `zypper -R /tmp/transactional-update-2t2BN8 remove -y ansible git-core python3-yamllint ansible-test ed`:
+Reading installed packages...
+'python3-yamllint' not found in package names. Trying capabilities.
+Resolving package dependencies...
+
+The following 5 packages are going to be REMOVED:
+  ansible ansible-test ed git-core python311-yamllint
+
+5 packages to remove.
+After the operation, 378.3 MiB will be freed.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+(1/5) Removing: ansible-9.6.0-1.1.noarch [...done]
+(2/5) Removing: ansible-test-2.16.7-1.1.noarch [..done]
+(3/5) Removing: ed-1.20.2-1.1.x86_64 [..done]
+(4/5) Removing: git-core-2.45.1-1.1.x86_64 [..done]
+(5/5) Removing: python311-yamllint-1.35.1-1.2.noarch [..done]
+2024-05-28 07:46:47 Application returned with exit status 0.
+2024-05-28 07:46:47 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:46:47 tukit 4.6.8 started
+2024-05-28 07:46:47 Options: close 9 
+2024-05-28 07:46:48 New default snapshot is #9 (/.snapshots/9/snapshot).
+2024-05-28 07:46:48 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #9 (/.snapshots/9/snapshot).
+transactional-update finished
+2vbii-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882408; echo DThO~-$?-
+DThO~-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882408; echo 1iNs4-$?-
+1iNs4-0-
+# diff mnt-1716882408 def-1716882408; echo 0b4Ot-$?-
+1c1
+< 277
+---
+> 278
+0b4Ot-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::98d:642a:138a:365a
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:47:37 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cd
+# test -f /var/log/audit/audit.log; echo UfVk_-$?-
+UfVk_-0-
+# cat > /tmp/scriptOSm16.sh << 'EOT_OSm16'; echo OSm16-$?-
+> ausearch -m avc -r
+> EOT_OSm16
+OSm16-0-
+# echo OSm16; bash -oe pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-$?-
+OSm16
+type=AVC msg=audit(1716881489.695:99): avc:  denied  { map_read map_write } for  pid=2445 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881489.705:100): avc:  denied  { map_read map_write } for  pid=2448 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+# clear
+# rpm -qi chrony; echo Ju778-$?-
+Name        : chrony
+Version     : 4.5
+Release     : 1.1
+Architecture: x86_64
+Install Date: Thu Mar 21 08:48:34 2024
+Group       : Productivity/Networking/Other
+Size        : 613303
+License     : GPL-2.0-only
+Signature   : RSA/SHA512, Tue Feb 27 22:32:25 2024, Key ID 35a2f86e29b700a4
+Source RPM  : chrony-4.5-1.1.src.rpm
+Build Date  : Tue Feb 27 22:30:39 2024
+Build Host  : i02-ch2d
+Packager    : https://bugs.opensuse.org
+Vendor      : openSUSE
+URL         : https://chrony.tuxfamily.org/
+Summary     : System Clock Synchronization Client and Server
+Description :
+Chrony is an implementation of the Network Time Protocol (NTP). It can
+synchronize the system clock with NTP servers, reference clocks (e.g. a
+GPS receiver), and manual input using wristwatch and keyboard. It can
+also operate as an NTPv4 (RFC 5905) server and peer to provide a time
+service to other computers in the network.
+
+Chrony consists of two programs: chronyd and chronyc.
+
+Chronyd is a daemon which runs in the background on the system. It
+obtains measurements of the system clock’s offset relative to time
+servers on other systems via the network and adjusts the system time
+accordingly. For isolated systems, the user can periodically enter the
+correct time by hand (using chronyc). In either case, chronyd
+determines the rate at which the computer gains or loses time, and
+compensates for this. Chronyd can act as either a client or a server.
+
+Chronyc provides a user interface to chronyd for monitoring its
+performance and configuring various settings. It can do so while
+running on the same computer as the chronyd instance it is controlling
+or a different computer.
+Distribution: openSUSE Tumbleweed
+Ju778-0-
+# systemctl --no-pager start chronyd; echo dBwaU-$?-
+dBwaU-0-
+# chronyc makestep; echo Mnsfu-$?-
+200 OK
+Mnsfu-0-
+# cat > /tmp/scriptnhUyk.sh << 'EOT_nhUyk'; echo nhUyk-$?-
+> date +"%Y-%m-%d"
+> EOT_nhUyk
+nhUyk-0-
+# echo nhUyk; bash -oe pipefail /tmp/scriptnhUyk.sh ; echo SCRIPT_FINISHEDnhUyk-$?-
+nhUyk
+2024-05-28
+SCRIPT_FINISHEDnhUyk-0-
+# LC_TIME=C.UTF-8 who; echo hGono-$?-
+root     seat0        2024-05-28 07:47
+root     tty2         2024-05-28 07:47
+root     hvc0         2024-05-28 07:47
+hGono-0-
+# last -F; echo OgLJY-$?-
+root     hvc0                          Tue May 28 07:47:55 2024 - still logged in          
+root     tty2                          Tue May 28 07:47:37 2024 - still logged in          
+reboot   system boot  6.9.1-1-default  Tue May 28 07:47:03 2024 - still running            
+root     hvc0                          Tue May 28 07:46:40 2024 - Tue May 28 07:46:49 2024  (00:00)
+root     tty2                          Tue May 28 07:46:23 2024 - crash                    
+reboot   system boot  6.9.1-1-default  Tue May 28 07:45:48 2024 - Tue May 28 07:46:50 2024  (00:01)
+bernhard pts/20       ::1              Tue May 28 07:45:33 2024 - Tue May 28 07:45:33 2024  (00:00)
+bernhard pts/19       ::1              Tue May 28 07:45:33 2024 - Tue May 28 07:45:33 2024  (00:00)
+bernhard pts/18       ::1              Tue May 28 07:45:22 2024 - Tue May 28 07:45:33 2024  (00:00)
+bernhard pts/17       ::1              Tue May 28 07:45:21 2024 - Tue May 28 07:45:21 2024  (00:00)
+bernhard pts/16       ::1              Tue May 28 07:45:21 2024 - Tue May 28 07:45:21 2024  (00:00)
+bernhard pts/15       ::1              Tue May 28 07:45:20 2024 - Tue May 28 07:45:21 2024  (00:00)
+bernhard pts/14       ::1              Tue May 28 07:45:19 2024 - Tue May 28 07:45:20 2024  (00:00)
+bernhard pts/13       ::1              Tue May 28 07:45:19 2024 - Tue May 28 07:45:19 2024  (00:00)
+bernhard pts/12       ::1              Tue May 28 07:45:18 2024 - Tue May 28 07:45:18 2024  (00:00)
+bernhard pts/11       ::1              Tue May 28 07:45:18 2024 - Tue May 28 07:45:18 2024  (00:00)
+bernhard pts/10       ::1              Tue May 28 07:45:17 2024 - Tue May 28 07:45:18 2024  (00:00)
+bernhard pts/9        ::1              Tue May 28 07:45:10 2024 - Tue May 28 07:45:10 2024  (00:00)
+bernhard pts/8        ::1              Tue May 28 07:44:58 2024 - Tue May 28 07:45:10 2024  (00:00)
+bernhard pts/7        ::1              Tue May 28 07:44:57 2024 - Tue May 28 07:44:58 2024  (00:00)
+bernhard pts/6        ::1              Tue May 28 07:44:57 2024 - Tue May 28 07:44:57 2024  (00:00)
+bernhard pts/5        ::1              Tue May 28 07:44:57 2024 - Tue May 28 07:44:57 2024  (00:00)
+bernhard pts/4        ::1              Tue May 28 07:44:56 2024 - Tue May 28 07:44:56 2024  (00:00)
+bernhard pts/3        ::1              Tue May 28 07:44:56 2024 - Tue May 28 07:44:56 2024  (00:00)
+bernhard pts/2        ::1              Tue May 28 07:44:55 2024 - Tue May 28 07:44:56 2024  (00:00)
+bernhard pts/1        ::1              Tue May 28 07:44:54 2024 - Tue May 28 07:44:55 2024  (00:00)
+root     hvc0                          Tue May 28 07:44:46 2024 - Tue May 28 07:45:35 2024  (00:00)
+root     tty2                          Tue May 28 07:44:28 2024 - crash                    
+reboot   system boot  6.9.1-1-default  Tue May 28 07:43:55 2024 - Tue May 28 07:45:35 2024  (00:01)
+root     tty2                          Tue May 28 07:43:37 2024 - Tue May 28 07:43:42 2024  (00:00)
+root     hvc0                          Tue May 28 07:42:55 2024 - Tue May 28 07:43:42 2024  (00:00)
+reboot   system boot  6.9.1-1-default  Tue May 28 07:42:38 2024 - Tue May 28 07:43:43 2024  (00:01)
+root     hvc0                          Tue May 28 07:42:24 2024 - Tue May 28 07:42:25 2024  (00:00)
+root     tty2                          Tue May 28 07:42:07 2024 - Tue May 28 07:42:25 2024  (00:00)
+reboot   system boot  6.9.1-1-default  Tue May 28 07:41:32 2024 - Tue May 28 07:42:26 2024  (00:00)
+root     hvc0                          Tue May 28 07:41:14 2024 - Tue May 28 07:41:19 2024  (00:00)
+root     tty2                          Tue May 28 07:40:57 2024 - crash                    
+reboot   system boot  6.9.1-1-default  Tue May 28 07:40:22 2024 - Tue May 28 07:41:20 2024  (00:00)
+root     hvc0                          Tue May 28 07:37:34 2024 - Tue May 28 07:39:42 2024  (00:02)
+root     tty2                          Tue May 28 07:36:21 2024 - Tue May 28 07:39:42 2024  (00:03)
+reboot   system boot  6.9.1-1-default  Tue May 28 07:35:46 2024 - Tue May 28 07:39:43 2024  (00:03)
+root     tty2                          Tue May 28 07:34:41 2024 - Tue May 28 07:35:33 2024  (00:00)
+reboot   system boot  6.9.1-1-default  Tue May 28 07:34:06 2024 - Tue May 28 07:35:34 2024  (00:01)
+root     hvc0                          Tue May 28 07:32:38 2024 - Tue May 28 07:33:53 2024  (00:01)
+root     tty2                          Tue May 28 07:30:40 2024 - Tue May 28 07:33:53 2024  (00:03)
+reboot   system boot  6.9.1-1-default  Tue May 28 07:29:36 2024 - Tue May 28 07:33:54 2024  (00:04)
+
+/var/lib/wtmpdb/wtmp.db begins Tue May 28 07:29:36 2024
+OgLJY-0-
+# systemctl --no-pager disable chronyd.service; echo 86fbq-$?-
+Removed "/etc/systemd/system/multi-user.target.wants/chronyd.service".
+86fbq-0-
+# systemctl --no-pager stop chronyd.service; echo R91Rg-$?-
+R91Rg-0-
+# cat > /tmp/scriptTPIpE.sh << 'EOT_TPIpE'; echo TPIpE-$?-
+> timedatectl status
+> EOT_TPIpE
+TPIpE-0-
+# echo TPIpE; bash -oe pipefail /tmp/scriptTPIpE.sh ; echo SCRIPT_FINISHEDTPIpE-$?-
+TPIpE
+               Local time: Tue 2024-05-28 07:47:56 UTC
+           Universal time: Tue 2024-05-28 07:47:56 UTC
+                 RTC time: Tue 2024-05-28 07:47:56
+                Time zone: Etc/UTC (UTC, +0000)
+System clock synchronized: no
+              NTP service: inactive
+          RTC in local TZ: no
+SCRIPT_FINISHEDTPIpE-0-
+# timedatectl set-time "2038-01-20 03:14:07"; echo gOWa9-$?-
+gOWa9-0-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::a9e7:a3ba:469b:44ac
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Wed Jan 20 03:14:59 UTC 2038 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptTPIpE.sh << 'EOT_TPIpE'; echo TPIpE-$?-
+> timedatectl status
+> EOT_TPIpE
+TPIpE-0-
+# echo TPIpE; bash -oe pipefail /tmp/scriptTPIpE.sh ; echo SCRIPT_FINISHEDTPIpE-$?-
+TPIpE
+               Local time: Wed 2038-01-20 03:15:16 UTC
+           Universal time: Wed 2038-01-20 03:15:16 UTC
+                 RTC time: Wed 2038-01-20 03:15:16
+                Time zone: Etc/UTC (UTC, +0000)
+System clock synchronized: no
+              NTP service: inactive
+          RTC in local TZ: no
+SCRIPT_FINISHEDTPIpE-0-
+# cat > /tmp/scriptgVDRg.sh << 'EOT_gVDRg'; echo gVDRg-$?-
+> LC_TIME=C.UTF-8 who
+> EOT_gVDRg
+gVDRg-0-
+# echo gVDRg; bash -oe pipefail /tmp/scriptgVDRg.sh ; echo SCRIPT_FINISHEDgVDRg-$?-
+gVDRg
+root     seat0        2038-01-20 03:14
+root     tty2         2038-01-20 03:14
+root     hvc0         2038-01-20 03:15
+SCRIPT_FINISHEDgVDRg-0-
+# cat > /tmp/scriptVcIT6.sh << 'EOT_VcIT6'; echo VcIT6-$?-
+> last -F
+> EOT_VcIT6
+VcIT6-0-
+# echo VcIT6; bash -oe pipefail /tmp/scriptVcIT6.sh ; echo SCRIPT_FINISHEDVcIT6-$?-
+VcIT6
+root     hvc0                          Wed Jan 20 03:15:16 2038 - still logged in          
+root     tty2                          Wed Jan 20 03:14:59 2038 - still logged in          
+reboot   system boot  6.9.1-1-default  Wed Jan 20 03:14:25 2038 - still running            
+root     hvc0                          Tue May 28 07:47:55 2024 - Wed Jan 20 03:14:07 2038 (4984+19:26)
+root     tty2                          Tue May 28 07:47:37 2024 - Wed Jan 20 03:14:07 2038 (4984+19:26)
+reboot   system boot  6.9.1-1-default  Tue May 28 07:47:03 2024 - Wed Jan 20 03:14:09 2038 (4984+19:27)
+root     hvc0                          Tue May 28 07:46:40 2024 - Tue May 28 07:46:49 2024  (00:00)
+root     tty2                          Tue May 28 07:46:23 2024 - crash                    
+reboot   system boot  6.9.1-1-default  Tue May 28 07:45:48 2024 - Tue May 28 07:46:50 2024  (00:01)
+bernhard pts/20       ::1              Tue May 28 07:45:33 2024 - Tue May 28 07:45:33 2024  (00:00)
+bernhard pts/19       ::1              Tue May 28 07:45:33 2024 - Tue May 28 07:45:33 2024  (00:00)
+bernhard pts/18       ::1              Tue May 28 07:45:22 2024 - Tue May 28 07:45:33 2024  (00:00)
+bernhard pts/17       ::1              Tue May 28 07:45:21 2024 - Tue May 28 07:45:21 2024  (00:00)
+bernhard pts/16       ::1              Tue May 28 07:45:21 2024 - Tue May 28 07:45:21 2024  (00:00)
+bernhard pts/15       ::1              Tue May 28 07:45:20 2024 - Tue May 28 07:45:21 2024  (00:00)
+bernhard pts/14       ::1              Tue May 28 07:45:19 2024 - Tue May 28 07:45:20 2024  (00:00)
+bernhard pts/13       ::1              Tue May 28 07:45:19 2024 - Tue May 28 07:45:19 2024  (00:00)
+bernhard pts/12       ::1              Tue May 28 07:45:18 2024 - Tue May 28 07:45:18 2024  (00:00)
+bernhard pts/11       ::1              Tue May 28 07:45:18 2024 - Tue May 28 07:45:18 2024  (00:00)
+bernhard pts/10       ::1              Tue May 28 07:45:17 2024 - Tue May 28 07:45:18 2024  (00:00)
+bernhard pts/9        ::1              Tue May 28 07:45:10 2024 - Tue May 28 07:45:10 2024  (00:00)
+bernhard pts/8        ::1              Tue May 28 07:44:58 2024 - Tue May 28 07:45:10 2024  (00:00)
+bernhard pts/7        ::1              Tue May 28 07:44:57 2024 - Tue May 28 07:44:58 2024  (00:00)
+bernhard pts/6        ::1              Tue May 28 07:44:57 2024 - Tue May 28 07:44:57 2024  (00:00)
+bernhard pts/5        ::1              Tue May 28 07:44:57 2024 - Tue May 28 07:44:57 2024  (00:00)
+bernhard pts/4        ::1              Tue May 28 07:44:56 2024 - Tue May 28 07:44:56 2024  (00:00)
+bernhard pts/3        ::1              Tue May 28 07:44:56 2024 - Tue May 28 07:44:56 2024  (00:00)
+bernhard pts/2        ::1              Tue May 28 07:44:55 2024 - Tue May 28 07:44:56 2024  (00:00)
+bernhard pts/1        ::1              Tue May 28 07:44:54 2024 - Tue May 28 07:44:55 2024  (00:00)
+root     hvc0                          Tue May 28 07:44:46 2024 - Tue May 28 07:45:35 2024  (00:00)
+root     tty2                          Tue May 28 07:44:28 2024 - crash                    
+reboot   system boot  6.9.1-1-default  Tue May 28 07:43:55 2024 - Tue May 28 07:45:35 2024  (00:01)
+root     tty2                          Tue May 28 07:43:37 2024 - Tue May 28 07:43:42 2024  (00:00)
+root     hvc0                          Tue May 28 07:42:55 2024 - Tue May 28 07:43:42 2024  (00:00)
+reboot   system boot  6.9.1-1-default  Tue May 28 07:42:38 2024 - Tue May 28 07:43:43 2024  (00:01)
+root     hvc0                          Tue May 28 07:42:24 2024 - Tue May 28 07:42:25 2024  (00:00)
+root     tty2                          Tue May 28 07:42:07 2024 - Tue May 28 07:42:25 2024  (00:00)
+reboot   system boot  6.9.1-1-default  Tue May 28 07:41:32 2024 - Tue May 28 07:42:26 2024  (00:00)
+root     hvc0                          Tue May 28 07:41:14 2024 - Tue May 28 07:41:19 2024  (00:00)
+root     tty2                          Tue May 28 07:40:57 2024 - crash                    
+reboot   system boot  6.9.1-1-default  Tue May 28 07:40:22 2024 - Tue May 28 07:41:20 2024  (00:00)
+root     hvc0                          Tue May 28 07:37:34 2024 - Tue May 28 07:39:42 2024  (00:02)
+root     tty2                          Tue May 28 07:36:21 2024 - Tue May 28 07:39:42 2024  (00:03)
+reboot   system boot  6.9.1-1-default  Tue May 28 07:35:46 2024 - Tue May 28 07:39:43 2024  (00:03)
+root     tty2                          Tue May 28 07:34:41 2024 - Tue May 28 07:35:33 2024  (00:00)
+reboot   system boot  6.9.1-1-default  Tue May 28 07:34:06 2024 - Tue May 28 07:35:34 2024  (00:01)
+root     hvc0                          Tue May 28 07:32:38 2024 - Tue May 28 07:33:53 2024  (00:01)
+root     tty2                          Tue May 28 07:30:40 2024 - Tue May 28 07:33:53 2024  (00:03)
+reboot   system boot  6.9.1-1-default  Tue May 28 07:29:36 2024 - Tue May 28 07:33:54 2024  (00:04)
+
+/var/lib/wtmpdb/wtmp.db begins Tue May 28 07:29:36 2024
+SCRIPT_FINISHEDVcIT6-0-
+# systemctl --no-pager start chronyd.service; echo Yvdz~-$?-
+Yvdz~-0-
+# cat > /tmp/script~uM7f.sh << 'EOT_~uM7f'; echo ~uM7f-$?-
+> chronyc -n sources -v -a
+> EOT_~uM7f
+~uM7f-0-
+# echo ~uM7f; bash -oe pipefail /tmp/script~uM7f.sh ; echo SCRIPT_FINISHED~uM7f-$?-
+~uM7f
+
+  .-- Source mode  '^' = server, '=' = peer, '#' = local clock.
+ / .- Source state '*' = current best, '+' = combined, '-' = not combined,
+| /             'x' = may be in error, '~' = too variable, '?' = unusable.
+||                                                 .- xxxx [ yyyy ] +/- zzzz
+||      Reachability register (octal) -.           |  xxxx = adjusted offset,
+||      Log2(Polling interval) --.      |          |  yyyy = measured offset,
+||                                \     |          |  zzzz = estimated error.
+||                                 |    |           \
+MS Name/IP address         Stratum Poll Reach LastRx Last sample               
+===============================================================================
+^? 2a03:4000:4e:9ed:34db:7bff:feea:4253   0   6     0     -     +0ns[   +0ns] +/-    0ns
+^? 193.203.3.171                 0   6     0     -     +0ns[   +0ns] +/-    0ns
+^? 213.209.109.44                0   6     0     -     +0ns[   +0ns] +/-    0ns
+^? 2a01:4f8:171:1642::123        0   6     0     -     +0ns[   +0ns] +/-    0ns
+^? 5.9.66.246                    0   6     0     -     +0ns[   +0ns] +/-    0ns
+^? 2a07:6fc0:1:0:73::50          0   6     0     -     +0ns[   +0ns] +/-    0ns
+^? 46.4.54.78                    0   6     0     -     +0ns[   +0ns] +/-    0ns
+^? 2a03:4000:45:55:4491:94ff:fe64:6910   0   6     0     -     +0ns[   +0ns] +/-    0ns
+SCRIPT_FINISHED~uM7f-0-
+# timeout  30 journalctl -u chronyd | grep -e "System clock wrong" -e "Received KoD RATE"; echo EMvYO-$?-
+May 28 07:33:39 localhost.localdomain chronyd[2239]: Received KoD RATE from 144.76.139.8
+May 28 07:43:00 localhost.localdomain chronyd[1337]: Received KoD RATE from 212.112.228.242
+May 28 07:44:16 localhost.localdomain chronyd[1376]: System clock wrong by 1.193643 seconds
+May 28 07:46:11 localhost.localdomain chronyd[1360]: Received KoD RATE from 31.31.77.84
+May 28 07:47:18 localhost.localdomain chronyd[1375]: Received KoD RATE from 31.31.77.84
+EMvYO-0-
+# chronyc makestep; echo Mnsfu-$?-
+200 OK
+Mnsfu-0-
+# timeout  30 date +"%Y-%m-%d" | grep -v 2038; echo rYqnG-$?-
+rYqnG-1-
+# timeout  30 date +"%Y-%m-%d" | grep -v 2038; echo rYqnG-$?-
+rYqnG-1-
+# timeout  30 date +"%Y-%m-%d" | grep -v 2038; echo rYqnG-$?-
+2024-05-28
+rYqnG-0-
+# cd
+# test -f /var/log/audit/audit.log; echo UfVk_-$?-
+UfVk_-0-
+# cat > /tmp/scriptOSm16.sh << 'EOT_OSm16'; echo OSm16-$?-
+> ausearch -m avc -r
+> EOT_OSm16
+OSm16-0-
+# echo OSm16; bash -oe pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-$?-
+OSm16
+type=AVC msg=audit(1716881489.695:99): avc:  denied  { map_read map_write } for  pid=2445 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881489.705:100): avc:  denied  { map_read map_write } for  pid=2448 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882476.224:105): avc:  denied  { map_read map_write } for  pid=1660 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882476.240:106): avc:  denied  { map_read map_write } for  pid=1663 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+# clear
+# 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:36:21 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# systemctl --no-pager disable --now 'snapper-cleanup.timer'; echo wJUrn-$?-
+Removed "/etc/systemd/system/timers.target.wants/snapper-cleanup.timer".
+wJUrn-0-
+# systemctl --no-pager disable --now 'fstrim.timer'; echo Wr416-$?-
+Removed "/etc/systemd/system/timers.target.wants/fstrim.timer".
+Wr416-0-
+# systemctl --no-pager disable --now 'transactional-update.timer'; echo zbWnE-$?-
+Removed "/etc/systemd/system/timers.target.wants/transactional-update.timer".
+zbWnE-0-
+# systemctl --no-pager disable --now 'btrfs-balance.timer'; echo 4AcIy-$?-
+Removed "/etc/systemd/system/timers.target.wants/btrfs-balance.timer".
+4AcIy-0-
+# systemctl --no-pager disable --now 'btrfs-defrag.timer'; echo lt_D2-$?-
+Removed "/etc/systemd/system/timers.target.wants/btrfs-defrag.timer".
+lt_D2-0-
+# systemctl --no-pager disable --now 'btrfs-scrub.timer'; echo AoHLY-$?-
+Removed "/etc/systemd/system/timers.target.wants/btrfs-scrub.timer".
+AoHLY-0-
+# systemctl --no-pager disable --now 'btrfs-trim.timer'; echo 0KFvg-$?-
+Removed "/etc/systemd/system/timers.target.wants/btrfs-trim.timer".
+0KFvg-0-
+# cd
+# test -f /var/log/audit/audit.log; echo UfVk_-$?-
+UfVk_-0-
+# cat > /tmp/scriptOSm16.sh << 'EOT_OSm16'; echo OSm16-$?-
+> ausearch -m avc -r
+> EOT_OSm16
+OSm16-0-
+# echo OSm16; bash -oe pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-$?-
+OSm16
+type=AVC msg=audit(1716881489.695:99): avc:  denied  { map_read map_write } for  pid=2445 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881489.705:100): avc:  denied  { map_read map_write } for  pid=2448 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881819.732:104): avc:  denied  { map_read map_write } for  pid=1653 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881819.738:105): avc:  denied  { map_read map_write } for  pid=1655 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.062:126): avc:  denied  { map_read map_write } for  pid=1680 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.065:127): avc:  denied  { map_read map_write } for  pid=1683 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.375:148): avc:  denied  { map_read map_write } for  pid=1706 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.382:149): avc:  denied  { map_read map_write } for  pid=1709 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.705:170): avc:  denied  { map_read map_write } for  pid=1734 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.708:171): avc:  denied  { map_read map_write } for  pid=1737 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.028:192): avc:  denied  { map_read map_write } for  pid=1760 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.038:193): avc:  denied  { map_read map_write } for  pid=1763 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.352:214): avc:  denied  { map_read map_write } for  pid=1787 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.355:215): avc:  denied  { map_read map_write } for  pid=1789 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.668:236): avc:  denied  { map_read map_write } for  pid=1814 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.675:237): avc:  denied  { map_read map_write } for  pid=1816 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+# clear
+# touch /should_fail; echo ZWU0p-$?-
+touch: cannot touch '/should_fail': Read-only file system
+ZWU0p-1-
+# touch /etc/should_succeed; echo ZLdyn-$?-
+ZLdyn-0-
+# touch /var/log/should_succeed; echo AgAqw-$?-
+AgAqw-0-
+# btrfs property get / ro | grep "ro=true"; echo _p1nX-$?-
+ro=true
+_p1nX-0-
+# btrfs property get /var ro | grep "ro=false"; echo uRkrO-$?-
+ro=false
+uRkrO-0-
+# findmnt -s / -n -O ro; echo eH9Se-$?-
+/ UUID=867e78f3-c199-421a-aaea-06b442c929ea btrfs ro
+eH9Se-0-
+# findmnt / -n -O ro; echo hXsOx-$?-
+/ /dev/vda3[/@/.snapshots/4/snapshot] btrfs ro,relatime,seclabel,discard=async,space_cache=v2,subvolid=270,subvol=/@/.snapshots/4/snapshot
+hXsOx-0-
+# cd
+# test -f /var/log/audit/audit.log; echo UfVk_-$?-
+UfVk_-0-
+# cat > /tmp/scriptOSm16.sh << 'EOT_OSm16'; echo OSm16-$?-
+> ausearch -m avc -r
+> EOT_OSm16
+OSm16-0-
+# echo OSm16; bash -oe pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-$?-
+OSm16
+type=AVC msg=audit(1716881489.695:99): avc:  denied  { map_read map_write } for  pid=2445 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881489.705:100): avc:  denied  { map_read map_write } for  pid=2448 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881819.732:104): avc:  denied  { map_read map_write } for  pid=1653 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881819.738:105): avc:  denied  { map_read map_write } for  pid=1655 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.062:126): avc:  denied  { map_read map_write } for  pid=1680 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.065:127): avc:  denied  { map_read map_write } for  pid=1683 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.375:148): avc:  denied  { map_read map_write } for  pid=1706 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.382:149): avc:  denied  { map_read map_write } for  pid=1709 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.705:170): avc:  denied  { map_read map_write } for  pid=1734 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.708:171): avc:  denied  { map_read map_write } for  pid=1737 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.028:192): avc:  denied  { map_read map_write } for  pid=1760 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.038:193): avc:  denied  { map_read map_write } for  pid=1763 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.352:214): avc:  denied  { map_read map_write } for  pid=1787 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.355:215): avc:  denied  { map_read map_write } for  pid=1789 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.668:236): avc:  denied  { map_read map_write } for  pid=1814 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.675:237): avc:  denied  { map_read map_write } for  pid=1816 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+# clear
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n bootloader; echo XimXu-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n bootloader
+Separate /var detected.
+2024-05-28 07:37:02 tukit 4.6.8 started
+2024-05-28 07:37:02 Options: -c4 open 
+2024-05-28 07:37:02 Using snapshot 4 as base for new snapshot 5.
+2024-05-28 07:37:02 /var/lib/overlay/4/etc
+2024-05-28 07:37:02 Syncing /etc of previous snapshot 3 as base into new snapshot "/.snapshots/5/snapshot"
+2024-05-28 07:37:02 SELinux is enabled.
+ID: 5
+2024-05-28 07:37:03 Transaction completed.
+Creating a new grub2 config
+2024-05-28 07:37:03 tukit 4.6.8 started
+2024-05-28 07:37:03 Options: call 5 bash -c /usr/sbin/grub2-mkconfig > /boot/grub2/grub.cfg 
+2024-05-28 07:37:04 Executing `bash -c /usr/sbin/grub2-mkconfig > /boot/grub2/grub.cfg`:
+Generating grub configuration file ...
+Found theme: /boot/grub2/themes/openSUSE/theme.txt
+Found linux image: /boot/vmlinuz-6.9.1-1-default
+Found initrd image: /boot/initrd-6.9.1-1-default
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+2024-05-28 07:37:04 Application returned with exit status 0.
+2024-05-28 07:37:05 Transaction completed.
+Writing new bootloader
+2024-05-28 07:37:05 tukit 4.6.8 started
+2024-05-28 07:37:05 Options: call 5 /sbin/pbl --install 
+2024-05-28 07:37:05 Executing `/sbin/pbl --install`:
+2024-05-28 07:37:06 Application returned with exit status 0.
+2024-05-28 07:37:06 Transaction completed.
+2024-05-28 07:37:06 tukit 4.6.8 started
+2024-05-28 07:37:06 Options: close 5 
+2024-05-28 07:37:07 New default snapshot is #5 (/.snapshots/5/snapshot).
+2024-05-28 07:37:07 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #5 (/.snapshots/5/snapshot).
+transactional-update finished
+XimXu-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882571; echo gfo96-$?-
+gfo96-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882571; echo Z22eQ-$?-
+Z22eQ-0-
+# diff mnt-1716882571 def-1716882571; echo uDTBF-$?-
+1c1
+< 270
+---
+> 271
+uDTBF-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::10b1:304f:2f2:8bcf
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:50:20 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n grub.cfg; echo OR8oA-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n grub.cfg
+Separate /var detected.
+2024-05-28 07:50:41 tukit 4.6.8 started
+2024-05-28 07:50:41 Options: -c5 open 
+2024-05-28 07:50:41 Using snapshot 5 as base for new snapshot 6.
+2024-05-28 07:50:41 /var/lib/overlay/5/etc
+2024-05-28 07:50:41 Syncing /etc of previous snapshot 4 as base into new snapshot "/.snapshots/6/snapshot"
+2024-05-28 07:50:41 SELinux is enabled.
+ID: 6
+2024-05-28 07:50:42 Transaction completed.
+Creating a new grub2 config
+2024-05-28 07:50:42 tukit 4.6.8 started
+2024-05-28 07:50:42 Options: call 6 bash -c /usr/sbin/grub2-mkconfig > /boot/grub2/grub.cfg 
+2024-05-28 07:50:43 Executing `bash -c /usr/sbin/grub2-mkconfig > /boot/grub2/grub.cfg`:
+Generating grub configuration file ...
+Found theme: /boot/grub2/themes/openSUSE/theme.txt
+Found linux image: /boot/vmlinuz-6.9.1-1-default
+Found initrd image: /boot/initrd-6.9.1-1-default
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+2024-05-28 07:50:43 Application returned with exit status 0.
+2024-05-28 07:50:43 Transaction completed.
+2024-05-28 07:50:43 tukit 4.6.8 started
+2024-05-28 07:50:43 Options: close 6 
+2024-05-28 07:50:44 New default snapshot is #6 (/.snapshots/6/snapshot).
+2024-05-28 07:50:44 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #6 (/.snapshots/6/snapshot).
+transactional-update finished
+OR8oA-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882644; echo Ws1H7-$?-
+Ws1H7-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882644; echo rJ03g-$?-
+rJ03g-0-
+# diff mnt-1716882644 def-1716882644; echo pUn~V-$?-
+1c1
+< 271
+---
+> 272
+pUn~V-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fe80::e9de:20ba:4c9:8c0a
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::d2fc:c05b:5d7c:bd3a
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:51:27 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n initrd; echo dBELE-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n initrd
+Separate /var detected.
+2024-05-28 07:51:47 tukit 4.6.8 started
+2024-05-28 07:51:47 Options: -c6 open 
+2024-05-28 07:51:47 Using snapshot 6 as base for new snapshot 7.
+2024-05-28 07:51:47 /var/lib/overlay/6/etc
+2024-05-28 07:51:47 Syncing /etc of previous snapshot 5 as base into new snapshot "/.snapshots/7/snapshot"
+2024-05-28 07:51:47 SELinux is enabled.
+ID: 7
+2024-05-28 07:51:48 Transaction completed.
+Creating new initrd
+2024-05-28 07:51:48 tukit 4.6.8 started
+2024-05-28 07:51:48 Options: call 7 dracut --force --regenerate-all 
+2024-05-28 07:51:49 Executing `dracut --force --regenerate-all`:
+dracut[I]: Executing: /usr/bin/dracut --kver=6.9.1-1-default --force
+dracut[I]: Module 'systemd-networkd' will not be installed, because command 'networkctl' could not be found!
+dracut[I]: Module 'systemd-networkd' will not be installed, because command '/usr/lib/systemd/systemd-networkd' could not be found!
+dracut[I]: Module 'systemd-networkd' will not be installed, because command '/usr/lib/systemd/systemd-networkd-wait-online' could not be found!
+dracut[I]: Module 'systemd-pcrphase' will not be installed, because command '/usr/lib/systemd/systemd-pcrextend' could not be found!
+dracut[I]: Module 'systemd-portabled' will not be installed, because command 'portablectl' could not be found!
+dracut[I]: Module 'systemd-portabled' will not be installed, because command '/usr/lib/systemd/systemd-portabled' could not be found!
+dracut[I]: Module 'systemd-resolved' will not be installed, because command 'resolvectl' could not be found!
+dracut[I]: Module 'systemd-resolved' will not be installed, because command '/usr/lib/systemd/systemd-resolved' could not be found!
+dracut[I]: Module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut[I]: Module 'dbus-broker' will not be installed, because command 'dbus-broker' could not be found!
+dracut[I]: Module 'rngd' will not be installed, because command 'rngd' could not be found!
+dracut[I]: Module 'connman' will not be installed, because command 'connmand' could not be found!
+dracut[I]: Module 'connman' will not be installed, because command 'connmanctl' could not be found!
+dracut[I]: Module 'connman' will not be installed, because command 'connmand-wait-online' could not be found!
+dracut[I]: 35network-legacy: Could not find any command of 'dhclient wicked'!
+dracut[I]: 62bluetooth: Could not find any command of '/usr/lib/bluetooth/bluetoothd /usr/libexec/bluetooth/bluetoothd'!
+dracut[I]: Module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut[I]: Module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut[I]: Module 'pcsc' will not be installed, because command 'pcscd' could not be found!
+dracut[I]: Module 'tpm2-tss' will not be installed, because command 'tpm2' could not be found!
+dracut[I]: Module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut[I]: Module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+dracut[I]: Module 'iscsi' will not be installed, because command 'iscsiadm' could not be found!
+dracut[I]: Module 'iscsi' will not be installed, because command 'iscsid' could not be found!
+dracut[I]: 95nfs: Could not find any command of 'rpcbind portmap'!
+dracut[I]: Module 'nvmf' will not be installed, because command 'nvme' could not be found!
+dracut[I]: Module 'nvmf' will not be installed, because command 'jq' could not be found!
+dracut[I]: Module 'memstrack' will not be installed, because command 'memstrack' could not be found!
+dracut[I]: memstrack is not available
+dracut[I]: If you need to use rd.memdebug>=4, please install memstrack and procps-ng
+dracut[I]: Module 'squash' will not be installed, because command 'mksquashfs' could not be found!
+dracut[I]: Module 'squash' will not be installed, because command 'unsquashfs' could not be found!
+dracut[I]: Module 'systemd-pcrphase' will not be installed, because command '/usr/lib/systemd/systemd-pcrextend' could not be found!
+dracut[I]: Module 'systemd-portabled' will not be installed, because command 'portablectl' could not be found!
+dracut[I]: Module 'systemd-portabled' will not be installed, because command '/usr/lib/systemd/systemd-portabled' could not be found!
+dracut[I]: Module 'systemd-resolved' will not be installed, because command 'resolvectl' could not be found!
+dracut[I]: Module 'systemd-resolved' will not be installed, because command '/usr/lib/systemd/systemd-resolved' could not be found!
+dracut[I]: Module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut[I]: Module 'dbus-broker' will not be installed, because command 'dbus-broker' could not be found!
+dracut[I]: Module 'rngd' will not be installed, because command 'rngd' could not be found!
+dracut[I]: Module 'connman' will not be installed, because command 'connmand' could not be found!
+dracut[I]: Module 'connman' will not be installed, because command 'connmanctl' could not be found!
+dracut[I]: Module 'connman' will not be installed, because command 'connmand-wait-online' could not be found!
+dracut[I]: 35network-legacy: Could not find any command of 'dhclient wicked'!
+dracut[I]: 62bluetooth: Could not find any command of '/usr/lib/bluetooth/bluetoothd /usr/libexec/bluetooth/bluetoothd'!
+dracut[I]: Module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut[I]: Module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut[I]: Module 'pcsc' will not be installed, because command 'pcscd' could not be found!
+dracut[I]: Module 'tpm2-tss' will not be installed, because command 'tpm2' could not be found!
+dracut[I]: Module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut[I]: Module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+dracut[I]: Module 'iscsi' will not be installed, because command 'iscsiadm' could not be found!
+dracut[I]: Module 'iscsi' will not be installed, because command 'iscsid' could not be found!
+dracut[I]: 95nfs: Could not find any command of 'rpcbind portmap'!
+dracut[I]: Module 'nvmf' will not be installed, because command 'nvme' could not be found!
+dracut[I]: Module 'nvmf' will not be installed, because command 'jq' could not be found!
+dracut[I]: Module 'memstrack' will not be installed, because command 'memstrack' could not be found!
+dracut[I]: memstrack is not available
+dracut[I]: If you need to use rd.memdebug>=4, please install memstrack and procps-ng
+dracut[I]: Module 'squash' will not be installed, because command 'mksquashfs' could not be found!
+dracut[I]: Module 'squash' will not be installed, because command 'unsquashfs' could not be found!
+dracut[I]: *** Including module: systemd ***
+dracut[I]: *** Including module: systemd-initrd ***
+dracut[I]: *** Including module: i18n ***
+dracut[I]: No KEYMAP configured.
+dracut[I]: *** Including module: drm ***
+dracut[I]: *** Including module: health-checker ***
+dracut[I]: *** Including module: transactional-update ***
+dracut[I]: *** Including module: xen-tools-domU ***
+dracut[I]: *** Including module: btrfs ***
+dracut[I]: *** Including module: kernel-modules ***
+dracut[I]: *** Including module: kernel-modules-extra ***
+dracut[I]: *** Including module: qemu ***
+dracut[I]: *** Including module: rootfs-block ***
+dracut[I]: *** Including module: suse-btrfs ***
+dracut[I]: *** Including module: suse-xfs ***
+dracut[I]: *** Including module: terminfo ***
+dracut[I]: *** Including module: udev-rules ***
+dracut[I]: *** Including module: virtiofs ***
+dracut[I]: *** Including module: biosdevname ***
+dracut[I]: *** Including module: dracut-systemd ***
+dracut[I]: *** Including module: selinux-microos ***
+dracut[I]: *** Including module: usrmount ***
+dracut[I]: *** Including module: base ***
+dracut[I]: *** Including module: fs-lib ***
+dracut[I]: *** Including module: shutdown ***
+dracut[I]: *** Including module: suse ***
+dracut[I]: *** Including module: suse-initrd ***
+dracut[I]: *** Including modules done ***
+dracut[I]: *** Installing kernel module dependencies ***
+dracut[I]: *** Installing kernel module dependencies done ***
+dracut[I]: *** Resolving executable dependencies ***
+dracut[I]: *** Resolving executable dependencies done ***
+dracut[I]: *** Hardlinking files ***
+dracut[I]: *** Hardlinking files done ***
+dracut[I]: *** Generating early-microcode cpio image ***
+dracut[I]: *** Store current command line parameters ***
+dracut[I]: Stored kernel commandline:
+dracut[I]:  rd.driver.pre=btrfs
+dracut[I]: rd.driver.pre=overlay
+dracut[I]:  root=UUID=867e78f3-c199-421a-aaea-06b442c929ea rootfstype=btrfs rootflags=rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=273,subvol=/@/.snapshots/7/snapshot,subvol=@/.snapshots/7/snapshot
+dracut[I]: *** Stripping files ***
+dracut[I]: *** Stripping files done ***
+dracut[I]: *** Creating image file '/boot/initrd-6.9.1-1-default' ***
+dracut[I]: *** Creating initramfs image file '/boot/initrd-6.9.1-1-default' done ***
+2024-05-28 07:51:54 Application returned with exit status 0.
+2024-05-28 07:51:54 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:51:55 tukit 4.6.8 started
+2024-05-28 07:51:55 Options: close 7 
+2024-05-28 07:51:56 New default snapshot is #7 (/.snapshots/7/snapshot).
+2024-05-28 07:51:56 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #7 (/.snapshots/7/snapshot).
+transactional-update finished
+dBELE-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882716; echo 4p0Gd-$?-
+4p0Gd-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882716; echo nnwdc-$?-
+nnwdc-0-
+# diff mnt-1716882716 def-1716882716; echo sBO58-$?-
+1c1
+< 272
+---
+> 273
+sBO58-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::5c31:4111:d51e:676f
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:52:35 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n kdump; echo P2EBx-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n kdump
+Separate /var detected.
+2024-05-28 07:52:54 tukit 4.6.8 started
+2024-05-28 07:52:54 Options: -c7 open 
+2024-05-28 07:52:54 Using snapshot 7 as base for new snapshot 8.
+2024-05-28 07:52:54 /var/lib/overlay/7/etc
+2024-05-28 07:52:54 Syncing /etc of previous snapshot 6 as base into new snapshot "/.snapshots/8/snapshot"
+2024-05-28 07:52:54 SELinux is enabled.
+ID: 8
+2024-05-28 07:52:55 Transaction completed.
+Trying to rebuild kdump initrd
+INFO: Requested rebuild of kdump initrd, but kdump is not enabled.
+      Did you mean 'setup-kdump'?
+2024-05-28 07:52:56 tukit 4.6.8 started
+2024-05-28 07:52:56 Options: close 8 
+2024-05-28 07:52:56 New default snapshot is #8 (/.snapshots/8/snapshot).
+2024-05-28 07:52:56 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #8 (/.snapshots/8/snapshot).
+transactional-update finished
+P2EBx-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882776; echo xfHRh-$?-
+xfHRh-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882776; echo CY1P8-$?-
+CY1P8-0-
+# diff mnt-1716882776 def-1716882776; echo we~MF-$?-
+1c1
+< 273
+---
+> 274
+we~MF-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::29f7:e8b5:f26f:d172
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:53:35 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n cleanup; echo kUm8R-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n cleanup
+Separate /var detected.
+Adding cleanup algorithm to snapshot #7
+Adding "important=yes" to snapshot #7
+Adding cleanup algorithm to snapshot #6
+Adding "important=yes" to snapshot #6
+Adding cleanup algorithm to snapshot #5
+Adding "important=yes" to snapshot #5
+Adding cleanup algorithm to snapshot #4
+Adding "important=yes" to snapshot #4
+Adding cleanup algorithm to snapshot #3
+Adding "important=yes" to snapshot #3
+Adding cleanup algorithm to snapshot #2
+Adding "important=yes" to snapshot #2
+Adding cleanup algorithm to snapshot #1
+Adding "important=yes" to snapshot #1
+Mark unused snapshot #7 for deletion
+Mark unused snapshot #6 for deletion
+Mark unused snapshot #5 for deletion
+Mark unused snapshot #4 for deletion
+Mark unused snapshot #3 for deletion
+Mark unused snapshot #2 for deletion
+transactional-update finished
+kUm8R-0-
+# cd
+# test -f /var/log/audit/audit.log; echo UfVk_-$?-
+UfVk_-0-
+# cat > /tmp/scriptOSm16.sh << 'EOT_OSm16'; echo OSm16-$?-
+> ausearch -m avc -r
+> EOT_OSm16
+OSm16-0-
+# echo OSm16; bash -oe pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-$?-
+OSm16
+type=AVC msg=audit(1716881489.695:99): avc:  denied  { map_read map_write } for  pid=2445 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881489.705:100): avc:  denied  { map_read map_write } for  pid=2448 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881819.732:104): avc:  denied  { map_read map_write } for  pid=1653 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881819.738:105): avc:  denied  { map_read map_write } for  pid=1655 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.062:126): avc:  denied  { map_read map_write } for  pid=1680 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.065:127): avc:  denied  { map_read map_write } for  pid=1683 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.375:148): avc:  denied  { map_read map_write } for  pid=1706 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.382:149): avc:  denied  { map_read map_write } for  pid=1709 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.705:170): avc:  denied  { map_read map_write } for  pid=1734 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.708:171): avc:  denied  { map_read map_write } for  pid=1737 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.028:192): avc:  denied  { map_read map_write } for  pid=1760 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.038:193): avc:  denied  { map_read map_write } for  pid=1763 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.352:214): avc:  denied  { map_read map_write } for  pid=1787 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.355:215): avc:  denied  { map_read map_write } for  pid=1789 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.668:236): avc:  denied  { map_read map_write } for  pid=1814 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.675:237): avc:  denied  { map_read map_write } for  pid=1816 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+# clear
+# rebootmgrctl set-strategy off; echo 4ScMr-$?-
+4ScMr-0-
+# curl -O http://10.0.2.2:20303/cjCTJivJDdRIkYXu/data/microos/utt-opensuse-x86_64.tgz; echo 6J~D7-$?-
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 26739  100 26739    0     0  2357k      0 --:--:-- --:--:-- --:--:-- 2373k
+6J~D7-0-
+# tar xzvf utt-opensuse-x86_64.tgz; echo Wjx7N-$?-
+update-test-trivial/
+update-test-trivial/update-test-32bit-pkg-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-affects-package-manager-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-broken-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-interactive-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-optional-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-reboot-needed-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-relogin-suggested-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-retracted-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-security-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-trivial-5.1-1.20.x86_64.rpm
+Wjx7N-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n ptf install update-test-trivial/update-test-security-5.1-1.20.x86_64.rpm; echo axmtA-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n ptf install update-test-trivial/update-test-security-5.1-1.20.x86_64.rpm
+Separate /var detected.
+2024-05-28 07:53:57 tukit 4.6.8 started
+2024-05-28 07:53:57 Options: -c8 open 
+2024-05-28 07:53:57 Using snapshot 8 as base for new snapshot 9.
+2024-05-28 07:53:57 /var/lib/overlay/8/etc
+2024-05-28 07:53:57 Syncing /etc of previous snapshot 7 as base into new snapshot "/.snapshots/9/snapshot"
+2024-05-28 07:53:57 SELinux is enabled.
+ID: 9
+2024-05-28 07:53:58 Transaction completed.
+Calling zypper install
+2024-05-28 07:53:59 tukit 4.6.8 started
+2024-05-28 07:53:59 Options: callext 9 zypper -R {} install -y --auto-agree-with-product-licenses update-test-trivial/update-test-security-5.1-1.20.x86_64.rpm 
+2024-05-28 07:54:00 Executing `zypper -R /tmp/transactional-update-PZRuuo install -y --auto-agree-with-product-licenses update-test-trivial/update-test-security-5.1-1.20.x86_64.rpm`:
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  update-test-security
+
+1 new package to install.
+Overall download size: 8.9 KiB. Already cached: 0 B. After the operation, additional 338.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-security-5.1-1.20.x86_64 (Plain RPM files cache) (1/1),   8.9 KiB    
+(1/1) Installing: update-test-security-5.1-1.20.x86_64 [..done]
+2024-05-28 07:54:01 Application returned with exit status 0.
+2024-05-28 07:54:01 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:54:02 tukit 4.6.8 started
+2024-05-28 07:54:02 Options: close 9 
+2024-05-28 07:54:03 New default snapshot is #9 (/.snapshots/9/snapshot).
+2024-05-28 07:54:03 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #9 (/.snapshots/9/snapshot).
+transactional-update finished
+axmtA-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882843; echo FXnXH-$?-
+FXnXH-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882843; echo uNTyO-$?-
+uNTyO-0-
+# diff mnt-1716882843 def-1716882843; echo dFK8C-$?-
+1c1
+< 274
+---
+> 275
+dFK8C-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::da4c:e9eb:fa43:ed6d
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:54:42 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# rpm -q --qf '%{V}-%{R}' update-test-security | grep -x 5.1-1.20; echo N5_xB-$?-
+5.1-1.20
+N5_xB-0-
+# cat > /tmp/script20J1E.sh << 'EOT_20J1E'; echo 20J1E-$?-
+> snapper list --columns number | tail -1 | tr -d ' *'
+> EOT_20J1E
+20J1E-0-
+# echo 20J1E; bash -oe pipefail /tmp/script20J1E.sh ; echo SCRIPT_FINISHED20J1E-$?-
+20J1E
+9
+SCRIPT_FINISHED20J1E-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n cleanup up; echo jxhrv-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n cleanup up
+Separate /var detected.
+Adding cleanup algorithm to snapshot #8
+Adding "important=yes" to snapshot #8
+2024-05-28 07:54:59 tukit 4.6.8 started
+2024-05-28 07:54:59 Options: -c9 open 
+2024-05-28 07:54:59 Using snapshot 9 as base for new snapshot 10.
+2024-05-28 07:54:59 /var/lib/overlay/9/etc
+2024-05-28 07:54:59 Syncing /etc of previous snapshot 8 as base into new snapshot "/.snapshots/10/snapshot"
+2024-05-28 07:54:59 SELinux is enabled.
+ID: 10
+2024-05-28 07:55:00 Transaction completed.
+Calling zypper up
+2024-05-28 07:55:01 tukit 4.6.8 started
+2024-05-28 07:55:01 Options: callext 10 zypper -R {} up -y --auto-agree-with-product-licenses 
+2024-05-28 07:55:02 Executing `zypper -R /tmp/transactional-update-UGGOXG up -y --auto-agree-with-product-licenses`:
+Loading repository data...
+Reading installed packages...
+
+The following package is going to be upgraded:
+  update-test-security
+
+1 package to upgrade.
+Overall download size: 9.2 KiB. Already cached: 0 B. After the operation, additional 52.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-security-5.2-1.1.x86_64 (repo1) (1/1),   9.2 KiB    
+Retrieving: update-test-security-5.2-1.1.x86_64.rpm [.done]
+(1/1) Installing: update-test-security-5.2-1.1.x86_64 [..done]
+2024-05-28 07:55:03 Application returned with exit status 0.
+2024-05-28 07:55:03 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:55:04 tukit 4.6.8 started
+2024-05-28 07:55:04 Options: close 10 
+2024-05-28 07:55:05 New default snapshot is #10 (/.snapshots/10/snapshot).
+2024-05-28 07:55:05 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #10 (/.snapshots/10/snapshot).
+transactional-update finished
+jxhrv-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882905; echo uQCC9-$?-
+uQCC9-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882905; echo zByjb-$?-
+zByjb-0-
+# diff mnt-1716882905 def-1716882905; echo BPxfc-$?-
+1c1
+< 275
+---
+> 276
+BPxfc-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::92bd:51ce:34b5:75d8
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:55:44 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptljF8a.sh << 'EOT_ljF8a'; echo ljF8a-$?-
+> rpm -q --qf '%{V}-%{R}' update-test-security
+> EOT_ljF8a
+ljF8a-0-
+# echo ljF8a; bash -oe pipefail /tmp/scriptljF8a.sh ; echo SCRIPT_FINISHEDljF8a-$?-
+ljF8a
+5.2-1.1SCRIPT_FINISHEDljF8a-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n cleanup up; echo 7Dm4i-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n cleanup up
+Separate /var detected.
+Adding cleanup algorithm to snapshot #9
+Adding "important=yes" to snapshot #9
+2024-05-28 07:56:03 tukit 4.6.8 started
+2024-05-28 07:56:03 Options: -c10 open 
+2024-05-28 07:56:03 Using snapshot 10 as base for new snapshot 11.
+2024-05-28 07:56:03 /var/lib/overlay/10/etc
+2024-05-28 07:56:03 Syncing /etc of previous snapshot 9 as base into new snapshot "/.snapshots/11/snapshot"
+2024-05-28 07:56:03 SELinux is enabled.
+ID: 11
+2024-05-28 07:56:04 Transaction completed.
+Calling zypper up
+zypper: nothing to update
+Removing snapshot #11...
+2024-05-28 07:56:05 tukit 4.6.8 started
+2024-05-28 07:56:05 Options: abort 11 
+2024-05-28 07:56:06 Discarding snapshot 11.
+2024-05-28 07:56:06 Transaction completed.
+transactional-update finished
+7Dm4i-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882966; echo 335ac-$?-
+335ac-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882966; echo BBpSZ-$?-
+BBpSZ-0-
+# diff mnt-1716882966 def-1716882966; echo Mzqox-$?-
+Mzqox-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update pkg install update-test-trivial/update-test-broken-5.1-1.20.x86_64.rpm; echo sioresult-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: pkg install update-test-trivial/update-test-broken-5.1-1.20.x86_64.rpm
+Separate /var detected.
+2024-05-28 07:56:07 tukit 4.6.8 started
+2024-05-28 07:56:07 Options: -c10 open 
+2024-05-28 07:56:07 Using snapshot 10 as base for new snapshot 11.
+2024-05-28 07:56:07 /var/lib/overlay/10/etc
+2024-05-28 07:56:07 Syncing /etc of previous snapshot 9 as base into new snapshot "/.snapshots/11/snapshot"
+2024-05-28 07:56:07 SELinux is enabled.
+ID: 11
+2024-05-28 07:56:08 Transaction completed.
+Calling zypper install
+2024-05-28 07:56:09 tukit 4.6.8 started
+2024-05-28 07:56:09 Options: callext 11 zypper -R {} install update-test-trivial/update-test-broken-5.1-1.20.x86_64.rpm 
+2024-05-28 07:56:10 Executing `zypper -R /tmp/transactional-update-2UF0rC install update-test-trivial/update-test-broken-5.1-1.20.x86_64.rpm`:
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  update-test-broken
+
+1 new package to install.
+Overall download size: 8.9 KiB. Already cached: 0 B. After the operation, additional 256.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): 
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-broken-5.1-1.20.x86_64 (Plain RPM files cache) (1/1),   8.9 KiB    
+(1/1) Installing: update-test-broken-5.1-1.20.x86_64 [..done]
+2024-05-28 07:56:11 Application returned with exit status 0.
+2024-05-28 07:56:11 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:56:12 tukit 4.6.8 started
+2024-05-28 07:56:12 Options: close 11 
+2024-05-28 07:56:13 New default snapshot is #11 (/.snapshots/11/snapshot).
+2024-05-28 07:56:13 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #11 (/.snapshots/11/snapshot).
+transactional-update finished
+sioresult-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882973; echo yHm0c-$?-
+yHm0c-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882973; echo wjhoc-$?-
+wjhoc-0-
+# diff mnt-1716882973 def-1716882973; echo uoezW-$?-
+1c1
+< 276
+---
+> 278
+uoezW-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::7c37:a857:8f68:1a5f
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:56:52 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n cleanup up; echo 7Dm4i-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n cleanup up
+Separate /var detected.
+Adding cleanup algorithm to snapshot #10
+Adding "important=yes" to snapshot #10
+2024-05-28 07:57:10 tukit 4.6.8 started
+2024-05-28 07:57:10 Options: -c11 open 
+2024-05-28 07:57:10 Using snapshot 11 as base for new snapshot 12.
+2024-05-28 07:57:10 /var/lib/overlay/11/etc
+2024-05-28 07:57:10 Syncing /etc of previous snapshot 10 as base into new snapshot "/.snapshots/12/snapshot"
+2024-05-28 07:57:10 SELinux is enabled.
+ID: 12
+2024-05-28 07:57:11 Transaction completed.
+Calling zypper up
+2024-05-28 07:57:12 tukit 4.6.8 started
+2024-05-28 07:57:12 Options: callext 12 zypper -R {} up -y --auto-agree-with-product-licenses 
+2024-05-28 07:57:13 Executing `zypper -R /tmp/transactional-update-c06Xmf up -y --auto-agree-with-product-licenses`:
+Loading repository data...
+Reading installed packages...
+
+The following package is going to be upgraded:
+  update-test-broken
+
+1 package to upgrade.
+Overall download size: 9.3 KiB. Already cached: 0 B. After the operation, additional 52.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-broken-5.2-1.1.x86_64 (repo1) (1/1),   9.3 KiB    
+Retrieving: update-test-broken-5.2-1.1.x86_64.rpm [.done]
+(1/1) Installing: update-test-broken-5.2-1.1.x86_64 [..
+sed: can't read /some/none/existing/file: No such file or directory
+error: %prein(update-test-broken-5.2-1.1.x86_64) scriptlet failed, exit status 2
+error: update-test-broken-5.2-1.1.x86_64: install failed
+error: update-test-broken-5.1-1.20.x86_64: erase skipped
+error]
+Installation of update-test-broken-5.2-1.1.x86_64 failed:
+Error: Subprocess failed. Error: RPM failed: Command exited with status 1.
+Abort, retry, ignore? [a/r/i] (a): a
+Problem occurred during or after installation or removal of packages:
+Installation has been aborted as directed.
+Please see the above error message for a hint.
+2024-05-28 07:57:14 Application returned with exit status 8.
+ERROR: zypper up on /.snapshots/12/snapshot failed with exit code 8!
+Use '--interactive' for manual problem resolution.
+Removing snapshot #12...
+2024-05-28 07:57:14 tukit 4.6.8 started
+2024-05-28 07:57:14 Options: abort 12 
+2024-05-28 07:57:14 Discarding snapshot 12.
+2024-05-28 07:57:15 Transaction completed.
+transactional-update finished
+7Dm4i-1-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716883035; echo 9SEWQ-$?-
+9SEWQ-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716883035; echo LCwUD-$?-
+LCwUD-0-
+# diff mnt-1716883035 def-1716883035; echo 0pByd-$?-
+0pByd-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n pkg remove update-test-security; echo yj8vd-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n pkg remove update-test-security
+Separate /var detected.
+2024-05-28 07:57:15 tukit 4.6.8 started
+2024-05-28 07:57:15 Options: -c11 open 
+2024-05-28 07:57:15 Using snapshot 11 as base for new snapshot 12.
+2024-05-28 07:57:15 /var/lib/overlay/11/etc
+2024-05-28 07:57:15 Syncing /etc of previous snapshot 10 as base into new snapshot "/.snapshots/12/snapshot"
+2024-05-28 07:57:15 SELinux is enabled.
+ID: 12
+2024-05-28 07:57:16 Transaction completed.
+Calling zypper remove
+2024-05-28 07:57:17 tukit 4.6.8 started
+2024-05-28 07:57:17 Options: callext 12 zypper -R {} remove -y update-test-security 
+2024-05-28 07:57:18 Executing `zypper -R /tmp/transactional-update-ZAXhTB remove -y update-test-security`:
+Reading installed packages...
+Resolving package dependencies...
+
+The following package is going to be REMOVED:
+  update-test-security
+
+1 package to remove.
+After the operation, 390.0 B will be freed.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+(1/1) Removing: update-test-security-5.2-1.1.x86_64 [..done]
+2024-05-28 07:57:18 Application returned with exit status 0.
+2024-05-28 07:57:18 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:57:19 tukit 4.6.8 started
+2024-05-28 07:57:19 Options: close 12 
+2024-05-28 07:57:19 New default snapshot is #12 (/.snapshots/12/snapshot).
+2024-05-28 07:57:19 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #12 (/.snapshots/12/snapshot).
+transactional-update finished
+yj8vd-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716883039; echo qMpS4-$?-
+qMpS4-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716883039; echo xThys-$?-
+xThys-0-
+# diff mnt-1716883039 def-1716883039; echo uBow8-$?-
+1c1
+< 278
+---
+> 280
+uBow8-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::afe4:6309:3220:8be2
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:57:59 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# ! rpm -q update-test-security; echo ~H3Nn-$?-
+package update-test-security is not installed
+~H3Nn-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n pkg install update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm; echo eOgJ8-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n pkg install update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm
+Separate /var detected.
+2024-05-28 07:58:15 tukit 4.6.8 started
+2024-05-28 07:58:15 Options: -c12 open 
+2024-05-28 07:58:16 Using snapshot 12 as base for new snapshot 13.
+2024-05-28 07:58:16 /var/lib/overlay/12/etc
+2024-05-28 07:58:16 Syncing /etc of previous snapshot 11 as base into new snapshot "/.snapshots/13/snapshot"
+2024-05-28 07:58:16 SELinux is enabled.
+ID: 13
+2024-05-28 07:58:16 Transaction completed.
+Calling zypper install
+2024-05-28 07:58:18 tukit 4.6.8 started
+2024-05-28 07:58:18 Options: callext 13 zypper -R {} install -y --auto-agree-with-product-licenses update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm 
+2024-05-28 07:58:18 Executing `zypper -R /tmp/transactional-update-Rna1jI install -y --auto-agree-with-product-licenses update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm`:
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  update-test-feature
+
+1 new package to install.
+Overall download size: 8.9 KiB. Already cached: 0 B. After the operation, additional 329.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-feature-5.1-1.20.x86_64 (Plain RPM files cache) (1/1),   8.9 KiB    
+(1/1) Installing: update-test-feature-5.1-1.20.x86_64 [..done]
+2024-05-28 07:58:19 Application returned with exit status 0.
+2024-05-28 07:58:19 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:58:20 tukit 4.6.8 started
+2024-05-28 07:58:20 Options: close 13 
+2024-05-28 07:58:21 New default snapshot is #13 (/.snapshots/13/snapshot).
+2024-05-28 07:58:21 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #13 (/.snapshots/13/snapshot).
+transactional-update finished
+eOgJ8-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n --continue pkg install update-test-trivial/update-test-optional-5.1-1.20.x86_64.rpm; echo lzSGY-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n --continue pkg install update-test-trivial/update-test-optional-5.1-1.20.x86_64.rpm
+Separate /var detected.
+2024-05-28 07:58:22 tukit 4.6.8 started
+2024-05-28 07:58:22 Options: -c13 open 
+2024-05-28 07:58:22 Using snapshot 13 as base for new snapshot 14.
+2024-05-28 07:58:22 /var/lib/overlay/13/etc
+ID: 14
+2024-05-28 07:58:23 Transaction completed.
+Calling zypper install
+2024-05-28 07:58:24 tukit 4.6.8 started
+2024-05-28 07:58:24 Options: callext 14 zypper -R {} install -y --auto-agree-with-product-licenses update-test-trivial/update-test-optional-5.1-1.20.x86_64.rpm 
+2024-05-28 07:58:25 Executing `zypper -R /tmp/transactional-update-b69EUf install -y --auto-agree-with-product-licenses update-test-trivial/update-test-optional-5.1-1.20.x86_64.rpm`:
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  update-test-optional
+
+1 new package to install.
+Overall download size: 9.0 KiB. Already cached: 0 B. After the operation, additional 408.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-optional-5.1-1.20.x86_64 (Plain RPM files cache) (1/1),   9.0 KiB    
+(1/1) Installing: update-test-optional-5.1-1.20.x86_64 [..done]
+2024-05-28 07:58:25 Application returned with exit status 0.
+2024-05-28 07:58:25 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:58:26 tukit 4.6.8 started
+2024-05-28 07:58:26 Options: close 14 
+2024-05-28 07:58:27 New default snapshot is #14 (/.snapshots/14/snapshot).
+2024-05-28 07:58:27 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #14 (/.snapshots/14/snapshot).
+transactional-update finished
+lzSGY-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716883107; echo c1Xjt-$?-
+c1Xjt-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716883107; echo 9u9eB-$?-
+9u9eB-0-
+# diff mnt-1716883107 def-1716883107; echo SuDhB-$?-
+1c1
+< 280
+---
+> 282
+SuDhB-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::1589:cb67:4f52:f61d
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:59:06 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# rpm -q --qf '%{V}-%{R}' update-test-feature | grep -x 5.1-1.20; echo pn~B8-$?-
+5.1-1.20
+pn~B8-0-
+# rpm -q --qf '%{V}-%{R}' update-test-optional | grep -x 5.1-1.20; echo LLaVk-$?-
+5.1-1.20
+LLaVk-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n rollback 9; echo t3qcW-$?-
+transactional-update 4.6.8 started
+Options: -n rollback 9
+Separate /var detected.
+Rollback to snapshot 9...
+2024-05-28 07:59:25 tukit 4.6.8 started
+2024-05-28 07:59:25 Options: rollback 9 
+2024-05-28 07:59:25 Transaction completed.
+transactional-update finished
+Please reboot to finish rollback!
+t3qcW-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716883165; echo 1QcGf-$?-
+1QcGf-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716883165; echo CVFXh-$?-
+CVFXh-0-
+# diff mnt-1716883165 def-1716883165; echo yU~nK-$?-
+1c1
+< 282
+---
+> 275
+yU~nK-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::af5:4db6:f342:45aa
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 08:00:04 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# rpm -q --qf '%{V}-%{R}' update-test-security | grep -x 5.1-1.20; echo N5_xB-$?-
+5.1-1.20
+N5_xB-0-
+# cd
+# test -f /var/log/audit/audit.log; echo UfVk_-$?-
+UfVk_-0-
+# cat > /tmp/scriptOSm16.sh << 'EOT_OSm16'; echo OSm16-$?-
+> ausearch -m avc -r
+> EOT_OSm16
+OSm16-0-
+# echo OSm16; bash -oe pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-$?-
+OSm16
+type=AVC msg=audit(1716881489.695:99): avc:  denied  { map_read map_write } for  pid=2445 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881489.705:100): avc:  denied  { map_read map_write } for  pid=2448 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881819.732:104): avc:  denied  { map_read map_write } for  pid=1653 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881819.738:105): avc:  denied  { map_read map_write } for  pid=1655 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.062:126): avc:  denied  { map_read map_write } for  pid=1680 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.065:127): avc:  denied  { map_read map_write } for  pid=1683 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.375:148): avc:  denied  { map_read map_write } for  pid=1706 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.382:149): avc:  denied  { map_read map_write } for  pid=1709 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.705:170): avc:  denied  { map_read map_write } for  pid=1734 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881820.708:171): avc:  denied  { map_read map_write } for  pid=1737 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.028:192): avc:  denied  { map_read map_write } for  pid=1760 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.038:193): avc:  denied  { map_read map_write } for  pid=1763 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.352:214): avc:  denied  { map_read map_write } for  pid=1787 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.355:215): avc:  denied  { map_read map_write } for  pid=1789 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.668:236): avc:  denied  { map_read map_write } for  pid=1814 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881821.675:237): avc:  denied  { map_read map_write } for  pid=1816 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+# clear
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::305f:9e1a:b138:6101
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::6d42:84fa:5206:fdc2
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::7bf3:c04b:d9a1:ddff
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:p5gBVn6KGJMqlhgwje2heobVrm3nCceZ13xX14ZmHDc (ECDSA)
+SSH host key: SHA256:DESg2HoWJw8kBQHsaXCoNJVv2tGGJvPBJIlP1UjBHD0 (ED25519)
+SSH host key: SHA256:j4mXxW2WJnR9RP5/FN2yR7iCBgvprpuoW75z364Xdb8 (RSA)
+ens4: 10.0.2.15 fec0::4dbe:523a:c51b:d4e0
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 08:09:37 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptz_R3j.sh << 'EOT_z_R3j'; echo z_R3j-$?-
+> journalctl --no-pager --quiet -p err -o short-precise
+> EOT_z_R3j
+z_R3j-0-
+# echo z_R3j; bash -oe pipefail /tmp/scriptz_R3j.sh ; echo SCRIPT_FINISHEDz_R3j-$?-
+z_R3j
+May 28 08:08:58.126809 localhost.localdomain root[882]: ERROR: "/usr/libexec/health-checker/fail.sh check" failed
+May 28 08:08:58.827012 localhost.localdomain root[963]: Machine didn't come up correctly, do a rollback
+SCRIPT_FINISHEDz_R3j-0-
+# journalctl --no-pager -o short-precise > /tmp/full_journal.log; echo g7oYx-$?-
+g7oYx-0-
+# curl --form upload=@/tmp/full_journal.log --form upname=journal_check-full_journal.log http://10.0.2.2:20303/cjCTJivJDdRIkYXu/uploadlog/full_journal.log; echo Kd0qv-$?-
+OK: journal_check-full_journal.log
+Kd0qv-0-
+# cat > /tmp/scriptRThrA.sh << 'EOT_RThrA'; echo RThrA-$?-
+> systemctl --failed --no-legend --plain --no-pager
+> EOT_RThrA
+RThrA-0-
+# echo RThrA; bash -oe pipefail /tmp/scriptRThrA.sh ; echo SCRIPT_FINISHEDRThrA-$?-
+RThrA
+SCRIPT_FINISHEDRThrA-0-
+# test -d /var/log/audit/; echo q7oq8-$?-
+q7oq8-0-
+# tar cvf /tmp/audit.tar  /var/log/audit/*; echo pfP16-$?-
+tar: Removing leading `/' from member names
+/var/log/audit/audit.log
+pfP16-0-
+# curl --form upload=@/tmp/audit.tar --form upname=journal_check-audit.tar http://10.0.2.2:20303/cjCTJivJDdRIkYXu/uploadlog/audit.tar; echo cyiIQ-$?-
+OK: journal_check-audit.tar
+cyiIQ-0-
+# 
