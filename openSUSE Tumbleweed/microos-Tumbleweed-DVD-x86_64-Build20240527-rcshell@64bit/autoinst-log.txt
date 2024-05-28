@@ -1,0 +1,351 @@
+[2024-05-28T07:26:38.009008Z] [info] +++ setup notes +++
+[2024-05-28T07:26:38.009220Z] [info] Running on openqaworker24:1 (Linux 5.14.21-150500.55.65-default #1 SMP PREEMPT_DYNAMIC Thu May 23 04:57:11 UTC 2024 (a46829d) x86_64)
+[2024-05-28T07:26:38.014213Z] [debug] Found ASSET_256, caching openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso.sha256
+[2024-05-28T07:26:38.017425Z] [info] Downloading openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso.sha256, request #282307 sent to Cache Service
+[2024-05-28T07:26:48.172689Z] [info] Download of openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso.sha256 processed:
+[info] [#282307] Cache size of "/var/lib/openqa/cache" is 398 GiB, with limit 400 GiB
+[info] [#282307] Downloading "openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso.sha256" from "https://openqa.opensuse.org/tests/4227090/asset/other/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso.sha256"
+[info] [#282307] Content of "/var/lib/openqa/cache/openqa.opensuse.org/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso.sha256" has not changed, updating last use
+
+[2024-05-28T07:26:48.174446Z] [debug] Found ISO, caching openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso
+[2024-05-28T07:26:48.176837Z] [info] Downloading openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso, request #282308 sent to Cache Service
+[2024-05-28T07:26:58.287174Z] [info] Download of openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso processed:
+[info] [#282308] Cache size of "/var/lib/openqa/cache" is 398 GiB, with limit 400 GiB
+[info] [#282308] Downloading "openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso" from "https://openqa.opensuse.org/tests/4227090/asset/iso/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso"
+[info] [#282308] Content of "/var/lib/openqa/cache/openqa.opensuse.org/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso" has not changed, updating last use
+
+[2024-05-28T07:26:58.290350Z] [info] Rsync from 'rsync://openqa.opensuse.org/tests' to '/var/lib/openqa/cache/openqa.opensuse.org', request #282309 sent to Cache Service
+[2024-05-28T07:27:03.350790Z] [info] Output of rsync:
+[info] [#282309] Calling: rsync -avHP --timeout 1800 rsync://openqa.opensuse.org/tests/ --delete /var/lib/openqa/cache/openqa.opensuse.org/tests/
+Try 1:
+receiving incremental file list
+
+sent 1,743 bytes  received 1,162,038 bytes  2,327,562.00 bytes/sec
+total size is 5,860,243,674  speedup is 5,035.52
+
+
+[2024-05-28T07:27:03.350959Z] [info] Finished to rsync tests
+[2024-05-28T07:27:03.356476Z] [debug] +++ worker notes +++
+[37m[2024-05-28T07:27:03.696952Z] [debug] [pid:88789] Current version is 4.6.1716387241.58dd214 [interface v40][0m
+[37m[2024-05-28T07:27:03.709170Z] [debug] [pid:88789] git hash in 'microos': 62966fab5fb01087482fdf9f80e0ce3c17f41bb0[0m
+[37m[2024-05-28T07:27:03.721241Z] [debug] [pid:88789] git url in 'microos': https://github.com/os-autoinst/os-autoinst-distri-opensuse.git[0m
+[37m[2024-05-28T07:27:04.014562Z] [debug] [pid:88789] scheduling bootloader tests/installation/bootloader.pm[0m
+[37m[2024-05-28T07:27:04.016856Z] [debug] [pid:88789] scheduling rcshell_start tests/microos/rcshell_start.pm[0m
+[37m[2024-05-28T07:27:04.017475Z] [debug] [pid:88789] scheduling libzypp_config tests/microos/libzypp_config.pm[0m
+[37m[2024-05-28T07:27:04.018138Z] [debug] [pid:88789] scheduling one_line_checks tests/microos/one_line_checks.pm[0m
+[2024-05-28T07:27:04.025743Z] [info] [pid:88803] cmdsrv: daemon reachable under http://*:20013/Kp3aWt4LS0tSV9Y2/
+[2024-05-28T07:27:04.027117Z] [info] [pid:88803] Listening at "http://[::]:20013"
+Web application available at http://[::]:20013
+[37m[2024-05-28T07:27:04.029596Z] [debug] [pid:88789] git hash in 'microos/products/microos/needles': 9c264ee66e0366e6bfd7b2a1d219ca52ddb44beb[0m
+[37m[2024-05-28T07:27:04.047665Z] [debug] [pid:88789] git url in 'microos/products/microos/needles': git@github.com:os-autoinst/os-autoinst-needles-opensuse.git[0m
+[37m[2024-05-28T07:27:04.047799Z] [debug] [pid:88789] init needles from microos/products/microos/needles[0m
+[37m[2024-05-28T07:27:04.728708Z] [debug] [pid:88789] loaded 7144 needles[0m
+[37m[2024-05-28T07:27:04.815403Z] [debug] [pid:88789] 88789: channel_out 15, channel_in 14[0m
+[37m[2024-05-28T07:27:04.872432Z] [debug] [pid:89025] 89025: cmdpipe 13, rsppipe 16[0m
+[37m[2024-05-28T07:27:04.872686Z] [debug] [pid:89025] started mgmt loop with pid 89025[0m
+[37m[2024-05-28T07:27:04.931137Z] [debug] [pid:89025] Launching external video encoder: ffmpeg -y -hide_banner -nostats -r 24 -f image2pipe -vcodec ppm -i - -pix_fmt yuv420p -c:v libvpx-vp9 -crf 35 -b:v 1500k -cpu-used 1 'video.webm'[0m
+[37m[2024-05-28T07:27:05.001218Z] [debug] [pid:89025] qemu version detected: 7.1.0[0m
+[37m[2024-05-28T07:27:05.003Z] [debug] [pid:89025] running `/usr/bin/chattr +C /var/lib/openqa/pool/1/raid`[0m
+[37m[2024-05-28T07:27:05.019821Z] [debug] [pid:89025] Command `/usr/bin/chattr +C /var/lib/openqa/pool/1/raid` terminated with 1
+  /usr/bin/chattr: Operation not supported while setting flags on /var/lib/openqa/pool/1/raid[0m
+[37m[2024-05-28T07:27:05.019922Z] [debug] [pid:89025] Configuring storage controllers and block devices[0m
+[37m[2024-05-28T07:27:05.020554Z] [debug] [pid:89025] running `/usr/bin/qemu-img info --output=json /var/lib/openqa/pool/1/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso`[0m
+[37m[2024-05-28T07:27:05.063306Z] [debug] [pid:89025] Initializing block device images[0m
+[37m[2024-05-28T07:27:05.063525Z] [debug] [pid:89025] running `/usr/bin/qemu-img create -f qcow2 /var/lib/openqa/pool/1/raid/hd0 20G`[0m
+[37m[2024-05-28T07:27:05.099420Z] [debug] [pid:89025] Formatting '/var/lib/openqa/pool/1/raid/hd0', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=21474836480 lazy_refcounts=off refcount_bits=16[0m
+[37m[2024-05-28T07:27:05.099529Z] [debug] [pid:89025] running `/usr/bin/qemu-img create -f qcow2 -F raw -b /var/lib/openqa/pool/1/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso /var/lib/openqa/pool/1/raid/cd0-overlay0 3085959168`[0m
+[37m[2024-05-28T07:27:05.134358Z] [debug] [pid:89025] Formatting '/var/lib/openqa/pool/1/raid/cd0-overlay0', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=3085959168 backing_file=/var/lib/openqa/pool/1/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso backing_fmt=raw lazy_refcounts=off refcount_bits=16[0m
+[37m[2024-05-28T07:27:05.134441Z] [debug] [pid:89025] init_blockdev_images: Finished creating block devices[0m
+[37m[2024-05-28T07:27:05.135273Z] [debug] [pid:89025] starting: /usr/bin/qemu-system-x86_64 -device VGA,edid=on,xres=1024,yres=768 -only-migratable -chardev ringbuf,id=serial0,logfile=serial0,logappend=on -serial chardev:serial0 -audiodev none,id=snd0 -device intel-hda -device hda-output,audiodev=snd0 -global isa-fdc.fdtypeA=none -m 1024 -cpu host -netdev user,id=qanet0 -device virtio-net,netdev=qanet0,mac=52:54:00:12:34:56 -object rng-random,filename=/dev/urandom,id=rng0 -device virtio-rng-pci,rng=rng0 -boot once=d -device qemu-xhci -device usb-tablet -smp 1 -enable-kvm -no-shutdown -vnc :91,share=force-shared -chardev socket,path=qmp_socket,server=on,wait=off,id=qmp_socket,logfile=qmp_socket.log,logappend=on -qmp chardev:qmp_socket -S -device virtio-scsi-pci,id=scsi0 -blockdev driver=file,node-name=hd0-file,filename=/var/lib/openqa/pool/1/raid/hd0,cache.no-flush=on -blockdev driver=qcow2,node-name=hd0,file=hd0-file,cache.no-flush=on,discard=unmap -device virtio-blk,id=hd0-device,drive=hd0,serial=hd0 -blockdev driver=file,node-name=cd0-overlay0-file,filename=/var/lib/openqa/pool/1/raid/cd0-overlay0,cache.no-flush=on -blockdev driver=qcow2,node-name=cd0-overlay0,file=cd0-overlay0-file,cache.no-flush=on,discard=unmap -device scsi-cd,id=cd0-device,drive=cd0-overlay0,serial=cd0[0m
+[37m[2024-05-28T07:27:05.141538Z] [debug] [pid:89025] Waiting for 0 attempts[0m
+[37m[2024-05-28T07:27:06.142137Z] [debug] [pid:89025] Waiting for 1 attempts[0m
+[37m[2024-05-28T07:27:07.142495Z] [debug] [pid:89025] Finished after 2 attempts[0m
+[37m[2024-05-28T07:27:07.156165Z] [debug] [pid:89025] Establishing VNC connection to localhost:5991[0m
+[37m[2024-05-28T07:27:07.158419Z] [debug] [pid:89025] pointer type 0 0 640 480 -257[0m
+[37m[2024-05-28T07:27:07.158490Z] [debug] [pid:89025] led state 0 1 1 -261[0m
+[37m[2024-05-28T07:27:07.212360Z] [debug] [pid:89025] Start CPU[0m
+[37m[2024-05-28T07:27:07.212547Z] [debug] [pid:89025] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"58060","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"5991","websocket":false}},"event":"VNC_CONNECTED","timestamp":{"microseconds":156636,"seconds":1716881227}}[0m
+[37m[2024-05-28T07:27:07.212630Z] [debug] [pid:89025] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"58060","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"5991","websocket":false}},"event":"VNC_INITIALIZED","timestamp":{"microseconds":157645,"seconds":1716881227}}[0m
+[37m[2024-05-28T07:27:07.212704Z] [debug] [pid:89025] EVENT {"event":"RESUME","timestamp":{"microseconds":212573,"seconds":1716881227}}[0m
+GOT GO
+
+[37m[2024-05-28T07:27:07.216137Z] [debug] [pid:89025] QEMU: QEMU emulator version 7.1.0 (SUSE Linux Enterprise 15)[0m
+[37m[2024-05-28T07:27:07.216187Z] [debug] [pid:89025] QEMU: Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers[0m
+[37m[2024-05-28T07:27:07.218710Z] [debug] [pid:88835] Snapshots are supported[0m
+[1;34m[2024-05-28T07:27:07.219815Z] [debug] [pid:88835] ||| starting bootloader tests/installation/bootloader.pm[0m
+[2024-05-28T07:27:07.221252Z] [debug] [pid:88835] tests/installation/bootloader.pm:43 called bootloader_setup::select_bootmenu_option -> products/microos/../../lib/bootloader_setup.pm:330 called testapi::assert_screen
+[2024-05-28T07:27:07.221502Z] [debug] [pid:88835] <<< testapi::assert_screen(mustmatch="inst-bootmenu", timeout=30)
+[31m[2024-05-28T07:27:08.911255Z] [warn] [pid:89025] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.70 seconds for 55 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:27:08.911341Z] [debug] [pid:89025] no match: 29.0s, best candidate: bootloader-grub2-leap-15.5-timeout-uefi-20230219 (0.29)[0m
+Input #0, image2pipe, from 'pipe:':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: ppm, rgb24, 1024x768, 24 fps, 24 tbr, 24 tbn, 24 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (ppm (native) -> vp9 (libvpx-vp9))
+[libvpx-vp9 @ 0x55c9a772f900] v1.11.0
+Output #0, webm, to 'video.webm':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: vp9, yuv420p(tv, progressive), 1024x768, q=2-31, 1500 kb/s, 24 fps, 1k tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libvpx-vp9
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+[37m[2024-05-28T07:27:09.579854Z] [debug] [pid:89025] no match: 28.0s, best candidate: bootloader-grub2-leap-15.5-timeout-uefi-20230219 (0.29)[0m
+[32m[2024-05-28T07:27:10.623608Z] [debug] [pid:88835] >>> testapi::_handle_found_needle: found bootmenu-TW-kubic-dvd-20191209, similarity 1.00 @ 0/0[0m
+[2024-05-28T07:27:10.624492Z] [debug] [pid:88835] tests/installation/bootloader.pm:43 called bootloader_setup::select_bootmenu_option -> products/microos/../../lib/bootloader_setup.pm:348 called testapi::send_key_until_needlematch
+[2024-05-28T07:27:10.624622Z] [debug] [pid:88835] <<< testapi::check_screen(mustmatch="inst-oninstallation", timeout=0)
+[37m[2024-05-28T07:27:11.578981Z] [debug] [pid:89025] no match: -0.6s, best candidate: inst-oninstallation-20191209 (0.45)[0m
+[32m[2024-05-28T07:27:11.641154Z] [debug] [pid:88835] >>> testapi::_check_backend_response: match=inst-oninstallation timed out after 0 (check_screen)[0m
+[2024-05-28T07:27:11.655669Z] [debug] [pid:88835] tests/installation/bootloader.pm:43 called bootloader_setup::select_bootmenu_option -> products/microos/../../lib/bootloader_setup.pm:348 called testapi::send_key_until_needlematch
+[2024-05-28T07:27:11.655777Z] [debug] [pid:88835] <<< testapi::wait_screen_change(timeout=10, similarity_level=50)
+[2024-05-28T07:27:11.656302Z] [debug] [pid:88835] tests/installation/bootloader.pm:43 called bootloader_setup::select_bootmenu_option -> products/microos/../../lib/bootloader_setup.pm:348 called testapi::send_key_until_needlematch
+[2024-05-28T07:27:11.656388Z] [debug] [pid:88835] <<< testapi::send_key(key="down", wait_screen_change=0)
+[32m[2024-05-28T07:27:12.112260Z] [debug] [pid:88835] >>> testapi::wait_screen_change: screen change seen after 0.182445049285889 seconds (similarity: 25.510891502542)[0m
+[2024-05-28T07:27:12.112472Z] [debug] [pid:88835] tests/installation/bootloader.pm:43 called bootloader_setup::select_bootmenu_option -> products/microos/../../lib/bootloader_setup.pm:348 called testapi::send_key_until_needlematch
+[2024-05-28T07:27:12.112620Z] [debug] [pid:88835] <<< testapi::check_screen(mustmatch="inst-oninstallation", timeout=5)
+[32m[2024-05-28T07:27:12.282881Z] [debug] [pid:88835] >>> testapi::_handle_found_needle: found inst-oninstallation-20191209, similarity 1.00 @ 246/192[0m
+[2024-05-28T07:27:12.283348Z] [debug] [pid:88835] tests/installation/bootloader.pm:53 called bootloader_setup::bootmenu_default_params -> products/microos/../../lib/bootloader_setup.pm:623 called bootloader_setup::type_boot_parameters -> products/microos/../../lib/bootloader_setup.pm:1592 called testapi::type_string
+[2024-05-28T07:27:12.283494Z] [debug] [pid:88835] <<< testapi::type_string(string="  console=ttyS0 console=tty startshell=1 netsetup=dhcp reboot_timeout=0  ", max_interval=4, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:27:51.795948Z] [debug] [pid:88835] tests/installation/bootloader.pm:56 called bootloader_setup::specific_bootmenu_params -> products/microos/../../lib/bootloader_setup.pm:913 called bootloader_setup::type_boot_parameters -> products/microos/../../lib/bootloader_setup.pm:1592 called testapi::type_string
+[2024-05-28T07:27:51.796175Z] [debug] [pid:88835] <<< testapi::type_string(string="  kernel.softlockup_panic=1  ", max_interval=4, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:28:07.590066Z] [debug] [pid:88835] tests/installation/bootloader.pm:68 called testapi::send_key
+[2024-05-28T07:28:07.590210Z] [debug] [pid:88835] <<< testapi::send_key(key="ret", wait_screen_change=0)
+[2024-05-28T07:28:07.858230Z] [debug] [pid:88835] tests/installation/bootloader.pm:71 called bootloader_setup::parse_bootparams_in_serial -> products/microos/../../lib/bootloader_setup.pm:1507 called testapi::wait_serial
+[2024-05-28T07:28:07.858473Z] [debug] [pid:88835] <<< testapi::wait_serial(quiet=undef, regexp=qr/command line:.*\[/msi, expect_not_found=0, timeout=90, buffer_size=undef, no_regex=0, record_output=undef)
+[32m[2024-05-28T07:28:09.904468Z] [debug] [pid:88835] >>> testapi::wait_serial: (?^msi:command line:.*\[): ok[0m
+[2024-05-28T07:28:09.904668Z] [debug] [pid:88835] tests/installation/bootloader.pm:71 called bootloader_setup::compare_bootparams -> products/microos/../../lib/bootloader_setup.pm:1530 called testapi::record_info
+[2024-05-28T07:28:09.904796Z] [debug] [pid:88835] <<< testapi::record_info(title="params ok", output="Bootloader parameters are typed correctly.\nVerified parameters:\nconsole=ttyS0\nconsole=tty\nstartshell=1\nnetsetup=dhcp\nreboot_timeout=0\nkernel.softlockup_panic=1", result="ok")
+[1;34m[2024-05-28T07:28:09.906844Z] [debug] [pid:88835] ||| finished bootloader installation (runtime: 62 s)[0m
+[1;34m[2024-05-28T07:28:09.908347Z] [debug] [pid:88835] ||| starting rcshell_start tests/microos/rcshell_start.pm[0m
+[2024-05-28T07:28:09.909055Z] [debug] [pid:88835] tests/microos/rcshell_start.pm:15 called testapi::assert_screen
+[2024-05-28T07:28:09.909148Z] [debug] [pid:88835] <<< testapi::assert_screen(mustmatch="startshell", timeout=150)
+[37m[2024-05-28T07:28:09.919176Z] [debug] [pid:89025] no match: 149.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:10.918500Z] [debug] [pid:89025] no match: 148.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:11.917827Z] [debug] [pid:89025] no match: 147.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:12.041752Z] [debug] [pid:89025] pointer type 1 0 720 400 -257[0m
+[37m[2024-05-28T07:28:12.917329Z] [debug] [pid:89025] no match: 146.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:13.956097Z] [debug] [pid:89025] no match: 145.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:14.918579Z] [debug] [pid:89025] no match: 144.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:15.922465Z] [debug] [pid:89025] no match: 143.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:16.925325Z] [debug] [pid:89025] no match: 142.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:17.923761Z] [debug] [pid:89025] no match: 141.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:18.957818Z] [debug] [pid:89025] no match: 140.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:19.925478Z] [debug] [pid:89025] no match: 139.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:20.920461Z] [debug] [pid:89025] no change: 138.9s[0m
+[37m[2024-05-28T07:28:20.925788Z] [debug] [pid:89025] no match: 138.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:21.927277Z] [debug] [pid:89025] no match: 137.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:22.922558Z] [debug] [pid:89025] no change: 136.9s[0m
+[37m[2024-05-28T07:28:22.927149Z] [debug] [pid:89025] no match: 136.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:23.962997Z] [debug] [pid:89025] no match: 135.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:24.929250Z] [debug] [pid:89025] no match: 134.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:25.930551Z] [debug] [pid:89025] no match: 133.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:26.932535Z] [debug] [pid:89025] no match: 132.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:27.933293Z] [debug] [pid:89025] no match: 131.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:28.968990Z] [debug] [pid:89025] no match: 130.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:29.930142Z] [debug] [pid:89025] no change: 129.9s[0m
+[37m[2024-05-28T07:28:29.935789Z] [debug] [pid:89025] no match: 129.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:30.936932Z] [debug] [pid:89025] no match: 128.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:31.937212Z] [debug] [pid:89025] no match: 127.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:32.937800Z] [debug] [pid:89025] no match: 126.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:33.975394Z] [debug] [pid:89025] no match: 125.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:34.939885Z] [debug] [pid:89025] no match: 124.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:35.941313Z] [debug] [pid:89025] no match: 123.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:36.942035Z] [debug] [pid:89025] no match: 122.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:37.943207Z] [debug] [pid:89025] no match: 121.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:38.979165Z] [debug] [pid:89025] no match: 120.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:39.947639Z] [debug] [pid:89025] no match: 119.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:40.945255Z] [debug] [pid:89025] no match: 118.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:41.946651Z] [debug] [pid:89025] no match: 117.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:42.942934Z] [debug] [pid:89025] no change: 116.9s[0m
+[37m[2024-05-28T07:28:42.948204Z] [debug] [pid:89025] no match: 116.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:43.983168Z] [debug] [pid:89025] no match: 115.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:44.945003Z] [debug] [pid:89025] no change: 114.9s[0m
+[37m[2024-05-28T07:28:44.950264Z] [debug] [pid:89025] no match: 114.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:45.950970Z] [debug] [pid:89025] no match: 113.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:46.951833Z] [debug] [pid:89025] no match: 112.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:47.954452Z] [debug] [pid:89025] no match: 111.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:48.989191Z] [debug] [pid:89025] no match: 110.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:49.955149Z] [debug] [pid:89025] no match: 109.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:50.955972Z] [debug] [pid:89025] no match: 108.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:51.957458Z] [debug] [pid:89025] no match: 107.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:52.952399Z] [debug] [pid:89025] no change: 106.9s[0m
+[37m[2024-05-28T07:28:52.957614Z] [debug] [pid:89025] no match: 106.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:53.994788Z] [debug] [pid:89025] no match: 105.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:54.954507Z] [debug] [pid:89025] no change: 104.9s[0m
+[37m[2024-05-28T07:28:54.959854Z] [debug] [pid:89025] no match: 104.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:55.961185Z] [debug] [pid:89025] no match: 103.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:56.962227Z] [debug] [pid:89025] no match: 102.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:57.963190Z] [debug] [pid:89025] no match: 101.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:58.998998Z] [debug] [pid:89025] no match: 100.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:28:59.967372Z] [debug] [pid:89025] no match: 99.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:29:00.966386Z] [debug] [pid:89025] no match: 98.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:29:01.969150Z] [debug] [pid:89025] no match: 97.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[37m[2024-05-28T07:29:02.968840Z] [debug] [pid:89025] no match: 96.9s, best candidate: rcshell_start-startshell-20170906 (0.00)[0m
+[32m[2024-05-28T07:29:04.045866Z] [debug] [pid:88835] >>> testapi::_handle_found_needle: found rcshell_start-startshell-20170906, similarity 1.00 @ 0/16[0m
+[2024-05-28T07:29:04.046022Z] [debug] [pid:88835] lib/consoletest.pm:36 called testapi::enter_cmd
+[2024-05-28T07:29:04.046160Z] [debug] [pid:88835] <<< testapi::type_string(string="cd\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+Use of uninitialized value in pattern match (m//) at microos/lib/consoletest.pm line 70.
+	consoletest::record_avc_selinux_alerts() called at microos/lib/consoletest.pm line 38
+	consoletest::post_run_hook(rcshell_start=HASH(0x55e56acc2098)) called at /usr/lib/os-autoinst/basetest.pm line 354
+	eval {...} called at /usr/lib/os-autoinst/basetest.pm line 346
+	basetest::runtest(rcshell_start=HASH(0x55e56acc2098)) called at /usr/lib/os-autoinst/autotest.pm line 416
+	eval {...} called at /usr/lib/os-autoinst/autotest.pm line 416
+	autotest::runalltests() called at /usr/lib/os-autoinst/autotest.pm line 273
+	eval {...} called at /usr/lib/os-autoinst/autotest.pm line 273
+	autotest::run_all() called at /usr/lib/os-autoinst/autotest.pm line 324
+	autotest::__ANON__(Mojo::IOLoop::ReadWriteProcess=HASH(0x55e56bfed848)) called at /usr/lib/perl5/vendor_perl/5.26.1/Mojo/IOLoop/ReadWriteProcess.pm line 329
+	eval {...} called at /usr/lib/perl5/vendor_perl/5.26.1/Mojo/IOLoop/ReadWriteProcess.pm line 329
+	Mojo::IOLoop::ReadWriteProcess::_fork(Mojo::IOLoop::ReadWriteProcess=HASH(0x55e56bfed848), CODE(0x55e56449b398)) called at /usr/lib/perl5/vendor_perl/5.26.1/Mojo/IOLoop/ReadWriteProcess.pm line 492
+	Mojo::IOLoop::ReadWriteProcess::start(Mojo::IOLoop::ReadWriteProcess=HASH(0x55e56bfed848)) called at /usr/lib/os-autoinst/autotest.pm line 326
+	autotest::start_process() called at /usr/lib/os-autoinst/OpenQA/Isotovideo/Runner.pm line 103
+	OpenQA::Isotovideo::Runner::start_autotest(OpenQA::Isotovideo::Runner=HASH(0x55e5644580b8)) called at /usr/bin/isotovideo line 172
+	eval {...} called at /usr/bin/isotovideo line 161
+[2024-05-28T07:29:04.148960Z] [debug] [pid:88835] lib/consoletest.pm:40 called opensusebasetest::clear_and_verify_console -> products/microos/../../lib/opensusebasetest.pm:53 called utils::clear_console -> lib/utils.pm:387 called testapi::enter_cmd
+[2024-05-28T07:29:04.149152Z] [debug] [pid:88835] <<< testapi::type_string(string="clear\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:04.351842Z] [debug] [pid:88835] lib/consoletest.pm:40 called opensusebasetest::clear_and_verify_console -> products/microos/../../lib/opensusebasetest.pm:54 called testapi::assert_screen
+[2024-05-28T07:29:04.352024Z] [debug] [pid:88835] <<< testapi::assert_screen(mustmatch="cleared-console", timeout=30)
+[32m[2024-05-28T07:29:05.076122Z] [debug] [pid:88835] >>> testapi::_handle_found_needle: found cleared-console-standard_prompt-20191207, similarity 1.00 @ 130/1[0m
+[1;34m[2024-05-28T07:29:05.076726Z] [debug] [pid:88835] ||| finished rcshell_start microos (runtime: 56 s)[0m
+[1;34m[2024-05-28T07:29:05.077571Z] [debug] [pid:88835] ||| starting libzypp_config tests/microos/libzypp_config.pm[0m
+[2024-05-28T07:29:05.078190Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:18 called serial_terminal::select_serial_terminal -> products/microos/../../lib/serial_terminal.pm:392 called testapi::select_console
+[2024-05-28T07:29:05.078280Z] [debug] [pid:88835] <<< testapi::select_console(testapi_console="root-console")
+[37m[2024-05-28T07:29:05.481788Z] [debug] [pid:88835] activate_console, console: root-console, type: console[0m
+[2024-05-28T07:29:05.482061Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:18 called serial_terminal::select_serial_terminal -> products/microos/../../lib/serial_terminal.pm:392 called testapi::select_console -> lib/susedistribution.pm:857 called testapi::wait_still_screen
+[2024-05-28T07:29:05.482201Z] [debug] [pid:88835] <<< testapi::wait_still_screen(stilltime=1, similarity_level=47, timeout=30)
+[32m[2024-05-28T07:29:06.638014Z] [debug] [pid:88835] >>> testapi::wait_still_screen: detected same image for 1 seconds (1.15367293357849 s elapsed), last detected similarity is 50.4372371212676[0m
+[2024-05-28T07:29:06.638168Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:18 called serial_terminal::select_serial_terminal -> products/microos/../../lib/serial_terminal.pm:392 called testapi::select_console -> lib/susedistribution.pm:862 called testapi::assert_screen
+[2024-05-28T07:29:06.638308Z] [debug] [pid:88835] <<< testapi::assert_screen(mustmatch=[
+    "tty2-selected",
+    "text-logged-in-root"
+  ], timeout=60)
+[37m[2024-05-28T07:29:06.688705Z] [debug] [pid:89025] no match: 59.9s, best candidate: text-logged-in-root-simple_prompt-20190301 (0.69)[0m
+[37m[2024-05-28T07:29:07.654399Z] [debug] [pid:89025] no match: 58.9s, best candidate: text-logged-in-root-simple_prompt-20190301 (0.69)[0m
+[37m[2024-05-28T07:29:08.641403Z] [debug] [pid:89025] no change: 57.9s[0m
+[37m[2024-05-28T07:29:08.651974Z] [debug] [pid:89025] no match: 57.9s, best candidate: text-logged-in-root-simple_prompt-20190301 (0.69)[0m
+[37m[2024-05-28T07:29:09.642487Z] [debug] [pid:89025] no change: 56.9s[0m
+[37m[2024-05-28T07:29:09.654971Z] [debug] [pid:89025] no match: 56.9s, best candidate: text-logged-in-root-simple_prompt-20190301 (0.69)[0m
+[32m[2024-05-28T07:29:11.015713Z] [debug] [pid:88835] >>> testapi::_handle_found_needle: found text-logged-in-root-20220816, similarity 1.00 @ 121/145[0m
+[2024-05-28T07:29:11.015911Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:18 called serial_terminal::select_serial_terminal -> products/microos/../../lib/serial_terminal.pm:392 called testapi::select_console -> lib/susedistribution.pm:876 called testapi::assert_screen
+[2024-05-28T07:29:11.016029Z] [debug] [pid:88835] <<< testapi::assert_screen(mustmatch="text-logged-in-root", timeout=60)
+[37m[2024-05-28T07:29:11.654979Z] [debug] [pid:89025] no match: 59.3s, best candidate: text-logged-in-root-simple_prompt-20190301 (0.69)[0m
+[32m[2024-05-28T07:29:12.702907Z] [debug] [pid:88835] >>> testapi::_handle_found_needle: found text-logged-in-root-simple_prompt-20190301, similarity 1.00 @ 120/144[0m
+[2024-05-28T07:29:12.703083Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:18 called serial_terminal::select_serial_terminal -> products/microos/../../lib/serial_terminal.pm:392 called testapi::select_console -> lib/susedistribution.pm:879 called testapi::assert_screen
+[2024-05-28T07:29:12.703181Z] [debug] [pid:88835] <<< testapi::assert_screen(mustmatch="root-console", timeout=30)
+[32m[2024-05-28T07:29:13.720294Z] [debug] [pid:88835] >>> testapi::_handle_found_needle: found root-console-no_color-20200130, similarity 1.00 @ 120/144[0m
+[2024-05-28T07:29:13.721043Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:18 called serial_terminal::select_serial_terminal -> products/microos/../../lib/serial_terminal.pm:392 called testapi::select_console -> lib/susedistribution.pm:933 called distribution::script_run
+[2024-05-28T07:29:13.721184Z] [debug] [pid:88835] <<< testapi::type_string(string="setterm -blank 0", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:14.266592Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:18 called serial_terminal::select_serial_terminal -> products/microos/../../lib/serial_terminal.pm:392 called testapi::select_console -> lib/susedistribution.pm:933 called distribution::script_run
+[2024-05-28T07:29:14.266801Z] [debug] [pid:88835] <<< testapi::type_string(string="; echo YpuUt-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:15.379451Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:18 called serial_terminal::select_serial_terminal -> products/microos/../../lib/serial_terminal.pm:392 called testapi::select_console -> lib/susedistribution.pm:933 called distribution::script_run
+[2024-05-28T07:29:15.379669Z] [debug] [pid:88835] <<< testapi::wait_serial(expect_not_found=0, regexp=qr/YpuUt-\d+-/u, quiet=undef, timeout=30, no_regex=0, buffer_size=undef, record_output=undef)
+[32m[2024-05-28T07:29:16.427379Z] [debug] [pid:88835] >>> testapi::wait_serial: (?^u:YpuUt-\d+-): ok[0m
+[2024-05-28T07:29:16.427639Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:18 called serial_terminal::select_serial_terminal -> products/microos/../../lib/serial_terminal.pm:392 called testapi::select_console -> lib/susedistribution.pm:997 called testapi::assert_screen
+[2024-05-28T07:29:16.427753Z] [debug] [pid:88835] <<< testapi::assert_screen(mustmatch="root-console", timeout=30, no_wait=1)
+[32m[2024-05-28T07:29:16.475037Z] [debug] [pid:88835] >>> testapi::_handle_found_needle: found root-console-no_color-20200130, similarity 1.00 @ 120/160[0m
+[2024-05-28T07:29:16.475253Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:20 called testapi::assert_script_run
+[2024-05-28T07:29:16.475386Z] [debug] [pid:88835] <<< testapi::assert_script_run(cmd="grep -E -x \"^solver.onlyRequires ?= ?true\" /etc/zypp/zypp.conf", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:29:16.475494Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:20 called testapi::assert_script_run
+[2024-05-28T07:29:16.475599Z] [debug] [pid:88835] <<< testapi::type_string(string="grep -E -x \"^solver.onlyRequires ?= ?true\" /etc/zypp/zypp.conf", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:18.689680Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:20 called testapi::assert_script_run
+[2024-05-28T07:29:18.689918Z] [debug] [pid:88835] <<< testapi::type_string(string="; echo FOVbo-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:19.819273Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:20 called testapi::assert_script_run
+[2024-05-28T07:29:19.819489Z] [debug] [pid:88835] <<< testapi::wait_serial(timeout=90, quiet=undef, regexp=qr/FOVbo-\d+-/u, expect_not_found=0, record_output=undef, buffer_size=undef, no_regex=0)
+[32m[2024-05-28T07:29:20.864217Z] [debug] [pid:88835] >>> testapi::wait_serial: (?^u:FOVbo-\d+-): ok[0m
+[2024-05-28T07:29:20.864389Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:21 called testapi::assert_script_run
+[2024-05-28T07:29:20.864504Z] [debug] [pid:88835] <<< testapi::assert_script_run(cmd="grep -E -x \"^rpm.install.excludedocs ?= ?yes\" /etc/zypp/zypp.conf", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:29:20.864595Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:21 called testapi::assert_script_run
+[2024-05-28T07:29:20.864696Z] [debug] [pid:88835] <<< testapi::type_string(string="grep -E -x \"^rpm.install.excludedocs ?= ?yes\" /etc/zypp/zypp.conf", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:23.157828Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:21 called testapi::assert_script_run
+[2024-05-28T07:29:23.158147Z] [debug] [pid:88835] <<< testapi::type_string(string="; echo iE2kn-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:24.256410Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:21 called testapi::assert_script_run
+[2024-05-28T07:29:24.256686Z] [debug] [pid:88835] <<< testapi::wait_serial(buffer_size=undef, no_regex=0, record_output=undef, quiet=undef, regexp=qr/iE2kn-\d+-/u, expect_not_found=0, timeout=90)
+[32m[2024-05-28T07:29:25.300952Z] [debug] [pid:88835] >>> testapi::wait_serial: (?^u:iE2kn-\d+-): ok[0m
+[2024-05-28T07:29:25.301132Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:23 called testapi::assert_script_run
+[2024-05-28T07:29:25.301261Z] [debug] [pid:88835] <<< testapi::assert_script_run(cmd="grep -E -x \"^multiversion ?=\" /etc/zypp/zypp.conf", fail_message="", quiet=undef, timeout=90)
+[2024-05-28T07:29:25.301355Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:23 called testapi::assert_script_run
+[2024-05-28T07:29:25.301460Z] [debug] [pid:88835] <<< testapi::type_string(string="grep -E -x \"^multiversion ?=\" /etc/zypp/zypp.conf", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:27.036301Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:23 called testapi::assert_script_run
+[2024-05-28T07:29:27.036510Z] [debug] [pid:88835] <<< testapi::type_string(string="; echo jViF3-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:28.148701Z] [debug] [pid:88835] tests/microos/libzypp_config.pm:23 called testapi::assert_script_run
+[2024-05-28T07:29:28.148931Z] [debug] [pid:88835] <<< testapi::wait_serial(timeout=90, regexp=qr/jViF3-\d+-/u, quiet=undef, expect_not_found=0, record_output=undef, buffer_size=undef, no_regex=0)
+[32m[2024-05-28T07:29:29.192112Z] [debug] [pid:88835] >>> testapi::wait_serial: (?^u:jViF3-\d+-): ok[0m
+[2024-05-28T07:29:29.192279Z] [debug] [pid:88835] lib/consoletest.pm:36 called testapi::enter_cmd
+[2024-05-28T07:29:29.192418Z] [debug] [pid:88835] <<< testapi::type_string(string="cd\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:29.294356Z] [debug] [pid:88835] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:29:29.294532Z] [debug] [pid:88835] <<< testapi::script_run(cmd="test -f /var/log/audit/audit.log", quiet=undef, output="", timeout=30, die_on_timeout=1)
+[2024-05-28T07:29:29.294658Z] [debug] [pid:88835] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:29:29.294786Z] [debug] [pid:88835] <<< testapi::type_string(string="test -f /var/log/audit/audit.log", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:30.373256Z] [debug] [pid:88835] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:29:30.373460Z] [debug] [pid:88835] <<< testapi::type_string(string="; echo UfVk_-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:31.504424Z] [debug] [pid:88835] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:29:31.504639Z] [debug] [pid:88835] <<< testapi::wait_serial(record_output=undef, no_regex=0, buffer_size=undef, timeout=30, expect_not_found=0, regexp=qr/UfVk_-\d+-/u, quiet=undef)
+[32m[2024-05-28T07:29:32.549837Z] [debug] [pid:88835] >>> testapi::wait_serial: (?^u:UfVk_-\d+-): ok[0m
+[2024-05-28T07:29:32.549999Z] [debug] [pid:88835] lib/consoletest.pm:40 called opensusebasetest::clear_and_verify_console -> products/microos/../../lib/opensusebasetest.pm:53 called utils::clear_console -> lib/utils.pm:387 called testapi::enter_cmd
+[2024-05-28T07:29:32.550131Z] [debug] [pid:88835] <<< testapi::type_string(string="clear\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:32.752978Z] [debug] [pid:88835] lib/consoletest.pm:40 called opensusebasetest::clear_and_verify_console -> products/microos/../../lib/opensusebasetest.pm:54 called testapi::assert_screen
+[2024-05-28T07:29:32.753135Z] [debug] [pid:88835] <<< testapi::assert_screen(mustmatch="cleared-console", timeout=30)
+[37m[2024-05-28T07:29:32.806194Z] [debug] [pid:89025] no match: 29.9s, best candidate: cleared-console-root-wsl-20210222 (0.59)[0m
+[32m[2024-05-28T07:29:33.847073Z] [debug] [pid:88835] >>> testapi::_handle_found_needle: found cleared-console-standard_prompt-20191207, similarity 1.00 @ 106/1[0m
+[1;34m[2024-05-28T07:29:33.847481Z] [debug] [pid:88835] ||| finished libzypp_config microos (runtime: 28 s)[0m
+[1;34m[2024-05-28T07:29:33.848518Z] [debug] [pid:88835] ||| starting one_line_checks tests/microos/one_line_checks.pm[0m
+[2024-05-28T07:29:33.849085Z] [debug] [pid:88835] tests/microos/one_line_checks.pm:37 called one_line_checks::run_rcshell_checks -> tests/microos/one_line_checks.pm:17 called testapi::assert_script_run
+[2024-05-28T07:29:33.849208Z] [debug] [pid:88835] <<< testapi::assert_script_run(cmd="date +\"%Z\" | grep -x UTC", quiet=undef, timeout=90, fail_message="")
+[2024-05-28T07:29:33.849309Z] [debug] [pid:88835] tests/microos/one_line_checks.pm:37 called one_line_checks::run_rcshell_checks -> tests/microos/one_line_checks.pm:17 called testapi::assert_script_run
+[2024-05-28T07:29:33.849406Z] [debug] [pid:88835] <<< testapi::type_string(string="date +\"%Z\" | grep -x UTC", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:34.809965Z] [debug] [pid:88835] tests/microos/one_line_checks.pm:37 called one_line_checks::run_rcshell_checks -> tests/microos/one_line_checks.pm:17 called testapi::assert_script_run
+[2024-05-28T07:29:34.810267Z] [debug] [pid:88835] <<< testapi::type_string(string="; echo vLUA6-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:35.940020Z] [debug] [pid:88835] tests/microos/one_line_checks.pm:37 called one_line_checks::run_rcshell_checks -> tests/microos/one_line_checks.pm:17 called testapi::assert_script_run
+[2024-05-28T07:29:35.940278Z] [debug] [pid:88835] <<< testapi::wait_serial(no_regex=0, buffer_size=undef, record_output=undef, expect_not_found=0, quiet=undef, regexp=qr/vLUA6-\d+-/u, timeout=90)
+[32m[2024-05-28T07:29:36.984303Z] [debug] [pid:88835] >>> testapi::wait_serial: (?^u:vLUA6-\d+-): ok[0m
+[2024-05-28T07:29:36.984479Z] [debug] [pid:88835] lib/consoletest.pm:36 called testapi::enter_cmd
+[2024-05-28T07:29:36.984609Z] [debug] [pid:88835] <<< testapi::type_string(string="cd\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:37.086305Z] [debug] [pid:88835] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:29:37.086446Z] [debug] [pid:88835] <<< testapi::script_run(cmd="test -f /var/log/audit/audit.log", die_on_timeout=1, timeout=30, quiet=undef, output="")
+[2024-05-28T07:29:37.086552Z] [debug] [pid:88835] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:29:37.086671Z] [debug] [pid:88835] <<< testapi::type_string(string="test -f /var/log/audit/audit.log", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:38.165402Z] [debug] [pid:88835] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:29:38.165620Z] [debug] [pid:88835] <<< testapi::type_string(string="; echo UfVk_-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:39.295122Z] [debug] [pid:88835] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:29:39.295349Z] [debug] [pid:88835] <<< testapi::wait_serial(timeout=30, expect_not_found=0, regexp=qr/UfVk_-\d+-/u, quiet=undef, record_output=undef, no_regex=0, buffer_size=undef)
+[32m[2024-05-28T07:29:40.340770Z] [debug] [pid:88835] >>> testapi::wait_serial: (?^u:UfVk_-\d+-): ok[0m
+[2024-05-28T07:29:40.340937Z] [debug] [pid:88835] lib/consoletest.pm:40 called opensusebasetest::clear_and_verify_console -> products/microos/../../lib/opensusebasetest.pm:53 called utils::clear_console -> lib/utils.pm:387 called testapi::enter_cmd
+[2024-05-28T07:29:40.341069Z] [debug] [pid:88835] <<< testapi::type_string(string="clear\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:40.543879Z] [debug] [pid:88835] lib/consoletest.pm:40 called opensusebasetest::clear_and_verify_console -> products/microos/../../lib/opensusebasetest.pm:54 called testapi::assert_screen
+[2024-05-28T07:29:40.544038Z] [debug] [pid:88835] <<< testapi::assert_screen(mustmatch="cleared-console", timeout=30)
+[32m[2024-05-28T07:29:40.637495Z] [debug] [pid:88835] >>> testapi::_handle_found_needle: found cleared-console-microos-20200511, similarity 0.99 @ 96/64[0m
+[1;34m[2024-05-28T07:29:40.637903Z] [debug] [pid:88835] ||| finished one_line_checks microos (runtime: 7 s)[0m
+[37m[2024-05-28T07:29:40.639287Z] [debug] [pid:88789] stopping autotest process 88835[0m
+[37m[2024-05-28T07:29:40.649620Z] [debug] [pid:88789] [autotest] process exited: 0[0m
+[37m[2024-05-28T07:29:40.749959Z] [debug] [pid:88789] done with autotest process[0m
+[37m[2024-05-28T07:29:40.750383Z] [debug] [pid:88789] stopping command server 88803 because test execution ended[0m
+[37m[2024-05-28T07:29:40.750462Z] [debug] [pid:88789] isotovideo: informing websocket clients before stopping command server: http://127.0.0.1:20013/Kp3aWt4LS0tSV9Y2/broadcast[0m
+[37m[2024-05-28T07:29:41.190310Z] [debug] [pid:88789] commands process exited: 0[0m
+[37m[2024-05-28T07:29:41.290653Z] [debug] [pid:88789] done with command server[0m
+[37m[2024-05-28T07:29:41.290722Z] [debug] [pid:88789] isotovideo done[0m
+[37m[2024-05-28T07:29:41.291156Z] [debug] [pid:89025] EVENT {"data":{"path":"\/machine\/peripheral-anon\/device[3]\/virtio-backend"},"event":"NIC_RX_FILTER_CHANGED","timestamp":{"microseconds":226546,"seconds":1716881320}}[0m
+[37m[2024-05-28T07:29:41.291345Z] [debug] [pid:89025] QEMU status is not 'shutdown', it is 'running'[0m
+[37m[2024-05-28T07:29:41.291508Z] [debug] [pid:88789] backend shutdown state: [0m
+[33m[2024-05-28T07:29:41.291835Z] [info] [pid:89025] ::: OpenQA::Qemu::Proc::save_state: Saving QEMU state to qemu_state.json[0m
+[37m[2024-05-28T07:29:42.346151Z] [debug] [pid:89025] Passing remaining frames to the video encoder[0m
+frame=  300 fps=2.0 q=0.0 Lsize=     345kB time=00:00:12.45 bitrate= 226.8kbits/s speed=0.081x    
+video:342kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.732240%
+[37m[2024-05-28T07:29:42.663070Z] [debug] [pid:89025] Waiting for video encoder to finalize the video[0m
+[37m[2024-05-28T07:29:42.663149Z] [debug] [pid:89025] The external video encoder (pid 89216) terminated[0m
+[37m[2024-05-28T07:29:42.663206Z] [debug] [pid:89025] The built-in video encoder (pid 89217) terminated[0m
+[37m[2024-05-28T07:29:42.663765Z] [debug] [pid:89025] QEMU: qemu-system-x86_64: terminating on signal 15 from pid 89025 (/usr/bin/isotovideo: backen)[0m
+[37m[2024-05-28T07:29:42.664350Z] [debug] [pid:89025] sending magic and exit[0m
+[37m[2024-05-28T07:29:42.664607Z] [debug] [pid:88789] received magic close[0m
+[37m[2024-05-28T07:29:42.684790Z] [debug] [pid:88789] backend process exited: 0[0m
+Use of uninitialized value $name in pattern match (m//) at /usr/lib/os-autoinst/OpenQA/Isotovideo/Utils.pm line 332.
+	OpenQA::Isotovideo::Utils::handle_generated_assets(OpenQA::Isotovideo::CommandHandler=HASH(0x55e56caa6cf0), "") called at /usr/bin/isotovideo line 204
+	eval {...} called at /usr/bin/isotovideo line 161
+[37m[2024-05-28T07:29:42.786540Z] [debug] [pid:88789] stopping backend process 89025[0m
+[37m[2024-05-28T07:29:42.786673Z] [debug] [pid:88789] done with backend process[0m
+88789: EXIT 0
+[2024-05-28T07:29:42.831381Z] [info] Isotovideo exit status: 0
+[2024-05-28T07:29:42.848423Z] [info] +++ worker notes +++
+[2024-05-28T07:29:42.848533Z] [info] End time: 2024-05-28 07:29:42
+[2024-05-28T07:29:42.848579Z] [info] Result: done
+[2024-05-28T07:29:42.853795Z] [info] Uploading video.webm
+[2024-05-28T07:29:42.892092Z] [info] Uploading autoinst-log.txt
