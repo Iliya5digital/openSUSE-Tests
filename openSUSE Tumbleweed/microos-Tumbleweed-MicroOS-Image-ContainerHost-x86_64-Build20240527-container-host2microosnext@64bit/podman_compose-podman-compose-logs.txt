@@ -1,0 +1,20 @@
+haproxy-1  | [NOTICE]   (1) : New worker (3) forked
+haproxy-1  | [NOTICE]   (1) : Loading success.
+nginx-1    | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1    | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1    | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1    | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1    | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1    | /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx-1    | 2024/05/28 10:15:55 [notice] 1#1: using the "epoll" event method
+nginx-1    | 2024/05/28 10:15:55 [notice] 1#1: nginx/1.25.5
+nginx-1    | 2024/05/28 10:15:55 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+nginx-1    | 2024/05/28 10:15:55 [notice] 1#1: OS: Linux 6.9.1-1-default
+nginx-1    | 2024/05/28 10:15:55 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 524288:524288
+nginx-1    | 2024/05/28 10:15:55 [notice] 1#1: start worker processes
+nginx-1    | 2024/05/28 10:15:55 [notice] 1#1: start worker process 24
+nginx-1    | 10.89.0.3 - - [28/May/2024:10:16:23 +0000] "GET / HTTP/1.1" 200 615 "-" "curl/8.8.0" "-"
+nginx-1    | 10.89.0.3 - - [28/May/2024:10:16:34 +0000] "GET / HTTP/1.1" 200 6 "-" "curl/8.8.0" "-"

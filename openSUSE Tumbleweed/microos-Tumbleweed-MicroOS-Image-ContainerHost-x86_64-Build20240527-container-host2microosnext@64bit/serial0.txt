@@ -1,0 +1,1541 @@
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.1.8-1-default (ttyS0).
+
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+ens4: 10.0.2.15 fec0::d560:ad2a:961d:4350
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:07:13 localhost.localdomain kernel: audit: type=1400 audit(1716887232.472:5): avc:  denied  { prog_run } for  pid=1 comm="systemd" scontext=system_u:system_r:init_t:s0 tcontext=system_u:system_r:kernel_t:s0 tclass=bpf permissive=0
+May 28 09:07:13 localhost.localdomain kernel: audit: type=1400 audit(1716887232.472:6): avc:  denied  { prog_run } for  pid=1 comm="systemd" scontext=system_u:system_r:init_t:s0 tcontext=system_u:system_r:kernel_t:s0 tclass=bpf permissive=0
+May 28 09:07:13 localhost.localdomain kernel: audit: type=1400 audit(1716887232.472:7): avc:  denied  { prog_run } for  pid=1 comm="systemd" scontext=system_u:system_r:init_t:s0 tcontext=system_u:system_r:kernel_t:s0 tclass=bpf permissive=0
+May 28 09:07:13 localhost.localdomain kernel: audit: type=1400 audit(1716887232.472:8): avc:  denied  { prog_run } for  pid=1 comm="systemd" scontext=system_u:system_r:init_t:s0 tcontext=system_u:system_r:kernel_t:s0 tclass=bpf permissive=0
+May 28 09:07:13 localhost.localdomain kernel: audit: type=1400 audit(1716887232.472:9): avc:  denied  { prog_run } for  pid=1 comm="systemd" scontext=system_u:system_r:init_t:s0 tcontext=system_u:system_r:kernel_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+1w08R-0-
+lH_8E-0-
+8I3L6-0-
+UfVk_-0-
+OSm16
+SCRIPT_FINISHEDOSm16-1-
+WgXp8-0-
+c6eFV-0-
+unneed_repos_removed
+JL9pQ-0-
+c6eFV-6-
+UfVk_-0-
+OSm16
+SCRIPT_FINISHEDOSm16-1-
+1xBk1-0-
+GfrcR-0-
+fDmt2-0-
+UfVk_-0-
+OSm16
+SCRIPT_FINISHEDOSm16-1-
+IEzET-0-
+5sFQy-0-
+9HXEV-0-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+qOsoJ-0-
+g8dqz-0-
+wl6NB-0-
+g3rFX-1-
+[  437.894276][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+ens4: 10.0.2.15 fec0::fcab:ad5f:9c80:dec5
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:14:21 localhost kernel: audit: type=1400 audit(1716887660.356:4): avc:  denied  { map_read map_write } for  pid=592 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:14:21 localhost kernel: audit: type=1400 audit(1716887660.373:5): avc:  denied  { map_read map_write } for  pid=594 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+UfVk_-0-
+OSm16
+SCRIPT_FINISHEDOSm16-1-
+4E2lC-0-
+ksEiS
+# If you change this file, run 'grub2-mkconfig -o /boot/grub2/grub.cfg' afterwards to update
+# /boot/grub2/grub.cfg.
+
+# Uncomment to set your own custom distributor. If you leave it unset or empty, the default
+# policy is to determine the value from /etc/os-release
+# GRUB_DISTRIBUTOR=""
+
+GRUB_DEFAULT=0
+GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_TIMEOUT=-1
+GRUB_CMDLINE_LINUX_DEFAULT="quiet systemd.show_status=yes console=ttyS0,115200 console=tty0 security=selinux selinux=1"
+GRUB_CMDLINE_LINUX=""
+
+# Uncomment to automatically save last booted menu entry in GRUB2 environment
+# variable `saved_entry'
+#GRUB_SAVEDEFAULT="true"
+
+# Uncomment to enable BadRAM filtering, modify to suit your needs
+# This works with Linux (no patch required) and with any kernel that obtains
+# the memory map information from GRUB (GNU Mach, kernel of FreeBSD ...)
+#GRUB_BADRAM="0x01234567,0xfefefefe,0x89abcdef,0xefefefef"
+
+# Uncomment to disable graphical terminal (grub-pc only)
+#GRUB_TERMINAL=console
+
+# The resolution used on graphical terminal
+# note that you can use only modes which your graphic card supports via VBE
+# you can see them in real GRUB with the command `vbeinfo'
+#GRUB_GFXMODE=640x480
+
+# Uncomment if you don't want GRUB to pass "root=UUID=xxx" parameter to Linux
+#GRUB_DISABLE_LINUX_UUID=true
+
+# Uncomment to disable generation of recovery mode menu entries
+#GRUB_DISABLE_RECOVERY="true"
+
+# Uncomment to get a beep at grub start
+#GRUB_INIT_TUNE="480 440 1"
+GRUB_BACKGROUND=
+GRUB_THEME=/boot/grub2/themes/openSUSE/theme.txt
+GRUB_DISTRIBUTOR="openSUSE MicroOS"
+GRUB_GFXMODE=auto
+GRUB_TERMINAL="gfxterm"
+SUSE_BTRFS_SNAPSHOT_BOOTING=true
+SCRIPT_FINISHEDksEiS-0-
+qPcwv-0-
+[   94.089844][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::3c8a:fb22:8b4d:e8c8
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:15:54 localhost kernel: audit: type=1400 audit(1716887753.086:4): avc:  denied  { map_read map_write } for  pid=570 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:15:54 localhost kernel: audit: type=1400 audit(1716887753.089:5): avc:  denied  { map_read map_write } for  pid=572 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+7sEnU
+Repository priorities are without effect. All enabled repositories share the same priority.
+
+# | Alias         | Name          | Enabled | GPG Check | Refresh | URI
+--+---------------+---------------+---------+-----------+---------+-------------------------------------------------------------------------------------------------
+1 | NON_OSS       | NON_OSS       | No      | ----      | ----    | http://openqa.opensuse.org/assets/repo/openSUSE-Tumbleweed-non-oss-x86_64-Snapshot20240527
+2 | OSS           | OSS           | No      | ----      | ----    | http://openqa.opensuse.org/assets/repo/openSUSE-Tumbleweed-oss-x86_64-Snapshot20240527
+3 | OSS_DEBUGINFO | OSS_DEBUGINFO | No      | ----      | ----    | http://openqa.opensuse.org/assets/repo/openSUSE-Tumbleweed-oss-x86_64-Snapshot20240527-debuginfo
+4 | repo1         | repo1         | Yes     | (r ) Yes  | No      | http://openqa.opensuse.org/assets/repo/openSUSE-Tumbleweed-oss-x86_64-Snapshot20240527
+SCRIPT_FINISHED7sEnU-0-
+UfVk_-0-
+OSm16
+SCRIPT_FINISHEDOSm16-1-
+QSjG0-0-
+T_TZ1-0-
+TyESo-0-
+qD76J-0-
+DMHh2-0-
+_dygn-0-
+UfVk_-0-
+OSm16
+SCRIPT_FINISHEDOSm16-1-
+VipvD
+/dev/vda4
+SCRIPT_FINISHEDVipvD-0-
+OhO2p
+vda
+SCRIPT_FINISHEDOhO2p-0-
+uUK6D
+31457280
+SCRIPT_FINISHEDuUK6D-0-
+2XE7~
+SCRIPT_FINISHED2XE7~-0-
+KhNOM
+Unpartitioned space /dev/vda: 0 B, 0 bytes, 0 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+SCRIPT_FINISHEDKhNOM-0-
+UqNou
+16115544064
+SCRIPT_FINISHEDUqNou-0-
+BalXY
+Combustion was here
+SCRIPT_FINISHEDBalXY-0-
+UfVk_-0-
+OSm16
+SCRIPT_FINISHEDOSm16-1-
+vLUA6-0-
+zaJnE-0-
+q3DCk-0-
+UfVk_-0-
+OSm16
+SCRIPT_FINISHEDOSm16-1-
+3Aps~-0-
+Y~qoi-0-
+6R6QK-0-
+D9iTz-0-
+UfVk_-0-
+OSm16
+SCRIPT_FINISHEDOSm16-1-
+[  232.332934][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::8fc4:d856:b6dd:e981
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:20:17 localhost kernel: audit: type=1400 audit(1716888016.959:4): avc:  denied  { map_read map_write } for  pid=570 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:20:17 localhost kernel: audit: type=1400 audit(1716888016.959:5): avc:  denied  { map_read map_write } for  pid=573 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   61.852787][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::91a6:2cb8:1fc3:5a42
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:21:22 localhost kernel: audit: type=1400 audit(1716888081.639:4): avc:  denied  { map_read map_write } for  pid=570 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:21:22 localhost kernel: audit: type=1400 audit(1716888081.649:5): avc:  denied  { map_read map_write } for  pid=573 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   57.784948][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fe80::320:84d4:537d:4484
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::3e32:719d:ca12:d7f2
+
+
+localhost login: YpuUt-0-
+[   70.932010][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::bf38:423:700e:438a
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:23:39 localhost kernel: audit: type=1400 audit(1716888218.076:4): avc:  denied  { map_read map_write } for  pid=567 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:23:39 localhost kernel: audit: type=1400 audit(1716888218.076:5): avc:  denied  { map_read map_write } for  pid=569 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[  101.925070][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::c395:1b99:accb:f077
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:25:25 localhost kernel: audit: type=1400 audit(1716888324.356:4): avc:  denied  { map_read map_write } for  pid=573 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:25:25 localhost kernel: audit: type=1400 audit(1716888324.363:5): avc:  denied  { map_read map_write } for  pid=575 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   68.528224][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::2e1d:7fca:e84:b63f
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:26:36 localhost kernel: audit: type=1400 audit(1716888394.923:4): avc:  denied  { map_read map_write } for  pid=570 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:26:36 localhost kernel: audit: type=1400 audit(1716888394.926:5): avc:  denied  { map_read map_write } for  pid=573 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   59.640383][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fe80::320:84d4:537d:4484
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::9748:2199:f07f:80f5
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+Jan 20 03:14:23 localhost kernel: audit: type=1400 audit(2147570062.539:4): avc:  denied  { map_read map_write } for  pid=560 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+Jan 20 03:14:23 localhost kernel: audit: type=1400 audit(2147570062.556:5): avc:  denied  { map_read map_write } for  pid=563 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   86.719818][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::242:e23a:c656:7604
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:29:06 localhost kernel: audit: type=1400 audit(1716888545.533:4): avc:  denied  { map_read map_write } for  pid=569 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:29:06 localhost kernel: audit: type=1400 audit(1716888545.546:5): avc:  denied  { map_read map_write } for  pid=572 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   61.092159][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fe80::320:84d4:537d:4484
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::d50a:c03f:7003:7779
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:30:11 localhost kernel: audit: type=1400 audit(1716888610.776:4): avc:  denied  { map_read map_write } for  pid=572 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:30:11 localhost kernel: audit: type=1400 audit(1716888610.789:5): avc:  denied  { map_read map_write } for  pid=576 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   66.314522][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::3787:70ea:d431:2baf
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:31:20 localhost kernel: audit: type=1400 audit(1716888679.736:4): avc:  denied  { map_read map_write } for  pid=570 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:31:20 localhost kernel: audit: type=1400 audit(1716888679.746:5): avc:  denied  { map_read map_write } for  pid=573 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   60.112749][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::26c6:359:bac3:309
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:32:24 localhost kernel: audit: type=1400 audit(1716888743.726:4): avc:  denied  { map_read map_write } for  pid=570 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:32:24 localhost kernel: audit: type=1400 audit(1716888743.726:5): avc:  denied  { map_read map_write } for  pid=573 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   68.265259][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::c6f5:ef7d:4414:685b
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:33:36 localhost kernel: audit: type=1400 audit(1716888815.763:4): avc:  denied  { map_read map_write } for  pid=570 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:33:36 localhost kernel: audit: type=1400 audit(1716888815.773:5): avc:  denied  { map_read map_write } for  pid=573 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   62.470111][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::b69:65e:541c:8b4a
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:34:42 localhost kernel: audit: type=1400 audit(1716888881.719:4): avc:  denied  { map_read map_write } for  pid=570 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:34:42 localhost kernel: audit: type=1400 audit(1716888881.726:5): avc:  denied  { map_read map_write } for  pid=572 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   66.573077][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::47c9:55b4:ea7b:55dd
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:35:52 localhost kernel: audit: type=1400 audit(1716888951.656:4): avc:  denied  { map_read map_write } for  pid=572 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:35:52 localhost kernel: audit: type=1400 audit(1716888951.666:5): avc:  denied  { map_read map_write } for  pid=575 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   70.377558][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::1fb7:8205:43c3:c071
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:37:06 localhost kernel: audit: type=1400 audit(1716889025.849:4): avc:  denied  { map_read map_write } for  pid=575 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:37:06 localhost kernel: audit: type=1400 audit(1716889025.856:5): avc:  denied  { map_read map_write } for  pid=577 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   70.680542][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::c3ab:f2ba:cb64:9ad
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:38:19 localhost kernel: audit: type=1400 audit(1716889098.873:4): avc:  denied  { map_read map_write } for  pid=571 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:38:19 localhost kernel: audit: type=1400 audit(1716889098.883:5): avc:  denied  { map_read map_write } for  pid=573 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   57.966950][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::2e95:5f8:fc4:5f6b
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:39:20 localhost kernel: audit: type=1400 audit(1716889159.659:4): avc:  denied  { map_read map_write } for  pid=564 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:39:20 localhost kernel: audit: type=1400 audit(1716889159.666:5): avc:  denied  { map_read map_write } for  pid=562 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+7WpMu-0-
+Wjx7N-0-
+V5ZHC-0-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n reboot ptf install update-test-trivial/update-test-interactive-5.1-1.20.x86_64.rpm
+Separate /var detected.
+2024-05-28 09:40:33 tukit 4.6.8 started
+2024-05-28 09:40:33 Options: -c9 open 
+2024-05-28 09:40:33 Using snapshot 9 as base for new snapshot 15.
+2024-05-28 09:40:33 /var/lib/overlay/9/etc
+2024-05-28 09:40:33 Syncing /etc of previous snapshot 8 as base into new snapshot "/.snapshots/15/snapshot"
+2024-05-28 09:40:33 SELinux is enabled.
+ID: 15
+2024-05-28 09:40:34 Transaction completed.
+Calling zypper install
+2024-05-28 09:40:35 tukit 4.6.8 started
+2024-05-28 09:40:35 Options: callext 15 zypper -R {} install -y --auto-agree-with-product-licenses update-test-trivial/update-test-interactive-5.1-1.20.x86_64.rpm 
+2024-05-28 09:40:36 Executing `zypper -R /tmp/transactional-update-MsnC6W install -y --auto-agree-with-product-licenses update-test-trivial/update-test-interactive-5.1-1.20.x86_64.rpm`:
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  update-test-interactive
+
+1 new package to install.
+Overall download size: 9.0 KiB. Already cached: 0 B. After the operation, additional 384.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-interactive-5.1-1.20.x86_64 (Plain RPM files cache) (1/1),   9.0 KiB    
+(1/1) Installing: update-test-interactive-5.1-1.20.x86_64 [..done]
+2024-05-28 09:40:37 Application returned with exit status 0.
+2024-05-28 09:40:37 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 09:40:38 tukit 4.6.8 started
+2024-05-28 09:40:38 Options: close 15 
+2024-05-28 09:40:39 New default snapshot is #15 (/.snapshots/15/snapshot).
+2024-05-28 09:40:39 Transaction completed.
+New default snapshot is #15 (/.snapshots/15/snapshot).
+transactional-update finished
+2024-05-28 09:40:39 tukit 4.6.8 started
+2024-05-28 09:40:39 Options: reboot auto 
+2024-05-28 09:40:39 Requesting reboot using rebootmgr (soft-reboot required).
+2024-05-28 09:40:39 Transaction completed.
+[   87.565566][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::af20:5096:90d6:f8b6
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:40:52 localhost kernel: audit: type=1400 audit(1716889251.866:4): avc:  denied  { map_read map_write } for  pid=567 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:40:52 localhost kernel: audit: type=1400 audit(1716889251.873:5): avc:  denied  { map_read map_write } for  pid=572 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+AYrmx-0-
+IUx2x-0-
+3Yf_J-0-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n reboot pkg install update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm
+Separate /var detected.
+2024-05-28 09:42:04 tukit 4.6.8 started
+2024-05-28 09:42:04 Options: -c15 open 
+2024-05-28 09:42:05 Using snapshot 15 as base for new snapshot 16.
+2024-05-28 09:42:05 /var/lib/overlay/15/etc
+2024-05-28 09:42:05 Syncing /etc of previous snapshot 9 as base into new snapshot "/.snapshots/16/snapshot"
+2024-05-28 09:42:05 SELinux is enabled.
+ID: 16
+2024-05-28 09:42:06 Transaction completed.
+Calling zypper install
+2024-05-28 09:42:07 tukit 4.6.8 started
+2024-05-28 09:42:07 Options: callext 16 zypper -R {} install -y --auto-agree-with-product-licenses update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm 
+2024-05-28 09:42:08 Executing `zypper -R /tmp/transactional-update-v52MOi install -y --auto-agree-with-product-licenses update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm`:
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  update-test-feature
+
+1 new package to install.
+Overall download size: 8.9 KiB. Already cached: 0 B. After the operation, additional 329.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-feature-5.1-1.20.x86_64 (Plain RPM files cache) (1/1),   8.9 KiB    
+(1/1) Installing: update-test-feature-5.1-1.20.x86_64 [..done]
+2024-05-28 09:42:09 Application returned with exit status 0.
+2024-05-28 09:42:09 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 09:42:09 tukit 4.6.8 started
+2024-05-28 09:42:09 Options: close 16 
+2024-05-28 09:42:10 New default snapshot is #16 (/.snapshots/16/snapshot).
+2024-05-28 09:42:10 Transaction completed.
+New default snapshot is #16 (/.snapshots/16/snapshot).
+transactional-update finished
+2024-05-28 09:42:10 tukit 4.6.8 started
+2024-05-28 09:42:10 Options: reboot auto 
+2024-05-28 09:42:10 Requesting reboot using rebootmgr (soft-reboot required).
+2024-05-28 09:42:10 Transaction completed.
+[   87.332225][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::80b6:d1b1:55b6:6390
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:42:24 localhost kernel: audit: type=1400 audit(1716889343.926:4): avc:  denied  { map_read map_write } for  pid=573 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:42:24 localhost kernel: audit: type=1400 audit(1716889343.936:5): avc:  denied  { map_read map_write } for  pid=576 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+aGmca-0-
+drbpC-0-
+~YF5G-2-
+[  221.848916][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::d23d:adc1:71b9:f186
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:46:09 localhost kernel: audit: type=1400 audit(1716889568.636:4): avc:  denied  { map_read map_write } for  pid=567 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:46:09 localhost kernel: audit: type=1400 audit(1716889568.646:5): avc:  denied  { map_read map_write } for  pid=570 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+W19Lw-0-
+drbpC-0-
+~YF5G-2-
+PL5Gk-0-
+~YF5G-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716887823.254:105): avc:  denied  { map_read map_write } for  pid=1278 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887823.264:106): avc:  denied  { map_read map_write } for  pid=1281 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887823.644:127): avc:  denied  { map_read map_write } for  pid=1320 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887823.654:128): avc:  denied  { map_read map_write } for  pid=1323 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.008:149): avc:  denied  { map_read map_write } for  pid=1362 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.018:150): avc:  denied  { map_read map_write } for  pid=1365 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.371:171): avc:  denied  { map_read map_write } for  pid=1402 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.381:172): avc:  denied  { map_read map_write } for  pid=1406 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.714:193): avc:  denied  { map_read map_write } for  pid=1443 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.724:194): avc:  denied  { map_read map_write } for  pid=1447 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887825.058:215): avc:  denied  { map_read map_write } for  pid=1484 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887825.065:216): avc:  denied  { map_read map_write } for  pid=1489 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887825.395:237): avc:  denied  { map_read map_write } for  pid=1525 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887825.411:238): avc:  denied  { map_read map_write } for  pid=1530 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+Jhv3u-0-
+IWeHA
+Clearing GRUB flag
+Starting health check
+active
+Health check passed
+SCRIPT_FINISHEDIWeHA-0-
+CV5SR
+ID 283 gen 598 top level 257 path @/.snapshots/16/snapshot
+SCRIPT_FINISHEDCV5SR-0-
+CV5SR
+ID 283 gen 598 top level 257 path @/.snapshots/16/snapshot
+SCRIPT_FINISHEDCV5SR-0-
+g4ZBE
+LAST_WORKING_BTRFS_ID=283
+LAST_WORKING_SNAPSHOT=@/.snapshots/16/snapshot
+SCRIPT_FINISHEDg4ZBE-0-
+trup_shell-status-0
+CV5SR
+ID 284 gen 612 top level 257 path @/.snapshots/17/snapshot
+SCRIPT_FINISHEDCV5SR-0-
+g4ZBE
+LAST_WORKING_BTRFS_ID=283
+LAST_WORKING_SNAPSHOT=@/.snapshots/16/snapshot
+SCRIPT_FINISHEDg4ZBE-0-
+[  155.138052][    T1] reboot: Restarting system
+[   17.688415][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::1290:d293:9f:caac
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 09:49:09 localhost kernel: audit: type=1400 audit(1716889748.606:4): avc:  denied  { map_read map_write } for  pid=559 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 09:49:09 localhost kernel: audit: type=1400 audit(1716889748.626:5): avc:  denied  { map_read map_write } for  pid=564 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+CV5SR
+ID 283 gen 608 top level 257 path @/.snapshots/16/snapshot
+SCRIPT_FINISHEDCV5SR-0-
+CV5SR
+ID 283 gen 608 top level 257 path @/.snapshots/16/snapshot
+SCRIPT_FINISHEDCV5SR-0-
+g4ZBE
+LAST_WORKING_BTRFS_ID=283
+LAST_WORKING_SNAPSHOT=@/.snapshots/16/snapshot
+SCRIPT_FINISHEDg4ZBE-0-
+IWeHA
+Clearing GRUB flag
+Starting health check
+active
+Health check passed
+SCRIPT_FINISHEDIWeHA-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716887823.254:105): avc:  denied  { map_read map_write } for  pid=1278 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887823.264:106): avc:  denied  { map_read map_write } for  pid=1281 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887823.644:127): avc:  denied  { map_read map_write } for  pid=1320 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887823.654:128): avc:  denied  { map_read map_write } for  pid=1323 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.008:149): avc:  denied  { map_read map_write } for  pid=1362 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.018:150): avc:  denied  { map_read map_write } for  pid=1365 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.371:171): avc:  denied  { map_read map_write } for  pid=1402 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.381:172): avc:  denied  { map_read map_write } for  pid=1406 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.714:193): avc:  denied  { map_read map_write } for  pid=1443 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.724:194): avc:  denied  { map_read map_write } for  pid=1447 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887825.058:215): avc:  denied  { map_read map_write } for  pid=1484 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887825.065:216): avc:  denied  { map_read map_write } for  pid=1489 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887825.395:237): avc:  denied  { map_read map_write } for  pid=1525 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887825.411:238): avc:  denied  { map_read map_write } for  pid=1530 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+GuucX-2-
+dnjp7-0-
+P5lm3-0-
+juTEW
+dialout
+SCRIPT_FINISHEDjuTEW-0-
+K5iGi-0-
+fcpXi-0-
+oI4_v-0-
+lQwjq-0-
+Z4Om3
+REGISTRY=registry.opensuse.org
+IMAGE=opensuse/factory/totest/containers/opensuse/tumbleweed
+SCRIPT_FINISHEDZ4Om3-0-
+OYyh4-0-
+TqriW-0-
+8oVY9
+CONTAINER ID  IMAGE                                                                                COMMAND     CREATED        STATUS                      PORTS       NAMES
+ef0918156b69  registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed:latest  sleep +Inf  8 seconds ago  Exited (143) 8 seconds ago              toolbox-root
+SCRIPT_FINISHED8oVY9-0-
+wHMNC-0-
+dSPS2-0-
+8oVY9
+CONTAINER ID  IMAGE                                                                                COMMAND     CREATED        STATUS                      PORTS       NAMES
+f596ac0a1a30  registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed:latest  sleep +Inf  7 seconds ago  Exited (143) 7 seconds ago              toolbox-root-test_tag
+SCRIPT_FINISHED8oVY9-0-
+j6Ylr-0-
+qa8PJ-0-
+8oVY9
+CONTAINER ID  IMAGE                                                                                COMMAND     CREATED        STATUS                      PORTS       NAMES
+fc70821258ee  registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed:latest  sleep +Inf  7 seconds ago  Exited (143) 7 seconds ago              test_name
+SCRIPT_FINISHED8oVY9-0-
+~hmSl-0-
+YpuUt-0-
+4BtxZ
+1000
+SCRIPT_FINISHED4BtxZ-0-
+UfrQH
+1690fabf21a16381861e0be8385d19fe59184ebcf9d6e9dbe7ed7cc0d85a0363
+Spawning a container 'toolbox-bernhard-user' with image 'registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed'
+Setting up user 'bernhard' (with 'sudo' access) inside the container...
+(NOTE that, if 'sudo' and related packages are not present in the image already,
+this may take some time. But this will only happen now that the toolbox is being created)
+Container createed.
+Entering container. To exit, type 'exit'.
+uid=1000(bernhard) gid=1000(bernhard) groups=1000(bernhard),65534
+SCRIPT_FINISHEDUfrQH-0-
+2AKL3-1-
+rPN0y-2296-
+2u29L
+1690fabf21a16381861e0be8385d19fe59184ebcf9d6e9dbe7ed7cc0d85a0363
+Spawning a container 'toolbox-bernhard' with image 'registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed'
+Container createed.
+Entering container. To exit, type 'exit'.
+  PID TTY      STAT   TIME COMMAND
+ 1060 ?        Ss+    0:00 /sbin/agetty -o -p -- \u --noclear - linux
+ 1061 hvc0     Ss+    0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+ 1062 ttyS0    Ss+    0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+ 1141 ?        Ss+    0:00 -bash
+ 1739 ?        Ss     0:00 -bash
+ 2296 ?        S      0:00 sleep 3612
+ 2298 ?        S+     0:00 -bash
+ 2299 ?        S+     0:00 tee /dev/ttyS0
+ 2300 ?        S+     0:00 bash -eox pipefail /tmp/script2u29L.sh
+ 2301 ?        S+     0:00 /bin/bash /usr/bin/toolbox ps a
+ 2371 ?        Sl+    0:00 podman exec --env LANG=en_US.UTF-8 --env TERM=linux --interactive --tty toolbox-bernhard ps a
+ 2383 pts/0    Rs+    0:00 ps a
+SCRIPT_FINISHED2u29L-0-
+BAd5i
+1690fabf21a16381861e0be8385d19fe59184ebcf9d6e9dbe7ed7cc0d85a0363
+Spawning a container 'toolbox-bernhard' with image 'registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed'
+Container createed.
+Entering container. To exit, type 'exit'.
+uid=0(root) gid=0(root) groups=0(root)
+SCRIPT_FINISHEDBAd5i-0-
+QQBdF-0-
+xd4fU-0-
+JLrb1-0-
+ZA0zy-0-
+NuZTl
+Container 'toolbox-bernhard' already exists. Trying to start...
+(To remove the container and start with a fresh toolbox, run: podman rm 'toolbox-bernhard')
+Container started.
+Entering container. To exit, type 'exit'.
+[22;27;39;49mRepository priorities are without effect. All enabled repositories share the same priority.[0m
+
+[22;27;39;49m#[0m | [22;27;39;49mAlias[0m         | [22;27;39;49mName[0m              | [22;27;39;49mEnabled[0m | [22;27;39;49mGPG Check[0m | [22;27;39;49mRefresh[0m | [22;27;39;49mURI[0m
+--+---------------+-------------------+---------+-----------+---------+---------------------------------------------------------
+[22;27;39;49m[22;27;33;49m1[0m[0m | [22;27;39;49m[22;27;33;49mrepo-debug[0m[0m    | [22;27;39;49m[22;27;33;49mopenSUSE-Tumble[0m-> | [22;27;39;49m[22;27;33;49mNo[0m[0m      | [22;27;39;49m[22;27;33;49m----[0m[0m      | [22;27;39;49m[22;27;33;49m----[0m[0m    | [22;27;39;49mhttp://download.opensuse.org/debug/tumbleweed/repo/oss/[0m
+[22;27;39;49m[22;27;39;49m2[0m[0m | [22;27;39;49m[22;27;39;49mrepo-non-oss[0m[0m  | [22;27;39;49m[22;27;39;49mopenSUSE-Tumble[0m-> | [22;27;39;49m[22;27;39;49mYes[0m[0m     | [22;27;39;49m[22;27;39;49m( p) Yes[0m[0m  | [22;27;39;49mYes[0m     | [22;27;39;49mhttp://download.opensuse.org/tumbleweed/repo/non-oss/[0m
+[22;27;39;49m[22;27;39;49m3[0m[0m | [22;27;39;49m[22;27;39;49mrepo-openh264[0m[0m | [22;27;39;49m[22;27;39;49mOpen H.264 Code[0m-> | [22;27;39;49m[22;27;39;49mYes[0m[0m     | [22;27;39;49m[22;27;39;49m( p) Yes[0m[0m  | [22;27;39;49mYes[0m     | [22;27;39;49mhttp://codecs.opensuse.org/openh264/openSUSE_Tumbleweed[0m
+[22;27;39;49m[22;27;39;49m4[0m[0m | [22;27;39;49m[22;27;39;49mrepo-oss[0m[0m      | [22;27;39;49m[22;27;39;49mopenSUSE-Tumble[0m-> | [22;27;39;49m[22;27;39;49mYes[0m[0m     | [22;27;39;49m[22;27;39;49m( p) Yes[0m[0m  | [22;27;39;49mYes[0m     | [22;27;39;49mhttp://download.opensuse.org/tumbleweed/repo/oss/[0m
+[22;27;39;49m[22;27;33;49m5[0m[0m | [22;27;39;49m[22;27;33;49mrepo-source[0m[0m   | [22;27;39;49m[22;27;33;49mopenSUSE-Tumble[0m-> | [22;27;39;49m[22;27;33;49mNo[0m[0m      | [22;27;39;49m[22;27;33;49m----[0m[0m      | [22;27;39;49m[22;27;33;49m----[0m[0m    | [22;27;39;49mhttp://download.opensuse.org/source/tumbleweed/repo/oss/[0m
+[22;27;39;49m[22;27;39;49m6[0m[0m | [22;27;39;49m[22;27;39;49mrepo-update[0m[0m   | [22;27;39;49m[22;27;39;49mopenSUSE-Tumble[0m-> | [22;27;39;49m[22;27;39;49mYes[0m[0m     | [22;27;39;49m[22;27;39;49m( p) Yes[0m[0m  | [22;27;39;49mYes[0m     | [22;27;39;49mhttp://download.opensuse.org/update/tumbleweed/[0m
+SCRIPT_FINISHEDNuZTl-0-
+lIKxz-0-
+yjQiJ-0-
+EJSOv-0-
+tHhVi-0-
+VOS7w-0-
+JwoqQ
+CONTAINER ID  IMAGE                                                                                COMMAND     CREATED             STATUS                       PORTS       NAMES
+6b4072996f00  registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed:latest  sleep +Inf  About a minute ago  Exited (143) 44 seconds ago              toolbox-bernhard
+b3e17115bf06  registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed:latest  sleep +Inf  14 seconds ago      Exited (143) 7 seconds ago               devel
+SCRIPT_FINISHEDJwoqQ-0-
+6scIb-0-
+xGWjW-0-
+xDdZd-0-
+EJSOv-0-
+tHhVi-0-
+ohih6-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716887823.254:105): avc:  denied  { map_read map_write } for  pid=1278 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887823.264:106): avc:  denied  { map_read map_write } for  pid=1281 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887823.644:127): avc:  denied  { map_read map_write } for  pid=1320 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887823.654:128): avc:  denied  { map_read map_write } for  pid=1323 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.008:149): avc:  denied  { map_read map_write } for  pid=1362 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.018:150): avc:  denied  { map_read map_write } for  pid=1365 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.371:171): avc:  denied  { map_read map_write } for  pid=1402 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.381:172): avc:  denied  { map_read map_write } for  pid=1406 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.714:193): avc:  denied  { map_read map_write } for  pid=1443 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887824.724:194): avc:  denied  { map_read map_write } for  pid=1447 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887825.058:215): avc:  denied  { map_read map_write } for  pid=1484 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887825.065:216): avc:  denied  { map_read map_write } for  pid=1489 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887825.395:237): avc:  denied  { map_read map_write } for  pid=1525 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716887825.411:238): avc:  denied  { map_read map_write } for  pid=1530 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+YpuUt-0-
+GvbLY-0-
+XlVOv-0-
+wWHpW
+2f259bab93aa  podman      bridge
+SCRIPT_FINISHEDwWHpW-0-
+Ygw8V
+SCRIPT_FINISHEDYgw8V-0-
+BTLGK
+5.0.3
+SCRIPT_FINISHEDBTLGK-0-
+EJSOv-0-
+BTLGK
+5.0.3
+SCRIPT_FINISHEDBTLGK-0-
+uwhxa-0-
+eGFd5-0-
+VsB_k-0-
+tHhVi-0-
+KcYzr
+SCRIPT_FINISHEDKcYzr-0-
+sW3_4
+SCRIPT_FINISHEDsW3_4-0-
+XDRrX
+netavark
+SCRIPT_FINISHEDXDRrX-0-
+IHgNu
+NETWORK ID    NAME        DRIVER
+2f259bab93aa  podman      bridge
+SCRIPT_FINISHEDIHgNu-0-
+YpuUt-0-
+6Za~h
+{"host":{"arch":"amd64","buildahVersion":"1.35.4","cgroupManager":"systemd","cgroupVersion":"v2","cgroupControllers":["pids"],"conmon":{"package":"conmon-2.1.12-1.1.x86_64","path":"/usr/bin/conmon","version":"conmon version 2.1.12, commit: unknown"},"cpus":1,"cpuUtilization":{"userPercent":12.88,"systemPercent":17.44,"idlePercent":69.68},"databaseBackend":"sqlite","distribution":{"distribution":"opensuse-microos","version":"20240527"},"eventLogger":"journald","freeLocks":2048,"hostname":"localhost.localdomain","idMappings":{"gidmap":[{"container_id":0,"host_id":1000,"size":1},{"container_id":1,"host_id":100000,"size":65536}],"uidmap":[{"container_id":0,"host_id":1000,"size":1},{"container_id":1,"host_id":100000,"size":65536}]},"kernel":"6.9.1-1-default","logDriver":"journald","memFree":116416512,"memTotal":1013129216,"networkBackend":"netavark","networkBackendInfo":{"backend":"netavark","version":"netavark 1.10.3","package":"netavark-1.10.3-1.2.x86_64","path":"/usr/libexec/podman/netavark","dns":{"version":"aardvark-dns 1.10.0","package":"aardvark-dns-1.10.0-1.3.x86_64","path":"/usr/libexec/podman/aardvark-dns"}},"ociRuntime":{"name":"crun","package":"crun-1.14.4-1.2.x86_64","path":"/usr/bin/crun","version":"crun version 1.14.4\ncommit: a220ca661ce078f2c37b38c92e66cf66c012d9c1\nrundir: /run/user/1000/crun\nspec: 1.0.0\n+SYSTEMD +SELINUX +APPARMOR +CAP +SECCOMP +EBPF +CRIU +LIBKRUN +WASM:wasmedge +YAJL"},"os":"linux","remoteSocket":{"path":"/run/user/1000/podman/podman.sock","exists":false},"serviceIsRemote":false,"security":{"apparmorEnabled":false,"capabilities":"CAP_CHOWN,CAP_DAC_OVERRIDE,CAP_FOWNER,CAP_FSETID,CAP_KILL,CAP_NET_BIND_SERVICE,CAP_SETFCAP,CAP_SETGID,CAP_SETPCAP,CAP_SETUID,CAP_SYS_CHROOT","rootless":true,"seccompEnabled":true,"seccompProfilePath":"/etc/containers/seccomp.json","selinuxEnabled":true},"slirp4netns":{"executable":"/usr/bin/slirp4netns","package":"slirp4netns-1.3.1-1.1.x86_64","version":"slirp4netns version 1.3.1\ncommit: unknown\nlibslirp: 4.8.0\nSLIRP_CONFIG_VERSION_MAX: 5\nlibseccomp: 2.5.5"},"pasta":{"executable":"/usr/bin/pasta","package":"passt-20240510.7288448-1.1.x86_64","version":"pasta 20240510.7288448-1.1\nCopyright Red Hat\nGNU General Public License, version 2 or later\n  <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n"},"swapFree":0,"swapTotal":0,"uptime":"0h 16m 40.00s","variant":"","linkmode":"dynamic"},"store":{"configFile":"/home/bernhard/.config/containers/storage.conf","containerStore":{"number":0,"paused":0,"running":0,"stopped":0},"graphDriverName":"overlay","graphOptions":{},"graphRoot":"/home/bernhard/.local/share/containers/storage","graphRootAllocated":16072572928,"graphRootUsed":1859383296,"graphStatus":{"Backing Filesystem":"btrfs","Native Overlay Diff":"true","Supports d_type":"true","Supports shifting":"false","Supports volatile":"true","Using metacopy":"false"},"imageCopyTmpDir":"/var/tmp","imageStore":{"number":0},"runRoot":"/run/user/1000/containers","volumePath":"/home/bernhard/.local/share/containers/storage/volumes","transientStore":false},"registries":{"3.126.238.126:5000":{"Prefix":"3.126.238.126:5000","Location":"3.126.238.126:5000","Insecure":true,"PullFromMirror":"","Mirrors":null,"Blocked":false,"MirrorByDigestOnly":false},"docker.io":{"Prefix":"docker.io","Location":"docker.io","Insecure":false,"PullFromMirror":"","Mirrors":null,"Blocked":false,"MirrorByDigestOnly":false},"localhost:5000":{"Prefix":"localhost:5000","Location":"localhost:5000","Insecure":true,"PullFromMirror":"","Mirrors":null,"Blocked":false,"MirrorByDigestOnly":false},"registry.opensuse.org":{"Prefix":"registry.opensuse.org","Location":"registry.opensuse.org","Insecure":false,"PullFromMirror":"","Mirrors":null,"Blocked":false,"MirrorByDigestOnly":false},"registry.suse.de":{"Prefix":"registry.suse.de","Location":"registry.suse.de","Insecure":true,"PullFromMirror":"","Mirrors":null,"Blocked":false,"MirrorByDigestOnly":false},"search":["registry.opensuse.org","registry.suse.com","docker.io"]},"plugins":{"volume":["local"],"network":["bridge","macvlan","ipvlan"],"log":["k8s-file","none","passthrough","journald"],"authorization":null},"version":{"APIVersion":"5.0.3","Version":"5.0.3","GoVersion":"go1.21.10","GitCommit":"","BuiltTime":"Fri May 10 18:10:00 2024","Built":1715364600,"OsArch":"linux/amd64","Os":"linux"}}
+SCRIPT_FINISHED6Za~h-0-
+OWmDi-1-
+1TfRr
+host:
+  arch: amd64
+  buildahVersion: 1.35.4
+  cgroupControllers:
+  - pids
+  cgroupManager: systemd
+  cgroupVersion: v2
+  conmon:
+    package: conmon-2.1.12-1.1.x86_64
+    path: /usr/bin/conmon
+    version: 'conmon version 2.1.12, commit: unknown'
+  cpuUtilization:
+    idlePercent: 69.94
+    systemPercent: 17.32
+    userPercent: 12.73
+  cpus: 1
+  databaseBackend: sqlite
+  distribution:
+    distribution: opensuse-microos
+    version: "20240527"
+  eventLogger: journald
+  freeLocks: 2048
+  hostname: localhost.localdomain
+  idMappings:
+    gidmap:
+    - container_id: 0
+      host_id: 1000
+      size: 1
+    - container_id: 1
+      host_id: 100000
+      size: 65536
+    uidmap:
+    - container_id: 0
+      host_id: 1000
+      size: 1
+    - container_id: 1
+      host_id: 100000
+      size: 65536
+  kernel: 6.9.1-1-default
+  linkmode: dynamic
+  logDriver: journald
+  memFree: 115900416
+  memTotal: 1013129216
+  networkBackend: netavark
+  networkBackendInfo:
+    backend: netavark
+    dns:
+      package: aardvark-dns-1.10.0-1.3.x86_64
+      path: /usr/libexec/podman/aardvark-dns
+      version: aardvark-dns 1.10.0
+    package: netavark-1.10.3-1.2.x86_64
+    path: /usr/libexec/podman/netavark
+    version: netavark 1.10.3
+  ociRuntime:
+    name: crun
+    package: crun-1.14.4-1.2.x86_64
+    path: /usr/bin/crun
+    version: |-
+      crun version 1.14.4
+      commit: a220ca661ce078f2c37b38c92e66cf66c012d9c1
+      rundir: /run/user/1000/crun
+      spec: 1.0.0
+      +SYSTEMD +SELINUX +APPARMOR +CAP +SECCOMP +EBPF +CRIU +LIBKRUN +WASM:wasmedge +YAJL
+  os: linux
+  pasta:
+    executable: /usr/bin/pasta
+    package: passt-20240510.7288448-1.1.x86_64
+    version: |
+      pasta 20240510.7288448-1.1
+      Copyright Red Hat
+      GNU General Public License, version 2 or later
+        <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>
+      This is free software: you are free to change and redistribute it.
+      There is NO WARRANTY, to the extent permitted by law.
+  remoteSocket:
+    exists: false
+    path: /run/user/1000/podman/podman.sock
+  security:
+    apparmorEnabled: false
+    capabilities: CAP_CHOWN,CAP_DAC_OVERRIDE,CAP_FOWNER,CAP_FSETID,CAP_KILL,CAP_NET_BIND_SERVICE,CAP_SETFCAP,CAP_SETGID,CAP_SETPCAP,CAP_SETUID,CAP_SYS_CHROOT
+    rootless: true
+    seccompEnabled: true
+    seccompProfilePath: /etc/containers/seccomp.json
+    selinuxEnabled: true
+  serviceIsRemote: false
+  slirp4netns:
+    executable: /usr/bin/slirp4netns
+    package: slirp4netns-1.3.1-1.1.x86_64
+    version: |-
+      slirp4netns version 1.3.1
+      commit: unknown
+      libslirp: 4.8.0
+      SLIRP_CONFIG_VERSION_MAX: 5
+      libseccomp: 2.5.5
+  swapFree: 0
+  swapTotal: 0
+  uptime: 0h 16m 51.00s
+  variant: ""
+plugins:
+  authorization: null
+  log:
+  - k8s-file
+  - none
+  - passthrough
+  - journald
+  network:
+  - bridge
+  - macvlan
+  - ipvlan
+  volume:
+  - local
+registries:
+  3.126.238.126:5000:
+    Blocked: false
+    Insecure: true
+    Location: 3.126.238.126:5000
+    MirrorByDigestOnly: false
+    Mirrors: null
+    Prefix: 3.126.238.126:5000
+    PullFromMirror: ""
+  docker.io:
+    Blocked: false
+    Insecure: false
+    Location: docker.io
+    MirrorByDigestOnly: false
+    Mirrors: null
+    Prefix: docker.io
+    PullFromMirror: ""
+  localhost:5000:
+    Blocked: false
+    Insecure: true
+    Location: localhost:5000
+    MirrorByDigestOnly: false
+    Mirrors: null
+    Prefix: localhost:5000
+    PullFromMirror: ""
+  registry.opensuse.org:
+    Blocked: false
+    Insecure: false
+    Location: registry.opensuse.org
+    MirrorByDigestOnly: false
+    Mirrors: null
+    Prefix: registry.opensuse.org
+    PullFromMirror: ""
+  registry.suse.de:
+    Blocked: false
+    Insecure: true
+    Location: registry.suse.de
+    MirrorByDigestOnly: false
+    Mirrors: null
+    Prefix: registry.suse.de
+    PullFromMirror: ""
+  search:
+  - registry.opensuse.org
+  - registry.suse.com
+  - docker.io
+store:
+  configFile: /home/bernhard/.config/containers/storage.conf
+  containerStore:
+    number: 0
+    paused: 0
+    running: 0
+    stopped: 0
+  graphDriverName: overlay
+  graphOptions: {}
+  graphRoot: /home/bernhard/.local/share/containers/storage
+  graphRootAllocated: 16072572928
+  graphRootUsed: 1859383296
+  graphStatus:
+    Backing Filesystem: btrfs
+    Native Overlay Diff: "true"
+    Supports d_type: "true"
+    Supports shifting: "false"
+    Supports volatile: "true"
+    Using metacopy: "false"
+  imageCopyTmpDir: /var/tmp
+  imageStore:
+    number: 0
+  runRoot: /run/user/1000/containers
+  transientStore: false
+  volumePath: /home/bernhard/.local/share/containers/storage/volumes
+version:
+  APIVersion: 5.0.3
+  Built: 1715364600
+  BuiltTime: Fri May 10 18:10:00 2024
+  GitCommit: ""
+  GoVersion: go1.21.10
+  Os: linux
+  OsArch: linux/amd64
+  Version: 5.0.3
+
+SCRIPT_FINISHED1TfRr-0-
+OWmDi-1-
+sjRnm-1-
+dS9ki-0-
+sW3_4
+e2e64034402d
+SCRIPT_FINISHEDsW3_4-0-
+t_BSS-0-
+ZzroR-0-
+CA0np-0-
+AixNL-0-
+Cu4K1-0-
+oWo0H-0-
+9SmrX-0-
+NBm8O-0-
+p5rNj-0-
+Wxi0l-0-
+jSdQa-0-
+4SuUc-0-
+JwnGb-0-
+O19YS-0-
+bg~mc-0-
+12BwU-0-
+srs84-0-
+z2thG-0-
+nhc5D-0-
+idfcn-0-
+4ZWSn-0-
+1ysZ5-0-
+Y3g7j-0-
+i~Ivd-0-
+MyJJU-0-
+JgRME-0-
+iWtRE
+Repository priorities are without effect. All enabled repositories share the same priority.
+
+# | Alias         | Name                                   | Enabled | GPG Check | Refresh | Service
+--+---------------+----------------------------------------+---------+-----------+---------+--------
+1 | repo-debug    | openSUSE-Tumbleweed-Debug              | No      | ----      | ----    | 
+2 | repo-non-oss  | openSUSE-Tumbleweed-Non-Oss            | Yes     | ( p) Yes  | Yes     | 
+3 | repo-openh264 | Open H.264 Codec (openSUSE Tumbleweed) | Yes     | ( p) Yes  | Yes     | 
+4 | repo-oss      | openSUSE-Tumbleweed-Oss                | Yes     | ( p) Yes  | Yes     | 
+5 | repo-source   | openSUSE-Tumbleweed-Source             | No      | ----      | ----    | 
+6 | repo-update   | openSUSE-Tumbleweed-Update             | Yes     | ( p) Yes  | Yes     | 
+SCRIPT_FINISHEDiWtRE-0-
+H9bQX-0-
+Bj2EL-0-
+EBzB3-0-
+7wkFv-0-
+Rr6Jc-0-
+xcp4O
+1000
+SCRIPT_FINISHEDxcp4O-0-
+0tABv-0-
+JgRME-0-
+DbVVL
+c3f5bc09b486554b8e363688d29981fef7e449f70746528af85515415674e8b4
+SCRIPT_FINISHEDDbVVL-0-
+VVSc1-0-
+JgRME-0-
+Kxphc
+USER        HUSER
+root        1000
+SCRIPT_FINISHEDKxphc-0-
+ZoYgy-0-
+JgRME-0-
+xqZL3
+EFFECTIVE CAPS
+CHOWN,DAC_OVERRIDE,FOWNER,FSETID,KILL,NET_BIND_SERVICE,SETFCAP,SETGID,SETPCAP,SETUID,SYS_CHROOT
+SCRIPT_FINISHEDxqZL3-0-
+bDucS-0-
+JgRME-0-
+tCT04
+3419c94fe25aa71edb868108e0af9ebf6f87c88467a0a2e248f650de0fb484b6
+SCRIPT_FINISHEDtCT04-0-
+Vn77O-0-
+JgRME-0-
+xSMDE
+USER        HUSER
+bernhard    100999
+SCRIPT_FINISHEDxSMDE-0-
+nx3i4-0-
+JgRME-0-
+4lMKb
+EFFECTIVE CAPS
+none
+SCRIPT_FINISHED4lMKb-0-
+eqNjJ-0-
+JgRME-0-
+9m0mq
+831ec2450a89455b62377c6d132197415a18de2139d6cdd53c9d47538184898e
+SCRIPT_FINISHED9m0mq-0-
+3kXzz-0-
+JgRME-0-
+s5UdU
+         0          1       1000
+      1000          0          1
+      1001       1001      64536
+SCRIPT_FINISHEDs5UdU-0-
+bHmlK-0-
+JgRME-0-
+uARhm
+USER        HUSER
+bernhard    bernhard
+SCRIPT_FINISHEDuARhm-0-
+ilaEr-0-
+JgRME-0-
+AMtCW
+EFFECTIVE CAPS
+none
+SCRIPT_FINISHEDAMtCW-0-
+F7_WW-0-
+EJSOv-0-
+BTLGK
+5.0.3
+SCRIPT_FINISHEDBTLGK-0-
+uwhxa-0-
+eGFd5-0-
+VsB_k-0-
+tHhVi-0-
+KcYzr
+SCRIPT_FINISHEDKcYzr-0-
+sW3_4
+SCRIPT_FINISHEDsW3_4-0-
+[ 1463.127662][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::23cc:c756:759f:7607
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 10:13:35 localhost kernel: audit: type=1400 audit(1716891214.819:4): avc:  denied  { map_read map_write } for  pid=571 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 10:13:35 localhost kernel: audit: type=1400 audit(1716891214.823:5): avc:  denied  { map_read map_write } for  pid=574 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+YpuUt-0-
+xVQFu-0-
+vsA4Y-0-
+8i8tJ-0-
+xcqB8-0-
+wcLfV-0-
+dvX~~-0-
+uO2tM-0-
+UmyNH-0-
+DClsC-0-
+gLt3a-0-
+E4wAr-0-
+CbKSV-0-
+vJsKO-0-
+JS8Z8-0-
+xfOaH-0-
+izzE2-0-
+EJSOv-0-
+BTLGK
+5.0.3
+SCRIPT_FINISHEDBTLGK-0-
+uwhxa-0-
+eGFd5-0-
+VsB_k-0-
+tHhVi-0-
+KcYzr
+SCRIPT_FINISHEDKcYzr-0-
+sW3_4
+SCRIPT_FINISHEDsW3_4-0-
+[  511.334354][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::b93a:1cbc:94fd:5fb7
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 10:22:11 localhost kernel: audit: type=1400 audit(1716891730.866:4): avc:  denied  { map_read map_write } for  pid=569 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 10:22:11 localhost kernel: audit: type=1400 audit(1716891730.869:5): avc:  denied  { map_read map_write } for  pid=573 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   71.558797][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::8fbe:7424:eaaa:744e
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 10:23:27 localhost kernel: audit: type=1400 audit(1716891806.233:4): avc:  denied  { map_read map_write } for  pid=571 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 10:23:27 localhost kernel: audit: type=1400 audit(1716891806.243:5): avc:  denied  { map_read map_write } for  pid=574 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+YpuUt-0-
+O9BIr-0-
+sT4er-0-
+XA0Gw
+Client:
+ Version:    26.1.0-ce
+ Context:    rootless
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  0.14.1
+    Path:     /usr/lib/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  2.27.1
+    Path:     /usr/lib/docker/cli-plugins/docker-compose
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 0
+ Server Version: 26.1.0-ce
+ Storage Driver: fuse-overlayfs
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 3a4de459a68952ffb703bbe7f2290861a75b6b67
+ runc version: v1.2.0-rc.1-0-g275e6d85f78a
+ init version: 
+ Security Options:
+  seccomp
+   Profile: builtin
+  rootless
+  cgroupns
+ Kernel Version: 6.9.1-1-default
+ Operating System: openSUSE MicroOS
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 1
+ Total Memory: 966.2MiB
+ Name: localhost.localdomain
+ ID: 4799e0d8-a32c-4b92-a91e-29229516c81e
+ Docker Root Dir: /home/bernhard/.local/share/docker
+ Debug Mode: false
+ Experimental: false
+ Insecure Registries:
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+SCRIPT_FINISHEDXA0Gw-0-
+ZHaos-1-
+drJLO-0-
+hZgU~
+e2e64034402d
+SCRIPT_FINISHEDhZgU~-0-
+~_2je-0-
+tKbhY-0-
+OCuz7-0-
+LKnws-0-
+jxDgA-0-
+oWo0H-0-
+9SmrX-0-
+NBm8O-0-
+p5rNj-0-
+Wxi0l-0-
+jSdQa-0-
+4SuUc-0-
+YasyF-0-
+Ob1IB-0-
+bg~mc-0-
+JwzWK-0-
+OXcPK-0-
+J2Gy8-0-
+Sve9L-0-
+V3Z8M-0-
+Y4_U5-0-
+1ysZ5-0-
+B_bVb-0-
+hgRWd-0-
+5fh6I-0-
+JgRME-0-
+cQ5gX
+[22;27;39;49m#[0m | [22;27;39;49mAlias[0m         | [22;27;39;49mName[0m                  | [22;27;39;49mEnabled[0m | [22;27;39;49mGPG Check[0m | [22;27;39;49mRefresh[0m | [22;27;39;49mType[0m
+--+---------------+-----------------------+---------+-----------+---------+-----
+[22;27;39;49m[22;27;33;49m1[0m[0m | [22;27;39;49m[22;27;33;49mrepo-debug[0m[0m    | [22;27;39;49m[22;27;33;49mopenSUSE-Tumbleweed[0m-> | [22;27;39;49m[22;27;33;49mNo[0m[0m      | [22;27;39;49m[22;27;33;49m----[0m[0m      | [22;27;39;49m[22;27;33;49m----[0m[0m    | [22;27;39;49mN/A[0m
+[22;27;39;49m[22;27;39;49m2[0m[0m | [22;27;39;49m[22;27;39;49mrepo-non-oss[0m[0m  | [22;27;39;49m[22;27;39;49mopenSUSE-Tumbleweed[0m-> | [22;27;39;49m[22;27;39;49mYes[0m[0m     | [22;27;39;49m[22;27;39;49m( p) Yes[0m[0m  | [22;27;39;49mYes[0m     | [22;27;39;49mN/A[0m
+[22;27;39;49m[22;27;39;49m3[0m[0m | [22;27;39;49m[22;27;39;49mrepo-openh264[0m[0m | [22;27;39;49m[22;27;39;49mOpen H.264 Codec (o[0m-> | [22;27;39;49m[22;27;39;49mYes[0m[0m     | [22;27;39;49m[22;27;39;49m( p) Yes[0m[0m  | [22;27;39;49mYes[0m     | [22;27;39;49mN/A[0m
+[22;27;39;49m[22;27;39;49m4[0m[0m | [22;27;39;49m[22;27;39;49mrepo-oss[0m[0m      | [22;27;39;49m[22;27;39;49mopenSUSE-Tumbleweed[0m-> | [22;27;39;49m[22;27;39;49mYes[0m[0m     | [22;27;39;49m[22;27;39;49m( p) Yes[0m[0m  | [22;27;39;49mYes[0m     | [22;27;39;49mN/A[0m
+[22;27;39;49m[22;27;33;49m5[0m[0m | [22;27;39;49m[22;27;33;49mrepo-source[0m[0m   | [22;27;39;49m[22;27;33;49mopenSUSE-Tumbleweed[0m-> | [22;27;39;49m[22;27;33;49mNo[0m[0m      | [22;27;39;49m[22;27;33;49m----[0m[0m      | [22;27;39;49m[22;27;33;49m----[0m[0m    | [22;27;39;49mN/A[0m
+[22;27;39;49m[22;27;39;49m6[0m[0m | [22;27;39;49m[22;27;39;49mrepo-update[0m[0m   | [22;27;39;49m[22;27;39;49mopenSUSE-Tumbleweed[0m-> | [22;27;39;49m[22;27;39;49mYes[0m[0m     | [22;27;39;49m[22;27;39;49m( p) Yes[0m[0m  | [22;27;39;49mYes[0m     | [22;27;39;49mN/A[0m
+SCRIPT_FINISHEDcQ5gX-0-
+JyJKw-0-
+JgRME-0-
+3YnXh
+Repository priorities are without effect. All enabled repositories share the same priority.
+
+# | Alias         | Name                                   | Enabled | GPG Check | Refresh | Service
+--+---------------+----------------------------------------+---------+-----------+---------+--------
+1 | repo-debug    | openSUSE-Tumbleweed-Debug              | No      | ----      | ----    | 
+2 | repo-non-oss  | openSUSE-Tumbleweed-Non-Oss            | Yes     | ( p) Yes  | Yes     | 
+3 | repo-openh264 | Open H.264 Codec (openSUSE Tumbleweed) | Yes     | ( p) Yes  | Yes     | 
+4 | repo-oss      | openSUSE-Tumbleweed-Oss                | Yes     | ( p) Yes  | Yes     | 
+5 | repo-source   | openSUSE-Tumbleweed-Source             | No      | ----      | ----    | 
+6 | repo-update   | openSUSE-Tumbleweed-Update             | Yes     | ( p) Yes  | Yes     | 
+SCRIPT_FINISHED3YnXh-0-
+wvfWR-0-
+YXUCv-0-
+3RQnV-0-
+zr5Hs-0-
+LYAmH-0-
+JsA8W-0-
+fjaIE-0-
+[  389.692138][    T1] reboot: Restarting system
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::b976:f731:7b89:a204
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 10:30:01 localhost kernel: audit: type=1400 audit(1716892200.066:4): avc:  denied  { map_read map_write } for  pid=572 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 10:30:01 localhost kernel: audit: type=1400 audit(1716892200.079:5): avc:  denied  { map_read map_write } for  pid=575 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+br-0b5952bd9ea8: 172.19.0.1 
+br-4f295bfa4d53: 172.18.0.1 fe80::42:f1ff:fe1f:81c4
+ens4: 10.0.2.15 fec0::b976:f731:7b89:a204
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+br-0b5952bd9ea8: 172.19.0.1 fe80::42:8dff:fe56:9dc6
+br-4f295bfa4d53: 172.18.0.1 fe80::42:f1ff:fe1f:81c4
+ens4: 10.0.2.15 fec0::b976:f731:7b89:a204
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:nM7t9bvz0m41EoaEv1DvwGCkPWD+PbYJU6B1MuRIdIQ (DSA)
+SSH host key: SHA256:kw0Ru7jWyZRRizUmvrv3oxVtkj6Btvan6txYQsA1878 (ECDSA)
+SSH host key: SHA256:FHgTYSanrLnoy2ZNai57AALAuZSvqwNKEPwa0gezySk (ED25519)
+SSH host key: SHA256:OvRXTQJaSuUXhd/DlVJAik8uAKJcFNgYO5DETE2QEbI (RSA)
+ens4: 10.0.2.15 fec0::b976:f731:7b89:a204
+
+
+localhost login: 
