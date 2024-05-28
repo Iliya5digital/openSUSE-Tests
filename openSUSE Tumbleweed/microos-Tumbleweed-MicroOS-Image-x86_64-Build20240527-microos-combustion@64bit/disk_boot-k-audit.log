@@ -1,0 +1,2 @@
+May 28 07:29:52 localhost.localdomain kernel: audit: type=1400 audit(1716881391.556:4): avc:  denied  { map_read map_write } for  pid=1824 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:29:52 localhost.localdomain kernel: audit: type=1400 audit(1716881391.559:5): avc:  denied  { map_read map_write } for  pid=1826 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
