@@ -1,0 +1,121 @@
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:dfXWjofGygdX0oY75mq5j1swdMAnpaV/jNKqPx2BddQ (RSA)
+SSH host key: SHA256:KNyhIgjuthwbShLwmXpU3ftaUjKaAfORjx2abVhQ+aw (ECDSA)
+SSH host key: SHA256:KC09Q6TRbeZebB8U8IsAt5qOVVYE6w93h5TfMc9ZDXc (ED25519)
+ens4: 10.0.2.15 fec0::ab04:ca67:39be:364d
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:31:41 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# zypper -n ref | cat; ( exit ${PIPESTATUS[0]} ); echo gWclj-$?-
+Retrieving repository 'NON_OSS' metadata [..........done]
+Building repository 'NON_OSS' cache [...done]
+Retrieving repository 'OSS' metadata [...........done]
+Building repository 'OSS' cache [....done]
+Retrieving repository 'OSS_DEBUGINFO' metadata [.........done]
+Building repository 'OSS_DEBUGINFO' cache [....done]
+Repository 'Open H.264 Codec (openSUSE Tumbleweed)' is up to date.
+All repositories have been refreshed.
+gWclj-0-
+# zypper -n --gpg-auto-import-keys ref | cat; ( exit ${PIPESTATUS[0]} ); echo 9AZRZ-$?-
+Repository 'NON_OSS' is up to date.
+Repository 'OSS' is up to date.
+Repository 'OSS_DEBUGINFO' is up to date.
+Repository 'Open H.264 Codec (openSUSE Tumbleweed)' is up to date.
+All repositories have been refreshed.
+9AZRZ-0-
+# cd
+# test -f /var/log/audit/audit.log; echo UfVk_-$?-
+UfVk_-0-
+# cat > /tmp/scriptOSm16.sh << 'EOT_OSm16'; echo OSm16-$?-
+> ausearch -m avc -r
+> EOT_OSm16
+OSm16-0-
+# echo OSm16; bash -oe pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-$?-
+OSm16
+type=AVC msg=audit(1716881548.805:100): avc:  denied  { map_read map_write } for  pid=2445 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881548.811:101): avc:  denied  { map_read map_write } for  pid=2448 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+# clear
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:dfXWjofGygdX0oY75mq5j1swdMAnpaV/jNKqPx2BddQ (RSA)
+SSH host key: SHA256:KNyhIgjuthwbShLwmXpU3ftaUjKaAfORjx2abVhQ+aw (ECDSA)
+SSH host key: SHA256:KC09Q6TRbeZebB8U8IsAt5qOVVYE6w93h5TfMc9ZDXc (ED25519)
+ens4: 10.0.2.15 fec0::6bde:c8b6:dafe:aef5
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:KNyhIgjuthwbShLwmXpU3ftaUjKaAfORjx2abVhQ+aw (ECDSA)
+SSH host key: SHA256:KC09Q6TRbeZebB8U8IsAt5qOVVYE6w93h5TfMc9ZDXc (ED25519)
+SSH host key: SHA256:dfXWjofGygdX0oY75mq5j1swdMAnpaV/jNKqPx2BddQ (RSA)
+ens4: 10.0.2.15 fec0::8d1:444b:eadc:242c
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:KNyhIgjuthwbShLwmXpU3ftaUjKaAfORjx2abVhQ+aw (ECDSA)
+SSH host key: SHA256:KC09Q6TRbeZebB8U8IsAt5qOVVYE6w93h5TfMc9ZDXc (ED25519)
+SSH host key: SHA256:dfXWjofGygdX0oY75mq5j1swdMAnpaV/jNKqPx2BddQ (RSA)
+ens4: 10.0.2.15 fec0::6194:dab9:bda2:412b
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:41:11 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptz_R3j.sh << 'EOT_z_R3j'; echo z_R3j-$?-
+> journalctl --no-pager --quiet -p err -o short-precise
+> EOT_z_R3j
+z_R3j-0-
+# echo z_R3j; bash -oe pipefail /tmp/scriptz_R3j.sh ; echo SCRIPT_FINISHEDz_R3j-$?-
+z_R3j
+SCRIPT_FINISHEDz_R3j-0-
+# journalctl --no-pager -o short-precise > /tmp/full_journal.log; echo g7oYx-$?-
+g7oYx-0-
+# curl --form upload=@/tmp/full_journal.log --form upname=journal_check-full_journal.log http://10.0.2.2:20123/YgEamWuvD0TrqTzF/uploadlog/full_journal.log; echo hZHFG-$?-
+OK: journal_check-full_journal.log
+hZHFG-0-
+# cat > /tmp/scriptRThrA.sh << 'EOT_RThrA'; echo RThrA-$?-
+> systemctl --failed --no-legend --plain --no-pager
+> EOT_RThrA
+RThrA-0-
+# echo RThrA; bash -oe pipefail /tmp/scriptRThrA.sh ; echo SCRIPT_FINISHEDRThrA-$?-
+RThrA
+SCRIPT_FINISHEDRThrA-0-
+# test -d /var/log/audit/; echo q7oq8-$?-
+q7oq8-0-
+# tar cvf /tmp/audit.tar  /var/log/audit/*; echo pfP16-$?-
+tar: Removing leading `/' from member names
+/var/log/audit/audit.log
+pfP16-0-
+# curl --form upload=@/tmp/audit.tar --form upname=journal_check-audit.tar http://10.0.2.2:20123/YgEamWuvD0TrqTzF/uploadlog/audit.tar; echo cFiuE-$?-
+OK: journal_check-audit.tar
+cFiuE-0-
+# 
