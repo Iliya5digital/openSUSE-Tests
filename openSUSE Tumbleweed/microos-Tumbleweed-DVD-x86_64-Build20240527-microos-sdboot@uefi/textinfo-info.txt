@@ -1,0 +1,846 @@
++ uname -a
+Linux localhost.localdomain 6.9.1-1-default #1 SMP PREEMPT_DYNAMIC Fri May 17 11:59:46 UTC 2024 (0c0b0b5) x86_64 x86_64 x86_64 GNU/Linux
++ lsmod
+Module                  Size  Used by
+af_packet              65536  2
+qrtr                   53248  4
+rfkill                 40960  1
+nls_iso8859_1          12288  1
+nls_cp437              16384  1
+intel_rapl_msr         20480  0
+intel_rapl_common      45056  1 intel_rapl_msr
+vfat                   24576  1
+fat                   110592  1 vfat
+snd_hda_codec_generic   114688  1
+kvm_amd               204800  0
+ccp                   172032  1 kvm_amd
+snd_hda_intel          65536  0
+snd_intel_dspcfg       45056  1 snd_hda_intel
+snd_intel_sdw_acpi     16384  1 snd_intel_dspcfg
+ppdev                  24576  0
+snd_hda_codec         233472  2 snd_hda_codec_generic,snd_hda_intel
+snd_hda_core          159744  3 snd_hda_codec_generic,snd_hda_intel,snd_hda_codec
+kvm                  1380352  1 kvm_amd
+snd_hwdep              20480  1 snd_hda_codec
+snd_pcm               229376  3 snd_hda_intel,snd_hda_codec,snd_hda_core
+snd_timer              53248  1 snd_pcm
+pcspkr                 12288  0
+virtio_net             90112  0
+snd                   159744  6 snd_hda_codec_generic,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_timer,snd_pcm
+net_failover           24576  1 virtio_net
+soundcore              16384  1 snd
+failover               12288  1 net_failover
+bochs                  20480  0
+parport_pc             77824  0
+drm_vram_helper        28672  1 bochs
+drm_ttm_helper         12288  2 bochs,drm_vram_helper
+tiny_power_button      12288  0
+parport                86016  2 parport_pc,ppdev
+button                 24576  0
+ttm                   110592  2 drm_vram_helper,drm_ttm_helper
+i2c_piix4              36864  0
+joydev                 24576  0
+fuse                  225280  1
+loop                   36864  0
+efi_pstore             12288  0
+configfs               65536  1
+dm_mod                245760  0
+dmi_sysfs              24576  0
+ip_tables              36864  0
+x_tables               69632  1 ip_tables
+hid_generic            12288  0
+usbhid                 81920  0
+crct10dif_pclmul       12288  1
+crc32_pclmul           12288  0
+polyval_clmulni        12288  0
+polyval_generic        12288  1 polyval_clmulni
+gf128mul               16384  1 polyval_generic
+ghash_clmulni_intel    16384  0
+sha512_ssse3           53248  0
+sha256_ssse3           36864  0
+sr_mod                 28672  0
+cdrom                  77824  1 sr_mod
+sha1_ssse3             32768  0
+ata_generic            12288  0
+ata_piix               45056  0
+ahci                   57344  0
+libahci                69632  1 ahci
+libata                507904  4 ata_piix,libahci,ahci,ata_generic
+xhci_pci               24576  0
+xhci_pci_renesas       24576  1 xhci_pci
+virtio_scsi            28672  0
+sd_mod                 90112  0
+xhci_hcd              393216  1 xhci_pci
+t10_pi                 20480  1 sd_mod
+sg                     49152  0
+aesni_intel           360448  0
+crypto_simd            16384  1 aesni_intel
+scsi_mod              356352  5 virtio_scsi,sd_mod,libata,sg,sr_mod
+cryptd                 28672  2 crypto_simd,ghash_clmulni_intel
+usbcore               458752  3 xhci_hcd,usbhid,xhci_pci
+virtio_blk             36864  3
+floppy                122880  0
+scsi_common            16384  5 scsi_mod,sd_mod,libata,sg,sr_mod
+serio_raw              16384  0
+overlay               229376  1
+btrfs                2314240  2
+blake2b_generic        24576  0
+libcrc32c              12288  1 btrfs
+crc32c_intel           16384  3
+xor                    20480  1 btrfs
+raid6_pq              122880  1 btrfs
+efivarfs               24576  1
+qemu_fw_cfg            24576  0
+virtio_rng             12288  0
++ free
+               total        used        free      shared  buff/cache   available
+Mem:          984484      391120      492544        3520      250672      593364
+Swap:              0           0           0
++ cat /etc/fstab
+UUID=e8ad61ea-a99b-49c3-a988-7bb04d760f5e  /                       btrfs  ro                            0  0
+UUID=e8ad61ea-a99b-49c3-a988-7bb04d760f5e  /usr/local              btrfs  subvol=/@/usr/local           0  0
+UUID=e8ad61ea-a99b-49c3-a988-7bb04d760f5e  /srv                    btrfs  subvol=/@/srv                 0  0
+UUID=e8ad61ea-a99b-49c3-a988-7bb04d760f5e /root btrfs subvol=/@/root,x-initrd.mount 0 0
+UUID=e8ad61ea-a99b-49c3-a988-7bb04d760f5e  /opt                    btrfs  subvol=/@/opt                 0  0
+UUID=e8ad61ea-a99b-49c3-a988-7bb04d760f5e  /home                   btrfs  subvol=/@/home                0  0
+UUID=e8ad61ea-a99b-49c3-a988-7bb04d760f5e  /boot/writable          btrfs  subvol=/@/boot/writable       0  0
+UUID=e8ad61ea-a99b-49c3-a988-7bb04d760f5e  /boot/grub2/x86_64-efi  btrfs  subvol=/@/boot/grub2/x86_64-efi  0  0
+UUID=e8ad61ea-a99b-49c3-a988-7bb04d760f5e  /boot/grub2/i386-pc     btrfs  subvol=/@/boot/grub2/i386-pc  0  0
+UUID=e8ad61ea-a99b-49c3-a988-7bb04d760f5e  /.snapshots             btrfs  subvol=/@/.snapshots          0  0
+UUID=b313c914-deb2-4a92-991d-ce2e6b1b022c /var btrfs defaults,x-initrd.mount 0 0
+UUID=90C4-D20E                             /boot/efi               vfat   utf8                          0  2
+overlay /etc overlay defaults,lowerdir=/sysroot/etc,upperdir=/sysroot/var/lib/overlay/1/etc,workdir=/sysroot/var/lib/overlay/work-etc,x-systemd.requires-mounts-for=/var,x-systemd.requires-mounts-for=/sysroot/var,x-initrd.mount 0 0
++ mount
+/dev/vda2 on / type btrfs (ro,relatime,seclabel,discard=async,space_cache=v2,subvolid=266,subvol=/@/.snapshots/1/snapshot)
+/dev/vda2 on /root type btrfs (rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=259,subvol=/@/root)
+/dev/vda3 on /var type btrfs (rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=5,subvol=/)
+overlay on /etc type overlay (rw,relatime,seclabel,lowerdir=/sysroot/etc,upperdir=/sysroot/var/lib/overlay/1/etc,workdir=/sysroot/var/lib/overlay/work-etc,uuid=on)
+devtmpfs on /dev type devtmpfs (rw,nosuid,seclabel,size=4096k,nr_inodes=119605,mode=755,inode64)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,seclabel,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,seclabel,gid=5,mode=620,ptmxmode=000)
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime,seclabel)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,seclabel,nsdelegate,memory_recursiveprot)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime,seclabel)
+efivarfs on /sys/firmware/efi/efivars type efivarfs (rw,nosuid,nodev,noexec,relatime)
+bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,seclabel,size=196900k,nr_inodes=819200,mode=755,inode64)
+selinuxfs on /sys/fs/selinux type selinuxfs (rw,nosuid,noexec,relatime)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=33,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=3353)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,nosuid,nodev,relatime,seclabel,pagesize=2M)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime,seclabel)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime,seclabel)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime,seclabel)
+tmpfs on /tmp type tmpfs (rw,nosuid,nodev,seclabel,size=492244k,nr_inodes=1048576,inode64)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+/dev/vda2 on /.snapshots type btrfs (rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=265,subvol=/@/.snapshots)
+/dev/vda2 on /boot/grub2/i386-pc type btrfs (rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=264,subvol=/@/boot/grub2/i386-pc)
+/dev/vda2 on /opt type btrfs (rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=260,subvol=/@/opt)
+/dev/vda2 on /home type btrfs (rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=261,subvol=/@/home)
+/dev/vda2 on /boot/writable type btrfs (rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=262,subvol=/@/boot/writable)
+/dev/vda2 on /boot/grub2/x86_64-efi type btrfs (rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=263,subvol=/@/boot/grub2/x86_64-efi)
+/dev/vda2 on /srv type btrfs (rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=258,subvol=/@/srv)
+/dev/vda2 on /usr/local type btrfs (rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=257,subvol=/@/usr/local)
+/dev/vda1 on /boot/efi type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro)
+tmpfs on /run/user/0 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=98448k,nr_inodes=24612,mode=700,inode64)
++ mount
++ grep -q '/ type btrfs'
++ /usr/sbin/btrfs filesystem df /
+Data, single: total=1.66GiB, used=717.57MiB
+System, DUP: total=8.00MiB, used=16.00KiB
+Metadata, DUP: total=256.00MiB, used=18.38MiB
+GlobalReserve, single: total=5.50MiB, used=0.00B
++ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda2       8.2G  760M  7.0G  10% /
+/dev/vda2       8.2G  760M  7.0G  10% /root
+/dev/vda3        12G  134M   11G   2% /var
+overlay          12G  134M   11G   2% /etc
+devtmpfs        4.0M     0  4.0M   0% /dev
+tmpfs           481M     0  481M   0% /dev/shm
+efivarfs         56K   40K   12K  77% /sys/firmware/efi/efivars
+tmpfs           193M  3.5M  189M   2% /run
+tmpfs           481M   20K  481M   1% /tmp
+/dev/vda2       8.2G  760M  7.0G  10% /.snapshots
+/dev/vda2       8.2G  760M  7.0G  10% /boot/grub2/i386-pc
+/dev/vda2       8.2G  760M  7.0G  10% /opt
+/dev/vda2       8.2G  760M  7.0G  10% /home
+/dev/vda2       8.2G  760M  7.0G  10% /boot/writable
+/dev/vda2       8.2G  760M  7.0G  10% /boot/grub2/x86_64-efi
+/dev/vda2       8.2G  760M  7.0G  10% /srv
+/dev/vda2       8.2G  760M  7.0G  10% /usr/local
+/dev/vda1       511M   38M  474M   8% /boot/efi
+tmpfs            97M  4.0K   97M   1% /run/user/0
++ ip -o a s
+1: lo    inet 127.0.0.1/8 scope host lo\       valid_lft forever preferred_lft forever
+1: lo    inet6 ::1/128 scope host noprefixroute \       valid_lft forever preferred_lft forever
+2: ens4    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic ens4\       valid_lft 86339sec preferred_lft 86339sec
+2: ens4    inet6 fec0::a33d:c160:ff02:583b/64 scope site temporary dynamic \       valid_lft 86342sec preferred_lft 14342sec
+2: ens4    inet6 fec0::5054:ff:fe12:3456/64 scope site dynamic mngtmpaddr noprefixroute \       valid_lft 86342sec preferred_lft 14342sec
+2: ens4    inet6 fe80::5054:ff:fe12:3456/64 scope link noprefixroute \       valid_lft forever preferred_lft forever
++ ip r s
+default via 10.0.2.2 dev ens4 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev ens4 proto kernel scope link src 10.0.2.15 metric 100 
++ ip -6 r s
+fe80::/64 dev ens4 proto kernel metric 1024 pref medium
+fec0::/64 dev ens4 proto ra metric 100 pref medium
+default via fe80::2 dev ens4 proto ra metric 20100 pref medium
++ cat /etc/resolv.conf
+# Generated by NetworkManager
+nameserver 10.0.2.3
++ ls -al /etc/sysconfig/network
+ls: cannot access '/etc/sysconfig/network': No such file or directory
++ true
++ rpm -qa 'kernel-*'
+kernel-default-6.9.1-1.1.x86_64
++ grep DISPLAYMANAGER /etc/sysconfig/displaymanager
+grep: /etc/sysconfig/displaymanager: No such file or directory
++ true
++ grep DEFAULT /etc/sysconfig/windowmanager
+DEFAULT_WM="default"
++ ls -l '/etc/ntp*'
+ls: cannot access '/etc/ntp*': No such file or directory
++ true
++ '[' -f /var/log/messages ']'
++ ps ax
+  PID TTY      STAT   TIME COMMAND
+    1 ?        Ss     0:01 /usr/lib/systemd/systemd --switched-root --system --deserialize=36
+    2 ?        S      0:00 [kthreadd]
+    3 ?        S      0:00 [pool_workqueue_release]
+    4 ?        I<     0:00 [kworker/R-rcu_g]
+    5 ?        I<     0:00 [kworker/R-slub_]
+    6 ?        I<     0:00 [kworker/R-netns]
+    7 ?        I      0:00 [kworker/0:0-events]
+    8 ?        I      0:00 [kworker/0:1-cgroup_destroy]
+    9 ?        I<     0:00 [kworker/0:0H-kblockd]
+   10 ?        I      0:00 [kworker/u4:0-writeback]
+   11 ?        I<     0:00 [kworker/R-mm_pe]
+   12 ?        I      0:00 [rcu_tasks_kthread]
+   13 ?        I      0:00 [rcu_tasks_rude_kthread]
+   14 ?        I      0:00 [rcu_tasks_trace_kthread]
+   15 ?        S      0:00 [ksoftirqd/0]
+   16 ?        I      0:00 [rcu_preempt]
+   17 ?        S      0:00 [rcu_exp_par_gp_kthread_worker/0]
+   18 ?        S      0:00 [rcu_exp_gp_kthread_worker]
+   19 ?        S      0:00 [migration/0]
+   20 ?        S      0:00 [idle_inject/0]
+   21 ?        S      0:00 [cpuhp/0]
+   23 ?        S      0:00 [kdevtmpfs]
+   24 ?        I<     0:00 [kworker/R-inet_]
+   25 ?        S      0:00 [kauditd]
+   26 ?        I      0:00 [kworker/u4:1-events_unbound]
+   27 ?        S      0:00 [khungtaskd]
+   28 ?        S      0:00 [oom_reaper]
+   29 ?        I      0:00 [kworker/u4:2-btrfs-endio-write]
+   30 ?        I<     0:00 [kworker/R-write]
+   31 ?        S      0:00 [kcompactd0]
+   32 ?        SN     0:00 [ksmd]
+   33 ?        SN     0:00 [khugepaged]
+   34 ?        I<     0:00 [kworker/R-kinte]
+   35 ?        I<     0:00 [kworker/R-kbloc]
+   36 ?        I<     0:00 [kworker/R-blkcg]
+   37 ?        S      0:00 [irq/9-acpi]
+   38 ?        I<     0:00 [kworker/R-tpm_d]
+   39 ?        I<     0:00 [kworker/R-edac-]
+   40 ?        I<     0:00 [kworker/R-devfr]
+   41 ?        S      0:00 [watchdogd]
+   42 ?        I<     0:00 [kworker/0:1H]
+   43 ?        S      0:00 [kswapd0]
+   50 ?        I<     0:00 [kworker/R-kthro]
+   54 ?        S      0:00 [khvcd]
+   55 ?        I<     0:00 [kworker/R-mld]
+   56 ?        I<     0:00 [kworker/R-ipv6_]
+   61 ?        I<     0:00 [kworker/R-kstrp]
+   62 ?        I<     0:00 [kworker/u5:0]
+  130 ?        I<     0:00 [kworker/R-charg]
+  131 ?        S      0:00 [hwrng]
+  133 ?        I      0:00 [kworker/0:2-events_power_efficient]
+  192 ?        I      0:00 [kworker/u4:3-writeback]
+  193 ?        I      0:00 [kworker/0:3-events_power_efficient]
+  194 ?        I      0:00 [kworker/0:4-events]
+  333 ?        I<     0:00 [kworker/R-crypt]
+  343 ?        S      0:00 [scsi_eh_0]
+  346 ?        I<     0:00 [kworker/R-scsi_]
+  353 ?        I<     0:00 [kworker/R-ata_s]
+  357 ?        S      0:00 [scsi_eh_1]
+  358 ?        I<     0:00 [kworker/R-scsi_]
+  362 ?        S      0:00 [scsi_eh_2]
+  366 ?        I<     0:00 [kworker/R-scsi_]
+  444 ?        I      0:00 [kworker/0:5-events]
+  445 ?        I<     0:00 [kworker/R-btrfs]
+  446 ?        I<     0:00 [kworker/R-btrfs]
+  447 ?        I<     0:00 [kworker/R-btrfs]
+  448 ?        I<     0:00 [kworker/R-btrfs]
+  449 ?        I<     0:00 [kworker/R-btrfs]
+  450 ?        I<     0:00 [kworker/R-btrfs]
+  451 ?        I<     0:00 [kworker/R-btrfs]
+  452 ?        I<     0:00 [kworker/R-btrfs]
+  453 ?        I<     0:00 [kworker/R-btrfs]
+  454 ?        I<     0:00 [kworker/R-btrfs]
+  455 ?        I<     0:00 [kworker/R-btrfs]
+  456 ?        I<     0:00 [kworker/R-btrfs]
+  457 ?        I<     0:00 [kworker/R-btrfs]
+  458 ?        S      0:00 [btrfs-cleaner]
+  459 ?        S      0:00 [btrfs-transaction]
+  501 ?        I<     0:00 [kworker/R-btrfs]
+  502 ?        I<     0:00 [kworker/R-btrfs]
+  503 ?        I<     0:00 [kworker/R-btrfs]
+  504 ?        I<     0:00 [kworker/R-btrfs]
+  505 ?        I<     0:00 [kworker/R-btrfs]
+  506 ?        I<     0:00 [kworker/R-btrfs]
+  507 ?        I<     0:00 [kworker/R-btrfs]
+  508 ?        I<     0:00 [kworker/R-btrfs]
+  509 ?        I<     0:00 [kworker/R-btrfs]
+  510 ?        I<     0:00 [kworker/R-btrfs]
+  511 ?        I<     0:00 [kworker/R-btrfs]
+  512 ?        I<     0:00 [kworker/R-btrfs]
+  513 ?        I<     0:00 [kworker/R-btrfs]
+  514 ?        S      0:00 [btrfs-cleaner]
+  515 ?        S      0:00 [btrfs-transaction]
+  618 ?        Ss     0:00 /usr/lib/systemd/systemd-journald
+  662 ?        Ss     0:00 /usr/lib/systemd/systemd-udevd
+  688 ?        I<     0:00 [kworker/R-ttm]
+  725 ?        I      0:00 [kworker/u4:4-btrfs-endio]
+  757 ?        I      0:00 [kworker/0:6-events]
+  760 ?        I      0:00 [kworker/0:7-events]
+  809 ?        S<sl   0:00 /sbin/auditd
+  814 ?        Ss     0:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+  818 ?        Ssl    0:00 /usr/libexec/polkit-1/polkitd --no-debug
+  822 ?        Ss     0:00 /usr/lib/systemd/systemd-logind
+  842 ?        Ssl    0:00 /usr/sbin/NetworkManager --no-daemon
+  847 ?        Ss     0:00 /usr/sbin/rebootmgrd --verbose
+  917 ?        Ssl    0:00 /usr/sbin/ModemManager
+  980 ?        S      0:00 /usr/sbin/chronyd
+ 1016 ?        Ss     0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+ 1043 tty1     Ss+    0:00 /sbin/agetty -o -p -- \u --noclear - linux
+ 1044 ?        Ss     0:00 login -- root
+ 1045 ttyS0    Ss+    0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+ 1095 ?        Ss     0:00 login -- root
+ 1102 ?        Ss     0:00 /usr/lib/systemd/systemd --user
+ 1104 ?        S      0:00 (sd-pam)
+ 1113 tty2     Ss+    0:00 -bash
+ 1164 hvc0     Ss     0:00 /bin/bash
+ 1210 hvc0     S+     0:00 /bin/sh -ex ./textinfo
+ 1211 hvc0     S+     0:00 tee /tmp/info.txt
+ 1230 hvc0     R+     0:00 ps ax
++ systemctl --no-pager --full
+  UNIT                                                                                   LOAD   ACTIVE SUB       DESCRIPTION
+  proc-sys-fs-binfmt_misc.automount                                                      loaded active waiting   Arbitrary Executable File Formats File System Automount Point
+  sys-devices-pci0000:00-0000:00:03.0-sound-card0-controlC0.device                       loaded active plugged   /sys/devices/pci0000:00/0000:00:03.0/sound/card0/controlC0
+  sys-devices-pci0000:00-0000:00:04.0-virtio0-net-ens4.device                            loaded active plugged   Virtio network device
+  sys-devices-pci0000:00-0000:00:07.0-virtio2-virtio\x2dports-vport2p0.device            loaded active plugged   /sys/devices/pci0000:00/0000:00:07.0/virtio2/virtio-ports/vport2p0
+  sys-devices-pci0000:00-0000:00:07.0-virtio2-virtio\x2dports-vport2p1.device            loaded active plugged   /sys/devices/pci0000:00/0000:00:07.0/virtio2/virtio-ports/vport2p1
+  sys-devices-pci0000:00-0000:00:08.0-virtio3-host0-target0:0:0-0:0:0:0-block-sr0.device loaded active plugged   QEMU_CD-ROM openSUSE-MicroOS-DVD-x86_64
+  sys-devices-pci0000:00-0000:00:09.0-virtio4-block-vda-vda1.device                      loaded active plugged   /sys/devices/pci0000:00/0000:00:09.0/virtio4/block/vda/vda1
+  sys-devices-pci0000:00-0000:00:09.0-virtio4-block-vda-vda2.device                      loaded active plugged   /sys/devices/pci0000:00/0000:00:09.0/virtio4/block/vda/vda2
+  sys-devices-pci0000:00-0000:00:09.0-virtio4-block-vda-vda3.device                      loaded active plugged   /sys/devices/pci0000:00/0000:00:09.0/virtio4/block/vda/vda3
+  sys-devices-pci0000:00-0000:00:09.0-virtio4-block-vda.device                           loaded active plugged   /sys/devices/pci0000:00/0000:00:09.0/virtio4/block/vda
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.1-tty-ttyS1.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.1/tty/ttyS1
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.10-tty-ttyS10.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.10/tty/ttyS10
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.11-tty-ttyS11.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.11/tty/ttyS11
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.12-tty-ttyS12.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.12/tty/ttyS12
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.13-tty-ttyS13.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.13/tty/ttyS13
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.14-tty-ttyS14.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.14/tty/ttyS14
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.15-tty-ttyS15.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.15/tty/ttyS15
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.16-tty-ttyS16.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.16/tty/ttyS16
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.17-tty-ttyS17.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.17/tty/ttyS17
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.18-tty-ttyS18.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.18/tty/ttyS18
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.19-tty-ttyS19.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.19/tty/ttyS19
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.2-tty-ttyS2.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.2/tty/ttyS2
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.20-tty-ttyS20.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.20/tty/ttyS20
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.21-tty-ttyS21.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.21/tty/ttyS21
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.22-tty-ttyS22.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.22/tty/ttyS22
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.23-tty-ttyS23.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.23/tty/ttyS23
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.24-tty-ttyS24.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.24/tty/ttyS24
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.25-tty-ttyS25.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.25/tty/ttyS25
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.26-tty-ttyS26.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.26/tty/ttyS26
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.27-tty-ttyS27.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.27/tty/ttyS27
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.28-tty-ttyS28.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.28/tty/ttyS28
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.29-tty-ttyS29.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.29/tty/ttyS29
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.3-tty-ttyS3.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.3/tty/ttyS3
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.30-tty-ttyS30.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.30/tty/ttyS30
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.31-tty-ttyS31.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.31/tty/ttyS31
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.4-tty-ttyS4.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.4/tty/ttyS4
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.5-tty-ttyS5.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.5/tty/ttyS5
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.6-tty-ttyS6.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.6/tty/ttyS6
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.7-tty-ttyS7.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.7/tty/ttyS7
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.8-tty-ttyS8.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.8/tty/ttyS8
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.9-tty-ttyS9.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.9/tty/ttyS9
+  sys-devices-pnp0-00:04-00:04:0-00:04:0.0-tty-ttyS0.device                              loaded active plugged   /sys/devices/pnp0/00:04/00:04:0/00:04:0.0/tty/ttyS0
+  sys-devices-virtual-misc-rfkill.device                                                 loaded active plugged   /sys/devices/virtual/misc/rfkill
+  sys-devices-virtual-tty-hvc0.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc0
+  sys-devices-virtual-tty-hvc1.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc1
+  sys-devices-virtual-tty-hvc2.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc2
+  sys-devices-virtual-tty-hvc3.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc3
+  sys-devices-virtual-tty-hvc4.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc4
+  sys-devices-virtual-tty-hvc5.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc5
+  sys-devices-virtual-tty-hvc6.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc6
+  sys-devices-virtual-tty-hvc7.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc7
+  sys-module-configfs.device                                                             loaded active plugged   /sys/module/configfs
+  sys-module-fuse.device                                                                 loaded active plugged   /sys/module/fuse
+  sys-subsystem-net-devices-ens4.device                                                  loaded active plugged   Virtio network device
+  -.mount                                                                                loaded active mounted   Root Mount
+  \x2esnapshots.mount                                                                    loaded active mounted   /.snapshots
+  boot-efi.mount                                                                         loaded active mounted   /boot/efi
+  boot-grub2-i386\x2dpc.mount                                                            loaded active mounted   /boot/grub2/i386-pc
+  boot-grub2-x86_64\x2defi.mount                                                         loaded active mounted   /boot/grub2/x86_64-efi
+  boot-writable.mount                                                                    loaded active mounted   /boot/writable
+  dev-hugepages.mount                                                                    loaded active mounted   Huge Pages File System
+  dev-mqueue.mount                                                                       loaded active mounted   POSIX Message Queue File System
+  etc.mount                                                                              loaded active mounted   /etc
+  home.mount                                                                             loaded active mounted   /home
+  opt.mount                                                                              loaded active mounted   /opt
+  root.mount                                                                             loaded active mounted   /root
+  run-user-0.mount                                                                       loaded active mounted   /run/user/0
+  srv.mount                                                                              loaded active mounted   /srv
+  sys-fs-fuse-connections.mount                                                          loaded active mounted   FUSE Control File System
+  sys-kernel-config.mount                                                                loaded active mounted   Kernel Configuration File System
+  sys-kernel-debug.mount                                                                 loaded active mounted   Kernel Debug File System
+  sys-kernel-tracing.mount                                                               loaded active mounted   Kernel Trace File System
+  tmp.mount                                                                              loaded active mounted   Temporary Directory /tmp
+  usr-local.mount                                                                        loaded active mounted   /usr/local
+  var.mount                                                                              loaded active mounted   /var
+  btrfsmaintenance-refresh.path                                                          loaded active waiting   Watch /etc/sysconfig/btrfsmaintenance
+  ca-certificates.path                                                                   loaded active waiting   Watch for changes in CA certificates
+  issue-generator.path                                                                   loaded active waiting   Watch for changes in issue snippets
+  systemd-ask-password-console.path                                                      loaded active waiting   Dispatch Password Requests to Console Directory Watch
+  init.scope                                                                             loaded active running   System and Service Manager
+  session-1.scope                                                                        loaded active running   Session 1 of User root
+  session-3.scope                                                                        loaded active running   Session 3 of User root
+  auditd.service                                                                         loaded active running   Security Auditing Service
+  augenrules.service                                                                     loaded active exited    auditd rules generation
+  chronyd.service                                                                        loaded active running   NTP client/server
+  create-dirs-from-rpmdb.service                                                         loaded active exited    Create missing directories from rpmdb
+  dbus.service                                                                           loaded active running   D-Bus System Message Bus
+  dracut-shutdown.service                                                                loaded active exited    Restore /run/initramfs on shutdown
+  getty@tty1.service                                                                     loaded active running   Getty on tty1
+  getty@tty2.service                                                                     loaded active running   Getty on tty2
+  kbdsettings.service                                                                    loaded active exited    Apply settings from /etc/sysconfig/keyboard
+  kernel-sysctl.service                                                                  loaded active exited    Apply Kernel Variables for 6.9.1-1-default
+  kmod-static-nodes.service                                                              loaded active exited    Create List of Static Device Nodes
+  ModemManager.service                                                                   loaded active running   Modem Manager
+  NetworkManager.service                                                                 loaded active running   Network Manager
+  polkit.service                                                                         loaded active running   Authorization Manager
+  rebootmgr.service                                                                      loaded active running   Reboot Manager
+  serial-getty@hvc0.service                                                              loaded active running   Serial Getty on hvc0
+  serial-getty@ttyS0.service                                                             loaded active running   Serial Getty on ttyS0
+  sshd.service                                                                           loaded active running   OpenSSH Daemon
+  systemd-boot-random-seed.service                                                       loaded active exited    Update Boot Loader Random Seed
+  systemd-fsck@dev-disk-by\x2duuid-90C4\x2dD20E.service                                  loaded active exited    File System Check on /dev/disk/by-uuid/90C4-D20E
+  systemd-hwdb-update.service                                                            loaded active exited    Rebuild Hardware Database
+  systemd-journal-catalog-update.service                                                 loaded active exited    Rebuild Journal Catalog
+  systemd-journal-flush.service                                                          loaded active exited    Flush Journal to Persistent Storage
+  systemd-journald.service                                                               loaded active running   Journal Service
+  systemd-logind.service                                                                 loaded active running   User Login Management
+  systemd-random-seed.service                                                            loaded active exited    Load/Save OS Random Seed
+  systemd-remount-fs.service                                                             loaded active exited    Remount Root and Kernel File Systems
+  systemd-sysctl.service                                                                 loaded active exited    Apply Kernel Variables
+  systemd-sysusers.service                                                               loaded active exited    Create System Users
+  systemd-tmpfiles-setup-dev-early.service                                               loaded active exited    Create Static Device Nodes in /dev gracefully
+  systemd-tmpfiles-setup-dev.service                                                     loaded active exited    Create Static Device Nodes in /dev
+  systemd-tmpfiles-setup.service                                                         loaded active exited    Create Volatile Files and Directories
+  systemd-udev-trigger.service                                                           loaded active exited    Coldplug All udev Devices
+  systemd-udevd.service                                                                  loaded active running   Rule-based Manager for Device Events and Files
+  systemd-update-done.service                                                            loaded active exited    Update is Completed
+  systemd-user-sessions.service                                                          loaded active exited    Permit User Sessions
+  systemd-vconsole-setup.service                                                         loaded active exited    Virtual Console Setup
+  user-runtime-dir@0.service                                                             loaded active exited    User Runtime Directory /run/user/0
+  user@0.service                                                                         loaded active running   User Manager for UID 0
+  wtmpdb-update-boot.service                                                             loaded active exited    Write boot and shutdown times into wtmpdb
+  -.slice                                                                                loaded active active    Root Slice
+  system-getty.slice                                                                     loaded active active    Slice /system/getty
+  system-modprobe.slice                                                                  loaded active active    Slice /system/modprobe
+  system-serial\x2dgetty.slice                                                           loaded active active    Slice /system/serial-getty
+  system-systemd\x2dfsck.slice                                                           loaded active active    Slice /system/systemd-fsck
+  system.slice                                                                           loaded active active    System Slice
+  user-0.slice                                                                           loaded active active    User Slice of UID 0
+  user.slice                                                                             loaded active active    User and Session Slice
+  dbus.socket                                                                            loaded active running   D-Bus System Message Bus Socket
+  dm-event.socket                                                                        loaded active listening Device-mapper event daemon FIFOs
+  systemd-coredump.socket                                                                loaded active listening Process Core Dump Socket
+  systemd-journald-dev-log.socket                                                        loaded active running   Journal Socket (/dev/log)
+  systemd-journald.socket                                                                loaded active running   Journal Socket
+  systemd-rfkill.socket                                                                  loaded active listening Load/Save RF Kill Switch Status /dev/rfkill Watch
+  systemd-sysext.socket                                                                  loaded active listening System Extension Image Management (Varlink)
+  systemd-udevd-control.socket                                                           loaded active running   udev Control Socket
+  systemd-udevd-kernel.socket                                                            loaded active running   udev Kernel Socket
+  basic.target                                                                           loaded active active    Basic System
+  cryptsetup.target                                                                      loaded active active    Local Encrypted Volumes
+  getty.target                                                                           loaded active active    Login Prompts
+  integritysetup.target                                                                  loaded active active    Local Integrity Protected Volumes
+  local-fs-pre.target                                                                    loaded active active    Preparation for Local File Systems
+  local-fs.target                                                                        loaded active active    Local File Systems
+  multi-user.target                                                                      loaded active active    Multi-User System
+  network.target                                                                         loaded active active    Network
+  paths.target                                                                           loaded active active    Path Units
+  remote-fs.target                                                                       loaded active active    Remote File Systems
+  slices.target                                                                          loaded active active    Slice Units
+  sockets.target                                                                         loaded active active    Socket Units
+  sound.target                                                                           loaded active active    Sound Card
+  swap.target                                                                            loaded active active    Swaps
+  sysinit.target                                                                         loaded active active    System Initialization
+  time-set.target                                                                        loaded active active    System Time Set
+  time-sync.target                                                                       loaded active active    System Time Synchronized
+  timers.target                                                                          loaded active active    Timer Units
+  veritysetup.target                                                                     loaded active active    Local Verity Protected Volumes
+  btrfs-balance.timer                                                                    loaded active waiting   Balance block groups on a btrfs filesystem
+  btrfs-defrag.timer                                                                     loaded active waiting   Defragment file data and/or directory metadata
+  btrfs-scrub.timer                                                                      loaded active waiting   Scrub btrfs filesystem, verify block checksums
+  btrfs-trim.timer                                                                       loaded active waiting   Discard unused blocks on a mounted filesystem
+  fstrim.timer                                                                           loaded active waiting   Discard unused filesystem blocks once a week
+  logrotate.timer                                                                        loaded active waiting   Daily rotation of log files
+  snapper-cleanup.timer                                                                  loaded active waiting   Daily Cleanup of Snapper Snapshots
+  snapper-timeline.timer                                                                 loaded active waiting   Timeline of Snapper Snapshots
+  systemd-tmpfiles-clean.timer                                                           loaded active waiting   Daily Cleanup of Temporary Directories
+  transactional-update.timer                                                             loaded active waiting   Daily update of the system
+  wtmpdb-rotate.timer                                                                    loaded active waiting   Monthly rotation of wtmpdb
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+169 loaded units listed. Pass --all to see loaded but inactive units, too.
+To show all installed unit files use 'systemctl list-unit-files'.
++ rpm -qa
++ sort
+MicroOS-release-20240527-2925.1.x86_64
+MicroOS-release-appliance-20240527-2925.1.x86_64
+ModemManager-1.20.6-2.3.x86_64
+NetworkManager-1.44.4-2.1.x86_64
+NetworkManager-bluetooth-1.44.4-2.1.x86_64
+NetworkManager-branding-openSUSE-42.1-7.5.noarch
+NetworkManager-wwan-1.44.4-2.1.x86_64
+aaa_base-84.87+git20240523.10a5692-1.1.x86_64
+alts-1.2+30.a5431e9-1.5.x86_64
+audit-3.1.1-1.4.x86_64
+bash-5.2.26-12.1.x86_64
+bash-sh-5.2.26-12.1.noarch
+bc-1.07.1-5.2.x86_64
+boost-license1_85_0-1.85.0-1.2.noarch
+branding-openSUSE-84.87.20240405-1.2.noarch
+btrfsmaintenance-0.5-3.1.noarch
+btrfsprogs-6.8.1-1.1.x86_64
+btrfsprogs-udev-rules-6.8.1-1.1.noarch
+busybox-1.36.1-4.2.x86_64
+busybox-gzip-1.36.1-32.2.noarch
+busybox-hostname-1.36.1-32.2.noarch
+busybox-which-1.36.1-32.2.noarch
+ca-certificates-2+git20240415.3fe9324-1.1.noarch
+ca-certificates-mozilla-2.66-1.2.noarch
+chrony-4.5-1.1.x86_64
+chrony-pool-openSUSE-4.5-1.1.noarch
+compat-usrmerge-tools-84.87-5.20.x86_64
+container-selinux-2.228.0-1.3.noarch
+coreutils-9.5-1.1.x86_64
+coreutils-systemd-9.5-1.1.x86_64
+cpio-2.15-3.1.x86_64
+crypto-policies-20230920.570ea89-3.2.noarch
+curl-8.8.0-1.1.x86_64
+dbus-1-1.14.10-2.3.x86_64
+dbus-1-common-1.14.10-2.3.noarch
+dbus-1-daemon-1.14.10-2.3.x86_64
+dbus-1-tools-1.14.10-2.3.x86_64
+device-mapper-2.03.22_1.02.196-3.1.x86_64
+dialog-1.3-11.3.x86_64
+diffutils-3.10-1.7.x86_64
+dosfstools-4.2-4.6.x86_64
+dracut-059+suse.588.g528264be-1.1.x86_64
+dracut-pcr-signature-0.3+6-1.1.noarch
+dracut-transactional-update-4.6.8-1.1.noarch
+e2fsprogs-1.47.0-4.2.x86_64
+efibootmgr-18-1.6.x86_64
+elfutils-0.191-1.2.x86_64
+ethtool-6.7-1.2.x86_64
+fcoe-utils-1.0.34-5.2.x86_64
+file-5.45-2.2.x86_64
+file-magic-5.45-2.2.noarch
+filesystem-84.87-15.3.x86_64
+fillup-1.42-281.1.x86_64
+findutils-4.9.0-4.1.x86_64
+gawk-5.3.0-1.5.x86_64
+gio-branding-openSUSE-42.1-21.4.noarch
+glib2-tools-2.80.2-1.1.x86_64
+glibc-2.39-7.1.x86_64
+glibc-locale-2.39-7.1.x86_64
+glibc-locale-base-2.39-7.1.x86_64
+gpg-pubkey-29b700a4-62b07e22
+gpg-pubkey-39db7c82-510a966b
+gpg2-2.4.5-1.1.x86_64
+grep-3.11-3.1.x86_64
+hicolor-icon-theme-0.17-4.4.noarch
+hwinfo-23.2-1.5.x86_64
+iproute2-6.9-1.1.x86_64
+iputils-20240117-1.3.x86_64
+irqbalance-1.9.4.0.git+f8b8cdd-1.1.x86_64
+issue-generator-1.13-1.13.noarch
+jq-1.7.1-1.3.x86_64
+kbd-2.6.4-4.1.x86_64
+kdump-2.0.5-1.1.x86_64
+kernel-default-6.9.1-1.1.x86_64
+kexec-tools-2.0.28-1.2.x86_64
+kmod-32-1.1.x86_64
+krb5-1.21.2-5.1.x86_64
+lastlog2-2.40.1-2.1.x86_64
+less-643-2.3.x86_64
+libabsl_lite_2401_0_0-20240116.2-2.1.x86_64
+libacl1-2.3.2-2.1.x86_64
+libalternatives1-1.2+30.a5431e9-1.5.x86_64
+libapparmor1-4.0.1-1.1.x86_64
+libargon2-1-20190702-4.1.x86_64
+libasm1-0.191-1.2.x86_64
+libassuan0-2.5.7-1.1.x86_64
+libattr1-2.5.2-1.2.x86_64
+libaudit1-3.1.1-1.6.x86_64
+libaugeas0-1.14.1-1.3.x86_64
+libauparse0-3.1.1-1.6.x86_64
+libblkid1-2.40.1-2.1.x86_64
+libbluetooth3-5.71-3.3.x86_64
+libboost_filesystem1_85_0-1.85.0-1.2.x86_64
+libboost_thread1_85_0-1.85.0-1.2.x86_64
+libbpf1-1.4.2-1.1.x86_64
+libbrotlicommon1-1.1.0-1.3.x86_64
+libbrotlidec1-1.1.0-1.3.x86_64
+libbtrfs0-6.8.1-1.1.x86_64
+libbtrfsutil1-6.8.1-1.1.x86_64
+libbz2-1-1.0.8-5.10.x86_64
+libcap-ng0-0.8.5-1.1.x86_64
+libcap2-2.69-1.7.x86_64
+libcbor0_11-0.11.0-1.1.x86_64
+libcom_err2-1.47.0-4.2.x86_64
+libconfig11-1.7.3-1.11.x86_64
+libcrypt1-4.4.36-1.6.x86_64
+libcryptsetup12-2.7.2-1.1.x86_64
+libcurl4-8.8.0-1.1.x86_64
+libdbus-1-3-1.14.10-2.3.x86_64
+libdevmapper-event1_03-2.03.22_1.02.196-3.1.x86_64
+libdevmapper1_03-2.03.22_1.02.196-3.1.x86_64
+libdialog15-1.3-11.3.x86_64
+libduktape207-2.7.0-3.3.x86_64
+libdw1-0.191-1.2.x86_64
+libeconf0-0.6.3-1.1.x86_64
+libedit0-20210910.3.1-2.7.x86_64
+libefivar1-38-2.3.x86_64
+libelf1-0.191-1.2.x86_64
+libexpat1-2.6.2-1.1.x86_64
+libext2fs2-1.47.0-4.2.x86_64
+libfa1-1.14.1-1.3.x86_64
+libfdisk1-2.40.1-2.1.x86_64
+libffi8-3.4.6-1.1.x86_64
+libfido2-1-1.14.0-1.4.x86_64
+libfreebl3-3.100-2.1.x86_64
+libgcc_s1-14.1.0+git10173-1.1.x86_64
+libgcrypt20-1.10.3-3.3.x86_64
+libgio-2_0-0-2.80.2-1.1.x86_64
+libglib-2_0-0-2.80.2-1.1.x86_64
+libgmodule-2_0-0-2.80.2-1.1.x86_64
+libgmp10-6.3.0-3.2.x86_64
+libgnutls30-3.8.5-1.1.x86_64
+libgobject-2_0-0-2.80.2-1.1.x86_64
+libgpg-error0-1.49-1.1.x86_64
+libgpgme11-1.23.2-4.2.x86_64
+libgudev-1_0-0-238-1.4.x86_64
+libhd23-23.2-1.5.x86_64
+libhidapi-hidraw0-0.14.0-1.3.x86_64
+libhogweed6-3.9.1-2.5.x86_64
+libidn2-0-2.3.7-1.2.x86_64
+libjitterentropy3-3.4.1-4.2.x86_64
+libjq1-1.7.1-1.3.x86_64
+libjson-c5-0.17-2.3.x86_64
+libkeyutils1-1.6.3-7.2.x86_64
+libkmod2-32-1.1.x86_64
+libksba8-1.6.6-1.1.x86_64
+liblastlog2-2-2.40.1-2.1.x86_64
+libldap2-2.6.7-1.1.x86_64
+liblldp_clif1-1.1+106.74c0600a8692-1.3.x86_64
+liblua5_4-5-5.4.6-3.3.x86_64
+liblz4-1-1.9.4-2.8.x86_64
+liblzma5-5.6.1.revertto5.4-3.1.x86_64
+liblzo2-2-2.10-8.6.x86_64
+libmagic1-5.45-2.2.x86_64
+libmbim-glib4-1.28.4-2.3.x86_64
+libmm-glib0-1.20.6-2.3.x86_64
+libmnl0-1.0.5-1.7.x86_64
+libmount1-2.40.1-2.1.x86_64
+libmpfr6-4.2.1-1.4.x86_64
+libncurses6-6.5.20240427-36.1.x86_64
+libndp0-1.8-1.10.x86_64
+libnettle8-3.9.1-2.5.x86_64
+libnghttp2-14-1.61.0-1.1.x86_64
+libnl-config-3.9.0-1.3.noarch
+libnl3-200-3.9.0-1.3.x86_64
+libnm0-1.44.4-2.1.x86_64
+libnpth0-1.7-1.1.x86_64
+libnss_usrfiles2-2.27.1-1.2.x86_64
+libnuma1-2.0.18.0.g3871b1c-2.2.x86_64
+libonig5-6.9.9-1.3.x86_64
+libopenssl3-3.1.4-8.1.x86_64
+libp11-kit0-0.25.3-1.3.x86_64
+libpciaccess0-0.18.1-1.2.x86_64
+libpcre2-8-0-10.43-3.1.x86_64
+libpkgconf4-2.1.1-1.2.x86_64
+libpolkit-agent-1-0-123-2.3.x86_64
+libpolkit-gobject-1-0-123-2.3.x86_64
+libpopt0-1.19-1.8.x86_64
+libproc2-0-4.0.4-5.3.x86_64
+libprotobuf-lite25_3_0-25.3-11.2.x86_64
+libproxy1-0.5.6-1.1.x86_64
+libpsl5-0.21.5-1.2.x86_64
+libpxbackend-1_0-0.5.6-1.1.x86_64
+libqmi-glib5-1.34.0-2.3.x86_64
+libqrtr-glib0-1.2.2-1.8.x86_64
+libreadline8-8.2.10-1.3.x86_64
+libsasl2-3-2.1.28-8.1.x86_64
+libseccomp2-2.5.5-1.3.x86_64
+libselinux1-3.6-1.3.x86_64
+libsemanage-conf-3.6-1.4.x86_64
+libsemanage2-3.6-1.4.x86_64
+libsepol2-3.6-1.3.x86_64
+libsigc-2_0-0-2.12.1-2.3.x86_64
+libsmartcols1-2.40.1-2.1.x86_64
+libsnapper7-0.11.0-1.1.x86_64
+libsnappy1-1.1.10-2.2.x86_64
+libsoftokn3-3.100-2.1.x86_64
+libsolv-tools-base-0.7.29-1.1.x86_64
+libsqlite3-0-3.45.3-1.1.x86_64
+libssh-config-0.10.6-2.1.x86_64
+libssh4-0.10.6-2.1.x86_64
+libstdc++6-14.1.0+git10173-1.1.x86_64
+libsubid4-4.15.1-1.2.x86_64
+libsystemd0-255.6-2.1.x86_64
+libtasn1-6-4.19.0-1.7.x86_64
+libtirpc-netconfig-1.3.4-1.3.x86_64
+libtirpc3-1.3.4-1.3.x86_64
+libtss2-esys0-4.1.0-1.1.x86_64
+libtss2-mu0-4.1.0-1.1.x86_64
+libtss2-rc0-4.1.0-1.1.x86_64
+libtss2-sys1-4.1.0-1.1.x86_64
+libtss2-tcti-device0-4.1.0-1.1.x86_64
+libtukit4-4.6.8-1.1.x86_64
+libudev1-255.6-2.1.x86_64
+libunistring5-1.2-1.1.x86_64
+liburing2-2.5-1.1.x86_64
+libusb-1_0-0-1.0.27-1.2.x86_64
+libuuid1-2.40.1-2.1.x86_64
+libverto1-0.3.2-3.3.x86_64
+libwrap0-7.6-896.2.x86_64
+libwtmpdb0-0.12.0+git.20240508-1.1.x86_64
+libx86emu3-3.5-2.1.x86_64
+libxml2-2-2.12.7-1.1.x86_64
+libxtables12-1.8.10-2.3.x86_64
+libxxhash0-0.8.2-3.1.x86_64
+libyajl2-2.1.0-8.5.x86_64
+libyaml-cpp0_8-0.8.0-1.3.x86_64
+libz-ng-compat1-2.1.6-1.3.x86_64
+libzck1-1.4.0-2.1.x86_64
+libzstd1-1.5.6-1.1.x86_64
+libzypp-17.34.0-1.1.x86_64
+login_defs-4.15.1-1.2.noarch
+logrotate-3.21.0-1.6.x86_64
+lsof-4.99.3-2.1.x86_64
+makedumpfile-1.7.5-1.1.x86_64
+mandoc-bin-1.14.6-6.1.x86_64
+microos-tools-2.21+git12-1.2.x86_64
+mozilla-nspr-4.35-1.7.x86_64
+mozilla-nss-3.100-2.1.x86_64
+mozilla-nss-certs-3.100-2.1.x86_64
+ncurses-utils-6.5.20240427-36.1.x86_64
+netcfg-11.6-13.3.noarch
+open-lldp-1.1+106.74c0600a8692-1.3.x86_64
+openSUSE-build-key-1.0-53.1.x86_64
+openssh-9.6p1-8.1.x86_64
+openssh-clients-9.6p1-8.1.x86_64
+openssh-common-9.6p1-8.1.x86_64
+openssh-server-9.6p1-8.1.x86_64
+p11-kit-0.25.3-1.3.x86_64
+p11-kit-tools-0.25.3-1.3.x86_64
+pam-1.6.1-1.1.x86_64
+pam-config-2.11+git.20240411-1.1.x86_64
+patterns-base-minimal_base-20200505-50.1.x86_64
+patterns-microos-base-5.0-87.3.x86_64
+patterns-microos-base-zypper-5.0-87.3.x86_64
+patterns-microos-defaults-5.0-87.3.x86_64
+patterns-microos-hardware-5.0-87.3.x86_64
+patterns-microos-selinux-5.0-87.3.x86_64
+pcr-oracle-0.5.4-6.2.x86_64
+perl-Bootloader-1.13-1.2.x86_64
+perl-base-5.38.2-3.1.x86_64
+permctl-1699_20240522-1.1.x86_64
+permissions-1699_20240522-1.1.x86_64
+permissions-config-1699_20240522-1.1.noarch
+pigz-2.8-2.3.x86_64
+pinentry-1.2.1-3.5.x86_64
+pkgconf-2.1.1-1.2.x86_64
+pkgconf-m4-2.1.1-1.2.noarch
+pkgconf-pkg-config-2.1.1-1.2.x86_64
+policycoreutils-3.6-1.6.x86_64
+polkit-123-2.3.x86_64
+procps4-4.0.4-5.3.x86_64
+psmisc-23.6-5.2.x86_64
+qemu-guest-agent-9.0.0-1.1.x86_64
+read-only-root-fs-1.0+git20240228.d85232a-1.2.noarch
+rebootmgr-2.4+git20240524.30e5383-1.1.x86_64
+rpm-4.19.1.1-3.2.x86_64
+rpm-config-SUSE-20240214-1.2.noarch
+rsync-3.3.0-1.1.x86_64
+sdbootutil-1+git20240514.56dc89c-1.1.x86_64
+sdbootutil-rpm-scriptlets-1+git20240514.56dc89c-1.1.x86_64
+sdbootutil-snapper-1+git20240514.56dc89c-1.1.x86_64
+sed-4.9-2.6.x86_64
+selinux-policy-20240321-1.2.noarch
+selinux-policy-targeted-20240321-1.2.noarch
+selinux-tools-3.6-1.3.x86_64
+shadow-4.15.1-1.2.x86_64
+shared-mime-info-2.4-2.2.x86_64
+shim-15.4-7.2.x86_64
+snapper-0.11.0-1.1.x86_64
+sudo-1.9.15p5-1.3.x86_64
+suse-module-tools-16.0.44-1.1.x86_64
+system-group-audit-3.1.1-1.4.x86_64
+system-group-hardware-20170617-25.4.noarch
+system-group-kvm-20170617-25.4.noarch
+system-user-lp-20170617-25.4.noarch
+system-user-nobody-20170617-25.4.noarch
+system-user-root-20190513-2.16.noarch
+systemd-255.6-2.1.x86_64
+systemd-boot-255.6-2.1.x86_64
+systemd-coredump-255.6-2.1.x86_64
+systemd-default-settings-0.10-1.1.noarch
+systemd-default-settings-branding-openSUSE-0.10-1.1.noarch
+systemd-experimental-255.6-2.1.x86_64
+systemd-presets-branding-MicroOS-20230214-3.1.noarch
+systemd-presets-common-SUSE-15-32.2.noarch
+systemd-rpm-macros-24-1.6.noarch
+sysuser-shadow-3.2-2.3.noarch
+tar-1.35-2.2.x86_64
+terminfo-base-6.5.20240427-36.1.x86_64
+thin-provisioning-tools-1.0.12-3.1.x86_64
+timezone-2024a-3.2.x86_64
+transactional-update-4.6.8-1.1.x86_64
+transactional-update-zypp-config-4.6.8-1.1.noarch
+tukit-4.6.8-1.1.x86_64
+ucode-amd-20240519-1.1.noarch
+ucode-intel-20240514-1.1.x86_64
+udev-255.6-2.1.x86_64
+util-linux-2.40.1-2.1.x86_64
+util-linux-systemd-2.40.1-2.1.x86_64
+vim-data-common-9.1.0413-1.1.noarch
+vim-small-9.1.0413-1.1.x86_64
+wpa_supplicant-2.10-6.2.x86_64
+wtmpdb-0.12.0+git.20240508-1.1.x86_64
+xen-libs-4.18.2_04-1.1.x86_64
+xz-5.6.1.revertto5.4-3.1.x86_64
+yast2-logs-5.0.8-1.1.x86_64
+zstd-1.5.6-1.1.x86_64
+zypp-boot-plugin-0.0.8-1.2.x86_64
+zypper-1.14.73-1.2.x86_64
+zypper-needs-restarting-1.14.73-1.2.noarch
++ journalctl -a --no-full -m -o short-precise
++ tar cjf /tmp/logs.tar.bz2 --warning=no-file-changed /var/log
+tar: Removing leading `/' from member names
+/bin/sh: line 1: bzip2: command not found
+tar: /tmp/logs.tar.bz2: Wrote only 4096 of 10240 bytes
+tar: Child returned status 127
+tar: Error is not recoverable: exiting now
++ true
