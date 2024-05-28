@@ -1,0 +1,2301 @@
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0001 "UEFI QEMU QEMU CD-ROM " from PciRoot(0x0)/Pci(0x8,0x0)/Scsi(0x0,0x0)
+BdsDxe: starting Boot0001 "UEFI QEMU QEMU CD-ROM " from PciRoot(0x0)/Pci(0x8,0x0)/Scsi(0x0,0x0)
+Please press 't' to show the boot menu on this console
+EFI stub: UEFI Secure Boot is enabled.
+[    0.000000][    T0] Linux version 6.9.1-1-default (geeko@buildhost) (gcc (SUSE Linux) 13.2.1 20240509 [revision b7a2697733d19a093cbdd0e200ffce069a4bc812], GNU ld (GNU Binutils; openSUSE Tumbleweed) 2.42.0.20240130-3) #1 SMP PREEMPT_DYNAMIC Fri May 17 11:59:46 UTC 2024 (0c0b0b5)
+[    0.000000][    T0] Command line: BOOT_IMAGE=/boot/x86_64/loader/linux splash=silent console=ttyS0 console=tty reboot_timeout=0
+[    0.000000][    T0] BIOS-provided physical RAM map:
+[    0.000000][    T0] BIOS-e820: [mem 0x0000000000000000-0x000000000009ffff] usable
+[    0.000000][    T0] BIOS-e820: [mem 0x0000000000100000-0x00000000007fffff] usable
+[    0.000000][    T0] BIOS-e820: [mem 0x0000000000800000-0x0000000000807fff] ACPI NVS
+[    0.000000][    T0] BIOS-e820: [mem 0x0000000000808000-0x000000000080afff] usable
+[    0.000000][    T0] BIOS-e820: [mem 0x000000000080b000-0x000000000080bfff] ACPI NVS
+[    0.000000][    T0] BIOS-e820: [mem 0x000000000080c000-0x000000000080ffff] usable
+[    0.000000][    T0] BIOS-e820: [mem 0x0000000000810000-0x00000000008fffff] ACPI NVS
+[    0.000000][    T0] BIOS-e820: [mem 0x0000000000900000-0x000000003f8eefff] usable
+[    0.000000][    T0] BIOS-e820: [mem 0x000000003f8ef000-0x000000003fb6efff] reserved
+[    0.000000][    T0] BIOS-e820: [mem 0x000000003fb6f000-0x000000003fb7efff] ACPI data
+[    0.000000][    T0] BIOS-e820: [mem 0x000000003fb7f000-0x000000003fbfefff] ACPI NVS
+[    0.000000][    T0] BIOS-e820: [mem 0x000000003fbff000-0x000000003ff57fff] usable
+[    0.000000][    T0] BIOS-e820: [mem 0x000000003ff58000-0x000000003ff77fff] reserved
+[    0.000000][    T0] BIOS-e820: [mem 0x000000003ff78000-0x000000003fffffff] ACPI NVS
+[    0.000000][    T0] BIOS-e820: [mem 0x00000000ffe00000-0x00000000ffffffff] reserved
+[    0.000000][    T0] NX (Execute Disable) protection: active
+[    0.000000][    T0] APIC: Static calls initialized
+[    0.000000][    T0] extended physical RAM map:
+[    0.000000][    T0] reserve setup_data: [mem 0x0000000000000000-0x000000000009ffff] usable
+[    0.000000][    T0] reserve setup_data: [mem 0x0000000000100000-0x00000000007fffff] usable
+[    0.000000][    T0] reserve setup_data: [mem 0x0000000000800000-0x0000000000807fff] ACPI NVS
+[    0.000000][    T0] reserve setup_data: [mem 0x0000000000808000-0x000000000080afff] usable
+[    0.000000][    T0] reserve setup_data: [mem 0x000000000080b000-0x000000000080bfff] ACPI NVS
+[    0.000000][    T0] reserve setup_data: [mem 0x000000000080c000-0x000000000080ffff] usable
+[    0.000000][    T0] reserve setup_data: [mem 0x0000000000810000-0x00000000008fffff] ACPI NVS
+[    0.000000][    T0] reserve setup_data: [mem 0x0000000000900000-0x000000003e09f017] usable
+[    0.000000][    T0] reserve setup_data: [mem 0x000000003e09f018-0x000000003e0c7057] usable
+[    0.000000][    T0] reserve setup_data: [mem 0x000000003e0c7058-0x000000003e0c8017] usable
+[    0.000000][    T0] reserve setup_data: [mem 0x000000003e0c8018-0x000000003e0d1c57] usable
+[    0.000000][    T0] reserve setup_data: [mem 0x000000003e0d1c58-0x000000003f8eefff] usable
+[    0.000000][    T0] reserve setup_data: [mem 0x000000003f8ef000-0x000000003fb6efff] reserved
+[    0.000000][    T0] reserve setup_data: [mem 0x000000003fb6f000-0x000000003fb7efff] ACPI data
+[    0.000000][    T0] reserve setup_data: [mem 0x000000003fb7f000-0x000000003fbfefff] ACPI NVS
+[    0.000000][    T0] reserve setup_data: [mem 0x000000003fbff000-0x000000003ff57fff] usable
+[    0.000000][    T0] reserve setup_data: [mem 0x000000003ff58000-0x000000003ff77fff] reserved
+[    0.000000][    T0] reserve setup_data: [mem 0x000000003ff78000-0x000000003fffffff] ACPI NVS
+[    0.000000][    T0] reserve setup_data: [mem 0x00000000ffe00000-0x00000000ffffffff] reserved
+[    0.000000][    T0] efi: EFI v2.7 by EDK II
+[    0.000000][    T0] efi: SMBIOS=0x3f909000 ACPI=0x3fb7e000 ACPI 2.0=0x3fb7e014 MEMATTR=0x3e107418 MOKvar=0x3e0f5000 RNG=0x3fb75018 
+[    0.000000][    T0] random: crng init done
+[    0.000000][    T0] efi: Remove mem106: MMIO range=[0xffe00000-0xffffffff] (2MB) from e820 map
+[    0.000000][    T0] secureboot: Secure boot enabled
+[    0.000000][    T0] Kernel is locked down from EFI Secure Boot mode; see man kernel_lockdown.7
+[    0.000000][    T0] SMBIOS 2.8 present.
+[    0.000000][    T0] DMI: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 0.0.0 02/06/2015
+[    0.000000][    T0] Hypervisor detected: KVM
+[    0.000000][    T0] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000000][    T0] kvm-clock: using sched offset of 48416505623 cycles
+[    0.000002][    T0] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000004][    T0] tsc: Detected 2799.998 MHz processor
+[    0.000140][    T0] last_pfn = 0x3ff58 max_arch_pfn = 0x400000000
+[    0.000191][    T0] MTRR map: 4 entries (2 fixed + 2 variable; max 18), built from 8 variable MTRRs
+[    0.000194][    T0] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.004035][    T0] Using GB pages for direct mapping
+[    0.004303][    T0] secureboot: Secure boot enabled
+[    0.004304][    T0] RAMDISK: [mem 0x26474000-0x3529dfff]
+[    0.004305][    T0] ACPI: Early table checksum verification disabled
+[    0.004308][    T0] ACPI: RSDP 0x000000003FB7E014 000024 (v02 BOCHS )
+[    0.004311][    T0] ACPI: XSDT 0x000000003FB7D0E8 00004C (v01 BOCHS  BXPC     00000001      01000013)
+[    0.004315][    T0] ACPI: FACP 0x000000003FB7A000 000074 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.004319][    T0] ACPI: DSDT 0x000000003FB7B000 001761 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.004321][    T0] ACPI: FACS 0x000000003FBDD000 000040
+[    0.004323][    T0] ACPI: APIC 0x000000003FB79000 000078 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.004325][    T0] ACPI: HPET 0x000000003FB78000 000038 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.004327][    T0] ACPI: WAET 0x000000003FB77000 000028 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.004329][    T0] ACPI: BGRT 0x000000003FB76000 000038 (v01 INTEL  EDK2     00000002      01000013)
+[    0.004330][    T0] ACPI: Reserving FACP table memory at [mem 0x3fb7a000-0x3fb7a073]
+[    0.004331][    T0] ACPI: Reserving DSDT table memory at [mem 0x3fb7b000-0x3fb7c760]
+[    0.004332][    T0] ACPI: Reserving FACS table memory at [mem 0x3fbdd000-0x3fbdd03f]
+[    0.004333][    T0] ACPI: Reserving APIC table memory at [mem 0x3fb79000-0x3fb79077]
+[    0.004333][    T0] ACPI: Reserving HPET table memory at [mem 0x3fb78000-0x3fb78037]
+[    0.004334][    T0] ACPI: Reserving WAET table memory at [mem 0x3fb77000-0x3fb77027]
+[    0.004335][    T0] ACPI: Reserving BGRT table memory at [mem 0x3fb76000-0x3fb76037]
+[    0.004596][    T0] No NUMA configuration found
+[    0.004596][    T0] Faking a node at [mem 0x0000000000000000-0x000000003ff57fff]
+[    0.004604][    T0] NODE_DATA(0) allocated [mem 0x3fe87000-0x3feb1fff]
+[    0.004802][    T0] Zone ranges:
+[    0.004803][    T0]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.004804][    T0]   DMA32    [mem 0x0000000001000000-0x000000003ff57fff]
+[    0.004805][    T0]   Normal   empty
+[    0.004806][    T0]   Device   empty
+[    0.004807][    T0] Movable zone start for each node
+[    0.004809][    T0] Early memory node ranges
+[    0.004809][    T0]   node   0: [mem 0x0000000000001000-0x000000000009ffff]
+[    0.004810][    T0]   node   0: [mem 0x0000000000100000-0x00000000007fffff]
+[    0.004811][    T0]   node   0: [mem 0x0000000000808000-0x000000000080afff]
+[    0.004812][    T0]   node   0: [mem 0x000000000080c000-0x000000000080ffff]
+[    0.004812][    T0]   node   0: [mem 0x0000000000900000-0x000000003f8eefff]
+[    0.004813][    T0]   node   0: [mem 0x000000003fbff000-0x000000003ff57fff]
+[    0.004814][    T0] Initmem setup node 0 [mem 0x0000000000001000-0x000000003ff57fff]
+[    0.004958][    T0] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.004972][    T0] On node 0, zone DMA: 96 pages in unavailable ranges
+[    0.004973][    T0] On node 0, zone DMA: 8 pages in unavailable ranges
+[    0.004974][    T0] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.004988][    T0] On node 0, zone DMA: 240 pages in unavailable ranges
+[    0.005594][    T0] On node 0, zone DMA32: 784 pages in unavailable ranges
+[    0.005597][    T0] On node 0, zone DMA32: 168 pages in unavailable ranges
+[    0.006071][    T0] ACPI: PM-Timer IO Port: 0xb008
+[    0.006079][    T0] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+[    0.006107][    T0] IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+[    0.006110][    T0] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.006111][    T0] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+[    0.006112][    T0] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.006113][    T0] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+[    0.006114][    T0] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+[    0.006117][    T0] ACPI: Using ACPI (MADT) for SMP configuration information
+[    0.006118][    T0] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.006132][    T0] TSC deadline timer available
+[    0.006136][    T0] CPU topo: Max. logical packages:   1
+[    0.006137][    T0] CPU topo: Max. logical dies:       1
+[    0.006138][    T0] CPU topo: Max. dies per package:   1
+[    0.006142][    T0] CPU topo: Max. threads per core:   1
+[    0.006142][    T0] CPU topo: Num. cores per package:     1
+[    0.006143][    T0] CPU topo: Num. threads per package:   1
+[    0.006143][    T0] CPU topo: Allowing 1 present CPUs plus 0 hotplug CPUs
+[    0.006157][    T0] kvm-guest: APIC: eoi() replaced with kvm_guest_apic_eoi_write()
+[    0.006182][    T0] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.006183][    T0] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000fffff]
+[    0.006185][    T0] PM: hibernation: Registered nosave memory: [mem 0x00800000-0x00807fff]
+[    0.006186][    T0] PM: hibernation: Registered nosave memory: [mem 0x0080b000-0x0080bfff]
+[    0.006187][    T0] PM: hibernation: Registered nosave memory: [mem 0x00810000-0x008fffff]
+[    0.006188][    T0] PM: hibernation: Registered nosave memory: [mem 0x3e09f000-0x3e09ffff]
+[    0.006190][    T0] PM: hibernation: Registered nosave memory: [mem 0x3e0c7000-0x3e0c7fff]
+[    0.006190][    T0] PM: hibernation: Registered nosave memory: [mem 0x3e0c8000-0x3e0c8fff]
+[    0.006191][    T0] PM: hibernation: Registered nosave memory: [mem 0x3e0d1000-0x3e0d1fff]
+[    0.006193][    T0] PM: hibernation: Registered nosave memory: [mem 0x3e0f5000-0x3e0f5fff]
+[    0.006194][    T0] PM: hibernation: Registered nosave memory: [mem 0x3e0fe000-0x3e106fff]
+[    0.006195][    T0] PM: hibernation: Registered nosave memory: [mem 0x3f8ef000-0x3fb6efff]
+[    0.006196][    T0] PM: hibernation: Registered nosave memory: [mem 0x3fb6f000-0x3fb7efff]
+[    0.006196][    T0] PM: hibernation: Registered nosave memory: [mem 0x3fb7f000-0x3fbfefff]
+[    0.006198][    T0] [mem 0x40000000-0xffffffff] available for PCI devices
+[    0.006199][    T0] Booting paravirtualized kernel on KVM
+[    0.006200][    T0] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 6370452778343963 ns
+[    0.010569][    T0] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:1 nr_cpu_ids:1 nr_node_ids:1
+[    0.010682][    T0] percpu: Embedded 72 pages/cpu s258048 r8192 d28672 u2097152
+[    0.010722][    T0] kvm-guest: PV spinlocks disabled, single CPU
+[    0.010723][    T0] Kernel command line: BOOT_IMAGE=/boot/x86_64/loader/linux splash=silent console=ttyS0 console=tty reboot_timeout=0
+[    0.010783][    T0] Unknown kernel command line parameters "BOOT_IMAGE=/boot/x86_64/loader/linux splash=silent reboot_timeout=0", will be passed to user space.
+[    0.010831][    T0] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.010849][    T0] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.010870][    T0] Fallback order for Node 0: 0 
+[    0.010872][    T0] Built 1 zonelists, mobility grouping on.  Total pages: 254806
+[    0.010873][    T0] Policy zone: DMA32
+[    0.010874][    T0] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.012538][    T0] Memory: 200404K/1043384K available (16384K kernel code, 3000K rwdata, 13020K rodata, 4224K init, 4384K bss, 343480K reserved, 0K cma-reserved)
+[    0.012685][    T0] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.012702][    T0] ftrace: allocating 47505 entries in 186 pages
+[    0.021883][    T0] ftrace: allocated 186 pages with 5 groups
+[    0.022567][    T0] Dynamic Preempt: voluntary
+[    0.022790][    T0] rcu: Preemptible hierarchical RCU implementation.
+[    0.022791][    T0] rcu: 	RCU event tracing is enabled.
+[    0.022792][    T0] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=1.
+[    0.022793][    T0] 	Trampoline variant of Tasks RCU enabled.
+[    0.022794][    T0] 	Rude variant of Tasks RCU enabled.
+[    0.022794][    T0] 	Tracing variant of Tasks RCU enabled.
+[    0.022795][    T0] rcu: RCU calculated value of scheduler-enlistment delay is 30 jiffies.
+[    0.022796][    T0] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.022800][    T0] RCU Tasks: Setting shift to 0 and lim to 1 rcu_task_cb_adjust=1.
+[    0.022801][    T0] RCU Tasks Rude: Setting shift to 0 and lim to 1 rcu_task_cb_adjust=1.
+[    0.022802][    T0] RCU Tasks Trace: Setting shift to 0 and lim to 1 rcu_task_cb_adjust=1.
+[    0.026381][    T0] NR_IRQS: 524544, nr_irqs: 256, preallocated irqs: 16
+[    0.026572][    T0] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.026620][    T0] Console: colour dummy device 80x25
+[    0.026622][    T0] printk: legacy console [tty0] enabled
+[    0.026937][    T0] printk: legacy console [ttyS0] enabled
+[    0.204753][    T0] ACPI: Core revision 20230628
+[    0.205559][    T0] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604467 ns
+[    0.207053][    T0] APIC: Switch to symmetric I/O mode setup
+[    0.208131][    T0] x2apic enabled
+[    0.208957][    T0] APIC: Switched APIC routing to: physical x2apic
+[    0.211050][    T0] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.212012][    T0] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x285c3ee517e, max_idle_ns: 440795257231 ns
+[    0.213553][    T0] Calibrating delay loop (skipped) preset value.. 5602.32 BogoMIPS (lpj=9333326)
+[    0.217005][    T0] x86/cpu: User Mode Instruction Prevention (UMIP) activated
+[    0.218102][    T0] Last level iTLB entries: 4KB 512, 2MB 255, 4MB 127
+[    0.219000][    T0] Last level dTLB entries: 4KB 512, 2MB 255, 4MB 127, 1GB 0
+[    0.220225][    T0] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.221501][    T0] Spectre V2 : Mitigation: Retpolines
+[    0.222221][    T0] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.223551][    T0] Spectre V2 : Spectre v2 / SpectreRSB : Filling RSB on VMEXIT
+[    0.224569][    T0] Spectre V2 : Enabling Restricted Speculation for firmware calls
+[    0.225628][    T0] Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+[    0.226885][    T0] Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl
+[    0.228157][    T0] Speculative Return Stack Overflow: IBPB-extending microcode not applied!
+[    0.229324][    T0] Speculative Return Stack Overflow: WARNING: See https://kernel.org/doc/html/latest/admin-guide/hw-vuln/srso.html for mitigation options.
+[    0.229325][    T0] Speculative Return Stack Overflow: Vulnerable: Safe RET, no microcode
+[    0.231370][    T0] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.233551][    T0] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.234524][    T0] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.235492][    T0] x86/fpu: Supporting XSAVE feature 0x200: 'Protection Keys User registers'
+[    0.236885][    T0] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.237829][    T0] x86/fpu: xstate_offset[9]:  832, xstate_sizes[9]:    8
+[    0.238756][    T0] x86/fpu: Enabled xstate features 0x207, context size is 840 bytes, using 'compacted' format.
+[    0.265816][    T0] Freeing SMP alternatives memory: 40K
+[    0.266566][    T0] pid_max: default: 32768 minimum: 301
+[    0.268345][    T0] LSM: initializing lsm=lockdown,capability,landlock,yama,apparmor,tomoyo,bpf,ima,evm
+[    0.269657][    T0] landlock: Up and running.
+[    0.270218][    T0] Yama: becoming mindful.
+[    0.270806][    T0] AppArmor: AppArmor initialized
+[    0.271459][    T0] TOMOYO Linux initialized
+[    0.272039][    T0] LSM support for eBPF active
+[    0.272683][    T0] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.273553][    T0] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.274934][    T1] smpboot: CPU0: AMD EPYC 7543 32-Core Processor (family: 0x19, model: 0x1, stepping: 0x1)
+[    0.276433][    T1] Performance Events: Fam17h+ core perfctr, AMD PMU driver.
+[    0.276883][    T1] ... version:                0
+[    0.276883][    T1] ... bit width:              48
+[    0.276888][    T1] ... generic registers:      6
+[    0.277522][    T1] ... value mask:             0000ffffffffffff
+[    0.278327][    T1] ... max period:             00007fffffffffff
+[    0.279136][    T1] ... fixed-purpose events:   0
+[    0.279770][    T1] ... event mask:             000000000000003f
+[    0.280308][    T1] signal: max sigframe size: 3376
+[    0.280998][    T1] rcu: Hierarchical SRCU implementation.
+[    0.281743][    T1] rcu: 	Max phase no-delay instances is 1000.
+[    0.284981][    T1] smp: Bringing up secondary CPUs ...
+[    0.285706][    T1] smp: Brought up 1 node, 1 CPU
+[    0.286341][    T1] smpboot: Total of 1 processors activated (5602.32 BogoMIPS)
+[    0.288895][   T22] node 0 deferred pages initialised in 0ms
+[    0.289760][    T1] devtmpfs: initialized
+[    0.290259][    T1] x86/mm: Memory block size: 128MB
+[    0.291311][    T1] ACPI: PM: Registering ACPI NVS region [mem 0x00800000-0x00807fff] (32768 bytes)
+[    0.292519][    T1] ACPI: PM: Registering ACPI NVS region [mem 0x0080b000-0x0080bfff] (4096 bytes)
+[    0.293560][    T1] ACPI: PM: Registering ACPI NVS region [mem 0x00810000-0x008fffff] (983040 bytes)
+[    0.294800][    T1] ACPI: PM: Registering ACPI NVS region [mem 0x3fb7f000-0x3fbfefff] (524288 bytes)
+[    0.296024][    T1] ACPI: PM: Registering ACPI NVS region [mem 0x3ff78000-0x3fffffff] (557056 bytes)
+[    0.296953][    T1] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 6370867519511994 ns
+[    0.298353][    T1] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.299402][    T1] pinctrl core: initialized pinctrl subsystem
+[    0.300350][    T1] PM: RTC time: 07:27:16, date: 2024-05-28
+[    0.301427][    T1] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.302459][    T1] DMA: preallocated 128 KiB GFP_KERNEL pool for atomic allocations
+[    0.303497][    T1] DMA: preallocated 128 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.303601][    T1] DMA: preallocated 128 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.304769][    T1] audit: initializing netlink subsys (disabled)
+[    0.305649][   T26] audit: type=2000 audit(1716881236.473:1): state=initialized audit_enabled=0 res=1
+[    0.306997][    T1] thermal_sys: Registered thermal governor 'fair_share'
+[    0.306999][    T1] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.307949][    T1] thermal_sys: Registered thermal governor 'step_wise'
+[    0.308851][    T1] thermal_sys: Registered thermal governor 'user_space'
+[    0.309761][    T1] cpuidle: using governor ladder
+[    0.310868][    T1] cpuidle: using governor menu
+[    0.312120][    T1] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.313258][    T1] PCI: Using configuration type 1 for base access
+[    0.313556][    T1] PCI: Using configuration type 1 for extended access
+[    0.314590][    T1] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+[    0.340402][    T1] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.341477][    T1] HugeTLB: 16380 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.342462][    T1] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.343473][    T1] HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.345233][    T1] Demotion targets for Node 0: null
+[    0.346221][    T1] ACPI: Added _OSI(Module Device)
+[    0.346892][    T1] ACPI: Added _OSI(Processor Device)
+[    0.347630][    T1] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.348374][    T1] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.350591][    T1] ACPI: 1 ACPI AML tables successfully acquired and loaded
+[    0.352035][    T1] ACPI: _OSC evaluation for CPUs failed, trying _PDC
+[    0.353115][    T1] ACPI: Interpreter enabled
+[    0.353569][    T1] ACPI: PM: (supports S0 S3 S4 S5)
+[    0.354239][    T1] ACPI: Using IOAPIC for interrupt routing
+[    0.355180][    T1] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.356489][    T1] PCI: Using E820 reservations for host bridge windows
+[    0.357043][    T1] ACPI: Enabled 2 GPEs in block 00 to 0F
+[    0.361412][    T1] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.362356][    T1] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    0.363996][    T1] acpiphp: Slot [3] registered
+[    0.364647][    T1] acpiphp: Slot [4] registered
+[    0.365291][    T1] acpiphp: Slot [5] registered
+[    0.365940][    T1] acpiphp: Slot [6] registered
+[    0.366582][    T1] acpiphp: Slot [7] registered
+[    0.366907][    T1] acpiphp: Slot [8] registered
+[    0.367550][    T1] acpiphp: Slot [9] registered
+[    0.368192][    T1] acpiphp: Slot [10] registered
+[    0.368896][    T1] acpiphp: Slot [11] registered
+[    0.369569][    T1] acpiphp: Slot [12] registered
+[    0.370230][    T1] acpiphp: Slot [13] registered
+[    0.370886][    T1] acpiphp: Slot [14] registered
+[    0.371538][    T1] acpiphp: Slot [15] registered
+[    0.372190][    T1] acpiphp: Slot [16] registered
+[    0.372842][    T1] acpiphp: Slot [17] registered
+[    0.373500][    T1] acpiphp: Slot [18] registered
+[    0.373573][    T1] acpiphp: Slot [19] registered
+[    0.374227][    T1] acpiphp: Slot [20] registered
+[    0.374880][    T1] acpiphp: Slot [21] registered
+[    0.375532][    T1] acpiphp: Slot [22] registered
+[    0.376184][    T1] acpiphp: Slot [23] registered
+[    0.376847][    T1] acpiphp: Slot [24] registered
+[    0.376909][    T1] acpiphp: Slot [25] registered
+[    0.377563][    T1] acpiphp: Slot [26] registered
+[    0.378264][    T1] acpiphp: Slot [27] registered
+[    0.378917][    T1] acpiphp: Slot [28] registered
+[    0.379569][    T1] acpiphp: Slot [29] registered
+[    0.380232][    T1] acpiphp: Slot [30] registered
+[    0.380887][    T1] acpiphp: Slot [31] registered
+[    0.381534][    T1] PCI host bridge to bus 0000:00
+[    0.382180][    T1] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.383183][    T1] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.383554][    T1] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.384648][    T1] pci_bus 0000:00: root bus resource [mem 0x40000000-0xfebfffff window]
+[    0.385741][    T1] pci_bus 0000:00: root bus resource [mem 0x800000000-0x87fffffff window]
+[    0.386855][    T1] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.387075][    T1] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000 conventional PCI endpoint
+[    0.389414][    T1] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100 conventional PCI endpoint
+[    0.390798][    T1] pci 0000:00:01.1: [8086:7010] type 00 class 0x010180 conventional PCI endpoint
+[    0.393274][    T1] pci 0000:00:01.1: BAR 4 [io  0xc140-0xc14f]
+[    0.394031][    T1] pci 0000:00:01.1: BAR 0 [io  0x01f0-0x01f7]: legacy IDE quirk
+[    0.395039][    T1] pci 0000:00:01.1: BAR 1 [io  0x03f6]: legacy IDE quirk
+[    0.395961][    T1] pci 0000:00:01.1: BAR 2 [io  0x0170-0x0177]: legacy IDE quirk
+[    0.396888][    T1] pci 0000:00:01.1: BAR 3 [io  0x0376]: legacy IDE quirk
+[    0.398009][    T1] pci 0000:00:01.3: [8086:7113] type 00 class 0x068000 conventional PCI endpoint
+[    0.399633][    T1] pci 0000:00:01.3: quirk: [io  0xb000-0xb03f] claimed by PIIX4 ACPI
+[    0.400229][    T1] pci 0000:00:01.3: quirk: [io  0xb100-0xb10f] claimed by PIIX4 SMB
+[    0.401484][    T1] pci 0000:00:02.0: [1234:1111] type 00 class 0x030000 conventional PCI endpoint
+[    0.406895][    T1] pci 0000:00:02.0: BAR 0 [mem 0x80000000-0x80ffffff pref]
+[    0.411814][    T1] pci 0000:00:02.0: BAR 2 [mem 0x81048000-0x81048fff]
+[    0.415369][    T1] pci 0000:00:02.0: ROM [mem 0xffff0000-0xffffffff pref]
+[    0.416361][    T1] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.417728][    T1] pci 0000:00:03.0: [8086:2668] type 00 class 0x040300 conventional PCI endpoint
+[    0.419222][    T1] pci 0000:00:03.0: BAR 0 [mem 0x81040000-0x81043fff]
+[    0.422706][    T1] pci 0000:00:04.0: [1af4:1000] type 00 class 0x020000 conventional PCI endpoint
+[    0.424219][    T1] pci 0000:00:04.0: BAR 0 [io  0xc120-0xc13f]
+[    0.425618][    T1] pci 0000:00:04.0: BAR 1 [mem 0x81047000-0x81047fff]
+[    0.428885][    T1] pci 0000:00:04.0: BAR 4 [mem 0x800000000-0x800003fff 64bit pref]
+[    0.430868][    T1] pci 0000:00:04.0: ROM [mem 0xfffc0000-0xffffffff pref]
+[    0.433067][    T1] pci 0000:00:05.0: [1af4:1005] type 00 class 0x00ff00 conventional PCI endpoint
+[    0.434072][    T1] pci 0000:00:05.0: BAR 0 [io  0xc100-0xc11f]
+[    0.436645][    T1] pci 0000:00:05.0: BAR 4 [mem 0x800004000-0x800007fff 64bit pref]
+[    0.439559][    T1] pci 0000:00:06.0: [1b36:000d] type 00 class 0x0c0330 conventional PCI endpoint
+[    0.440540][    T1] pci 0000:00:06.0: BAR 0 [mem 0x800014000-0x800017fff 64bit]
+[    0.443681][    T1] pci 0000:00:07.0: [1af4:1003] type 00 class 0x078000 conventional PCI endpoint
+[    0.445527][    T1] pci 0000:00:07.0: BAR 0 [io  0xc0c0-0xc0ff]
+[    0.446888][    T1] pci 0000:00:07.0: BAR 1 [mem 0x81046000-0x81046fff]
+[    0.450221][    T1] pci 0000:00:07.0: BAR 4 [mem 0x800008000-0x80000bfff 64bit pref]
+[    0.453153][    T1] pci 0000:00:08.0: [1af4:1004] type 00 class 0x010000 conventional PCI endpoint
+[    0.454273][    T1] pci 0000:00:08.0: BAR 0 [io  0xc080-0xc0bf]
+[    0.455676][    T1] pci 0000:00:08.0: BAR 1 [mem 0x81045000-0x81045fff]
+[    0.459877][    T1] pci 0000:00:08.0: BAR 4 [mem 0x80000c000-0x80000ffff 64bit pref]
+[    0.462107][    T1] pci 0000:00:09.0: [1af4:1001] type 00 class 0x010000 conventional PCI endpoint
+[    0.463856][    T1] pci 0000:00:09.0: BAR 0 [io  0xc000-0xc07f]
+[    0.465244][    T1] pci 0000:00:09.0: BAR 1 [mem 0x81044000-0x81044fff]
+[    0.467971][    T1] pci 0000:00:09.0: BAR 4 [mem 0x800010000-0x800013fff 64bit pref]
+[    0.479861][    T1] ACPI: PCI: Interrupt link LNKA configured for IRQ 10
+[    0.480362][    T1] ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+[    0.481394][    T1] ACPI: PCI: Interrupt link LNKC configured for IRQ 11
+[    0.482421][    T1] ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+[    0.483391][    T1] ACPI: PCI: Interrupt link LNKS configured for IRQ 9
+[    0.483946][    T1] iommu: Default domain type: Passthrough
+[    0.484788][    T1] pps_core: LinuxPPS API ver. 1 registered
+[    0.485558][    T1] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.486874][    T1] PTP clock support registered
+[    0.486896][    T1] EDAC MC: Ver: 3.0.0
+[    0.487689][    T1] efivars: Registered efivars operations
+[    0.488686][    T1] NetLabel: Initializing
+[    0.489253][    T1] NetLabel:  domain hash size = 128
+[    0.489932][    T1] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.490240][    T1] NetLabel:  unlabeled traffic allowed by default
+[    0.491088][    T1] mctp: management component transport protocol core
+[    0.491961][    T1] NET: Registered PF_MCTP protocol family
+[    0.492713][    T1] PCI: Using ACPI for IRQ routing
+[    0.493639][    T1] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.494545][    T1] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.495408][    T1] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.496639][    T1] vgaarb: loaded
+[    0.496971][    T1] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+[    0.497739][    T1] hpet0: 3 comparators, 64-bit 100.000000 MHz counter
+[    0.503317][    T1] clocksource: Switched to clocksource kvm-clock
+[    0.503550][    T1] VFS: Disk quotas dquot_6.6.0
+[    0.503550][    T1] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.503802][    T1] AppArmor: AppArmor Filesystem Enabled
+[    0.504554][    T1] pnp: PnP ACPI init
+[    0.505488][    T1] pnp: PnP ACPI: found 6 devices
+[    0.512109][    T1] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.513719][    T1] NET: Registered PF_INET protocol family
+[    0.514522][    T1] IP idents hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.525950][    T1] tcp_listen_portaddr_hash hash table entries: 512 (order: 1, 8192 bytes, linear)
+[    0.527197][    T1] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.528346][    T1] TCP established hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.529512][    T1] TCP bind hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    0.530602][    T1] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.531584][    T1] MPTCP token hash table entries: 1024 (order: 2, 24576 bytes, linear)
+[    0.532682][    T1] UDP hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    0.533672][    T1] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    0.534743][    T1] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.535605][    T1] NET: Registered PF_XDP protocol family
+[    0.536351][    T1] pci 0000:00:04.0: ROM [mem 0xfffc0000-0xffffffff pref]: can't claim; no compatible bridge window
+[    0.537776][    T1] pci 0000:00:04.0: ROM [mem 0x40000000-0x4003ffff pref]: assigned
+[    0.538823][    T1] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    0.539747][    T1] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    0.540677][    T1] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    0.541689][    T1] pci_bus 0000:00: resource 7 [mem 0x40000000-0xfebfffff window]
+[    0.542704][    T1] pci_bus 0000:00: resource 8 [mem 0x800000000-0x87fffffff window]
+[    0.543790][    T1] pci 0000:00:01.0: PIIX3: Enabling Passive Release
+[    0.544663][    T1] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.581807][    T1] ACPI: \_SB_.LNKB: Enabled at IRQ 10
+[    0.618863][    T1] pci 0000:00:06.0: quirk_usb_early_handoff+0x0/0x710 took 71532 usecs
+[    0.620016][    T1] PCI: CLS 0 bytes, default 64
+[    0.620722][   T25] Trying to unpack rootfs image as initramfs...
+[    0.623726][    T1] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x285c3ee517e, max_idle_ns: 440795257231 ns
+[    0.625533][    T1] Initialise system trusted keyrings
+[    0.626259][    T1] Key type blacklist registered
+[    0.630384][    T1] workingset: timestamp_bits=36 max_order=18 bucket_order=0
+[    0.631368][    T1] zbud: loaded
+[    0.631969][    T1] integrity: Platform Keyring initialized
+[    0.632734][    T1] integrity: Machine keyring initialized
+[    0.653687][    T1] Key type asymmetric registered
+[    0.654363][    T1] Asymmetric key parser 'x509' registered
+[    2.630895][   T25] Freeing initrd memory: 243880K
+[    2.632269][    T1] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
+[    2.633379][    T1] io scheduler mq-deadline registered
+[    2.634109][    T1] io scheduler kyber registered
+[    2.634752][    T1] io scheduler bfq registered
+[    2.636537][    T1] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    2.674735][    T1] ACPI: \_SB_.LNKD: Enabled at IRQ 11
+[    2.712747][    T1] ACPI: \_SB_.LNKA: Enabled at IRQ 10
+[    2.750798][    T1] ACPI: \_SB_.LNKC: Enabled at IRQ 11
+[    2.826332][    T1] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    2.827662][    T1] 00:04: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    2.884210][    T1] Non-volatile memory driver v1.3
+[    2.884900][    T1] Linux agpgart interface v0.103
+[    2.885670][    T1] ACPI: bus type drm_connector registered
+[    2.886710][    T1] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    2.888586][    T1] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    2.889361][    T1] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    2.890274][    T1] mousedev: PS/2 mouse device common for all mice
+[    2.891468][    T7] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input0
+[    2.893525][    T7] input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input3
+[    2.894819][    T1] rtc_cmos 00:05: RTC can wake from S4
+[    2.896232][    T7] input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input2
+[    2.897535][    T1] rtc_cmos 00:05: registered as rtc0
+[    2.898322][    T1] rtc_cmos 00:05: setting system clock to 2024-05-28T07:27:19 UTC (1716881239)
+[    2.899569][    T1] rtc_cmos 00:05: alarms up to one day, y3k, 242 bytes nvram, hpet irqs
+[    2.900897][    T1] amd_pstate: the _CPC object is not present in SBIOS or ACPI disabled
+[    2.902013][    T1] ledtrig-cpu: registered to indicate activity on CPUs
+[    2.903086][    T1] [drm] Initialized simpledrm 1.0.0 20200625 for simple-framebuffer.0 on minor 0
+[    2.907581][    T1] Console: switching to colour frame buffer device 128x48
+[    2.909933][    T1] simple-framebuffer simple-framebuffer.0: [drm] fb0: simpledrmdrmfb frame buffer device
+[    2.911323][    T1] hid: raw HID events driver (C) Jiri Kosina
+[    2.912260][    T1] drop_monitor: Initializing network drop monitor service
+[    2.913323][    T1] NET: Registered PF_INET6 protocol family
+[    2.915011][    T1] Segment Routing with IPv6
+[    2.915630][    T1] RPL Segment Routing with IPv6
+[    2.916311][    T1] In-situ OAM (IOAM) with IPv6
+[    2.917186][    T1] IPI shorthand broadcast: enabled
+[    2.919713][    T1] sched_clock: Marking stable (2733336622, 183638614)->(2953349684, -36374448)
+[    2.921062][    T1] registered taskstats version 1
+[    2.921846][    T1] Loading compiled-in X.509 certificates
+[    2.922677][    T1] Loaded X.509 cert 'openSUSE Secure Boot Signkey: fd9f2c12e599d67cc7f9067541adf426b712469e'
+[    2.926237][    T1] page_owner is disabled
+[    2.926889][    T1] Key type .fscrypt registered
+[    2.927762][    T1] Key type fscrypt-provisioning registered
+[    2.929254][    T1] Key type encrypted registered
+[    2.929938][    T1] AppArmor: AppArmor sha256 policy hashing enabled
+[    2.930890][    T1] integrity: Loading X.509 certificate: UEFI:db
+[    2.931832][    T1] integrity: Loaded X.509 cert 'Microsoft Windows Production PCA 2011: a92902398e16c49778cd90f99e4f9ae17c55af53'
+[    2.933440][    T1] integrity: Loading X.509 certificate: UEFI:db
+[    2.934360][    T1] integrity: Loaded X.509 cert 'Microsoft Corporation UEFI CA 2011: 13adbf4309bd82709c8cd54f316ed522988a1bd4'
+[    2.936616][    T1] integrity: Loading X.509 certificate: UEFI:MokListRT (MOKvar table)
+[    2.950858][    T1] integrity: Loaded X.509 cert 'openSUSE Secure Boot CA: 6842600de22c4c477e95be23dfea9513e5971762'
+[    2.952585][    T1] ima: No TPM chip found, activating TPM-bypass!
+[    2.954080][    T1] Loading compiled-in module X.509 certificates
+[    2.955485][    T1] Loaded X.509 cert 'openSUSE Secure Boot Signkey: fd9f2c12e599d67cc7f9067541adf426b712469e'
+[    2.957418][    T1] ima: Allocated hash algorithm: sha256
+[    2.958746][   T26] audit: type=1807 audit(1716881239.556:2): action=measure func=KEXEC_KERNEL_CHECK res=1
+[    2.960749][   T26] audit: type=1807 audit(1716881239.560:3): action=measure func=MODULE_CHECK res=1
+[    2.962580][    T1] evm: Initialising EVM extended attributes:
+[    2.963667][    T1] evm: security.selinux
+[    2.964489][    T1] evm: security.SMACK64 (disabled)
+[    2.965438][    T1] evm: security.SMACK64EXEC (disabled)
+[    2.966453][    T1] evm: security.SMACK64TRANSMUTE (disabled)
+[    2.967514][    T1] evm: security.SMACK64MMAP (disabled)
+[    2.968569][    T1] evm: security.apparmor
+[    2.969399][    T1] evm: security.ima
+[    2.970223][    T1] evm: security.capability
+[    2.971155][    T1] evm: HMAC attrs: 0x1
+[    3.063143][    T1] PM:   Magic number: 8:764:471
+[    3.068946][    T1] RAS: Correctable Errors collector initialized.
+[    3.082415][    T1] Lockdown: swapper/0: hibernation is restricted; see man kernel_lockdown.7
+[    3.084194][    T1] clk: Disabling unused clocks
+[    3.085411][    T1] PM: genpd: Disabling unused power domains
+[    3.087927][    T1] Freeing unused decrypted memory: 2028K
+[    3.089640][    T1] Freeing unused kernel image (initmem) memory: 4224K
+[    3.091091][    T1] Write protecting the kernel read-only data: 30720k
+[    3.092810][    T1] Freeing unused kernel image (rodata/data gap) memory: 1316K
+[    3.094376][    T1] Run /init as init process
+[    3.105173][  T133] zram: Added device: zram0
+[    3.156506][  T132] zram0: detected capacity change from 0 to 2097152
+[    3.165328][    T1] EXT4-fs (zram0): mounting ext2 file system using the ext4 subsystem
+[    3.167445][    T1] EXT4-fs (zram0): mounted filesystem c7725f75-b234-4358-a1d0-b50cb6caa7b3 r/w without journal. Quota mode: none.
+[    4.607946][  T144] loop: module loaded
+[    4.668167][  T158] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    4.722305][    T1] loop0: detected capacity change from 0 to 409344
+[    4.906879][    T1] loop1: detected capacity change from 0 to 38784
+[    5.046457][  T179] SCSI subsystem initialized
+[    5.048025][  T179] alua: device handler registered
+[    5.050812][  T181] emc: device handler registered
+[    5.053547][  T182] rdac: device handler registered
+[    5.365794][  T201] piix4_smbus 0000:00:01.3: SMBus Host Controller at 0xb100, revision 0
+[    5.367348][  T192] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input4
+[    5.393683][  T192] ACPI: button: Power Button [PWRF]
+[    5.401320][  T195] Console: switching to colour dummy device 80x25
+[    5.430249][  T192] virtio_blk virtio4: 1/0/0 default/read/poll queues
+[    5.431724][  T195] bochs-drm 0000:00:02.0: vgaarb: deactivate vga console
+[    5.432743][  T195] [drm] Found bochs VGA, ID 0xb0c5.
+[    5.433431][  T195] [drm] Framebuffer size 16384 kB @ 0x80000000, mmio @ 0x81048000.
+[    5.438737][  T198] parport_pc 00:03: reported by Plug and Play ACPI
+[    5.439752][  T198] parport0: PC-style at 0x378, irq 7 [PCSPP,TRISTATE]
+[    5.441937][  T199] input: PC Speaker as /devices/platform/pcspkr/input/input5
+[    5.443332][  T194] FDC 0 is a S82078B
+[    5.444569][  T201] virtio_scsi virtio3: 1/0/0 default/read/poll queues
+[    5.446292][  T201] scsi host0: Virtio SCSI HBA
+[    5.454561][  T192] virtio_blk virtio4: [vda] 41943040 512-byte logical blocks (21.5 GB/20.0 GiB)
+[    5.471284][  T195] [drm] Found EDID data blob.
+[    5.501459][  T195] [drm] Initialized bochs-drm 1.0.0 20130925 for 0000:00:02.0 on minor 0
+[    5.503803][  T193] ACPI: bus type USB registered
+[    5.506341][  T193] usbcore: registered new interface driver usbfs
+[    5.508260][  T195] fbcon: bochs-drmdrmfb (fb0) is primary device
+[    5.546489][  T193] usbcore: registered new interface driver hub
+[    5.546508][  T193] usbcore: registered new device driver usb
+[    5.546783][  T197] scsi host1: ata_piix
+[    5.566318][  T197] scsi host2: ata_piix
+[    5.566368][  T197] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc140 irq 14 lpm-pol 0
+[    5.566370][  T197] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc148 irq 15 lpm-pol 0
+[    5.566444][   T25] scsi 0:0:0:0: CD-ROM            QEMU     QEMU CD-ROM      2.5+ PQ: 0 ANSI: 5
+[    5.613885][  T200] cryptd: max_cpu_qlen set to 1000
+[    5.695479][  T200] AVX2 version of gcm_enc/dec engaged.
+[    5.695498][  T200] AES CTR mode by8 optimization enabled
+[    5.847000][  T195] Console: switching to colour frame buffer device 128x48
+[    5.883571][  T193] xhci_hcd 0000:00:06.0: xHCI Host Controller
+[    5.883583][  T193] xhci_hcd 0000:00:06.0: new USB bus registered, assigned bus number 1
+[    5.886685][  T193] xhci_hcd 0000:00:06.0: hcc params 0x00087001 hci version 0x100 quirks 0x0000000000000010
+[    5.887208][  T193] xhci_hcd 0000:00:06.0: xHCI Host Controller
+[    5.887212][  T193] xhci_hcd 0000:00:06.0: new USB bus registered, assigned bus number 2
+[    5.887215][  T193] xhci_hcd 0000:00:06.0: Host supports USB 3.0 SuperSpeed
+[    5.916071][  T193] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.09
+[    5.916074][  T193] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    5.916076][  T193] usb usb1: Product: xHCI Host Controller
+[    5.916078][  T193] usb usb1: Manufacturer: Linux 6.9.1-1-default xhci-hcd
+[    5.916079][  T193] usb usb1: SerialNumber: 0000:00:06.0
+[    5.919169][  T193] hub 1-0:1.0: USB hub found
+[    5.920151][  T193] hub 1-0:1.0: 4 ports detected
+[    5.927366][  T193] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    5.933268][  T193] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.09
+[    5.933271][  T193] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    5.933273][  T193] usb usb2: Product: xHCI Host Controller
+[    5.933275][  T193] usb usb2: Manufacturer: Linux 6.9.1-1-default xhci-hcd
+[    5.933276][  T193] usb usb2: SerialNumber: 0000:00:06.0
+[    5.933813][  T193] hub 2-0:1.0: USB hub found
+[    5.934202][  T193] hub 2-0:1.0: 4 ports detected
+[    6.071698][  T201] virtio_net virtio0 ens4: renamed from eth0
+[    6.221060][    C0] sr 0:0:0:0: Power-on or device reset occurred
+[    6.225697][  T195] bochs-drm 0000:00:02.0: [drm] fb0: bochs-drmdrmfb frame buffer device
+[    6.227782][  T199] sr 0:0:0:0: [sr0] scsi3-mmc drive: 16x/50x cd/rw xa/form2 cdda tray
+[    6.229199][  T199] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    6.263680][  T368] usb 1-1: new high-speed USB device number 2 using xhci_hcd
+[    6.404094][  T368] usb 1-1: New USB device found, idVendor=0627, idProduct=0001, bcdDevice= 0.00
+[    6.405625][  T368] usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=10
+[    6.406987][  T368] usb 1-1: Product: QEMU USB Tablet
+[    6.407847][  T368] usb 1-1: Manufacturer: QEMU
+[    6.408617][  T368] usb 1-1: SerialNumber: 28754-0000:00:06.0-1
+[    6.416583][  T192] usbcore: registered new interface driver usbhid
+[    6.417523][  T192] usbhid: USB HID core driver
+[    6.419947][  T192] input: QEMU QEMU USB Tablet as /devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0/0003:0627:0001.0001/input/input6
+[    6.421769][  T192] hid-generic 0003:0627:0001.0001: input,hidraw0: USB HID v0.01 Mouse [QEMU QEMU USB Tablet] on usb-0000:00:06.0-1/input0
+[    6.636324][  T456] RPC: Registered named UNIX socket transport module.
+[    6.637288][  T456] RPC: Registered udp transport module.
+[    6.638041][  T456] RPC: Registered tcp transport module.
+[    6.638777][  T456] RPC: Registered tcp-with-tls transport module.
+[    6.639616][  T456] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    6.837347][  T480] No iBFT detected.
+[    6.873844][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    6.875088][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    6.876475][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[9;0]Loading basic drivers...Loading basic drivers
+[    7.271294][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    7.272207][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    7.273279][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    7.307752][  T517] st: Version 20160209, fixed bufsize 32768, s/g segs 256
+[    7.328178][  T521] sr 0:0:0:0: Attached scsi generic sg0 type 5
+[    7.485660][  T535] NET: Registered PF_PACKET protocol family
+[    7.495429][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    7.496313][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    7.497422][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    8.105971][    T1] lockdown_is_locked_down: 6 callbacks suppressed
+[    8.105974][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    8.107522][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    8.108693][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    8.295931][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    8.296837][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    8.297938][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    8.479314][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    8.480355][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    8.481428][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[    8.660603][  T661] netfs: FS-Cache loaded
+[    8.670087][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   13.018999][ T1127] 8021q: 802.1Q VLAN Support v1.8
+[   13.219181][    T1] lockdown_is_locked_down: 68 callbacks suppressed
+[   13.219185][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   13.220749][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   13.221977][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   13.433234][ T1169] device-mapper: uevent: version 1.0.3
+[   13.434463][ T1169] device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@lists.linux.dev
+[   13.444247][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   13.445137][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   13.446278][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   13.647603][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   13.648514][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   13.649606][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   13.872400][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   14.686976][ T1297] raid6: avx2x4   gen() 35659 MB/s
+[   14.743640][ T1297] raid6: avx2x2   gen() 33390 MB/s
+[   14.800312][ T1297] raid6: avx2x1   gen() 27030 MB/s
+[   14.800836][ T1297] raid6: using algorithm avx2x4 gen() 35659 MB/s
+[   14.856975][ T1297] raid6: .... xor() 5368 MB/s, rmw enabled
+[   14.857585][ T1297] raid6: using avx2x2 recovery algorithm
+[   15.250486][ T1339] xor: automatically using best checksumming function   avx       
+[   15.728763][ T1381] Btrfs loaded, assert=on, zoned=yes, fsverity=yes
+ ok
+Hardware detection
+Starting hardware detection...[   22.534959][    T1] lockdown_is_locked_down: 29 callbacks suppressed
+[   22.534963][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   22.536901][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   22.538335][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   22.544492][ T1651] Lockdown: init: raw io port access is restricted; see man kernel_lockdown.7
+[   22.587122][ T1663] parport_pc 00:03: reported by Plug and Play ACPI
+[   22.588411][ T1663] parport0: PC-style at 0x378, irq 7 [PCSPP,TRISTATE,EPP]
+ ok
+(If a driver is not working for you, try booting with brokenmodules=driver_name.)
+
+Red Hat Qemu virtual machine
+  drivers: ata_piix*, ata_generic, pata_acpi
+Virtio Storage 0
+  drivers: virtio_blk*
+Activating usb devices...[   22.971607][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   22.972496][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   22.973577][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   23.159214][ T1697] usbcore: registered new interface driver usb-storage
+[   24.171054][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   24.172080][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   24.173341][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+ ok
+Virtio Ethernet Card 0
+  drivers: virtio_net*
+[   30.455240][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   30.456182][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   30.457295][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   30.752185][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   30.753120][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   30.754262][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   31.053808][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   31.054708][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   31.055779][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+[   31.334253][    T1] Lockdown: init: /dev/mem,kmem,port is restricted; see man kernel_lockdown.7
+Loading Installation System (1/6) -            0%  1%  2%  3%  4%  5%  6%  7%  8%  9% 10% 11% 12% 13% 14% 15% 16% 17% 18% 19% 20% 21% 22% 23% 24% 25% 26% 27% 28% 29% 30% 31% 32% 33% 34% 35% 36% 37% 38% 39% 40% 41% 42% 43% 44% 45% 46% 47% 48% 49% 50% 51% 52% 53% 54% 55% 56% 57% 58% 59% 60% 61% 62% 63% 64% 65% 66% 67% 68% 69% 70% 71% 72% 73% 74% 75% 76% 77% 78% 79% 80% 81% 82% 83% 84% 85% 86% 87% 88% 89% 90% 91% 92% 93% 94% 95% 96% 97% 98% 99%100%
+[   32.622139][    T1] loop2: detected capacity change from 0 to 69248
+Loading Installation System (2/6) -            0%  1%  2%  3%  4%  5%  6%  7%  8%  9% 10% 11% 12% 13% 14% 15% 16% 17% 18% 19% 20% 21% 22% 23% 24% 25% 26% 27% 28% 29% 30% 31% 32% 33% 34% 35% 36% 37% 38% 39% 40% 41% 42% 43% 44% 45% 46% 47% 48% 49% 50% 51% 52% 53% 54% 55% 56% 57% 58% 59% 60% 61% 62% 63% 64% 65% 66% 67% 68% 69% 70% 71% 72% 73% 74% 75% 76% 77% 78% 79% 80% 81% 82% 83% 84% 85% 86% 87% 88% 89% 90% 91% 92% 93% 94% 95% 96% 97% 98% 99%100%
+[   33.891252][    T1] loop3: detected capacity change from 0 to 251520
+Loading Installation System (3/6) -            0%  1%  2%  3%  4%  5%  6%  7%  8%  9% 10% 11% 12% 13% 14% 15% 16% 17% 18% 19% 20% 21% 22% 23% 24% 25% 26% 27% 28% 29% 30% 31% 32% 33% 34% 35% 36% 37% 38% 39% 40% 41% 42% 43% 44% 45% 46% 47% 48% 49% 50% 51% 52% 53% 54% 55% 56% 57% 58% 59% 60% 61% 62% 63% 64% 65% 66% 67% 68% 69% 70% 71% 72% 73% 74% 75% 76% 77% 78% 79% 80% 81% 82% 83% 84% 85% 86% 87% 88% 89% 90% 91% 92% 93% 94% 95% 96% 97% 98% 99%100%
+[   35.080933][    T1] loop4: detected capacity change from 0 to 8448
+Loading Installation System (4/6) -            0%  1%  2%  3%  4%  5%  6%  7%  8%  9% 10% 11% 12% 13% 14% 15% 16% 17% 18% 19% 20% 21% 22% 23% 24% 25% 26% 27% 28% 29% 30% 31% 32% 33% 34% 35% 36% 37% 38% 39% 40% 41% 42% 43% 44% 45% 46% 47% 48% 49% 50% 51% 52% 53% 54% 55% 56% 57% 58% 59% 60% 61% 62% 63% 64% 65% 66% 67% 68% 69% 70% 71% 72% 73% 74% 75% 76% 77% 78% 79% 80% 81% 82% 83% 84% 85% 86% 87% 88% 89% 90% 91% 92% 93% 94% 95% 96% 97% 98% 99%100%
+[   35.132166][    T1] loop5: detected capacity change from 0 to 4224
+Loading Installation System (5/6) - missing (optional)
+Loading Installation System (6/6) -           25% 51% 77%100%
+starting rsyslogd (logging to /dev/tty4)... ok
+starting klogd... ok
+starting nscd... ok
+YpuUt-0-
+20240528
+/.packages.initrd:
+MicroOS-release [20240527-2925.1.x86_64]
+aaa_base [84.87+git20240523.10a5692-1.1.x86_64]
+acpica [20240321-1.1.x86_64]
+alts [1.2+30.a5431e9-1.5.x86_64] < dbus-1
+autoyast2 [5.0.2-1.1.noarch]
+autoyast2-installation [5.0.2-1.1.noarch]
+bash [5.2.26-12.1.x86_64]
+bcache-tools [1.1+git37.a5e3753-1.3.x86_64]
+bcm43xx-firmware [20180314-16.3.noarch]
+biosdevname [0.7.3.7.g495ab76-2.2.x86_64]
+blog [2.28-1.3.x86_64]
+ca-certificates [2+git20240415.3fe9324-1.1.noarch]
+ca-certificates-mozilla [2.66-1.2.noarch]
+chrony [4.5-1.1.x86_64]
+cifs-utils [7.0-3.2.x86_64]
+coreutils [9.5-1.1.x86_64]
+cpio [2.15-3.1.x86_64]
+cracklib [2.9.11-1.4.x86_64] < libcrack2 < libpwquality1 < cryptsetup
+crypto-policies [20230920.570ea89-3.2.noarch] < krb5
+cryptsetup [2.7.2-1.1.x86_64]
+curl [8.8.0-1.1.x86_64]
+dbus-1 [1.14.10-2.3.x86_64]
+dbus-1-common [1.14.10-2.3.noarch]
+dbus-1-daemon [1.14.10-2.3.x86_64]
+dbus-1-tools [1.14.10-2.3.x86_64] < dbus-1
+device-mapper [2.03.22_1.02.196-3.1.x86_64]
+diffutils [3.10-1.7.x86_64]
+dmidecode [3.5-4.2.x86_64]
+e2fsprogs [1.47.0-4.2.x86_64]
+ethtool [6.7-1.2.x86_64]
+fcoe-utils [1.0.34-5.2.x86_64]
+file-magic [5.45-2.2.noarch] < libmagic1 < util-linux
+findutils [4.9.0-4.1.x86_64] < systemd
+gawk [5.3.0-1.5.x86_64]
+gio-branding-upstream [2.80.2-1.1.noarch] < libgio-2_0-0 < tpm2.0-abrmd
+glib2-tools [2.80.2-1.1.x86_64] < libgio-2_0-0 < tpm2.0-abrmd
+glibc [2.39-7.1.x86_64]
+glibc-locale-base [2.39-7.1.x86_64]
+gpg2 [2.4.5-1.1.x86_64]
+grep [3.11-3.1.x86_64]
+gzip [1.13-3.1.x86_64]
+hostname [3.23-3.7.x86_64]
+hwinfo [23.2-1.5.x86_64]
+iproute2 [6.9-1.1.x86_64]
+iputils [20240117-1.3.x86_64]
+iscsiuio [0.7.8.8-104.3.x86_64]
+joe [4.6-3.2.x86_64]
+jq [1.7.1-1.3.x86_64] < wicked-nbft
+kbd [2.6.4-4.1.x86_64]
+kexec-tools [2.0.28-1.2.x86_64]
+kmod [32-1.1.x86_64]
+kpartx [0.9.8+88+suse.d504d83-1.1.x86_64]
+krb5 [1.21.2-5.1.x86_64]
+libacl1 [2.3.2-2.1.x86_64] < systemd
+libalternatives1 [1.2+30.a5431e9-1.5.x86_64] < alts < dbus-1
+libapparmor1 [4.0.1-1.1.x86_64] < systemd
+libargon2-1 [20190702-4.1.x86_64] < libcryptsetup12 < udev
+libassuan0 [2.5.7-1.1.x86_64] < gpg2
+libattr1 [2.5.2-1.2.x86_64] < coreutils
+libaudit1 [3.1.1-1.6.x86_64] < systemd
+libblkid1 [2.40.1-2.1.x86_64] < systemd
+libblogger2 [2.28-1.3.x86_64] < blog
+libbpf1 [1.4.2-1.1.x86_64] < iproute2
+libbrotlicommon1 [1.1.0-1.3.x86_64] < libbrotlidec1 < libcurl4 < curl
+libbrotlidec1 [1.1.0-1.3.x86_64] < libcurl4 < curl
+libbz2-1 [1.0.8-5.10.x86_64] < rpm
+libcap-ng0 [0.8.5-1.1.x86_64] < cifs-utils
+libcap2 [2.69-1.7.x86_64] < systemd
+libcom_err2 [1.47.0-4.2.x86_64] < krb5
+libconfig11 [1.7.3-1.11.x86_64] < open-lldp < fcoe-utils
+libcrack2 [2.9.11-1.4.x86_64] < libpwquality1 < cryptsetup
+libcrypt1 [4.4.36-1.6.x86_64] < systemd
+libcryptsetup12 [2.7.2-1.1.x86_64] < udev
+libcurl4 [8.8.0-1.1.x86_64] < curl
+libdbus-1-3 [1.14.10-2.3.x86_64] < dbus-1
+libdevmapper-event1_03 [2.03.22_1.02.196-3.1.x86_64] < device-mapper
+libdevmapper1_03 [2.03.22_1.02.196-3.1.x86_64] < nfs-client
+libdrm2 [2.4.120-1.3.x86_64] < plymouth
+libdw1 [0.191-1.2.x86_64] < strace
+libeconf0 [0.6.3-1.1.x86_64] < util-linux-systemd
+libefivar1 [38-2.3.x86_64] < tpm2.0-tools
+libelf1 [0.191-1.2.x86_64] < iproute2
+libestr0 [0.1.11-1.19.x86_64] < rsyslog
+libevent-2_1-7 [2.1.12-4.2.x86_64] < nfs-client
+libexpat1 [2.6.2-1.1.x86_64] < dbus-1
+libext2fs2 [1.47.0-4.2.x86_64] < e2fsprogs
+libfastjson4 [1.2304.0-1.4.x86_64] < rsyslog
+libfdisk1 [2.40.1-2.1.x86_64] < udev
+libffi8 [3.4.6-1.1.x86_64] < libgobject-2_0-0 < tpm2.0-abrmd
+libfuse2 [2.9.9-6.7.x86_64] < ntfs-3g
+libgcc_s1 [14.1.0+git10173-1.1.x86_64] < libncurses6 < joe
+libgcrypt20 [1.10.3-3.3.x86_64] < systemd
+libgio-2_0-0 [2.80.2-1.1.x86_64] < tpm2.0-abrmd
+libglib-2_0-0 [2.80.2-1.1.x86_64] < tpm2.0-abrmd
+libgmodule-2_0-0 [2.80.2-1.1.x86_64] < libgio-2_0-0 < tpm2.0-abrmd
+libgmp10 [6.3.0-3.2.x86_64] < coreutils
+libgnutls30 [3.8.5-1.1.x86_64]
+libgobject-2_0-0 [2.80.2-1.1.x86_64] < tpm2.0-abrmd
+libgpg-error0 [1.49-1.1.x86_64] < gpg2
+libhd23 [23.2-1.5.x86_64] < hwinfo
+libhogweed6 [3.9.1-2.5.x86_64] < libgnutls30
+libidn2-0 [2.3.7-1.2.x86_64] < iputils
+libiw30 [30.pre9-41.1.x86_64] < wireless-tools
+libjitterentropy3 [3.4.1-4.2.x86_64] < libgnutls30
+libjq1 [1.7.1-1.3.x86_64] < jq < wicked-nbft
+libjson-c5 [0.17-2.3.x86_64] < nvme-cli
+libkeyutils1 [1.6.3-7.2.x86_64] < krb5
+libkmod2 [32-1.1.x86_64] < systemd
+libksba8 [1.6.6-1.1.x86_64] < gpg2
+libldap2 [2.6.7-1.1.x86_64] < libcurl4 < curl
+liblldp_clif1 [1.1+106.74c0600a8692-1.3.x86_64] < open-lldp < fcoe-utils
+liblogging0 [1.0.6-4.23.x86_64] < rsyslog
+liblognorm5 [2.0.6-2.22.x86_64] < rsyslog
+liblua5_4-5 [5.4.6-3.3.x86_64] < rpm
+liblz4-1 [1.9.4-2.8.x86_64] < systemd
+liblzma5 [5.6.1.revertto5.4-3.1.x86_64] < systemd
+liblzo2-2 [2.10-8.6.x86_64] < squashfs
+libmagic1 [5.45-2.2.x86_64] < util-linux
+libmediacheck6 [6.3-1.1.x86_64] < linuxrc
+libmnl0 [1.0.5-1.7.x86_64] < ethtool
+libmount1 [2.40.1-2.1.x86_64] < systemd
+libmpfr6 [4.2.1-1.4.x86_64] < gawk
+libncurses6 [6.5.20240427-36.1.x86_64] < joe
+libnettle8 [3.9.1-2.5.x86_64] < libgnutls30
+libnfsidmap1 [1.0-41.3.x86_64] < nfs-client
+libnghttp2-14 [1.61.0-1.1.x86_64] < libcurl4 < curl
+libnl-config [3.9.0-1.3.noarch] < libnl3-200 < wpa_supplicant
+libnl3-200 [3.9.0-1.3.x86_64] < wpa_supplicant
+libnpth0 [1.7-1.1.x86_64] < gpg2
+libnss_usrfiles2 [2.27.1-1.2.x86_64] < systemd
+libntfs-3g89 [2022.10.3-2.7.x86_64] < ntfs-3g
+libnvme-mi1 [1.9+0.g80c5cf2-1.1.x86_64] < nvme-cli
+libnvme1 [1.9+0.g80c5cf2-1.1.x86_64] < nvme-cli
+libonig5 [6.9.9-1.3.x86_64] < libjq1 < jq < wicked-nbft
+libopeniscsiusr0 [0.2.0-104.3.x86_64] < open-iscsi
+libopenssl3 [3.1.4-8.1.x86_64] < krb5
+libp11-kit0 [0.25.3-1.3.x86_64] < libgnutls30
+libpci3 [3.10.0-1.5.x86_64] < biosdevname
+libpciaccess0 [0.18.1-1.2.x86_64] < fcoe-utils
+libpcre1 [8.45-3.1.x86_64] < liblognorm5 < rsyslog
+libpcre2-8-0 [10.43-3.1.x86_64] < grep
+libply-splash-core5 [22.02.122+94.4bd41a3-11.1.x86_64] < plymouth
+libply-splash-graphics5 [22.02.122+94.4bd41a3-11.1.x86_64] < plymouth-plugin-script
+libply5 [22.02.122+94.4bd41a3-11.1.x86_64] < plymouth
+libpng16-16 [1.6.43-1.1.x86_64] < libply-splash-graphics5 < plymouth-plugin-script
+libpopt0 [1.19-1.8.x86_64] < rpm
+libprocps8 [3.3.17-17.1.x86_64] < procps
+libpsl5 [0.21.5-1.2.x86_64] < libcurl4 < curl
+libpwquality1 [1.4.5-2.3.x86_64] < cryptsetup
+libreadline8 [8.2.10-1.3.x86_64] < bash
+libsasl2-3 [2.1.28-8.1.x86_64] < libldap2 < libcurl4 < curl
+libseccomp2 [2.5.5-1.3.x86_64] < systemd
+libselinux1 [3.6-1.3.x86_64] < strace
+libsemanage-conf [3.6-1.4.x86_64] < libsemanage2 < shadow
+libsemanage2 [3.6-1.4.x86_64] < shadow
+libsepol2 [3.6-1.3.x86_64] < libsemanage2 < shadow
+libsgutils2-1_48-2 [1.48+9.ecc03bb-1.1.x86_64] < sg3_utils
+libslp1 [2.0.0-22.2.x86_64] < openslp < openslp-server
+libsmartcols1 [2.40.1-2.1.x86_64] < util-linux-systemd
+libsqlite3-0 [3.45.3-1.1.x86_64] < nfs-client
+libssh-config [0.10.6-2.1.x86_64] < libssh4 < libcurl4 < curl
+libssh4 [0.10.6-2.1.x86_64] < libcurl4 < curl
+libstdc++6 [14.1.0+git10173-1.1.x86_64] < libncurses6 < joe
+libsubid4 [4.15.1-1.2.x86_64] < shadow
+libsystemd0 [255.6-2.1.x86_64] < dbus-1
+libtalloc2 [2.4.2-1.1.x86_64] < cifs-utils
+libtasn1-6 [4.19.0-1.7.x86_64] < libgnutls30
+libtirpc-netconfig [1.3.4-1.3.x86_64] < libtirpc3 < rpcbind
+libtirpc3 [1.3.4-1.3.x86_64] < rpcbind
+libtss2-esys0 [4.1.0-1.1.x86_64] < tpm2.0-tools
+libtss2-fapi-common [4.1.0-1.1.x86_64] < libtss2-fapi1 < tpm2.0-tools
+libtss2-fapi1 [4.1.0-1.1.x86_64] < tpm2.0-tools
+libtss2-mu0 [4.1.0-1.1.x86_64] < tpm2.0-tools
+libtss2-rc0 [4.1.0-1.1.x86_64] < tpm2.0-tools
+libtss2-sys1 [4.1.0-1.1.x86_64] < tpm2.0-tools
+libtss2-tcti-device0 [4.1.0-1.1.x86_64] < tpm2.0-abrmd
+libtss2-tcti-tabrmd0 [3.0.0-2.7.x86_64] < tpm2.0-abrmd
+libtss2-tctildr0 [4.1.0-1.1.x86_64] < tpm2.0-tools
+libudev1 [255.6-2.1.x86_64] < util-linux-systemd
+libunistring5 [1.2-1.1.x86_64] < libgnutls30
+libusb-1_0-0 [1.0.27-1.2.x86_64] < gpg2
+libuuid1 [2.40.1-2.1.x86_64] < bcache-tools
+libverto1 [0.3.2-3.3.x86_64] < krb5
+libwrap0 [7.6-896.2.x86_64] < rpcbind
+libx86emu3 [3.5-2.1.x86_64] < libhd23 < hwinfo
+libxml2-2 [2.12.7-1.1.x86_64] < shared-mime-info < libgio-2_0-0 < tpm2.0-abrmd
+libxtables12 [1.8.10-2.3.x86_64] < iproute2
+libyajl2 [2.1.0-8.5.x86_64] < xen-libs < xen-tools-domU
+libz1 [1.3.1-1.1.x86_64] < squashfs
+libzstd1 [1.5.6-1.1.x86_64] < systemd
+libzypp [17.34.0-1.1.x86_64]
+linuxrc [9.3-1.2.x86_64]
+login_defs [4.15.1-1.2.noarch] < shadow
+lsscsi [0.32-1.6.x86_64]
+lvm2 [2.03.22-3.1.x86_64]
+mdadm [4.3-2.2.x86_64]
+ncurses-utils [6.5.20240427-36.1.x86_64]
+netcfg [11.6-13.3.noarch]
+nfs-client [2.6.3-41.3.x86_64]
+nscd [2.39-7.1.x86_64]
+ntfs-3g [2022.10.3-2.7.x86_64]
+nvme-cli [2.9.1-1.1.x86_64]
+open-iscsi [2.1.9-104.3.x86_64]
+open-isns [0.102-2.4.x86_64] < open-iscsi
+open-lldp [1.1+106.74c0600a8692-1.3.x86_64] < fcoe-utils
+openslp [2.0.0-22.2.x86_64] < openslp-server
+openslp-server [2.0.0-22.2.x86_64]
+openssh-server [9.6p1-8.1.x86_64]
+pam [1.6.1-1.1.x86_64]
+pam-config [2.11+git.20240411-1.1.x86_64] < systemd
+patch [2.7.6-7.1.x86_64]
+plymouth [22.02.122+94.4bd41a3-11.1.x86_64]
+plymouth-branding-openSUSE [84.87.20240405-1.2.noarch]
+plymouth-plugin-script [22.02.122+94.4bd41a3-11.1.x86_64]
+plymouth-plugin-tribar [22.02.122+94.4bd41a3-11.1.x86_64] < plymouth-theme-tribar
+plymouth-scripts [22.02.122+94.4bd41a3-11.1.noarch]
+plymouth-theme-tribar [22.02.122+94.4bd41a3-11.1.noarch]
+polkit [123-2.3.x86_64]
+procps [3.3.17-17.1.x86_64]
+rpcbind [1.2.6-5.5.x86_64]
+rpm [4.19.1.1-3.2.x86_64]
+rpm-config-SUSE [20240214-1.2.noarch] < rpm
+rsyslog [8.2306.0-5.2.x86_64]
+samba-client-libs [4.19.5+git.342.57620c4f7e-1.2.x86_64]
+sbl [3.5.0.20130317.git7a75bc29-8.1.x86_64]
+sed [4.9-2.6.x86_64]
+sg3_utils [1.48+9.ecc03bb-1.1.x86_64]
+shadow [4.15.1-1.2.x86_64]
+shared-mime-info [2.4-2.2.x86_64] < libgio-2_0-0 < tpm2.0-abrmd
+sharutils [4.15.2-8.1.x86_64]
+squashfs [4.6.1-2.4.x86_64]
+strace [6.9-1.1.x86_64]
+suse-module-tools [16.0.44-1.1.x86_64]
+sysconfig [0.90.0-3.6.x86_64]
+sysconfig-netconfig [0.90.0-3.6.x86_64]
+syslog-service [2.0-803.2.noarch] < rsyslog
+system-group-hardware [20170617-25.4.noarch]
+system-group-kvm [20170617-25.4.noarch]
+system-user-daemon [20170617-25.4.noarch]
+system-user-lp [20170617-25.4.noarch]
+system-user-root [20190513-2.16.noarch] < pam
+system-user-tss [20170617-25.4.noarch]
+systemd [255.6-2.1.x86_64]
+systemd-default-settings [0.10-1.1.noarch] < systemd-default-settings-branding-openSUSE < systemd
+systemd-default-settings-branding-openSUSE [0.10-1.1.noarch] < systemd
+systemd-presets-branding-MicroOS [20230214-3.1.noarch]
+systemd-presets-common-SUSE [15-32.2.noarch] < systemd-presets-branding-MicroOS
+systemd-rpm-macros [24-1.6.noarch] < suse-module-tools
+sysuser-shadow [3.2-2.3.noarch] < rpcbind
+sysvinit-tools [3.08-2.2.x86_64]
+tar [1.35-2.2.x86_64]
+terminfo [6.5.20240427-36.1.x86_64]
+terminfo-base [6.5.20240427-36.1.x86_64]
+thin-provisioning-tools [1.0.12-3.1.x86_64] < device-mapper
+tpm2-0-tss [4.1.0-1.1.x86_64] < tpm2.0-abrmd
+tpm2.0-abrmd [3.0.0-2.7.x86_64]
+tpm2.0-tools [5.7-2.1.x86_64]
+udev [255.6-2.1.x86_64]
+util-linux [2.40.1-2.1.x86_64]
+util-linux-systemd [2.40.1-2.1.x86_64]
+vlan [1.9-144.3.x86_64]
+which [2.21-5.14.x86_64]
+wicked [0.6.75-2.1.x86_64]
+wicked-nbft [0.6.75-2.1.x86_64]
+wicked-service [0.6.75-2.1.x86_64] < wicked
+wireless-tools [30.pre9-41.1.x86_64]
+wpa_supplicant [2.10-6.2.x86_64]
+xen-libs [4.18.2_04-1.1.x86_64] < xen-tools-domU
+xen-tools-domU [4.18.2_04-1.1.x86_64]
+xf86-input-wacom [0.40.0-3.1.x86_64]
+xz [5.6.1.revertto5.4-3.1.x86_64]
+IsRws-0-
+/.packages.root:
+Mesa-dri [24.0.7-375.1.x86_64] < libglvnd < Mesa-libEGL1
+Mesa-libEGL1 [24.0.7-375.1.x86_64]
+Mesa-libGL1 [24.0.7-375.1.x86_64]
+Mesa-libglapi0 [24.0.7-375.1.x86_64] < Mesa-libEGL1
+MicroOS-release [20240527-2925.1.x86_64]
+aaa_base [84.87+git20240523.10a5692-1.1.x86_64]
+adobe-sourcesans3-fonts [3.052-1.3.noarch] < yast2-qt-branding-openSUSE < skelcd-control-MicroOS
+adobe-sourcesanspro-fonts [2.045-2.9.noarch]
+alts [1.2+30.a5431e9-1.5.x86_64] < vim-small
+augeas [1.14.1-1.3.x86_64] < ruby3.3-rubygem-ruby-augeas < ruby3.3-rubygem-cfa < yast2
+augeas-lenses [1.14.1-1.3.x86_64] < yast2-installation
+autoyast2 [5.0.2-1.1.noarch] < skelcd-control-MicroOS
+autoyast2-installation [5.0.2-1.1.noarch] < autoyast2 < skelcd-control-MicroOS
+bash [5.2.26-12.1.x86_64]
+bitstream-vera-fonts [1.10-316.4.noarch] < graphviz
+blog [2.28-1.3.x86_64] < sysvinit-tools
+boost-license1_85_0 [1.85.0-1.2.noarch] < libboost_thread1_85_0 < snapper
+btrfsprogs [6.8.1-1.1.x86_64]
+btrfsprogs-udev-rules [6.8.1-1.1.noarch] < btrfsprogs
+bzip2 [1.0.8-5.10.x86_64]
+checkmedia [6.3-1.1.x86_64]
+chrony [4.5-1.1.x86_64]
+chrony-pool-openSUSE [4.5-1.1.noarch] < chrony
+coreutils [9.5-1.1.x86_64]
+cpio [2.15-3.1.x86_64]
+cracklib [2.9.11-1.4.x86_64]
+cracklib-dict-full [2.8.12-66.16.x86_64] < libpwquality1 < cryptsetup
+crypto-policies [20230920.570ea89-3.2.noarch] < openssh-server
+cryptsetup [2.7.2-1.1.x86_64]
+dash [0.5.12-2.6.x86_64]
+dbus-1 [1.14.10-2.3.x86_64] < systemd
+dbus-1-common [1.14.10-2.3.noarch] < dbus-1 < systemd
+dbus-1-daemon [1.14.10-2.3.x86_64] < polkit
+dbus-1-tools [1.14.10-2.3.x86_64] < dbus-1 < systemd
+dejavu-fonts [2.37-1.21.noarch]
+device-mapper [2.03.22_1.02.196-3.1.x86_64]
+diffutils [3.10-1.7.x86_64]
+distribution-logos-openSUSE-MicroOS [20240429-1.1.noarch] < yast2-qt-branding-openSUSE < skelcd-control-MicroOS
+dmz-icon-theme-cursors [11.4.0-1.2.noarch]
+dosfstools [4.2-4.6.x86_64]
+e2fsprogs [1.47.0-4.2.x86_64]
+efibootmgr [18-1.6.x86_64]
+elilo [3.16-9.2.x86_64]
+fcoe-utils [1.0.34-5.2.x86_64] < yast2-fcoe-client < skelcd-control-MicroOS
+fdupes [2.3.0-1.1.x86_64] < ruby-common < ruby3.3 < ruby
+file [5.45-2.2.x86_64]
+file-magic [5.45-2.2.noarch] < libmagic1 < file
+fillup [1.42-281.1.x86_64]
+findutils [4.9.0-4.1.x86_64]
+fontconfig [2.15.0-1.1.x86_64] < fonts-config
+fonts-config [20231210+git0.f7216ba-1.3.noarch]
+gawk [5.3.0-1.5.x86_64]
+glib2-tools [2.80.2-1.1.x86_64] < libgio-2_0-0 < polkit
+glibc [2.39-7.1.x86_64] < rpm
+glibc-locale-base [2.39-7.1.x86_64]
+google-noto-naskharabic-fonts [20240501-1.1.noarch]
+google-opensans-fonts [20210927-1.4.noarch] < yast2-qt-branding-openSUSE < skelcd-control-MicroOS
+google-poppins-fonts [4.003-1.10.noarch]
+google-roboto-fonts [2.138-2.7.noarch]
+gpart [0.3-1.32.x86_64]
+gpg2 [2.4.5-1.1.x86_64]
+gpm [1.20.7-20.2.x86_64]
+graphviz [2.49.3-9.2.x86_64]
+graphviz-gnome [2.49.3-9.3.x86_64]
+graphviz-plugins-core [2.49.3-9.2.x86_64]
+grep [3.11-3.1.x86_64]
+grub2 [2.12-19.1.x86_64]
+gzip [1.13-3.1.x86_64]
+hdparm [9.65-3.2.x86_64]
+hex [1.11-1.2.x86_64]
+hicolor-icon-theme [0.17-4.4.noarch] < dmz-icon-theme-cursors
+hostname [3.23-3.7.x86_64] < yast2
+hwdata [0.382-1.1.noarch] < pciutils
+hwinfo [23.2-1.5.x86_64]
+hyper-v [8-4.1.x86_64]
+icewm-lite [3.5.0-1.1.x86_64]
+indic-fonts [20160512-2.6.noarch]
+initviocons [0.5-107.3.x86_64]
+iproute2 [6.9-1.1.x86_64] < yast2-installation
+iptables [1.8.10-2.3.x86_64]
+iputils [20240117-1.3.x86_64]
+jfsutils [1.1.15-21.2.x86_64]
+joe [4.6-3.2.x86_64]
+kbd [2.6.4-4.1.x86_64]
+kdump [2.0.5-1.1.x86_64] < skelcd-control-MicroOS
+kexec-tools [2.0.28-1.2.x86_64] < kdump < skelcd-control-MicroOS
+keyutils [1.6.3-7.2.x86_64] < nfs-client
+khmeros-fonts [5.0-118.26.noarch]
+klogd [1.5.1-803.2.x86_64]
+kpartx [0.9.8+88+suse.d504d83-1.1.x86_64] < multipath-tools
+krb5 [1.21.2-5.1.x86_64]
+less [643-2.3.x86_64]
+libICE6 [1.1.1-1.6.x86_64] < xterm-bin
+libImlib2-1 [1.12.2-1.3.x86_64] < icewm-lite
+libLLVM18 [18.1.6-1.1.x86_64] < Mesa-dri < libglvnd < Mesa-libEGL1
+libQt5Core5 [5.15.13+kde138-1.3.x86_64] < libyui-qt-graph16
+libQt5DBus5 [5.15.13+kde138-1.3.x86_64] < libQt5Gui5 < libyui-qt-graph16
+libQt5Gui5 [5.15.13+kde138-1.3.x86_64] < libyui-qt-graph16
+libQt5Network5 [5.15.13+kde138-1.3.x86_64] < libQt5Gui5 < libyui-qt-graph16
+libQt5Svg5 [5.15.13+kde6-1.2.x86_64] < libyui-qt-pkg16
+libQt5Widgets5 [5.15.13+kde138-1.3.x86_64] < libyui-qt-graph16
+libSM6 [1.2.4-2.5.x86_64] < icewm-lite
+libX11-6 [1.8.9-1.1.x86_64] < Mesa-libGL1
+libX11-data [1.8.9-1.1.noarch] < libX11-xcb1 < Mesa-libEGL1
+libX11-xcb1 [1.8.9-1.1.x86_64] < Mesa-libEGL1
+libXau6 [1.0.11-1.5.x86_64] < xorg-x11-server
+libXaw7 [1.0.16-1.2.x86_64] < xterm-bin
+libXcomposite1 [0.4.6-1.4.x86_64] < icewm-lite
+libXcursor1 [1.2.2-1.2.x86_64] < xsetroot < xinit < xorg-x11-Xvnc
+libXdamage1 [1.1.6-1.4.x86_64] < icewm-lite
+libXdmcp6 [1.1.5-1.2.x86_64] < xorg-x11-server
+libXext6 [1.3.6-1.2.x86_64] < Mesa-libGL1
+libXfixes3 [6.0.1-1.3.x86_64] < Mesa-libGL1
+libXfont2-2 [2.0.6-1.6.x86_64] < xorg-x11-server
+libXft2 [2.3.8-1.3.x86_64] < xterm-bin
+libXi6 [1.8.1-1.3.x86_64] < xf86-input-wacom
+libXinerama1 [1.1.5-1.4.x86_64] < icewm-lite
+libXmu6 [1.2.1-1.1.x86_64] < xterm-bin
+libXmuu1 [1.2.1-1.1.x86_64] < xset
+libXpm4 [3.5.17-1.3.x86_64] < xterm-bin
+libXrandr2 [1.5.4-1.3.x86_64] < setxkbmap
+libXrender1 [0.9.11-1.4.x86_64] < icewm-lite
+libXt6 [1.3.0-1.5.x86_64] < xterm-bin
+libXtst6 [1.2.4-1.4.x86_64] < xorg-x11-Xvnc
+libXvnc1 [1.13.1-6.2.x86_64] < xorg-x11-Xvnc
+libXxf86dga1 [1.1.6-1.5.x86_64] < xdpyinfo
+libXxf86vm1 [1.1.5-1.4.x86_64] < Mesa-libGL1
+libabsl_lite_2401_0_0 [20240116.2-2.1.x86_64] < libzypp < libyui-ncurses-pkg16
+libacl1 [2.3.2-2.1.x86_64] < rpm
+libaio1 [0.3.113-4.1.x86_64] < lvm2
+libalternatives1 [1.2+30.a5431e9-1.5.x86_64] < alts < vim-small
+libapparmor1 [4.0.1-1.1.x86_64] < systemd
+libargon2-1 [20190702-4.1.x86_64] < libcryptsetup12 < cryptsetup
+libassuan0 [2.5.7-1.1.x86_64] < gpg2
+libattr1 [2.5.2-1.2.x86_64] < coreutils
+libaudit1 [3.1.1-1.6.x86_64] < openssh-server
+libaugeas0 [1.14.1-1.3.x86_64] < augeas-lenses < yast2-installation
+libblkid1 [2.40.1-2.1.x86_64] < e2fsprogs
+libblogger2 [2.28-1.3.x86_64] < sysvinit-tools
+libboost_thread1_85_0 [1.85.0-1.2.x86_64] < snapper
+libbpf1 [1.4.2-1.1.x86_64] < iproute2 < yast2-installation
+libbrotlicommon1 [1.1.0-1.3.x86_64] < libbrotlidec1 < libfreetype6 < xterm-bin
+libbrotlidec1 [1.1.0-1.3.x86_64] < libfreetype6 < xterm-bin
+libbtrfs0 [6.8.1-1.1.x86_64] < libsnapper7 < snapper
+libbtrfsutil1 [6.8.1-1.1.x86_64] < libsnapper7 < snapper
+libbz2-1 [1.0.8-5.10.x86_64] < rpm
+libcairo2 [1.18.0-1.3.x86_64] < pango-tools
+libcap-ng0 [0.8.5-1.1.x86_64] < smartmontools
+libcap2 [2.69-1.7.x86_64] < rpm
+libcbor0_11 [0.11.0-1.1.x86_64] < libfido2-1 < openssh-server
+libcdt5 [2.49.3-9.2.x86_64] < graphviz-plugins-core
+libcgraph6 [2.49.3-9.2.x86_64] < graphviz-plugins-core
+libcom_err2 [1.47.0-4.2.x86_64] < e2fsprogs
+libconfig11 [1.7.3-1.11.x86_64] < open-lldp < fcoe-utils < yast2-fcoe-client < skelcd-control-MicroOS
+libcrack2 [2.9.11-1.4.x86_64] < yast2-users < skelcd-control-MicroOS
+libcrypt1 [4.4.36-1.6.x86_64] < openssh-server
+libcryptsetup12 [2.7.2-1.1.x86_64] < cryptsetup
+libcurl4 [8.8.0-1.1.x86_64] < libpxbackend-1_0
+libdatrie1 [0.2.13-1.15.x86_64] < libthai0 < libpango-1_0-0 < pango-tools
+libdb-4_8 [4.8.30-43.2.x86_64] < perl
+libdbus-1-3 [1.14.10-2.3.x86_64] < xorg-x11-server
+libdevmapper-event1_03 [2.03.22_1.02.196-3.1.x86_64] < lvm2
+libdevmapper1_03 [2.03.22_1.02.196-3.1.x86_64] < nfs-client
+libdouble-conversion3 [3.3.0-1.4.x86_64] < libQt5Core5 < libyui-qt-graph16
+libdrm2 [2.4.120-1.3.x86_64] < Mesa-libEGL1
+libdrm_amdgpu1 [2.4.120-1.3.x86_64] < Mesa-dri < libglvnd < Mesa-libEGL1
+libdrm_intel1 [2.4.120-1.3.x86_64] < Mesa-dri < libglvnd < Mesa-libEGL1
+libdrm_nouveau2 [2.4.120-1.3.x86_64] < Mesa-dri < libglvnd < Mesa-libEGL1
+libdrm_radeon1 [2.4.120-1.3.x86_64] < Mesa-dri < libglvnd < Mesa-libEGL1
+libduktape207 [2.7.0-3.3.x86_64] < polkit
+libdw1 [0.191-1.2.x86_64] < strace
+libeconf0 [0.6.3-1.1.x86_64] < pam
+libedit0 [20210910.3.1-2.7.x86_64] < dash
+libefivar1 [38-2.3.x86_64] < efibootmgr
+libelf1 [0.191-1.2.x86_64] < ltrace
+libepoxy0 [1.5.10-2.4.x86_64] < xorg-x11-server
+libevdev2 [1.13.1-1.4.x86_64] < libinput10 < xf86-input-libinput
+libevent-2_1-7 [2.1.12-4.2.x86_64] < nfs-client
+libexpat1 [2.6.2-1.1.x86_64] < graphviz
+libexslt0 [1.1.39-2.1.x86_64] < ruby3.3-rubygem-nokogiri < yast2
+libext2fs2 [1.47.0-4.2.x86_64] < e2fsprogs
+libfa1 [1.14.1-1.3.x86_64] < libaugeas0 < augeas-lenses < yast2-installation
+libfdisk1 [2.40.1-2.1.x86_64] < util-linux
+libffi8 [3.4.6-1.1.x86_64] < libwayland-client0 < Mesa-libEGL1
+libfido2-1 [1.14.0-1.4.x86_64] < openssh-server
+libfontconfig1 [2.15.0-1.1.x86_64] < xterm-bin
+libfontenc1 [1.1.8-1.2.x86_64] < mkfontscale
+libfreetype6 [2.13.2-2.2.x86_64] < xterm-bin
+libfribidi0 [1.0.14-1.1.x86_64] < libpango-1_0-0 < pango-tools
+libgbm1 [24.0.7-375.1.x86_64]
+libgcc_s1 [14.1.0+git10173-1.1.x86_64] < graphviz-plugins-core
+libgcrypt20 [1.10.3-3.3.x86_64] < rpm
+libgdbm6 [1.23-3.3.x86_64] < perl
+libgdbm_compat4 [1.23-3.3.x86_64] < perl
+libgio-2_0-0 [2.80.2-1.1.x86_64] < polkit
+libglib-2_0-0 [2.80.2-1.1.x86_64] < graphviz-plugins-core
+libglvnd [1.7.0-1.3.x86_64] < Mesa-libEGL1
+libgmodule-2_0-0 [2.80.2-1.1.x86_64] < libgio-2_0-0 < polkit
+libgmp10 [6.3.0-3.2.x86_64] < coreutils
+libgnutls30 [3.8.5-1.1.x86_64] < ntfsprogs
+libgobject-2_0-0 [2.80.2-1.1.x86_64] < pango-tools
+libgpg-error0 [1.49-1.1.x86_64] < gpg2
+libgpgme11 [1.23.2-4.2.x86_64] < libzypp < libyui-ncurses-pkg16
+libgpm2 [1.20.7-20.2.x86_64] < gpm
+libgraphite2-3 [1.3.14-4.3.x86_64] < libharfbuzz0 < pango-tools
+libgts-0_7-5 [0.7.6_p20121130-4.36.x86_64] < graphviz-plugins-core
+libgudev-1_0-0 [238-1.4.x86_64] < libwacom9 < libinput10 < xf86-input-libinput
+libgvc6 [2.49.3-9.2.x86_64] < graphviz-plugins-core
+libgvpr2 [2.49.3-9.2.x86_64] < graphviz
+libhandle1 [6.8.0-1.1.x86_64] < xfsdump
+libharfbuzz0 [8.5.0-1.2.x86_64] < pango-tools
+libhd23 [23.2-1.5.x86_64] < hwinfo
+libhidapi-hidraw0 [0.14.0-1.3.x86_64] < libfido2-1 < openssh-server
+libhogweed6 [3.9.1-2.5.x86_64] < xorg-x11-Xvnc
+libicu75 [75.1-1.1.x86_64] < libQt5Core5 < libyui-qt-graph16
+libicu75-ledata [75.1-1.1.noarch] < libicu75 < libQt5Core5 < libyui-qt-graph16
+libidn2-0 [2.3.7-1.2.x86_64] < iputils
+libinih0 [58-1.3.x86_64] < xfsprogs
+libinput10 [1.25.0-2.2.x86_64] < xf86-input-libinput
+libip4tc2 [1.8.10-2.3.x86_64] < iptables
+libip6tc2 [1.8.10-2.3.x86_64] < iptables
+libjitterentropy3 [3.4.1-4.2.x86_64] < libgnutls30 < ntfsprogs
+libjpeg8 [8.3.2-79.2.x86_64] < xorg-x11-Xvnc
+libjson-c5 [0.17-2.3.x86_64] < snapper
+libkeyutils1 [1.6.3-7.2.x86_64] < nfs-client
+libkmod2 [32-1.1.x86_64] < pciutils
+libksba8 [1.6.6-1.1.x86_64] < gpg2
+liblab_gamut1 [2.49.3-9.2.x86_64] < graphviz
+libldap2 [2.6.7-1.1.x86_64] < libcurl4 < libpxbackend-1_0
+libldapcpp0 [2.6.7-1.1.x86_64] < yast2-ldap < yast2-users < skelcd-control-MicroOS
+liblldp_clif1 [1.1+106.74c0600a8692-1.3.x86_64] < open-lldp < fcoe-utils < yast2-fcoe-client < skelcd-control-MicroOS
+libltdl7 [2.4.7-3.9.x86_64] < libgvc6 < graphviz-plugins-core
+liblua5_4-5 [5.4.6-3.3.x86_64] < rpm
+liblvm2cmd2_03 [2.03.22-3.1.x86_64] < lvm2
+liblz4-1 [1.9.4-2.8.x86_64] < systemd
+liblzma5 [5.6.1.revertto5.4-3.1.x86_64] < rpm
+liblzo2-2 [2.10-8.6.x86_64] < btrfsprogs
+libmagic1 [5.45-2.2.x86_64] < file
+libmediacheck6 [6.3-1.1.x86_64] < checkmedia
+libmnl0 [1.0.5-1.7.x86_64] < iptables
+libmount1 [2.40.1-2.1.x86_64] < nfs-client
+libmpath0 [0.9.8+88+suse.d504d83-1.1.x86_64] < multipath-tools
+libmpdec3 [2.5.1-2.19.x86_64] < python311-base < python311-websockify < novnc
+libmpfr6 [4.2.1-1.4.x86_64] < gawk
+libmtdev1 [1.1.6-1.15.x86_64] < libQt5Gui5 < libyui-qt-graph16
+libncurses6 [6.5.20240427-36.1.x86_64] < joe
+libnetfilter_conntrack3 [1.0.9-1.9.x86_64] < xtables-plugins < iptables
+libnettle8 [3.9.1-2.5.x86_64] < xorg-x11-Xvnc
+libnfnetlink0 [1.0.2-1.9.x86_64] < xtables-plugins < iptables
+libnfsidmap1 [1.0-41.3.x86_64] < nfs-client
+libnftnl11 [1.2.6-1.3.x86_64] < iptables
+libnghttp2-14 [1.61.0-1.1.x86_64] < libcurl4 < libpxbackend-1_0
+libnl-config [3.9.0-1.3.noarch] < libnl3-200 < xen-libs < kexec-tools < kdump < skelcd-control-MicroOS
+libnl3-200 [3.9.0-1.3.x86_64] < xen-libs < kexec-tools < kdump < skelcd-control-MicroOS
+libnpth0 [1.7-1.1.x86_64] < gpg2
+libnss_usrfiles2 [2.27.1-1.2.x86_64] < nfs-client
+libntfs-3g89 [2022.10.3-2.7.x86_64] < ntfsprogs
+libopenssl3 [3.1.4-8.1.x86_64] < openssh-server
+libp11-kit0 [0.25.3-1.3.x86_64] < p11-kit
+libpango-1_0-0 [1.52.0-2.1.x86_64] < pango-tools
+libparted-fs-resize0 [3.6-2.1.x86_64] < parted
+libparted2 [3.6-2.1.x86_64] < parted
+libpathplan4 [2.49.3-9.2.x86_64] < graphviz-plugins-core
+libpci3 [3.10.0-1.5.x86_64] < pciutils
+libpciaccess0 [0.18.1-1.2.x86_64] < xorg-x11-server
+libpcre2-16-0 [10.43-3.1.x86_64] < libQt5Core5 < libyui-qt-graph16
+libpcre2-8-0 [10.43-3.1.x86_64] < grep
+libpixman-1-0 [0.43.4-1.1.x86_64] < xorg-x11-server
+libpkgconf4 [2.1.1-1.2.x86_64] < pkgconf < pkgconf-pkg-config < xorg-x11-server
+libpng16-16 [1.6.43-1.1.x86_64] < libfreetype6 < xterm-bin
+libpolkit-agent-1-0 [123-2.3.x86_64] < polkit
+libpolkit-gobject-1-0 [123-2.3.x86_64] < polkit
+libpopt0 [1.19-1.8.x86_64] < rpm
+libprocps8 [3.3.17-17.1.x86_64] < procps
+libprotobuf-lite25_3_0 [25.3-11.2.x86_64] < libzypp < libyui-ncurses-pkg16
+libproxy1 [0.5.6-1.1.x86_64] < libzypp < libyui-ncurses-pkg16
+libpsl5 [0.21.5-1.2.x86_64] < libcurl4 < libpxbackend-1_0
+libpwquality1 [1.4.5-2.3.x86_64] < cryptsetup
+libpxbackend-1_0 [0.5.6-1.1.x86_64]
+libpython3_11-1_0 [3.11.9-2.1.x86_64] < python311-base < python311-websockify < novnc
+libreadline8 [8.2.10-1.3.x86_64] < bash
+libruby3_3-3_3 [3.3.1-2.1.x86_64] < yast2-ruby-bindings < yast2-widget-demo
+libsasl2-3 [2.1.28-8.1.x86_64] < libldap2 < libcurl4 < libpxbackend-1_0
+libseccomp2 [2.5.5-1.3.x86_64] < systemd
+libselinux1 [3.6-1.3.x86_64] < rpm
+libsemanage-conf [3.6-1.4.x86_64] < libsemanage2 < shadow
+libsemanage2 [3.6-1.4.x86_64] < shadow
+libsepol2 [3.6-1.3.x86_64] < libsemanage2 < shadow
+libsgutils2-1_48-2 [1.48+9.ecc03bb-1.1.x86_64] < sg3_utils
+libsigc-2_0-0 [2.12.1-2.3.x86_64] < libzypp < libyui-ncurses-pkg16
+libslp1 [2.0.0-22.2.x86_64] < openslp
+libsmartcols1 [2.40.1-2.1.x86_64] < util-linux
+libsnapper7 [0.11.0-1.1.x86_64] < snapper
+libsnappy1 [1.1.10-2.2.x86_64] < makedumpfile < kdump < skelcd-control-MicroOS
+libsolv-tools [0.7.29-1.1.x86_64]
+libsolv-tools-base [0.7.29-1.1.x86_64] < libsolv-tools
+libsqlite3-0 [3.45.3-1.1.x86_64] < nfs-client
+libssh-config [0.10.6-2.1.x86_64] < libssh4 < libcurl4 < libpxbackend-1_0
+libssh4 [0.10.6-2.1.x86_64] < libcurl4 < libpxbackend-1_0
+libstdc++6 [14.1.0+git10173-1.1.x86_64] < graphviz-plugins-core
+libstorage-ng-lang [4.5.204-1.1.noarch]
+libstorage-ng-ruby [4.5.204-1.1.x86_64] < yast2-storage-ng
+libstorage-ng1 [4.5.204-1.1.x86_64] < libstorage-ng-ruby < yast2-storage-ng
+libsubid4 [4.15.1-1.2.x86_64] < shadow
+libsystemd0 [255.6-2.1.x86_64] < openssh-server
+libtasn1-6 [4.19.0-1.7.x86_64] < p11-kit
+libthai-data [0.1.29-1.8.x86_64] < libthai0 < libpango-1_0-0 < pango-tools
+libthai0 [0.1.29-1.8.x86_64] < libpango-1_0-0 < pango-tools
+libtirpc-netconfig [1.3.4-1.3.x86_64] < libtirpc3 < nfs-client
+libtirpc3 [1.3.4-1.3.x86_64] < nfs-client
+libts0 [1.22-1.15.x86_64] < libQt5Gui5 < libyui-qt-graph16
+libudev1 [255.6-2.1.x86_64]
+libunistring5 [1.2-1.1.x86_64] < libgnutls30 < ntfsprogs
+liburcu8 [0.14.0-1.5.x86_64] < multipath-tools
+libusb-1_0-0 [1.0.27-1.2.x86_64] < usbutils
+libutempter0 [1.2.1-2.2.x86_64] < xterm-bin
+libuuid1 [2.40.1-2.1.x86_64] < e2fsprogs
+libverto1 [0.3.2-3.3.x86_64] < krb5
+libvulkan1 [1.3.283.0-1.1.x86_64] < Mesa-dri < libglvnd < Mesa-libEGL1
+libwacom-data [2.11.0-1.1.x86_64] < libwacom9 < libinput10 < xf86-input-libinput
+libwacom9 [2.11.0-1.1.x86_64] < libinput10 < xf86-input-libinput
+libwayland-client0 [1.22.0-1.5.x86_64] < Mesa-libEGL1
+libwayland-server0 [1.22.0-1.5.x86_64] < Mesa-libEGL1
+libwrap0 [7.6-896.2.x86_64] < rpcbind
+libwtmpdb0 [0.12.0+git.20240508-1.1.x86_64] < openssh-server
+libx86emu3 [3.5-2.1.x86_64] < libhd23 < hwinfo
+libxcb-dri2-0 [1.17.0-1.1.x86_64] < Mesa-libEGL1
+libxcb-dri3-0 [1.17.0-1.1.x86_64] < Mesa-libEGL1
+libxcb-glx0 [1.17.0-1.1.x86_64] < Mesa-libGL1
+libxcb-icccm4 [0.4.2-1.4.x86_64] < libQt5Gui5 < libyui-qt-graph16
+libxcb-image0 [0.4.1-1.5.x86_64] < libQt5Gui5 < libyui-qt-graph16
+libxcb-keysyms1 [0.4.1-1.4.x86_64] < libQt5Gui5 < libyui-qt-graph16
+libxcb-present0 [1.17.0-1.1.x86_64] < Mesa-libEGL1
+libxcb-randr0 [1.17.0-1.1.x86_64] < Mesa-libEGL1
+libxcb-render-util0 [0.3.10-1.4.x86_64] < libQt5Gui5 < libyui-qt-graph16
+libxcb-render0 [1.17.0-1.1.x86_64] < libcairo2 < pango-tools
+libxcb-shape0 [1.17.0-1.1.x86_64] < libQt5Gui5 < libyui-qt-graph16
+libxcb-shm0 [1.17.0-1.1.x86_64] < Mesa-libGL1
+libxcb-sync1 [1.17.0-1.1.x86_64] < Mesa-libEGL1
+libxcb-util1 [0.4.1-1.4.x86_64] < libxcb-image0 < libQt5Gui5 < libyui-qt-graph16
+libxcb-xfixes0 [1.17.0-1.1.x86_64] < Mesa-libEGL1
+libxcb-xinerama0 [1.17.0-1.1.x86_64] < libQt5Gui5 < libyui-qt-graph16
+libxcb-xinput0 [1.17.0-1.1.x86_64] < libQt5Gui5 < libyui-qt-graph16
+libxcb-xkb1 [1.17.0-1.1.x86_64] < libQt5Gui5 < libyui-qt-graph16
+libxcb1 [1.17.0-1.1.x86_64] < Mesa-libEGL1
+libxcvt0 [0.1.2-1.7.x86_64] < xorg-x11-server
+libxkbcommon-x11-0 [1.7.0-1.2.x86_64] < libQt5Gui5 < libyui-qt-graph16
+libxkbcommon0 [1.7.0-1.2.x86_64] < libQt5Gui5 < libyui-qt-graph16
+libxkbfile1 [1.1.3-1.2.x86_64] < setxkbmap
+libxml2-2 [2.12.7-1.1.x86_64] < libsolv-tools
+libxshmfence1 [1.3.2-1.4.x86_64] < Mesa-libEGL1
+libxslt-tools [1.1.39-2.1.x86_64] < autoyast2 < skelcd-control-MicroOS
+libxslt1 [1.1.39-2.1.x86_64] < ruby3.3-rubygem-nokogiri < yast2
+libxtables12 [1.8.10-2.3.x86_64] < iptables
+libyajl2 [2.1.0-8.5.x86_64] < xen-libs < kexec-tools < kdump < skelcd-control-MicroOS
+libyaml-0-2 [0.2.5-2.5.x86_64] < ruby3.3 < ruby
+libyaml-cpp0_8 [0.8.0-1.3.x86_64] < libzypp < libyui-ncurses-pkg16
+libyui-ncurses-pkg16 [4.6.1-1.6.x86_64]
+libyui-ncurses16 [4.6.1-1.3.x86_64] < libyui-ncurses-pkg16
+libyui-qt-graph16 [4.6.1-1.3.x86_64]
+libyui-qt-pkg16 [4.6.1-1.6.x86_64]
+libyui-qt16 [4.6.1-1.3.x86_64] < libyui-qt-graph16
+libyui16 [4.6.1-1.3.x86_64] < libyui-ncurses-pkg16
+libz1 [1.3.1-1.1.x86_64] < rpm
+libzck1 [1.4.0-2.1.x86_64] < libzypp < libyui-ncurses-pkg16
+libzstd1 [1.5.6-1.1.x86_64] < rpm
+libzypp [17.34.0-1.1.x86_64] < libyui-ncurses-pkg16
+lklug-fonts [0.6-120.25.noarch]
+login_defs [4.15.1-1.2.noarch] < shadow
+lsscsi [0.32-1.6.x86_64] < libstorage-ng1 < libstorage-ng-ruby < yast2-storage-ng
+ltrace [0.7.91+git20230705.8eabf68-2.2.x86_64]
+lvm2 [2.03.22-3.1.x86_64]
+makedumpfile [1.7.5-1.1.x86_64] < kdump < skelcd-control-MicroOS
+mkfontscale [1.2.3-1.2.x86_64]
+multipath-tools [0.9.8+88+suse.d504d83-1.1.x86_64]
+ncurses-utils [6.5.20240427-36.1.x86_64]
+nfs-client [2.6.3-41.3.x86_64]
+novnc [1.4.0-1.3.noarch]
+nscd [2.39-7.1.x86_64]
+ntfsprogs [2022.10.3-2.7.x86_64]
+open-lldp [1.1+106.74c0600a8692-1.3.x86_64] < fcoe-utils < yast2-fcoe-client < skelcd-control-MicroOS
+openslp [2.0.0-22.2.x86_64]
+openslp-server [2.0.0-22.2.x86_64]
+openssh [9.6p1-8.1.x86_64]
+openssh-clients [9.6p1-8.1.x86_64] < openssh
+openssh-common [9.6p1-8.1.x86_64] < openssh-server
+openssh-server [9.6p1-8.1.x86_64]
+openssl [3.1.4-3.2.noarch] < xorg-x11-Xvnc
+openssl-3 [3.1.4-8.1.x86_64] < openssl < xorg-x11-Xvnc
+p11-kit [0.25.3-1.3.x86_64]
+p11-kit-tools [0.25.3-1.3.x86_64]
+pam [1.6.1-1.1.x86_64]
+pango-tools [1.52.0-2.1.x86_64]
+parted [3.6-2.1.x86_64]
+pciutils [3.10.0-1.5.x86_64]
+perl [5.38.2-3.1.x86_64]
+perl-Digest-SHA1 [2.13-19.43.x86_64] < yast2-users < skelcd-control-MicroOS
+perl-Parse-RecDescent [1.967015-1.28.x86_64] < perl-X500-DN < yast2-users < skelcd-control-MicroOS
+perl-X500-DN [0.29-110.1.x86_64] < yast2-users < skelcd-control-MicroOS
+perl-XML-Bare [0.53-6.1.x86_64]
+perl-XML-NamespaceSupport [1.12-1.27.noarch]
+perl-base [5.38.2-3.1.x86_64]
+perl-gettext [1.07-2.2.x86_64]
+pigz [2.8-2.3.x86_64] < yast2-update < skelcd-control-MicroOS
+pkgconf [2.1.1-1.2.x86_64] < pkgconf-pkg-config < xorg-x11-server
+pkgconf-m4 [2.1.1-1.2.noarch] < pkgconf-pkg-config < xorg-x11-server
+pkgconf-pkg-config [2.1.1-1.2.x86_64] < xorg-x11-server
+polkit [123-2.3.x86_64]
+procinfo [18-226.1.x86_64]
+procps [3.3.17-17.1.x86_64]
+psmisc [23.6-5.2.x86_64]
+python311-base [3.11.9-2.1.x86_64] < python311-websockify < novnc
+python311-setuptools [69.0.3-1.4.noarch] < python311-websockify < novnc
+python311-websockify [0.10.0-3.10.noarch] < novnc
+rgb [1.1.0-1.6.x86_64]
+rpcbind [1.2.6-5.5.x86_64]
+rpm [4.19.1.1-3.2.x86_64]
+rpm-config-SUSE [20240214-1.2.noarch] < rpm
+ruby [3.3-1.4.x86_64]
+ruby-common [3.2.1-3.4.noarch] < ruby3.3 < ruby
+ruby-solv [0.7.29-1.1.x86_64] < yast2-packager < yast2-storage-ng
+ruby3.3 [3.3.1-2.1.x86_64] < ruby
+ruby3.3-rubygem-abstract_method [1.2.1-2.35.x86_64] < yast2
+ruby3.3-rubygem-byebug [11.1.3-1.27.x86_64] < skelcd-control-MicroOS
+ruby3.3-rubygem-cfa [1.0.2-1.22.x86_64] < yast2
+ruby3.3-rubygem-cfa_grub2 [2.0.0-1.22.x86_64] < yast2-bootloader < yast2-installation
+ruby3.3-rubygem-cheetah [1.0.0-1.14.x86_64] < yast2
+ruby3.3-rubygem-fast_gettext [2.3.0-1.5.x86_64] < yast2-ruby-bindings < yast2-widget-demo
+ruby3.3-rubygem-gem2rpm [0.10.1-23.2.x86_64] < ruby-common < ruby3.3 < ruby
+ruby3.3-rubygem-nokogiri [1.15.5-1.5.x86_64] < yast2
+ruby3.3-rubygem-ruby-augeas [0.5.0-3.37.x86_64] < ruby3.3-rubygem-cfa < yast2
+ruby3.3-rubygem-ruby-dbus [0.23.1-2.4.x86_64] < yast2-storage-ng
+ruby3.3-rubygem-simpleidn [0.2.1-1.17.x86_64] < yast2
+ruby3.3-rubygem-unf [0.1.4-1.34.x86_64] < ruby3.3-rubygem-simpleidn < yast2
+ruby3.3-rubygem-unf_ext [0.0.9.1-1.5.x86_64] < ruby3.3-rubygem-unf < ruby3.3-rubygem-simpleidn < yast2
+screen [4.9.1-2.2.x86_64]
+sed [4.9-2.6.x86_64]
+setxkbmap [1.3.4-1.5.x86_64]
+sg3_utils [1.48+9.ecc03bb-1.1.x86_64]
+shadow [4.15.1-1.2.x86_64]
+skelcd-control-MicroOS [20240524-1.1.x86_64]
+smartmontools [7.4-2.3.x86_64]
+snapper [0.11.0-1.1.x86_64]
+strace [6.9-1.1.x86_64]
+suse-module-tools [16.0.44-1.1.x86_64]
+sysconfig [0.90.0-3.6.x86_64] < yast2
+syslinux [4.04-49.3.x86_64]
+system-group-hardware [20170617-25.4.noarch] < libutempter0 < xterm-bin
+system-user-daemon [20170617-25.4.noarch] < openslp-server
+system-user-root [20190513-2.16.noarch] < pam
+systemd [255.6-2.1.x86_64]
+systemd-default-settings [0.10-1.1.noarch] < systemd-default-settings-branding-openSUSE < systemd
+systemd-default-settings-branding-openSUSE [0.10-1.1.noarch] < systemd
+systemd-presets-branding-MicroOS [20230214-3.1.noarch]
+systemd-presets-common-SUSE [15-32.2.noarch] < systemd-presets-branding-MicroOS
+systemd-rpm-macros [24-1.6.noarch] < suse-module-tools
+sysuser-shadow [3.2-2.3.noarch] < openssh-server
+sysvinit-tools [3.08-2.2.x86_64]
+tar [1.35-2.2.x86_64] < yast2-installation
+terminfo-base [6.5.20240427-36.1.x86_64] < screen
+thai-fonts [0.7.3-1.10.noarch]
+thin-provisioning-tools [1.0.12-3.1.x86_64] < device-mapper
+timezone [2024a-3.2.x86_64]
+udftools [2.3-1.16.x86_64]
+usbutils [017-3.2.x86_64]
+util-linux [2.40.1-2.1.x86_64]
+vim-data-common [9.1.0413-1.1.noarch] < vim-small
+vim-small [9.1.0413-1.1.x86_64]
+which [2.21-5.14.x86_64] < novnc
+xauth [1.1.3-1.2.x86_64]
+xbitmaps [1.1.3-2.3.noarch] < libXmu6 < xterm-bin
+xdpyinfo [1.3.4-1.4.x86_64]
+xen-libs [4.18.2_04-1.1.x86_64] < kexec-tools < kdump < skelcd-control-MicroOS
+xf86-input-libinput [1.4.0-1.3.x86_64]
+xf86-input-wacom [0.40.0-3.1.x86_64]
+xf86-video-fbdev [0.5.0-3.7.x86_64]
+xf86-video-vesa [2.6.0-2.2.x86_64]
+xfsdump [3.1.12-3.2.x86_64]
+xfsprogs [6.8.0-1.1.x86_64]
+xhost [1.0.9-1.6.x86_64]
+xinit [1.4.2-2.2.x86_64] < xorg-x11-Xvnc
+xkbcomp [1.4.7-1.2.x86_64]
+xkeyboard-config [2.41-1.2.noarch]
+xmodmap [1.0.11-1.7.x86_64]
+xorg-x11-Xvnc [1.13.1-6.2.x86_64]
+xorg-x11-fonts [7.6-46.2.noarch] < xorg-x11-fonts-legacy
+xorg-x11-fonts-core [7.6-46.2.noarch]
+xorg-x11-fonts-legacy [7.6-46.2.noarch]
+xorg-x11-server [21.1.12-2.1.x86_64]
+xorg-x11-server-Xvfb [21.1.12-2.1.x86_64] < xorg-x11-server
+xrandr [1.5.2-2.2.x86_64]
+xrdb [1.2.2-1.4.x86_64]
+xrefresh [1.1.0-1.2.x86_64]
+xset [1.2.5-2.5.x86_64]
+xsetroot [1.1.3-1.6.x86_64] < xinit < xorg-x11-Xvnc
+xtables-plugins [1.8.10-2.3.x86_64] < iptables
+xterm-bin [389-1.3.x86_64]
+xterm-resize [389-1.3.x86_64] < xterm-bin
+xz [5.6.1.revertto5.4-3.1.x86_64]
+yast2 [5.0.8-1.1.x86_64]
+yast2-add-on [5.0.0-1.4.noarch] < skelcd-control-MicroOS
+yast2-bootloader [5.0.10-1.1.x86_64] < yast2-installation
+yast2-buildtools [5.0.0-1.3.noarch]
+yast2-caasp [4.6.0-1.4.noarch] < skelcd-control-MicroOS
+yast2-core [5.0.2-1.3.x86_64] < yast2
+yast2-country [5.0.2-1.4.x86_64] < yast2-installation
+yast2-country-data [5.0.2-1.4.x86_64] < yast2-installation
+yast2-devtools [5.0.0-1.3.noarch]
+yast2-fcoe-client [5.0.0-1.5.noarch] < skelcd-control-MicroOS
+yast2-firewall [5.0.0-1.4.noarch] < skelcd-control-MicroOS
+yast2-hardware-detection [5.0.0-1.3.x86_64] < yast2
+yast2-installation [5.0.10-1.1.noarch]
+yast2-iscsi-client [5.0.1-1.4.noarch] < skelcd-control-MicroOS
+yast2-kdump [5.0.0-1.4.x86_64] < skelcd-control-MicroOS
+yast2-ldap [5.0.0-1.5.x86_64] < yast2-users < skelcd-control-MicroOS
+yast2-logs [5.0.8-1.1.x86_64] < yast2
+yast2-multipath [5.0.0-1.5.noarch] < skelcd-control-MicroOS
+yast2-network [5.0.3-1.1.noarch] < skelcd-control-MicroOS
+yast2-nfs-client [5.0.0-1.4.noarch] < skelcd-control-MicroOS
+yast2-nfs-common [5.0.0-1.4.noarch] < yast2-nfs-client < skelcd-control-MicroOS
+yast2-ntp-client [5.0.0-1.4.noarch] < skelcd-control-MicroOS
+yast2-packager [5.0.5-1.1.x86_64] < yast2-storage-ng
+yast2-pam [5.0.0-1.4.noarch] < yast2-users < skelcd-control-MicroOS
+yast2-perl-bindings [5.0.4-1.1.x86_64] < yast2
+yast2-pkg-bindings [5.0.4-1.6.x86_64] < yast2-installation
+yast2-proxy [5.0.0-1.4.noarch] < skelcd-control-MicroOS
+yast2-qt-branding-openSUSE [84.87.20240405-1.2.noarch] < skelcd-control-MicroOS
+yast2-rdp [5.0.0-1.4.noarch] < skelcd-control-MicroOS
+yast2-ruby-bindings [5.0.0-1.4.x86_64] < yast2-widget-demo
+yast2-schema-micro [5.0.1-1.8.x86_64] < autoyast2 < skelcd-control-MicroOS
+yast2-security [5.0.0-1.4.noarch] < yast2-installation
+yast2-services-manager [5.0.0-1.4.noarch] < skelcd-control-MicroOS
+yast2-slp [5.0.0-1.5.x86_64] < skelcd-control-MicroOS
+yast2-storage-ng [5.0.14-1.1.x86_64]
+yast2-theme [5.0.1-1.4.noarch] < skelcd-control-MicroOS
+yast2-trans-stats [2.19.0-17.28.noarch] < skelcd-control-MicroOS
+yast2-transfer [5.0.0-1.5.x86_64] < autoyast2 < skelcd-control-MicroOS
+yast2-tune [5.0.0-1.5.x86_64] < skelcd-control-MicroOS
+yast2-update [5.0.1-1.4.x86_64] < skelcd-control-MicroOS
+yast2-users [5.0.1-1.5.x86_64] < skelcd-control-MicroOS
+yast2-vm [5.0.0-1.5.x86_64] < skelcd-control-MicroOS
+yast2-widget-demo [0.9.1-1.13.noarch]
+yast2-x11 [5.0.2-1.3.x86_64] < skelcd-control-MicroOS
+yast2-xml [5.0.0-1.3.x86_64] < autoyast2 < skelcd-control-MicroOS
+yast2-ycp-ui-bindings [5.0.0-1.3.x86_64] < yast2-storage-ng
+ZFAYC-0-
+N06xI-0-
+A99Hf-0-
+KdUfq-0-
+T_TZ1-0-
+X5qi2-0-
+4U~aA-0-
+tzby~-0-
+5RNha-0-
+uxt_4-0-
+[  962.085913][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+ens4: 10.0.2.15 fe80::5054:ff:fe12:3456
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+ens4: 10.0.2.15 fec0::f5f3:67af:d35b:1593
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:43:36 localhost kernel: audit: type=1400 audit(1716882215.746:5): avc:  denied  { map_read map_write } for  pid=569 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:43:36 localhost kernel: audit: type=1400 audit(1716882215.756:6): avc:  denied  { map_read map_write } for  pid=571 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:43:37 localhost kernel: audit: type=1400 audit(1716882217.753:7): avc:  denied  { getattr } for  pid=739 comm="systemd-sysctl" path="/usr/local" dev="vda2" ino=256 scontext=system_u:system_r:systemd_sysctl_t:s0-s0:c0.c1023 tcontext=system_u:object_r:unlabeled_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+1w08R-0-
+m5pub-0-
+8I3L6-0-
+UfVk_-0-
+OSm16
+SCRIPT_FINISHEDOSm16-1-
+WgXp8-0-
+c6eFV-0-
+unneed_repos_removed
+JL9pQ-0-
+c6eFV-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716882286.484:108): avc:  denied  { map_read map_write } for  pid=1322 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882286.487:109): avc:  denied  { map_read map_write } for  pid=1324 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+1xBk1-0-
+GfrcR-0-
+fDmt2-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716882286.484:108): avc:  denied  { map_read map_write } for  pid=1322 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882286.487:109): avc:  denied  { map_read map_write } for  pid=1324 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+[  160.572288][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+ens4: 10.0.2.15 fec0::73b0:30c4:a516:2029
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:46:43 localhost kernel: audit: type=1400 audit(1716882402.943:5): avc:  denied  { map_read map_write } for  pid=560 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:46:43 localhost kernel: audit: type=1400 audit(1716882402.949:6): avc:  denied  { map_read map_write } for  pid=562 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   43.267636][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::f5ec:868c:3bf1:409c
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:47:40 localhost kernel: audit: type=1400 audit(1716882460.023:5): avc:  denied  { map_read map_write } for  pid=562 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:47:40 localhost kernel: audit: type=1400 audit(1716882460.029:6): avc:  denied  { map_read map_write } for  pid=564 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   37.215720][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fe80::5054:ff:fe12:3456
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::8cb9:8511:55cb:3ee
+
+
+localhost login: YpuUt-0-
+[   59.916095][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fe80::5054:ff:fe12:3456
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::37ed:7c82:8293:9e25
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:49:32 localhost kernel: audit: type=1400 audit(1716882571.963:5): avc:  denied  { map_read map_write } for  pid=558 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:49:32 localhost kernel: audit: type=1400 audit(1716882571.973:6): avc:  denied  { map_read map_write } for  pid=560 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   85.987472][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fe80::5054:ff:fe12:3456
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::ddeb:2020:137d:5499
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:51:07 localhost kernel: audit: type=1400 audit(1716882666.843:5): avc:  denied  { map_read map_write } for  pid=564 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:51:07 localhost kernel: audit: type=1400 audit(1716882666.853:6): avc:  denied  { map_read map_write } for  pid=566 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   52.624416][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fe80::5054:ff:fe12:3456
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::cb8c:e036:dea8:ee5
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:52:05 localhost kernel: audit: type=1400 audit(1716882724.963:5): avc:  denied  { map_read map_write } for  pid=562 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:52:05 localhost kernel: audit: type=1400 audit(1716882724.970:6): avc:  denied  { map_read map_write } for  pid=564 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   41.663087][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fe80::5054:ff:fe12:3456
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::bc0d:a7e4:d90d:1c71
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+Jan 20 03:14:21 localhost kernel: audit: type=1400 audit(2147570060.936:5): avc:  denied  { map_read map_write } for  pid=551 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+Jan 20 03:14:21 localhost kernel: audit: type=1400 audit(2147570060.936:6): avc:  denied  { map_read map_write } for  pid=553 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+YpuUt-0-
+[  259.023928][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+ens4: 10.0.2.15 fe80::5054:ff:fe12:3456
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+ens4: 10.0.2.15 fec0::e034:f506:f90c:32a0
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:55:32 localhost kernel: audit: type=1400 audit(1716882931.980:5): avc:  denied  { map_read map_write } for  pid=564 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:55:32 localhost kernel: audit: type=1400 audit(1716882931.990:6): avc:  denied  { map_read map_write } for  pid=566 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   40.904968][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fe80::5054:ff:fe12:3456
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::8cd0:b0b5:cddb:b53a
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:56:29 localhost kernel: audit: type=1400 audit(1716882989.136:5): avc:  denied  { map_read map_write } for  pid=564 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:56:29 localhost kernel: audit: type=1400 audit(1716882989.139:6): avc:  denied  { map_read map_write } for  pid=566 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   48.892146][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fe80::5054:ff:fe12:3456
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::9107:5a4:bb1c:68e2
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:57:25 localhost kernel: audit: type=1400 audit(1716883044.986:5): avc:  denied  { map_read map_write } for  pid=566 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:57:25 localhost kernel: audit: type=1400 audit(1716883044.986:6): avc:  denied  { map_read map_write } for  pid=564 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   41.911615][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fe80::5054:ff:fe12:3456
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::d57d:519:bd14:e0b3
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:58:16 localhost kernel: audit: type=1400 audit(1716883096.029:5): avc:  denied  { map_read map_write } for  pid=564 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:58:16 localhost kernel: audit: type=1400 audit(1716883096.043:6): avc:  denied  { map_read map_write } for  pid=566 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   48.371444][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fe80::5054:ff:fe12:3456
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::7ecd:54df:9ac1:49c5
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:59:12 localhost kernel: audit: type=1400 audit(1716883152.019:5): avc:  denied  { map_read map_write } for  pid=566 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:59:12 localhost kernel: audit: type=1400 audit(1716883152.029:6): avc:  denied  { map_read map_write } for  pid=568 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   46.737756][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::75d9:3a78:ce8c:afd0
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 08:00:04 localhost kernel: audit: type=1400 audit(1716883204.166:5): avc:  denied  { map_read map_write } for  pid=564 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 08:00:04 localhost kernel: audit: type=1400 audit(1716883204.183:6): avc:  denied  { map_read map_write } for  pid=566 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   50.992297][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::8417:9b82:118d:2dc9
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 08:01:02 localhost kernel: audit: type=1400 audit(1716883262.546:5): avc:  denied  { map_read map_write } for  pid=563 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 08:01:02 localhost kernel: audit: type=1400 audit(1716883262.559:6): avc:  denied  { map_read map_write } for  pid=565 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   47.616567][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::b1b9:ec68:9b50:943a
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 08:01:57 localhost kernel: audit: type=1400 audit(1716883317.539:5): avc:  denied  { map_read map_write } for  pid=560 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 08:01:57 localhost kernel: audit: type=1400 audit(1716883317.543:6): avc:  denied  { map_read map_write } for  pid=562 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   50.981390][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::93b:bd59:2ae6:26f6
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 08:03:02 localhost kernel: audit: type=1400 audit(1716883381.969:5): avc:  denied  { map_read map_write } for  pid=564 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 08:03:02 localhost kernel: audit: type=1400 audit(1716883381.979:6): avc:  denied  { map_read map_write } for  pid=566 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   37.620590][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::763d:f3f8:5aac:4b6b
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 08:03:46 localhost kernel: audit: type=1400 audit(1716883426.023:5): avc:  denied  { map_read map_write } for  pid=549 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 08:03:46 localhost kernel: audit: type=1400 audit(1716883426.029:6): avc:  denied  { map_read map_write } for  pid=551 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+7T_EO-0-
+Wjx7N-0-
+V5ZHC-0-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n reboot ptf install update-test-trivial/update-test-interactive-5.1-1.20.x86_64.rpm
+Separate /var detected.
+2024-05-28 08:04:44 tukit 4.6.8 started
+2024-05-28 08:04:44 Options: -c6 open 
+2024-05-28 08:04:44 Using snapshot 6 as base for new snapshot 12.
+2024-05-28 08:04:44 /var/lib/overlay/6/etc
+2024-05-28 08:04:44 Syncing /etc of previous snapshot 5 as base into new snapshot "/.snapshots/12/snapshot"
+2024-05-28 08:04:44 SELinux is enabled.
+ID: 12
+2024-05-28 08:04:45 Transaction completed.
+Calling zypper install
+2024-05-28 08:04:47 tukit 4.6.8 started
+2024-05-28 08:04:47 Options: callext 12 zypper -R {} install -y --auto-agree-with-product-licenses update-test-trivial/update-test-interactive-5.1-1.20.x86_64.rpm 
+2024-05-28 08:04:47 Executing `zypper -R /tmp/transactional-update-66mabf install -y --auto-agree-with-product-licenses update-test-trivial/update-test-interactive-5.1-1.20.x86_64.rpm`:
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  update-test-interactive
+
+1 new package to install.
+Overall download size: 9.0 KiB. Already cached: 0 B. After the operation, additional 384.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-interactive-5.1-1.20.x86_64 (Plain RPM files cache) (1/1),   9.0 KiB    
+(1/1) Installing: update-test-interactive-5.1-1.20.x86_64 [..done]
+2024-05-28 08:04:48 Application returned with exit status 0.
+2024-05-28 08:04:48 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 08:04:49 tukit 4.6.8 started
+2024-05-28 08:04:49 Options: close 12 
+2024-05-28 08:04:50 New default snapshot is #12 (/.snapshots/12/snapshot).
+2024-05-28 08:04:50 Transaction completed.
+New default snapshot is #12 (/.snapshots/12/snapshot).
+transactional-update finished
+2024-05-28 08:04:50 tukit 4.6.8 started
+2024-05-28 08:04:50 Options: reboot auto 
+2024-05-28 08:04:50 Requesting reboot using rebootmgr (soft-reboot required).
+2024-05-28 08:04:50 Transaction completed.
+[   68.508821][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::9c9d:5076:3e9a:b5d7
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 08:05:00 localhost kernel: audit: type=1400 audit(1716883499.970:5): avc:  denied  { map_read map_write } for  pid=560 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 08:05:00 localhost kernel: audit: type=1400 audit(1716883499.979:6): avc:  denied  { map_read map_write } for  pid=562 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+AYrmx-0-
+IUx2x-0-
+3Yf_J-0-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n reboot pkg install update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm
+Separate /var detected.
+2024-05-28 08:06:00 tukit 4.6.8 started
+2024-05-28 08:06:00 Options: -c12 open 
+2024-05-28 08:06:01 Using snapshot 12 as base for new snapshot 13.
+2024-05-28 08:06:01 /var/lib/overlay/12/etc
+2024-05-28 08:06:01 Syncing /etc of previous snapshot 6 as base into new snapshot "/.snapshots/13/snapshot"
+2024-05-28 08:06:01 SELinux is enabled.
+ID: 13
+2024-05-28 08:06:01 Transaction completed.
+Calling zypper install
+2024-05-28 08:06:03 tukit 4.6.8 started
+2024-05-28 08:06:03 Options: callext 13 zypper -R {} install -y --auto-agree-with-product-licenses update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm 
+2024-05-28 08:06:03 Executing `zypper -R /tmp/transactional-update-te5fcn install -y --auto-agree-with-product-licenses update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm`:
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  update-test-feature
+
+1 new package to install.
+Overall download size: 8.9 KiB. Already cached: 0 B. After the operation, additional 329.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-feature-5.1-1.20.x86_64 (Plain RPM files cache) (1/1),   8.9 KiB    
+(1/1) Installing: update-test-feature-5.1-1.20.x86_64 [..done]
+2024-05-28 08:06:05 Application returned with exit status 0.
+2024-05-28 08:06:05 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 08:06:05 tukit 4.6.8 started
+2024-05-28 08:06:05 Options: close 13 
+2024-05-28 08:06:06 New default snapshot is #13 (/.snapshots/13/snapshot).
+2024-05-28 08:06:06 Transaction completed.
+New default snapshot is #13 (/.snapshots/13/snapshot).
+transactional-update finished
+2024-05-28 08:06:06 tukit 4.6.8 started
+2024-05-28 08:06:06 Options: reboot auto 
+2024-05-28 08:06:06 Requesting reboot using rebootmgr (soft-reboot required).
+2024-05-28 08:06:06 Transaction completed.
+[   70.404569][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fe80::5054:ff:fe12:3456
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::27ea:fee5:debf:410c
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 08:06:18 localhost kernel: audit: type=1400 audit(1716883577.956:5): avc:  denied  { map_read map_write } for  pid=557 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 08:06:18 localhost kernel: audit: type=1400 audit(1716883577.969:6): avc:  denied  { map_read map_write } for  pid=559 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+aGmca-0-
+drbpC-0-
+~YF5G-2-
+[  201.502132][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::dc94:6891:853b:e41f
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 08:09:46 localhost kernel: audit: type=1400 audit(1716883786.009:5): avc:  denied  { map_read map_write } for  pid=552 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 08:09:46 localhost kernel: audit: type=1400 audit(1716883786.019:6): avc:  denied  { map_read map_write } for  pid=554 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+W19Lw-0-
+drbpC-0-
+~YF5G-2-
+PL5Gk-0-
+~YF5G-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716882286.484:108): avc:  denied  { map_read map_write } for  pid=1322 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882286.487:109): avc:  denied  { map_read map_write } for  pid=1324 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.012:130): avc:  denied  { map_read map_write } for  pid=1645 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.019:131): avc:  denied  { map_read map_write } for  pid=1648 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.339:152): avc:  denied  { map_read map_write } for  pid=1670 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.342:153): avc:  denied  { map_read map_write } for  pid=1673 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.636:174): avc:  denied  { map_read map_write } for  pid=1696 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.642:175): avc:  denied  { map_read map_write } for  pid=1698 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.939:196): avc:  denied  { map_read map_write } for  pid=1720 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.949:197): avc:  denied  { map_read map_write } for  pid=1723 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882451.229:218): avc:  denied  { map_read map_write } for  pid=1745 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882451.236:219): avc:  denied  { map_read map_write } for  pid=1747 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882451.522:240): avc:  denied  { map_read map_write } for  pid=1771 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882451.529:241): avc:  denied  { map_read map_write } for  pid=1773 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882451.826:262): avc:  denied  { map_read map_write } for  pid=1796 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882451.832:263): avc:  denied  { map_read map_write } for  pid=1798 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+Jhv3u-0-
+IWeHA
+Clearing GRUB flag
+Starting health check
+active
+Health check passed
+SCRIPT_FINISHEDIWeHA-0-
+CV5SR
+ID 280 gen 201 top level 265 path @/.snapshots/13/snapshot
+SCRIPT_FINISHEDCV5SR-0-
+CV5SR
+ID 280 gen 201 top level 265 path @/.snapshots/13/snapshot
+SCRIPT_FINISHEDCV5SR-0-
+g4ZBE
+LAST_WORKING_BTRFS_ID=280
+LAST_WORKING_SNAPSHOT=@/.snapshots/13/snapshot
+SCRIPT_FINISHEDg4ZBE-0-
+trup_shell-status-0
+CV5SR
+ID 281 gen 215 top level 265 path @/.snapshots/14/snapshot
+SCRIPT_FINISHEDCV5SR-0-
+g4ZBE
+LAST_WORKING_BTRFS_ID=280
+LAST_WORKING_SNAPSHOT=@/.snapshots/13/snapshot
+SCRIPT_FINISHEDg4ZBE-0-
+[  140.362033][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+[    8.195822][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+BdsDxe: starting Boot0007 "opensuse-secureboot" from HD(1,GPT,FF97D3F2-1552-41B6-BDCA-EE9B9F9F13DD,0x800,0x100000)/\EFI\opensuse\shim.efi
+Please press 't' to show the boot menu on this console
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fe80::5054:ff:fe12:3456
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:AMlHZSVux3fO4lbNdxCs6MidB6aVsh3u7/RqyzyTHdA (ECDSA)
+SSH host key: SHA256:/6PtIIT1g3VbM6LLGVKaWUl1BugpBXkpgswUXoASkKw (ED25519)
+SSH host key: SHA256:sucLPk6tVXa5jwgEouy1ySUuTrgiRGEjCI6LMfdub/k (RSA)
+ens4: 10.0.2.15 fec0::d4c3:4d86:5733:e57d
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 08:12:35 localhost kernel: audit: type=1400 audit(1716883954.983:5): avc:  denied  { map_read map_write } for  pid=549 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 08:12:35 localhost kernel: audit: type=1400 audit(1716883954.993:6): avc:  denied  { map_read map_write } for  pid=551 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+CV5SR
+ID 280 gen 211 top level 265 path @/.snapshots/13/snapshot
+SCRIPT_FINISHEDCV5SR-0-
+CV5SR
+ID 280 gen 211 top level 265 path @/.snapshots/13/snapshot
+SCRIPT_FINISHEDCV5SR-0-
+g4ZBE
+LAST_WORKING_BTRFS_ID=280
+LAST_WORKING_SNAPSHOT=@/.snapshots/13/snapshot
+SCRIPT_FINISHEDg4ZBE-0-
+IWeHA
+Clearing GRUB flag
+Starting health check
+active
+Health check passed
+SCRIPT_FINISHEDIWeHA-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716882286.484:108): avc:  denied  { map_read map_write } for  pid=1322 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882286.487:109): avc:  denied  { map_read map_write } for  pid=1324 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.012:130): avc:  denied  { map_read map_write } for  pid=1645 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.019:131): avc:  denied  { map_read map_write } for  pid=1648 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.339:152): avc:  denied  { map_read map_write } for  pid=1670 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.342:153): avc:  denied  { map_read map_write } for  pid=1673 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.636:174): avc:  denied  { map_read map_write } for  pid=1696 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.642:175): avc:  denied  { map_read map_write } for  pid=1698 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.939:196): avc:  denied  { map_read map_write } for  pid=1720 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882450.949:197): avc:  denied  { map_read map_write } for  pid=1723 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882451.229:218): avc:  denied  { map_read map_write } for  pid=1745 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882451.236:219): avc:  denied  { map_read map_write } for  pid=1747 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882451.522:240): avc:  denied  { map_read map_write } for  pid=1771 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882451.529:241): avc:  denied  { map_read map_write } for  pid=1773 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882451.826:262): avc:  denied  { map_read map_write } for  pid=1796 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882451.832:263): avc:  denied  { map_read map_write } for  pid=1798 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+IblXB-0-
+[   87.460911][    T1] reboot: Power down
