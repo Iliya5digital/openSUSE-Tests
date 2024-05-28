@@ -1,0 +1,1062 @@
+[2024-05-28T07:27:42.388837Z] [info] +++ setup notes +++
+[2024-05-28T07:27:42.389116Z] [info] Running on openqaworker22:18 (Linux 5.14.21-150500.55.65-default #1 SMP PREEMPT_DYNAMIC Thu May 23 04:57:11 UTC 2024 (a46829d) x86_64)
+[2024-05-28T07:27:42.394664Z] [debug] Found ASSET_256, caching openSUSE-MicroOS.x86_64-16.0.0-kvm-and-xen-Snapshot20240527.qcow2.sha256
+[2024-05-28T07:27:42.397741Z] [info] Downloading openSUSE-MicroOS.x86_64-16.0.0-kvm-and-xen-Snapshot20240527.qcow2.sha256, request #306617 sent to Cache Service
+[2024-05-28T07:27:52.541773Z] [info] Download of openSUSE-MicroOS.x86_64-16.0.0-kvm-and-xen-Snapshot20240527.qcow2.sha256 processed:
+[info] [#306617] Cache size of "/var/lib/openqa/cache" is 400 GiB, with limit 400 GiB
+[info] [#306617] Downloading "openSUSE-MicroOS.x86_64-16.0.0-kvm-and-xen-Snapshot20240527.qcow2.sha256" from "https://openqa.opensuse.org/tests/4227096/asset/other/openSUSE-MicroOS.x86_64-16.0.0-kvm-and-xen-Snapshot20240527.qcow2.sha256"
+[info] [#306617] Size of "/var/lib/openqa/cache/openqa.opensuse.org/openSUSE-MicroOS.x86_64-16.0.0-kvm-and-xen-Snapshot20240527.qcow2.sha256" is 132 Byte, with ETag ""665576e9-84""
+[info] [#306617] Download of "/var/lib/openqa/cache/openqa.opensuse.org/openSUSE-MicroOS.x86_64-16.0.0-kvm-and-xen-Snapshot20240527.qcow2.sha256" successful (1769.39 Byte/s), new cache size is 400 GiB
+
+[2024-05-28T07:27:52.543958Z] [debug] Found HDD_1, caching openSUSE-MicroOS.x86_64-16.0.0-kvm-and-xen-Snapshot20240527.qcow2
+[2024-05-28T07:27:52.547018Z] [info] Downloading openSUSE-MicroOS.x86_64-16.0.0-kvm-and-xen-Snapshot20240527.qcow2, request #306620 sent to Cache Service
+[2024-05-28T07:27:57.618673Z] [info] Download of openSUSE-MicroOS.x86_64-16.0.0-kvm-and-xen-Snapshot20240527.qcow2 processed:
+[info] [#306620] Cache size of "/var/lib/openqa/cache" is 397 GiB, with limit 400 GiB
+[info] [#306620] Downloading "openSUSE-MicroOS.x86_64-16.0.0-kvm-and-xen-Snapshot20240527.qcow2" from "https://openqa.opensuse.org/tests/4227096/asset/hdd/openSUSE-MicroOS.x86_64-16.0.0-kvm-and-xen-Snapshot20240527.qcow2"
+[info] [#306620] Content of "/var/lib/openqa/cache/openqa.opensuse.org/openSUSE-MicroOS.x86_64-16.0.0-kvm-and-xen-Snapshot20240527.qcow2" has not changed, updating last use
+
+[2024-05-28T07:27:57.620941Z] [debug] Found HDD_2, caching ignition.qcow2
+[2024-05-28T07:27:57.623298Z] [info] Downloading ignition.qcow2, request #306621 sent to Cache Service
+[2024-05-28T07:28:07.747404Z] [info] Download of ignition.qcow2 processed:
+[info] [#306621] Cache size of "/var/lib/openqa/cache" is 397 GiB, with limit 400 GiB
+[info] [#306621] Downloading "ignition.qcow2" from "https://openqa.opensuse.org/tests/4227096/asset/hdd/ignition.qcow2"
+[info] [#306621] Content of "/var/lib/openqa/cache/openqa.opensuse.org/ignition.qcow2" has not changed, updating last use
+
+[2024-05-28T07:28:07.750983Z] [info] Rsync from 'rsync://openqa.opensuse.org/tests' to '/var/lib/openqa/cache/openqa.opensuse.org', request #306624 sent to Cache Service
+[2024-05-28T07:28:12.839018Z] [info] Output of rsync:
+[info] [#306623] Calling: rsync -avHP --timeout 1800 rsync://openqa.opensuse.org/tests/ --delete /var/lib/openqa/cache/openqa.opensuse.org/tests/
+Try 1:
+receiving incremental file list
+obs/.git/
+obs/.git/FETCH_HEAD
+              0 100%    0.00kB/s    0:00:00 (xfr#1, ir-chk=1158/1178)
+obs/.git/index
+              0   0%    0.00kB/s    0:00:00            2,745 100%    2.62MB/s    0:00:00 (xfr#2, ir-chk=1153/1178)
+obs/.git/logs/HEAD
+              0   0%    0.00kB/s    0:00:00      400,564,992  64%  382.01MB/s    0:00:00      616,935,497 100%  383.54MB/s    0:00:01 (xfr#3, ir-chk=1133/1178)
+obs/.git/objects/
+obs/.git/refs/heads/
+openqa/.git/
+openqa/.git/FETCH_HEAD
+              0   0%    0.00kB/s    0:00:00              554 100%    0.65kB/s    0:00:00 (xfr#4, ir-chk=1167/1450)
+openqa/.git/index
+              0   0%    0.00kB/s    0:00:00            3,093 100%    3.61kB/s    0:00:00 (xfr#5, ir-chk=1162/1450)
+openqa/.git/logs/HEAD
+              0   0%    0.00kB/s    0:00:00       10,396,438 100%   11.48MB/s    0:00:00 (xfr#6, ir-chk=1140/1450)
+openqa/.git/objects/
+openqa/.git/refs/heads/
+openqa/products/openqa/needles/.git/
+openqa/products/openqa/needles/.git/FETCH_HEAD
+              0   0%    0.00kB/s    0:00:00              259 100%    0.29kB/s    0:00:00 (xfr#7, ir-chk=1019/1609)
+openqa/products/openqa/needles/.git/index
+              0   0%    0.00kB/s    0:00:00           22,443 100%   25.28kB/s    0:00:00 (xfr#8, ir-chk=1014/1609)
+openqa/products/openqa/needles/.git/logs/HEAD
+              0   0%    0.00kB/s    0:00:00       20,784,095 100%   21.57MB/s    0:00:00 (xfr#9, ir-chk=1002/1619)
+openqa/products/openqa/needles/.git/objects/
+openqa/products/openqa/needles/.git/refs/heads/
+opensuse/.git/
+opensuse/.git/FETCH_HEAD
+              0   0%    0.00kB/s    0:00:00            7,264 100%    7.65kB/s    0:00:00 (xfr#10, ir-chk=1012/1698)
+opensuse/.git/index
+              0   0%    0.00kB/s    0:00:00          636,809 100%  670.13kB/s    0:00:00 (xfr#11, ir-chk=1007/1698)
+opensuse/.git/logs/HEAD
+              0   0%    0.00kB/s    0:00:00       28,520,808  99%   27.20MB/s    0:00:00       28,673,649 100%   27.35MB/s    0:00:01 (xfr#12, ir-chk=1007/1717)
+opensuse/.git/objects/
+opensuse/.git/refs/heads/
+opensuse/products/opensuse/needles/.git/
+opensuse/products/opensuse/needles/.git/FETCH_HEAD
+            810 100%  791.02kB/s    0:00:00 (xfr#13, ir-chk=1014/21419)
+opensuse/products/opensuse/needles/.git/index
+              0   0%    0.00kB/s    0:00:00        1,574,039 100%    4.28MB/s    0:00:00 (xfr#14, ir-chk=1009/21419)
+opensuse/products/opensuse/needles/.git/logs/HEAD
+              0   0%    0.00kB/s    0:00:00       46,642,560  35%   44.48MB/s    0:00:01      130,868,523 100%  102.89MB/s    0:00:01 (xfr#15, ir-chk=1009/21438)
+opensuse/products/opensuse/needles/.git/objects/
+opensuse/products/opensuse/needles/.git/refs/heads/
+
+sent 347,794 bytes  received 1,394,952 bytes  316,862.91 bytes/sec
+total size is 5,860,245,078  speedup is 3,362.65
+
+
+[2024-05-28T07:28:12.839146Z] [info] Finished to rsync tests
+[2024-05-28T07:28:12.843493Z] [debug] +++ worker notes +++
+[37m[2024-05-28T07:28:13.189368Z] [debug] [pid:22767] Current version is 4.6.1716387241.58dd214 [interface v40][0m
+[37m[2024-05-28T07:28:13.199127Z] [debug] [pid:22767] git hash in 'microos': 62966fab5fb01087482fdf9f80e0ce3c17f41bb0[0m
+[37m[2024-05-28T07:28:13.209174Z] [debug] [pid:22767] git url in 'microos': https://github.com/os-autoinst/os-autoinst-distri-opensuse.git[0m
+[37m[2024-05-28T07:28:13.499536Z] [debug] [pid:22767] parse_vars (variables parsed from YAML schedule):[0m
+[37m[2024-05-28T07:28:13.499826Z] [debug] [pid:22767] --- {}
+  [0m
+[37m[2024-05-28T07:28:13.500221Z] [debug] [pid:22767] ---
+  - microos/disk_boot
+  - microos/networkmanager
+  [0m
+[37m[2024-05-28T07:28:13.500287Z] [debug] [pid:22767] parse_test_suite_data (data parsed from YAML test_data):[0m
+[37m[2024-05-28T07:28:13.500384Z] [debug] [pid:22767] --- {}
+  [0m
+[37m[2024-05-28T07:28:13.503147Z] [debug] [pid:22767] scheduling disk_boot tests/microos/disk_boot.pm[0m
+[37m[2024-05-28T07:28:13.504380Z] [debug] [pid:22767] scheduling networkmanager tests/microos/networkmanager.pm[0m
+[2024-05-28T07:28:13.510310Z] [info] [pid:22787] cmdsrv: daemon reachable under http://*:20183/K6cvovymKIE4seiH/
+[2024-05-28T07:28:13.511761Z] [info] [pid:22787] Listening at "http://[::]:20183"
+Web application available at http://[::]:20183
+[37m[2024-05-28T07:28:13.516648Z] [debug] [pid:22767] git hash in 'microos/products/microos/needles': 9c264ee66e0366e6bfd7b2a1d219ca52ddb44beb[0m
+[37m[2024-05-28T07:28:13.535140Z] [debug] [pid:22767] git url in 'microos/products/microos/needles': git@github.com:os-autoinst/os-autoinst-needles-opensuse.git[0m
+[37m[2024-05-28T07:28:13.535311Z] [debug] [pid:22767] init needles from microos/products/microos/needles[0m
+[37m[2024-05-28T07:28:14.221089Z] [debug] [pid:22767] loaded 7144 needles[0m
+[37m[2024-05-28T07:28:14.325136Z] [debug] [pid:22767] 22767: channel_out 16, channel_in 15[0m
+[37m[2024-05-28T07:28:14.387038Z] [debug] [pid:23177] 23177: cmdpipe 14, rsppipe 17[0m
+[37m[2024-05-28T07:28:14.387261Z] [debug] [pid:23177] started mgmt loop with pid 23177[0m
+[37m[2024-05-28T07:28:14.442454Z] [debug] [pid:23177] Launching external video encoder: ffmpeg -y -hide_banner -nostats -r 24 -f image2pipe -vcodec ppm -i - -pix_fmt yuv420p -c:v libvpx-vp9 -crf 35 -b:v 1500k -cpu-used 1 'video.webm'[0m
+[37m[2024-05-28T07:28:14.513209Z] [debug] [pid:23177] qemu version detected: 7.1.0[0m
+[37m[2024-05-28T07:28:14.514781Z] [debug] [pid:23177] running `/usr/bin/chattr +C /var/lib/openqa/pool/18/raid`[0m
+[37m[2024-05-28T07:28:14.535308Z] [debug] [pid:23177] Command `/usr/bin/chattr +C /var/lib/openqa/pool/18/raid` terminated with 1
+  /usr/bin/chattr: Operation not supported while setting flags on /var/lib/openqa/pool/18/raid[0m
+[37m[2024-05-28T07:28:14.535397Z] [debug] [pid:23177] Configuring storage controllers and block devices[0m
+[37m[2024-05-28T07:28:14.536150Z] [debug] [pid:23177] running `/usr/bin/qemu-img info --output=json /var/lib/openqa/pool/18/ignition.qcow2`[0m
+[37m[2024-05-28T07:28:14.583029Z] [debug] [pid:23177] Initializing block device images[0m
+[37m[2024-05-28T07:28:14.583253Z] [debug] [pid:23177] running `/usr/bin/qemu-img create -f qcow2 -F qcow2 -b /var/lib/openqa/pool/18/openSUSE-MicroOS.x86_64-16.0.0-kvm-and-xen-Snapshot20240527.qcow2 /var/lib/openqa/pool/18/raid/hd0-overlay0 30G`[0m
+[37m[2024-05-28T07:28:14.624327Z] [debug] [pid:23177] Formatting '/var/lib/openqa/pool/18/raid/hd0-overlay0', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=32212254720 backing_file=/var/lib/openqa/pool/18/openSUSE-MicroOS.x86_64-16.0.0-kvm-and-xen-Snapshot20240527.qcow2 backing_fmt=qcow2 lazy_refcounts=off refcount_bits=16[0m
+[37m[2024-05-28T07:28:14.624442Z] [debug] [pid:23177] running `/usr/bin/qemu-img create -f qcow2 -F qcow2 -b /var/lib/openqa/pool/18/ignition.qcow2 /var/lib/openqa/pool/18/raid/hd1-overlay0 10485760`[0m
+[37m[2024-05-28T07:28:14.662063Z] [debug] [pid:23177] Formatting '/var/lib/openqa/pool/18/raid/hd1-overlay0', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=10485760 backing_file=/var/lib/openqa/pool/18/ignition.qcow2 backing_fmt=qcow2 lazy_refcounts=off refcount_bits=16[0m
+[37m[2024-05-28T07:28:14.662204Z] [debug] [pid:23177] init_blockdev_images: Finished creating block devices[0m
+[37m[2024-05-28T07:28:14.663335Z] [debug] [pid:23177] starting: /usr/bin/qemu-system-x86_64 -device VGA,edid=on,xres=1024,yres=768 -only-migratable -chardev ringbuf,id=serial0,logfile=serial0,logappend=on -serial chardev:serial0 -audiodev none,id=snd0 -device intel-hda -device hda-output,audiodev=snd0 -global isa-fdc.fdtypeA=none -m 1024 -cpu host -netdev user,id=qanet0 -device virtio-net,netdev=qanet0,mac=52:54:00:12:34:56 -object rng-random,filename=/dev/urandom,id=rng0 -device virtio-rng-pci,rng=rng0 -boot order=c -device qemu-xhci -device usb-tablet -smp 1 -enable-kvm -no-shutdown -vnc :108,share=force-shared -device virtio-serial -chardev pipe,id=virtio_console,path=virtio_console,logfile=virtio_console.log,logappend=on -device virtconsole,chardev=virtio_console,name=org.openqa.console.virtio_console -chardev pipe,id=virtio_console_user,path=virtio_console_user,logfile=virtio_console_user.log,logappend=on -device virtconsole,chardev=virtio_console_user,name=org.openqa.console.virtio_console_user -chardev socket,path=qmp_socket,server=on,wait=off,id=qmp_socket,logfile=qmp_socket.log,logappend=on -qmp chardev:qmp_socket -S -device virtio-scsi-pci,id=scsi0 -blockdev driver=file,node-name=hd0-overlay0-file,filename=/var/lib/openqa/pool/18/raid/hd0-overlay0,cache.no-flush=on -blockdev driver=qcow2,node-name=hd0-overlay0,file=hd0-overlay0-file,cache.no-flush=on,discard=unmap -device virtio-blk,id=hd0-device,drive=hd0-overlay0,bootindex=0,serial=hd0 -blockdev driver=file,node-name=hd1-overlay0-file,filename=/var/lib/openqa/pool/18/raid/hd1-overlay0,cache.no-flush=on -blockdev driver=qcow2,node-name=hd1-overlay0,file=hd1-overlay0-file,cache.no-flush=on,discard=unmap -device virtio-blk,id=hd1-device,drive=hd1-overlay0,serial=hd1[0m
+[37m[2024-05-28T07:28:14.671904Z] [debug] [pid:23177] Waiting for 0 attempts[0m
+[37m[2024-05-28T07:28:15.672533Z] [debug] [pid:23177] Waiting for 1 attempts[0m
+[37m[2024-05-28T07:28:16.672941Z] [debug] [pid:23177] Finished after 2 attempts[0m
+[37m[2024-05-28T07:28:16.686920Z] [debug] [pid:23177] Establishing VNC connection to localhost:6008[0m
+[37m[2024-05-28T07:28:16.689241Z] [debug] [pid:23177] pointer type 0 0 640 480 -257[0m
+[37m[2024-05-28T07:28:16.689310Z] [debug] [pid:23177] led state 0 1 1 -261[0m
+[37m[2024-05-28T07:28:16.746176Z] [debug] [pid:23177] Start CPU[0m
+[37m[2024-05-28T07:28:16.746516Z] [debug] [pid:23177] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"43538","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6008","websocket":false}},"event":"VNC_CONNECTED","timestamp":{"microseconds":687422,"seconds":1716881296}}[0m
+[37m[2024-05-28T07:28:16.746698Z] [debug] [pid:23177] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"43538","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6008","websocket":false}},"event":"VNC_INITIALIZED","timestamp":{"microseconds":688450,"seconds":1716881296}}[0m
+[37m[2024-05-28T07:28:16.746872Z] [debug] [pid:23177] EVENT {"event":"RESUME","timestamp":{"microseconds":746578,"seconds":1716881296}}[0m
+GOT GO
+
+[37m[2024-05-28T07:28:16.752698Z] [debug] [pid:23177] QEMU: QEMU emulator version 7.1.0 (SUSE Linux Enterprise 15)[0m
+[37m[2024-05-28T07:28:16.752748Z] [debug] [pid:23177] QEMU: Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers[0m
+[37m[2024-05-28T07:28:16.754804Z] [debug] [pid:22797] Snapshots are supported[0m
+[1;34m[2024-05-28T07:28:16.755667Z] [debug] [pid:22797] ||| starting disk_boot tests/microos/disk_boot.pm[0m
+[2024-05-28T07:28:16.758425Z] [debug] [pid:22797] tests/microos/disk_boot.pm:29 called opensusebasetest::wait_boot -> products/microos/../../lib/opensusebasetest.pm:902 called opensusebasetest::handle_grub -> products/microos/../../lib/opensusebasetest.pm:687 called opensusebasetest::wait_grub -> products/microos/../../lib/opensusebasetest.pm:439 called testapi::assert_screen
+[2024-05-28T07:28:16.758672Z] [debug] [pid:22797] <<< testapi::assert_screen(mustmatch=[
+    "grub2"
+  ], timeout=300)
+[31m[2024-05-28T07:28:18.546104Z] [warn] [pid:23177] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.80 seconds for 76 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:18.546192Z] [debug] [pid:23177] no match: 299.0s, best candidate: bootloader-grub2-alp-selfinstall-20230327 (0.00)[0m
+Input #0, image2pipe, from 'pipe:':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: ppm, rgb24, 1024x768, 24 fps, 24 tbr, 24 tbn, 24 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (ppm (native) -> vp9 (libvpx-vp9))
+[libvpx-vp9 @ 0x56389855b900] v1.11.0
+Output #0, webm, to 'video.webm':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: vp9, yuv420p(tv, progressive), 1024x768, q=2-31, 1500 kb/s, 24 fps, 1k tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libvpx-vp9
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+[32m[2024-05-28T07:28:19.162260Z] [debug] [pid:22797] >>> testapi::_handle_found_needle: found grub2-microos-20190408, similarity 1.00 @ 0/0[0m
+[2024-05-28T07:28:19.163309Z] [debug] [pid:22797] tests/microos/disk_boot.pm:29 called opensusebasetest::wait_boot -> products/microos/../../lib/opensusebasetest.pm:902 called opensusebasetest::handle_grub -> products/microos/../../lib/opensusebasetest.pm:702 called opensusebasetest::grub_select -> products/microos/../../lib/opensusebasetest.pm:634 called testapi::send_key
+[2024-05-28T07:28:19.163458Z] [debug] [pid:22797] <<< testapi::send_key(key="ret", wait_screen_change=0)
+[2024-05-28T07:28:19.433526Z] [debug] [pid:22797] tests/microos/disk_boot.pm:29 called opensusebasetest::wait_boot -> products/microos/../../lib/opensusebasetest.pm:926 called opensusebasetest::wait_boot_past_bootloader -> products/microos/../../lib/opensusebasetest.pm:782 called opensusebasetest::wait_boot_textmode -> products/microos/../../lib/opensusebasetest.pm:718 called testapi::assert_screen
+[2024-05-28T07:28:19.433831Z] [debug] [pid:22797] <<< testapi::assert_screen(mustmatch=[
+    "linux-login",
+    "emergency-shell",
+    "emergency-mode"
+  ], timeout=500)
+[37m[2024-05-28T07:28:19.846180Z] [debug] [pid:23177] no match: 499.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:20.791914Z] [debug] [pid:23177] no match: 498.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:21.751134Z] [debug] [pid:23177] no change: 497.6s[0m
+[37m[2024-05-28T07:28:21.793530Z] [debug] [pid:23177] no match: 497.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:22.752213Z] [debug] [pid:23177] no change: 496.6s[0m
+[37m[2024-05-28T07:28:22.792648Z] [debug] [pid:23177] no match: 496.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[31m[2024-05-28T07:28:24.508320Z] [warn] [pid:23177] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.76 seconds for 13 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:24.508422Z] [debug] [pid:23177] no match: 495.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:24.752747Z] [debug] [pid:23177] no change: 494.6s[0m
+[37m[2024-05-28T07:28:24.793037Z] [debug] [pid:23177] no match: 494.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:25.753876Z] [debug] [pid:23177] no change: 493.6s[0m
+[37m[2024-05-28T07:28:25.794402Z] [debug] [pid:23177] no match: 493.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:26.755070Z] [debug] [pid:23177] no change: 492.6s[0m
+[37m[2024-05-28T07:28:26.797772Z] [debug] [pid:23177] no match: 492.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:27.756107Z] [debug] [pid:23177] no change: 491.6s[0m
+[37m[2024-05-28T07:28:27.825326Z] [debug] [pid:23177] no match: 491.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:28.513256Z] [debug] [pid:23177] pointer type 1 0 800 600 -257[0m
+[31m[2024-05-28T07:28:29.294501Z] [warn] [pid:23177] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.54 seconds for 13 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:29.294587Z] [debug] [pid:23177] no match: 490.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:29.801739Z] [debug] [pid:23177] no match: 489.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:30.813805Z] [debug] [pid:23177] no match: 488.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:31.800838Z] [debug] [pid:23177] no match: 487.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:32.800700Z] [debug] [pid:23177] no match: 486.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[31m[2024-05-28T07:28:34.309775Z] [warn] [pid:23177] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.55 seconds for 13 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:34.309857Z] [debug] [pid:23177] no match: 485.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:34.811028Z] [debug] [pid:23177] no match: 484.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:35.803348Z] [debug] [pid:23177] no match: 483.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:36.803797Z] [debug] [pid:23177] no match: 482.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:37.804604Z] [debug] [pid:23177] no match: 481.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[31m[2024-05-28T07:28:39.301187Z] [warn] [pid:23177] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.54 seconds for 13 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:39.301289Z] [debug] [pid:23177] no match: 480.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:39.805906Z] [debug] [pid:23177] no match: 479.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:40.806833Z] [debug] [pid:23177] no match: 478.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:41.808163Z] [debug] [pid:23177] no match: 477.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:42.808563Z] [debug] [pid:23177] no match: 476.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[31m[2024-05-28T07:28:44.318605Z] [warn] [pid:23177] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.55 seconds for 13 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:44.318713Z] [debug] [pid:23177] no match: 475.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:44.809752Z] [debug] [pid:23177] no match: 474.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:45.835400Z] [debug] [pid:23177] no match: 473.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:46.813724Z] [debug] [pid:23177] no match: 472.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:47.812882Z] [debug] [pid:23177] no match: 471.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[31m[2024-05-28T07:28:49.330737Z] [warn] [pid:23177] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.56 seconds for 13 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:49.330836Z] [debug] [pid:23177] no match: 470.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:49.814364Z] [debug] [pid:23177] no match: 469.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:50.813052Z] [debug] [pid:23177] no match: 468.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:51.817159Z] [debug] [pid:23177] no match: 467.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:52.819932Z] [debug] [pid:23177] no match: 466.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[31m[2024-05-28T07:28:54.333400Z] [warn] [pid:23177] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.56 seconds for 13 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:54.333492Z] [debug] [pid:23177] no match: 465.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:54.819707Z] [debug] [pid:23177] no match: 464.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:55.830092Z] [debug] [pid:23177] no match: 463.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:56.827132Z] [debug] [pid:23177] no match: 462.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:57.827862Z] [debug] [pid:23177] no match: 461.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[31m[2024-05-28T07:28:59.719885Z] [warn] [pid:23177] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.94 seconds for 13 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:59.719973Z] [debug] [pid:23177] no match: 460.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:28:59.782247Z] [debug] [pid:23177] no change: 459.6s[0m
+[37m[2024-05-28T07:28:59.825381Z] [debug] [pid:23177] no match: 459.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:29:00.830573Z] [debug] [pid:23177] no match: 458.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:29:01.824587Z] [debug] [pid:23177] no match: 457.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:29:02.823580Z] [debug] [pid:23177] no match: 456.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[31m[2024-05-28T07:29:04.356664Z] [warn] [pid:23177] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.57 seconds for 13 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:29:04.356754Z] [debug] [pid:23177] no match: 455.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:29:04.839847Z] [debug] [pid:23177] no match: 454.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:29:05.841733Z] [debug] [pid:23177] no match: 453.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:29:06.829948Z] [debug] [pid:23177] no match: 452.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:29:07.842025Z] [debug] [pid:23177] no match: 451.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[31m[2024-05-28T07:29:09.385987Z] [warn] [pid:23177] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.59 seconds for 13 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:29:09.386083Z] [debug] [pid:23177] no match: 450.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:29:09.829979Z] [debug] [pid:23177] no match: 449.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[37m[2024-05-28T07:29:10.834164Z] [debug] [pid:23177] no match: 448.6s, best candidate: rescue-mode-emergency-shell-20180829 (0.18)[0m
+[32m[2024-05-28T07:29:11.883423Z] [debug] [pid:22797] >>> testapi::_handle_found_needle: found linux-login-20200525, similarity 1.00 @ 80/749[0m
+[2024-05-28T07:29:11.885443Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:25 called testapi::assert_screen
+[2024-05-28T07:29:11.885553Z] [debug] [pid:22797] <<< testapi::assert_screen(mustmatch="linux-login-microos", timeout=150)
+[37m[2024-05-28T07:29:12.843649Z] [debug] [pid:23177] no match: 149.0s, best candidate: disk_boot-linux-login-alp-20220617 (0.42)[0m
+[37m[2024-05-28T07:29:13.813669Z] [debug] [pid:23177] no match: 148.0s, best candidate: disk_boot-linux-login-alp-20220617 (0.42)[0m
+[37m[2024-05-28T07:29:14.796482Z] [debug] [pid:23177] no change: 147.0s[0m
+[37m[2024-05-28T07:29:14.813059Z] [debug] [pid:23177] no match: 147.0s, best candidate: disk_boot-linux-login-alp-20220617 (0.42)[0m
+[37m[2024-05-28T07:29:15.817727Z] [debug] [pid:23177] no match: 146.0s, best candidate: disk_boot-linux-login-alp-20220617 (0.42)[0m
+[32m[2024-05-28T07:29:17.257014Z] [debug] [pid:22797] >>> testapi::_handle_found_needle: found linux-login-kubic-20190408, similarity 1.00 @ 2/690[0m
+[2024-05-28T07:29:17.257627Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:31 called testapi::send_key_until_needlematch
+[2024-05-28T07:29:17.257731Z] [debug] [pid:22797] <<< testapi::check_screen(mustmatch="tty2-selected", timeout=0)
+[37m[2024-05-28T07:29:17.934309Z] [debug] [pid:23177] no match: -0.6s, best candidate: tty2-selected-20180514 (0.59)[0m
+[32m[2024-05-28T07:29:18.010150Z] [debug] [pid:22797] >>> testapi::_check_backend_response: match=tty2-selected timed out after 0 (check_screen)[0m
+[2024-05-28T07:29:18.026767Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:31 called testapi::send_key_until_needlematch
+[2024-05-28T07:29:18.026884Z] [debug] [pid:22797] <<< testapi::wait_screen_change(timeout=10, similarity_level=50)
+[2024-05-28T07:29:18.027509Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:31 called testapi::send_key_until_needlematch
+[2024-05-28T07:29:18.027581Z] [debug] [pid:22797] <<< testapi::send_key(key="ctrl-alt-f2", wait_screen_change=0)
+[32m[2024-05-28T07:29:18.738321Z] [debug] [pid:22797] >>> testapi::wait_screen_change: screen change seen after 0.303718090057373 seconds (similarity: 13.3455272275858)[0m
+[2024-05-28T07:29:18.738504Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:31 called testapi::send_key_until_needlematch
+[2024-05-28T07:29:18.738656Z] [debug] [pid:22797] <<< testapi::check_screen(mustmatch="tty2-selected", timeout=30)
+[37m[2024-05-28T07:29:18.805621Z] [debug] [pid:23177] no match: 29.9s, best candidate: tty2-selected-20191031 (0.84)[0m
+[37m[2024-05-28T07:29:19.800478Z] [debug] [pid:23177] no change: 28.9s[0m
+[37m[2024-05-28T07:29:19.805917Z] [debug] [pid:23177] no match: 28.9s, best candidate: tty2-selected-20191031 (0.84)[0m
+[37m[2024-05-28T07:29:20.806859Z] [debug] [pid:23177] no match: 27.9s, best candidate: tty2-selected-20191031 (0.84)[0m
+[37m[2024-05-28T07:29:21.806641Z] [debug] [pid:23177] no match: 26.9s, best candidate: tty2-selected-20191031 (0.84)[0m
+[32m[2024-05-28T07:29:22.970959Z] [debug] [pid:22797] >>> testapi::_handle_found_needle: found tty2-selected-20180514, similarity 1.00 @ 82/160[0m
+[2024-05-28T07:29:22.971109Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:34 called testapi::select_console
+[2024-05-28T07:29:22.971197Z] [debug] [pid:22797] <<< testapi::select_console(testapi_console="root-console")
+[37m[2024-05-28T07:29:23.374946Z] [debug] [pid:22797] activate_console, console: root-console, type: console[0m
+[2024-05-28T07:29:23.375284Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:34 called testapi::select_console -> lib/susedistribution.pm:857 called testapi::wait_still_screen
+[2024-05-28T07:29:23.375432Z] [debug] [pid:22797] <<< testapi::wait_still_screen(timeout=30, similarity_level=47, stilltime=1)
+[32m[2024-05-28T07:29:24.493562Z] [debug] [pid:22797] >>> testapi::wait_still_screen: detected same image for 1 seconds (1.11580491065979 s elapsed), last detected similarity is 1000000[0m
+[2024-05-28T07:29:24.493709Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:34 called testapi::select_console -> lib/susedistribution.pm:862 called testapi::assert_screen
+[2024-05-28T07:29:24.493851Z] [debug] [pid:22797] <<< testapi::assert_screen(mustmatch=[
+    "tty2-selected",
+    "text-logged-in-root"
+  ], timeout=60)
+[37m[2024-05-28T07:29:24.554528Z] [debug] [pid:23177] no match: 59.9s, best candidate: tty2-selected-20191031 (0.84)[0m
+[37m[2024-05-28T07:29:25.510272Z] [debug] [pid:23177] no match: 58.9s, best candidate: tty2-selected-20191031 (0.84)[0m
+[37m[2024-05-28T07:29:26.510027Z] [debug] [pid:23177] no match: 57.9s, best candidate: tty2-selected-20191031 (0.84)[0m
+[37m[2024-05-28T07:29:27.515402Z] [debug] [pid:23177] no match: 56.9s, best candidate: tty2-selected-20191031 (0.84)[0m
+[32m[2024-05-28T07:29:28.886599Z] [debug] [pid:22797] >>> testapi::_handle_found_needle: found tty2-selected-20180514, similarity 1.00 @ 82/160[0m
+[2024-05-28T07:29:28.887532Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:34 called testapi::select_console -> lib/susedistribution.pm:864 called testapi::enter_cmd
+[2024-05-28T07:29:28.887741Z] [debug] [pid:22797] <<< testapi::type_string(string="root\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:29.056708Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:34 called testapi::select_console -> lib/susedistribution.pm:865 called susedistribution::handle_password_prompt -> lib/susedistribution.pm:70 called testapi::assert_screen
+[2024-05-28T07:29:29.056885Z] [debug] [pid:22797] <<< testapi::assert_screen(mustmatch="password-prompt", timeout=60)
+[32m[2024-05-28T07:29:29.656596Z] [debug] [pid:22797] >>> testapi::_handle_found_needle: found password-prompt-20200507, similarity 1.00 @ 0/176[0m
+[2024-05-28T07:29:29.656855Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:34 called testapi::select_console -> lib/susedistribution.pm:865 called susedistribution::handle_password_prompt -> lib/susedistribution.pm:79 called testapi::type_password
+[2024-05-28T07:29:29.657082Z] [debug] [pid:22797] <<< testapi::type_string(string="[masked]", max_interval=100, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:30.862260Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:34 called testapi::select_console -> lib/susedistribution.pm:865 called susedistribution::handle_password_prompt -> lib/susedistribution.pm:81 called testapi::send_key
+[2024-05-28T07:29:30.862426Z] [debug] [pid:22797] <<< testapi::send_key(key="ret", wait_screen_change=0)
+[2024-05-28T07:29:31.130372Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:34 called testapi::select_console -> lib/susedistribution.pm:876 called testapi::assert_screen
+[2024-05-28T07:29:31.130526Z] [debug] [pid:22797] <<< testapi::assert_screen(mustmatch="text-logged-in-root", timeout=60)
+[37m[2024-05-28T07:29:31.141498Z] [debug] [pid:23177] no match: 59.9s, best candidate: text-logged-in-root-20170627 (0.78)[0m
+[32m[2024-05-28T07:29:32.194209Z] [debug] [pid:22797] >>> testapi::_handle_found_needle: found text-logged-in-root-20151204, similarity 1.00 @ 71/192[0m
+[2024-05-28T07:29:32.194436Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:34 called testapi::select_console -> lib/susedistribution.pm:879 called testapi::assert_screen
+[2024-05-28T07:29:32.194565Z] [debug] [pid:22797] <<< testapi::assert_screen(mustmatch="root-console", timeout=30)
+[32m[2024-05-28T07:29:33.210348Z] [debug] [pid:22797] >>> testapi::_handle_found_needle: found root-console-no_color-20200130, similarity 0.81 @ 96/192[0m
+[2024-05-28T07:29:33.210680Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:34 called testapi::select_console -> lib/susedistribution.pm:933 called distribution::script_run
+[2024-05-28T07:29:33.210878Z] [debug] [pid:22797] <<< testapi::type_string(string="setterm -blank 0", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:33.750804Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:34 called testapi::select_console -> lib/susedistribution.pm:933 called distribution::script_run
+[2024-05-28T07:29:33.751286Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo YpuUt-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:34.864919Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:34 called testapi::select_console -> lib/susedistribution.pm:933 called distribution::script_run
+[2024-05-28T07:29:34.865194Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, expect_not_found=0, quiet=undef, regexp=qr/YpuUt-\d+-/u, no_regex=0, timeout=30, record_output=undef)
+[32m[2024-05-28T07:29:35.913505Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:YpuUt-\d+-): ok[0m
+[2024-05-28T07:29:35.913773Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:34 called testapi::select_console -> lib/susedistribution.pm:997 called testapi::assert_screen
+[2024-05-28T07:29:35.913910Z] [debug] [pid:22797] <<< testapi::assert_screen(mustmatch="root-console", timeout=30, no_wait=1)
+[32m[2024-05-28T07:29:35.964585Z] [debug] [pid:22797] >>> testapi::_handle_found_needle: found root-console-no_color-20200130, similarity 0.81 @ 96/208[0m
+[2024-05-28T07:29:35.964782Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:37 called testapi::assert_script_run
+[2024-05-28T07:29:35.964902Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="clear", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:29:35.965012Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:37 called testapi::assert_script_run
+[2024-05-28T07:29:35.965115Z] [debug] [pid:22797] <<< testapi::type_string(string="clear", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:36.134044Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:37 called testapi::assert_script_run
+[2024-05-28T07:29:36.134262Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo cqMh2-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:37.230575Z] [debug] [pid:22797] tests/microos/disk_boot.pm:31 called microos::microos_login -> products/microos/../../lib/microos.pm:37 called testapi::assert_script_run
+[2024-05-28T07:29:37.230801Z] [debug] [pid:22797] <<< testapi::wait_serial(timeout=90, no_regex=0, regexp=qr/cqMh2-\d+-/u, expect_not_found=0, quiet=undef, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:29:39.278853Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:cqMh2-\d+-): ok[0m
+[2024-05-28T07:29:39.279131Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:160 called testapi::script_output
+[2024-05-28T07:29:39.279284Z] [debug] [pid:22797] <<< testapi::type_string(string="cat - > /tmp/scriptEKjwm.sh;", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:40.275361Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:160 called testapi::script_output
+[2024-05-28T07:29:40.275566Z] [debug] [pid:22797] <<< testapi::type_string(string="\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:40.309845Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:160 called testapi::script_output
+[2024-05-28T07:29:40.310011Z] [debug] [pid:22797] <<< testapi::type_string(string="journalctl -k | grep 'audit:.*avc:' || true\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:41.895586Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:160 called testapi::script_output
+[2024-05-28T07:29:41.895755Z] [debug] [pid:22797] <<< testapi::send_key(key="ctrl-d", wait_screen_change=0)
+[2024-05-28T07:29:42.230986Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:160 called testapi::script_output
+[2024-05-28T07:29:42.231315Z] [debug] [pid:22797] <<< testapi::type_string(string="(echo EKjwm; bash -eox pipefail /tmp/scriptEKjwm.sh ; echo SCRIPT_FINISHEDEKjwm-\$?-) | tee /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:46.124426Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:160 called testapi::script_output
+[2024-05-28T07:29:46.124664Z] [debug] [pid:22797] <<< testapi::wait_serial(quiet=undef, expect_not_found=0, timeout=90, no_regex=0, regexp="SCRIPT_FINISHEDEKjwm-\\d+-", record_output=1, buffer_size=undef)
+[32m[2024-05-28T07:29:48.174600Z] [debug] [pid:22797] >>> testapi::wait_serial: SCRIPT_FINISHEDEKjwm-\d+-: ok[0m
+[2024-05-28T07:29:48.174817Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:162 called testapi::record_info
+[2024-05-28T07:29:48.174959Z] [debug] [pid:22797] <<< testapi::record_info(title="AVC-k", output="Kernel audit messages:\n\nMay 28 07:29:03 localhost.localdomain kernel: audit: type=1400 audit(1716881342.106:4): avc:  denied  { map_read map_write } for  pid=1828 comm=\"systemd-fstab-g\" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0\nMay 28 07:29:03 localhost.localdomain kernel: audit: type=1400 audit(1716881342.113:5): avc:  denied  { map_read map_write } for  pid=1830 comm=\"systemd-gpt-aut\" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0", result="softfail")
+[2024-05-28T07:29:48.175139Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:166 called testapi::script_run
+[2024-05-28T07:29:48.175244Z] [debug] [pid:22797] <<< testapi::script_run(cmd="journalctl -k | grep 'audit:.*avc:' > /var/tmp/k-audit.log", timeout=30, quiet=undef, output="", die_on_timeout=1)
+[2024-05-28T07:29:48.175345Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:166 called testapi::script_run
+[2024-05-28T07:29:48.175449Z] [debug] [pid:22797] <<< testapi::type_string(string="journalctl -k | grep 'audit:.*avc:' > /var/tmp/k-audit.log", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:50.216403Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:166 called testapi::script_run
+[2024-05-28T07:29:50.216626Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo 1w08R-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:51.313906Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:166 called testapi::script_run
+[2024-05-28T07:29:51.314127Z] [debug] [pid:22797] <<< testapi::wait_serial(record_output=undef, timeout=30, no_regex=0, regexp=qr/1w08R-\d+-/u, quiet=undef, expect_not_found=0, buffer_size=undef)
+[32m[2024-05-28T07:29:52.358728Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:1w08R-\d+-): ok[0m
+[2024-05-28T07:29:52.358926Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:167 called testapi::upload_logs
+[2024-05-28T07:29:52.359046Z] [debug] [pid:22797] <<< testapi::upload_logs(file="/var/tmp/k-audit.log", failok=0, timeout=90, fail_ok=1)
+[2024-05-28T07:29:52.359213Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:167 called testapi::upload_logs
+[2024-05-28T07:29:52.359305Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="curl --form upload=\@/var/tmp/k-audit.log --form upname=disk_boot-k-audit.log http://10.0.2.2:20183/K6cvovymKIE4seiH/uploadlog/k-audit.log", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:29:52.359409Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:167 called testapi::upload_logs
+[2024-05-28T07:29:52.359520Z] [debug] [pid:22797] <<< testapi::type_string(string="curl --form upload=\@/var/tmp/k-audit.log --form upname=disk_boot-k-audit.log http://10.0.2.2:20183/K6cvovymKIE4seiH/uploadlog/k-audit.log", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:57.135304Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:167 called testapi::upload_logs
+[2024-05-28T07:29:57.135628Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo MsLMV-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:58.281246Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:167 called testapi::upload_logs
+[2024-05-28T07:29:58.281470Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, quiet=undef, expect_not_found=0, regexp=qr/MsLMV-\d+-/u, timeout=90, no_regex=0, record_output=undef)
+[32m[2024-05-28T07:29:59.323970Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:MsLMV-\d+-): ok[0m
+[2024-05-28T07:29:59.324147Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:168 called testapi::script_run
+[2024-05-28T07:29:59.324276Z] [debug] [pid:22797] <<< testapi::script_run(cmd="rm -f /var/tmp/k-audit.log", timeout=30, output="", quiet=undef, die_on_timeout=1)
+[2024-05-28T07:29:59.324372Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:168 called testapi::script_run
+[2024-05-28T07:29:59.324473Z] [debug] [pid:22797] <<< testapi::type_string(string="rm -f /var/tmp/k-audit.log", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:00.203517Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:168 called testapi::script_run
+[2024-05-28T07:30:00.203841Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo 8I3L6-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:01.319386Z] [debug] [pid:22797] tests/microos/disk_boot.pm:33 called transactional::record_kernel_audit_messages -> products/microos/../../lib/transactional.pm:168 called testapi::script_run
+[2024-05-28T07:30:01.319733Z] [debug] [pid:22797] <<< testapi::wait_serial(record_output=undef, quiet=undef, expect_not_found=0, timeout=30, no_regex=0, regexp=qr/8I3L6-\d+-/u, buffer_size=undef)
+[32m[2024-05-28T07:30:02.367956Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:8I3L6-\d+-): ok[0m
+[2024-05-28T07:30:02.368145Z] [debug] [pid:22797] lib/consoletest.pm:36 called testapi::enter_cmd
+[2024-05-28T07:30:02.368278Z] [debug] [pid:22797] <<< testapi::type_string(string="cd\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:02.470745Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:30:02.470975Z] [debug] [pid:22797] <<< testapi::script_run(cmd="test -f /var/log/audit/audit.log", output="", quiet=undef, timeout=30, die_on_timeout=1)
+[2024-05-28T07:30:02.471145Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:30:02.471363Z] [debug] [pid:22797] <<< testapi::type_string(string="test -f /var/log/audit/audit.log", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:03.549423Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:30:03.549618Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo UfVk_-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:04.679233Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:30:04.679441Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, quiet=undef, expect_not_found=0, regexp=qr/UfVk_-\d+-/u, no_regex=0, timeout=30)
+[32m[2024-05-28T07:30:05.721277Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:UfVk_-\d+-): ok[0m
+[2024-05-28T07:30:05.721477Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:74 called testapi::script_output
+[2024-05-28T07:30:05.721610Z] [debug] [pid:22797] <<< testapi::type_string(string="cat - > /tmp/scriptOSm16.sh;", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:06.715974Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:74 called testapi::script_output
+[2024-05-28T07:30:06.716186Z] [debug] [pid:22797] <<< testapi::type_string(string="\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:06.750550Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:74 called testapi::script_output
+[2024-05-28T07:30:06.750755Z] [debug] [pid:22797] <<< testapi::type_string(string="ausearch -m avc -r\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=300, similarity_level=47)
+[2024-05-28T07:30:07.391021Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:74 called testapi::script_output
+[2024-05-28T07:30:07.391150Z] [debug] [pid:22797] <<< testapi::send_key(key="ctrl-d", wait_screen_change=0)
+[2024-05-28T07:30:07.725883Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:74 called testapi::script_output
+[2024-05-28T07:30:07.726088Z] [debug] [pid:22797] <<< testapi::type_string(string="(echo OSm16; bash -eox pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-\$?-) | tee /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:11.617846Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:74 called testapi::script_output
+[2024-05-28T07:30:11.618084Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=1, expect_not_found=0, quiet=undef, regexp="SCRIPT_FINISHEDOSm16-\\d+-", no_regex=0, timeout=300)
+[32m[2024-05-28T07:30:12.663554Z] [debug] [pid:22797] >>> testapi::wait_serial: SCRIPT_FINISHEDOSm16-\d+-: ok[0m
+[2024-05-28T07:30:12.663689Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:74 called testapi::script_output
+[2024-05-28T07:30:12.663771Z] [debug] [pid:22797] <<< distribution::script_output("script failed with : \nOSm16\nSCRIPT_FINISHEDOSm16-1-")
+[2024-05-28T07:30:12.663916Z] [debug] [pid:22797] lib/consoletest.pm:40 called opensusebasetest::clear_and_verify_console -> products/microos/../../lib/opensusebasetest.pm:53 called utils::clear_console -> lib/utils.pm:387 called testapi::enter_cmd
+[2024-05-28T07:30:12.664036Z] [debug] [pid:22797] <<< testapi::type_string(string="clear\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:12.866758Z] [debug] [pid:22797] lib/consoletest.pm:40 called opensusebasetest::clear_and_verify_console -> products/microos/../../lib/opensusebasetest.pm:54 called testapi::assert_screen
+[2024-05-28T07:30:12.866924Z] [debug] [pid:22797] <<< testapi::assert_screen(mustmatch="cleared-console", timeout=30)
+[37m[2024-05-28T07:30:12.946220Z] [debug] [pid:23177] no match: 29.9s, best candidate: cleared-console-root-wsl-20210222 (0.29)[0m
+[32m[2024-05-28T07:30:13.964691Z] [debug] [pid:22797] >>> testapi::_handle_found_needle: found cleared-console-standard_prompt-20191207, similarity 1.00 @ 82/1[0m
+[1;34m[2024-05-28T07:30:13.966301Z] [debug] [pid:22797] ||| finished disk_boot microos (runtime: 117 s)[0m
+[1;34m[2024-05-28T07:30:13.967999Z] [debug] [pid:22797] ||| starting networkmanager tests/microos/networkmanager.pm[0m
+[2024-05-28T07:30:13.968661Z] [debug] [pid:22797] tests/microos/networkmanager.pm:69 called testapi::script_output
+[2024-05-28T07:30:13.968811Z] [debug] [pid:22797] <<< testapi::type_string(string="cat - > /tmp/scriptdzyVV.sh;", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:14.963494Z] [debug] [pid:22797] tests/microos/networkmanager.pm:69 called testapi::script_output
+[2024-05-28T07:30:14.963705Z] [debug] [pid:22797] <<< testapi::type_string(string="\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:14.997965Z] [debug] [pid:22797] tests/microos/networkmanager.pm:69 called testapi::script_output
+[2024-05-28T07:30:14.998124Z] [debug] [pid:22797] <<< testapi::type_string(string="grep 52:54:00:12:34:56 /sys/class/net/*/address |cut -d / -f 5\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:17.237470Z] [debug] [pid:22797] tests/microos/networkmanager.pm:69 called testapi::script_output
+[2024-05-28T07:30:17.237662Z] [debug] [pid:22797] <<< testapi::send_key(key="ctrl-d", wait_screen_change=0)
+[2024-05-28T07:30:17.573081Z] [debug] [pid:22797] tests/microos/networkmanager.pm:69 called testapi::script_output
+[2024-05-28T07:30:17.573318Z] [debug] [pid:22797] <<< testapi::type_string(string="(echo dzyVV; bash -eox pipefail /tmp/scriptdzyVV.sh ; echo SCRIPT_FINISHEDdzyVV-\$?-) | tee /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:21.465441Z] [debug] [pid:22797] tests/microos/networkmanager.pm:69 called testapi::script_output
+[2024-05-28T07:30:21.465680Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, regexp="SCRIPT_FINISHEDdzyVV-\\d+-", no_regex=0, timeout=90, quiet=undef, expect_not_found=0, record_output=1)
+[32m[2024-05-28T07:30:22.511766Z] [debug] [pid:22797] >>> testapi::wait_serial: SCRIPT_FINISHEDdzyVV-\d+-: ok[0m
+[2024-05-28T07:30:22.511954Z] [debug] [pid:22797] tests/microos/networkmanager.pm:74 called testapi::script_run
+[2024-05-28T07:30:22.512106Z] [debug] [pid:22797] <<< testapi::script_run(cmd="rpm -q sysconfig", quiet=undef, output="", timeout=30, die_on_timeout=1)
+[2024-05-28T07:30:22.512206Z] [debug] [pid:22797] tests/microos/networkmanager.pm:74 called testapi::script_run
+[2024-05-28T07:30:22.512308Z] [debug] [pid:22797] <<< testapi::type_string(string="rpm -q sysconfig", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:23.051664Z] [debug] [pid:22797] tests/microos/networkmanager.pm:74 called testapi::script_run
+[2024-05-28T07:30:23.051898Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo umwWv-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:24.146696Z] [debug] [pid:22797] tests/microos/networkmanager.pm:74 called testapi::script_run
+[2024-05-28T07:30:24.146936Z] [debug] [pid:22797] <<< testapi::wait_serial(timeout=30, no_regex=0, regexp=qr/umwWv-\d+-/u, quiet=undef, expect_not_found=0, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:30:25.195474Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:umwWv-\d+-): ok[0m
+[2024-05-28T07:30:25.195696Z] [debug] [pid:22797] tests/microos/networkmanager.pm:74 called testapi::script_run
+[2024-05-28T07:30:25.195905Z] [debug] [pid:22797] <<< testapi::script_run(cmd="rpm -q sysconfig-netconfig", output="", quiet=undef, timeout=30, die_on_timeout=1)
+[2024-05-28T07:30:25.196059Z] [debug] [pid:22797] tests/microos/networkmanager.pm:74 called testapi::script_run
+[2024-05-28T07:30:25.196223Z] [debug] [pid:22797] <<< testapi::type_string(string="rpm -q sysconfig-netconfig", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:26.073307Z] [debug] [pid:22797] tests/microos/networkmanager.pm:74 called testapi::script_run
+[2024-05-28T07:30:26.073530Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo 9rFUg-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:27.186681Z] [debug] [pid:22797] tests/microos/networkmanager.pm:74 called testapi::script_run
+[2024-05-28T07:30:27.186922Z] [debug] [pid:22797] <<< testapi::wait_serial(no_regex=0, regexp=qr/9rFUg-\d+-/u, timeout=30, expect_not_found=0, quiet=undef, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:30:28.235233Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:9rFUg-\d+-): ok[0m
+[2024-05-28T07:30:28.235423Z] [debug] [pid:22797] tests/microos/networkmanager.pm:78 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:30:28.235546Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="systemctl --no-pager is-active NetworkManager", quiet=undef, timeout=90, fail_message="")
+[2024-05-28T07:30:28.235641Z] [debug] [pid:22797] tests/microos/networkmanager.pm:78 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:30:28.235741Z] [debug] [pid:22797] <<< testapi::type_string(string="systemctl --no-pager is-active NetworkManager", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:29.785415Z] [debug] [pid:22797] tests/microos/networkmanager.pm:78 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:30:29.785630Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo 8A2a3-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:30.882153Z] [debug] [pid:22797] tests/microos/networkmanager.pm:78 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:30:30.882370Z] [debug] [pid:22797] <<< testapi::wait_serial(expect_not_found=0, quiet=undef, regexp=qr/8A2a3-\d+-/u, no_regex=0, timeout=90, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:30:31.931477Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:8A2a3-\d+-): ok[0m
+[2024-05-28T07:30:31.931649Z] [debug] [pid:22797] tests/microos/networkmanager.pm:79 called testapi::assert_script_run
+[2024-05-28T07:30:31.931776Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="grep \"Generated by NetworkManager\" /etc/resolv.conf", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:30:31.931869Z] [debug] [pid:22797] tests/microos/networkmanager.pm:79 called testapi::assert_script_run
+[2024-05-28T07:30:31.931972Z] [debug] [pid:22797] <<< testapi::type_string(string="grep \"Generated by NetworkManager\" /etc/resolv.conf", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:33.735207Z] [debug] [pid:22797] tests/microos/networkmanager.pm:79 called testapi::assert_script_run
+[2024-05-28T07:30:33.735541Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo ~D3M4-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:34.865491Z] [debug] [pid:22797] tests/microos/networkmanager.pm:79 called testapi::assert_script_run
+[2024-05-28T07:30:34.865732Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, quiet=undef, expect_not_found=0, timeout=90, no_regex=0, regexp=qr/~D3M4-\d+-/u)
+[32m[2024-05-28T07:30:35.907537Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:~D3M4-\d+-): ok[0m
+[2024-05-28T07:30:35.907707Z] [debug] [pid:22797] tests/microos/networkmanager.pm:80 called testapi::assert_script_run
+[2024-05-28T07:30:35.907820Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="grep \"nameserver 10.0.2.3\" /etc/resolv.conf", fail_message="", quiet=undef, timeout=90)
+[2024-05-28T07:30:35.907911Z] [debug] [pid:22797] tests/microos/networkmanager.pm:80 called testapi::assert_script_run
+[2024-05-28T07:30:35.908033Z] [debug] [pid:22797] <<< testapi::type_string(string="grep \"nameserver 10.0.2.3\" /etc/resolv.conf", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:37.389298Z] [debug] [pid:22797] tests/microos/networkmanager.pm:80 called testapi::assert_script_run
+[2024-05-28T07:30:37.389549Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo CFCXx-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:38.534455Z] [debug] [pid:22797] tests/microos/networkmanager.pm:80 called testapi::assert_script_run
+[2024-05-28T07:30:38.534769Z] [debug] [pid:22797] <<< testapi::wait_serial(quiet=undef, expect_not_found=0, timeout=90, no_regex=0, regexp=qr/CFCXx-\d+-/u, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:30:39.584177Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:CFCXx-\d+-): ok[0m
+[2024-05-28T07:30:39.584329Z] [debug] [pid:22797] tests/microos/networkmanager.pm:82 called testapi::record_info
+[2024-05-28T07:30:39.584437Z] [debug] [pid:22797] <<< testapi::record_info(title="default dns bind config", output="", result="ok")
+[2024-05-28T07:30:39.584752Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:39.584853Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="curl -f -v http://10.0.2.2:20183/K6cvovymKIE4seiH/current_script > /tmp/scriptlk5WT.sh", quiet=undef, timeout=90, fail_message="")
+[2024-05-28T07:30:39.584949Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:39.585050Z] [debug] [pid:22797] <<< testapi::type_string(string="curl -f -v http://10.0.2.2:20183/K6cvovymKIE4seiH/current_script > /tmp/scriptlk5WT.sh", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:42.666957Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:42.667185Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo X6kIm-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:43.778463Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:43.778665Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, no_regex=0, timeout=90, regexp=qr/X6kIm-\d+-/u, expect_not_found=0, quiet=undef)
+[32m[2024-05-28T07:30:44.832451Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:X6kIm-\d+-): ok[0m
+[2024-05-28T07:30:44.832720Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:44.832950Z] [debug] [pid:22797] <<< testapi::script_run(cmd="clear", die_on_timeout=1, timeout=30, output="", quiet=undef)
+[2024-05-28T07:30:44.833114Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:44.833295Z] [debug] [pid:22797] <<< testapi::type_string(string="clear", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:45.002480Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:45.002700Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo JgRME-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:46.148699Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:46.148929Z] [debug] [pid:22797] <<< testapi::wait_serial(expect_not_found=0, quiet=undef, timeout=30, regexp=qr/JgRME-\d+-/u, no_regex=0, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:30:47.195263Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:JgRME-\d+-): ok[0m
+[2024-05-28T07:30:47.195445Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:47.195592Z] [debug] [pid:22797] <<< testapi::type_string(string="(echo lk5WT; bash -eox pipefail /tmp/scriptlk5WT.sh ; echo SCRIPT_FINISHEDlk5WT-\$?-) | tee /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:51.091066Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:51.091350Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, expect_not_found=0, quiet=undef, timeout=30, no_regex=0, regexp="SCRIPT_FINISHEDlk5WT-\\d+-", record_output=1)
+[32m[2024-05-28T07:30:52.138733Z] [debug] [pid:22797] >>> testapi::wait_serial: SCRIPT_FINISHEDlk5WT-\d+-: ok[0m
+[2024-05-28T07:30:52.139117Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:52.139261Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="curl -f -v http://10.0.2.2:20183/K6cvovymKIE4seiH/current_script > /tmp/scriptjVZNm.sh", fail_message="", timeout=90, quiet=undef)
+[2024-05-28T07:30:52.139387Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:52.139509Z] [debug] [pid:22797] <<< testapi::type_string(string="curl -f -v http://10.0.2.2:20183/K6cvovymKIE4seiH/current_script > /tmp/scriptjVZNm.sh", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:55.239492Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:55.239771Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo wFrDr-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:56.352895Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:56.353145Z] [debug] [pid:22797] <<< testapi::wait_serial(record_output=undef, expect_not_found=0, quiet=undef, timeout=90, regexp=qr/wFrDr-\d+-/u, no_regex=0, buffer_size=undef)
+[32m[2024-05-28T07:30:57.400372Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:wFrDr-\d+-): ok[0m
+[2024-05-28T07:30:57.400567Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:57.400696Z] [debug] [pid:22797] <<< testapi::script_run(cmd="clear", timeout=30, output="", quiet=undef, die_on_timeout=1)
+[2024-05-28T07:30:57.400798Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:57.400900Z] [debug] [pid:22797] <<< testapi::type_string(string="clear", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:57.569925Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:57.570139Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo JgRME-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:58.714943Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:58.715220Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, quiet=undef, expect_not_found=0, timeout=30, no_regex=0, regexp=qr/JgRME-\d+-/u, record_output=undef)
+[32m[2024-05-28T07:30:59.765510Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:JgRME-\d+-): ok[0m
+[2024-05-28T07:30:59.765690Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:30:59.765840Z] [debug] [pid:22797] <<< testapi::type_string(string="(echo jVZNm; bash -eox pipefail /tmp/scriptjVZNm.sh ; echo SCRIPT_FINISHEDjVZNm-\$?-) | tee /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:03.711821Z] [debug] [pid:22797] tests/microos/networkmanager.pm:83 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:31:03.712110Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, quiet=undef, expect_not_found=0, no_regex=0, timeout=30, regexp="SCRIPT_FINISHEDjVZNm-\\d+-", record_output=1)
+[32m[2024-05-28T07:31:04.754816Z] [debug] [pid:22797] >>> testapi::wait_serial: SCRIPT_FINISHEDjVZNm-\d+-: ok[0m
+[2024-05-28T07:31:04.755010Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:31:04.755126Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.2", quiet=undef, timeout=90, fail_message="")
+[2024-05-28T07:31:04.755223Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:31:04.755324Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.2", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:05.362652Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:31:05.362872Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo XuNJt-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:06.492478Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:31:06.492697Z] [debug] [pid:22797] <<< testapi::wait_serial(record_output=undef, timeout=90, no_regex=0, regexp=qr/XuNJt-\d+-/u, quiet=undef, expect_not_found=0, buffer_size=undef)
+[32m[2024-05-28T07:31:12.539374Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:XuNJt-\d+-): ok[0m
+[2024-05-28T07:31:12.539549Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:31:12.539664Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.3", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:31:12.539762Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:31:12.539869Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.3", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:13.147326Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:31:13.147554Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo bVNkX-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:14.276642Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:31:14.276874Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, quiet=undef, expect_not_found=0, timeout=90, regexp=qr/bVNkX-\d+-/u, no_regex=0)
+[32m[2024-05-28T07:31:20.324553Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:bVNkX-\d+-): ok[0m
+[2024-05-28T07:31:20.324729Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:31:20.324849Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="nmcli device disconnect ens4", quiet=undef, timeout=90, fail_message="")
+[2024-05-28T07:31:20.324945Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:31:20.325044Z] [debug] [pid:22797] <<< testapi::type_string(string="nmcli device disconnect ens4", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:21.268404Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:31:21.268664Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo w1P11-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:22.363804Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:31:22.364031Z] [debug] [pid:22797] <<< testapi::wait_serial(no_regex=0, regexp=qr/w1P11-\d+-/u, timeout=90, expect_not_found=0, quiet=undef, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:31:24.411335Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:w1P11-\d+-): ok[0m
+[2024-05-28T07:31:24.411501Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:31:24.411631Z] [debug] [pid:22797] <<< testapi::script_run(cmd="ping -c 5 10.0.2.3", timeout=30, quiet=undef, output="", die_on_timeout=1)
+[2024-05-28T07:31:24.411731Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:31:24.411832Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.3", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:25.018524Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:31:25.018754Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo GSOf4-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:26.148324Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:31:26.148554Z] [debug] [pid:22797] <<< testapi::wait_serial(timeout=30, no_regex=0, regexp=qr/GSOf4-\d+-/u, quiet=undef, expect_not_found=0, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:31:27.193395Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:GSOf4-\d+-): ok[0m
+[2024-05-28T07:31:27.193568Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:31:27.193691Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="nmcli device connect ens4", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:31:27.193789Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:31:27.193891Z] [debug] [pid:22797] <<< testapi::type_string(string="nmcli device connect ens4", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:28.037051Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:31:28.037288Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo cSo4Y-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:29.148789Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:31:29.149019Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, quiet=undef, expect_not_found=0, no_regex=0, regexp=qr/cSo4Y-\d+-/u, timeout=90, record_output=undef)
+[32m[2024-05-28T07:31:31.200832Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:cSo4Y-\d+-): ok[0m
+[2024-05-28T07:31:31.201072Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:31:31.201227Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.2", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:31:31.201356Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:31:31.201474Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.2", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:31.808202Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:31:31.808414Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo XuNJt-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:32.937805Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:31:32.938030Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, expect_not_found=0, quiet=undef, regexp=qr/XuNJt-\d+-/u, timeout=90, no_regex=0)
+[32m[2024-05-28T07:31:38.988430Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:XuNJt-\d+-): ok[0m
+[2024-05-28T07:31:38.988609Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:31:38.988734Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.3", fail_message="", timeout=90, quiet=undef)
+[2024-05-28T07:31:38.988834Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:31:38.988935Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.3", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:39.595621Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:31:39.595874Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo bVNkX-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:40.725424Z] [debug] [pid:22797] tests/microos/networkmanager.pm:85 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:31:40.725649Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, expect_not_found=0, quiet=undef, timeout=90, no_regex=0, regexp=qr/bVNkX-\d+-/u)
+[32m[2024-05-28T07:31:46.777334Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:bVNkX-\d+-): ok[0m
+[2024-05-28T07:31:46.777515Z] [debug] [pid:22797] tests/microos/networkmanager.pm:86 called testapi::record_info
+[2024-05-28T07:31:46.777634Z] [debug] [pid:22797] <<< testapi::record_info(title="chronyd service check", output="", result="ok")
+[2024-05-28T07:31:46.777822Z] [debug] [pid:22797] tests/microos/networkmanager.pm:87 called testapi::script_output
+[2024-05-28T07:31:46.777936Z] [debug] [pid:22797] <<< testapi::type_string(string="cat - > /tmp/scriptNdjZO.sh;", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:47.789588Z] [debug] [pid:22797] tests/microos/networkmanager.pm:87 called testapi::script_output
+[2024-05-28T07:31:47.789808Z] [debug] [pid:22797] <<< testapi::type_string(string="\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:47.824071Z] [debug] [pid:22797] tests/microos/networkmanager.pm:87 called testapi::script_output
+[2024-05-28T07:31:47.824249Z] [debug] [pid:22797] <<< testapi::type_string(string="chronyc -n sources\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:48.464883Z] [debug] [pid:22797] tests/microos/networkmanager.pm:87 called testapi::script_output
+[2024-05-28T07:31:48.465059Z] [debug] [pid:22797] <<< testapi::send_key(key="ctrl-d", wait_screen_change=0)
+[2024-05-28T07:31:48.800056Z] [debug] [pid:22797] tests/microos/networkmanager.pm:87 called testapi::script_output
+[2024-05-28T07:31:48.800355Z] [debug] [pid:22797] <<< testapi::type_string(string="(echo NdjZO; bash -eox pipefail /tmp/scriptNdjZO.sh ; echo SCRIPT_FINISHEDNdjZO-\$?-) | tee /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:52.745610Z] [debug] [pid:22797] tests/microos/networkmanager.pm:87 called testapi::script_output
+[2024-05-28T07:31:52.745850Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=1, timeout=90, no_regex=0, regexp="SCRIPT_FINISHEDNdjZO-\\d+-", expect_not_found=0, quiet=undef)
+[32m[2024-05-28T07:31:54.795324Z] [debug] [pid:22797] >>> testapi::wait_serial: SCRIPT_FINISHEDNdjZO-\d+-: ok[0m
+[2024-05-28T07:31:54.795528Z] [debug] [pid:22797] tests/microos/networkmanager.pm:89 called testapi::script_run
+[2024-05-28T07:31:54.795658Z] [debug] [pid:22797] <<< testapi::script_run(cmd="nmcli", die_on_timeout=1, timeout=30, output="", quiet=undef)
+[2024-05-28T07:31:54.795751Z] [debug] [pid:22797] tests/microos/networkmanager.pm:89 called testapi::script_run
+[2024-05-28T07:31:54.795848Z] [debug] [pid:22797] <<< testapi::type_string(string="nmcli", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:54.965289Z] [debug] [pid:22797] tests/microos/networkmanager.pm:89 called testapi::script_run
+[2024-05-28T07:31:54.965455Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo PO0X5-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:56.095685Z] [debug] [pid:22797] tests/microos/networkmanager.pm:89 called testapi::script_run
+[2024-05-28T07:31:56.095941Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, no_regex=0, regexp=qr/PO0X5-\d+-/u, timeout=30, quiet=undef, expect_not_found=0)
+[32m[2024-05-28T07:31:58.142962Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:PO0X5-\d+-): ok[0m
+[2024-05-28T07:31:58.143135Z] [debug] [pid:22797] tests/microos/networkmanager.pm:90 called testapi::script_run
+[2024-05-28T07:31:58.143268Z] [debug] [pid:22797] <<< testapi::script_run(cmd="nmcli device show", timeout=30, quiet=undef, output="", die_on_timeout=1)
+[2024-05-28T07:31:58.143398Z] [debug] [pid:22797] tests/microos/networkmanager.pm:90 called testapi::script_run
+[2024-05-28T07:31:58.143562Z] [debug] [pid:22797] <<< testapi::type_string(string="nmcli device show", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:58.716565Z] [debug] [pid:22797] tests/microos/networkmanager.pm:90 called testapi::script_run
+[2024-05-28T07:31:58.716781Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo ~~6Fm-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:31:59.845284Z] [debug] [pid:22797] tests/microos/networkmanager.pm:90 called testapi::script_run
+[2024-05-28T07:31:59.845516Z] [debug] [pid:22797] <<< testapi::wait_serial(timeout=30, regexp=qr/~~6Fm-\d+-/u, no_regex=0, expect_not_found=0, quiet=undef, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:32:01.892077Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:~~6Fm-\d+-): ok[0m
+[2024-05-28T07:32:01.892252Z] [debug] [pid:22797] tests/microos/networkmanager.pm:91 called testapi::assert_script_run
+[2024-05-28T07:32:01.892377Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="nmcli device show | grep GENERAL.DEVICE | grep ens4", fail_message="", quiet=undef, timeout=90)
+[2024-05-28T07:32:01.892476Z] [debug] [pid:22797] tests/microos/networkmanager.pm:91 called testapi::assert_script_run
+[2024-05-28T07:32:01.892593Z] [debug] [pid:22797] <<< testapi::type_string(string="nmcli device show | grep GENERAL.DEVICE | grep ens4", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:03.866812Z] [debug] [pid:22797] tests/microos/networkmanager.pm:91 called testapi::assert_script_run
+[2024-05-28T07:32:03.867055Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo MomGv-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:04.980118Z] [debug] [pid:22797] tests/microos/networkmanager.pm:91 called testapi::assert_script_run
+[2024-05-28T07:32:04.980341Z] [debug] [pid:22797] <<< testapi::wait_serial(record_output=undef, no_regex=0, timeout=90, regexp=qr/MomGv-\d+-/u, quiet=undef, expect_not_found=0, buffer_size=undef)
+[32m[2024-05-28T07:32:07.028439Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:MomGv-\d+-): ok[0m
+[2024-05-28T07:32:07.028601Z] [debug] [pid:22797] tests/microos/networkmanager.pm:92 called testapi::assert_script_run
+[2024-05-28T07:32:07.028717Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="nmcli device show | grep IP4.ADDRESS | grep 10.0.2.15", fail_message="", timeout=90, quiet=undef)
+[2024-05-28T07:32:07.028808Z] [debug] [pid:22797] tests/microos/networkmanager.pm:92 called testapi::assert_script_run
+[2024-05-28T07:32:07.028908Z] [debug] [pid:22797] <<< testapi::type_string(string="nmcli device show | grep IP4.ADDRESS | grep 10.0.2.15", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:09.000852Z] [debug] [pid:22797] tests/microos/networkmanager.pm:92 called testapi::assert_script_run
+[2024-05-28T07:32:09.001091Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo uUzhZ-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:10.114416Z] [debug] [pid:22797] tests/microos/networkmanager.pm:92 called testapi::assert_script_run
+[2024-05-28T07:32:10.114663Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, no_regex=0, regexp=qr/uUzhZ-\d+-/u, timeout=90, expect_not_found=0, quiet=undef, record_output=undef)
+[32m[2024-05-28T07:32:12.162Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:uUzhZ-\d+-): ok[0m
+[2024-05-28T07:32:12.162172Z] [debug] [pid:22797] tests/microos/networkmanager.pm:93 called testapi::assert_script_run
+[2024-05-28T07:32:12.162289Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="nmcli device show | grep IP4.DNS | grep 10.0.2.3", fail_message="", quiet=undef, timeout=90)
+[2024-05-28T07:32:12.162378Z] [debug] [pid:22797] tests/microos/networkmanager.pm:93 called testapi::assert_script_run
+[2024-05-28T07:32:12.162476Z] [debug] [pid:22797] <<< testapi::type_string(string="nmcli device show | grep IP4.DNS | grep 10.0.2.3", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:13.899961Z] [debug] [pid:22797] tests/microos/networkmanager.pm:93 called testapi::assert_script_run
+[2024-05-28T07:32:13.900211Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo _mvSr-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:15.018461Z] [debug] [pid:22797] tests/microos/networkmanager.pm:93 called testapi::assert_script_run
+[2024-05-28T07:32:15.018703Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, no_regex=0, regexp=qr/_mvSr-\d+-/u, timeout=90, expect_not_found=0, quiet=undef)
+[32m[2024-05-28T07:32:17.065964Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:_mvSr-\d+-): ok[0m
+[2024-05-28T07:32:17.066144Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:32:17.066275Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.2", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:32:17.066376Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:32:17.066482Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.2", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:17.674519Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:32:17.674739Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo XuNJt-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:18.804466Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:32:18.804718Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, quiet=undef, expect_not_found=0, no_regex=0, timeout=90, regexp=qr/XuNJt-\d+-/u, record_output=undef)
+[32m[2024-05-28T07:32:24.853005Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:XuNJt-\d+-): ok[0m
+[2024-05-28T07:32:24.853191Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:32:24.853316Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.3", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:32:24.853417Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:32:24.853518Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.3", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:25.460625Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:32:25.460891Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo bVNkX-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:26.590135Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:32:26.590383Z] [debug] [pid:22797] <<< testapi::wait_serial(record_output=undef, no_regex=0, regexp=qr/bVNkX-\d+-/u, timeout=90, expect_not_found=0, quiet=undef, buffer_size=undef)
+[32m[2024-05-28T07:32:32.647196Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:bVNkX-\d+-): ok[0m
+[2024-05-28T07:32:32.647449Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:32:32.647625Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="nmcli device disconnect ens4", fail_message="", quiet=undef, timeout=90)
+[2024-05-28T07:32:32.647780Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:32:32.647952Z] [debug] [pid:22797] <<< testapi::type_string(string="nmcli device disconnect ens4", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:33.592500Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:32:33.592720Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo w1P11-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:34.688047Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:32:34.688278Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, quiet=undef, expect_not_found=0, timeout=90, regexp=qr/w1P11-\d+-/u, no_regex=0)
+[32m[2024-05-28T07:32:36.737439Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:w1P11-\d+-): ok[0m
+[2024-05-28T07:32:36.737634Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:32:36.737783Z] [debug] [pid:22797] <<< testapi::script_run(cmd="ping -c 5 10.0.2.3", timeout=30, quiet=undef, output="", die_on_timeout=1)
+[2024-05-28T07:32:36.737909Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:32:36.738030Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.3", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:37.345222Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:32:37.345423Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo GSOf4-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:38.473646Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:32:38.473890Z] [debug] [pid:22797] <<< testapi::wait_serial(quiet=undef, expect_not_found=0, no_regex=0, timeout=30, regexp=qr/GSOf4-\d+-/u, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:32:39.529776Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:GSOf4-\d+-): ok[0m
+[2024-05-28T07:32:39.529956Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:32:39.530083Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="nmcli device connect ens4", fail_message="", timeout=90, quiet=undef)
+[2024-05-28T07:32:39.530184Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:32:39.530285Z] [debug] [pid:22797] <<< testapi::type_string(string="nmcli device connect ens4", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:40.374087Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:32:40.374327Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo cSo4Y-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:41.486817Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:32:41.487064Z] [debug] [pid:22797] <<< testapi::wait_serial(quiet=undef, expect_not_found=0, timeout=90, regexp=qr/cSo4Y-\d+-/u, no_regex=0, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:32:43.530716Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:cSo4Y-\d+-): ok[0m
+[2024-05-28T07:32:43.530890Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:32:43.531025Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.2", fail_message="", timeout=90, quiet=undef)
+[2024-05-28T07:32:43.531125Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:32:43.531225Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.2", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:44.144159Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:32:44.144415Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo XuNJt-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:45.273334Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:32:45.273570Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, no_regex=0, regexp=qr/XuNJt-\d+-/u, timeout=90, expect_not_found=0, quiet=undef)
+[32m[2024-05-28T07:32:51.325223Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:XuNJt-\d+-): ok[0m
+[2024-05-28T07:32:51.325441Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:32:51.325621Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.3", fail_message="", timeout=90, quiet=undef)
+[2024-05-28T07:32:51.325773Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:32:51.325943Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.3", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:51.933395Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:32:51.933610Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo bVNkX-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:32:53.062183Z] [debug] [pid:22797] tests/microos/networkmanager.pm:94 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:32:53.062411Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, no_regex=0, regexp=qr/bVNkX-\d+-/u, timeout=90, quiet=undef, expect_not_found=0, record_output=undef)
+[32m[2024-05-28T07:32:59.106641Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:bVNkX-\d+-): ok[0m
+[2024-05-28T07:32:59.106990Z] [debug] [pid:22797] tests/microos/networkmanager.pm:96 called testapi::script_output
+[2024-05-28T07:32:59.107124Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="curl -f -v http://10.0.2.2:20183/K6cvovymKIE4seiH/current_script > /tmp/script~oGv5.sh", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:32:59.107214Z] [debug] [pid:22797] tests/microos/networkmanager.pm:96 called testapi::script_output
+[2024-05-28T07:32:59.107322Z] [debug] [pid:22797] <<< testapi::type_string(string="curl -f -v http://10.0.2.2:20183/K6cvovymKIE4seiH/current_script > /tmp/script~oGv5.sh", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:02.192722Z] [debug] [pid:22797] tests/microos/networkmanager.pm:96 called testapi::script_output
+[2024-05-28T07:33:02.192923Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo xOljn-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:03.289385Z] [debug] [pid:22797] tests/microos/networkmanager.pm:96 called testapi::script_output
+[2024-05-28T07:33:03.289626Z] [debug] [pid:22797] <<< testapi::wait_serial(record_output=undef, quiet=undef, expect_not_found=0, regexp=qr/xOljn-\d+-/u, no_regex=0, timeout=90, buffer_size=undef)
+[32m[2024-05-28T07:33:05.338726Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:xOljn-\d+-): ok[0m
+[2024-05-28T07:33:05.338915Z] [debug] [pid:22797] tests/microos/networkmanager.pm:96 called testapi::script_output
+[2024-05-28T07:33:05.339057Z] [debug] [pid:22797] <<< testapi::script_run(cmd="clear", quiet=undef, output="", timeout=30, die_on_timeout=1)
+[2024-05-28T07:33:05.339160Z] [debug] [pid:22797] tests/microos/networkmanager.pm:96 called testapi::script_output
+[2024-05-28T07:33:05.339262Z] [debug] [pid:22797] <<< testapi::type_string(string="clear", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:05.508683Z] [debug] [pid:22797] tests/microos/networkmanager.pm:96 called testapi::script_output
+[2024-05-28T07:33:05.508907Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo JgRME-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:06.656190Z] [debug] [pid:22797] tests/microos/networkmanager.pm:96 called testapi::script_output
+[2024-05-28T07:33:06.656414Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, timeout=30, no_regex=0, regexp=qr/JgRME-\d+-/u, expect_not_found=0, quiet=undef, record_output=undef)
+[32m[2024-05-28T07:33:08.700341Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:JgRME-\d+-): ok[0m
+[2024-05-28T07:33:08.700502Z] [debug] [pid:22797] tests/microos/networkmanager.pm:96 called testapi::script_output
+[2024-05-28T07:33:08.700641Z] [debug] [pid:22797] <<< testapi::type_string(string="(echo ~oGv5; bash -eox pipefail /tmp/script~oGv5.sh ; echo SCRIPT_FINISHED~oGv5-\$?-) | tee /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:12.593702Z] [debug] [pid:22797] tests/microos/networkmanager.pm:96 called testapi::script_output
+[2024-05-28T07:33:12.593932Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, regexp="SCRIPT_FINISHED~oGv5-\\d+-", no_regex=0, timeout=90, expect_not_found=0, quiet=undef, record_output=1)
+[32m[2024-05-28T07:33:13.638339Z] [debug] [pid:22797] >>> testapi::wait_serial: SCRIPT_FINISHED~oGv5-\d+-: ok[0m
+[2024-05-28T07:33:13.638548Z] [debug] [pid:22797] tests/microos/networkmanager.pm:104 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:33:13.638673Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="systemctl --no-pager restart NetworkManager", fail_message="", timeout=90, quiet=undef)
+[2024-05-28T07:33:13.638773Z] [debug] [pid:22797] tests/microos/networkmanager.pm:104 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:33:13.638875Z] [debug] [pid:22797] <<< testapi::type_string(string="systemctl --no-pager restart NetworkManager", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:15.121476Z] [debug] [pid:22797] tests/microos/networkmanager.pm:104 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:33:15.121689Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo r3Pjz-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:16.217504Z] [debug] [pid:22797] tests/microos/networkmanager.pm:104 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:33:16.217758Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, timeout=90, regexp=qr/r3Pjz-\d+-/u, no_regex=0, quiet=undef, expect_not_found=0)
+[32m[2024-05-28T07:33:18.259878Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:r3Pjz-\d+-): ok[0m
+[2024-05-28T07:33:18.260062Z] [debug] [pid:22797] tests/microos/networkmanager.pm:106 called testapi::record_info
+[2024-05-28T07:33:18.260182Z] [debug] [pid:22797] <<< testapi::record_info(title="with dnsmasq", output="", result="ok")
+[2024-05-28T07:33:18.260528Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:18.260630Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="curl -f -v http://10.0.2.2:20183/K6cvovymKIE4seiH/current_script > /tmp/scriptlk5WT.sh", quiet=undef, timeout=90, fail_message="")
+[2024-05-28T07:33:18.260728Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:18.260837Z] [debug] [pid:22797] <<< testapi::type_string(string="curl -f -v http://10.0.2.2:20183/K6cvovymKIE4seiH/current_script > /tmp/scriptlk5WT.sh", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:21.347336Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:21.347663Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo X6kIm-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:22.460342Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:22.460585Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, quiet=undef, expect_not_found=0, no_regex=0, regexp=qr/X6kIm-\d+-/u, timeout=90, record_output=undef)
+[32m[2024-05-28T07:33:23.508291Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:X6kIm-\d+-): ok[0m
+[2024-05-28T07:33:23.508481Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:23.508614Z] [debug] [pid:22797] <<< testapi::script_run(cmd="clear", die_on_timeout=1, timeout=30, output="", quiet=undef)
+[2024-05-28T07:33:23.508719Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:23.508822Z] [debug] [pid:22797] <<< testapi::type_string(string="clear", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:23.678532Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:23.678759Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo JgRME-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:24.824851Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:24.825084Z] [debug] [pid:22797] <<< testapi::wait_serial(record_output=undef, regexp=qr/JgRME-\d+-/u, no_regex=0, timeout=30, expect_not_found=0, quiet=undef, buffer_size=undef)
+[32m[2024-05-28T07:33:25.870442Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:JgRME-\d+-): ok[0m
+[2024-05-28T07:33:25.870615Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:25.870749Z] [debug] [pid:22797] <<< testapi::type_string(string="(echo lk5WT; bash -eox pipefail /tmp/scriptlk5WT.sh ; echo SCRIPT_FINISHEDlk5WT-\$?-) | tee /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:29.768549Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:29.768784Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=1, expect_not_found=0, quiet=undef, no_regex=0, regexp="SCRIPT_FINISHEDlk5WT-\\d+-", timeout=30)
+[32m[2024-05-28T07:33:30.814134Z] [debug] [pid:22797] >>> testapi::wait_serial: SCRIPT_FINISHEDlk5WT-\d+-: ok[0m
+[2024-05-28T07:33:30.814525Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:30.814663Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="curl -f -v http://10.0.2.2:20183/K6cvovymKIE4seiH/current_script > /tmp/scriptjVZNm.sh", fail_message="", timeout=90, quiet=undef)
+[2024-05-28T07:33:30.814772Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:30.814876Z] [debug] [pid:22797] <<< testapi::type_string(string="curl -f -v http://10.0.2.2:20183/K6cvovymKIE4seiH/current_script > /tmp/scriptjVZNm.sh", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:33.920784Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:33.921029Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo wFrDr-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:35.032802Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:35.033035Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, expect_not_found=0, quiet=undef, timeout=90, regexp=qr/wFrDr-\d+-/u, no_regex=0)
+[32m[2024-05-28T07:33:36.080359Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:wFrDr-\d+-): ok[0m
+[2024-05-28T07:33:36.080540Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:36.080665Z] [debug] [pid:22797] <<< testapi::script_run(cmd="clear", die_on_timeout=1, timeout=30, quiet=undef, output="")
+[2024-05-28T07:33:36.080771Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:36.080881Z] [debug] [pid:22797] <<< testapi::type_string(string="clear", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:36.250058Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:36.250244Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo JgRME-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:37.396345Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:37.396587Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, no_regex=0, regexp=qr/JgRME-\d+-/u, timeout=30, quiet=undef, expect_not_found=0)
+[32m[2024-05-28T07:33:39.439167Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:JgRME-\d+-): ok[0m
+[2024-05-28T07:33:39.439342Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:39.439484Z] [debug] [pid:22797] <<< testapi::type_string(string="(echo jVZNm; bash -eox pipefail /tmp/scriptjVZNm.sh ; echo SCRIPT_FINISHEDjVZNm-\$?-) | tee /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:43.385661Z] [debug] [pid:22797] tests/microos/networkmanager.pm:107 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:33:43.385911Z] [debug] [pid:22797] <<< testapi::wait_serial(record_output=1, quiet=undef, expect_not_found=0, timeout=30, no_regex=0, regexp="SCRIPT_FINISHEDjVZNm-\\d+-", buffer_size=undef)
+[32m[2024-05-28T07:33:44.431966Z] [debug] [pid:22797] >>> testapi::wait_serial: SCRIPT_FINISHEDjVZNm-\d+-: ok[0m
+[2024-05-28T07:33:44.432182Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:33:44.432305Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.2", fail_message="", quiet=undef, timeout=90)
+[2024-05-28T07:33:44.432406Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:33:44.432506Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.2", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:45.039196Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:33:45.039417Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo XuNJt-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:46.168724Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:33:46.168956Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, regexp=qr/XuNJt-\d+-/u, timeout=90, no_regex=0, quiet=undef, expect_not_found=0, record_output=undef)
+[32m[2024-05-28T07:33:52.221304Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:XuNJt-\d+-): ok[0m
+[2024-05-28T07:33:52.221516Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:33:52.221667Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.3", fail_message="", timeout=90, quiet=undef)
+[2024-05-28T07:33:52.221785Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:33:52.221917Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.3", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:52.829552Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:33:52.829790Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo bVNkX-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:33:53.959768Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:33:53.959996Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, no_regex=0, timeout=90, regexp=qr/bVNkX-\d+-/u, expect_not_found=0, quiet=undef)
+[32m[2024-05-28T07:34:00.013085Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:bVNkX-\d+-): ok[0m
+[2024-05-28T07:34:00.013272Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:34:00.013392Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="nmcli device disconnect ens4", fail_message="", quiet=undef, timeout=90)
+[2024-05-28T07:34:00.013491Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:34:00.013593Z] [debug] [pid:22797] <<< testapi::type_string(string="nmcli device disconnect ens4", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:00.956692Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:34:00.956987Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo w1P11-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:02.052927Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:34:02.053125Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, timeout=90, no_regex=0, regexp=qr/w1P11-\d+-/u, expect_not_found=0, quiet=undef)
+[32m[2024-05-28T07:34:04.096518Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:w1P11-\d+-): ok[0m
+[2024-05-28T07:34:04.096688Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:34:04.096813Z] [debug] [pid:22797] <<< testapi::script_run(cmd="ping -c 5 10.0.2.3", die_on_timeout=1, output="", quiet=undef, timeout=30)
+[2024-05-28T07:34:04.096911Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:34:04.097010Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.3", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:04.704156Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:34:04.704499Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo GSOf4-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:05.832829Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:34:05.833056Z] [debug] [pid:22797] <<< testapi::wait_serial(quiet=undef, expect_not_found=0, no_regex=0, timeout=30, regexp=qr/GSOf4-\d+-/u, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:34:06.881221Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:GSOf4-\d+-): ok[0m
+[2024-05-28T07:34:06.881382Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:34:06.881500Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="nmcli device connect ens4", fail_message="", timeout=90, quiet=undef)
+[2024-05-28T07:34:06.881599Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:34:06.881697Z] [debug] [pid:22797] <<< testapi::type_string(string="nmcli device connect ens4", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:07.723920Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:34:07.724142Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo cSo4Y-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:08.837008Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:34:08.837226Z] [debug] [pid:22797] <<< testapi::wait_serial(quiet=undef, expect_not_found=0, regexp=qr/cSo4Y-\d+-/u, no_regex=0, timeout=90, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:34:10.886352Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:cSo4Y-\d+-): ok[0m
+[2024-05-28T07:34:10.886524Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:34:10.886639Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.2", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:34:10.886736Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:34:10.886834Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.2", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:11.494464Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:34:11.494671Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo XuNJt-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:12.623661Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:34:12.623883Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, quiet=undef, expect_not_found=0, no_regex=0, regexp=qr/XuNJt-\d+-/u, timeout=90, record_output=undef)
+[32m[2024-05-28T07:34:18.676807Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:XuNJt-\d+-): ok[0m
+[2024-05-28T07:34:18.676991Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:34:18.677118Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.3", fail_message="", timeout=90, quiet=undef)
+[2024-05-28T07:34:18.677218Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:34:18.677320Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.3", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:19.285480Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:34:19.285734Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo bVNkX-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:20.415571Z] [debug] [pid:22797] tests/microos/networkmanager.pm:109 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:34:20.415837Z] [debug] [pid:22797] <<< testapi::wait_serial(quiet=undef, expect_not_found=0, regexp=qr/bVNkX-\d+-/u, no_regex=0, timeout=90, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:34:26.463058Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:bVNkX-\d+-): ok[0m
+[2024-05-28T07:34:26.463228Z] [debug] [pid:22797] tests/microos/networkmanager.pm:111 called testapi::assert_script_run
+[2024-05-28T07:34:26.463341Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="rm -f /etc/NetworkManager/conf.d/00-use-dnsmasq.conf", quiet=undef, timeout=90, fail_message="")
+[2024-05-28T07:34:26.463433Z] [debug] [pid:22797] tests/microos/networkmanager.pm:111 called testapi::assert_script_run
+[2024-05-28T07:34:26.463532Z] [debug] [pid:22797] <<< testapi::type_string(string="rm -f /etc/NetworkManager/conf.d/00-use-dnsmasq.conf", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:28.252990Z] [debug] [pid:22797] tests/microos/networkmanager.pm:111 called testapi::assert_script_run
+[2024-05-28T07:34:28.253193Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo 5xi8h-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:29.331092Z] [debug] [pid:22797] tests/microos/networkmanager.pm:111 called testapi::assert_script_run
+[2024-05-28T07:34:29.331329Z] [debug] [pid:22797] <<< testapi::wait_serial(record_output=undef, expect_not_found=0, quiet=undef, timeout=90, no_regex=0, regexp=qr/5xi8h-\d+-/u, buffer_size=undef)
+[32m[2024-05-28T07:34:30.377176Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:5xi8h-\d+-): ok[0m
+[2024-05-28T07:34:30.377345Z] [debug] [pid:22797] tests/microos/networkmanager.pm:112 called testapi::assert_script_run
+[2024-05-28T07:34:30.377464Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ln -rsf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:34:30.377556Z] [debug] [pid:22797] tests/microos/networkmanager.pm:112 called testapi::assert_script_run
+[2024-05-28T07:34:30.377657Z] [debug] [pid:22797] <<< testapi::type_string(string="ln -rsf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:32.468211Z] [debug] [pid:22797] tests/microos/networkmanager.pm:112 called testapi::assert_script_run
+[2024-05-28T07:34:32.468429Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo eidzH-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:33.563555Z] [debug] [pid:22797] tests/microos/networkmanager.pm:112 called testapi::assert_script_run
+[2024-05-28T07:34:33.563788Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, regexp=qr/eidzH-\d+-/u, no_regex=0, timeout=90, expect_not_found=0, quiet=undef)
+[32m[2024-05-28T07:34:35.611778Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:eidzH-\d+-): ok[0m
+[2024-05-28T07:34:35.611962Z] [debug] [pid:22797] tests/microos/networkmanager.pm:113 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:34:35.612131Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="systemctl --no-pager restart NetworkManager", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:34:35.612266Z] [debug] [pid:22797] tests/microos/networkmanager.pm:113 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:34:35.612401Z] [debug] [pid:22797] <<< testapi::type_string(string="systemctl --no-pager restart NetworkManager", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:37.095884Z] [debug] [pid:22797] tests/microos/networkmanager.pm:113 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:34:37.096176Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo r3Pjz-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:38.191437Z] [debug] [pid:22797] tests/microos/networkmanager.pm:113 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:34:38.191676Z] [debug] [pid:22797] <<< testapi::wait_serial(record_output=undef, expect_not_found=0, quiet=undef, regexp=qr/r3Pjz-\d+-/u, no_regex=0, timeout=90, buffer_size=undef)
+[32m[2024-05-28T07:34:40.250285Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:r3Pjz-\d+-): ok[0m
+[2024-05-28T07:34:40.250500Z] [debug] [pid:22797] tests/microos/networkmanager.pm:114 called testapi::record_info
+[2024-05-28T07:34:40.250655Z] [debug] [pid:22797] <<< testapi::record_info(title="with systemd-resolved", output="", result="ok")
+[2024-05-28T07:34:40.251126Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:40.251273Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="curl -f -v http://10.0.2.2:20183/K6cvovymKIE4seiH/current_script > /tmp/scriptlk5WT.sh", quiet=undef, timeout=90, fail_message="")
+[2024-05-28T07:34:40.251418Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:40.251581Z] [debug] [pid:22797] <<< testapi::type_string(string="curl -f -v http://10.0.2.2:20183/K6cvovymKIE4seiH/current_script > /tmp/scriptlk5WT.sh", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:43.336163Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:43.336491Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo X6kIm-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:44.451044Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:44.451283Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, expect_not_found=0, quiet=undef, no_regex=0, timeout=90, regexp=qr/X6kIm-\d+-/u, record_output=undef)
+[32m[2024-05-28T07:34:46.503809Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:X6kIm-\d+-): ok[0m
+[2024-05-28T07:34:46.503990Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:46.504129Z] [debug] [pid:22797] <<< testapi::script_run(cmd="clear", die_on_timeout=1, quiet=undef, output="", timeout=30)
+[2024-05-28T07:34:46.504237Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:46.504338Z] [debug] [pid:22797] <<< testapi::type_string(string="clear", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:46.673457Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:46.673613Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo JgRME-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:47.822662Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:47.822886Z] [debug] [pid:22797] <<< testapi::wait_serial(expect_not_found=0, quiet=undef, timeout=30, regexp=qr/JgRME-\d+-/u, no_regex=0, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:34:48.866317Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:JgRME-\d+-): ok[0m
+[2024-05-28T07:34:48.866497Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:48.866643Z] [debug] [pid:22797] <<< testapi::type_string(string="(echo lk5WT; bash -eox pipefail /tmp/scriptlk5WT.sh ; echo SCRIPT_FINISHEDlk5WT-\$?-) | tee /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:52.756676Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:40 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:52.756896Z] [debug] [pid:22797] <<< testapi::wait_serial(expect_not_found=0, quiet=undef, regexp="SCRIPT_FINISHEDlk5WT-\\d+-", timeout=30, no_regex=0, record_output=1, buffer_size=undef)
+[32m[2024-05-28T07:34:53.807353Z] [debug] [pid:22797] >>> testapi::wait_serial: SCRIPT_FINISHEDlk5WT-\d+-: ok[0m
+[2024-05-28T07:34:53.807727Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:53.807862Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="curl -f -v http://10.0.2.2:20183/K6cvovymKIE4seiH/current_script > /tmp/scriptjVZNm.sh", fail_message="", timeout=90, quiet=undef)
+[2024-05-28T07:34:53.807963Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:53.808091Z] [debug] [pid:22797] <<< testapi::type_string(string="curl -f -v http://10.0.2.2:20183/K6cvovymKIE4seiH/current_script > /tmp/scriptjVZNm.sh", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:56.906312Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:56.906539Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo wFrDr-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:58.019864Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:58.020097Z] [debug] [pid:22797] <<< testapi::wait_serial(expect_not_found=0, quiet=undef, timeout=90, regexp=qr/wFrDr-\d+-/u, no_regex=0, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:34:59.066063Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:wFrDr-\d+-): ok[0m
+[2024-05-28T07:34:59.066238Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:59.066368Z] [debug] [pid:22797] <<< testapi::script_run(cmd="clear", die_on_timeout=1, timeout=30, quiet=undef, output="")
+[2024-05-28T07:34:59.066476Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:59.066577Z] [debug] [pid:22797] <<< testapi::type_string(string="clear", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:34:59.236093Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:34:59.236297Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo JgRME-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:00.383270Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:35:00.383522Z] [debug] [pid:22797] <<< testapi::wait_serial(record_output=undef, expect_not_found=0, quiet=undef, no_regex=0, regexp=qr/JgRME-\d+-/u, timeout=30, buffer_size=undef)
+[32m[2024-05-28T07:35:02.425898Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:JgRME-\d+-): ok[0m
+[2024-05-28T07:35:02.426087Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:35:02.426235Z] [debug] [pid:22797] <<< testapi::type_string(string="(echo jVZNm; bash -eox pipefail /tmp/scriptjVZNm.sh ; echo SCRIPT_FINISHEDjVZNm-\$?-) | tee /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:06.365847Z] [debug] [pid:22797] tests/microos/networkmanager.pm:116 called networkmanager::dns_mgr -> tests/microos/networkmanager.pm:45 called utils::script_output_retry -> lib/utils.pm:2002 called (eval) -> lib/utils.pm:2002 called testapi::script_output
+[2024-05-28T07:35:06.366145Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, expect_not_found=0, quiet=undef, regexp="SCRIPT_FINISHEDjVZNm-\\d+-", no_regex=0, timeout=30, record_output=1)
+[32m[2024-05-28T07:35:07.417513Z] [debug] [pid:22797] >>> testapi::wait_serial: SCRIPT_FINISHEDjVZNm-\d+-: ok[0m
+[2024-05-28T07:35:07.417712Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:35:07.417837Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.2", fail_message="", timeout=90, quiet=undef)
+[2024-05-28T07:35:07.417940Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:35:07.418040Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.2", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:08.025242Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:35:08.025470Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo XuNJt-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:09.154379Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:18 called testapi::assert_script_run
+[2024-05-28T07:35:09.154593Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, no_regex=0, timeout=90, regexp=qr/XuNJt-\d+-/u, quiet=undef, expect_not_found=0, record_output=undef)
+[32m[2024-05-28T07:35:15.200740Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:XuNJt-\d+-): ok[0m
+[2024-05-28T07:35:15.200913Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:35:15.201031Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.3", fail_message="", timeout=90, quiet=undef)
+[2024-05-28T07:35:15.201127Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:35:15.201229Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.3", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:15.808664Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:35:15.808853Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo bVNkX-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:16.937193Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:19 called testapi::assert_script_run
+[2024-05-28T07:35:16.937420Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, regexp=qr/bVNkX-\d+-/u, no_regex=0, timeout=90, quiet=undef, expect_not_found=0, record_output=undef)
+[32m[2024-05-28T07:35:22.992263Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:bVNkX-\d+-): ok[0m
+[2024-05-28T07:35:22.992479Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:35:22.992608Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="nmcli device disconnect ens4", fail_message="", quiet=undef, timeout=90)
+[2024-05-28T07:35:22.992711Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:35:22.992820Z] [debug] [pid:22797] <<< testapi::type_string(string="nmcli device disconnect ens4", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:23.936566Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:35:23.936900Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo w1P11-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:25.032771Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:22 called testapi::assert_script_run
+[2024-05-28T07:35:25.032996Z] [debug] [pid:22797] <<< testapi::wait_serial(record_output=undef, timeout=90, regexp=qr/w1P11-\d+-/u, no_regex=0, quiet=undef, expect_not_found=0, buffer_size=undef)
+[32m[2024-05-28T07:35:27.083095Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:w1P11-\d+-): ok[0m
+[2024-05-28T07:35:27.083263Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:35:27.083390Z] [debug] [pid:22797] <<< testapi::script_run(cmd="ping -c 5 10.0.2.3", die_on_timeout=1, quiet=undef, output="", timeout=30)
+[2024-05-28T07:35:27.083491Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:35:27.083593Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.3", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:27.690776Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:35:27.690988Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo GSOf4-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:28.820704Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:23 called testapi::script_run
+[2024-05-28T07:35:28.820942Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, expect_not_found=0, quiet=undef, no_regex=0, regexp=qr/GSOf4-\d+-/u, timeout=30, record_output=undef)
+[32m[2024-05-28T07:35:29.865358Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:GSOf4-\d+-): ok[0m
+[2024-05-28T07:35:29.865541Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:35:29.865663Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="nmcli device connect ens4", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:35:29.865763Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:35:29.865866Z] [debug] [pid:22797] <<< testapi::type_string(string="nmcli device connect ens4", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:30.708142Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:35:30.708369Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo cSo4Y-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:31.820544Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:26 called testapi::assert_script_run
+[2024-05-28T07:35:31.820854Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, regexp=qr/cSo4Y-\d+-/u, no_regex=0, timeout=90, expect_not_found=0, quiet=undef)
+[32m[2024-05-28T07:35:33.870738Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:cSo4Y-\d+-): ok[0m
+[2024-05-28T07:35:33.870969Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:35:33.871122Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.2", fail_message="", timeout=90, quiet=undef)
+[2024-05-28T07:35:33.871250Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:35:33.871386Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.2", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:34.478575Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:35:34.478788Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo XuNJt-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:35.607175Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:27 called testapi::assert_script_run
+[2024-05-28T07:35:35.607416Z] [debug] [pid:22797] <<< testapi::wait_serial(expect_not_found=0, quiet=undef, regexp=qr/XuNJt-\d+-/u, no_regex=0, timeout=90, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:35:41.652627Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:XuNJt-\d+-): ok[0m
+[2024-05-28T07:35:41.652804Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:35:41.652923Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="ping -c 5 10.0.2.3", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:35:41.653020Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:35:41.653118Z] [debug] [pid:22797] <<< testapi::type_string(string="ping -c 5 10.0.2.3", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:42.260051Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:35:42.260279Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo bVNkX-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:43.389911Z] [debug] [pid:22797] tests/microos/networkmanager.pm:118 called networkmanager::ping_check -> tests/microos/networkmanager.pm:28 called testapi::assert_script_run
+[2024-05-28T07:35:43.390173Z] [debug] [pid:22797] <<< testapi::wait_serial(record_output=undef, expect_not_found=0, quiet=undef, regexp=qr/bVNkX-\d+-/u, no_regex=0, timeout=90, buffer_size=undef)
+[32m[2024-05-28T07:35:49.439967Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:bVNkX-\d+-): ok[0m
+[2024-05-28T07:35:49.440152Z] [debug] [pid:22797] tests/microos/networkmanager.pm:120 called networkmanager::restore_config -> tests/microos/networkmanager.pm:33 called testapi::script_run
+[2024-05-28T07:35:49.440277Z] [debug] [pid:22797] <<< testapi::script_run(cmd="rm -f /etc/NetworkManager/conf.d/00-use-dnsmasq.conf", die_on_timeout=1, timeout=30, output="", quiet=undef)
+[2024-05-28T07:35:49.440376Z] [debug] [pid:22797] tests/microos/networkmanager.pm:120 called networkmanager::restore_config -> tests/microos/networkmanager.pm:33 called testapi::script_run
+[2024-05-28T07:35:49.440486Z] [debug] [pid:22797] <<< testapi::type_string(string="rm -f /etc/NetworkManager/conf.d/00-use-dnsmasq.conf", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:51.226225Z] [debug] [pid:22797] tests/microos/networkmanager.pm:120 called networkmanager::restore_config -> tests/microos/networkmanager.pm:33 called testapi::script_run
+[2024-05-28T07:35:51.226419Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo S9sVQ-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:52.354416Z] [debug] [pid:22797] tests/microos/networkmanager.pm:120 called networkmanager::restore_config -> tests/microos/networkmanager.pm:33 called testapi::script_run
+[2024-05-28T07:35:52.354652Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, expect_not_found=0, quiet=undef, no_regex=0, regexp=qr/S9sVQ-\d+-/u, timeout=30)
+[32m[2024-05-28T07:35:53.400346Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:S9sVQ-\d+-): ok[0m
+[2024-05-28T07:35:53.400522Z] [debug] [pid:22797] tests/microos/networkmanager.pm:120 called networkmanager::restore_config -> tests/microos/networkmanager.pm:34 called testapi::script_run
+[2024-05-28T07:35:53.400654Z] [debug] [pid:22797] <<< testapi::script_run(cmd="unlink /etc/resolv.conf", die_on_timeout=1, timeout=30, quiet=undef, output="")
+[2024-05-28T07:35:53.400754Z] [debug] [pid:22797] tests/microos/networkmanager.pm:120 called networkmanager::restore_config -> tests/microos/networkmanager.pm:34 called testapi::script_run
+[2024-05-28T07:35:53.400857Z] [debug] [pid:22797] <<< testapi::type_string(string="unlink /etc/resolv.conf", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:54.176302Z] [debug] [pid:22797] tests/microos/networkmanager.pm:120 called networkmanager::restore_config -> tests/microos/networkmanager.pm:34 called testapi::script_run
+[2024-05-28T07:35:54.176529Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo bX6~Y-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:55.306891Z] [debug] [pid:22797] tests/microos/networkmanager.pm:120 called networkmanager::restore_config -> tests/microos/networkmanager.pm:34 called testapi::script_run
+[2024-05-28T07:35:55.307139Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, record_output=undef, no_regex=0, timeout=30, regexp=qr/bX6~Y-\d+-/u, expect_not_found=0, quiet=undef)
+[32m[2024-05-28T07:35:57.353204Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:bX6~Y-\d+-): ok[0m
+[2024-05-28T07:35:57.353389Z] [debug] [pid:22797] tests/microos/networkmanager.pm:120 called networkmanager::restore_config -> tests/microos/networkmanager.pm:35 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:35:57.353511Z] [debug] [pid:22797] <<< testapi::assert_script_run(cmd="systemctl --no-pager restart NetworkManager", timeout=90, quiet=undef, fail_message="")
+[2024-05-28T07:35:57.353611Z] [debug] [pid:22797] tests/microos/networkmanager.pm:120 called networkmanager::restore_config -> tests/microos/networkmanager.pm:35 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:35:57.353710Z] [debug] [pid:22797] <<< testapi::type_string(string="systemctl --no-pager restart NetworkManager", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:58.837571Z] [debug] [pid:22797] tests/microos/networkmanager.pm:120 called networkmanager::restore_config -> tests/microos/networkmanager.pm:35 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:35:58.837782Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo r3Pjz-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:35:59.933354Z] [debug] [pid:22797] tests/microos/networkmanager.pm:120 called networkmanager::restore_config -> tests/microos/networkmanager.pm:35 called Utils::Systemd::systemctl -> lib/Utils/Systemd.pm:70 called testapi::assert_script_run
+[2024-05-28T07:35:59.933570Z] [debug] [pid:22797] <<< testapi::wait_serial(no_regex=0, timeout=90, regexp=qr/r3Pjz-\d+-/u, expect_not_found=0, quiet=undef, record_output=undef, buffer_size=undef)
+[32m[2024-05-28T07:36:01.982598Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:r3Pjz-\d+-): ok[0m
+[2024-05-28T07:36:01.982770Z] [debug] [pid:22797] lib/consoletest.pm:36 called testapi::enter_cmd
+[2024-05-28T07:36:01.982907Z] [debug] [pid:22797] <<< testapi::type_string(string="cd\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:36:02.084732Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:36:02.084934Z] [debug] [pid:22797] <<< testapi::script_run(cmd="test -f /var/log/audit/audit.log", output="", quiet=undef, timeout=30, die_on_timeout=1)
+[2024-05-28T07:36:02.085057Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:36:02.085183Z] [debug] [pid:22797] <<< testapi::type_string(string="test -f /var/log/audit/audit.log", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:36:03.169249Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:36:03.169513Z] [debug] [pid:22797] <<< testapi::type_string(string="; echo UfVk_-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:36:04.298877Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:70 called testapi::script_run
+[2024-05-28T07:36:04.299127Z] [debug] [pid:22797] <<< testapi::wait_serial(record_output=undef, timeout=30, regexp=qr/UfVk_-\d+-/u, no_regex=0, expect_not_found=0, quiet=undef, buffer_size=undef)
+[32m[2024-05-28T07:36:05.346412Z] [debug] [pid:22797] >>> testapi::wait_serial: (?^u:UfVk_-\d+-): ok[0m
+[2024-05-28T07:36:05.346614Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:74 called testapi::script_output
+[2024-05-28T07:36:05.346757Z] [debug] [pid:22797] <<< testapi::type_string(string="cat - > /tmp/scriptOSm16.sh;", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:36:06.340705Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:74 called testapi::script_output
+[2024-05-28T07:36:06.340906Z] [debug] [pid:22797] <<< testapi::type_string(string="\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:36:06.375220Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:74 called testapi::script_output
+[2024-05-28T07:36:06.375397Z] [debug] [pid:22797] <<< testapi::type_string(string="ausearch -m avc -r\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=300, similarity_level=47)
+[2024-05-28T07:36:07.016425Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:74 called testapi::script_output
+[2024-05-28T07:36:07.016592Z] [debug] [pid:22797] <<< testapi::send_key(key="ctrl-d", wait_screen_change=0)
+[2024-05-28T07:36:07.351448Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:74 called testapi::script_output
+[2024-05-28T07:36:07.351682Z] [debug] [pid:22797] <<< testapi::type_string(string="(echo OSm16; bash -eox pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-\$?-) | tee /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:36:11.246625Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:74 called testapi::script_output
+[2024-05-28T07:36:11.246864Z] [debug] [pid:22797] <<< testapi::wait_serial(buffer_size=undef, timeout=300, no_regex=0, regexp="SCRIPT_FINISHEDOSm16-\\d+-", quiet=undef, expect_not_found=0, record_output=1)
+[32m[2024-05-28T07:36:13.295603Z] [debug] [pid:22797] >>> testapi::wait_serial: SCRIPT_FINISHEDOSm16-\d+-: ok[0m
+[2024-05-28T07:36:13.295757Z] [debug] [pid:22797] lib/consoletest.pm:38 called consoletest::record_avc_selinux_alerts -> lib/consoletest.pm:74 called testapi::script_output
+[2024-05-28T07:36:13.295853Z] [debug] [pid:22797] <<< distribution::script_output("script failed with : \nOSm16\nSCRIPT_FINISHEDOSm16-1-")
+[2024-05-28T07:36:13.295996Z] [debug] [pid:22797] lib/consoletest.pm:40 called opensusebasetest::clear_and_verify_console -> products/microos/../../lib/opensusebasetest.pm:53 called utils::clear_console -> lib/utils.pm:387 called testapi::enter_cmd
+[2024-05-28T07:36:13.296140Z] [debug] [pid:22797] <<< testapi::type_string(string="clear\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:36:13.499191Z] [debug] [pid:22797] lib/consoletest.pm:40 called opensusebasetest::clear_and_verify_console -> products/microos/../../lib/opensusebasetest.pm:54 called testapi::assert_screen
+[2024-05-28T07:36:13.499353Z] [debug] [pid:22797] <<< testapi::assert_screen(mustmatch="cleared-console", timeout=30)
+[37m[2024-05-28T07:36:13.564142Z] [debug] [pid:23177] no match: 29.9s, best candidate: cleared-console-root-wsl-20210222 (0.18)[0m
+[32m[2024-05-28T07:36:14.599546Z] [debug] [pid:22797] >>> testapi::_handle_found_needle: found cleared-console-microos-20200511, similarity 1.00 @ 72/0[0m
+[1;34m[2024-05-28T07:36:14.600202Z] [debug] [pid:22797] ||| finished networkmanager microos (runtime: 361 s)[0m
+[37m[2024-05-28T07:36:14.602936Z] [debug] [pid:22767] stopping autotest process 22797[0m
+[37m[2024-05-28T07:36:14.615367Z] [debug] [pid:22767] [autotest] process exited: 0[0m
+[37m[2024-05-28T07:36:14.715705Z] [debug] [pid:22767] done with autotest process[0m
+[37m[2024-05-28T07:36:14.716106Z] [debug] [pid:22767] stopping command server 22787 because test execution ended[0m
+[37m[2024-05-28T07:36:14.716180Z] [debug] [pid:22767] isotovideo: informing websocket clients before stopping command server: http://127.0.0.1:20183/K6cvovymKIE4seiH/broadcast[0m
+[37m[2024-05-28T07:36:14.731828Z] [debug] [pid:22767] commands process exited: 0[0m
+[37m[2024-05-28T07:36:14.832131Z] [debug] [pid:22767] done with command server[0m
+[37m[2024-05-28T07:36:14.832206Z] [debug] [pid:22767] isotovideo done[0m
+[37m[2024-05-28T07:36:14.832711Z] [debug] [pid:23177] EVENT {"data":{"path":"\/machine\/peripheral-anon\/device[3]\/virtio-backend"},"event":"NIC_RX_FILTER_CHANGED","timestamp":{"microseconds":26802,"seconds":1716881311}}[0m
+[37m[2024-05-28T07:36:14.832872Z] [debug] [pid:23177] EVENT {"data":{"offset":-1,"qom-path":"\/machine\/unattached\/device[8]"},"event":"RTC_CHANGE","timestamp":{"microseconds":47010,"seconds":1716881356}}[0m
+[37m[2024-05-28T07:36:14.833015Z] [debug] [pid:23177] QEMU status is not 'shutdown', it is 'running'[0m
+[37m[2024-05-28T07:36:14.833161Z] [debug] [pid:22767] backend shutdown state: [0m
+[33m[2024-05-28T07:36:14.833579Z] [info] [pid:23177] ::: OpenQA::Qemu::Proc::save_state: Saving QEMU state to qemu_state.json[0m
+[37m[2024-05-28T07:36:15.897825Z] [debug] [pid:23177] Passing remaining frames to the video encoder[0m
+frame=  942 fps=2.0 q=0.0 Lsize=    1291kB time=00:00:39.20 bitrate= 269.8kbits/s speed=0.082x    
+video:1285kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.533602%
+[37m[2024-05-28T07:36:16.577092Z] [debug] [pid:23177] Waiting for video encoder to finalize the video[0m
+[37m[2024-05-28T07:36:16.577201Z] [debug] [pid:23177] The external video encoder (pid 23559) terminated[0m
+[37m[2024-05-28T07:36:16.577282Z] [debug] [pid:23177] The built-in video encoder (pid 23560) terminated[0m
+[37m[2024-05-28T07:36:16.577939Z] [debug] [pid:23177] QEMU: qemu-system-x86_64: terminating on signal 15 from pid 23177 (/usr/bin/isotovideo: backen)[0m
+[37m[2024-05-28T07:36:16.578649Z] [debug] [pid:23177] sending magic and exit[0m
+[37m[2024-05-28T07:36:16.578897Z] [debug] [pid:22767] received magic close[0m
+[37m[2024-05-28T07:36:16.600362Z] [debug] [pid:22767] backend process exited: 0[0m
+Use of uninitialized value $name in pattern match (m//) at /usr/lib/os-autoinst/OpenQA/Isotovideo/Utils.pm line 332.
+	OpenQA::Isotovideo::Utils::handle_generated_assets(OpenQA::Isotovideo::CommandHandler=HASH(0x564678a2cf50), "") called at /usr/bin/isotovideo line 204
+	eval {...} called at /usr/bin/isotovideo line 161
+Use of uninitialized value $name in pattern match (m//) at /usr/lib/os-autoinst/OpenQA/Isotovideo/Utils.pm line 332.
+	OpenQA::Isotovideo::Utils::handle_generated_assets(OpenQA::Isotovideo::CommandHandler=HASH(0x564678a2cf50), "") called at /usr/bin/isotovideo line 204
+	eval {...} called at /usr/bin/isotovideo line 161
+[37m[2024-05-28T07:36:16.701707Z] [debug] [pid:22767] stopping backend process 23177[0m
+[37m[2024-05-28T07:36:16.701775Z] [debug] [pid:22767] done with backend process[0m
+22767: EXIT 0
+[2024-05-28T07:36:16.745897Z] [info] Isotovideo exit status: 0
+[2024-05-28T07:36:16.783809Z] [info] +++ worker notes +++
+[2024-05-28T07:36:16.783923Z] [info] End time: 2024-05-28 07:36:16
+[2024-05-28T07:36:16.783993Z] [info] Result: done
+[2024-05-28T07:36:16.787533Z] [info] Uploading disk_boot-k-audit.log
+[2024-05-28T07:36:16.833378Z] [info] Uploading video.webm
+[2024-05-28T07:36:16.931531Z] [info] Uploading autoinst-log.txt
