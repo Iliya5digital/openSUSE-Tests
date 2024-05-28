@@ -1,0 +1,39 @@
+netavark.tap ..
+1..23
+ok 1 simple macvlan setup
+ok 2 macvlan setup with static routes
+ok 3 macvlan setup no default route
+ok 4 macvlan setup internal
+ok 5 macvlan setup with mtu
+ok 6 macvlan modes
+ok 7 macvlan ipam none
+ok 8 macvlan static mac
+ok 9 macvlan same interface name on host
+ok 10 macvlan same interface name on container
+ok 11 simple ipvlan setup
+ok 12 ipvlan setup with static routes
+ok 13 ipvlan setup no default route
+ok 14 ipvlan setup internal
+ok 15 ipvlan setup with mtu
+ok 16 ipvlan modes
+ok 17 ipvlan ipam none
+ok 18 ipvlan same interface name on host
+ok 19 ipvlan same interface name on container
+ok 20 check none firewall driver is in use
+ok 21 vrf - bridge with vrf
+not ok 22 vrf - simple bridge
+# (from function `die' in file test/helpers.bash, line 249,
+#  from function `run_helper' in file test/helpers.bash, line 233,
+#  from function `run_in_host_netns' in file test/helpers.bash, line 166,
+#  in test file test/600-bridge-vrf.bats, line 23)
+#   `run_in_host_netns ip -j --details link show podman0' failed
+#  nsenter -n -m -w -t 8033 ip link set lo up
+#  nsenter -n -m -w -t 8033 /usr/libexec/podman/netavark --rootless false --config /tmp/netavark_bats.6yRCt3/config --file /var/tmp/netavark-1.10.3/test/testfiles/simplebridge.json setup /proc/8035/ns/net
+# {"podman":{"dns_search_domains":[],"dns_server_ips":[],"interfaces":{"eth0":{"mac_address":"1e:2d:44:f9:1a:de","subnets":[{"gateway":"10.88.0.1","ipnet":"10.88.0.2/16"}]}}}}
+#  nsenter -n -m -w -t 8033 ip -j --details link show podman0
+# Device "podman0" does not exist.
+# [ rc=1 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 1; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ok 23 vrf - non existent vrf

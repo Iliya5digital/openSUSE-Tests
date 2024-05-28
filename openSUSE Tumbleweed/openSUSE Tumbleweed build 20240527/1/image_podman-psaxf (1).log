@@ -1,0 +1,116 @@
+  PID TTY      STAT   TIME COMMAND
+    2 ?        S      0:00 [kthreadd]
+    3 ?        S      0:00  \_ [pool_workqueue_release]
+    4 ?        I<     0:00  \_ [kworker/R-rcu_g]
+    5 ?        I<     0:00  \_ [kworker/R-slub_]
+    6 ?        I<     0:00  \_ [kworker/R-netns]
+    7 ?        I      0:00  \_ [kworker/0:0-events]
+    8 ?        I      0:01  \_ [kworker/0:1-inet_frag_wq]
+    9 ?        I<     0:00  \_ [kworker/0:0H-events_highpri]
+   10 ?        I      0:00  \_ [kworker/u4:0-btrfs-endio-write]
+   11 ?        I<     0:00  \_ [kworker/R-mm_pe]
+   12 ?        I      0:00  \_ [rcu_tasks_kthread]
+   13 ?        I      0:00  \_ [rcu_tasks_rude_kthread]
+   14 ?        I      0:00  \_ [rcu_tasks_trace_kthread]
+   15 ?        S      0:00  \_ [ksoftirqd/0]
+   16 ?        I      0:00  \_ [rcu_preempt]
+   17 ?        S      0:00  \_ [rcu_exp_par_gp_kthread_worker/0]
+   18 ?        S      0:00  \_ [rcu_exp_gp_kthread_worker]
+   19 ?        S      0:00  \_ [migration/0]
+   20 ?        S      0:00  \_ [idle_inject/0]
+   21 ?        S      0:00  \_ [cpuhp/0]
+   23 ?        S      0:00  \_ [kdevtmpfs]
+   24 ?        I<     0:00  \_ [kworker/R-inet_]
+   25 ?        I      0:00  \_ [kworker/u4:1-events_unbound]
+   26 ?        S      0:00  \_ [kauditd]
+   27 ?        S      0:00  \_ [khungtaskd]
+   28 ?        S      0:00  \_ [oom_reaper]
+   29 ?        I      0:00  \_ [kworker/u4:2-btrfs-endio-write]
+   30 ?        I<     0:00  \_ [kworker/R-write]
+   31 ?        S      0:00  \_ [kcompactd0]
+   32 ?        SN     0:00  \_ [ksmd]
+   33 ?        SN     0:00  \_ [khugepaged]
+   34 ?        I<     0:00  \_ [kworker/R-kinte]
+   35 ?        I<     0:00  \_ [kworker/R-kbloc]
+   36 ?        I<     0:00  \_ [kworker/R-blkcg]
+   37 ?        S      0:00  \_ [irq/9-acpi]
+   38 ?        I<     0:00  \_ [kworker/R-tpm_d]
+   39 ?        I<     0:00  \_ [kworker/R-edac-]
+   40 ?        I<     0:00  \_ [kworker/R-devfr]
+   41 ?        S      0:00  \_ [watchdogd]
+   42 ?        I<     0:00  \_ [kworker/0:1H-kblockd]
+   43 ?        S      0:00  \_ [kswapd0]
+   50 ?        I<     0:00  \_ [kworker/R-kthro]
+   54 ?        S      0:00  \_ [khvcd]
+   55 ?        I<     0:00  \_ [kworker/R-mld]
+   56 ?        I<     0:00  \_ [kworker/R-ipv6_]
+   61 ?        I<     0:00  \_ [kworker/R-kstrp]
+   62 ?        I<     0:00  \_ [kworker/u5:0]
+  128 ?        I<     0:00  \_ [kworker/R-charg]
+  131 ?        S      0:00  \_ [hwrng]
+  132 ?        I      0:00  \_ [kworker/0:2-events]
+  188 ?        I      0:00  \_ [kworker/u4:3-btrfs-endio-meta]
+  191 ?        I      0:02  \_ [kworker/0:3-events]
+  192 ?        I      0:00  \_ [kworker/0:4-events]
+  323 ?        I<     0:00  \_ [kworker/R-crypt]
+  326 ?        I<     0:00  \_ [kworker/R-kalua]
+  327 ?        I<     0:00  \_ [kworker/R-kmpat]
+  333 ?        I<     0:00  \_ [kworker/R-ttm]
+  334 ?        S      0:00  \_ [scsi_eh_0]
+  336 ?        I<     0:00  \_ [kworker/R-scsi_]
+  341 ?        I<     0:00  \_ [kworker/R-ata_s]
+  376 ?        I      0:00  \_ [kworker/0:5-events]
+  378 ?        S      0:00  \_ [scsi_eh_1]
+  382 ?        I<     0:00  \_ [kworker/R-scsi_]
+  385 ?        I      0:01  \_ [kworker/0:6-events]
+  389 ?        S      0:00  \_ [scsi_eh_2]
+  393 ?        I<     0:00  \_ [kworker/R-scsi_]
+  471 ?        I<     0:00  \_ [kworker/R-btrfs]
+  472 ?        I<     0:00  \_ [kworker/R-btrfs]
+  473 ?        I<     0:00  \_ [kworker/R-btrfs]
+  474 ?        I<     0:00  \_ [kworker/R-btrfs]
+  475 ?        I<     0:00  \_ [kworker/R-btrfs]
+  476 ?        I<     0:00  \_ [kworker/R-btrfs]
+  477 ?        I<     0:00  \_ [kworker/R-btrfs]
+  478 ?        I<     0:00  \_ [kworker/R-btrfs]
+  479 ?        I<     0:00  \_ [kworker/R-btrfs]
+  480 ?        I<     0:00  \_ [kworker/R-btrfs]
+  481 ?        I<     0:00  \_ [kworker/R-btrfs]
+  482 ?        I<     0:00  \_ [kworker/R-btrfs]
+  483 ?        I<     0:00  \_ [kworker/R-btrfs]
+  484 ?        S      0:00  \_ [btrfs-cleaner]
+  485 ?        S      0:00  \_ [btrfs-transaction]
+ 1043 ?        I      0:00  \_ [kworker/u4:4-btrfs-endio-write]
+ 1956 ?        I      0:00  \_ [kworker/u4:5-flush-btrfs-1]
+    1 ?        Ss     0:02 /usr/lib/systemd/systemd --switched-root --system --deserialize=43
+  527 ?        Ss     0:00 /usr/lib/systemd/systemd-journald
+  559 ?        Ss     0:00 /usr/lib/systemd/systemd-udevd
+  885 ?        S      0:00  \_ (udev-worker)
+  886 ?        S      0:00  \_ (udev-worker)
+  749 ?        S<sl   0:00 /sbin/auditd
+  867 ?        Ss     0:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+  871 ?        Ss     0:00 /usr/sbin/rngd --foreground --fill-watermark=3700
+  873 ?        Ss     0:00 /usr/lib/systemd/systemd-logind
+  954 ?        Ssl    0:00 /usr/sbin/pcscd --foreground
+  960 ?        Ssl    0:00 /usr/libexec/polkit-1/polkitd --no-debug
+  969 ?        Ssl    0:00 /usr/sbin/NetworkManager --no-daemon
+ 1028 tty1     Ss+    0:00 /sbin/agetty -o -p -- \u --noclear - linux
+ 1033 ?        Ss     0:00 login -- root
+ 1286 hvc0     Ss     0:00  \_ /bin/bash
+  948 hvc0     R+     0:00      \_ ps axf
+  949 hvc0     S+     0:00      \_ tee /tmp/psaxf.log
+ 1036 hvc1     Ss+    0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+ 1040 ttyS0    Ss+    0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+ 1042 ?        Ss     0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+ 1053 ?        S      0:00 /usr/sbin/chronyd
+ 1239 ?        Ss     0:00 /usr/lib/postfix/bin//master -w
+ 1240 ?        S      0:00  \_ pickup -l -t fifo -u
+ 1241 ?        S      0:00  \_ qmgr -l -t fifo -u
+ 1260 ?        Ss     0:00 /usr/sbin/cron -n
+ 1275 ?        Ss     0:00 /usr/lib/systemd/systemd --user
+ 1277 ?        S      0:00  \_ (sd-pam)
+30888 ?        Ss     0:00  \_ /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+ 1496 ?        Ssl    0:00 /usr/sbin/snapperd
+31366 ?        Ssl    0:03 /usr/bin/dockerd --add-runtime oci=/usr/sbin/runc
+31371 ?        Ssl    0:00  \_ containerd --config /var/run/docker/containerd/containerd.toml --log-level debug
+32334 ?        Ssl    0:00 /usr/libexec/nm-dispatcher

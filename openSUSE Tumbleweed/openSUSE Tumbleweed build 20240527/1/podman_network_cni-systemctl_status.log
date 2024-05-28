@@ -1,0 +1,77 @@
+● susetest
+    State: running
+    Units: 433 loaded (incl. loaded aliases)
+     Jobs: 0 queued
+   Failed: 0 units
+    Since: Tue 2024-05-28 06:50:50 EDT; 1min 36s ago
+  systemd: 255.6+suse.30.g3ea0e1dff3
+   CGroup: /
+           ├─init.scope
+           │ └─1 /usr/lib/systemd/systemd --switched-root --system --deserialize=44
+           ├─machine.slice
+           │ ├─libpod-121c6fa89392df19bda1c8d54f94563906e2b096741c3fd47631007e4dd366bf.scope
+           │ │ └─container
+           │ │   └─12290 /bin/bash
+           │ ├─libpod-343f8763abf190f8597b76a1b364ab62378f6654276751609df5c23d9c97bbef.scope
+           │ │ └─container
+           │ │   └─12236 /bin/bash
+           │ └─libpod-e2f7c26e6d22f93341034eef54a778c15c232d252d2b113246cc44efeaa0f68d.scope
+           │   └─container
+           │     └─12180 /bin/bash
+           ├─system.slice
+           │ ├─NetworkManager.service
+           │ │ └─970 /usr/sbin/NetworkManager --no-daemon
+           │ ├─auditd.service
+           │ │ └─809 /sbin/auditd
+           │ ├─chronyd.service
+           │ │ └─1057 /usr/sbin/chronyd
+           │ ├─cron.service
+           │ │ └─1261 /usr/sbin/cron -n
+           │ ├─dbus.service
+           │ │ └─868 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+           │ ├─pcscd.service
+           │ │ └─955 /usr/sbin/pcscd --foreground
+           │ ├─polkit.service
+           │ │ └─961 /usr/libexec/polkit-1/polkitd --no-debug
+           │ ├─postfix.service
+           │ │ ├─1240 /usr/lib/postfix/bin//master -w
+           │ │ ├─1241 pickup -l -t fifo -u
+           │ │ └─1242 qmgr -l -t fifo -u
+           │ ├─rng-tools.service
+           │ │ └─872 /usr/sbin/rngd --foreground --fill-watermark=3700
+           │ ├─run-r6487c9fe1ca9421c9caf089425204718.scope
+           │ │ └─12380 /usr/libexec/podman/aardvark-dns --config /run/containers/networks/aardvark-dns -p 53 run
+           │ ├─sshd.service
+           │ │ └─1044 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+           │ ├─system-getty.slice
+           │ │ └─getty@tty1.service
+           │ │   └─1032 /sbin/agetty -o "-p -- \\u" --noclear - linux
+           │ ├─system-serial\x2dgetty.slice
+           │ │ ├─serial-getty@hvc1.service
+           │ │ │ └─1038 /sbin/agetty -o "-p -- \\u" --keep-baud 115200,57600,38400,9600 - vt220
+           │ │ └─serial-getty@ttyS0.service
+           │ │   └─1042 /sbin/agetty -o "-p -- \\u" --keep-baud 115200,57600,38400,9600 - vt220
+           │ ├─systemd-journald.service
+           │ │ └─528 /usr/lib/systemd/systemd-journald
+           │ ├─systemd-logind.service
+           │ │ └─877 /usr/lib/systemd/systemd-logind
+           │ └─systemd-udevd.service
+           │   └─udev
+           │     └─560 /usr/lib/systemd/systemd-udevd
+           └─user.slice
+             └─user-0.slice
+               ├─session-1.scope
+               │ ├─ 1035 "login -- root"
+               │ ├─ 1287 /bin/bash
+               │ ├─ 3359 systemctl status
+               │ ├─ 3360 tee /tmp/systemctl_status.log
+               │ ├─12178 /usr/bin/conmon --api-version 1 -c e2f7c26e6d22f93341034eef54a778c15c232d252d2b113246cc44efeaa0f68d -u e2f7c26e6d22f93341034eef54a778c15c232d252d2b113246cc44efeaa0f68d -r /usr/bin/crun -b /var/lib/containers/storage/overlay-containers/e2f7c26e6d22f93341034eef54a778c15c232d252d2b113246cc44efeaa0f68d/userdata -p /run/containers/storage/overlay-containers/e2f7c26e6d22f93341034eef54a778c15c232d252d2b113246cc44efeaa0f68d/userdata/pidfile -n container1 --exit-dir /run/libpod/exits --persist-dir /run/libpod/persist/e2f7c26e6d22f93341034eef54a778c15c232d252d2b113246cc44efeaa0f68d --full-attach -s -l journald --log-level warning --syslog --runtime-arg --log-format=json --runtime-arg --log --runtime-arg=/run/containers/storage/overlay-containers/e2f7c26e6d22f93341034eef54a778c15c232d252d2b113246cc44efeaa0f68d/userdata/oci-log -i --conmon-pidfile /run/containers/storage/overlay-containers/e2f7c26e6d22f93341034eef54a778c15c232d252d2b113246cc44efeaa0f68d/userdata/conmon.pid --exit-command /usr/bin/podman --exit-command-arg --root --exit-command-arg /var/lib/containers/storage --exit-command-arg --runroot --exit-command-arg /run/containers/storage --exit-command-arg --log-level --exit-command-arg warning --exit-command-arg --cgroup-manager --exit-command-arg systemd --exit-command-arg --tmpdir --exit-command-arg /run/libpod --exit-command-arg --network-config-dir --exit-command-arg "" --exit-command-arg --network-backend --exit-command-arg netavark --exit-command-arg --volumepath --exit-command-arg /var/lib/containers/storage/volumes --exit-command-arg --db-backend --exit-command-arg sqlite --exit-command-arg --transient-store=false --exit-command-arg --runtime --exit-command-arg crun --exit-command-arg --storage-driver --exit-command-arg overlay --exit-command-arg --storage-opt --exit-command-arg overlay.mountopt=nodev,metacopy=on --exit-command-arg --events-backend --exit-command-arg journald --exit-command-arg container --exit-command-arg cleanup --exit-command-arg --rm --exit-command-arg e2f7c26e6d22f93341034eef54a778c15c232d252d2b113246cc44efeaa0f68d
+               │ ├─12233 /usr/bin/conmon --api-version 1 -c 343f8763abf190f8597b76a1b364ab62378f6654276751609df5c23d9c97bbef -u 343f8763abf190f8597b76a1b364ab62378f6654276751609df5c23d9c97bbef -r /usr/bin/crun -b /var/lib/containers/storage/overlay-containers/343f8763abf190f8597b76a1b364ab62378f6654276751609df5c23d9c97bbef/userdata -p /run/containers/storage/overlay-containers/343f8763abf190f8597b76a1b364ab62378f6654276751609df5c23d9c97bbef/userdata/pidfile -n container2 --exit-dir /run/libpod/exits --persist-dir /run/libpod/persist/343f8763abf190f8597b76a1b364ab62378f6654276751609df5c23d9c97bbef --full-attach -s -l journald --log-level warning --syslog --runtime-arg --log-format=json --runtime-arg --log --runtime-arg=/run/containers/storage/overlay-containers/343f8763abf190f8597b76a1b364ab62378f6654276751609df5c23d9c97bbef/userdata/oci-log -i --conmon-pidfile /run/containers/storage/overlay-containers/343f8763abf190f8597b76a1b364ab62378f6654276751609df5c23d9c97bbef/userdata/conmon.pid --exit-command /usr/bin/podman --exit-command-arg --root --exit-command-arg /var/lib/containers/storage --exit-command-arg --runroot --exit-command-arg /run/containers/storage --exit-command-arg --log-level --exit-command-arg warning --exit-command-arg --cgroup-manager --exit-command-arg systemd --exit-command-arg --tmpdir --exit-command-arg /run/libpod --exit-command-arg --network-config-dir --exit-command-arg "" --exit-command-arg --network-backend --exit-command-arg netavark --exit-command-arg --volumepath --exit-command-arg /var/lib/containers/storage/volumes --exit-command-arg --db-backend --exit-command-arg sqlite --exit-command-arg --transient-store=false --exit-command-arg --runtime --exit-command-arg crun --exit-command-arg --storage-driver --exit-command-arg overlay --exit-command-arg --storage-opt --exit-command-arg overlay.mountopt=nodev,metacopy=on --exit-command-arg --events-backend --exit-command-arg journald --exit-command-arg container --exit-command-arg cleanup --exit-command-arg --rm --exit-command-arg 343f8763abf190f8597b76a1b364ab62378f6654276751609df5c23d9c97bbef
+               │ └─12287 /usr/bin/conmon --api-version 1 -c 121c6fa89392df19bda1c8d54f94563906e2b096741c3fd47631007e4dd366bf -u 121c6fa89392df19bda1c8d54f94563906e2b096741c3fd47631007e4dd366bf -r /usr/bin/crun -b /var/lib/containers/storage/overlay-containers/121c6fa89392df19bda1c8d54f94563906e2b096741c3fd47631007e4dd366bf/userdata -p /run/containers/storage/overlay-containers/121c6fa89392df19bda1c8d54f94563906e2b096741c3fd47631007e4dd366bf/userdata/pidfile -n container3 --exit-dir /run/libpod/exits --persist-dir /run/libpod/persist/121c6fa89392df19bda1c8d54f94563906e2b096741c3fd47631007e4dd366bf --full-attach -s -l journald --log-level warning --syslog --runtime-arg --log-format=json --runtime-arg --log --runtime-arg=/run/containers/storage/overlay-containers/121c6fa89392df19bda1c8d54f94563906e2b096741c3fd47631007e4dd366bf/userdata/oci-log -i --conmon-pidfile /run/containers/storage/overlay-containers/121c6fa89392df19bda1c8d54f94563906e2b096741c3fd47631007e4dd366bf/userdata/conmon.pid --exit-command /usr/bin/podman --exit-command-arg --root --exit-command-arg /var/lib/containers/storage --exit-command-arg --runroot --exit-command-arg /run/containers/storage --exit-command-arg --log-level --exit-command-arg warning --exit-command-arg --cgroup-manager --exit-command-arg systemd --exit-command-arg --tmpdir --exit-command-arg /run/libpod --exit-command-arg --network-config-dir --exit-command-arg "" --exit-command-arg --network-backend --exit-command-arg netavark --exit-command-arg --volumepath --exit-command-arg /var/lib/containers/storage/volumes --exit-command-arg --db-backend --exit-command-arg sqlite --exit-command-arg --transient-store=false --exit-command-arg --runtime --exit-command-arg crun --exit-command-arg --storage-driver --exit-command-arg overlay --exit-command-arg --storage-opt --exit-command-arg overlay.mountopt=nodev,metacopy=on --exit-command-arg --events-backend --exit-command-arg journald --exit-command-arg container --exit-command-arg cleanup --exit-command-arg --rm --exit-command-arg 121c6fa89392df19bda1c8d54f94563906e2b096741c3fd47631007e4dd366bf
+               └─user@0.service
+                 ├─init.scope
+                 │ ├─1276 /usr/lib/systemd/systemd --user
+                 │ └─1278 "(sd-pam)"
+                 └─session.slice
+                   └─dbus.service
+                     └─11773 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only

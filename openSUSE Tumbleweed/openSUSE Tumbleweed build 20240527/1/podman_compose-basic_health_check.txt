@@ -1,0 +1,228 @@
+free -h
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       454Mi       300Mi       6.0Mi       1.3Gi       1.5Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+vmstat
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 0  0      0 307456   3192 1411628    0    0   757  4539  551 1684  7 17 75  1  0
+
+fdisk -l
+Disk /dev/vda: 30 GiB, 32212254720 bytes, 62914560 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: D18F3E4B-5AAA-4415-B7ED-157BB66E2209
+
+Device        Start      End  Sectors Size Type
+/dev/vda1      2048    18431    16384   8M BIOS boot
+/dev/vda2     18432 58718207 58699776  28G Linux filesystem
+/dev/vda3  58718208 62914526  4196319   2G Linux swap
+
+
+Disk /dev/vdb: 20 GiB, 21474836480 bytes, 41943040 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda2        28G  2.9G   25G  11% /
+devtmpfs        4.0M  8.0K  4.0M   1% /dev
+tmpfs           987M  168K  987M   1% /dev/shm
+tmpfs           395M  6.2M  389M   2% /run
+/dev/vda2        28G  2.9G   25G  11% /.snapshots
+/dev/vda2        28G  2.9G   25G  11% /boot/grub2/i386-pc
+/dev/vda2        28G  2.9G   25G  11% /boot/grub2/x86_64-efi
+/dev/vda2        28G  2.9G   25G  11% /opt
+/dev/vda2        28G  2.9G   25G  11% /home
+/dev/vda2        28G  2.9G   25G  11% /root
+/dev/vda2        28G  2.9G   25G  11% /srv
+/dev/vda2        28G  2.9G   25G  11% /usr/local
+/dev/vda2        28G  2.9G   25G  11% /var
+tmpfs           987M  108K  987M   1% /tmp
+tmpfs           198M  4.0K  198M   1% /run/user/0
+tmpfs           198M   72K  198M   1% /run/user/1000
+shm              63M     0   63M   0% /var/lib/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/shm
+overlay          28G  2.9G   25G  11% /var/lib/containers/storage/overlay/1d6d104ee21919c1a2b7dc798d300cbe46f73edc09e11566ad9514c8d13293b6/merged
+shm              63M  4.0K   63M   1% /var/lib/containers/storage/overlay-containers/728abf3da0f885830d90cc71b15a4b9afb72cc6bac471b4cb0bba6d5bd292385/userdata/shm
+overlay          28G  2.9G   25G  11% /var/lib/containers/storage/overlay/dc71e87ea0b1a6d3224a550f9b65e55553c50262e258fff0787570cf95c53ea6/merged
+
+df -i
+Filesystem      Inodes IUsed   IFree IUse% Mounted on
+/dev/vda2            0     0       0     - /
+devtmpfs        248375   490  247885    1% /dev
+tmpfs           252503     3  252500    1% /dev/shm
+tmpfs           819200   963  818237    1% /run
+/dev/vda2            0     0       0     - /.snapshots
+/dev/vda2            0     0       0     - /boot/grub2/i386-pc
+/dev/vda2            0     0       0     - /boot/grub2/x86_64-efi
+/dev/vda2            0     0       0     - /opt
+/dev/vda2            0     0       0     - /home
+/dev/vda2            0     0       0     - /root
+/dev/vda2            0     0       0     - /srv
+/dev/vda2            0     0       0     - /usr/local
+/dev/vda2            0     0       0     - /var
+tmpfs          1048576    38 1048538    1% /tmp
+tmpfs            50500    25   50475    1% /run/user/0
+tmpfs            50500    69   50431    1% /run/user/1000
+shm             252503     1  252502    1% /var/lib/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/shm
+overlay              0     0       0     - /var/lib/containers/storage/overlay/1d6d104ee21919c1a2b7dc798d300cbe46f73edc09e11566ad9514c8d13293b6/merged
+shm             252503     2  252501    1% /var/lib/containers/storage/overlay-containers/728abf3da0f885830d90cc71b15a4b9afb72cc6bac471b4cb0bba6d5bd292385/userdata/shm
+overlay              0     0       0     - /var/lib/containers/storage/overlay/dc71e87ea0b1a6d3224a550f9b65e55553c50262e258fff0787570cf95c53ea6/merged
+
+Top 10 CPU Processes
+ 4.9 14611 root     [kworker/0:3-events_long]
+ 3.3   132 root     [kworker/0:2-cgroup_destroy]
+ 2.3     7 root     [kworker/0:0-events]
+ 1.4  7158 root     /usr/bin/podman --log-level=info system service
+ 1.0 13943 root     [kworker/0:1-events_long]
+ 0.7   384 root     [kworker/0:5-events_freezable_pwr_ef]
+ 0.6     1 root     /usr/lib/systemd/systemd --switched-root --system --deserialize=44
+ 0.3 21448 root     /usr/sbin/snapperd
+ 0.3  7127 99       haproxy -W -db -f /usr/local/etc/haproxy/haproxy.cfg
+ 0.1 12272 bernhard /usr/lib/systemd/systemd --user
+ 0.1 11975 root     [kworker/u4:6-btrfs-endio-write]
+
+Top 10 Memory Processes
+ 4.0  7130 99       haproxy -W -db -f /usr/local/etc/haproxy/haproxy.cfg
+ 2.9  7158 root     /usr/bin/podman --log-level=info system service
+ 1.0   528 root     /usr/lib/systemd/systemd-journald
+ 0.8   970 root     /usr/sbin/NetworkManager --no-daemon
+ 0.7  1276 root     /usr/lib/systemd/systemd --user
+ 0.7     1 root     /usr/lib/systemd/systemd --switched-root --system --deserialize=44
+ 0.6 12272 bernhard /usr/lib/systemd/systemd --user
+ 0.6  7127 99       haproxy -W -db -f /usr/local/etc/haproxy/haproxy.cfg
+ 0.6   560 root     /usr/lib/systemd/systemd-udevd
+ 0.4 21448 root     /usr/sbin/snapperd
+ 0.4 13973 postfix  pickup -l -t fifo -u
+
+ALL Processes
+USER       PID  PPID %CPU %MEM    VSZ   RSS STAT     TIME CMD
+root         1     0  0.6  0.7  23612 15224 Ss   00:00:03 /usr/lib/systemd/systemd --switched-root --system --deserialize=44
+root         2     0  0.0  0.0      0     0 S    00:00:00 [kthreadd]
+root         3     2  0.0  0.0      0     0 S    00:00:00 [pool_workqueue_release]
+root         4     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-rcu_g]
+root         5     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-slub_]
+root         6     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-netns]
+root         7     2  2.3  0.0      0     0 I    00:00:14 [kworker/0:0-events]
+root         9     2  0.0  0.0      0     0 I<   00:00:00 [kworker/0:0H-events_highpri]
+root        10     2  0.0  0.0      0     0 I    00:00:00 [kworker/u4:0-btrfs-endio-write]
+root        11     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-mm_pe]
+root        12     2  0.0  0.0      0     0 I    00:00:00 [rcu_tasks_kthread]
+root        13     2  0.0  0.0      0     0 I    00:00:00 [rcu_tasks_rude_kthread]
+root        14     2  0.0  0.0      0     0 I    00:00:00 [rcu_tasks_trace_kthread]
+root        15     2  0.1  0.0      0     0 S    00:00:00 [ksoftirqd/0]
+root        16     2  0.0  0.0      0     0 I    00:00:00 [rcu_preempt]
+root        17     2  0.0  0.0      0     0 S    00:00:00 [rcu_exp_par_gp_kthread_worker/0]
+root        18     2  0.0  0.0      0     0 S    00:00:00 [rcu_exp_gp_kthread_worker]
+root        19     2  0.0  0.0      0     0 S    00:00:00 [migration/0]
+root        20     2  0.0  0.0      0     0 S    00:00:00 [idle_inject/0]
+root        21     2  0.0  0.0      0     0 S    00:00:00 [cpuhp/0]
+root        23     2  0.0  0.0      0     0 S    00:00:00 [kdevtmpfs]
+root        24     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-inet_]
+root        26     2  0.0  0.0      0     0 S    00:00:00 [kauditd]
+root        27     2  0.0  0.0      0     0 S    00:00:00 [khungtaskd]
+root        28     2  0.0  0.0      0     0 S    00:00:00 [oom_reaper]
+root        30     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-write]
+root        31     2  0.0  0.0      0     0 S    00:00:00 [kcompactd0]
+root        32     2  0.0  0.0      0     0 SN   00:00:00 [ksmd]
+root        33     2  0.0  0.0      0     0 SN   00:00:00 [khugepaged]
+root        34     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-kinte]
+root        35     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-kbloc]
+root        36     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-blkcg]
+root        37     2  0.0  0.0      0     0 S    00:00:00 [irq/9-acpi]
+root        38     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-tpm_d]
+root        39     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-edac-]
+root        40     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-devfr]
+root        41     2  0.0  0.0      0     0 S    00:00:00 [watchdogd]
+root        42     2  0.0  0.0      0     0 I<   00:00:00 [kworker/0:1H-kblockd]
+root        43     2  0.0  0.0      0     0 S    00:00:00 [kswapd0]
+root        50     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-kthro]
+root        54     2  0.0  0.0      0     0 S    00:00:00 [khvcd]
+root        55     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-mld]
+root        56     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-ipv6_]
+root        61     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-kstrp]
+root        62     2  0.0  0.0      0     0 I<   00:00:00 [kworker/u5:0]
+root       128     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-charg]
+root       131     2  0.0  0.0      0     0 S    00:00:00 [hwrng]
+root       132     2  3.3  0.0      0     0 I    00:00:20 [kworker/0:2-cgroup_destroy]
+root       323     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-crypt]
+root       326     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-kalua]
+root       328     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-ttm]
+root       330     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-kmpat]
+root       339     2  0.0  0.0      0     0 S    00:00:00 [scsi_eh_0]
+root       340     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-scsi_]
+root       344     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-ata_s]
+root       370     2  0.0  0.0      0     0 S    00:00:00 [scsi_eh_1]
+root       372     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-scsi_]
+root       375     2  0.0  0.0      0     0 S    00:00:00 [scsi_eh_2]
+root       376     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-scsi_]
+root       384     2  0.7  0.0      0     0 I    00:00:04 [kworker/0:5-events]
+root       463     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       464     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       465     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       466     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       467     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       468     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       469     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       470     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       471     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       472     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       473     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       474     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       475     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       476     2  0.0  0.0      0     0 S    00:00:00 [btrfs-cleaner]
+root       477     2  0.0  0.0      0     0 S    00:00:00 [btrfs-transaction]
+root       498     2  0.0  0.0      0     0 I    00:00:00 [kworker/u4:4-btrfs-flush_delalloc]
+root       528     1  0.0  1.0 117288 20248 Ss   00:00:00 /usr/lib/systemd/systemd-journald
+root       560     1  0.0  0.6  35504 12988 Ss   00:00:00 /usr/lib/systemd/systemd-udevd
+root       809     1  0.0  0.0  12888  1936 S<sl 00:00:00 /sbin/auditd
+message+   868     1  0.0  0.2   9824  5504 Ss   00:00:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root       872     1  0.0  0.2   8460  4808 Ss   00:00:00 /usr/sbin/rngd --foreground --fill-watermark=3700
+root       877     1  0.0  0.4  18684  9344 Ss   00:00:00 /usr/lib/systemd/systemd-logind
+root       955     1  0.0  0.3 315304  7552 Ssl  00:00:00 /usr/sbin/pcscd --foreground
+polkitd    961     1  0.0  0.4 308964  8996 Ssl  00:00:00 /usr/libexec/polkit-1/polkitd --no-debug
+root       970     1  0.1  0.8 402028 18176 Ssl  00:00:00 /usr/sbin/NetworkManager --no-daemon
+root      1032     1  0.0  0.1   3208  2176 Ss+  00:00:00 /sbin/agetty -o -p -- \u --noclear - linux
+root      1035     1  0.0  0.3  11496  6528 Ss   00:00:00 login -- root
+root      1038     1  0.0  0.1   5792  2432 Ss+  00:00:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+root      1042     1  0.0  0.1   5792  2432 Ss+  00:00:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+root      1044     1  0.0  0.4  18248  9088 Ss   00:00:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+chrony    1057     1  0.0  0.1  85128  4016 S    00:00:00 /usr/sbin/chronyd
+root      1240     1  0.0  0.2  39660  4776 Ss   00:00:00 /usr/lib/postfix/bin//master -w
+postfix   1242  1240  0.0  0.3  56256  6784 S    00:00:00 qmgr -l -t fifo -u
+root      1261     1  0.0  0.1   7748  3328 Ss   00:00:00 /usr/sbin/cron -n
+root      1276     1  0.1  0.7  24444 14984 Ss   00:00:00 /usr/lib/systemd/systemd --user
+root      1278  1276  0.0  0.1  21484  3484 S    00:00:00 (sd-pam)
+root      1287  1035  0.0  0.3   7816  6272 Ss   00:00:00 /bin/bash
+root      1485     2  0.0  0.0      0     0 I    00:00:00 [kworker/u4:5-btrfs-endio-write]
+root      6968     1  0.0  0.1 344280  3744 Ssl  00:00:00 /usr/libexec/podman/aardvark-dns --config /run/containers/networks/aardvark-dns -p 53 run
+root      6973     1  0.0  0.1  11256  2468 Ss   00:00:00 /usr/bin/conmon --api-version 1 -c 472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd -u 472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd -r /usr/bin/crun -b /var/lib/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata -p /run/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/pidfile -n dcproject-nginx-1 --exit-dir /run/libpod/exits --persist-dir /run/libpod/persist/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd --full-attach -s -l journald --log-level info --syslog --runtime-arg --log-format=json --runtime-arg --log --runtime-arg=/run/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/oci-log --conmon-pidfile /run/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/conmon.pid --exit-command /usr/bin/podman --exit-command-arg --root --exit-command-arg /var/lib/containers/storage --exit-command-arg --runroot --exit-command-arg /run/containers/storage --exit-command-arg --log-level --exit-command-arg info --exit-command-arg --cgroup-manager --exit-command-arg systemd --exit-command-arg --tmpdir --exit-command-arg /run/libpod --exit-command-arg --network-config-dir --exit-command-arg  --exit-command-arg --network-backend --exit-command-arg netavark --exit-command-arg --volumepath --exit-command-arg /var/lib/containers/storage/volumes --exit-command-arg --db-backend --exit-command-arg sqlite --exit-command-arg --transient-store=false --exit-command-arg --runtime --exit-command-arg crun --exit-command-arg --storage-driver --exit-command-arg overlay --exit-command-arg --storage-opt --exit-command-arg overlay.mountopt=nodev,metacopy=on --exit-command-arg --events-backend --exit-command-arg journald --exit-command-arg container --exit-command-arg cleanup --exit-command-arg 472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd
+root      6975  6973  0.0  0.3  11400  7424 Ss   00:00:00 nginx: master process nginx -g daemon off;
+101       7005  6975  0.0  0.1  11864  3300 S    00:00:00 nginx: worker process
+root      7125     1  0.0  0.1  11256  2468 Ss   00:00:00 /usr/bin/conmon --api-version 1 -c 728abf3da0f885830d90cc71b15a4b9afb72cc6bac471b4cb0bba6d5bd292385 -u 728abf3da0f885830d90cc71b15a4b9afb72cc6bac471b4cb0bba6d5bd292385 -r /usr/bin/crun -b /var/lib/containers/storage/overlay-containers/728abf3da0f885830d90cc71b15a4b9afb72cc6bac471b4cb0bba6d5bd292385/userdata -p /run/containers/storage/overlay-containers/728abf3da0f885830d90cc71b15a4b9afb72cc6bac471b4cb0bba6d5bd292385/userdata/pidfile -n dcproject-haproxy-1 --exit-dir /run/libpod/exits --persist-dir /run/libpod/persist/728abf3da0f885830d90cc71b15a4b9afb72cc6bac471b4cb0bba6d5bd292385 --full-attach -s -l journald --log-level info --syslog --runtime-arg --log-format=json --runtime-arg --log --runtime-arg=/run/containers/storage/overlay-containers/728abf3da0f885830d90cc71b15a4b9afb72cc6bac471b4cb0bba6d5bd292385/userdata/oci-log --conmon-pidfile /run/containers/storage/overlay-containers/728abf3da0f885830d90cc71b15a4b9afb72cc6bac471b4cb0bba6d5bd292385/userdata/conmon.pid --exit-command /usr/bin/podman --exit-command-arg --root --exit-command-arg /var/lib/containers/storage --exit-command-arg --runroot --exit-command-arg /run/containers/storage --exit-command-arg --log-level --exit-command-arg info --exit-command-arg --cgroup-manager --exit-command-arg systemd --exit-command-arg --tmpdir --exit-command-arg /run/libpod --exit-command-arg --network-config-dir --exit-command-arg  --exit-command-arg --network-backend --exit-command-arg netavark --exit-command-arg --volumepath --exit-command-arg /var/lib/containers/storage/volumes --exit-command-arg --db-backend --exit-command-arg sqlite --exit-command-arg --transient-store=false --exit-command-arg --runtime --exit-command-arg crun --exit-command-arg --storage-driver --exit-command-arg overlay --exit-command-arg --storage-opt --exit-command-arg overlay.mountopt=nodev,metacopy=on --exit-command-arg --events-backend --exit-command-arg journald --exit-command-arg container --exit-command-arg cleanup --exit-command-arg 728abf3da0f885830d90cc71b15a4b9afb72cc6bac471b4cb0bba6d5bd292385
+99        7127  7125  0.3  0.6  92496 13880 Ss   00:00:00 haproxy -W -db -f /usr/local/etc/haproxy/haproxy.cfg
+99        7130  7127  0.0  4.0 261720 81076 S    00:00:00 haproxy -W -db -f /usr/local/etc/haproxy/haproxy.cfg
+root      7158     1  1.4  2.9 1797156 59420 Ssl 00:00:00 /usr/bin/podman --log-level=info system service
+root      7269     1  0.0  0.1  11256  2340 Ss   00:00:00 /usr/bin/conmon --api-version 1 -c 472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd -u 03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856 -r /usr/bin/crun -b /var/lib/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856 -p /var/lib/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856/exec_pid -n dcproject-nginx-1 --exit-dir /var/lib/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856/exit --persist-dir /var/lib/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856/persist/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd --full-attach -s -l none --log-level info --syslog --runtime-arg --log-format=json --runtime-arg --log --runtime-arg=/var/lib/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856/oci-log -t -i -e --exec-attach --exec-process-spec /var/lib/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856/exec-process-428979973 --exit-command /usr/bin/podman --exit-command-arg --root --exit-command-arg /var/lib/containers/storage --exit-command-arg --runroot --exit-command-arg /run/containers/storage --exit-command-arg --log-level --exit-command-arg info --exit-command-arg --cgroup-manager --exit-command-arg systemd --exit-command-arg --tmpdir --exit-command-arg /run/libpod --exit-command-arg --network-config-dir --exit-command-arg  --exit-command-arg --network-backend --exit-command-arg netavark --exit-command-arg --volumepath --exit-command-arg /var/lib/containers/storage/volumes --exit-command-arg --db-backend --exit-command-arg sqlite --exit-command-arg --transient-store=false --exit-command-arg --runtime --exit-command-arg crun --exit-command-arg --storage-driver --exit-command-arg overlay --exit-command-arg --storage-opt --exit-command-arg overlay.mountopt=nodev,metacopy=on --exit-command-arg --events-backend --exit-command-arg journald --exit-command-arg container --exit-command-arg cleanup --exit-command-arg --rm --exit-command-arg --exec --exit-command-arg 03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856 --exit-command-arg 472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd --exit-delay 300
+root      7273  7269  0.0  0.0  11256   564 S    00:00:00 /usr/bin/conmon --api-version 1 -c 472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd -u 03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856 -r /usr/bin/crun -b /var/lib/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856 -p /var/lib/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856/exec_pid -n dcproject-nginx-1 --exit-dir /var/lib/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856/exit --persist-dir /var/lib/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856/persist/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd --full-attach -s -l none --log-level info --syslog --runtime-arg --log-format=json --runtime-arg --log --runtime-arg=/var/lib/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856/oci-log -t -i -e --exec-attach --exec-process-spec /var/lib/containers/storage/overlay-containers/472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd/userdata/03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856/exec-process-428979973 --exit-command /usr/bin/podman --exit-command-arg --root --exit-command-arg /var/lib/containers/storage --exit-command-arg --runroot --exit-command-arg /run/containers/storage --exit-command-arg --log-level --exit-command-arg info --exit-command-arg --cgroup-manager --exit-command-arg systemd --exit-command-arg --tmpdir --exit-command-arg /run/libpod --exit-command-arg --network-config-dir --exit-command-arg  --exit-command-arg --network-backend --exit-command-arg netavark --exit-command-arg --volumepath --exit-command-arg /var/lib/containers/storage/volumes --exit-command-arg --db-backend --exit-command-arg sqlite --exit-command-arg --transient-store=false --exit-command-arg --runtime --exit-command-arg crun --exit-command-arg --storage-driver --exit-command-arg overlay --exit-command-arg --storage-opt --exit-command-arg overlay.mountopt=nodev,metacopy=on --exit-command-arg --events-backend --exit-command-arg journald --exit-command-arg container --exit-command-arg cleanup --exit-command-arg --rm --exit-command-arg --exec --exit-command-arg 03fde06738f671334bb2c49407b5bf19c03282080fe4f1c6cae62bf672b47856 --exit-command-arg 472dd6affd3179035967b17416c2e50ca460161de07588d849b049f9fc7be3bd --exit-delay 300
+root      7375  1287  0.0  0.2   8872  4096 R+   00:00:00 ps axwwo user,pid,ppid,%cpu,%mem,vsz,rss,stat,time,cmd
+root     11773  1276  0.0  0.2   9268  4992 Ss   00:00:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root     11975     2  0.1  0.0      0     0 I    00:00:00 [kworker/u4:6-btrfs-endio-write]
+root     12266     1  0.0  0.2   8432  6016 Ss   00:00:00 login -- bernhard
+bernhard 12272     1  0.1  0.6  21496 12544 Ss   00:00:00 /usr/lib/systemd/systemd --user
+bernhard 12274 12272  0.0  0.1  21628  3500 S    00:00:00 (sd-pam)
+bernhard 12288 12266  0.0  0.4  10312  8500 Ss+  00:00:00 -bash
+bernhard 12334     1  0.0  0.0   1020   512 S    00:00:00 catatonit -P
+bernhard 12341 12272  0.0  0.2   9268  4992 Ss   00:00:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root     13943     2  1.0  0.0      0     0 I    00:00:02 [kworker/0:1-events_long]
+postfix  13973  1240  0.0  0.4  39696  8600 S    00:00:00 pickup -l -t fifo -u
+root     14394     2  0.0  0.0      0     0 I    00:00:00 [kworker/u4:1-btrfs-endio-write]
+root     14611     2  4.9  0.0      0     0 I    00:00:04 [kworker/0:3-events_long]
+root     15359     2  0.0  0.0      0     0 I    00:00:00 [kworker/0:4]
+root     21448     1  0.3  0.4 235680  9020 Ssl  00:00:00 /usr/sbin/snapperd
+root     21600     2  0.0  0.0      0     0 I    00:00:00 [kworker/u4:2-btrfs-endio-write]
+root     21601     2  0.0  0.0      0     0 I    00:00:00 [kworker/u4:3-events_unbound]

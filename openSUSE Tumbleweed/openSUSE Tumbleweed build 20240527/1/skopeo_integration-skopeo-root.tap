@@ -1,0 +1,221 @@
+skopeo-root.tap ..
+1..27
+ok 1 skopeo version emits reasonable output
+ok 2 inspect: basic
+ok 3 inspect: env
+ok 4 inspect: image manifest list w/ diff platform
+ok 5 inspect: don't list tags
+ok 6 copy: dir, round trip
+not ok 7 copy: oci, round trip
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/020-copy.bats, line 11)
+#   `start_registry reg' failed with status 125
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.G9v7dx/auth:/auth:Z -p 5000:5000 quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:53:24-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 8 copy: oci, zstd
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/020-copy.bats, line 11)
+#   `start_registry reg' failed with status 125
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.545VMF/auth:/auth:Z -p 5000:5000 quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:53:39-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 9 copy: oci w/ and w/o tags
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/020-copy.bats, line 11)
+#   `start_registry reg' failed with status 125
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.NhBvfq/auth:/auth:Z -p 5000:5000 quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:53:54-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 10 copy: registry -> storage -> oci-archive
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/020-copy.bats, line 11)
+#   `start_registry reg' failed with status 125
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.1bFnGY/auth:/auth:Z -p 5000:5000 quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:54:09-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 11 copy: bug 651
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/020-copy.bats, line 11)
+#   `start_registry reg' failed with status 125
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.LTUQfV/auth:/auth:Z -p 5000:5000 quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:54:24-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 12 copy: manifest format
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/020-copy.bats, line 11)
+#   `start_registry reg' failed with status 125
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.aJzQsq/auth:/auth:Z -p 5000:5000 quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:54:40-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 13 copy: additional tag
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/020-copy.bats, line 11)
+#   `start_registry reg' failed with status 125
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.KCmsKO/auth:/auth:Z -p 5000:5000 quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:54:55-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 14 copy: shared blob directory
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/020-copy.bats, line 11)
+#   `start_registry reg' failed with status 125
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.SMX9Qq/auth:/auth:Z -p 5000:5000 quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:55:10-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 15 copy: sif image
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/020-copy.bats, line 11)
+#   `start_registry reg' failed with status 125
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.k39aez/auth:/auth:Z -p 5000:5000 quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:55:25-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 16 local registry, with cert
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/030-local-registry-tls.bats, line 11)
+#   `start_registry --with-cert --enable-delete=true reg' failed with status 125
+# $ openssl req -newkey rsa:4096 -nodes -sha256 -keyout /tmp/skopeo_bats.lTkErU/auth/domain.key -x509 -days 2 -out /tmp/skopeo_bats.lTkErU/auth/domain.crt -subj /C=US/ST=Foo/L=Bar/O=Red Hat, Inc./CN=registry host certificate -addext subjectAltName=DNS:localhost
+# ...+.........+..+.+...+......+...........+.........+++++++++++++++++++++++++++++++++++++++++++++*....+....+++++++++++++++++++++++++++++++++++++++++++++*.......+....+..+....+.....+.........+....+......+.................+....+........+.+..+....+..............+......+...+......+......+.+...+.........+..+................+........+.......+..+..........+...........+.....................+....+......+.....+....+.....+.+........+.......+......+............+.....+..........+..+...+.+......+...+...+........+.........+.+......+......+.........+....................+..................+......................+.........+.........+...+.................+.+..+.........+..........+.....+......+.......+........+.........+...+.+..+.......+........+............+.+..............+......+.+...+.....+.......+......+...+............+..+.+......+...............+........+......+.+...............+......+.........+.....+...+......+..........+..+...+....+...+................................+......+.+..............................+...+...........+.+..................+........+...............+...+...............+....+......+......+........+............+.........+.+.........+.................+.........+........................+.......+.........+...........+...+.........+......+.+.....+....+.........+..+....+..+...............+...+.........................+......+.........+...........+........................+....+...+..+...............+...+............+......+.......+...+......+.....+......+...+....+..+...+..........+...+............+..+...+.......+...............+...+......+..+...................+.....+............................+......+.....................+.........+.....+....+...+.....+...+.......+..+..................+..........+............+.....................+....................+.+...+........+............+......+..........+......+...+...........+......+...............+.+............+.....+...........................+...+.......+.........+..+.......+...........+.+......+.................+.......+...+............+...+........+.......+..+...+......+.......+............+.....+...+.........+....+..+.......+.....+...+.............+..+...+.......+..+.+.........+..+...+......+.......+...+......+.....+.+.....+...+..........+.....+..........+..+............+.+............+..+...+..........+.........+......+........+....+.....+......+....+........+...+.........+...............+..........+...+...+......+.....+................+............+..+.........+....+..+.+........+.......+...+.........+...........+.+...............+.....+..........+......+............+...+..+..................+...+....+......+.........+..+....+..+..........+............+......+.....+..........+......+......+..+......+.+...........+.............+..+.........+................+..+...+....+........+.+............+..............+...............+.+.................+............+.............+...............+......+............+..+......+.+...........+..........+...+..........................+......+.......+......+..+...+....+...........+.+...........+....+.....+.............+......+..+.......+..+......+.......+..+......+....+..............+.........+.+......+.....+......+...................+...+..+.........+.......+.........+.........+..+...............+............+................+..+....+...+..+...+...+....+......+........+....+......+..+....+...............+......+.........+...+...+..+.+.....+......+.+..+.+.....+...............+......................+...+..+.......+........+..........+.........+........+.......+......+..+..........+.....+......+......+......+.............+...........+...+......+....+++++
+# ....+.....+.+...............+..+...+.+...+...+............+..+.+..+......+.......+.........+...+++++++++++++++++++++++++++++++++++++++++++++*.+.+.....+....+++++++++++++++++++++++++++++++++++++++++++++*....................+.....+......+..........+...+..+.+............+......+.........+.....+..................+............+...+.......+.....+.............+..+............+...+...+.......+..+....+.....+....+..+...............+..........+......+.........+.........+............+.....+.........+..............................+...............+...................+...........+...+............+...............................+.....+..........+..+.+..+....+........+................+...............+..............+..........+..+......+..........+.....+.......+.....+...+..................+....+.....+++++
+# -----
+# $ cp /tmp/skopeo_bats.lTkErU/auth/domain.crt /tmp/skopeo_bats.lTkErU/client-auth/
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.lTkErU/auth:/auth:Z -p 5000:5000 -e REGISTRY_STORAGE_DELETE_ENABLED=true -e REGISTRY_HTTP_TLS_CERTIFICATE=/auth/domain.crt -e REGISTRY_HTTP_TLS_KEY=/auth/domain.key quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:55:41-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 17 auth: credentials on command line
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/040-local-registry-auth.bats, line 15)
+#   `start_registry --testuser=$testuser --testpassword=$testpassword --enable-delete=true reg' failed with status 125
+# grep: /tmp/skopeo_bats.QeX8v8/auth/htpasswd: No such file or directory
+# (trapped) error reading bcrypt version
+# Traceback (most recent call last):
+#   File "/usr/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+#     version = _bcrypt.__about__.__version__
+#               ^^^^^^^^^^^^^^^^^
+# AttributeError: module 'bcrypt' has no attribute '__about__'
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.QeX8v8/auth:/auth:Z -p 5000:5000 -e REGISTRY_STORAGE_DELETE_ENABLED=true -e REGISTRY_AUTH=htpasswd -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd -e REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:55:57-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 18 auth: credentials via podman login
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/040-local-registry-auth.bats, line 15)
+#   `start_registry --testuser=$testuser --testpassword=$testpassword --enable-delete=true reg' failed with status 125
+# grep: /tmp/skopeo_bats.tjzGrm/auth/htpasswd: No such file or directory
+# (trapped) error reading bcrypt version
+# Traceback (most recent call last):
+#   File "/usr/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+#     version = _bcrypt.__about__.__version__
+#               ^^^^^^^^^^^^^^^^^
+# AttributeError: module 'bcrypt' has no attribute '__about__'
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.tjzGrm/auth:/auth:Z -p 5000:5000 -e REGISTRY_STORAGE_DELETE_ENABLED=true -e REGISTRY_AUTH=htpasswd -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd -e REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:56:13-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 19 auth: copy with --src-creds and --dest-creds
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/040-local-registry-auth.bats, line 15)
+#   `start_registry --testuser=$testuser --testpassword=$testpassword --enable-delete=true reg' failed with status 125
+# grep: /tmp/skopeo_bats.ch01BO/auth/htpasswd: No such file or directory
+# (trapped) error reading bcrypt version
+# Traceback (most recent call last):
+#   File "/usr/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+#     version = _bcrypt.__about__.__version__
+#               ^^^^^^^^^^^^^^^^^
+# AttributeError: module 'bcrypt' has no attribute '__about__'
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.ch01BO/auth:/auth:Z -p 5000:5000 -e REGISTRY_STORAGE_DELETE_ENABLED=true -e REGISTRY_AUTH=htpasswd -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd -e REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:56:37-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 20 auth: credentials via authfile
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/040-local-registry-auth.bats, line 15)
+#   `start_registry --testuser=$testuser --testpassword=$testpassword --enable-delete=true reg' failed with status 125
+# grep: /tmp/skopeo_bats.S3n4kh/auth/htpasswd: No such file or directory
+# (trapped) error reading bcrypt version
+# Traceback (most recent call last):
+#   File "/usr/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+#     version = _bcrypt.__about__.__version__
+#               ^^^^^^^^^^^^^^^^^
+# AttributeError: module 'bcrypt' has no attribute '__about__'
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.S3n4kh/auth:/auth:Z -p 5000:5000 -e REGISTRY_STORAGE_DELETE_ENABLED=true -e REGISTRY_AUTH=htpasswd -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd -e REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:56:52-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 21 signing
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/050-signing.bats, line 88)
+#   `start_registry reg' failed with status 125
+# gpg: keybox '/tmp/skopeo_bats.OyGaMe/skopeo-gpg/pubring.kbx' created
+# gpg: /tmp/skopeo_bats.OyGaMe/skopeo-gpg/trustdb.gpg: trustdb created
+# gpg: directory '/tmp/skopeo_bats.OyGaMe/skopeo-gpg/openpgp-revocs.d' created
+# gpg: revocation certificate stored as '/tmp/skopeo_bats.OyGaMe/skopeo-gpg/openpgp-revocs.d/59C86A63ED7EBD4126B62A8E64E7602BB69F0602.rev'
+# gpg: revocation certificate stored as '/tmp/skopeo_bats.OyGaMe/skopeo-gpg/openpgp-revocs.d/FC4769CA8C99BABE686EF06A04B6389A4B16E666.rev'
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.OyGaMe/auth:/auth:Z -p 5000:5000 quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:57:10-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 22 signing: remove signature
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/050-signing.bats, line 88)
+#   `start_registry reg' failed with status 125
+# gpg: keybox '/tmp/skopeo_bats.1gkpjd/skopeo-gpg/pubring.kbx' created
+# gpg: /tmp/skopeo_bats.1gkpjd/skopeo-gpg/trustdb.gpg: trustdb created
+# gpg: directory '/tmp/skopeo_bats.1gkpjd/skopeo-gpg/openpgp-revocs.d' created
+# gpg: revocation certificate stored as '/tmp/skopeo_bats.1gkpjd/skopeo-gpg/openpgp-revocs.d/16802342BFB66B045876706B65943D744848D4BF.rev'
+# gpg: revocation certificate stored as '/tmp/skopeo_bats.1gkpjd/skopeo-gpg/openpgp-revocs.d/2958952420D437D092C05105BA72CE534CE1BD14.rev'
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.1gkpjd/auth:/auth:Z -p 5000:5000 quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:57:27-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 23 signing: standalone
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/050-signing.bats, line 88)
+#   `start_registry reg' failed with status 125
+# gpg: keybox '/tmp/skopeo_bats.yMDxN0/skopeo-gpg/pubring.kbx' created
+# gpg: /tmp/skopeo_bats.yMDxN0/skopeo-gpg/trustdb.gpg: trustdb created
+# gpg: directory '/tmp/skopeo_bats.yMDxN0/skopeo-gpg/openpgp-revocs.d' created
+# gpg: revocation certificate stored as '/tmp/skopeo_bats.yMDxN0/skopeo-gpg/openpgp-revocs.d/A6DC4257CDE923A75237F2F8358756C2270FD8ED.rev'
+# gpg: revocation certificate stored as '/tmp/skopeo_bats.yMDxN0/skopeo-gpg/openpgp-revocs.d/2F6D640CD4A3A33129EE43A72430D2F6C5FF8660.rev'
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.yMDxN0/auth:/auth:Z -p 5000:5000 quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:57:44-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+not ok 24 delete: remove image from registry
+# (from function `log_and_run' in file systemtest/helpers.bash, line 130,
+#  from function `start_registry' in file systemtest/helpers.bash, line 354,
+#  from function `setup' in test file systemtest/060-delete.bats, line 11)
+#   `start_registry --enable-delete=true reg' failed with status 125
+# $ podman --cgroup-manager=cgroupfs run -d --name reg -v /tmp/skopeo_bats.z8i1Ao/auth:/auth:Z -p 5000:5000 -e REGISTRY_STORAGE_DELETE_ENABLED=true quay.io/libpod/registry:2
+# Error: creating container storage: the container name "reg" is already in use by adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663. You have to remove that container to be able to reuse that name: that name is already in use, or use --replace to instruct Podman to do so.
+# time="2024-05-28T06:57:59-04:00" level=warning msg="StopSignal SIGTERM failed to stop container reg in 10 seconds, resorting to SIGKILL"
+# Error: cannot remove container adcb253f222235e3fafae90ab05c0335b0e5e1b62bb0f9a9a9f6f7034de6e663 as it could not be stopped: given PID did not die within timeout
+ok 25 list-tags: remote repository on a registry
+ok 26 list-tags: from a docker-archive file
+ok 27 sync: --dry-run

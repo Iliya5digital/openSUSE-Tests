@@ -1,0 +1,29 @@
+skopeo-user.tap ..
+1..27
+ok 1 skopeo version emits reasonable output
+ok 2 inspect: basic
+ok 3 inspect: env
+ok 4 inspect: image manifest list w/ diff platform
+ok 5 inspect: don't list tags
+ok 6 copy: dir, round trip
+ok 7 copy: oci, round trip
+ok 8 copy: oci, zstd
+ok 9 copy: oci w/ and w/o tags
+ok 10 copy: registry -> storage -> oci-archive
+ok 11 copy: bug 651 # skip Enable this once skopeo issue #651 has been fixed
+ok 12 copy: manifest format
+ok 13 copy: additional tag
+ok 14 copy: shared blob directory
+ok 15 copy: sif image # skip 'fakeroot' tool not available
+ok 16 local registry, with cert
+ok 17 auth: credentials on command line
+ok 18 auth: credentials via podman login
+ok 19 auth: copy with --src-creds and --dest-creds
+ok 20 auth: credentials via authfile
+ok 21 signing
+ok 22 signing: remove signature
+ok 23 signing: standalone
+ok 24 delete: remove image from registry
+ok 25 list-tags: remote repository on a registry
+ok 26 list-tags: from a docker-archive file
+ok 27 sync: --dry-run

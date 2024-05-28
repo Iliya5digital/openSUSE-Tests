@@ -1,0 +1,268 @@
+runc-root.tap ..
+1..266
+ok 1 runc run no capability
+ok 2 runc run with unknown capability
+ok 3 runc run with new privileges
+ok 4 runc run with some capabilities
+ok 5 runc exec (cgroup v2, ro cgroupfs, new cgroupns) does not chown cgroup
+ok 6 runc exec (cgroup v2, rw cgroupfs, inherit cgroupns) does not chown cgroup
+ok 7 runc exec (cgroup v2, rw cgroupfs, new cgroupns) does chown cgroup
+ok 8 runc create (no limits + no cgrouppath + no permission) succeeds
+ok 9 runc create (rootless + no limits + cgrouppath + no permission) fails with permission error # skip test requires rootless
+ok 10 runc create (rootless + limits + no cgrouppath + no permission) fails with informative error # skip test requires rootless
+ok 11 runc create (limits + cgrouppath + permission on the cgroup dir) succeeds
+ok 12 runc exec (limits + cgrouppath + permission on the cgroup dir) succeeds
+ok 13 runc exec (cgroup v2 + init process in non-root cgroup) succeeds
+ok 14 runc run (cgroup v1 + unified resources should fail) # skip test requires cgroups_v1
+ok 15 runc run (blkio weight)
+ok 16 runc run (per-device io weight for bfq)
+ok 17 runc run (cpu.idle)
+ok 18 runc run (hugetlb limits)
+ok 19 runc run (cgroup v2 resources.unified only)
+ok 20 runc run (cgroup v2 resources.unified override)
+ok 21 runc run (cgroupv2 mount inside container)
+ok 22 runc exec (cgroup v1+hybrid joins correct cgroup) # skip test requires cgroups_hybrid
+ok 23 runc exec should refuse a paused container
+ok 24 runc exec --ignore-paused
+ok 25 runc run/create should error for a non-empty cgroup
+ok 26 runc run/create should refuse pre-existing frozen cgroup
+ok 27 checkpoint and restore
+ok 28 checkpoint and restore (bind mount, destination is symlink)
+ok 29 checkpoint and restore (with --debug)
+ok 30 checkpoint and restore (cgroupns) # skip test requires cgroups_v1
+ok 31 checkpoint --pre-dump (bad --parent-path)
+ok 32 checkpoint --pre-dump and restore
+ok 33 checkpoint --lazy-pages and restore
+ok 34 checkpoint and restore in external network namespace
+ok 35 checkpoint and restore with container specific CRIU config
+ok 36 checkpoint and restore with nested bind mounts
+ok 37 checkpoint then restore into a different cgroup (via --manage-cgroups-mode ignore)
+ok 38 runc create
+ok 39 runc create exec
+ok 40 runc create --pid-file
+ok 41 runc create --pid-file with new CWD
+ok 42 runc exec --user with no access to cwd
+ok 43 runc create sets up user before chdir to cwd if needed # skip test requires rootless
+ok 44 runc create can chdir if runc has access
+ok 45 global --debug
+ok 46 global --debug to --log
+ok 47 global --debug to --log --log-format 'text'
+ok 48 global --debug to --log --log-format 'json'
+ok 49 runc delete
+ok 50 runc delete --force
+ok 51 runc delete --force ignore not exist
+ok 52 runc delete [host pidns + init gone]
+ok 53 runc delete --force [host pidns + init gone]
+ok 54 runc delete --force [paused container]
+ok 55 runc delete --force in cgroupv1 with subcgroups # skip test requires cgroups_v1
+ok 56 runc delete --force in cgroupv2 with subcgroups
+ok 57 runc delete removes failed systemd unit
+ok 58 runc run [redundant default /dev/tty]
+ok 59 runc run [redundant default /dev/ptmx]
+ok 60 runc run/update [device cgroup deny]
+ok 61 runc run [device cgroup allow rw char device]
+ok 62 runc run [device cgroup allow rm block device]
+ok 63 runc exec vs systemctl daemon-reload
+ok 64 events --stats
+ok 65 events --stats with psi data # skip test requires psi
+ok 66 events --interval default
+ok 67 events --interval 1s
+ok 68 events --interval 100ms
+ok 69 events oom
+ok 70 runc exec
+ok 71 runc exec [exit codes]
+ok 72 runc exec --pid-file
+ok 73 runc exec --pid-file with new CWD
+ok 74 runc exec ls -la
+ok 75 runc exec ls -la with --cwd
+ok 76 runc exec --env
+ok 77 runc exec --user
+ok 78 runc exec --user vs /dev/null ownership
+ok 79 runc exec --additional-gids
+ok 80 runc exec --preserve-fds
+ok 81 runc --debug exec
+ok 82 runc --debug --log exec
+ok 83 runc exec --cgroup sub-cgroups [v1] # skip test requires cgroups_v1
+ok 84 runc exec --cgroup subcgroup [v2]
+ok 85 runc exec [execve error]
+ok 86 runc -h
+ok 87 runc command -h
+ok 88 runc foo -h
+ok 89 runc create [second createRuntime hook fails]
+ok 90 runc create [hook fails]
+ok 91 runc run [hook fails]
+ok 92 runc run (hooks library tests) # skip test requires no_systemd
+ok 93 runc run [host mount ns + hooks]
+ok 94 simple idmap mount [userns]
+ok 95 simple idmap mount [no userns]
+ok 96 write to an idmap mount [userns]
+ok 97 write to an idmap mount [no userns]
+ok 98 idmap mount with propagation flag [userns]
+ok 99 idmap mount with relative path [userns]
+ok 100 idmap mount with bind mount [userns]
+ok 101 idmap mount with bind mount [no userns]
+ok 102 two idmap mounts (same mapping) with two bind mounts [userns]
+ok 103 same idmap mount (different mappings) [userns]
+ok 104 same idmap mount (different mappings) [no userns]
+ok 105 multiple idmap mounts (different mappings) [userns]
+ok 106 multiple idmap mounts (different mappings) [no userns]
+ok 107 idmap mount (complicated mapping) [userns]
+ok 108 idmap mount (complicated mapping) [no userns]
+ok 109 idmap mount (non-recursive idmap) [userns]
+ok 110 idmap mount (non-recursive idmap) [no userns]
+ok 111 idmap mount (idmap flag) [userns]
+ok 112 idmap mount (idmap flag) [no userns]
+ok 113 idmap mount (ridmap flag) [userns]
+ok 114 idmap mount (ridmap flag) [no userns]
+ok 115 idmap mount (idmap flag, implied mapping) [userns]
+ok 116 idmap mount (ridmap flag, implied mapping) [userns]
+ok 117 idmap mount (idmap flag, implied mapping, userns join) [userns]
+ok 118 ioprio_set is applied to process group
+ok 119 kill detached busybox
+ok 120 kill KILL [host pidns]
+ok 121 kill KILL [host pidns + init gone]
+ok 122 list
+ok 123 mask paths [file]
+ok 124 mask paths [directory]
+ok 125 mask paths [prohibit symlink /proc]
+ok 126 mask paths [prohibit symlink /sys]
+ok 127 runc run [tmpcopyup]
+ok 128 runc run [bind mount]
+ok 129 runc run [ro tmpfs mount]
+ok 130 runc run [ro /dev mount]
+ok 131 runc run [tmpfs mount with absolute symlink]
+ok 132 runc run [ro /sys/fs/cgroup mounts]
+ok 133 runc run [ro /sys/fs/cgroup mounts + cgroupns]
+ok 134 runc run [mount order, container bind-mount source]
+ok 135 runc run [mount order, container bind-mount source] (userns)
+ok 136 runc run [mount order, container idmap source]
+ok 137 runc run [mount order, container idmap source] (userns)
+ok 138 runc run [rbind,ro mount is read-only but not recursively]
+ok 139 runc run [rbind,rro mount is recursively read-only]
+ok 140 runc run [rbind,ro,rro mount is recursively read-only too]
+ok 141 runc run [mount(8)-like behaviour: --bind with no options]
+ok 142 runc run [mount(8)-unlike behaviour: --bind with clearing flag]
+ok 143 runc run [implied-rw bind mount of a ro fuse sshfs mount]
+ok 144 runc run [explicit-rw bind mount of a ro fuse sshfs mount]
+ok 145 runc run [dev,exec,suid,atime bind mount of a nodev,nosuid,noexec,noatime fuse sshfs mount]
+ok 146 runc run [ro bind mount of a nodev,nosuid,noexec fuse sshfs mount]
+ok 147 runc run [ro,symfollow bind mount of a rw,nodev,nosymfollow fuse sshfs mount]
+ok 148 runc run [ro,noexec bind mount of a nosuid,noatime fuse sshfs mount]
+ok 149 runc run [bind mount {no,rel,strict}atime semantics]
+ok 150 runc run --no-pivot must not expose bare /proc
+ok 151 runc pause and resume
+ok 152 runc pause and resume with nonexist container
+ok 153 runc run personality for i686
+ok 154 runc run personality with exec for i686
+ok 155 runc run personality for x86_64
+ok 156 runc run personality with exec for x86_64
+ok 157 runc create [ --pidfd-socket ] 
+ok 158 runc run [ --pidfd-socket ] 
+ok 159 runc exec [ --pidfd-socket ] [cgroups_v1]  # skip test requires cgroups_v1
+ok 160 runc exec [ --pidfd-socket ] [cgroups_v2] 
+ok 161 ps
+ok 162 ps -f json
+ok 163 ps -e -x
+ok 164 ps after the container stopped
+ok 165 global --root
+ok 166 runc run
+ok 167 runc run --keep
+ok 168 runc run --keep (check cgroup exists) # skip test requires no_systemd
+ok 169 runc run [hostname domainname]
+ok 170 runc run with tmpfs
+ok 171 runc run with tmpfs perms
+ok 172 RUNC_DMZ=true runc run [runc-dmz]
+ok 173 RUNC_DMZ=true runc run [cap_sys_ptrace -> /proc/self/exe clone]
+ok 174 runc run [/proc/self/exe clone]
+ok 175 runc run [joining existing container namespaces]
+ok 176 RUNC_DMZ=true runc run [exec error]
+ok 177 runc run [execve error]
+ok 178 scheduler is applied
+ok 179 scheduler vs cpus
+ok 180 runc run [seccomp] (SCMP_ACT_NOTIFY old kernel) # skip requires kernel < 5.6
+ok 181 runc run [seccomp] (SCMP_ACT_NOTIFY noNewPrivileges false)
+ok 182 runc run [seccomp] (SCMP_ACT_NOTIFY noNewPrivileges true)
+ok 183 runc exec [seccomp] (SCMP_ACT_NOTIFY noNewPrivileges false)
+ok 184 runc exec [seccomp] (SCMP_ACT_NOTIFY noNewPrivileges true)
+ok 185 runc run [seccomp] (SCMP_ACT_NOTIFY important syscalls noNewPrivileges false)
+ok 186 runc run [seccomp] (SCMP_ACT_NOTIFY important syscalls noNewPrivileges true)
+ok 187 runc run [seccomp] (ignore listener path if no notify act)
+ok 188 runc run [seccomp] (SCMP_ACT_NOTIFY empty listener path and notify act)
+ok 189 runc run [seccomp] (SCMP_ACT_NOTIFY wrong listener path)
+ok 190 runc run [seccomp] (SCMP_ACT_NOTIFY wrong abstract listener path)
+ok 191 runc run [seccomp] (SCMP_ACT_NOTIFY kill seccompagent)
+ok 192 runc run [seccomp] (SCMP_ACT_NOTIFY no seccompagent)
+ok 193 runc run [seccomp] (SCMP_ACT_NOTIFY error chmod)
+ok 194 runc run [seccomp] (SCMP_ACT_NOTIFY write)
+ok 195 runc run [seccomp] (SCMP_ACT_NOTIFY startContainer hook)
+ok 196 runc run [seccomp] (SCMP_ACT_NOTIFY example config)
+ok 197 runc run [seccomp -ENOSYS handling]
+ok 198 runc run [seccomp defaultErrnoRet=ENXIO]
+ok 199 runc run [seccomp] (SCMP_ACT_ERRNO default)
+ok 200 runc run [seccomp] (SCMP_ACT_ERRNO explicit errno)
+ok 201 runc run [seccomp] (SECCOMP_FILTER_FLAG_*)
+ok 202 runc run [seccomp] (SCMP_ACT_KILL)
+ok 203 runc run [seccomp] (startContainer hook)
+ok 204 runc run (no selinux label) # skip requires SELinux enabled and in enforcing mode
+ok 205 runc run (custom selinux label, RUNC_DMZ=true) # skip requires SELinux enabled and in enforcing mode
+ok 206 runc run (custom selinux label) # skip requires SELinux enabled and in enforcing mode
+ok 207 spec generation cwd
+ok 208 spec generation --bundle
+ok 209 spec validator
+ok 210 runc start
+ok 211 runc run detached
+ok 212 runc run detached ({u,g}id != 0)
+ok 213 runc run detached --pid-file
+ok 214 runc run detached --pid-file with new CWD
+ok 215 runc run
+ok 216 runc run ({u,g}id != 0)
+ok 217 runc run as user with no exec bit but CAP_DAC_OVERRIDE set
+ok 218 runc run with rootfs set to .
+ok 219 runc run --pid-file
+ok 220 runc run [rootless with host pidns]
+ok 221 runc run [redundant seccomp rules]
+ok 222 state (kill + delete)
+ok 223 state (pause + resume)
+ok 224 runc run [timens offsets with no timens]
+ok 225 runc run [timens with no offsets]
+ok 226 runc run [simple timens]
+ok 227 runc run [simple timens + userns]
+ok 228 runc run [stdin not a tty]
+ok 229 runc run [tty ptsname]
+ok 230 runc run [tty owner]
+ok 231 runc run [tty owner] ({u,g}id != 0)
+ok 232 runc exec [stdin not a tty]
+ok 233 runc exec [tty ptsname]
+ok 234 runc exec [tty owner]
+ok 235 runc exec [tty owner] ({u,g}id != 0)
+ok 236 runc exec [tty consolesize]
+ok 237 runc create [terminal=false]
+ok 238 runc run [terminal=false]
+ok 239 runc run -d [terminal=false]
+ok 240 umask
+ok 241 update cgroup v1/v2 common limits
+ok 242 update cgroup cpu limits
+ok 243 cpu burst
+ok 244 set cpu period with no quota
+ok 245 set cpu period with no quota (invalid period)
+ok 246 set cpu quota with no period
+ok 247 update cpu period with no previous period/quota set
+ok 248 update cpu quota with no previous period/quota set
+ok 249 update cpu period in a pod cgroup with pod limit set # skip test requires cgroups_v1
+ok 250 update cgroup cpu.idle
+ok 251 update cgroup cpu.idle via systemd v252+
+ok 252 update cgroup v2 resources via unified map
+ok 253 update cpuset parameters via resources.CPU
+ok 254 update cpuset parameters via v2 unified map
+ok 255 update cpuset cpus range via v2 unified map # skip test requires more_than_8_core
+ok 256 update rt period and runtime # skip test requires cgroups_v1
+ok 257 update devices [minimal transition rules]
+ok 258 update paused container
+ok 259 update memory vs CheckBeforeUpdate
+ok 260 userns with simple mount
+ok 261 userns with 2 inaccessible mounts
+ok 262 userns with inaccessible mount + exec
+ok 263 userns with bind mount before a cgroupfs mount # skip test requires cgroups_v1
+ok 264 userns join other container userns
+ok 265 userns join other container userns [bind-mounted nsfd]
+ok 266 runc version

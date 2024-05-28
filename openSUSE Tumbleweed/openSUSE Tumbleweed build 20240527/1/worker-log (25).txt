@@ -1,0 +1,20 @@
+[2024-05-28T10:50:42.683695Z] [info] Preparing cgroup to start isotovideo
+[2024-05-28T10:50:42.684250Z] [info] Using cgroup /sys/fs/cgroup/systemd/openqa.slice/openqa-worker.slice/openqa-worker-auto-restart@9.service/4227984
+[2024-05-28T10:50:42.684453Z] [info] Starting isotovideo container
+[2024-05-28T10:50:42.687212Z] [info] isotovideo has been started (PID: 45708)
+[2024-05-28T10:50:42.688115Z] [info] 45708: WORKING 4227984
+[2024-05-28T12:44:17.244246Z] [info] Received signal HUP
+[2024-05-28T12:45:27.640497Z] [warn] Websocket connection to https://openqa.opensuse.org/api/v1/ws/845 finished by remote side with code 1006, no reason - trying again in 10 seconds
+[2024-05-28T12:45:37.641569Z] [info] Registering with openQA https://openqa.opensuse.org
+[2024-05-28T12:45:38.355695Z] [info] Establishing ws connection via wss://openqa.opensuse.org/api/v1/ws/845
+[2024-05-28T12:45:39.322190Z] [info] Registered and connected via websockets with openQA host https://openqa.opensuse.org and worker ID 845
+[2024-05-28T12:48:45.011795Z] [info] Uploading aardvark_integration-aardvark.tap
+[2024-05-28T12:48:45.046849Z] [info] Uploading netavark_integration-netavark.tap
+[2024-05-28T12:48:45.060938Z] [info] Uploading podman_integration-bats-user-local.tap
+[2024-05-28T12:48:45.082784Z] [info] Uploading podman_integration-bats-user-remote.tap
+[2024-05-28T12:48:45.143441Z] [info] Uploading runc_integration-runc-root.tap
+[2024-05-28T12:48:45.162438Z] [info] Uploading runc_integration-runc-user.tap
+[2024-05-28T12:48:45.181958Z] [info] Uploading skopeo_integration-skopeo-root.tap
+[2024-05-28T12:48:45.197146Z] [info] Uploading skopeo_integration-skopeo-user.tap
+[2024-05-28T12:48:45.233005Z] [info] Uploading autoinst-log.txt
+[2024-05-28T12:48:45.261465Z] [info] Uploading worker-log.txt

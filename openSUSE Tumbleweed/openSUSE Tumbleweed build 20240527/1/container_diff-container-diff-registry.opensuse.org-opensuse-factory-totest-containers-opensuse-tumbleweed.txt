@@ -1,0 +1,20 @@
+
+-----File-----
+
+These entries have been added to registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed: None
+
+These entries have been deleted from registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed: None
+
+These entries have been changed between registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed and registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed: None
+
+-----RPM-----
+
+Packages found only in registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed: None
+
+Packages found only in registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed: None
+
+Version differences: None
+
+-----Size-----
+
+Image size difference between registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed and registry.opensuse.org/opensuse/factory/totest/containers/opensuse/tumbleweed: None

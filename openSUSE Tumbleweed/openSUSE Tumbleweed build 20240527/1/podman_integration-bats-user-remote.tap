@@ -1,0 +1,1776 @@
+bats-user-remote.tap ..
+--------------------------------------------------
+$ bats  test/system
+1..667
+ok 1 [001] podman version emits reasonable output
+# Arch:amd64 OS:opensuse-tumbleweed20240527 Runtime:crun Rootless:true Events:journald Logdriver:journald Cgroups:v2+systemd Net:netavark DB:sqlite Store:overlay
+ok 2 [001] podman info
+ok 3 [001] podman --context emits reasonable output
+ok 4 [001] podman can pull an image
+ok 5 [001] podman-remote : really is remote, works as --remote option
+ok 6 [001] podman-remote: defaults # skip [remote] only applicable on a local run
+ok 7 [001] podman-remote: check for command usage message without a running endpoint # skip only applicable on a local run since this requires no endpoint
+ok 8 [001] timeout # skip define $PODMAN_RUN_TIMEOUT_TEST to enable this test
+ok 9 [001] jq is installed and produces reasonable output
+ok 10 [001] podman --log-level recognizes log levels
+ok 11 [001] podman --noout properly suppresses output
+ok 12 [001] podman --noout is actually writing to /dev/null # skip [remote] unshare only works locally
+ok 13 [001] podman version --out writes matching version to a json
+ok 14 [001] podman - shutdown engines
+ok 15 [005] podman info - basic test
+ok 16 [005] podman info - json
+ok 17 [005] podman info - confirm desired runtime # skip CI_DESIRED_RUNTIME is unset--OK, because we're not in Cirrus
+ok 18 [005] podman info - confirm desired network backend
+ok 19 [005] podman info - confirm desired database # skip CI_DESIRED_DATABASE is unset--OK, because we're not in Cirrus
+ok 20 [005] podman info - confirm desired storage driver # skip CI_DESIRED_STORAGE is unset--OK, because we're not in Cirrus
+ok 21 [005] podman info - RHEL8 must use runc # skip only applicable on RHEL, this is openSUSE Tumbleweed
+ok 22 [005] podman info --storage-opt=''  # skip --storage-opt flag is not supported for remote
+ok 23 [005] podman info netavark  # skip Netavark testing not requested ($NETWORK_BACKEND='')
+ok 24 [005] podman --root PATH info - basic output
+ok 25 [005] rootless podman with symlinked /home/bernhard # skip path validation is only done in libpod, does not effect remote
+ok 26 [005] podman --root PATH --volumepath info - basic output
+ok 27 [005] CONTAINERS_CONF_OVERRIDE # skip remote does not support CONTAINERS_CONF*
+ok 28 [005] podman - BoltDB cannot create new databases # skip [remote] DB checks only work for local Podman
+ok 29 [010] podman images - basic output
+ok 30 [010] podman images - custom formats
+ok 31 [010] podman images - json
+ok 32 [010] podman images - history output
+ok 33 [010] podman images - filter
+ok 34 [010] podman images -a, after pulling by sha 
+ok 35 [010] podman images - table format
+ok 36 [010] podman images - rmi -af removes all containers and pods
+ok 37 [010] podman images - rmi -f can remove infra images
+ok 38 [010] podman rmi --ignore
+ok 39 [010] podman image rm --force bogus
+ok 40 [010] podman images - commit docker with comment
+ok 41 [010] podman pull image with additional store # skip [remote] only works on local
+ok 42 [010] podman images with concurrent removal # skip following test is not supported for remote clients
+ok 43 podman image - sign with no sigfile # skip --sign-by does not work with podman-remote
+ok 44 [012] podman images - bare manifest list
+ok 45 [012] podman manifest --tls-verify and --authfile # skip running a local registry doesn't work with podman-remote
+ok 46 [012] manifest list --add-compression with zstd # skip running a local registry doesn't work with podman-remote
+ok 47 [012] manifest list --add --artifact # skip running a local registry doesn't work with podman-remote
+ok 48 [015] podman help - basic tests # skip test does not work with podman-remote
+ok 49 [020] podman tag/untag
+ok 50 [020] podman untag all
+ok 51 [030] podman run - basic tests
+ok 52 [030] podman run - global runtime option # skip runtime flag is not passed over remote
+ok 53 [030] podman run --memory=0 runtime option
+ok 54 [030] podman run --preserve-fds # skip preserve-fds is meaningless over remote
+ok 55 [030] podman run --preserve-fd # skip preserve-fd is meaningless over remote
+ok 56 [030] podman run - uidmapping has no /sys/kernel mounts # skip cannot umount as rootless
+ok 57 [030] podman run --rm
+ok 58 [030] podman run --name
+ok 59 [030] podman run --pull
+ok 60 [030] podman run --rmi
+ok 61 [030] podman run --conmon-pidfile --cidfile
+ok 62 [030] podman run docker-archive # skip podman-remote does not support docker-archive
+ok 63 [030] podman run : user namespace preserved root ownership
+ok 64 [030] podman run : add username to /etc/passwd if --userns=keep-id
+ok 65 [030] podman run : --userns=keep-id: passwd file is modifiable
+ok 66 [030] podman run --log-driver
+ok 67 [030] podman run --log-driver journald # skip We cannot read journalctl over remote.
+ok 68 [030] podman run --tz
+ok 69 [030] podman run --tz with zoneinfo
+ok 70 [030] podman run : full path to --runtime is preserved # skip podman-remote does not support --runtime option
+ok 71 [030] podman --noout run should print output
+ok 72 [030] podman --noout create should print output
+ok 73 [030] podman --out run should save the container id
+ok 74 [030] podman --out create should save the container id
+ok 75 [030] podman run : look up correct image name
+ok 76 [030] podman run on untagged image: make sure that image metadata is set
+ok 77 [030] podman inspect includes image data
+ok 78 [030] Verify /run/.containerenv exist
+ok 79 [030] podman run with --net=host and --port prints warning
+ok 80 [030] podman run - check workdir
+ok 81 [030] podman run - does not truncate or hang with big output
+ok 82 [030] podman run - do not set empty HOME
+ok 83 [030] podman run --timeout - basic test
+ok 84 [030] podman run no /etc/mtab 
+ok 85 [030] podman run --hostuser tests
+ok 86 [030] podman run --device-cgroup-rule tests
+ok 87 [030] podman run closes stdin
+ok 88 [030] podman run defaultenv
+ok 89 [030] podman run - no /etc/hosts # skip Test is too dangerous to run in a non-container environment
+ok 90 [030] podman run image with filesystem permission
+ok 91 [030] podman run with log-opt option
+ok 92 [030] podman run --kernel-memory warning
+ok 93 [030] podman run update /etc/hosts
+ok 94 [030] podman run doesn't override oom-score-adj # skip [remote] containersconf needs to be set on server side
+ok 95 [030] rootless podman clamps oom-score-adj if it is lower than the current one # skip test does not work with podman-remote
+ok 96 [030] podman top does not use nsenter from image
+ok 97 [030] podman create --security-opt
+ok 98 [030] podman run --device-read-bps # skip cannot use this flag in rootless mode
+ok 99 [030] podman run failed --rm 
+ok 100 [030] podman run --attach stdin prints container ID
+ok 101 [030] podman run --privileged as root with systemd will not mount /dev/tty # skip [rootless] this test only makes sense as root
+ok 102 [030] podman run --privileged as rootless will not mount /dev/tty\d+
+ok 103 [030] podman run --privileged as root with systemd mounts non-vt /dev/tty devices
+ok 104 [030] podman run read-only from containers.conf
+ok 105 [030] podman run ulimit from containers.conf # skip containers.conf has to be set on remote, only tested on E2E test
+ok 106 [030] podman run ulimit with -1
+ok 107 [030] podman run bad --name
+ok 108 [030] podman run --net=host --cgroupns=host with read only cgroupfs
+ok 109 [030] podman run - rootfs with idmapped mounts # skip [rootless] idmapped mounts work only with root for now
+ok 110 [030] podman run --restart=always -- wait
+ok 111 [030] podman run - custom static_dir # skip CONTAINERS_CONF_OVERRIDE redirect does not work on remote
+ok 112 [030] podman --authfile=nonexistent-path
+ok 113 [030] podman --syslog and environment passed to conmon # skip --syslog is not supported for remote clients
+ok 114 [030] podman create container with conflicting name
+ok 115 [030] podman run - /run must not be world-writable in systemd containers
+ok 116 [030] podman run with mounts.conf missing # skip --default-mounts-file is not supported for remote clients
+ok 117 [030] podman run - rm pod if container creation failed with -pod new:
+ok 118 [030] podman run - no entrypoint
+ok 119 [032] podman sigproxy test: run
+ok 120 [032] podman sigproxy test: start
+ok 121 [032] podman sigproxy test: attach
+ok 122 [035] podman logs - basic test
+ok 123 [035] podman logs - tail test, k8s-file
+ok 124 [035] podman logs - tail test, journald
+ok 125 [035] podman logs - multi k8s-file # skip logs does not support multiple containers when run remotely
+ok 126 [035] podman logs - multi journald # skip logs does not support multiple containers when run remotely
+ok 127 [035] podman logs restarted - k8s-file
+ok 128 [035] podman logs restarted journald
+ok 129 [035] podman logs - journald log driver requires journald events backend # skip remote does not support --events-backend
+ok 130 [035] podman logs - since k8s-file
+ok 131 [035] podman logs - since journald
+ok 132 [035] podman logs - until k8s-file
+ok 133 [035] podman logs - until journald
+ok 134 [035] podman logs - --follow k8s-file
+ok 135 [035] podman logs - --follow journald
+ok 136 [035] podman logs - --since --follow k8s-file
+ok 137 [035] podman logs - --since --follow journald
+ok 138 [035] podman logs - --until --follow k8s-file
+ok 139 [035] podman logs - --until --follow journald
+ok 140 [035] podman logs --tail, k8s-file with partial lines
+ok 141 [037] podman container runlabel test # skip container runlabel is not supported for remote
+ok 142 [040] podman ps - basic tests
+ok 143 [040] podman ps --filter
+ok 144 [040] podman ps --external
+ok 145 [040] podman ps --format label
+ok 146 [040] podman pod ps --format label
+ok 147 [040] podman ps --format PodName
+ok 148 [045] podman start --all - start all containers
+ok 149 [045] podman start --all with incompatible options
+ok 150 [045] podman start --filter - start only containers that match the filter
+ok 151 [045] podman start --filter invalid-restart-policy - return error
+ok 152 [045] podman start --all --filter
+ok 153 [045] podman start print IDs or raw input
+ok 154 [045] podman start again with lower ulimit -u # skip test relies on control of ulimit -u (not possible for remote)
+ok 155 [050] podman stop - basic test
+ok 156 [050] podman stop --all
+ok 157 [050] podman stop print IDs or raw input
+ok 158 [050] podman stop --ignore
+ok 159 [050] podman stop - can trap signal
+ok 160 [050] podman stop - unlock while waiting for timeout
+ok 161 [050] podman stop -t 1 Generate warning # skip [remote] warning only happens on server side
+ok 162 [050] podman stop --noout
+ok 163 [050] podman stop, with --rm container
+ok 164 [055] podman rm
+ok 165 [055] podman rm - running container, w/o and w/ force
+ok 166 [055] podman rm container from storage # skip only applicable for local podman
+ok 167 [055] podman rm <-> run --rm race
+ok 168 [055] podman rm --depend
+ok 169 [055] podman rm -f
+ok 170 [055] podman container rm --force bogus
+ok 171 [055] podman container rm doesn't affect stopping containers
+ok 172 [055] podman container rm --force doesn't leave running processes
+ok 173 [060] podman mount - basic test # skip mount does not work rootless
+ok 174 [060] podman image mount # skip mounting remote is meaningless
+ok 175 [060] podman run --mount ro=false 
+ok 176 [060] podman run --mount image # skip too hard to test rootless
+ok 177 [060] podman run --mount image inspection # skip too hard to test rootless
+ok 178 [060] podman mount containers.conf # skip remote does not support CONTAINERS_CONF*
+ok 179 [060] podman mount external container - basic test # skip mount does not work rootless
+ok 180 [060] podman volume globs
+ok 181 [060] podman mount noswap memory mounts
+ok 182 [060] podman mount no-dereference
+ok 183 [065] podman cp file from host to container
+ok 184 [065] podman cp file from host to container tmpfs mount
+ok 185 [065] podman cp (-a=true) file from host to container and check ownership
+ok 186 [065] podman cp (-a=false) file from host to container and check ownership
+ok 187 [065] podman cp file from/to host while --pid=host
+ok 188 [065] podman cp file from container to host
+ok 189 [065] podman cp file from container to container
+ok 190 [065] podman cp dir from host to container
+ok 191 [065] podman cp dir from container to host
+ok 192 [065] podman cp dir from container to container
+ok 193 [065] podman cp symlinked directory from container
+ok 194 [065] podman cp file from host to container volume
+ok 195 [065] podman cp file from host to container mount
+ok 196 [065] podman cp * - wildcard copy multiple files from container to host
+ok 197 [065] podman cp - will not recognize symlink pointing into host space
+ok 198 [065] podman cp - will not expand globs in host space (#3829)
+ok 199 [065] podman cp - will not expand wildcard
+ok 200 [065] podman cp into container: weird symlink expansion
+ok 201 [065] podman cp into a subdirectory matching GraphRoot
+ok 202 [065] podman cp from stdin to container
+ok 203 [065] podman cp from container to stdout
+ok 204 [065] podman cp --overwrite file - ctr/ctr
+ok 205 [065] podman cp --overwrite file - ctr/host
+ok 206 [065] podman cp --overwrite file - host/ctr
+ok 207 [065] podman cp - dot notation - host to container
+ok 208 [065] podman cp - dot notation - container to host
+ok 209 [065] podman cp - dot notation - container to container
+ok 210 [070] podman build - basic test
+ok 211 [070] podman buildx - basic test
+ok 212 [070] podman build test -f -
+ok 213 [070] podman build - global runtime flags test # skip --runtime-flag flag not supported for remote
+ok 214 [070] podman build - set runtime # skip --runtime flag not supported for remote
+ok 215 [070] podman build - cache (#3920)
+ok 216 [070] podman build test -f ./relative
+ok 217 [070] podman parallel build should not race # skip following test is not supported for remote clients
+ok 218 [070] podman build - URLs
+ok 219 [070] podman build - workdir, cmd, env, label
+ok 220 [070] podman build - COPY with ignore
+ok 221 [070] podman build with ignore '*'
+ok 222 [070] podman build with ignore '*' and containerfile outside of build context
+ok 223 [070] podman build - stdin test
+ok 224 [070] podman build - does not gobble stdin that does not belong to it
+ok 225 [070] podman build --layers test
+ok 226 [070] build with copy-from referencing the base image
+ok 227 [070] podman build --pull-never
+ok 228 [070] podman build --logfile test
+ok 229 [070] podman build check_label # skip selinux not available
+ok 230 [070] podman build check_seccomp_ulimits
+ok 231 [070] podman build --authfile bogus test
+ok 232 [070] podman build COPY hardlinks 
+ok 233 [070] podman build -f test
+ok 234 [070] podman build .dockerignore failure test
+ok 235 [070] podman build .containerignore and .dockerignore test
+ok 236 [070] podman build build context ownership
+ok 237 [070] podman build build context is a symlink to a directory
+ok 238 [070] podman build --volumes-from conflict
+ok 239 [070] podman build empty context dir
+ok 240 [070] podman build --file=https
+ok 241 [075] podman exec - basic test
+ok 242 [075] podman exec - leak check # skip test is meaningless over remote
+ok 243 [075] podman exec - cat from stdin
+ok 244 [075] podman exec - with keep-id
+ok 245 [075] podman exec/run - missing output
+ok 246 [075] podman exec --wait # skip test is meaningless over remote
+ok 247 [075] podman run umask
+ok 248 [075] podman exec --tty
+ok 249 [075] podman exec - does not leak session IDs on invalid command
+ok 250 [075] podman exec --preserve-fd # skip preserve-fd is meaningless over remote
+ok 251 [080] podman pause/unpause
+ok 252 [080] podman unpause --all
+ok 253 [085] podman top - basic tests
+ok 254 [090] events with a filter by label
+ok 255 [090] truncate events
+ok 256 [090] image events # skip remote does not support --events-backend
+ok 257 [090] events with disjunctive filters - file # skip remote does not support --events-backend
+ok 258 [090] events with disjunctive filters - journald # skip remote does not support --events-backend
+ok 259 [090] events with file backend and journald logdriver with --follow failure # skip remote does not support --events-backend
+ok 260 [090] events with disjunctive filters - default
+ok 261 [090] events with events_logfile_path in containers.conf # skip remote does not support --events-backend
+ok 262 [090] events log-file rotation # skip setting CONTAINERS_CONF_OVERRIDE logger options does not affect remote client
+ok 263 [090] events log-file no duplicates # skip setting CONTAINERS_CONF_OVERRIDE logger options does not affect remote client
+ok 264 [090] events - labels included in container die # skip remote does not support --events-backend
+ok 265 [090] events - backend none should error # skip remote does not support --events-backend
+ok 266 [090] events - container inspect data - journald # skip remote does not support --events-backend
+ok 267 [090] events - container inspect data - file # skip remote does not support --events-backend
+ok 268 [090] events - docker compat
+ok 269 [090] events - volume events
+ok 270 [110] podman history - basic tests
+ok 271 [110] podman history - custom format
+ok 272 [110] podman history - json
+ok 273 [110] podman image history Created
+ok 274 [120] podman load invalid file
+ok 275 [120] podman save to pipe and load
+ok 276 [120] podman image scp transfer # skip [remote] only applicable under local podman
+ok 277 [120] podman load - by image ID
+ok 278 [120] podman load - by image name
+ok 279 [120] podman load - from URL
+ok 280 [120] podman load - redirect corrupt payload
+ok 281 [120] podman load - multi-image archive
+ok 282 [120] podman load - multi-image archive with redirect
+ok 283 [120] podman save --oci-accept-uncompressed-layers
+ok 284 [130] podman kill - test signal handling in containers
+ok 285 [130] podman kill - rejects invalid args
+ok 286 [130] podman kill - print IDs or raw input
+ok 287 [130] podman kill - concurrent stop
+ok 288 [130] podman wait - exit codes
+ok 289 [130] podman kill - no restart
+ok 290 [140] podman diff
+ok 291 [140] podman diff with buildah container 
+ok 292 podman login - basic test # skip none of these tests work with podman-remote
+ok 293 podman login - with wrong credentials # skip none of these tests work with podman-remote
+ok 294 podman login - check generated authfile # skip none of these tests work with podman-remote
+ok 295 podman login inconsistent authfiles # skip none of these tests work with podman-remote
+ok 296 podman login - check with --config global option # skip none of these tests work with podman-remote
+ok 297 podman push fail # skip none of these tests work with podman-remote
+ok 298 podman push and search ok with --tls-verify=false # skip none of these tests work with podman-remote
+ok 299 podman push and search ok with --tls-verify=true # skip none of these tests work with podman-remote
+ok 300 podman login - shares credentials with skopeo - default auth file # skip none of these tests work with podman-remote
+ok 301 podman login - shares credentials with skopeo - via envariable # skip none of these tests work with podman-remote
+ok 302 podman login - shares credentials with skopeo - via --authfile # skip none of these tests work with podman-remote
+ok 303 podman login -secret test # skip none of these tests work with podman-remote
+ok 304 podman pull images with retry # skip none of these tests work with podman-remote
+ok 305 podman containers.conf retry # skip none of these tests work with podman-remote
+ok 306 [160] podman run --volumes : basic
+ok 307 [160] podman volume duplicates
+ok 308 [160] podman volume filter --name
+ok 309 [160] podman volume create / run
+ok 310 [160] podman volume rm --force
+ok 311 [160] podman volume: exec/noexec
+ok 312 [160] podman volume, implicit creation with run
+ok 313 [160] podman volume import test # skip volumes import is not applicable on podman-remote
+ok 314 [160] podman volume export to stdout # skip N/A on podman-remote
+ok 315 [160] podman volume user test # skip not applicable on podman-remote
+ok 316 [160] podman volume with --userns=keep-id
+ok 317 [160] podman volume prune
+ok 318 [160] podman volume type=bind
+ok 319 [160] podman volume type=tmpfs
+ok 320 [160] podman volume create copyup
+ok 321 [160] podman volume mount # skip podman --remote volume mount not supported
+ok 322 [160] podman --image-volume
+ok 323 [160] podman volume rm --force bogus
+ok 324 [160] podman ps -f
+ok 325 [160] podman run with building volume and selinux file label # skip selinux not available
+ok 326 [160] podman volume create --ignore - do not chown
+ok 327 [170] podman --group-add keep-groups while in a userns # skip chroot is not allowed in rootless mode
+ok 328 [170] podman --group-add keep-groups while not in a userns # skip chroot is not allowed in rootless mode
+ok 329 [170] podman --group-add without keep-groups while in a userns # skip chroot is not allowed in rootless mode
+ok 330 [170] rootful pod with custom ID mapping # skip does not work rootless - rootful feature
+ok 331 [170] podman --remote --group-add keep-groups 
+ok 332 [170] podman --group-add without keep-groups 
+ok 333 [170] podman --group-add keep-groups plus added groups 
+ok 334 [170] podman userns=auto in config file # skip [remote] userns=auto is set on the server
+ok 335 [170] podman userns=auto and secrets
+ok 336 [170] podman userns=nomap
+ok 337 [170] podman userns=keep-id
+ok 338 [170] podman userns=keep-id in a pod
+ok 339 [170] podman userns=auto with id mapping # skip test does not work with podman-remote
+ok 340 [180] podman run --blkio-weight-device # skip cannot create devices in rootless mode
+ok 341 [190] podman --ipc=host
+ok 342 [190] podman --ipc=none
+ok 343 [190] podman --ipc=private
+ok 344 [190] podman --ipc=shareable
+ok 345 [190] podman --ipc=container@test
+ok 346 [195] podman test all namespaces
+ok 347 [200] podman pod - basic tests
+ok 348 [200] podman pod top - containers in different PID namespaces
+ok 349 [200] podman pod create - custom volumes # skip [remote] CONTAINERS_CONF_OVERRIDE only affects server side
+ok 350 [200] podman pod create - custom infra image # skip [remote] CONTAINERS_CONF_OVERRIDE only affects server side
+ok 351 [200] podman pod - communicating between pods
+ok 352 [200] podman pod - communicating via /dev/shm 
+ok 353 [200] podman pod create - hashtag AllTheOptions
+ok 354 [200] podman pod create should fail when infra-name is already in use
+ok 355 [200] podman pod create --share
+ok 356 [200] podman pod create --pod new: --hostname
+ok 357 [200] podman rm --force to remove infra container
+ok 358 [200] podman pod create share net
+ok 359 [200] pod exit policies
+ok 360 [200] pod exit policies - play kube
+ok 361 [200] pod resource limits # skip resource limits only implemented on non-remote
+ok 362 [200] podman pod ps doesn't race with pod rm
+ok 363 [200] podman pod rm --force bogus
+ok 364 [200] podman pod create on failure
+ok 365 [200] podman pod create restart tests
+ok 366 [200] podman pod ps --filter
+ok 367 [200] podman pod cleans cgroup and keeps limits # skip [remote] we cannot check cgroup settings
+ok 368 [220] podman healthcheck
+ok 369 [220] podman healthcheck - restart cleans up old state
+ok 370 [220] podman wait --condition={healthy,unhealthy}
+ok 371 [220] podman healthcheck --health-on-failure
+ok 372 [220] podman healthcheck --health-on-failure with interval
+ok 373 podman generate - systemd - basic # skip systemd tests are meaningless over remote
+ok 374 podman autoupdate local # skip systemd tests are meaningless over remote
+ok 375 podman generate systemd - envar # skip systemd tests are meaningless over remote
+ok 376 podman generate systemd - restart policy & timeouts # skip systemd tests are meaningless over remote
+ok 377 podman pass LISTEN environment  # skip systemd tests are meaningless over remote
+ok 378 podman generate - systemd template # skip systemd tests are meaningless over remote
+ok 379 podman generate - systemd template no support for pod # skip systemd tests are meaningless over remote
+ok 380 podman generate - systemd template only used on --new # skip systemd tests are meaningless over remote
+ok 381 podman --cgroup=cgroupfs doesn't show systemd warning # skip systemd tests are meaningless over remote
+ok 382 podman --systemd sets container_uuid # skip systemd tests are meaningless over remote
+ok 383 podman --systemd fails on cgroup v1 with a private cgroupns # skip systemd tests are meaningless over remote
+ok 384 podman rootless-netns pasta processes should be in different cgroup # skip systemd tests are meaningless over remote
+ok 385 podman create --health-on-failure=kill # skip systemd tests are meaningless over remote
+ok 386 podman-kube@.service template # skip systemd tests are meaningless over remote
+ok 387 podman generate - systemd - DEPRECATED # skip systemd tests are meaningless over remote
+ok 388 [251] podman system service <bad_scheme_uri> returns error # skip podman system service unavailable over remote
+ok 389 [251] podman system service unix: without two slashes still works # skip podman system service unavailable over remote
+ok 390 [251] podman-system-service containers survive service stop # skip podman system service unavailable over remote
+ok 391 [251] podman --host / -H options
+ok 392 [251] podman-system-service --log-level=trace should be able to hijack # skip podman system service unavailable over remote
+ok 393 quadlet - basic # skip quadlet tests are meaningless over remote
+ok 394 quadlet conflict names # skip quadlet tests are meaningless over remote
+ok 395 quadlet - envvar # skip quadlet tests are meaningless over remote
+ok 396 quadlet - ContainerName # skip quadlet tests are meaningless over remote
+ok 397 quadlet - labels # skip quadlet tests are meaningless over remote
+ok 398 quadlet - oneshot # skip quadlet tests are meaningless over remote
+ok 399 quadlet - volume # skip quadlet tests are meaningless over remote
+ok 400 quadlet - volume dependency # skip quadlet tests are meaningless over remote
+ok 401 quadlet - named volume dependency # skip quadlet tests are meaningless over remote
+ok 402 quadlet - network # skip quadlet tests are meaningless over remote
+ok 403 quadlet - network dependency # skip quadlet tests are meaningless over remote
+ok 404 quadlet - named network dependency # skip quadlet tests are meaningless over remote
+ok 405 quadlet kube - basic # skip quadlet tests are meaningless over remote
+ok 406 quadlet kube - named network dependency # skip quadlet tests are meaningless over remote
+ok 407 quadlet - rootfs # skip quadlet tests are meaningless over remote
+ok 408 quadlet - selinux disable # skip quadlet tests are meaningless over remote
+ok 409 quadlet - selinux labels # skip quadlet tests are meaningless over remote
+ok 410 quadlet - secret as environment variable # skip quadlet tests are meaningless over remote
+ok 411 quadlet - secret as a file # skip quadlet tests are meaningless over remote
+ok 412 quadlet - volume path using systemd %T specifier # skip quadlet tests are meaningless over remote
+ok 413 quadlet - tmpfs # skip quadlet tests are meaningless over remote
+ok 414 quadlet - userns # skip quadlet tests are meaningless over remote
+ok 415 quadlet - exit-code propagation # skip quadlet tests are meaningless over remote
+ok 416 quadlet kube - Working Directory # skip quadlet tests are meaningless over remote
+ok 417 quadlet - image files # skip quadlet tests are meaningless over remote
+ok 418 quadlet - kube oneshot # skip quadlet tests are meaningless over remote
+ok 419 quadlet - kube down force # skip quadlet tests are meaningless over remote
+ok 420 quadlet - image tag # skip quadlet tests are meaningless over remote
+ok 421 quadlet - pod simple # skip quadlet tests are meaningless over remote
+ok 422 quadlet - kube build from unavailable image with no tag # skip quadlet tests are meaningless over remote
+ok 423 podman auto-update - validate input # skip systemd tests are meaningless over remote
+ok 424 podman auto-update - label io.containers.autoupdate=image # skip systemd tests are meaningless over remote
+ok 425 podman auto-update - label io.containers.autoupdate=image with rollback # skip systemd tests are meaningless over remote
+ok 426 podman auto-update - label io.containers.autoupdate=disabled # skip systemd tests are meaningless over remote
+ok 427 podman auto-update - label io.containers.autoupdate=fakevalue # skip systemd tests are meaningless over remote
+ok 428 podman auto-update - label io.containers.autoupdate=local # skip systemd tests are meaningless over remote
+ok 429 podman auto-update - label io.containers.autoupdate=local with rollback # skip systemd tests are meaningless over remote
+ok 430 podman auto-update with multiple services # skip systemd tests are meaningless over remote
+ok 431 podman auto-update using systemd # skip systemd tests are meaningless over remote
+ok 432 podman-kube@.service template with rollback # skip systemd tests are meaningless over remote
+ok 433 podman auto-update - pod # skip systemd tests are meaningless over remote
+ok 434 podman-auto-update --authfile # skip systemd tests are meaningless over remote
+ok 435 sdnotify : ignore # skip systemd tests are meaningless over remote
+ok 436 sdnotify : conmon # skip systemd tests are meaningless over remote
+ok 437 sdnotify : container # skip systemd tests are meaningless over remote
+ok 438 sdnotify : healthy # skip systemd tests are meaningless over remote
+ok 439 sdnotify : play kube - no policies # skip systemd tests are meaningless over remote
+ok 440 sdnotify : play kube - with policies # skip systemd tests are meaningless over remote
+ok 441 podman kube play - exit-code propagation # skip systemd tests are meaningless over remote
+ok 442 podman pull - EXTEND_TIMEOUT_USEC # skip systemd tests are meaningless over remote
+ok 443 podman system service # skip systemd tests are meaningless over remote
+ok 444 podman system service - socket activation - no container # skip systemd tests are meaningless over remote
+ok 445 podman system service - socket activation - existing container # skip systemd tests are meaningless over remote
+ok 446 podman system service - socket activation - kill rootless pause # skip systemd tests are meaningless over remote
+ok 447 [271] podman system service - tcp CORS # skip system service tests are meaningless over remote
+ok 448 [271] podman system service - tcp without CORS # skip system service tests are meaningless over remote
+ok 449 [271] podman system service - CORS enabled in logs # skip system service tests are meaningless over remote
+ok 450 [272] podman system connection - basic add / ls / remove
+ok 451 [272] podman system connection - tcp
+ok 452 [272] podman system connection - ssh # skip Not running under ssh-agent
+ok 453 [272] podman-remote: non-default connection
+ok 454 [280] podman update - test all options
+ok 455 [300] podman cli parsing - quoted args - #2574
+ok 456 [300] podman flag error
+ok 457 [300] podman run --env
+ok 458 [300] podman run/exec --env-file
+ok 459 [300] podman run --env with glob
+ok 460 [300] podman create --label-file
+ok 461 [320] podman system df - basic functionality
+ok 462 [320] podman system df --format {{ json . }} functionality
+ok 463 [320] podman system df --format json functionality
+ok 464 [320] podman system df - with active containers and volumes
+ok 465 podman corrupt images - initialize # skip none of these tests run under podman-remote
+ok 466 podman corrupt images - rmi -f <image-id> # skip none of these tests run under podman-remote
+ok 467 podman corrupt images - rmi -f <image-tagged-name> # skip none of these tests run under podman-remote
+ok 468 podman corrupt images - rmi -f -a # skip none of these tests run under podman-remote
+ok 469 podman corrupt images - image prune # skip none of these tests run under podman-remote
+ok 470 podman corrupt images - system reset # skip none of these tests run under podman-remote
+ok 471 podman corrupt images - cleanup # skip none of these tests run under podman-remote
+ok 472 [400] podman container storage is not accessible by unprivileged users # skip [rootless] test meaningless without suid
+ok 473 [400] sensitive mount points are masked without --privileged
+ok 474 [410] podman selinux: confined container # skip selinux not available
+ok 475 [410] podman selinux: container with label=disable # skip selinux not available
+ok 476 [410] podman selinux: privileged container # skip selinux not available
+ok 477 [410] podman selinux: privileged --userns=host container # skip selinux not available
+ok 478 [410] podman selinux: --ipc=host container # skip selinux not available
+ok 479 [410] podman selinux: init container # skip selinux not available
+ok 480 [410] podman selinux: init container with --security-opt type # skip selinux not available
+ok 481 [410] podman selinux: init container with --security-opt level&type # skip selinux not available
+ok 482 [410] podman selinux: init container with --security-opt level # skip selinux not available
+ok 483 [410] podman selinux: pid=host # skip selinux not available
+ok 484 [410] podman selinux: container with overridden range # skip selinux not available
+ok 485 [410] podman selinux: inspect kvm labels # skip selinux not available
+ok 486 [410] podman selinux: inspect multiple labels # skip selinux not available
+ok 487 [410] podman selinux: shared context in (some) namespaces # skip selinux not available
+ok 488 [410] podman selinux: containers in pods share full context # skip selinux not available
+ok 489 [410] podman selinux: containers in --no-infra pods do not share context # skip selinux not available
+ok 490 [410] podman with nonexistent labels # skip selinux not available
+ok 491 [410] podman selinux: check relabel # skip selinux not available
+ok 492 [410] podman selinux nested # skip selinux not available
+ok 493 [410] podman EnableLabeledUsers # skip selinux not available
+ok 494 [410] podman selinux: check unsupported relabel # skip selinux not available
+ok 495 [420] podman run, preserves initial --cgroup-manager # skip podman-remote does not support --cgroup-manager
+ok 496 [450] podman detects correct tty size
+ok 497 [450] podman load - will not read from tty
+ok 498 [450] podman run --tty -i failure with no tty
+ok 499 [450] podman run -l passthrough-tty # skip test does not work with podman-remote
+ok 500 [500] podman network - basic tests
+ok 501 [500] podman networking: port on localhost
+ok 502 [500] podman networking: port with --userns=keep-id for rootless or --uidmap=* for rootful
+ok 503 [500] podman pod manages /etc/hosts correctly
+ok 504 [500] podman run with slirp4ns assigns correct addresses to /etc/hosts
+ok 505 [500] podman run with slirp4ns adds correct dns address to resolv.conf
+ok 506 [500] podman run with slirp4ns assigns correct ip address container
+ok 507 [500] podman network create
+ok 508 [500] podman network reload # skip podman network reload does not have remote support
+ok 509 [500] podman rootless cni adds /usr/sbin to PATH
+ok 510 [500] podman ipv6 in /etc/resolv.conf # skip This test needs an ipv6 nameserver in /etc/resolv.conf
+ok 511 [500] podman network connect/disconnect with port forwarding
+ok 512 [500] podman network after restart
+ok 513 [500] podman run CONTAINERS_CONF_OVERRIDE dns options # skip CONTAINERS_CONF_OVERRIDE redirect does not work on remote
+ok 514 [500] podman run port forward range
+ok 515 [500] podman run CONTAINERS_CONF_OVERRIDE /etc/hosts options # skip CONTAINERS_CONF_OVERRIDE redirect does not work on remote
+ok 516 [500] podman run /etc/* permissions
+ok 517 [500] podman network rm --force bogus
+ok 518 [500] podman network rm --dns-option 
+ok 519 [500] podman rootless netns works when XDG_RUNTIME_DIR includes symlinks
+ok 520 [500] podman inspect list networks 
+ok 521 [500] podman network cleanup --userns + --restart
+ok 522 [500] podman --uts=host must use 'uname -n' for /etc/hostname
+ok 523 [500] podman network inspect running containers
+ok 524 [505] IPv4 default address assignment
+ok 525 [505] IPv4 address assignment
+not ok 526 [505] No IPv4
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  in test file test/system/505-networking-pasta.bats, line 271)
+#   `run_podman run --net=pasta:-6 $IMAGE ip -j -4 address show' failed
+#
+# [07:37:17.149652817] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:37:17.183095720] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:37:17.217603077] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:37:17.250240689] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:37:17.359386346] $ /usr/bin/podman-remote run --net=pasta:-6 quay.io/libpod/testimage:20240123 ip -j -4 address show
+# [07:37:17.425091725] Error: preparing container 6a6f2131eb0b5f5e79b4a8a6971104d22345641b7a260832c81bfd2e5c27ae14 for attach: pasta failed with exit code 1:
+# External interface not usable
+# [07:37:17.428886517] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:37:17.437964580] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:37:17.467872185] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:37:17.506963134] 6a6f2131eb0b5f5e79b4a8a6971104d22345641b7a260832c81bfd2e5c27ae14
+#
+# [07:37:17.509604870] $ /usr/bin/podman-remote network prune --force
+#
+# [07:37:17.539860699] $ /usr/bin/podman-remote volume rm -a -f
+not ok 527 [505] IPv6 default address assignment
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `assert' in file test/system/helpers.bash, line 929,
+#  in test file test/system/505-networking-pasta.bats, line 287)
+#   `assert "${container_address}" = "${host_address}" \' failed
+#
+# [07:37:17.605876593] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:37:17.640730205] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:37:17.673175634] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:37:17.701852082] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:37:17.808567317] $ /usr/bin/podman-remote run --net=pasta quay.io/libpod/testimage:20240123 ip -j -6 address show
+# [07:37:18.195472084] [{"ifindex":1,"ifname":"lo","flags":["LOOPBACK","UP","LOWER_UP"],"mtu":65536,"operstate":"UNKNOWN","txqlen":1000,"addr_info":[{"family":"inet6","local":"::1","prefixlen":128,"scope":"host","protocol":"kernel_lo","valid_life_time":4294967295,"preferred_life_time":4294967295}]},{"ifindex":2,"ifname":"ens4","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":65520,"operstate":"UNKNOWN","txqlen":1000,"addr_info":[{"family":"inet6","local":"fe80::8c55:1fff:fecb:8ac2","prefixlen":64,"scope":"link","tentative":true,"protocol":"kernel_ll","valid_life_time":4294967295,"preferred_life_time":4294967295}]}]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #|     FAIL: Container address not matching host
+# #| expected: = fec0::cb79:3e19:4b91:d5ce
+# #|   actual:   null
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:37:18.233436878] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:37:18.256049885] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:37:18.292417197] d96ce09e095ed11e1f458a92538c4745cc59f76b163bb659b5f9232cac4c5acc
+#
+# [07:37:18.294534896] $ /usr/bin/podman-remote network prune --force
+#
+# [07:37:18.319568835] $ /usr/bin/podman-remote volume rm -a -f
+ok 528 [505] IPv6 address assignment
+ok 529 [505] No IPv6
+ok 530 [505] podman puts pasta IP in /etc/hosts
+ok 531 [505] IPv4 default route
+ok 532 [505] IPv4 default route assignment
+not ok 533 [505] IPv6 default route
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `assert' in file test/system/helpers.bash, line 929,
+#  in test file test/system/505-networking-pasta.bats, line 363)
+#   `assert "${container_route}" = "${host_route}" \' failed
+#
+# [07:37:22.825252349] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:37:22.860222823] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:37:22.893650985] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:37:22.926295587] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:37:23.031233548] $ /usr/bin/podman-remote run --net=pasta quay.io/libpod/testimage:20240123 ip -j -6 route show
+# [07:37:23.392792771] [{"dst":"fe80::/64","dev":"ens4","protocol":"kernel","metric":256,"flags":[],"pref":"medium"}]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #|     FAIL: Container route not matching host
+# #| expected: = fe80::2
+# #|   actual:   null
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:37:23.436717677] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:37:23.464294551] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:37:23.495148458] c244c74ad6f83c5523354d37935ce703e0da2ca5236eca7cc4defadbf0213f94
+#
+# [07:37:23.497141475] $ /usr/bin/podman-remote network prune --force
+#
+# [07:37:23.520183377] $ /usr/bin/podman-remote volume rm -a -f
+ok 534 [505] IPv6 default route assignment
+ok 535 [505] Default MTU
+ok 536 [505] MTU assignment
+ok 537 [505] Loopback interface state
+ok 538 [505] External resolver, IPv4
+ok 539 [505] External resolver, IPv6
+ok 540 [505] Local forwarder, IPv4
+ok 541 [505] Local forwarder, IPv6 # skip Currently unsupported
+ok 542 [505] Single TCP port forwarding, IPv4, tap
+ok 543 [505] Single TCP port forwarding, IPv4, loopback
+ok 544 [505] TCP port range forwarding, IPv4, tap
+ok 545 [505] TCP port range forwarding, IPv4, loopback
+ok 546 [505] Translated TCP port forwarding, IPv4, tap
+ok 547 [505] Translated TCP port forwarding, IPv4, loopback
+ok 548 [505] TCP translated port range forwarding, IPv4, tap
+ok 549 [505] TCP translated port range forwarding, IPv4, loopback
+ok 550 [505] Address-bound TCP port forwarding, IPv4, tap
+ok 551 [505] Address-bound TCP port forwarding, IPv4, loopback
+ok 552 [505] Interface-bound TCP port forwarding, IPv4, tap
+ok 553 [505] Interface-bound TCP port forwarding, IPv4, loopback
+not ok 554 [505] Single TCP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 522)
+#   `pasta_test_do' failed
+#
+# [07:37:50.579180747] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:37:50.618831326] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:37:50.648706292] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:37:50.682849376] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:37:50.854312765] $ /usr/bin/podman-remote run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5527:5527/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5527 5527); do                              socat -u TCP6-LISTEN:${port} STDOUT &                          done; wait
+# [07:37:50.928007167] Error: preparing container 6ef4003ba8fc5855039298abab89c8698b2681aef4f8413a4bac5251f2503b90 for attach: pasta failed with exit code 1:
+# Failed to bind port 5527 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce/5527-5527:5527-5527', exiting
+# [07:37:50.931925231] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:37:50.939822097] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:37:50.966164485] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:37:51.004498037] 6ef4003ba8fc5855039298abab89c8698b2681aef4f8413a4bac5251f2503b90
+#
+# [07:37:51.007013251] $ /usr/bin/podman-remote network prune --force
+#
+# [07:37:51.035870093] $ /usr/bin/podman-remote volume rm -a -f
+not ok 555 [505] Single TCP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 526)
+#   `pasta_test_do' failed
+#
+# [07:37:51.103790056] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:37:51.135660038] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:37:51.168608036] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:37:51.197506109] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:37:51.369026859] $ /usr/bin/podman-remote run --net=pasta -p [::1]:5293:5293/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5293 5293); do                              socat -u TCP6-LISTEN:${port},bind=[::1] STDOUT &                          done; wait
+# [07:37:51.435725936] Error: preparing container bceeab148cd31dd74f3400f3839fcc3fa5be25bdeb364fc8c3da40601828985d for attach: pasta failed with exit code 1:
+# Failed to bind port 5293 (Unknown error -16777216) for option '-t ::1/5293-5293:5293-5293', exiting
+# [07:37:51.439498957] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:37:51.445990075] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:37:51.474362611] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:37:51.510389181] bceeab148cd31dd74f3400f3839fcc3fa5be25bdeb364fc8c3da40601828985d
+#
+# [07:37:51.512610861] $ /usr/bin/podman-remote network prune --force
+#
+# [07:37:51.536413074] $ /usr/bin/podman-remote volume rm -a -f
+not ok 556 [505] TCP port range forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 530)
+#   `pasta_test_do' failed
+#
+# [07:37:51.608845798] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:37:51.642417465] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:37:51.671534110] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:37:51.696734332] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:37:51.971338423] $ /usr/bin/podman-remote run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5689-5691:5689-5691/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5689 5691); do                              socat -u TCP6-LISTEN:${port} STDOUT &                          done; wait
+# [07:37:52.049501266] Error: preparing container bb0cdcf09b812b8c3b739104afc4c5ec593260917a4dbda0163c2b6e5abda6fd for attach: pasta failed with exit code 1:
+# Failed to bind port 5689 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce/5689-5691:5689-5691', exiting
+# [07:37:52.053792205] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:37:52.059879366] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:37:52.090771596] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:37:52.125371257] bb0cdcf09b812b8c3b739104afc4c5ec593260917a4dbda0163c2b6e5abda6fd
+#
+# [07:37:52.127966062] $ /usr/bin/podman-remote network prune --force
+#
+# [07:37:52.159302858] $ /usr/bin/podman-remote volume rm -a -f
+not ok 557 [505] TCP port range forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 534)
+#   `pasta_test_do' failed
+#
+# [07:37:52.234645002] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:37:52.269448575] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:37:52.309317776] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:37:52.341389812] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:37:52.613906125] $ /usr/bin/podman-remote run --net=pasta -p [::1]:5512-5514:5512-5514/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5512 5514); do                              socat -u TCP6-LISTEN:${port},bind=[::1] STDOUT &                          done; wait
+# [07:37:52.677380067] Error: preparing container 8439a625eb497e043f98e3e066731ba096d2aa463677ae233f3b06fae87ce310 for attach: pasta failed with exit code 1:
+# Failed to bind port 5512 (Unknown error -16777216) for option '-t ::1/5512-5514:5512-5514', exiting
+# [07:37:52.680746592] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:37:52.686642093] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:37:52.710580808] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:37:52.745163988] 8439a625eb497e043f98e3e066731ba096d2aa463677ae233f3b06fae87ce310
+#
+# [07:37:52.747128285] $ /usr/bin/podman-remote network prune --force
+#
+# [07:37:52.767892077] $ /usr/bin/podman-remote volume rm -a -f
+not ok 558 [505] Translated TCP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 538)
+#   `pasta_test_do' failed
+#
+# [07:37:52.829874169] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:37:52.861195534] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:37:52.889962346] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:37:52.916411175] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:37:53.073789703] $ /usr/bin/podman-remote run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5523:5524/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5524 5524); do                              socat -u TCP6-LISTEN:${port} STDOUT &                          done; wait
+# [07:37:53.136384025] Error: preparing container 53a7e00f9ba952e81570ce8674f726ced88b81db96b3a35d769de0a094677efa for attach: pasta failed with exit code 1:
+# Failed to bind port 5523 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce/5523-5523:5524-5524', exiting
+# [07:37:53.140082794] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:37:53.145985145] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:37:53.171621453] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:37:53.202985429] 53a7e00f9ba952e81570ce8674f726ced88b81db96b3a35d769de0a094677efa
+#
+# [07:37:53.204933486] $ /usr/bin/podman-remote network prune --force
+#
+# [07:37:53.229244056] $ /usr/bin/podman-remote volume rm -a -f
+not ok 559 [505] Translated TCP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 542)
+#   `pasta_test_do' failed
+#
+# [07:37:53.296084814] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:37:53.325800938] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:37:53.357342106] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:37:53.385771253] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:37:53.539285609] $ /usr/bin/podman-remote run --net=pasta -p [::1]:5727:5728/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5728 5728); do                              socat -u TCP6-LISTEN:${port},bind=[::1] STDOUT &                          done; wait
+# [07:37:53.609640385] Error: preparing container c3b22a1da7cb8d8fb35e020606265dd9d2bbde541fb117481eeb437679fbd3cf for attach: pasta failed with exit code 1:
+# Failed to bind port 5727 (Unknown error -16777216) for option '-t ::1/5727-5727:5728-5728', exiting
+# [07:37:53.613290724] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:37:53.623255240] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:37:53.647911505] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:37:53.685515985] c3b22a1da7cb8d8fb35e020606265dd9d2bbde541fb117481eeb437679fbd3cf
+#
+# [07:37:53.688522846] $ /usr/bin/podman-remote network prune --force
+#
+# [07:37:53.721186590] $ /usr/bin/podman-remote volume rm -a -f
+not ok 560 [505] TCP translated port range forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 546)
+#   `pasta_test_do' failed
+#
+# [07:37:53.794728390] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:37:53.829051705] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:37:53.860917979] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:37:53.892165153] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:37:54.200460412] $ /usr/bin/podman-remote run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5588-5590:5589-5591/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5589 5591); do                              socat -u TCP6-LISTEN:${port} STDOUT &                          done; wait
+# [07:37:54.272433471] Error: preparing container ceb8c957eed601798db86ea0545f2b855e5d3c01e84ac654ef70522022e092eb for attach: pasta failed with exit code 1:
+# Failed to bind port 5588 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce/5588-5590:5589-5591', exiting
+# [07:37:54.276604317] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:37:54.282975894] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:37:54.316520849] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:37:54.356865317] ceb8c957eed601798db86ea0545f2b855e5d3c01e84ac654ef70522022e092eb
+#
+# [07:37:54.359296550] $ /usr/bin/podman-remote network prune --force
+#
+# [07:37:54.385974213] $ /usr/bin/podman-remote volume rm -a -f
+not ok 561 [505] TCP translated port range forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 550)
+#   `pasta_test_do' failed
+#
+# [07:37:54.452132822] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:37:54.491239233] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:37:54.524154521] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:37:54.557679126] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:37:54.856100481] $ /usr/bin/podman-remote run --net=pasta -p [::1]:5405-5407:5406-5408/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5406 5408); do                              socat -u TCP6-LISTEN:${port},bind=[::1] STDOUT &                          done; wait
+# [07:37:54.925309131] Error: preparing container c663c34fb03eae6cf4d26fec706e4c03b8cb4f5ea6a7388ee11df4dd0365c1de for attach: pasta failed with exit code 1:
+# Failed to bind port 5405 (Unknown error -16777216) for option '-t ::1/5405-5407:5406-5408', exiting
+# [07:37:54.929019742] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:37:54.935975056] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:37:54.962429055] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:37:55.008486271] c663c34fb03eae6cf4d26fec706e4c03b8cb4f5ea6a7388ee11df4dd0365c1de
+#
+# [07:37:55.011301220] $ /usr/bin/podman-remote network prune --force
+#
+# [07:37:55.035941125] $ /usr/bin/podman-remote volume rm -a -f
+not ok 562 [505] Address-bound TCP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 554)
+#   `pasta_test_do' failed
+#
+# [07:37:55.104441356] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:37:55.137569415] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:37:55.175906376] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:37:55.208933925] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:37:55.389101863] $ /usr/bin/podman-remote run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5916:5916/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5916 5916); do                              socat -u TCP6-LISTEN:${port} STDOUT &                          done; wait
+# [07:37:55.452078249] Error: preparing container 4f8b59d87296c8bbbc09e21e11ad648ca4a6859e2f62e02cc3d30f1140f78490 for attach: pasta failed with exit code 1:
+# Failed to bind port 5916 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce/5916-5916:5916-5916', exiting
+# [07:37:55.456046993] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:37:55.462801475] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:37:55.490166627] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:37:55.523853904] 4f8b59d87296c8bbbc09e21e11ad648ca4a6859e2f62e02cc3d30f1140f78490
+#
+# [07:37:55.525890722] $ /usr/bin/podman-remote network prune --force
+#
+# [07:37:55.555651126] $ /usr/bin/podman-remote volume rm -a -f
+not ok 563 [505] Address-bound TCP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 558)
+#   `pasta_test_do' failed
+#
+# [07:37:55.632869986] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:37:55.666754556] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:37:55.705946368] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:37:55.738052665] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:37:55.912567976] $ /usr/bin/podman-remote run --net=pasta -p [::1]:5654:5654/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5654 5654); do                              socat -u TCP6-LISTEN:${port},bind=[::1] STDOUT &                          done; wait
+# [07:37:55.978373410] Error: preparing container c9f06323134d1e5b921ea326009daf735ed61dd5ef89f411b8dd41789d67d124 for attach: pasta failed with exit code 1:
+# Failed to bind port 5654 (Unknown error -16777216) for option '-t ::1/5654-5654:5654-5654', exiting
+# [07:37:55.982457916] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:37:55.988910503] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:37:56.018240352] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:37:56.053141306] c9f06323134d1e5b921ea326009daf735ed61dd5ef89f411b8dd41789d67d124
+#
+# [07:37:56.055486018] $ /usr/bin/podman-remote network prune --force
+#
+# [07:37:56.086034613] $ /usr/bin/podman-remote volume rm -a -f
+not ok 564 [505] Interface-bound TCP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 562)
+#   `pasta_test_do' failed
+#
+# [07:37:56.173733165] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:37:56.207573804] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:37:56.254430641] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:37:56.289769852] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:37:56.482672792] $ /usr/bin/podman-remote run --net=pasta:--tcp-ports,fec0::cb79:3e19:4b91:d5ce%ens4/5146:5146 -p  quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5146 5146); do                              socat -u TCP6-LISTEN:${port} STDOUT &                          done; wait
+# [07:37:56.552285048] Error: preparing container 77478203ab00b5ce4f862da9a487ac1629eeb031f4e3308be2b25c2c3851955d for attach: pasta failed with exit code 1:
+# Failed to bind port 5146 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce%ens4/5146:5146', exiting
+# [07:37:56.556279533] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:37:56.562586849] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:37:56.589593115] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:37:56.626835292] 77478203ab00b5ce4f862da9a487ac1629eeb031f4e3308be2b25c2c3851955d
+#
+# [07:37:56.629192583] $ /usr/bin/podman-remote network prune --force
+#
+# [07:37:56.661855828] $ /usr/bin/podman-remote volume rm -a -f
+not ok 565 [505] Interface-bound TCP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 566)
+#   `pasta_test_do' failed
+#
+# [07:37:56.733768184] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:37:56.769548451] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:37:56.812206430] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:37:56.846888492] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:37:57.033890402] $ /usr/bin/podman-remote run --net=pasta:--tcp-ports,::1%lo/5834:5834 -p  quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5834 5834); do                              socat -u TCP6-LISTEN:${port},bind=[::1] STDOUT &                          done; wait
+# [07:37:57.107140798] Error: preparing container 15b8c5e7fec91f82fb670607f8c3d612568632a56ba53d4956eb171293a92d44 for attach: pasta failed with exit code 1:
+# Failed to bind port 5834 (Unknown error -16777216) for option '-t ::1%lo/5834:5834', exiting
+# [07:37:57.111551607] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:37:57.118319509] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:37:57.155950370] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:37:57.195539289] 15b8c5e7fec91f82fb670607f8c3d612568632a56ba53d4956eb171293a92d44
+#
+# [07:37:57.199723536] $ /usr/bin/podman-remote network prune --force
+#
+# [07:37:57.233925530] $ /usr/bin/podman-remote volume rm -a -f
+ok 566 [505] Single UDP port forwarding, IPv4, tap
+ok 567 [505] Single UDP port forwarding, IPv4, loopback
+ok 568 [505] UDP port range forwarding, IPv4, tap
+ok 569 [505] UDP port range forwarding, IPv4, loopback
+ok 570 [505] Translated UDP port forwarding, IPv4, tap
+ok 571 [505] Translated UDP port forwarding, IPv4, loopback
+ok 572 [505] UDP translated port range forwarding, IPv4, tap
+ok 573 [505] UDP translated port range forwarding, IPv4, loopback
+ok 574 [505] Address-bound UDP port forwarding, IPv4, tap
+ok 575 [505] Address-bound UDP port forwarding, IPv4, loopback
+ok 576 [505] Interface-bound UDP port forwarding, IPv4, tap
+ok 577 [505] Interface-bound UDP port forwarding, IPv4, loopback
+not ok 578 [505] Single UDP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 622)
+#   `pasta_test_do' failed
+#
+# [07:38:30.307191803] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:30.335088702] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:30.363673191] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:30.389220387] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:38:30.540219439] $ /usr/bin/podman-remote run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5479:5479/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5479 5479); do                              socat -u UDP6-LISTEN:${port},null-eof STDOUT &                          done; wait
+# [07:38:30.596869089] Error: preparing container 8a8c39a0426a0a3a1777175311572f0abfae1640b10f2efd07c5590e1db8732a for attach: pasta failed with exit code 1:
+# Failed to bind port 5479 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce/5479-5479:5479-5479', exiting
+# [07:38:30.600928704] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:30.608544088] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:30.630483826] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:30.667781123] 8a8c39a0426a0a3a1777175311572f0abfae1640b10f2efd07c5590e1db8732a
+#
+# [07:38:30.669706549] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:30.692241295] $ /usr/bin/podman-remote volume rm -a -f
+not ok 579 [505] Single UDP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 626)
+#   `pasta_test_do' failed
+#
+# [07:38:30.757429611] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:30.786450285] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:30.817040821] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:30.844009937] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:38:30.992212710] $ /usr/bin/podman-remote run --net=pasta -p [::1]:5809:5809/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5809 5809); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof STDOUT &                          done; wait
+# [07:38:31.046185434] Error: preparing container 3e4ddcc84ef33b9792efb87b28a9d7583c73a128351679c1e67694fb37418b73 for attach: pasta failed with exit code 1:
+# Failed to bind port 5809 (Unknown error -16777216) for option '-u ::1/5809-5809:5809-5809', exiting
+# [07:38:31.049979486] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:31.055931446] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:31.080110815] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:31.109905970] 3e4ddcc84ef33b9792efb87b28a9d7583c73a128351679c1e67694fb37418b73
+#
+# [07:38:31.111852217] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:31.133401010] $ /usr/bin/podman-remote volume rm -a -f
+not ok 580 [505] UDP port range forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 630)
+#   `pasta_test_do' failed
+#
+# [07:38:31.194302857] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:31.225114165] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:31.257200371] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:31.287410302] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:38:31.556525488] $ /usr/bin/podman-remote run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5115-5117:5115-5117/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5115 5117); do                              socat -u UDP6-LISTEN:${port},null-eof STDOUT &                          done; wait
+# [07:38:31.617114752] Error: preparing container b6ec40dee7d053ef08bc989a0459d97a1ac316526dce75fde1ee6c0950701ae7 for attach: pasta failed with exit code 1:
+# Failed to bind port 5115 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce/5115-5117:5115-5117', exiting
+# [07:38:31.620668640] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:31.627012846] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:31.650910021] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:31.680340321] b6ec40dee7d053ef08bc989a0459d97a1ac316526dce75fde1ee6c0950701ae7
+#
+# [07:38:31.682273147] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:31.704386578] $ /usr/bin/podman-remote volume rm -a -f
+not ok 581 [505] UDP port range forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 634)
+#   `pasta_test_do' failed
+#
+# [07:38:31.767415104] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:31.796098384] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:31.825303470] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:31.850805218] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:38:32.123579074] $ /usr/bin/podman-remote run --net=pasta -p [::1]:5322-5324:5322-5324/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5322 5324); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof STDOUT &                          done; wait
+# [07:38:32.182928931] Error: preparing container 485fdc1173f061254b42c0e185306615fc74f60ac4cb2813d6676282ae74fd2e for attach: pasta failed with exit code 1:
+# Failed to bind port 5322 (Unknown error -16777216) for option '-u ::1/5322-5324:5322-5324', exiting
+# [07:38:32.186195354] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:32.192927316] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:32.213659358] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:32.248919757] 485fdc1173f061254b42c0e185306615fc74f60ac4cb2813d6676282ae74fd2e
+#
+# [07:38:32.250866863] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:32.272919952] $ /usr/bin/podman-remote volume rm -a -f
+not ok 582 [505] Translated UDP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 638)
+#   `pasta_test_do' failed
+#
+# [07:38:32.336012690] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:32.363404283] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:32.391749457] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:32.419094589] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:38:32.577465501] $ /usr/bin/podman-remote run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5545:5546/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5546 5546); do                              socat -u UDP6-LISTEN:${port},null-eof STDOUT &                          done; wait
+# [07:38:32.639416853] Error: preparing container 89a2b712e7a17310631c91b1cf6b1aeb1dfc640b09f2d0468d98daeec25c6727 for attach: pasta failed with exit code 1:
+# Failed to bind port 5545 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce/5545-5545:5546-5546', exiting
+# [07:38:32.643100133] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:32.650447303] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:32.678209690] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:32.711330810] 89a2b712e7a17310631c91b1cf6b1aeb1dfc640b09f2d0468d98daeec25c6727
+#
+# [07:38:32.713608631] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:32.743479286] $ /usr/bin/podman-remote volume rm -a -f
+not ok 583 [505] Translated UDP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 642)
+#   `pasta_test_do' failed
+#
+# [07:38:32.808272737] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:32.843632078] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:32.879635267] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:32.912869308] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:38:33.077860870] $ /usr/bin/podman-remote run --net=pasta -p [::1]:5342:5343/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5343 5343); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof STDOUT &                          done; wait
+# [07:38:33.140832956] Error: preparing container 0ad4e14e1fe85c423c43a08211bd2f8c1beb318c6bb1164510dd08ee0cc44aca for attach: pasta failed with exit code 1:
+# Failed to bind port 5342 (Unknown error -16777216) for option '-u ::1/5342-5342:5343-5343', exiting
+# [07:38:33.144153440] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:33.150181052] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:33.173301007] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:33.204445800] 0ad4e14e1fe85c423c43a08211bd2f8c1beb318c6bb1164510dd08ee0cc44aca
+#
+# [07:38:33.206335936] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:33.228156533] $ /usr/bin/podman-remote volume rm -a -f
+not ok 584 [505] UDP translated port range forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 646)
+#   `pasta_test_do' failed
+#
+# [07:38:33.291398751] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:33.318393589] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:33.346834234] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:33.372894059] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:38:33.645687945] $ /usr/bin/podman-remote run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5657-5659:5658-5660/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5658 5660); do                              socat -u UDP6-LISTEN:${port},null-eof STDOUT &                          done; wait
+# [07:38:33.705460577] Error: preparing container f92aed5c05079323b88e1683698aee82194e1876bdecb323912b2537129714d2 for attach: pasta failed with exit code 1:
+# Failed to bind port 5657 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce/5657-5659:5658-5660', exiting
+# [07:38:33.709263529] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:33.715247501] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:33.737642175] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:33.769908364] f92aed5c05079323b88e1683698aee82194e1876bdecb323912b2537129714d2
+#
+# [07:38:33.771845950] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:33.795702904] $ /usr/bin/podman-remote volume rm -a -f
+not ok 585 [505] UDP translated port range forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 650)
+#   `pasta_test_do' failed
+#
+# [07:38:33.857735477] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:33.886420657] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:33.915649494] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:33.941363073] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:38:34.207985666] $ /usr/bin/podman-remote run --net=pasta -p [::1]:5467-5469:5468-5470/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5468 5470); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof STDOUT &                          done; wait
+# [07:38:34.272032736] Error: preparing container 87bfe8d9a25842cc34a0dbd5c75dd4c2c9585f4310a9fc18cb5f738a7eab8038 for attach: pasta failed with exit code 1:
+# Failed to bind port 5467 (Unknown error -16777216) for option '-u ::1/5467-5469:5468-5470', exiting
+# [07:38:34.275577875] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:34.281537055] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:34.304005030] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:34.338030833] 87bfe8d9a25842cc34a0dbd5c75dd4c2c9585f4310a9fc18cb5f738a7eab8038
+#
+# [07:38:34.340045351] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:34.366024704] $ /usr/bin/podman-remote volume rm -a -f
+not ok 586 [505] Address-bound UDP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 654)
+#   `pasta_test_do' failed
+#
+# [07:38:34.430872584] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:34.459931379] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:34.491191054] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:34.519394137] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:38:34.687820176] $ /usr/bin/podman-remote run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5966:5966/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5966 5966); do                              socat -u UDP6-LISTEN:${port},null-eof STDOUT &                          done; wait
+# [07:38:34.743816956] Error: preparing container 86032737a199b34606fba645f8097729a61ba2dc7233ea02652c40c69421369c for attach: pasta failed with exit code 1:
+# Failed to bind port 5966 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce/5966-5966:5966-5966', exiting
+# [07:38:34.747127822] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:34.754083636] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:34.776613552] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:34.806834663] 86032737a199b34606fba645f8097729a61ba2dc7233ea02652c40c69421369c
+#
+# [07:38:34.808771499] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:34.830571166] $ /usr/bin/podman-remote volume rm -a -f
+not ok 587 [505] Address-bound UDP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 658)
+#   `pasta_test_do' failed
+#
+# [07:38:34.895597639] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:34.926767772] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:34.961472994] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:34.987240794] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:38:35.142623236] $ /usr/bin/podman-remote run --net=pasta -p [::1]:5467:5467/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5467 5467); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof STDOUT &                          done; wait
+# [07:38:35.201836520] Error: preparing container 1e9d0888ee80f70ba4d1a40a7baef631c9580b4087739aaa1ef882bf3d6725fd for attach: pasta failed with exit code 1:
+# Failed to bind port 5467 (Unknown error -16777216) for option '-u ::1/5467-5467:5467-5467', exiting
+# [07:38:35.205231056] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:35.211265369] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:35.232759680] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:35.264009255] 1e9d0888ee80f70ba4d1a40a7baef631c9580b4087739aaa1ef882bf3d6725fd
+#
+# [07:38:35.265925151] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:35.288181104] $ /usr/bin/podman-remote volume rm -a -f
+not ok 588 [505] Interface-bound UDP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 662)
+#   `pasta_test_do' failed
+#
+# [07:38:35.353715553] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:35.382083029] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:35.412528783] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:35.439204155] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:38:35.598306288] $ /usr/bin/podman-remote run --net=pasta:--udp-ports,fec0::cb79:3e19:4b91:d5ce%ens4/5575:5575 -p  quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5575 5575); do                              socat -u UDP6-LISTEN:${port},null-eof STDOUT &                          done; wait
+# [07:38:35.661269763] Error: preparing container 88d5215a5001d123def809ef79f1fc080786fb9482c95bdfd0ec8ab31c4dfa9a for attach: pasta failed with exit code 1:
+# Failed to bind port 5575 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce%ens4/5575:5575', exiting
+# [07:38:35.665193866] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:35.671218558] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:35.693073725] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:35.724700175] 88d5215a5001d123def809ef79f1fc080786fb9482c95bdfd0ec8ab31c4dfa9a
+#
+# [07:38:35.726991196] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:35.750193081] $ /usr/bin/podman-remote volume rm -a -f
+not ok 589 [505] Interface-bound UDP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 666)
+#   `pasta_test_do' failed
+#
+# [07:38:35.811731157] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:35.839184250] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:35.867496145] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:35.894555012] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:38:36.044513160] $ /usr/bin/podman-remote run --net=pasta:--udp-ports,::1%lo/5106:5106 -p  quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5106 5106); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof STDOUT &                          done; wait
+# [07:38:36.105755812] Error: preparing container 7a5e1ac733fdb866c4ade9031895a3f512d4225b8bb001b4836b7e94f70b9eba for attach: pasta failed with exit code 1:
+# Failed to bind port 5106 (Unknown error -16777216) for option '-u ::1%lo/5106:5106', exiting
+# [07:38:36.109059548] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:36.115419624] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:36.143646517] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:36.176952610] 7a5e1ac733fdb866c4ade9031895a3f512d4225b8bb001b4836b7e94f70b9eba
+#
+# [07:38:36.178893115] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:36.200726783] $ /usr/bin/podman-remote volume rm -a -f
+ok 590 [505] TCP/IPv4 small transfer, tap
+ok 591 [505] TCP/IPv4 small transfer, loopback
+ok 592 [505] TCP/IPv4 large transfer, tap
+ok 593 [505] TCP/IPv4 large transfer, loopback
+not ok 594 [505] TCP/IPv6 small transfer, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 690)
+#   `pasta_test_do' failed
+#
+# [07:38:43.398044058] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:43.437365922] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:43.472687922] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:43.506931398] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 2048 bytes (2.0 kB, 2.0 KiB) copied, 2.607e-05 s, 78.6 MB/s
+#
+# [07:38:43.690689084] $ /usr/bin/podman-remote run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5169:5169/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5169 5169); do                              socat -u TCP6-LISTEN:${port} EXEC:md5sum &                          done; wait
+# [07:38:43.758234872] Error: preparing container 01cd4991d8e4d04c95bae7e89c9d9b265a98c511f88362651672fd2e5eda491f for attach: pasta failed with exit code 1:
+# Failed to bind port 5169 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce/5169-5169:5169-5169', exiting
+# [07:38:43.762074994] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:43.768524661] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:43.798836673] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:43.833751738] 01cd4991d8e4d04c95bae7e89c9d9b265a98c511f88362651672fd2e5eda491f
+#
+# [07:38:43.836142490] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:43.861345014] $ /usr/bin/podman-remote volume rm -a -f
+not ok 595 [505] TCP/IPv6 small transfer, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 694)
+#   `pasta_test_do' failed
+#
+# [07:38:43.935280707] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:43.965475488] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:44.004018361] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:44.036081527] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 2048 bytes (2.0 kB, 2.0 KiB) copied, 2.6721e-05 s, 76.6 MB/s
+#
+# [07:38:44.211160107] $ /usr/bin/podman-remote run --net=pasta -p [::1]:5086:5086/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5086 5086); do                              socat -u TCP6-LISTEN:${port},bind=[::1] EXEC:md5sum &                          done; wait
+# [07:38:44.280178844] Error: preparing container 1c89da6667b25ed6755e4509b6aa0036989ec6821b0871f64de184b18c205999 for attach: pasta failed with exit code 1:
+# Failed to bind port 5086 (Unknown error -16777216) for option '-t ::1/5086-5086:5086-5086', exiting
+# [07:38:44.284456762] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:44.290887960] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:44.317944657] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:44.354105379] 1c89da6667b25ed6755e4509b6aa0036989ec6821b0871f64de184b18c205999
+#
+# [07:38:44.356424530] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:44.382141629] $ /usr/bin/podman-remote volume rm -a -f
+not ok 596 [505] TCP/IPv6 large transfer, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 698)
+#   `pasta_test_do' failed
+#
+# [07:38:44.449943191] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:44.478951465] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:44.509874205] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:44.538001647] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 10485760 bytes (10 MB, 10 MiB) copied, 0.0325168 s, 322 MB/s
+#
+# [07:38:44.767223961] $ /usr/bin/podman-remote run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5154:5154/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5154 5154); do                              socat -u TCP6-LISTEN:${port} EXEC:md5sum &                          done; wait
+# [07:38:44.834353484] Error: preparing container 1dd77fb21732f0aca63c733ee28b51e5cd14a138201454ae05b8bc0cc8dcf183 for attach: pasta failed with exit code 1:
+# Failed to bind port 5154 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce/5154-5154:5154-5154', exiting
+# [07:38:44.839448143] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:44.845735379] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:44.874955675] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:44.909401914] 1dd77fb21732f0aca63c733ee28b51e5cd14a138201454ae05b8bc0cc8dcf183
+#
+# [07:38:44.911714785] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:44.940940502] $ /usr/bin/podman-remote volume rm -a -f
+not ok 597 [505] TCP/IPv6 large transfer, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 702)
+#   `pasta_test_do' failed
+#
+# [07:38:45.036106444] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:45.072047884] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:45.113990063] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:45.158440757] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 10485760 bytes (10 MB, 10 MiB) copied, 0.0335359 s, 313 MB/s
+#
+# [07:38:45.403076651] $ /usr/bin/podman-remote run --net=pasta -p [::1]:5467:5467/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5467 5467); do                              socat -u TCP6-LISTEN:${port},bind=[::1] EXEC:md5sum &                          done; wait
+# [07:38:45.473472778] Error: preparing container a338f42d203e1e70fd2c371b9807b32230186bf4d76c1d82611590503d5650dc for attach: pasta failed with exit code 1:
+# Failed to bind port 5467 (Unknown error -16777216) for option '-t ::1/5467-5467:5467-5467', exiting
+# [07:38:45.477684395] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:45.484005251] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:45.508737887] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:45.546583311] a338f42d203e1e70fd2c371b9807b32230186bf4d76c1d82611590503d5650dc
+#
+# [07:38:45.549479181] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:45.578535126] $ /usr/bin/podman-remote volume rm -a -f
+ok 598 [505] UDP/IPv4 small transfer, tap
+ok 599 [505] UDP/IPv4 small transfer, loopback
+ok 600 [505] UDP/IPv4 large transfer, tap
+ok 601 [505] UDP/IPv4 large transfer, loopback
+not ok 602 [505] UDP/IPv6 small transfer, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 726)
+#   `pasta_test_do' failed
+#
+# [07:38:56.481380035] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:56.509320534] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:56.537885892] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:56.563552231] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 2048 bytes (2.0 kB, 2.0 KiB) copied, 2.9331e-05 s, 69.8 MB/s
+#
+# [07:38:56.725096325] $ /usr/bin/podman-remote run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5270:5270/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5270 5270); do                              socat -u UDP6-LISTEN:${port},null-eof EXEC:md5sum &                          done; wait
+# [07:38:56.786072674] Error: preparing container 145939d5cfa2e7568e9bbc22293ecaa799237b6dcb6ec40607b16b9cc97c0fe8 for attach: pasta failed with exit code 1:
+# Failed to bind port 5270 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce/5270-5270:5270-5270', exiting
+# [07:38:56.789734644] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:56.795654124] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:56.819515409] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:56.849418915] 145939d5cfa2e7568e9bbc22293ecaa799237b6dcb6ec40607b16b9cc97c0fe8
+#
+# [07:38:56.851426963] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:56.874164391] $ /usr/bin/podman-remote volume rm -a -f
+not ok 603 [505] UDP/IPv6 small transfer, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 730)
+#   `pasta_test_do' failed
+#
+# [07:38:56.938823079] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:56.966983202] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:56.999799608] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:57.024705896] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 2048 bytes (2.0 kB, 2.0 KiB) copied, 2.397e-05 s, 85.4 MB/s
+#
+# [07:38:57.179013884] $ /usr/bin/podman-remote run --net=pasta -p [::1]:5315:5315/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5315 5315); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof EXEC:md5sum &                          done; wait
+# [07:38:57.240156124] Error: preparing container 682bc43d0cdcf45dd745c187b21b74859d40a45f0795381c73fcf4a9e75c7c14 for attach: pasta failed with exit code 1:
+# Failed to bind port 5315 (Unknown error -16777216) for option '-u ::1/5315-5315:5315-5315', exiting
+# [07:38:57.243434929] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:57.249252388] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:57.271576992] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:57.302257989] 682bc43d0cdcf45dd745c187b21b74859d40a45f0795381c73fcf4a9e75c7c14
+#
+# [07:38:57.304212884] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:57.325408013] $ /usr/bin/podman-remote volume rm -a -f
+not ok 604 [505] UDP/IPv6 large transfer, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 734)
+#   `pasta_test_do' failed
+#
+# [07:38:57.387835740] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:57.417996091] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:57.448243672] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:57.475295299] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 53248 bytes (53 kB, 52 KiB) copied, 0.000227403 s, 234 MB/s
+#
+# [07:38:57.638256593] $ /usr/bin/podman-remote run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5333:5333/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5333 5333); do                              socat -u UDP6-LISTEN:${port},null-eof EXEC:md5sum &                          done; wait
+# [07:38:57.698652834] Error: preparing container b55e50ee24d0b859ca2547e5997b6615e9f97939d6d1948efefd50ce126205e9 for attach: pasta failed with exit code 1:
+# Failed to bind port 5333 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce/5333-5333:5333-5333', exiting
+# [07:38:57.702040480] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:57.708250365] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:57.740218759] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:57.772559868] b55e50ee24d0b859ca2547e5997b6615e9f97939d6d1948efefd50ce126205e9
+#
+# [07:38:57.774687927] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:57.800330136] $ /usr/bin/podman-remote volume rm -a -f
+not ok 605 [505] UDP/IPv6 large transfer, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 738)
+#   `pasta_test_do' failed
+#
+# [07:38:57.862853715] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+#
+# [07:38:57.889376785] $ /usr/bin/podman-remote ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:38:57.917508468] $ /usr/bin/podman-remote images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:38:57.943928697] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 53248 bytes (53 kB, 52 KiB) copied, 0.000194272 s, 274 MB/s
+#
+# [07:38:58.099213347] $ /usr/bin/podman-remote run --net=pasta -p [::1]:5874:5874/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5874 5874); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof EXEC:md5sum &                          done; wait
+# [07:38:58.157484839] Error: preparing container 7cf1181c04701cd5ddbc577341d0144aa8f786615b717ba27e1579715ae479e0 for attach: pasta failed with exit code 1:
+# Failed to bind port 5874 (Unknown error -16777216) for option '-u ::1/5874-5874:5874-5874', exiting
+# [07:38:58.160819524] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:38:58.166555862] $ /usr/bin/podman-remote pod rm -t 0 --all --force --ignore
+#
+# [07:38:58.187612008] $ /usr/bin/podman-remote rm -t 0 --all --force --ignore
+# [07:38:58.216697823] 7cf1181c04701cd5ddbc577341d0144aa8f786615b717ba27e1579715ae479e0
+#
+# [07:38:58.218644550] $ /usr/bin/podman-remote network prune --force
+#
+# [07:38:58.238652441] $ /usr/bin/podman-remote volume rm -a -f
+ok 606 [505] pasta(1) quits when the namespace is gone
+ok 607 [505] Unsupported protocol in port forwarding
+ok 608 [505] Use options from containers.conf # skip [remote] containers.conf must be set for the server
+ok 609 [505] Podman unshare --rootless-netns with Pasta # skip [remote] unshare is local-only
+ok 610 podman checkpoint - basic test # skip checkpoint does not work rootless
+ok 611 podman checkpoint/restore print IDs or raw input # skip checkpoint does not work rootless
+ok 612 podman checkpoint --export, with volumes # skip checkpoint does not work rootless
+ok 613 podman checkpoint --file-locks # skip checkpoint does not work rootless
+ok 614 podman checkpoint/restore ip and mac handling # skip checkpoint does not work rootless
+ok 615 podman checkpoint/restore the latest container # skip checkpoint does not work rootless
+ok 616 [550] rootless podman only ever uses single pause process # skip --tmpdir not supported via remote
+ok 617 [550] rootless reexec with sig-proxy # skip system migrate not supported via remote
+ok 618 [550] rootless reexec with sig-proxy when rejoining userns from container # skip unshare not supported via remote
+ok 619 [600] podman shell completion test
+ok 620 [600] podman shell completion for paths in container/image # skip mounting via remote does not work
+ok 621 [610] check Go template formatting # skip test does not work with podman-remote
+ok 622 [620] options that cannot be set together # skip not much point testing remote, and container-cleanup fails anyway
+ok 623 [700] podman kube with stdin
+ok 624 [700] podman play
+ok 625 [700] podman play --service-container # skip [remote] service containers only work locally
+ok 626 [700] podman kube --network
+ok 627 [700] podman kube play read-only
+ok 628 [700] podman kube play read-only from containers.conf
+ok 629 [700] podman play with user from image
+ok 630 [700] podman play --build --context-dir # skip --build is not supported in context remote
+ok 631 [700] podman kube play --replace external storage
+ok 632 [700] podman kube --annotation
+ok 633 [700] podman play Yaml deprecated --no-trunc annotation
+ok 634 [700] podman kube play - default log driver
+ok 635 [700] podman kube play - URL
+ok 636 [700] podman play with init container
+ok 637 [700] podman kube play - hostport
+ok 638 [700] podman kube play - multi-pod YAML # skip [remote] service containers only work locally
+ok 639 [700] podman kube generate filetype
+ok 640 [700] podman kube play --wait with siginterrupt
+ok 641 [700] podman kube play --wait - wait for pod to exit
+ok 642 [700] podman kube play with configmaps
+ok 643 [700] podman kube with --authfile=/tmp/bogus
+ok 644 [700] podman kube play with umask from containers.conf # skip remote does not support CONTAINERS_CONF*
+ok 645 [700] podman kube generate tmpfs on /tmp
+ok 646 [700] podman kube play - pull policy # skip [remote] pull debug logs only work locally
+ok 647 [700] podman kube play healthcheck should wait initialDelaySeconds before updating status (healthy)
+ok 648 [700] podman kube play healthcheck should wait initialDelaySeconds before updating status (unhealthy)
+ok 649 [700] podman play --build private registry # skip --build is not supported in context remote
+ok 650 [710] podman kube generate - usage message
+ok 651 [710] podman kube generate - container
+ok 652 [710] podman kube generate unmasked
+ok 653 [710] podman kube generate - pod
+ok 654 [710] podman kube generate - deployment # skip [remote] containersconf needs to be set on server side
+ok 655 [750] podman image trust set # skip [remote] trust only works locally
+ok 656 [800] podman CONTAINERS_CONF - CONTAINERS_CONF in conmon # skip can't check conmon environment over remote
+ok 657 [800] podman CONTAINERS_CONF - override runtime name # skip Can't set CONTAINERS_CONF over remote
+ok 658 [800] podman --module - absolute path # skip --module is not supported for remote clients
+ok 659 [800] podman --module - append arrays # skip --module is not supported for remote clients
+ok 660 [800] podman --module - XDG_CONFIG_HOME # skip --module is not supported for remote clients
+ok 661 [800] podman --module - command-line completion # skip --module is not supported for remote clients
+ok 662 [800] podman --module - supported fields # skip --module is not supported for remote clients
+ok 663 [800] podman push CONTAINERS_CONF # skip containers.conf does not effect client side of --remote
+ok 664 [850] podman compose - smoke tests
+ok 665 [900] podman --ssh test # skip FIXME: this is not an actual test of anything
+ok 666 [950] podman preexec hook # skip test requires sudo
+ok 667 [999] podman database backend has not changed

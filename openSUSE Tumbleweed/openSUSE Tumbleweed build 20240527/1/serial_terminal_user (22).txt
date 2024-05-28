@@ -1,0 +1,7 @@
+
+Welcome to openSUSE Tumbleweed 20240527 - Kernel 6.9.1-1-default (hvc1).
+
+ens4: 10.0.2.15 fec0::9705:f10:24cb:c477
+
+
+susetest login: 

@@ -1,0 +1,55 @@
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: ens4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 52:54:00:12:34:56 brd ff:ff:ff:ff:ff:ff
+    altname enp0s4
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic ens4
+       valid_lft 86311sec preferred_lft 86311sec
+    inet6 fec0::6aa4:af5:dbba:edf3/64 scope site temporary dynamic 
+       valid_lft 86314sec preferred_lft 14314sec
+    inet6 fec0::5054:ff:fe12:3456/64 scope site dynamic mngtmpaddr noprefixroute 
+       valid_lft 86314sec preferred_lft 14314sec
+    inet6 fe80::5054:ff:fe12:3456/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: podman0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether ce:55:21:8d:60:e5 brd ff:ff:ff:ff:ff:ff
+    inet 10.88.0.1/16 brd 10.88.255.255 scope global podman0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::cc55:21ff:fe8d:60e5/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+4: veth0@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master podman0 state UP group default qlen 1000
+    link/ether 26:71:8d:20:33:38 brd ff:ff:ff:ff:ff:ff link-netns netns-43230fbb-90d0-5a84-0a5c-e9a20ebbf0da
+    inet6 fe80::2471:8dff:fe20:3338/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+5: veth1@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master podman0 state UP group default qlen 1000
+    link/ether 42:85:7f:6d:00:88 brd ff:ff:ff:ff:ff:ff link-netns netns-586d80c1-a58a-3373-dfc5-3e472bf5d6ff
+    inet6 fe80::7c19:fcff:fe47:ee4/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+7: podman1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 22:c9:92:75:01:ac brd ff:ff:ff:ff:ff:ff
+    inet 10.89.0.1/24 brd 10.89.0.255 scope global podman1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::20c9:92ff:fe75:1ac/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+8: veth3@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master podman1 state UP group default qlen 1000
+    link/ether 4e:75:5c:0c:8e:bd brd ff:ff:ff:ff:ff:ff link-netns netns-43230fbb-90d0-5a84-0a5c-e9a20ebbf0da
+    inet6 fe80::7896:14ff:fe7d:9135/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+12: podman2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 62:e0:92:d0:a0:e3 brd ff:ff:ff:ff:ff:ff
+    inet 10.89.1.1/24 brd 10.89.1.255 scope global podman2
+       valid_lft forever preferred_lft forever
+    inet6 fe80::60e0:92ff:fed0:a0e3/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+13: veth2@if4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master podman2 state UP group default qlen 1000
+    link/ether 4a:cc:ad:01:12:e3 brd ff:ff:ff:ff:ff:ff link-netns netns-19662084-33ac-d6ee-e1a4-0c6214d8de49
+    inet6 fe80::6c72:1ff:fe77:5ab8/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+14: veth4@if5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master podman0 state UP group default qlen 1000
+    link/ether 5a:83:96:4c:be:a5 brd ff:ff:ff:ff:ff:ff link-netns netns-19662084-33ac-d6ee-e1a4-0c6214d8de49
+    inet6 fe80::ecba:12ff:fe38:3981/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever

@@ -1,0 +1,2559 @@
+bats-user-local.tap ..
+--------------------------------------------------
+$ bats  test/system
+1..640
+ok 1 [001] podman version emits reasonable output
+# Arch:amd64 OS:opensuse-tumbleweed20240527 Runtime:crun Rootless:true Events:journald Logdriver:journald Cgroups:v2+systemd Net:netavark DB:sqlite Store:overlay
+ok 2 [001] podman info
+ok 3 [001] podman --context emits reasonable output # skip only applicable on podman-remote
+ok 4 [001] podman can pull an image
+ok 5 [001] podman-remote : really is remote, works as --remote option # skip only applicable on podman-remote
+ok 6 [001] podman-remote: defaults
+ok 7 [001] podman-remote: check for command usage message without a running endpoint
+ok 8 [001] timeout # skip define $PODMAN_RUN_TIMEOUT_TEST to enable this test
+ok 9 [001] jq is installed and produces reasonable output
+ok 10 [001] podman --log-level recognizes log levels
+ok 11 [001] podman --noout properly suppresses output
+ok 12 [001] podman --noout is actually writing to /dev/null
+ok 13 [001] podman version --out writes matching version to a json
+ok 14 [001] podman - shutdown engines
+ok 15 [005] podman info - basic test
+ok 16 [005] podman info - json
+ok 17 [005] podman info - confirm desired runtime # skip CI_DESIRED_RUNTIME is unset--OK, because we're not in Cirrus
+ok 18 [005] podman info - confirm desired network backend
+ok 19 [005] podman info - confirm desired database # skip CI_DESIRED_DATABASE is unset--OK, because we're not in Cirrus
+ok 20 [005] podman info - confirm desired storage driver # skip CI_DESIRED_STORAGE is unset--OK, because we're not in Cirrus
+ok 21 [005] podman info - RHEL8 must use runc # skip only applicable on RHEL, this is openSUSE Tumbleweed
+ok 22 [005] podman info --storage-opt=''  # skip storage opts are required for rootless running
+ok 23 [005] podman info netavark  # skip Netavark testing not requested ($NETWORK_BACKEND='')
+ok 24 [005] podman --root PATH info - basic output
+ok 25 [005] rootless podman with symlinked /home/bernhard
+ok 26 [005] podman --root PATH --volumepath info - basic output
+ok 27 [005] CONTAINERS_CONF_OVERRIDE
+ok 28 [005] podman - BoltDB cannot create new databases
+ok 29 [010] podman images - basic output
+ok 30 [010] podman images - custom formats
+ok 31 [010] podman images - json
+ok 32 [010] podman images - history output
+ok 33 [010] podman images - filter
+ok 34 [010] podman images -a, after pulling by sha 
+ok 35 [010] podman images - table format
+ok 36 [010] podman images - rmi -af removes all containers and pods
+ok 37 [010] podman images - rmi -f can remove infra images
+ok 38 [010] podman rmi --ignore
+ok 39 [010] podman image rm --force bogus
+ok 40 [010] podman images - commit docker with comment
+ok 41 [010] podman pull image with additional store
+ok 42 [010] podman images with concurrent removal
+ok 43 [011] podman image - sign with no sigfile
+ok 44 [012] podman images - bare manifest list
+ok 45 [012] podman manifest --tls-verify and --authfile
+ok 46 [012] manifest list --add-compression with zstd
+ok 47 [012] manifest list --add --artifact
+ok 48 [015] podman help - basic tests
+ok 49 [020] podman tag/untag
+ok 50 [020] podman untag all
+ok 51 [030] podman run - basic tests
+ok 52 [030] podman run - global runtime option
+ok 53 [030] podman run --memory=0 runtime option
+ok 54 [030] podman run --preserve-fds
+ok 55 [030] podman run --preserve-fd
+ok 56 [030] podman run - uidmapping has no /sys/kernel mounts # skip cannot umount as rootless
+ok 57 [030] podman run --rm
+ok 58 [030] podman run --name
+ok 59 [030] podman run --pull
+ok 60 [030] podman run --rmi
+ok 61 [030] podman run --conmon-pidfile --cidfile
+ok 62 [030] podman run docker-archive
+ok 63 [030] podman run : user namespace preserved root ownership
+ok 64 [030] podman run : add username to /etc/passwd if --userns=keep-id
+ok 65 [030] podman run : --userns=keep-id: passwd file is modifiable
+ok 66 [030] podman run --log-driver
+ok 67 [030] podman run --log-driver journald
+ok 68 [030] podman run --tz
+ok 69 [030] podman run --tz with zoneinfo
+ok 70 [030] podman run : full path to --runtime is preserved
+ok 71 [030] podman --noout run should print output
+ok 72 [030] podman --noout create should print output
+ok 73 [030] podman --out run should save the container id
+ok 74 [030] podman --out create should save the container id
+ok 75 [030] podman run : look up correct image name
+ok 76 [030] podman run on untagged image: make sure that image metadata is set
+ok 77 [030] podman inspect includes image data
+ok 78 [030] Verify /run/.containerenv exist
+ok 79 [030] podman run with --net=host and --port prints warning
+ok 80 [030] podman run - check workdir
+ok 81 [030] podman run - does not truncate or hang with big output
+ok 82 [030] podman run - do not set empty HOME
+ok 83 [030] podman run --timeout - basic test
+ok 84 [030] podman run no /etc/mtab 
+ok 85 [030] podman run --hostuser tests
+ok 86 [030] podman run --device-cgroup-rule tests
+ok 87 [030] podman run closes stdin
+ok 88 [030] podman run defaultenv
+ok 89 [030] podman run - no /etc/hosts # skip Test is too dangerous to run in a non-container environment
+ok 90 [030] podman run image with filesystem permission
+ok 91 [030] podman run with log-opt option
+ok 92 [030] podman run --kernel-memory warning
+ok 93 [030] podman run update /etc/hosts
+ok 94 [030] podman run doesn't override oom-score-adj
+ok 95 [030] rootless podman clamps oom-score-adj if it is lower than the current one
+ok 96 [030] podman top does not use nsenter from image
+ok 97 [030] podman create --security-opt
+ok 98 [030] podman run --device-read-bps # skip cannot use this flag in rootless mode
+ok 99 [030] podman run failed --rm 
+ok 100 [030] podman run --attach stdin prints container ID
+ok 101 [030] podman run --privileged as root with systemd will not mount /dev/tty # skip [rootless] this test only makes sense as root
+ok 102 [030] podman run --privileged as rootless will not mount /dev/tty\d+
+ok 103 [030] podman run --privileged as root with systemd mounts non-vt /dev/tty devices
+ok 104 [030] podman run read-only from containers.conf
+ok 105 [030] podman run ulimit from containers.conf
+ok 106 [030] podman run ulimit with -1
+ok 107 [030] podman run bad --name
+ok 108 [030] podman run --net=host --cgroupns=host with read only cgroupfs
+ok 109 [030] podman run - rootfs with idmapped mounts # skip [rootless] idmapped mounts work only with root for now
+ok 110 [030] podman run --restart=always -- wait
+ok 111 [030] podman run - custom static_dir
+ok 112 [030] podman --authfile=nonexistent-path
+ok 113 [030] podman --syslog and environment passed to conmon
+ok 114 [030] podman create container with conflicting name
+ok 115 [030] podman run - /run must not be world-writable in systemd containers
+ok 116 [030] podman run with mounts.conf missing
+ok 117 [030] podman run - rm pod if container creation failed with -pod new:
+ok 118 [030] podman run - no entrypoint
+ok 119 [032] podman sigproxy test: run
+ok 120 [032] podman sigproxy test: start
+ok 121 [032] podman sigproxy test: attach
+ok 122 [035] podman logs - basic test
+ok 123 [035] podman logs - tail test, k8s-file
+ok 124 [035] podman logs - tail test, journald
+ok 125 [035] podman logs - multi k8s-file
+ok 126 [035] podman logs - multi journald
+ok 127 [035] podman logs restarted - k8s-file
+ok 128 [035] podman logs restarted journald
+ok 129 [035] podman logs - journald log driver requires journald events backend
+ok 130 [035] podman logs - since k8s-file
+ok 131 [035] podman logs - since journald
+ok 132 [035] podman logs - until k8s-file
+ok 133 [035] podman logs - until journald
+ok 134 [035] podman logs - --follow k8s-file
+ok 135 [035] podman logs - --follow journald
+ok 136 [035] podman logs - --since --follow k8s-file
+ok 137 [035] podman logs - --since --follow journald
+ok 138 [035] podman logs - --until --follow k8s-file
+ok 139 [035] podman logs - --until --follow journald
+ok 140 [035] podman logs --tail, k8s-file with partial lines
+ok 141 [037] podman container runlabel test
+ok 142 [040] podman ps - basic tests
+ok 143 [040] podman ps --filter
+ok 144 [040] podman ps --external
+ok 145 [040] podman ps --format label
+ok 146 [040] podman pod ps --format label
+ok 147 [040] podman ps --format PodName
+ok 148 [045] podman start --all - start all containers
+ok 149 [045] podman start --all with incompatible options
+ok 150 [045] podman start --filter - start only containers that match the filter
+ok 151 [045] podman start --filter invalid-restart-policy - return error
+ok 152 [045] podman start --all --filter
+ok 153 [045] podman start print IDs or raw input
+ok 154 [045] podman start again with lower ulimit -u
+ok 155 [050] podman stop - basic test
+ok 156 [050] podman stop --all
+ok 157 [050] podman stop print IDs or raw input
+ok 158 [050] podman stop --ignore
+ok 159 [050] podman stop - can trap signal
+ok 160 [050] podman stop - unlock while waiting for timeout
+ok 161 [050] podman stop -t 1 Generate warning
+ok 162 [050] podman stop --noout
+ok 163 [050] podman stop, with --rm container
+ok 164 [055] podman rm
+ok 165 [055] podman rm - running container, w/o and w/ force
+ok 166 [055] podman rm container from storage
+ok 167 [055] podman rm <-> run --rm race
+ok 168 [055] podman rm --depend
+ok 169 [055] podman rm -f
+ok 170 [055] podman container rm --force bogus
+ok 171 [055] podman container rm doesn't affect stopping containers
+ok 172 [055] podman container rm --force doesn't leave running processes
+ok 173 [060] podman mount - basic test # skip mount does not work rootless
+ok 174 [060] podman image mount # skip too hard to test rootless
+ok 175 [060] podman run --mount ro=false 
+ok 176 [060] podman run --mount image # skip too hard to test rootless
+ok 177 [060] podman run --mount image inspection # skip too hard to test rootless
+ok 178 [060] podman mount containers.conf
+ok 179 [060] podman mount external container - basic test # skip mount does not work rootless
+ok 180 [060] podman volume globs
+ok 181 [060] podman mount noswap memory mounts
+ok 182 [060] podman mount no-dereference
+ok 183 [065] podman cp file from host to container
+ok 184 [065] podman cp file from host to container tmpfs mount
+ok 185 [065] podman cp (-a=true) file from host to container and check ownership
+ok 186 [065] podman cp (-a=false) file from host to container and check ownership
+ok 187 [065] podman cp file from/to host while --pid=host
+ok 188 [065] podman cp file from container to host
+ok 189 [065] podman cp file from container to container
+ok 190 [065] podman cp dir from host to container
+ok 191 [065] podman cp dir from container to host
+ok 192 [065] podman cp dir from container to container
+ok 193 [065] podman cp symlinked directory from container
+ok 194 [065] podman cp file from host to container volume
+ok 195 [065] podman cp file from host to container mount
+ok 196 [065] podman cp * - wildcard copy multiple files from container to host
+ok 197 [065] podman cp - will not recognize symlink pointing into host space
+ok 198 [065] podman cp - will not expand globs in host space (#3829)
+ok 199 [065] podman cp - will not expand wildcard
+ok 200 [065] podman cp into container: weird symlink expansion
+ok 201 [065] podman cp into a subdirectory matching GraphRoot
+ok 202 [065] podman cp from stdin to container
+ok 203 [065] podman cp from container to stdout
+ok 204 [065] podman cp --overwrite file - ctr/ctr
+ok 205 [065] podman cp --overwrite file - ctr/host
+ok 206 [065] podman cp --overwrite file - host/ctr
+ok 207 [065] podman cp - dot notation - host to container
+ok 208 [065] podman cp - dot notation - container to host
+ok 209 [065] podman cp - dot notation - container to container
+ok 210 [070] podman build - basic test
+ok 211 [070] podman buildx - basic test
+ok 212 [070] podman build test -f -
+ok 213 [070] podman build - global runtime flags test
+ok 214 [070] podman build - set runtime
+ok 215 [070] podman build - cache (#3920)
+ok 216 [070] podman build test -f ./relative
+ok 217 [070] podman parallel build should not race
+ok 218 [070] podman build - URLs
+ok 219 [070] podman build - workdir, cmd, env, label
+ok 220 [070] podman build - COPY with ignore
+ok 221 [070] podman build with ignore '*'
+ok 222 [070] podman build with ignore '*' and containerfile outside of build context
+ok 223 [070] podman build - stdin test
+ok 224 [070] podman build - does not gobble stdin that does not belong to it
+ok 225 [070] podman build --layers test
+ok 226 [070] build with copy-from referencing the base image
+ok 227 [070] podman build --pull-never
+ok 228 [070] podman build --logfile test
+ok 229 [070] podman build check_label # skip selinux not available
+ok 230 [070] podman build check_seccomp_ulimits
+ok 231 [070] podman build --authfile bogus test
+ok 232 [070] podman build COPY hardlinks 
+ok 233 [070] podman build -f test
+ok 234 [070] podman build .dockerignore failure test
+ok 235 [070] podman build .containerignore and .dockerignore test
+ok 236 [070] podman build build context ownership
+ok 237 [070] podman build build context is a symlink to a directory
+ok 238 [070] podman build --volumes-from conflict
+ok 239 [070] podman build empty context dir
+ok 240 [070] podman build --file=https
+ok 241 [075] podman exec - basic test
+ok 242 [075] podman exec - leak check
+ok 243 [075] podman exec - cat from stdin
+ok 244 [075] podman exec - with keep-id
+ok 245 [075] podman exec/run - missing output
+ok 246 [075] podman exec --wait
+ok 247 [075] podman run umask
+ok 248 [075] podman exec --tty
+ok 249 [075] podman exec - does not leak session IDs on invalid command
+ok 250 [075] podman exec --preserve-fd
+ok 251 [080] podman pause/unpause
+ok 252 [080] podman unpause --all
+ok 253 [085] podman top - basic tests
+ok 254 [090] events with a filter by label
+ok 255 [090] truncate events
+ok 256 [090] image events
+ok 257 [090] events with disjunctive filters - file
+ok 258 [090] events with disjunctive filters - journald
+ok 259 [090] events with file backend and journald logdriver with --follow failure
+ok 260 [090] events with disjunctive filters - default
+ok 261 [090] events with events_logfile_path in containers.conf
+ok 262 [090] events log-file rotation
+ok 263 [090] events log-file no duplicates
+ok 264 [090] events - labels included in container die
+ok 265 [090] events - backend none should error
+ok 266 [090] events - container inspect data - journald
+ok 267 [090] events - container inspect data - file
+ok 268 [090] events - docker compat
+ok 269 [090] events - volume events
+ok 270 [110] podman history - basic tests
+ok 271 [110] podman history - custom format
+ok 272 [110] podman history - json
+ok 273 [110] podman image history Created
+ok 274 [120] podman load invalid file
+ok 275 [120] podman save to pipe and load
+ok 276 [120] podman image scp transfer # skip cannot sudo to root
+ok 277 [120] podman load - by image ID
+ok 278 [120] podman load - by image name
+ok 279 [120] podman load - from URL
+ok 280 [120] podman load - redirect corrupt payload
+ok 281 [120] podman load - multi-image archive
+ok 282 [120] podman load - multi-image archive with redirect
+ok 283 [120] podman save --oci-accept-uncompressed-layers
+ok 284 [130] podman kill - test signal handling in containers
+ok 285 [130] podman kill - rejects invalid args
+ok 286 [130] podman kill - print IDs or raw input
+ok 287 [130] podman kill - concurrent stop
+ok 288 [130] podman wait - exit codes
+ok 289 [130] podman kill - no restart
+ok 290 [140] podman diff
+ok 291 [140] podman diff with buildah container 
+ok 292 [150] podman login - basic test
+ok 293 [150] podman login - with wrong credentials
+ok 294 [150] podman login - check generated authfile
+ok 295 [150] podman login inconsistent authfiles
+ok 296 [150] podman login - check with --config global option
+ok 297 [150] podman push fail
+ok 298 [150] podman push and search ok with --tls-verify=false
+ok 299 [150] podman push and search ok with --tls-verify=true
+ok 300 [150] podman login - shares credentials with skopeo - default auth file
+ok 301 [150] podman login - shares credentials with skopeo - via envariable
+ok 302 [150] podman login - shares credentials with skopeo - via --authfile
+ok 303 [150] podman login -secret test
+ok 304 [150] podman pull images with retry
+ok 305 [150] podman containers.conf retry
+ok 306 [160] podman run --volumes : basic
+ok 307 [160] podman volume duplicates
+ok 308 [160] podman volume filter --name
+ok 309 [160] podman volume create / run
+ok 310 [160] podman volume rm --force
+ok 311 [160] podman volume: exec/noexec
+ok 312 [160] podman volume, implicit creation with run
+ok 313 [160] podman volume import test
+ok 314 [160] podman volume export to stdout
+ok 315 [160] podman volume user test
+ok 316 [160] podman volume with --userns=keep-id
+ok 317 [160] podman volume prune
+ok 318 [160] podman volume type=bind
+ok 319 [160] podman volume type=tmpfs
+ok 320 [160] podman volume create copyup
+ok 321 [160] podman volume mount
+ok 322 [160] podman --image-volume
+ok 323 [160] podman volume rm --force bogus
+ok 324 [160] podman ps -f
+ok 325 [160] podman run with building volume and selinux file label # skip selinux not available
+ok 326 [160] podman volume create --ignore - do not chown
+ok 327 [170] podman --group-add keep-groups while in a userns # skip chroot is not allowed in rootless mode
+ok 328 [170] podman --group-add keep-groups while not in a userns # skip chroot is not allowed in rootless mode
+ok 329 [170] podman --group-add without keep-groups while in a userns # skip chroot is not allowed in rootless mode
+ok 330 [170] rootful pod with custom ID mapping # skip does not work rootless - rootful feature
+ok 331 [170] podman --remote --group-add keep-groups  # skip this test only meaningful under podman-remote
+ok 332 [170] podman --group-add without keep-groups 
+ok 333 [170] podman --group-add keep-groups plus added groups 
+ok 334 [170] podman userns=auto in config file
+ok 335 [170] podman userns=auto and secrets
+ok 336 [170] podman userns=nomap
+ok 337 [170] podman userns=keep-id
+ok 338 [170] podman userns=keep-id in a pod
+ok 339 [170] podman userns=auto with id mapping
+ok 340 [180] podman run --blkio-weight-device # skip cannot create devices in rootless mode
+ok 341 [190] podman --ipc=host
+ok 342 [190] podman --ipc=none
+ok 343 [190] podman --ipc=private
+ok 344 [190] podman --ipc=shareable
+ok 345 [190] podman --ipc=container@test
+ok 346 [195] podman test all namespaces
+ok 347 [200] podman pod - basic tests
+ok 348 [200] podman pod top - containers in different PID namespaces
+ok 349 [200] podman pod create - custom volumes
+ok 350 [200] podman pod create - custom infra image
+ok 351 [200] podman pod - communicating between pods
+ok 352 [200] podman pod - communicating via /dev/shm 
+ok 353 [200] podman pod create - hashtag AllTheOptions
+ok 354 [200] podman pod create should fail when infra-name is already in use
+ok 355 [200] podman pod create --share
+ok 356 [200] podman pod create --pod new: --hostname
+ok 357 [200] podman rm --force to remove infra container
+ok 358 [200] podman pod create share net
+ok 359 [200] pod exit policies
+ok 360 [200] pod exit policies - play kube
+ok 361 [200] pod resource limits # skip [rootless] resource limits only work with root
+ok 362 [200] podman pod ps doesn't race with pod rm
+ok 363 [200] podman pod rm --force bogus
+ok 364 [200] podman pod create on failure
+ok 365 [200] podman pod create restart tests
+ok 366 [200] podman pod ps --filter
+not ok 367 [200] podman pod cleans cgroup and keeps limits
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `assert' in file test/system/helpers.bash, line 929,
+#  in test file test/system/200-pod.bats, line 750)
+#   `assert "$(< $memory_limit_file)" = "268435456" "Contents of $memory_limit_file"' failed
+#
+# [07:14:30.602763174] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:14:30.659477416] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:14:30.728390215] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:14:30.790931378] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:14:30.923724217] $ /usr/bin/podman pod create --infra=true --memory=256M
+# [07:14:31.194799132] 897a07ba3ba970f66008130b3db31999066bfa146349e57390aa96afce6d8aa0
+#
+# [07:14:31.201426453] $ /usr/bin/podman run -d --pod 897a07ba3ba970f66008130b3db31999066bfa146349e57390aa96afce6d8aa0 quay.io/libpod/testimage:20240123 top -d 2
+# [07:14:31.423911280] c981a27508ad2929acbbb4c476de21e411dbb08c2c8907e519874f9b0f977e09
+#
+# [07:14:31.430486130] $ /usr/bin/podman pod inspect 897a07ba3ba970f66008130b3db31999066bfa146349e57390aa96afce6d8aa0 --format {{.CgroupPath}}
+# [07:14:31.505493754] user.slice/user-1000.slice/user@1000.service/user.slice/user-libpod_pod_897a07ba3ba970f66008130b3db31999066bfa146349e57390aa96afce6d8aa0.slice
+#
+# [07:14:31.519976323] $ /usr/bin/podman pod stop -t 0 897a07ba3ba970f66008130b3db31999066bfa146349e57390aa96afce6d8aa0
+# [07:14:31.703215618] 897a07ba3ba970f66008130b3db31999066bfa146349e57390aa96afce6d8aa0
+#
+# [07:14:31.711587513] $ /usr/bin/podman pod start 897a07ba3ba970f66008130b3db31999066bfa146349e57390aa96afce6d8aa0
+# [07:14:31.891046396] 897a07ba3ba970f66008130b3db31999066bfa146349e57390aa96afce6d8aa0
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #|     FAIL: Contents of /sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/user.slice/user-libpod_pod_897a07ba3ba970f66008130b3db31999066bfa146349e57390aa96afce6d8aa0.slice/memory.max
+# #| expected: = 268435456
+# #|   actual:   max
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#
+# [07:14:31.916184312] $ /usr/bin/podman pod rm -f -t 0 -a
+# [07:14:32.083962944] 897a07ba3ba970f66008130b3db31999066bfa146349e57390aa96afce6d8aa0
+#
+# [07:14:32.087018937] $ /usr/bin/podman rm -f -t 0 -a
+#
+# [07:14:32.176103934] $ /usr/bin/podman rmi --ignore localhost/podman-pause:5.0.3-1715364600
+# [07:14:32.236525817] Untagged: localhost/podman-pause:5.0.3-1715364600
+# Deleted: c73b96d4105136b4f6d5922b4195f2bd4e49031a5e92d0c81e82a05ad6800f45
+# # [teardown]
+#
+# [07:14:32.239337805] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:14:32.303877724] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:14:32.376475615] $ /usr/bin/podman network prune --force
+#
+# [07:14:32.436541983] $ /usr/bin/podman volume rm -a -f
+ok 368 [220] podman healthcheck
+ok 369 [220] podman healthcheck - restart cleans up old state
+ok 370 [220] podman wait --condition={healthy,unhealthy}
+ok 371 [220] podman healthcheck --health-on-failure
+ok 372 [220] podman healthcheck --health-on-failure with interval
+ok 373 [251] podman system service <bad_scheme_uri> returns error
+ok 374 [251] podman system service unix: without two slashes still works
+ok 375 [251] podman-system-service containers survive service stop
+ok 376 [251] podman --host / -H options
+ok 377 [251] podman-system-service --log-level=trace should be able to hijack
+ok 378 [252] quadlet - basic
+ok 379 [252] quadlet conflict names
+ok 380 [252] quadlet - envvar
+ok 381 [252] quadlet - ContainerName
+ok 382 [252] quadlet - labels
+ok 383 [252] quadlet - oneshot
+ok 384 [252] quadlet - volume
+ok 385 [252] quadlet - volume dependency
+ok 386 [252] quadlet - named volume dependency
+ok 387 [252] quadlet - network
+ok 388 [252] quadlet - network dependency
+ok 389 [252] quadlet - named network dependency
+ok 390 [252] quadlet kube - basic
+ok 391 [252] quadlet kube - named network dependency
+ok 392 [252] quadlet - rootfs # skip selinux not available
+ok 393 [252] quadlet - selinux disable # skip selinux not available
+ok 394 [252] quadlet - selinux labels # skip selinux not available
+ok 395 [252] quadlet - secret as environment variable
+ok 396 [252] quadlet - secret as a file
+ok 397 [252] quadlet - volume path using systemd %T specifier
+ok 398 [252] quadlet - tmpfs
+ok 399 [252] quadlet - userns
+ok 400 [252] quadlet - exit-code propagation
+ok 401 [252] quadlet kube - Working Directory
+ok 402 [252] quadlet - image files
+ok 403 [252] quadlet - kube oneshot
+ok 404 [252] quadlet - kube down force
+ok 405 [252] quadlet - image tag
+ok 406 [252] quadlet - pod simple
+ok 407 [252] quadlet - kube build from unavailable image with no tag
+ok 408 [260] sdnotify : ignore
+ok 409 [260] sdnotify : conmon
+ok 410 [260] sdnotify : container
+ok 411 [260] sdnotify : healthy
+ok 412 [260] sdnotify : play kube - no policies
+ok 413 [260] sdnotify : play kube - with policies
+ok 414 [260] podman kube play - exit-code propagation
+ok 415 [260] podman pull - EXTEND_TIMEOUT_USEC
+ok 416 [260] podman system service
+ok 417 [270] podman system service - socket activation - no container
+ok 418 [270] podman system service - socket activation - existing container
+ok 419 [270] podman system service - socket activation - kill rootless pause
+ok 420 [271] podman system service - tcp CORS
+ok 421 [271] podman system service - tcp without CORS
+ok 422 [271] podman system service - CORS enabled in logs
+ok 423 podman system connection - basic add / ls / remove # skip only applicable when running remote
+ok 424 podman system connection - tcp # skip only applicable when running remote
+ok 425 podman system connection - ssh # skip only applicable when running remote
+ok 426 podman-remote: non-default connection # skip only applicable when running remote
+ok 427 [280] podman update - test all options
+ok 428 [300] podman cli parsing - quoted args - #2574
+ok 429 [300] podman flag error
+ok 430 [300] podman run --env
+ok 431 [300] podman run/exec --env-file
+ok 432 [300] podman run --env with glob
+ok 433 [300] podman create --label-file
+ok 434 [320] podman system df - basic functionality
+ok 435 [320] podman system df --format {{ json . }} functionality
+ok 436 [320] podman system df --format json functionality
+ok 437 [320] podman system df - with active containers and volumes
+ok 438 podman corrupt images - initialize
+ok 439 podman corrupt images - rmi -f <image-id>
+ok 440 podman corrupt images - rmi -f <image-tagged-name>
+ok 441 podman corrupt images - rmi -f -a
+ok 442 podman corrupt images - image prune
+ok 443 podman corrupt images - system reset
+ok 444 podman corrupt images - cleanup
+ok 445 [400] podman container storage is not accessible by unprivileged users # skip [rootless] test meaningless without suid
+ok 446 [400] sensitive mount points are masked without --privileged
+ok 447 [410] podman selinux: confined container # skip selinux not available
+ok 448 [410] podman selinux: container with label=disable # skip selinux not available
+ok 449 [410] podman selinux: privileged container # skip selinux not available
+ok 450 [410] podman selinux: privileged --userns=host container # skip selinux not available
+ok 451 [410] podman selinux: --ipc=host container # skip selinux not available
+ok 452 [410] podman selinux: init container # skip selinux not available
+ok 453 [410] podman selinux: init container with --security-opt type # skip selinux not available
+ok 454 [410] podman selinux: init container with --security-opt level&type # skip selinux not available
+ok 455 [410] podman selinux: init container with --security-opt level # skip selinux not available
+ok 456 [410] podman selinux: pid=host # skip selinux not available
+ok 457 [410] podman selinux: container with overridden range # skip selinux not available
+ok 458 [410] podman selinux: inspect kvm labels # skip selinux not available
+ok 459 [410] podman selinux: inspect multiple labels # skip selinux not available
+ok 460 [410] podman selinux: shared context in (some) namespaces # skip selinux not available
+ok 461 [410] podman selinux: containers in pods share full context # skip selinux not available
+ok 462 [410] podman selinux: containers in --no-infra pods do not share context # skip selinux not available
+ok 463 [410] podman with nonexistent labels # skip selinux not available
+ok 464 [410] podman selinux: check relabel # skip selinux not available
+ok 465 [410] podman selinux nested # skip selinux not available
+ok 466 [410] podman EnableLabeledUsers # skip selinux not available
+ok 467 [410] podman selinux: check unsupported relabel # skip selinux not available
+ok 468 [420] podman run, preserves initial --cgroup-manager
+ok 469 [450] podman detects correct tty size
+ok 470 [450] podman load - will not read from tty
+ok 471 [450] podman run --tty -i failure with no tty
+ok 472 [450] podman run -l passthrough-tty
+ok 473 [500] podman network - basic tests
+ok 474 [500] podman networking: port on localhost
+ok 475 [500] podman networking: port with --userns=keep-id for rootless or --uidmap=* for rootful
+ok 476 [500] podman pod manages /etc/hosts correctly
+ok 477 [500] podman run with slirp4ns assigns correct addresses to /etc/hosts
+ok 478 [500] podman run with slirp4ns adds correct dns address to resolv.conf
+ok 479 [500] podman run with slirp4ns assigns correct ip address container
+ok 480 [500] podman network create
+not ok 481 [500] podman network reload
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 445,
+#  in test file test/system/500-networking.bats, line 324)
+#   `run_podman network reload $cid' failed
+#
+# [07:19:04.957729204] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:19:05.017369542] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:19:05.075908925] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:19:05.142878293] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:19:05.324149779] $ /usr/bin/podman run -d --name myweb -p 5863:80 --network podman -v /tmp/podman_bats.FAwece/hello.txt:/var/www/index.txt:Z -w /var/www quay.io/libpod/testimage:20240123 /bin/busybox-extras httpd -f -p 80
+# [07:19:05.619395947] 79e961c7cf49e6a3861143b4b67c7e2f16a9d16d1071a21ebdf1974518834b8f
+#
+# [07:19:05.625984367] $ /usr/bin/podman inspect 79e961c7cf49e6a3861143b4b67c7e2f16a9d16d1071a21ebdf1974518834b8f --format {{(index .NetworkSettings.Networks "podman").IPAddress}}
+# [07:19:05.684303976] 10.88.0.3
+#
+# [07:19:05.690716815] $ /usr/bin/podman inspect 79e961c7cf49e6a3861143b4b67c7e2f16a9d16d1071a21ebdf1974518834b8f --format {{(index .NetworkSettings.Networks "podman").MacAddress}}
+# [07:19:05.773038534] 9e:89:dc:8d:e4:d1
+#
+# [07:19:05.795347019] $ /usr/bin/podman network reload 79e961c7cf49e6a3861143b4b67c7e2f16a9d16d1071a21ebdf1974518834b8f
+# [07:19:06.145532991] time="2024-05-28T07:19:05-04:00" level=error msg="1 error occurred:\n\t* rootless netns: cleanup: 1 error occurred:\n\t* rootless netns: kill network process: permission denied\n\n\n\n"
+# 79e961c7cf49e6a3861143b4b67c7e2f16a9d16d1071a21ebdf1974518834b8f
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: Command succeeded, but issued unexpected warnings
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:19:06.152047030] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:19:06.241019200] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:19:06.532792711] time="2024-05-28T07:19:06-04:00" level=error msg="Unable to clean up network for container 79e961c7cf49e6a3861143b4b67c7e2f16a9d16d1071a21ebdf1974518834b8f: \"1 error occurred:\\n\\t* rootless netns: cleanup: 1 error occurred:\\n\\t* rootless netns: kill network process: permission denied\\n\\n\\n\\n\""
+# 79e961c7cf49e6a3861143b4b67c7e2f16a9d16d1071a21ebdf1974518834b8f
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: Command succeeded, but issued unexpected warnings
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#
+# [07:19:06.534904920] $ /usr/bin/podman network prune --force
+#
+# [07:19:06.576952206] $ /usr/bin/podman volume rm -a -f
+ok 482 [500] podman rootless cni adds /usr/sbin to PATH
+ok 483 [500] podman ipv6 in /etc/resolv.conf # skip This test needs an ipv6 nameserver in /etc/resolv.conf
+not ok 484 [500] podman network connect/disconnect with port forwarding
+# tags: distro-integration
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 445,
+#  in test file test/system/500-networking.bats, line 570)
+#   `run_podman rm -t 0 -f $cid $background_cid' failed
+#
+# [07:19:08.563365072] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:19:08.632910835] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:19:08.696296034] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:19:08.777825212] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:19:08.948220669] $ /usr/bin/podman network create testnet-kc79hT2bHF
+# [07:19:09.015081666] testnet-kc79hT2bHF
+#
+# [07:19:09.027994143] $ /usr/bin/podman network create testnet2-gfKjHPGnUy
+# [07:19:09.085572472] testnet2-gfKjHPGnUy
+#
+# [07:19:09.094256841] $ /usr/bin/podman run -d --network testnet-kc79hT2bHF quay.io/libpod/testimage:20240123 top
+# [07:19:09.392140805] 54c222744fa6729f8639cc242706ba403ddbea6911be473c44a2c2ddfbdacb10
+#
+# [07:19:09.405513528] $ /usr/bin/podman run -d -p 5133:80 --hostname host-fpMeEucj9V --network testnet-kc79hT2bHF -v /tmp/podman_bats.gdH2sq/hello.txt:/var/www/index.txt:Z -w /var/www quay.io/libpod/testimage:20240123 /bin/busybox-extras httpd -f -p 80
+# [07:19:09.619323011] 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4
+#
+# [07:19:09.636949102] $ /usr/bin/podman inspect 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4 --format {{(index .NetworkSettings.Networks "testnet-kc79hT2bHF").IPAddress}}
+# [07:19:09.700077277] 10.89.0.3
+#
+# [07:19:09.706843810] $ /usr/bin/podman inspect 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4 --format {{(index .NetworkSettings.Networks "testnet-kc79hT2bHF").MacAddress}}
+# [07:19:09.771687279] c2:b9:e5:0c:a1:1a
+#
+# [07:19:09.778411262] $ /usr/bin/podman inspect 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4 --format {{(index .NetworkSettings.Networks "testnet-kc79hT2bHF").Aliases}}
+# [07:19:09.840966989] [17f5418948a7 host-fpMeEucj9V]
+#
+# [07:19:09.849641218] $ /usr/bin/podman exec 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4 cat /etc/hosts
+# [07:19:09.993921077] 127.0.0.1	localhost localhost.localdomain
+# ::1	localhost localhost.localdomain ipv6-localhost ipv6-loopback
+# fe00::0	ipv6-localnet
+# ff00::0	ipv6-mcastprefix
+# ff02::1	ipv6-allnodes
+# ff02::2	ipv6-allrouters
+# ff02::3	ipv6-allhosts
+# 10.0.2.15	host.containers.internal host.docker.internal
+# 10.89.0.3	host-fpMeEucj9V quizzical_beaver
+#
+# [07:19:10.007358881] $ /usr/bin/podman network disconnect testnet-kc79hT2bHF 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4
+#
+# [07:19:10.140532656] $ /usr/bin/podman exec 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4 cat /etc/hosts
+# [07:19:10.301312720] 127.0.0.1	localhost localhost.localdomain
+# ::1	localhost localhost.localdomain ipv6-localhost ipv6-loopback
+# fe00::0	ipv6-localnet
+# ff00::0	ipv6-mcastprefix
+# ff02::1	ipv6-allnodes
+# ff02::2	ipv6-allrouters
+# ff02::3	ipv6-allhosts
+# 10.0.2.15	host.containers.internal host.docker.internal
+#
+# [07:19:10.509248722] $ /usr/bin/podman network connect testnet-kc79hT2bHF 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4
+#
+# [07:19:10.701381326] $ /usr/bin/podman inspect 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4 --format {{(index .NetworkSettings.Networks "testnet-kc79hT2bHF").IPAddress}}
+# [07:19:10.764128437] 10.89.0.4
+#
+# [07:19:10.773621087] $ /usr/bin/podman inspect 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4 --format {{(index .NetworkSettings.Networks "testnet-kc79hT2bHF").MacAddress}}
+# [07:19:10.839910746] 92:1b:10:8c:05:b1
+#
+# [07:19:10.849650230] $ /usr/bin/podman exec 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4 cat /etc/hosts
+# [07:19:11.011620840] 127.0.0.1	localhost localhost.localdomain
+# ::1	localhost localhost.localdomain ipv6-localhost ipv6-loopback
+# fe00::0	ipv6-localnet
+# ff00::0	ipv6-mcastprefix
+# ff02::1	ipv6-allnodes
+# ff02::2	ipv6-allrouters
+# ff02::3	ipv6-allhosts
+# 10.0.2.15	host.containers.internal host.docker.internal
+# 10.89.0.4	host-fpMeEucj9V quizzical_beaver
+#
+# [07:19:11.024851521] $ /usr/bin/podman network disconnect testnet-kc79hT2bHF 54c222744fa6729f8639cc242706ba403ddbea6911be473c44a2c2ddfbdacb10
+#
+# [07:19:11.194856383] $ /usr/bin/podman network connect testnet-kc79hT2bHF 54c222744fa6729f8639cc242706ba403ddbea6911be473c44a2c2ddfbdacb10
+#       1 13239 bernhard /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+#       1  3494 bernhard /usr/bin/pasta --config-net --pid /run/user/1000/containers/networks/rootless-netns/rootless-netns-conn.pid --dns-forward 169.254.0.1 -t none -u none -T none -U none --no-map-gw --quiet --netns /run/user/1000/containers/networks/rootless-netns/rootless-netns
+#       1  3556 bernhard /usr/bin/conmon --api-version 1 -c 54c222744fa6729f8639cc242706ba403ddbea6911be473c44a2c2ddfbdacb10 -u 54c222744fa6729f8639cc242706ba403ddbea6911be473c44a2c2ddfbdacb10 -r /usr/bin/crun -b /home/bernhard/.local/share/containers/storage/overlay-containers/54c222744fa6729f8639cc242706ba403ddbea6911be473c44a2c2ddfbdacb10/userdata -p /run/user/1000/containers/overlay-containers/54c222744fa6729f8639cc242706ba403ddbea6911be473c44a2c2ddfbdacb10/userdata/pidfile -n jovial_kepler --exit-dir /run/user/1000/libpod/tmp/exits --persist-dir /run/user/1000/libpod/tmp/persist/54c222744fa6729f8639cc242706ba403ddbea6911be473c44a2c2ddfbdacb10 --full-attach -s -l journald --log-level warning --syslog --runtime-arg --log-format=json --runtime-arg --log --runtime-arg=/run/user/1000/containers/overlay-containers/54c222744fa6729f8639cc242706ba403ddbea6911be473c44a2c2ddfbdacb10/userdata/oci-log --conmon-pidfile /run/user/1000/containers/overlay-containers/54c222744fa6729f8639cc242706ba403ddbea6911be473c44a2c2ddfbdacb10/userdata/conmon.pid --exit-command /usr/bin/podman --exit-command-arg --root --exit-command-arg /home/bernhard/.local/share/containers/storage --exit-command-arg --runroot --exit-command-arg /run/user/1000/containers --exit-command-arg --log-level --exit-command-arg warning --exit-command-arg --cgroup-manager --exit-command-arg systemd --exit-command-arg --tmpdir --exit-command-arg /run/user/1000/libpod/tmp --exit-command-arg --network-config-dir --exit-command-arg  --exit-command-arg --network-backend --exit-command-arg netavark --exit-command-arg --volumepath --exit-command-arg /home/bernhard/.local/share/containers/storage/volumes --exit-command-arg --db-backend --exit-command-arg sqlite --exit-command-arg --transient-store=false --exit-command-arg --runtime --exit-command-arg crun --exit-command-arg --storage-driver --exit-command-arg overlay --exit-command-arg --events-backend --exit-command-arg journald --exit-command-arg container --exit-command-arg cleanup --exit-command-arg 54c222744fa6729f8639cc242706ba403ddbea6911be473c44a2c2ddfbdacb10
+#       1  3637 bernhard /usr/bin/conmon --api-version 1 -c 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4 -u 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4 -r /usr/bin/crun -b /home/bernhard/.local/share/containers/storage/overlay-containers/17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4/userdata -p /run/user/1000/containers/overlay-containers/17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4/userdata/pidfile -n quizzical_beaver --exit-dir /run/user/1000/libpod/tmp/exits --persist-dir /run/user/1000/libpod/tmp/persist/17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4 --full-attach -s -l journald --log-level warning --syslog --runtime-arg --log-format=json --runtime-arg --log --runtime-arg=/run/user/1000/containers/overlay-containers/17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4/userdata/oci-log --conmon-pidfile /run/user/1000/containers/overlay-containers/17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4/userdata/conmon.pid --exit-command /usr/bin/podman --exit-command-arg --root --exit-command-arg /home/bernhard/.local/share/containers/storage --exit-command-arg --runroot --exit-command-arg /run/user/1000/containers --exit-command-arg --log-level --exit-command-arg warning --exit-command-arg --cgroup-manager --exit-command-arg systemd --exit-command-arg --tmpdir --exit-command-arg /run/user/1000/libpod/tmp --exit-command-arg --network-config-dir --exit-command-arg  --exit-command-arg --network-backend --exit-command-arg netavark --exit-command-arg --volumepath --exit-command-arg /home/bernhard/.local/share/containers/storage/volumes --exit-command-arg --db-backend --exit-command-arg sqlite --exit-command-arg --transient-store=false --exit-command-arg --runtime --exit-command-arg crun --exit-command-arg --storage-driver --exit-command-arg overlay --exit-command-arg --events-backend --exit-command-arg journald --exit-command-arg container --exit-command-arg cleanup --exit-command-arg 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4
+#
+# [07:19:11.385801171] $ /usr/bin/podman network connect testnet2-gfKjHPGnUy 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4
+#
+# [07:19:11.556087246] $ /usr/bin/podman inspect 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4 --format {{(index .NetworkSettings.Networks "testnet2-gfKjHPGnUy").Aliases}}
+# [07:19:11.620366567] [17f5418948a7 host-fpMeEucj9V]
+#
+# [07:19:11.641403765] $ /usr/bin/podman network disconnect testnet-kc79hT2bHF 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4
+#
+# [07:19:11.813353364] $ /usr/bin/podman rm -t 0 -f 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4 54c222744fa6729f8639cc242706ba403ddbea6911be473c44a2c2ddfbdacb10
+# [07:19:12.174913340] time="2024-05-28T07:19:12-04:00" level=error msg="Unable to clean up network for container 54c222744fa6729f8639cc242706ba403ddbea6911be473c44a2c2ddfbdacb10: \"1 error occurred:\\n\\t* rootless netns: cleanup: 1 error occurred:\\n\\t* rootless netns: kill network process: permission denied\\n\\n\\n\\n\""
+# 17f5418948a775ae237af5a8d8283984d2ff634cca9a545c178fa276216b41b4
+# 54c222744fa6729f8639cc242706ba403ddbea6911be473c44a2c2ddfbdacb10
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: Command succeeded, but issued unexpected warnings
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:19:12.181490031] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:19:12.245402667] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:19:12.308306870] $ /usr/bin/podman network prune --force
+# [07:19:12.366886452] testnet-kc79hT2bHF
+# testnet2-gfKjHPGnUy
+#
+# [07:19:12.369320786] $ /usr/bin/podman volume rm -a -f
+not ok 485 [500] podman network after restart
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 445,
+#  in test file test/system/500-networking.bats, line 637)
+#   `run_podman 0+w restart -t1 $cid' failed
+#
+# [07:19:12.463330675] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:19:12.531887995] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:19:12.596699474] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:19:12.654628708] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:19:12.816170473] $ /usr/bin/podman network create testnet-QFU4I28Bqn
+# [07:19:12.891821101] testnet-QFU4I28Bqn
+#
+# [07:19:12.899711218] $ /usr/bin/podman run -d --name myweb -p 5150:80 --restart always --network slirp4netns -v /tmp/podman_bats.wlrfwf/hello.txt:/var/www/index.txt:Z -w /var/www quay.io/libpod/testimage:20240123 /bin/busybox-extras httpd -f -p 80
+# [07:19:13.057169987] a4789498661df77664a66cd40a8605769c22500ffbb9dcd5e8ce3f5b179d0f18
+#
+# [07:19:13.063795118] $ /usr/bin/podman container inspect --format {{.State.Pid}} a4789498661df77664a66cd40a8605769c22500ffbb9dcd5e8ce3f5b179d0f18
+# [07:19:13.137682031] 4369
+# /var/tmp/podman-5.0.3/test/system/500-networking.bats: line 607: kill: (4369) - No such process
+#
+# [07:19:13.658362910] $ /usr/bin/podman container inspect --format {{.State.Pid}} a4789498661df77664a66cd40a8605769c22500ffbb9dcd5e8ce3f5b179d0f18
+# [07:19:13.727049961] 4419
+# $ curl --retry 2 --retry-connrefused -s http://127.0.0.1:5150/index.txt
+# nlHR6sNtQskVjAvC1NNT4UnbUJdJ0I
+#
+# [07:19:13.755336650] $ /usr/bin/podman restart -t1 a4789498661df77664a66cd40a8605769c22500ffbb9dcd5e8ce3f5b179d0f18
+# [07:19:14.913523709] time="2024-05-28T07:19:14-04:00" level=warning msg="StopSignal SIGTERM failed to stop container myweb in 1 seconds, resorting to SIGKILL"
+# a4789498661df77664a66cd40a8605769c22500ffbb9dcd5e8ce3f5b179d0f18
+# $ curl --retry 2 --retry-connrefused -s http://127.0.0.1:5150/index.txt
+# nlHR6sNtQskVjAvC1NNT4UnbUJdJ0I
+#
+# [07:19:14.941228639] $ /usr/bin/podman rm -t 0 -f a4789498661df77664a66cd40a8605769c22500ffbb9dcd5e8ce3f5b179d0f18
+# [07:19:15.057093358] a4789498661df77664a66cd40a8605769c22500ffbb9dcd5e8ce3f5b179d0f18
+#
+# [07:19:15.064263406] $ /usr/bin/podman run -d --name myweb -p 5150:80 --restart always --network testnet-QFU4I28Bqn -v /tmp/podman_bats.wlrfwf/hello.txt:/var/www/index.txt:Z -w /var/www quay.io/libpod/testimage:20240123 /bin/busybox-extras httpd -f -p 80
+# [07:19:15.368732361] 6b2874ea98cadab204c5ac68df8b9ba85d3bdc3951f4dbc2f22aa0a374fee31f
+#
+# [07:19:15.374836014] $ /usr/bin/podman container inspect --format {{.State.Pid}} 6b2874ea98cadab204c5ac68df8b9ba85d3bdc3951f4dbc2f22aa0a374fee31f
+# [07:19:15.450409490] 4619
+# /var/tmp/podman-5.0.3/test/system/500-networking.bats: line 607: kill: (4619) - No such process
+#
+# [07:19:15.457315466] $ /usr/bin/podman container inspect --format {{.State.Pid}} 6b2874ea98cadab204c5ac68df8b9ba85d3bdc3951f4dbc2f22aa0a374fee31f
+# [07:19:15.937774433] 4785
+# $ curl --retry 2 --retry-connrefused -s http://127.0.0.1:5150/index.txt
+# nlHR6sNtQskVjAvC1NNT4UnbUJdJ0I
+#
+# [07:19:15.967232867] $ /usr/bin/podman restart -t1 6b2874ea98cadab204c5ac68df8b9ba85d3bdc3951f4dbc2f22aa0a374fee31f
+# [07:19:17.445840940] time="2024-05-28T07:19:17-04:00" level=warning msg="StopSignal SIGTERM failed to stop container myweb in 1 seconds, resorting to SIGKILL"
+# time="2024-05-28T07:19:17-04:00" level=error msg="Unable to clean up network for container 6b2874ea98cadab204c5ac68df8b9ba85d3bdc3951f4dbc2f22aa0a374fee31f: \"1 error occurred:\\n\\t* rootless netns: cleanup: 1 error occurred:\\n\\t* rootless netns: kill network process: permission denied\\n\\n\\n\\n\""
+# 6b2874ea98cadab204c5ac68df8b9ba85d3bdc3951f4dbc2f22aa0a374fee31f
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: Command succeeded, but issued unexpected warnings
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:19:17.452623053] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:19:17.524521719] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:19:17.873060627] time="2024-05-28T07:19:17-04:00" level=error msg="Unable to clean up network for container 6b2874ea98cadab204c5ac68df8b9ba85d3bdc3951f4dbc2f22aa0a374fee31f: \"1 error occurred:\\n\\t* rootless netns: cleanup: 1 error occurred:\\n\\t* rootless netns: kill network process: permission denied\\n\\n\\n\\n\""
+# 6b2874ea98cadab204c5ac68df8b9ba85d3bdc3951f4dbc2f22aa0a374fee31f
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: Command succeeded, but issued unexpected warnings
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#
+# [07:19:17.875898197] $ /usr/bin/podman network prune --force
+# [07:19:17.950249776] testnet-QFU4I28Bqn
+#
+# [07:19:17.952742611] $ /usr/bin/podman volume rm -a -f
+ok 486 [500] podman run CONTAINERS_CONF_OVERRIDE dns options
+not ok 487 [500] podman run port forward range
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `immediate-assertion-failures' in file test/system/helpers.bash, line 242,
+#  from function `basic_teardown' in file test/system/helpers.bash, line 289,
+#  from function `teardown' in test file test/system/helpers.bash, line 299)
+#   `basic_teardown' failed
+#
+# [07:19:20.393571657] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:19:20.482292853] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:19:20.545858415] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:19:20.605153628] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:19:20.823462201] $ /usr/bin/podman run --network bridge -p 5511-5513:5511-5513 -d quay.io/libpod/testimage:20240123 sleep inf
+# [07:19:21.100325537] 174589431d56325a70019751b31c50c183b0064fdf56beeeee0cdb9d6832ac9e
+#
+# [07:19:21.108997306] $ /usr/bin/podman exec -d 174589431d56325a70019751b31c50c183b0064fdf56beeeee0cdb9d6832ac9e nc -l -p 5511 -e /bin/cat
+# [07:19:21.192932407] db3873ae033d858609d27aecfe8566ce6e9eb1122703c61ab0d30ee803c5464c
+#
+# [07:19:22.209743849] $ /usr/bin/podman exec -d 174589431d56325a70019751b31c50c183b0064fdf56beeeee0cdb9d6832ac9e nc -l -p 5512 -e /bin/cat
+# [07:19:22.305910407] f00a5f9a35cc1881cb113d7befd171ac22906acbc6fec3277881dc2b1e94ac48
+#
+# [07:19:23.323120145] $ /usr/bin/podman exec -d 174589431d56325a70019751b31c50c183b0064fdf56beeeee0cdb9d6832ac9e nc -l -p 5513 -e /bin/cat
+# [07:19:23.422545727] f5a061c487aa57997bc92e25c9c029abdbf9628015a889b5549821875776610d
+#
+# [07:19:24.438013094] $ /usr/bin/podman rm -f -t0 174589431d56325a70019751b31c50c183b0064fdf56beeeee0cdb9d6832ac9e
+# [07:19:24.749908167] time="2024-05-28T07:19:24-04:00" level=error msg="Unable to clean up network for container 174589431d56325a70019751b31c50c183b0064fdf56beeeee0cdb9d6832ac9e: \"1 error occurred:\\n\\t* rootless netns: cleanup: 1 error occurred:\\n\\t* rootless netns: kill network process: permission denied\\n\\n\\n\\n\""
+# 174589431d56325a70019751b31c50c183b0064fdf56beeeee0cdb9d6832ac9e
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: Command succeeded, but issued unexpected warnings
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#
+# [07:19:24.845376566] $ /usr/bin/podman run --network slirp4netns:port_handler=slirp4netns -p 5338-5340:5338-5340 -d quay.io/libpod/testimage:20240123 sleep inf
+# [07:19:25.002323578] 49bb522b70f322190d8cfcf83d164ce9950a9fdd615960056e2fd9864c1a8bca
+#
+# [07:19:25.011838558] $ /usr/bin/podman exec -d 49bb522b70f322190d8cfcf83d164ce9950a9fdd615960056e2fd9864c1a8bca nc -l -p 5338 -e /bin/cat
+# [07:19:25.093832923] 4c01e5fa6a58690f8ec2374267619f447065e0d5f9e3be652b8e4b82135f2fe1
+#
+# [07:19:26.115980718] $ /usr/bin/podman exec -d 49bb522b70f322190d8cfcf83d164ce9950a9fdd615960056e2fd9864c1a8bca nc -l -p 5339 -e /bin/cat
+# [07:19:26.201849554] e10a948cc1a3a41a688435583d6a9166f8d6e0142660ea9e3f49f4f326bea707
+#
+# [07:19:27.222778178] $ /usr/bin/podman exec -d 49bb522b70f322190d8cfcf83d164ce9950a9fdd615960056e2fd9864c1a8bca nc -l -p 5340 -e /bin/cat
+# [07:19:27.311910468] 7b91550810942de94d2c249934906dfb0b45deca2e76ae065b313c4bd8e06321
+#
+# [07:19:28.329139487] $ /usr/bin/podman rm -f -t0 49bb522b70f322190d8cfcf83d164ce9950a9fdd615960056e2fd9864c1a8bca
+# [07:19:28.461986685] 49bb522b70f322190d8cfcf83d164ce9950a9fdd615960056e2fd9864c1a8bca
+#
+# [07:19:28.555700118] $ /usr/bin/podman run --network slirp4netns:port_handler=rootlesskit -p 5099-5101:5099-5101 -d quay.io/libpod/testimage:20240123 sleep inf
+# [07:19:28.701580948] 0f97481588e6f0c5de67c2f9bff133473eadb5d4697cd8b93da56ff9845ec550
+#
+# [07:19:28.715689442] $ /usr/bin/podman exec -d 0f97481588e6f0c5de67c2f9bff133473eadb5d4697cd8b93da56ff9845ec550 nc -l -p 5099 -e /bin/cat
+# [07:19:28.807163406] ae8d30f98eda98335ef9a178e686b65cb11b9fe7a996fc59c5b20ad1d453e255
+#
+# [07:19:29.832646712] $ /usr/bin/podman exec -d 0f97481588e6f0c5de67c2f9bff133473eadb5d4697cd8b93da56ff9845ec550 nc -l -p 5100 -e /bin/cat
+# [07:19:29.946622852] 584103a2aed1fc87c6a9b7f2172414429f607d82072be715b2912a5f9d9a3e43
+#
+# [07:19:30.971062194] $ /usr/bin/podman exec -d 0f97481588e6f0c5de67c2f9bff133473eadb5d4697cd8b93da56ff9845ec550 nc -l -p 5101 -e /bin/cat
+# [07:19:31.059142340] 6728f6ab3c726b2e3d75fc477a911f558ae75cfcb365e87702874b187a9418c8
+#
+# [07:19:32.080153699] $ /usr/bin/podman rm -f -t0 0f97481588e6f0c5de67c2f9bff133473eadb5d4697cd8b93da56ff9845ec550
+# [07:19:32.221114958] 0f97481588e6f0c5de67c2f9bff133473eadb5d4697cd8b93da56ff9845ec550
+#
+# [07:19:32.317632428] $ /usr/bin/podman run --network pasta -p 5715-5717:5715-5717 -d quay.io/libpod/testimage:20240123 sleep inf
+# [07:19:32.439649742] 474cc6c624f96588b197d641c5df6313eed569664bd556baab6fa4163f1be9f2
+#
+# [07:19:32.449337204] $ /usr/bin/podman exec -d 474cc6c624f96588b197d641c5df6313eed569664bd556baab6fa4163f1be9f2 nc -l -p 5715 -e /bin/cat
+# [07:19:32.537879109] e3673b7e56f16da0da80f9fe370c9ba682f8fd821db60081739e53028f13bf41
+#
+# [07:19:33.556301012] $ /usr/bin/podman exec -d 474cc6c624f96588b197d641c5df6313eed569664bd556baab6fa4163f1be9f2 nc -l -p 5716 -e /bin/cat
+# [07:19:33.658154229] 014ddc2c532bc6aac75a6ce8ae46e36aaa1684609aa2505bc5bea7ced248a3a4
+#
+# [07:19:34.681199983] $ /usr/bin/podman exec -d 474cc6c624f96588b197d641c5df6313eed569664bd556baab6fa4163f1be9f2 nc -l -p 5717 -e /bin/cat
+# [07:19:34.767967941] 973a86770dafe5617c61af53bbf4fe1cdaa364bd46421939141e2bb05d6ff0c4
+#
+# [07:19:35.788298955] $ /usr/bin/podman rm -f -t0 474cc6c624f96588b197d641c5df6313eed569664bd556baab6fa4163f1be9f2
+# [07:19:35.915646521] 474cc6c624f96588b197d641c5df6313eed569664bd556baab6fa4163f1be9f2
+# # [teardown]
+#
+# [07:19:35.924166588] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:19:35.991625823] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:19:36.060965474] $ /usr/bin/podman network prune --force
+#
+# [07:19:36.150127686] $ /usr/bin/podman volume rm -a -f
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: 1 test assertions failed. Search for 'FAIL:' above this line.
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ok 488 [500] podman run CONTAINERS_CONF_OVERRIDE /etc/hosts options
+ok 489 [500] podman run /etc/* permissions
+ok 490 [500] podman network rm --force bogus
+ok 491 [500] podman network rm --dns-option 
+ok 492 [500] podman rootless netns works when XDG_RUNTIME_DIR includes symlinks
+ok 493 [500] podman inspect list networks 
+ok 494 [500] podman network cleanup --userns + --restart
+ok 495 [500] podman --uts=host must use 'uname -n' for /etc/hostname
+not ok 496 [500] podman network inspect running containers
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 445,
+#  in test file test/system/500-networking.bats, line 1000)
+#   `run_podman rm -f -t0 $cname1 $cname2 $cname3' failed
+#
+# [07:19:49.827353405] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:19:49.885538034] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:19:49.943335276] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:19:49.990316700] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:19:50.150120521] $ /usr/bin/podman network create --subnet 172.8.108.0/24 net-HnX6Mflu3x
+# [07:19:50.210068433] net-HnX6Mflu3x
+#
+# [07:19:50.216740544] $ /usr/bin/podman network inspect --format {{json .Containers}} net-HnX6Mflu3x
+# [07:19:50.281484433] {}
+#
+# [07:19:50.291265597] $ /usr/bin/podman create --name c1-ZcrMzcvn2r --network net-HnX6Mflu3x quay.io/libpod/testimage:20240123 top
+# [07:19:50.365166130] 25290e7fe75a47926599ef28f3c13b140ab17d85c1b67a285ebdba3b5b21e6a7
+#
+# [07:19:50.371746810] $ /usr/bin/podman create --name c2-fnmGWLtgwB --network net-HnX6Mflu3x quay.io/libpod/testimage:20240123 top
+# [07:19:50.444575869] 99eb91da6e03a308449bbd27d654e4d5bef960b42fedd0e837aa96b4816742f5
+#
+# [07:19:50.451316641] $ /usr/bin/podman network inspect --format {{json .Containers}} net-HnX6Mflu3x
+# [07:19:50.521152769] {}
+#
+# [07:19:50.530124742] $ /usr/bin/podman start c1-ZcrMzcvn2r c2-fnmGWLtgwB
+# [07:19:50.883587058] c1-ZcrMzcvn2r
+# c2-fnmGWLtgwB
+#
+# [07:19:50.889409568] $ /usr/bin/podman run -d --name c3-XOzYYXaHjE --network podman quay.io/libpod/testimage:20240123 top
+# [07:19:51.088071031] 2faf2408950d2b84d44133e4ec940c94c5e9cac4a0382b41fa27c4fb3ded3431
+#
+# [07:19:51.094447569] $ /usr/bin/podman network inspect --format {{json (index .Containers "25290e7fe75a47926599ef28f3c13b140ab17d85c1b67a285ebdba3b5b21e6a7")}} net-HnX6Mflu3x
+# [07:19:51.158221234] {"name":"c1-ZcrMzcvn2r","interfaces":{"eth0":{"subnets":[{"ipnet":"172.8.108.2/24","gateway":"172.8.108.1"}],"mac_address":"a2:9b:67:0d:56:18"}}}
+#
+# [07:19:51.169044932] $ /usr/bin/podman network inspect --format {{json (index .Containers "99eb91da6e03a308449bbd27d654e4d5bef960b42fedd0e837aa96b4816742f5")}} net-HnX6Mflu3x
+# [07:19:51.238314202] {"name":"c2-fnmGWLtgwB","interfaces":{"eth0":{"subnets":[{"ipnet":"172.8.108.3/24","gateway":"172.8.108.1"}],"mac_address":"ae:8b:0c:68:3a:67"}}}
+#
+# [07:19:51.248466071] $ /usr/bin/podman network inspect --format {{json .Containers}} net-HnX6Mflu3x
+# [07:19:51.305289370] {"25290e7fe75a47926599ef28f3c13b140ab17d85c1b67a285ebdba3b5b21e6a7":{"name":"c1-ZcrMzcvn2r","interfaces":{"eth0":{"subnets":[{"ipnet":"172.8.108.2/24","gateway":"172.8.108.1"}],"mac_address":"a2:9b:67:0d:56:18"}}},"99eb91da6e03a308449bbd27d654e4d5bef960b42fedd0e837aa96b4816742f5":{"name":"c2-fnmGWLtgwB","interfaces":{"eth0":{"subnets":[{"ipnet":"172.8.108.3/24","gateway":"172.8.108.1"}],"mac_address":"ae:8b:0c:68:3a:67"}}}}
+#
+# [07:19:51.318718794] $ /usr/bin/podman rm -f -t0 c1-ZcrMzcvn2r c2-fnmGWLtgwB c3-XOzYYXaHjE
+# [07:19:51.835066804] time="2024-05-28T07:19:51-04:00" level=error msg="Unable to clean up network for container 25290e7fe75a47926599ef28f3c13b140ab17d85c1b67a285ebdba3b5b21e6a7: \"1 error occurred:\\n\\t* rootless netns: cleanup: 1 error occurred:\\n\\t* rootless netns: kill network process: permission denied\\n\\n\\n\\n\""
+# c2-fnmGWLtgwB
+# c1-ZcrMzcvn2r
+# c3-XOzYYXaHjE
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: Command succeeded, but issued unexpected warnings
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:19:51.841414661] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:19:51.885384104] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:19:51.932684562] $ /usr/bin/podman network prune --force
+# [07:19:51.985239873] net-HnX6Mflu3x
+#
+# [07:19:51.987289151] $ /usr/bin/podman volume rm -a -f
+ok 497 [505] IPv4 default address assignment
+ok 498 [505] IPv4 address assignment
+not ok 499 [505] No IPv4
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  in test file test/system/505-networking-pasta.bats, line 271)
+#   `run_podman run --net=pasta:-6 $IMAGE ip -j -4 address show' failed
+#
+# [07:19:53.977078723] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:19:54.029031816] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:19:54.094215269] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:19:54.161845527] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:19:54.309093236] $ /usr/bin/podman run --net=pasta:-6 quay.io/libpod/testimage:20240123 ip -j -4 address show
+# [07:19:54.404444843] Error: pasta failed with exit code 1:
+# External interface not usable
+# [07:19:54.407592526] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:19:54.413070601] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:19:54.465128415] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:19:54.535724083] 2d3e46715b95c44f079571d811eaa0d4ef543976537a78bead5d442129b862e6
+#
+# [07:19:54.537977494] $ /usr/bin/podman network prune --force
+#
+# [07:19:54.587606805] $ /usr/bin/podman volume rm -a -f
+not ok 500 [505] IPv6 default address assignment
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `assert' in file test/system/helpers.bash, line 929,
+#  in test file test/system/505-networking-pasta.bats, line 287)
+#   `assert "${container_address}" = "${host_address}" \' failed
+#
+# [07:19:54.686923886] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:19:54.742409707] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:19:54.793434326] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:19:54.850436038] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:19:54.977844815] $ /usr/bin/podman run --net=pasta quay.io/libpod/testimage:20240123 ip -j -6 address show
+# [07:19:55.162756150] [{"ifindex":1,"ifname":"lo","flags":["LOOPBACK","UP","LOWER_UP"],"mtu":65536,"operstate":"UNKNOWN","txqlen":1000,"addr_info":[{"family":"inet6","local":"::1","prefixlen":128,"scope":"host","protocol":"kernel_lo","valid_life_time":4294967295,"preferred_life_time":4294967295}]},{"ifindex":2,"ifname":"ens4","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":65520,"operstate":"UNKNOWN","txqlen":1000,"addr_info":[{"family":"inet6","local":"fe80::c4a7:36ff:fe6d:3ba","prefixlen":64,"scope":"link","tentative":true,"protocol":"kernel_ll","valid_life_time":4294967295,"preferred_life_time":4294967295}]}]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #|     FAIL: Container address not matching host
+# #| expected: = fec0::cb79:3e19:4b91:d5ce
+# #|   actual:   null
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:19:55.198688093] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:19:55.250887499] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:19:55.313212193] 45f13ec2cb24bf820551954ea699abd23f374fce190e884d28a5c3bfc557deb0
+#
+# [07:19:55.315320502] $ /usr/bin/podman network prune --force
+#
+# [07:19:55.363431291] $ /usr/bin/podman volume rm -a -f
+ok 501 [505] IPv6 address assignment
+ok 502 [505] No IPv6
+ok 503 [505] podman puts pasta IP in /etc/hosts
+ok 504 [505] IPv4 default route
+ok 505 [505] IPv4 default route assignment
+not ok 506 [505] IPv6 default route
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `assert' in file test/system/helpers.bash, line 929,
+#  in test file test/system/505-networking-pasta.bats, line 363)
+#   `assert "${container_route}" = "${host_route}" \' failed
+#
+# [07:20:00.149208990] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:20:00.195396783] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:20:00.265436194] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:20:00.317367605] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:20:00.444167934] $ /usr/bin/podman run --net=pasta quay.io/libpod/testimage:20240123 ip -j -6 route show
+# [07:20:00.632900142] [{"dst":"fe80::/64","dev":"ens4","protocol":"kernel","metric":256,"flags":[],"pref":"medium"}]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #|     FAIL: Container route not matching host
+# #| expected: = fe80::2
+# #|   actual:   null
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:20:00.669611835] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:20:00.723177770] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:20:00.785396493] 4318989ac2137b352fefd102901e8203777c618d4b934daf51f00c95cdccb313
+#
+# [07:20:00.787355820] $ /usr/bin/podman network prune --force
+#
+# [07:20:00.840486038] $ /usr/bin/podman volume rm -a -f
+ok 507 [505] IPv6 default route assignment
+ok 508 [505] Default MTU
+ok 509 [505] MTU assignment
+ok 510 [505] Loopback interface state
+ok 511 [505] External resolver, IPv4
+ok 512 [505] External resolver, IPv6
+ok 513 [505] Local forwarder, IPv4
+ok 514 [505] Local forwarder, IPv6 # skip Currently unsupported
+ok 515 [505] Single TCP port forwarding, IPv4, tap
+ok 516 [505] Single TCP port forwarding, IPv4, loopback
+ok 517 [505] TCP port range forwarding, IPv4, tap
+ok 518 [505] TCP port range forwarding, IPv4, loopback
+ok 519 [505] Translated TCP port forwarding, IPv4, tap
+ok 520 [505] Translated TCP port forwarding, IPv4, loopback
+ok 521 [505] TCP translated port range forwarding, IPv4, tap
+ok 522 [505] TCP translated port range forwarding, IPv4, loopback
+ok 523 [505] Address-bound TCP port forwarding, IPv4, tap
+ok 524 [505] Address-bound TCP port forwarding, IPv4, loopback
+ok 525 [505] Interface-bound TCP port forwarding, IPv4, tap
+ok 526 [505] Interface-bound TCP port forwarding, IPv4, loopback
+not ok 527 [505] Single TCP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 522)
+#   `pasta_test_do' failed
+#
+# [07:20:29.307099893] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:20:29.372080786] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:20:29.435151211] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:20:29.492437778] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:20:29.670753515] $ /usr/bin/podman run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5178:5178/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5178 5178); do                              socat -u TCP6-LISTEN:${port} STDOUT &                          done; wait
+# [07:20:29.773255212] Error: pasta failed with exit code 1:
+# Failed to bind port 5178 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce/5178-5178:5178-5178', exiting
+# [07:20:29.776852162] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:20:29.783275810] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:20:29.840740738] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:20:29.907216361] 9e85b316192122050e67476a00dc9ac51b7baf9521a93e61aa59915574eba3ec
+#
+# [07:20:29.909805576] $ /usr/bin/podman network prune --force
+#
+# [07:20:29.968777796] $ /usr/bin/podman volume rm -a -f
+not ok 528 [505] Single TCP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 526)
+#   `pasta_test_do' failed
+#
+# [07:20:30.063851950] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:20:30.124966259] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:20:30.175768067] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:20:30.229730058] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:20:30.414989060] $ /usr/bin/podman run --net=pasta -p [::1]:5343:5343/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5343 5343); do                              socat -u TCP6-LISTEN:${port},bind=[::1] STDOUT &                          done; wait
+# [07:20:30.496238766] Error: pasta failed with exit code 1:
+# Failed to bind port 5343 (Unknown error -16777216) for option '-t ::1/5343-5343:5343-5343', exiting
+# [07:20:30.499924736] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:20:30.506038189] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:20:30.553600463] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:20:30.620012594] 7433af324faa14818238ed8fa7a277b33c50968ad4588b85899117afa51f4a46
+#
+# [07:20:30.621950211] $ /usr/bin/podman network prune --force
+#
+# [07:20:30.659623988] $ /usr/bin/podman volume rm -a -f
+not ok 529 [505] TCP port range forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 530)
+#   `pasta_test_do' failed
+#
+# [07:20:30.754128685] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:20:30.808216587] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:20:30.858144412] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:20:30.916121848] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:20:31.220090901] $ /usr/bin/podman run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5888-5890:5888-5890/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5888 5890); do                              socat -u TCP6-LISTEN:${port} STDOUT &                          done; wait
+# [07:20:31.311231341] Error: pasta failed with exit code 1:
+# Failed to bind port 5888 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce/5888-5890:5888-5890', exiting
+# [07:20:31.314592238] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:20:31.320442827] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:20:31.365461246] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:20:31.435463497] 6c09c7d52718328b33999e0ff05cd34dde6d95b0af64773a1237a1e56b3fb0c4
+#
+# [07:20:31.437497764] $ /usr/bin/podman network prune --force
+#
+# [07:20:31.487562212] $ /usr/bin/podman volume rm -a -f
+not ok 530 [505] TCP port range forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 534)
+#   `pasta_test_do' failed
+#
+# [07:20:31.591767502] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:20:31.645890485] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:20:31.698118212] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:20:31.743609436] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:20:32.048233157] $ /usr/bin/podman run --net=pasta -p [::1]:5918-5920:5918-5920/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5918 5920); do                              socat -u TCP6-LISTEN:${port},bind=[::1] STDOUT &                          done; wait
+# [07:20:32.152900814] Error: pasta failed with exit code 1:
+# Failed to bind port 5918 (Unknown error -16777216) for option '-t ::1/5918-5920:5918-5920', exiting
+# [07:20:32.156212529] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:20:32.162083640] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:20:32.233201636] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:20:32.294783391] a19960f777bc03d615ca10220e114b7eb60d9c13bb63b9c186003f4f2cc8c258
+#
+# [07:20:32.296975231] $ /usr/bin/podman network prune --force
+#
+# [07:20:32.358156571] $ /usr/bin/podman volume rm -a -f
+not ok 531 [505] Translated TCP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 538)
+#   `pasta_test_do' failed
+#
+# [07:20:32.458286335] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:20:32.535900691] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:20:32.592956724] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:20:32.648081941] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:20:32.849595956] $ /usr/bin/podman run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5481:5482/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5482 5482); do                              socat -u TCP6-LISTEN:${port} STDOUT &                          done; wait
+# [07:20:32.951642077] Error: pasta failed with exit code 1:
+# Failed to bind port 5481 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce/5481-5481:5482-5482', exiting
+# [07:20:32.955018793] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:20:32.960946145] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:20:33.014589891] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:20:33.080583556] 465c75849881ffa7d68dda96c87d686a76a498278af35cc71746d1735eca0c88
+#
+# [07:20:33.083049470] $ /usr/bin/podman network prune --force
+#
+# [07:20:33.144717676] $ /usr/bin/podman volume rm -a -f
+not ok 532 [505] Translated TCP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 542)
+#   `pasta_test_do' failed
+#
+# [07:20:33.240744965] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:20:33.318009965] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:20:33.382690073] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:20:33.444487191] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:20:33.630946580] $ /usr/bin/podman run --net=pasta -p [::1]:5173:5174/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5174 5174); do                              socat -u TCP6-LISTEN:${port},bind=[::1] STDOUT &                          done; wait
+# [07:20:33.729722686] Error: pasta failed with exit code 1:
+# Failed to bind port 5173 (Unknown error -16777216) for option '-t ::1/5173-5173:5174-5174', exiting
+# [07:20:33.733480508] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:20:33.740553805] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:20:33.792347376] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:20:33.865471630] b296ecc16cf870ad994b9a4e72e96e70b706035121011133e2bbcf7bebd08b73
+#
+# [07:20:33.867837972] $ /usr/bin/podman network prune --force
+#
+# [07:20:33.918289845] $ /usr/bin/podman volume rm -a -f
+not ok 533 [505] TCP translated port range forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 546)
+#   `pasta_test_do' failed
+#
+# [07:20:34.018493059] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:20:34.073092949] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:20:34.130712240] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:20:34.191852979] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:20:34.526325820] $ /usr/bin/podman run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5485-5487:5486-5488/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5486 5488); do                              socat -u TCP6-LISTEN:${port} STDOUT &                          done; wait
+# [07:20:34.628518373] Error: pasta failed with exit code 1:
+# Failed to bind port 5485 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce/5485-5487:5486-5488', exiting
+# [07:20:34.632408896] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:20:34.638834354] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:20:34.704820450] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:20:34.779331963] 5a8843732f0c88d7dbe21eea0fd191b2040f44b092fee6578589d4c8cedfb258
+#
+# [07:20:34.781740146] $ /usr/bin/podman network prune --force
+#
+# [07:20:34.840981269] $ /usr/bin/podman volume rm -a -f
+not ok 534 [505] TCP translated port range forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 550)
+#   `pasta_test_do' failed
+#
+# [07:20:34.930598779] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:20:34.992825573] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:20:35.081476059] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:20:35.148261477] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:20:35.494051573] $ /usr/bin/podman run --net=pasta -p [::1]:5400-5402:5401-5403/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5401 5403); do                              socat -u TCP6-LISTEN:${port},bind=[::1] STDOUT &                          done; wait
+# [07:20:35.614742959] Error: pasta failed with exit code 1:
+# Failed to bind port 5400 (Unknown error -16777216) for option '-t ::1/5400-5402:5401-5403', exiting
+# [07:20:35.618508830] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:20:35.625075390] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:20:35.687754031] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:20:35.761535263] f3366b82c2bea57882c5a1558721424c2b75a0259141829d91540329a1a27795
+#
+# [07:20:35.763876765] $ /usr/bin/podman network prune --force
+#
+# [07:20:35.814398339] $ /usr/bin/podman volume rm -a -f
+not ok 535 [505] Address-bound TCP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 554)
+#   `pasta_test_do' failed
+#
+# [07:20:35.930463422] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:20:35.989652215] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:20:36.057800460] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:20:36.138142563] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:20:36.378670674] $ /usr/bin/podman run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5048:5048/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5048 5048); do                              socat -u TCP6-LISTEN:${port} STDOUT &                          done; wait
+# [07:20:36.483383641] Error: pasta failed with exit code 1:
+# Failed to bind port 5048 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce/5048-5048:5048-5048', exiting
+# [07:20:36.487262375] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:20:36.498641401] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:20:36.553473023] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:20:36.613867833] 14649dc6fa64094704a89abfaa9f382828b1d5068a126a7735bf34400b2cb0d4
+#
+# [07:20:36.616169714] $ /usr/bin/podman network prune --force
+#
+# [07:20:36.671555544] $ /usr/bin/podman volume rm -a -f
+not ok 536 [505] Address-bound TCP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 558)
+#   `pasta_test_do' failed
+#
+# [07:20:36.767122855] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:20:36.823533090] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:20:36.884232554] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:20:36.950432592] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:20:37.147615498] $ /usr/bin/podman run --net=pasta -p [::1]:5258:5258/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5258 5258); do                              socat -u TCP6-LISTEN:${port},bind=[::1] STDOUT &                          done; wait
+# [07:20:37.253718765] Error: pasta failed with exit code 1:
+# Failed to bind port 5258 (Unknown error -16777216) for option '-t ::1/5258-5258:5258-5258', exiting
+# [07:20:37.257800501] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:20:37.264252979] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:20:37.318049428] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:20:37.386391596] 8ddbefc709092b94bfed6c1124b4f0fbc47d4aba8656408f19f1b7031c0bb671
+#
+# [07:20:37.388909290] $ /usr/bin/podman network prune --force
+#
+# [07:20:37.464397866] $ /usr/bin/podman volume rm -a -f
+not ok 537 [505] Interface-bound TCP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 562)
+#   `pasta_test_do' failed
+#
+# [07:20:37.576182381] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:20:37.659866749] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:20:37.712514662] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:20:37.764105180] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:20:37.968980742] $ /usr/bin/podman run --net=pasta:--tcp-ports,fec0::cb79:3e19:4b91:d5ce%ens4/5924:5924 -p  quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5924 5924); do                              socat -u TCP6-LISTEN:${port} STDOUT &                          done; wait
+# [07:20:38.080502932] Error: pasta failed with exit code 1:
+# Failed to bind port 5924 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce%ens4/5924:5924', exiting
+# [07:20:38.084329165] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:20:38.091379332] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:20:38.144871326] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:20:38.218584098] 9860d91601f5f7a3c55ac027a04db16407186fdac4f7e8ddb00032e4a130684f
+#
+# [07:20:38.221041152] $ /usr/bin/podman network prune --force
+#
+# [07:20:38.302555870] $ /usr/bin/podman volume rm -a -f
+not ok 538 [505] Interface-bound TCP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 566)
+#   `pasta_test_do' failed
+#
+# [07:20:38.427247042] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:20:38.493778065] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:20:38.558662756] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:20:38.624824034] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:20:38.836353408] $ /usr/bin/podman run --net=pasta:--tcp-ports,::1%lo/5373:5373 -p  quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5373 5373); do                              socat -u TCP6-LISTEN:${port},bind=[::1] STDOUT &                          done; wait
+# [07:20:38.937761999] Error: pasta failed with exit code 1:
+# Failed to bind port 5373 (Unknown error -16777216) for option '-t ::1%lo/5373:5373', exiting
+# [07:20:38.941792185] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:20:38.948537147] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:20:39.011492291] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:20:39.077741750] 273e59a4da696d4c5308432bf35db48a9ef378f17f201c112544dc2cd621453c
+#
+# [07:20:39.080068732] $ /usr/bin/podman network prune --force
+#
+# [07:20:39.144853622] $ /usr/bin/podman volume rm -a -f
+ok 539 [505] Single UDP port forwarding, IPv4, tap
+ok 540 [505] Single UDP port forwarding, IPv4, loopback
+ok 541 [505] UDP port range forwarding, IPv4, tap
+ok 542 [505] UDP port range forwarding, IPv4, loopback
+ok 543 [505] Translated UDP port forwarding, IPv4, tap
+ok 544 [505] Translated UDP port forwarding, IPv4, loopback
+ok 545 [505] UDP translated port range forwarding, IPv4, tap
+ok 546 [505] UDP translated port range forwarding, IPv4, loopback
+ok 547 [505] Address-bound UDP port forwarding, IPv4, tap
+ok 548 [505] Address-bound UDP port forwarding, IPv4, loopback
+ok 549 [505] Interface-bound UDP port forwarding, IPv4, tap
+ok 550 [505] Interface-bound UDP port forwarding, IPv4, loopback
+not ok 551 [505] Single UDP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 622)
+#   `pasta_test_do' failed
+#
+# [07:21:12.816727353] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:12.875183656] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:12.926502700] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:12.996742694] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:21:13.205743102] $ /usr/bin/podman run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5579:5579/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5579 5579); do                              socat -u UDP6-LISTEN:${port},null-eof STDOUT &                          done; wait
+# [07:21:13.312236025] Error: pasta failed with exit code 1:
+# Failed to bind port 5579 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce/5579-5579:5579-5579', exiting
+# [07:21:13.315612560] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:13.321623333] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:13.370822938] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:13.436164245] 96e20f2ff6da559427adcaff2fe8b17420be8d388c03076598c256b191e2e5aa
+#
+# [07:21:13.438110512] $ /usr/bin/podman network prune --force
+#
+# [07:21:13.493545163] $ /usr/bin/podman volume rm -a -f
+not ok 552 [505] Single UDP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 626)
+#   `pasta_test_do' failed
+#
+# [07:21:13.581086965] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:13.635355710] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:13.691053264] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:13.741642938] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:21:13.921218393] $ /usr/bin/podman run --net=pasta -p [::1]:5508:5508/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5508 5508); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof STDOUT &                          done; wait
+# [07:21:14.011328829] Error: pasta failed with exit code 1:
+# Failed to bind port 5508 (Unknown error -16777216) for option '-u ::1/5508-5508:5508-5508', exiting
+# [07:21:14.014738097] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:14.020645678] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:14.068968351] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:14.132488792] 177811572ba22738ad89e58890a7d8ca25876f50abc4ae1f99fc1cb2bfaacaed
+#
+# [07:21:14.134419989] $ /usr/bin/podman network prune --force
+#
+# [07:21:14.184722589] $ /usr/bin/podman volume rm -a -f
+not ok 553 [505] UDP port range forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 630)
+#   `pasta_test_do' failed
+#
+# [07:21:14.277070057] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:14.351301156] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:14.409073629] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:14.466696490] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:21:14.796414235] $ /usr/bin/podman run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5895-5897:5895-5897/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5895 5897); do                              socat -u UDP6-LISTEN:${port},null-eof STDOUT &                          done; wait
+# [07:21:14.906811030] Error: pasta failed with exit code 1:
+# Failed to bind port 5895 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce/5895-5897:5895-5897', exiting
+# [07:21:14.910681634] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:14.917044071] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:14.971118654] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:15.037572126] 0d5f3ac895a088c052dcd8c6f68ad77f7f78978c140cc5489553756a68f2c220
+#
+# [07:21:15.039946298] $ /usr/bin/podman network prune --force
+#
+# [07:21:15.094479927] $ /usr/bin/podman volume rm -a -f
+not ok 554 [505] UDP port range forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 634)
+#   `pasta_test_do' failed
+#
+# [07:21:15.211950159] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:15.276174840] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:15.342751214] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:15.412010405] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:21:15.755484319] $ /usr/bin/podman run --net=pasta -p [::1]:5120-5122:5120-5122/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5120 5122); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof STDOUT &                          done; wait
+# [07:21:15.865735772] Error: pasta failed with exit code 1:
+# Failed to bind port 5120 (Unknown error -16777216) for option '-u ::1/5120-5122:5120-5122', exiting
+# [07:21:15.870380826] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:15.876714153] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:15.931981471] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:16.003318081] c4e6ea6cd7d3213e0fe00af4a2b766df9e9644c6d74e23278b636ea62a415aa2
+#
+# [07:21:16.005784415] $ /usr/bin/podman network prune --force
+#
+# [07:21:16.068001938] $ /usr/bin/podman volume rm -a -f
+not ok 555 [505] Translated UDP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 638)
+#   `pasta_test_do' failed
+#
+# [07:21:16.176582769] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:16.245365123] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:16.325475062] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:16.381614764] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:21:16.579733263] $ /usr/bin/podman run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5736:5737/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5737 5737); do                              socat -u UDP6-LISTEN:${port},null-eof STDOUT &                          done; wait
+# [07:21:16.676575752] Error: pasta failed with exit code 1:
+# Failed to bind port 5736 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce/5736-5736:5737-5737', exiting
+# [07:21:16.681579530] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:16.688096770] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:16.747248702] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:16.828949853] 4ac5a3ae3b2b106edc8c93f3311dbd3eaa8c1e88da28fda40117cda4b74af7f3
+#
+# [07:21:16.831531648] $ /usr/bin/podman network prune --force
+#
+# [07:21:16.898737540] $ /usr/bin/podman volume rm -a -f
+not ok 556 [505] Translated UDP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 642)
+#   `pasta_test_do' failed
+#
+# [07:21:17.009760775] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:17.069358112] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:17.139337363] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:17.199003322] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:21:17.419913774] $ /usr/bin/podman run --net=pasta -p [::1]:5642:5643/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5643 5643); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof STDOUT &                          done; wait
+# [07:21:17.523465315] Error: pasta failed with exit code 1:
+# Failed to bind port 5642 (Unknown error -16777216) for option '-u ::1/5642-5642:5643-5643', exiting
+# [07:21:17.527727964] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:17.535116316] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:17.584801727] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:17.671053851] 689ab26bf69359fa80b705b48bd6533ec2ef01a293cd0375e7b41c917ce3e636
+#
+# [07:21:17.673409144] $ /usr/bin/podman network prune --force
+#
+# [07:21:17.735093171] $ /usr/bin/podman volume rm -a -f
+not ok 557 [505] UDP translated port range forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 646)
+#   `pasta_test_do' failed
+#
+# [07:21:17.849658813] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:17.926178952] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:17.982626668] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:18.027593494] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:21:18.350373595] $ /usr/bin/podman run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5117-5119:5118-5120/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5118 5120); do                              socat -u UDP6-LISTEN:${port},null-eof STDOUT &                          done; wait
+# [07:21:18.449090290] Error: pasta failed with exit code 1:
+# Failed to bind port 5117 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce/5117-5119:5118-5120', exiting
+# [07:21:18.453117085] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:18.459694246] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:18.514764852] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:18.584829053] 553115d1288b8d7ea1f6916753ba9d9828b71ecbeb56f30c5cbf47195675057f
+#
+# [07:21:18.587908815] $ /usr/bin/podman network prune --force
+#
+# [07:21:18.644958778] $ /usr/bin/podman volume rm -a -f
+not ok 558 [505] UDP translated port range forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 650)
+#   `pasta_test_do' failed
+#
+# [07:21:18.745333437] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:18.802509601] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:18.869604472] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:18.920498180] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:21:19.207164085] $ /usr/bin/podman run --net=pasta -p [::1]:5430-5432:5431-5433/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5431 5433); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof STDOUT &                          done; wait
+# [07:21:19.298476348] Error: pasta failed with exit code 1:
+# Failed to bind port 5430 (Unknown error -16777216) for option '-u ::1/5430-5432:5431-5433', exiting
+# [07:21:19.302018097] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:19.308035109] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:19.356746008] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:19.400189734] 8b948acc16bd77ddadc47364270245bfd80b426c8e5d866846e3953c6ccbd3dc
+#
+# [07:21:19.402145831] $ /usr/bin/podman network prune --force
+#
+# [07:21:19.446486620] $ /usr/bin/podman volume rm -a -f
+not ok 559 [505] Address-bound UDP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 654)
+#   `pasta_test_do' failed
+#
+# [07:21:19.565140478] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:19.624980219] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:19.686716457] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:19.734697165] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:21:19.941970530] $ /usr/bin/podman run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5638:5638/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5638 5638); do                              socat -u UDP6-LISTEN:${port},null-eof STDOUT &                          done; wait
+# [07:21:20.037119797] Error: pasta failed with exit code 1:
+# Failed to bind port 5638 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce/5638-5638:5638-5638', exiting
+# [07:21:20.040422832] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:20.046441984] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:20.097262962] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:20.162618349] 9a37102afa256983702527c5285679f9d9ecc556a28e4e9a27b6259f49fe427d
+#
+# [07:21:20.164569066] $ /usr/bin/podman network prune --force
+#
+# [07:21:20.216542269] $ /usr/bin/podman volume rm -a -f
+not ok 560 [505] Address-bound UDP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 658)
+#   `pasta_test_do' failed
+#
+# [07:21:20.307245024] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:20.362021776] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:20.416937859] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:20.475953190] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:21:20.667571660] $ /usr/bin/podman run --net=pasta -p [::1]:5907:5907/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5907 5907); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof STDOUT &                          done; wait
+# [07:21:20.755854811] Error: pasta failed with exit code 1:
+# Failed to bind port 5907 (Unknown error -16777216) for option '-u ::1/5907-5907:5907-5907', exiting
+# [07:21:20.759555432] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:20.765542685] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:20.817070042] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:20.877028174] d3a07be069d4c74de7adf9037fadf52379436adf9e808b0f3234e35aca2d3b7a
+#
+# [07:21:20.878981261] $ /usr/bin/podman network prune --force
+#
+# [07:21:20.922743502] $ /usr/bin/podman volume rm -a -f
+not ok 561 [505] Interface-bound UDP port forwarding, IPv6, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 662)
+#   `pasta_test_do' failed
+#
+# [07:21:21.027111125] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:21.099675951] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:21.166315325] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:21.222461685] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:21:21.411515550] $ /usr/bin/podman run --net=pasta:--udp-ports,fec0::cb79:3e19:4b91:d5ce%ens4/5843:5843 -p  quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5843 5843); do                              socat -u UDP6-LISTEN:${port},null-eof STDOUT &                          done; wait
+# [07:21:21.498188301] Error: pasta failed with exit code 1:
+# Failed to bind port 5843 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce%ens4/5843:5843', exiting
+# [07:21:21.501546096] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:21.507612130] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:21.557547886] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:21.617245305] b34506008b335f63d122971c08443ada31993d4075d780781c512eae048808f3
+#
+# [07:21:21.619493586] $ /usr/bin/podman network prune --force
+#
+# [07:21:21.673816861] $ /usr/bin/podman volume rm -a -f
+not ok 562 [505] Interface-bound UDP port forwarding, IPv6, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 666)
+#   `pasta_test_do' failed
+#
+# [07:21:21.757745963] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:21.841921318] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:21.904302944] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:21.959077536] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:21:22.143325885] $ /usr/bin/podman run --net=pasta:--udp-ports,::1%lo/5419:5419 -p  quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5419 5419); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof STDOUT &                          done; wait
+# [07:21:22.229893593] Error: pasta failed with exit code 1:
+# Failed to bind port 5419 (Unknown error -16777216) for option '-u ::1%lo/5419:5419', exiting
+# [07:21:22.233291950] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:22.239330743] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:22.307227964] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:22.368908231] 11e06daea3cd2104ff21615311c3ba0b30379ae043e5d36edee100e457b893e6
+#
+# [07:21:22.370930929] $ /usr/bin/podman network prune --force
+#
+# [07:21:22.409705071] $ /usr/bin/podman volume rm -a -f
+ok 563 [505] TCP/IPv4 small transfer, tap
+ok 564 [505] TCP/IPv4 small transfer, loopback
+ok 565 [505] TCP/IPv4 large transfer, tap
+ok 566 [505] TCP/IPv4 large transfer, loopback
+not ok 567 [505] TCP/IPv6 small transfer, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 690)
+#   `pasta_test_do' failed
+#
+# [07:21:29.717872418] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:29.780183383] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:29.841883811] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:29.904759244] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 2048 bytes (2.0 kB, 2.0 KiB) copied, 2.702e-05 s, 75.8 MB/s
+#
+# [07:21:30.114131667] $ /usr/bin/podman run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5980:5980/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5980 5980); do                              socat -u TCP6-LISTEN:${port} EXEC:md5sum &                          done; wait
+# [07:21:30.210485100] Error: pasta failed with exit code 1:
+# Failed to bind port 5980 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce/5980-5980:5980-5980', exiting
+# [07:21:30.214404274] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:30.220896413] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:30.277550430] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:30.351155951] ba643b73732d745781a105efe0a965277396c87693070e99287d73fe5590f214
+#
+# [07:21:30.353438383] $ /usr/bin/podman network prune --force
+#
+# [07:21:30.429269203] $ /usr/bin/podman volume rm -a -f
+not ok 568 [505] TCP/IPv6 small transfer, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 694)
+#   `pasta_test_do' failed
+#
+# [07:21:30.532531241] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:30.599627912] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:30.674645572] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:30.735597618] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 2048 bytes (2.0 kB, 2.0 KiB) copied, 2.6531e-05 s, 77.2 MB/s
+#
+# [07:21:30.955802180] $ /usr/bin/podman run --net=pasta -p [::1]:5560:5560/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5560 5560); do                              socat -u TCP6-LISTEN:${port},bind=[::1] EXEC:md5sum &                          done; wait
+# [07:21:31.050986447] Error: pasta failed with exit code 1:
+# Failed to bind port 5560 (Unknown error -16777216) for option '-t ::1/5560-5560:5560-5560', exiting
+# [07:21:31.055311247] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:31.062277922] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:31.118148199] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:31.187788205] 03c1ed36fbf96172cb174cf64592e5d1cead0414011d937cd884f0eb62fa3723
+#
+# [07:21:31.190244859] $ /usr/bin/podman network prune --force
+#
+# [07:21:31.245322845] $ /usr/bin/podman volume rm -a -f
+not ok 569 [505] TCP/IPv6 large transfer, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 698)
+#   `pasta_test_do' failed
+#
+# [07:21:31.346874589] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:31.413793518] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:31.476805012] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:31.523207459] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 10485760 bytes (10 MB, 10 MiB) copied, 0.0329828 s, 318 MB/s
+#
+# [07:21:31.785004212] $ /usr/bin/podman run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5898:5898/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5898 5898); do                              socat -u TCP6-LISTEN:${port} EXEC:md5sum &                          done; wait
+# [07:21:31.869229309] Error: pasta failed with exit code 1:
+# Failed to bind port 5898 (Unknown error -16777216) for option '-t fec0::cb79:3e19:4b91:d5ce/5898-5898:5898-5898', exiting
+# [07:21:31.873059051] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:31.879523580] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:31.931728906] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:31.999617748] 78fc53832dfa1f5618653c495bccf7e368dcb5c0ede0b5e0a5736135bb0f3201
+#
+# [07:21:32.001966170] $ /usr/bin/podman network prune --force
+#
+# [07:21:32.078893746] $ /usr/bin/podman volume rm -a -f
+not ok 570 [505] TCP/IPv6 large transfer, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 702)
+#   `pasta_test_do' failed
+#
+# [07:21:32.183682474] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:32.239359899] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:32.297596118] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:32.355087667] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 10485760 bytes (10 MB, 10 MiB) copied, 0.0337625 s, 311 MB/s
+#
+# [07:21:32.610589183] $ /usr/bin/podman run --net=pasta -p [::1]:5757:5757/tcp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5757 5757); do                              socat -u TCP6-LISTEN:${port},bind=[::1] EXEC:md5sum &                          done; wait
+# [07:21:32.720306160] Error: pasta failed with exit code 1:
+# Failed to bind port 5757 (Unknown error -16777216) for option '-t ::1/5757-5757:5757-5757', exiting
+# [07:21:32.724377315] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:32.730820314] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:32.788672648] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:32.857202599] 8530eef84695d041c4edad098dd4172bb404ba079eb2476995808ed1d0446808
+#
+# [07:21:32.859774324] $ /usr/bin/podman network prune --force
+#
+# [07:21:32.907909755] $ /usr/bin/podman volume rm -a -f
+ok 571 [505] UDP/IPv4 small transfer, tap
+ok 572 [505] UDP/IPv4 small transfer, loopback
+ok 573 [505] UDP/IPv4 large transfer, tap
+ok 574 [505] UDP/IPv4 large transfer, loopback
+not ok 575 [505] UDP/IPv6 small transfer, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 726)
+#   `pasta_test_do' failed
+#
+# [07:21:44.156827112] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:44.209180370] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:44.265779637] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:44.323360838] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 2048 bytes (2.0 kB, 2.0 KiB) copied, 2.513e-05 s, 81.5 MB/s
+#
+# [07:21:44.506974108] $ /usr/bin/podman run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5520:5520/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5520 5520); do                              socat -u UDP6-LISTEN:${port},null-eof EXEC:md5sum &                          done; wait
+# [07:21:44.597906306] Error: pasta failed with exit code 1:
+# Failed to bind port 5520 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce/5520-5520:5520-5520', exiting
+# [07:21:44.602280276] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:44.611966339] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:44.666577979] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:44.735047068] d4c1f117255792b11e3c61af94a6c1f2a10a0a877669e9e1dddd499926746a05
+#
+# [07:21:44.737279499] $ /usr/bin/podman network prune --force
+#
+# [07:21:44.800534087] $ /usr/bin/podman volume rm -a -f
+not ok 576 [505] UDP/IPv6 small transfer, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 730)
+#   `pasta_test_do' failed
+#
+# [07:21:44.889034332] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:44.946688623] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:44.999204174] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:45.046506834] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 2048 bytes (2.0 kB, 2.0 KiB) copied, 2.3961e-05 s, 85.5 MB/s
+#
+# [07:21:45.249266596] $ /usr/bin/podman run --net=pasta -p [::1]:5731:5731/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5731 5731); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof EXEC:md5sum &                          done; wait
+# [07:21:45.341717405] Error: pasta failed with exit code 1:
+# Failed to bind port 5731 (Unknown error -16777216) for option '-u ::1/5731-5731:5731-5731', exiting
+# [07:21:45.345072601] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:45.350954832] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:45.396656119] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:45.463855211] 90335a861c50f5c540357b88147977c80ddf9a22b8630b2baddfa9a34b93caef
+#
+# [07:21:45.465788988] $ /usr/bin/podman network prune --force
+#
+# [07:21:45.510316640] $ /usr/bin/podman volume rm -a -f
+not ok 577 [505] UDP/IPv6 large transfer, tap
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 734)
+#   `pasta_test_do' failed
+#
+# [07:21:45.602190410] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:45.659533677] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:45.708917075] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:45.756295015] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 53248 bytes (53 kB, 52 KiB) copied, 0.000216743 s, 246 MB/s
+#
+# [07:21:45.957835061] $ /usr/bin/podman run --net=pasta -p [fec0::cb79:3e19:4b91:d5ce]:5762:5762/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5762 5762); do                              socat -u UDP6-LISTEN:${port},null-eof EXEC:md5sum &                          done; wait
+# [07:21:46.055969418] Error: pasta failed with exit code 1:
+# Failed to bind port 5762 (Unknown error -16777216) for option '-u fec0::cb79:3e19:4b91:d5ce/5762-5762:5762-5762', exiting
+# [07:21:46.059793000] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:46.065977966] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:46.135393219] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:46.202537120] e784bed2f4b78fe23931636ff23c0256be3b28ce0b65c7a228801bbde7277511
+#
+# [07:21:46.204665639] $ /usr/bin/podman network prune --force
+#
+# [07:21:46.260441764] $ /usr/bin/podman volume rm -a -f
+not ok 578 [505] UDP/IPv6 large transfer, loopback
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  from function `pasta_test_do' in file test/system/505-networking-pasta.bats, line 233,
+#  in test file test/system/505-networking-pasta.bats, line 738)
+#   `pasta_test_do' failed
+#
+# [07:21:46.353078277] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:46.417954767] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:46.480199891] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:46.554328229] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# 1+0 records in
+# 1+0 records out
+# 53248 bytes (53 kB, 52 KiB) copied, 0.000204973 s, 260 MB/s
+#
+# [07:21:46.769423691] $ /usr/bin/podman run --net=pasta -p [::1]:5355:5355/udp quay.io/libpod/testimage:20240123 sh -c for port in $(seq 5355 5355); do                              socat -u UDP6-LISTEN:${port},bind=[::1],null-eof EXEC:md5sum &                          done; wait
+# [07:21:46.865553060] Error: pasta failed with exit code 1:
+# Failed to bind port 5355 (Unknown error -16777216) for option '-u ::1/5355-5355:5355-5355', exiting
+# [07:21:46.869972120] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:46.876442219] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:46.957869927] $ /usr/bin/podman rm -t 0 --all --force --ignore
+# [07:21:47.024301709] 99cba0a33f75f9021e54d5d13f380a4b45e51caeb6f2a5e75a06fea09cdeb523
+#
+# [07:21:47.026593060] $ /usr/bin/podman network prune --force
+#
+# [07:21:47.081648726] $ /usr/bin/podman volume rm -a -f
+ok 579 [505] pasta(1) quits when the namespace is gone
+ok 580 [505] Unsupported protocol in port forwarding
+ok 581 [505] Use options from containers.conf
+not ok 582 [505] Podman unshare --rootless-netns with Pasta
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 423,
+#  in test file test/system/505-networking-pasta.bats, line 788)
+#   `run_podman unshare --rootless-netns ip addr' failed
+#
+# [07:21:50.762844092] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:50.823083809] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:21:50.898766588] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:21:50.955007360] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+# Object "show" is unknown, try "ip help".
+#
+# [07:21:51.077439010] $ /usr/bin/podman unshare --rootless-netns ip addr
+# [07:21:51.163628224] 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+#     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+#     inet 127.0.0.1/8 scope host lo
+#        valid_lft forever preferred_lft forever
+#     inet6 ::1/128 scope host proto kernel_lo
+#        valid_lft forever preferred_lft forever
+# 2: ens4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 65520 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+#     link/ether ce:8e:91:92:b5:dc brd ff:ff:ff:ff:ff:ff
+#     inet 10.0.2.15/24 brd 10.0.2.255 scope global ens4
+#        valid_lft forever preferred_lft forever
+#     inet6 fe80::cc8e:91ff:fe92:b5dc/64 scope link tentative proto kernel_ll
+#        valid_lft forever preferred_lft forever
+# Error: rootless netns: cleanup: 1 error occurred:
+# 	* rootless netns: kill network process: permission denied
+# [07:21:51.167823670] [ rc=126 (** EXPECTED 0 **) ]
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: exit code is 126; expected 0
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# # [teardown]
+#
+# [07:21:51.173603810] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:21:51.220668347] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:21:51.266784638] $ /usr/bin/podman network prune --force
+#
+# [07:21:51.317946991] $ /usr/bin/podman volume rm -a -f
+ok 583 podman checkpoint - basic test # skip checkpoint does not work rootless
+ok 584 podman checkpoint/restore print IDs or raw input # skip checkpoint does not work rootless
+ok 585 podman checkpoint --export, with volumes # skip checkpoint does not work rootless
+ok 586 podman checkpoint --file-locks # skip checkpoint does not work rootless
+ok 587 podman checkpoint/restore ip and mac handling # skip checkpoint does not work rootless
+ok 588 podman checkpoint/restore the latest container # skip checkpoint does not work rootless
+ok 589 [550] rootless podman only ever uses single pause process
+ok 590 [550] rootless reexec with sig-proxy
+ok 591 [550] rootless reexec with sig-proxy when rejoining userns from container
+ok 592 [600] podman shell completion test
+ok 593 [600] podman shell completion for paths in container/image
+ok 594 [610] check Go template formatting
+ok 595 [620] options that cannot be set together
+not ok 596 [700] podman kube with stdin
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 445,
+#  in test file test/system/700-play.bats, line 87)
+#   `run_podman stop -a -t 0' failed
+#
+# [07:23:53.108747978] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:23:53.175881599] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:23:53.233048914] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:23:53.303753020] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:23:53.432597734] $ /usr/bin/podman kube play -
+# [07:23:54.012319752] Pod:
+# 3144a9f5d2a70d143e5057c5c1dee1b61a32ee1135ff8585ad2a0ea017c69858
+# Container:
+# a16c9236f340de9469212c08a1d2ddf46daaba088f1c23cc1fded4664a182a30
+#
+# [07:23:54.019965050] $ /usr/bin/podman images
+# [07:23:54.089697343] REPOSITORY                TAG               IMAGE ID      CREATED       SIZE
+# localhost/podman-pause    5.0.3-1715364600  df921de7766c  1 second ago  730 kB
+# quay.io/libpod/testimage  20240123          1f6acd4c4a1d  4 months ago  11.8 MB
+#
+# [07:23:54.096561920] $ /usr/bin/podman image exists k8s.gcr.io/pause
+# [07:23:54.148380417] [ rc=1 (expected) ]
+#
+# [07:23:54.154758168] $ /usr/bin/podman image exists registry.k8s.io/pause
+# [07:23:54.199332443] [ rc=1 (expected) ]
+#
+# [07:23:54.249043594] $ /usr/bin/podman image exists localhost/podman-pause:5.0.3-1715364600
+#
+# [07:23:54.316626820] $ /usr/bin/podman stop -a -t 0
+# [07:23:54.638264858] time="2024-05-28T07:23:54-04:00" level=error msg="Unable to clean up network for container 19dc53b6d886f6364558f820363048cef9d7804699441ae455ca550869b05532: \"1 error occurred:\\n\\t* rootless netns: cleanup: 1 error occurred:\\n\\t* rootless netns: kill network process: permission denied\\n\\n\\n\\n\""
+# 19dc53b6d886f6364558f820363048cef9d7804699441ae455ca550869b05532
+# a16c9236f340de9469212c08a1d2ddf46daaba088f1c23cc1fded4664a182a30
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: Command succeeded, but issued unexpected warnings
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#
+# [07:23:54.646043926] $ /usr/bin/podman pod rm -t 0 -f -a
+# [07:23:54.740359972] 3144a9f5d2a70d143e5057c5c1dee1b61a32ee1135ff8585ad2a0ea017c69858
+#
+# [07:23:54.742861783] $ /usr/bin/podman rm -t 0 -f -a
+#
+# [07:23:54.804476724] $ /usr/bin/podman image list --format {{.ID}} {{.Repository}}
+# [07:23:54.858537490] df921de7766c localhost/podman-pause
+# 1f6acd4c4a1d quay.io/libpod/testimage
+#
+# [07:23:54.861106232] $ /usr/bin/podman rmi df921de7766c
+# [07:23:54.919472812] Untagged: localhost/podman-pause:5.0.3-1715364600
+# Deleted: df921de7766cfa2f7ec5d115671adc53becae75891e70263ff4a78318989c1e8
+# # [teardown]
+#
+# [07:23:54.922000264] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:23:54.975658584] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:23:55.034826375] $ /usr/bin/podman network prune --force
+# [07:23:55.091762937] podman-default-kube-network
+#
+# [07:23:55.094522302] $ /usr/bin/podman volume rm -a -f
+not ok 597 [700] podman play
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 445,
+#  in test file test/system/700-play.bats, line 109)
+#   `run_podman stop -a -t 0' failed
+#
+# [07:23:55.185083479] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:23:55.254504190] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:23:55.318876526] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:23:55.382756795] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:23:55.521802018] $ /usr/bin/podman play kube /tmp/podman_bats.0cLL8z/test.yaml
+# [07:23:56.059231860] Pod:
+# 5ba4d99598ab2081828f150e1aad577865f2b13ac49007ccf9285d76aefa61cd
+# Container:
+# d837c394711ab563ef7429d207f9f50474750e92358cde3e230393d9a3747261
+#
+# [07:23:56.067148111] $ /usr/bin/podman play kube /tmp/podman_bats.0cLL8z/test.yaml
+# [07:23:56.159161278] Error: adding pod to state: name "test_pod" is in use: pod already exists
+# [07:23:56.162875914] [ rc=125 (expected) ]
+#
+# [07:23:56.175350183] $ /usr/bin/podman play kube /tmp/podman_bats.0cLL8z/test.yaml
+# [07:23:56.244376777] Error: adding pod to state: name "test_pod" is in use: pod already exists
+# [07:23:56.248100845] [ rc=125 (expected) ]
+#
+# [07:23:56.260012897] $ /usr/bin/podman stop -a -t 0
+# [07:23:56.521175856] time="2024-05-28T07:23:56-04:00" level=error msg="Unable to clean up network for container 8ef6447c6bbf211ee41d6b4a4acd3a9d417f66f40715d47e816044f54e4ddc1a: \"1 error occurred:\\n\\t* rootless netns: cleanup: 1 error occurred:\\n\\t* rootless netns: kill network process: permission denied\\n\\n\\n\\n\""
+# d837c394711ab563ef7429d207f9f50474750e92358cde3e230393d9a3747261
+# 8ef6447c6bbf211ee41d6b4a4acd3a9d417f66f40715d47e816044f54e4ddc1a
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: Command succeeded, but issued unexpected warnings
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#
+# [07:23:56.527166893] $ /usr/bin/podman pod rm -t 0 -f -a
+# [07:23:56.611365310] 5ba4d99598ab2081828f150e1aad577865f2b13ac49007ccf9285d76aefa61cd
+#
+# [07:23:56.613822281] $ /usr/bin/podman rm -t 0 -f -a
+#
+# [07:23:56.670447659] $ /usr/bin/podman image list --format {{.ID}} {{.Repository}}
+# [07:23:56.734337469] e7c652ce19d5 localhost/podman-pause
+# 1f6acd4c4a1d quay.io/libpod/testimage
+#
+# [07:23:56.736842961] $ /usr/bin/podman rmi e7c652ce19d5
+# [07:23:56.804922544] Untagged: localhost/podman-pause:5.0.3-1715364600
+# Deleted: e7c652ce19d54f63a947f6e5f1775137544352d523d73ecb981d5c0d8b3af970
+# # [teardown]
+#
+# [07:23:56.807652998] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:23:56.866845419] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:23:56.916452168] $ /usr/bin/podman network prune --force
+# [07:23:56.972870342] podman-default-kube-network
+#
+# [07:23:56.975731969] $ /usr/bin/podman volume rm -a -f
+not ok 598 [700] podman play --service-container
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 445,
+#  in test file test/system/700-play.bats, line 219)
+#   `run_podman stop test_pod-test' failed
+#
+# [07:23:57.070367889] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:23:57.141004594] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:23:57.198305711] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:23:57.274388105] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:23:57.419123020] $ /usr/bin/podman container wait test_pod-test --condition=running
+# [07:23:57.480407187] Error: no container with name or ID "test_pod-test" found: no such container
+# [07:23:57.483975972] [ rc=125 ]
+#
+# [07:23:57.992841493] $ /usr/bin/podman ps -a
+# [07:23:58.056552461] CONTAINER ID  IMAGE                                    COMMAND     CREATED                 STATUS                 PORTS       NAMES
+# 7476f35eb266  localhost/podman-pause:5.0.3-1715364600              Less than a second ago  Up 1 second                        7c9a020dfdf0-service
+# 92a772049d7a  localhost/podman-pause:5.0.3-1715364600              Less than a second ago  Up 1 second                        1b8bb8187794-infra
+# 0340d1849e02  quay.io/libpod/testimage:20240123                    Less than a second ago  Up Less than a second              test_pod-test
+#
+# [07:23:58.063532499] $ /usr/bin/podman container wait test_pod-test --condition=running
+# [07:23:58.130471467] -1
+#
+# [07:23:58.140050639] $ /usr/bin/podman container inspect 7c9a020dfdf0-service --format {{.State.Running}}
+# [07:23:58.199871217] true
+#
+# [07:23:58.207869069] $ /usr/bin/podman container inspect 7c9a020dfdf0-service --format {{.Config.StopTimeout}}
+# [07:23:58.265795553] 10
+#
+# [07:23:58.274562524] $ /usr/bin/podman stop test_pod-test
+# [07:23:58.629905118] test_pod-test
+# time="2024-05-28T07:23:58-04:00" level=error msg="Unable to clean up network for container 92a772049d7a1d8e6995eb20baf3573afec1ce02c27907370d8c76f128e208a5: \"1 error occurred:\\n\\t* rootless netns: cleanup: 1 error occurred:\\n\\t* rootless netns: kill network process: permission denied\\n\\n\\n\\n\""
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: Command succeeded, but issued unexpected warnings
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#
+# [07:23:58.639536341] $ /usr/bin/podman pod rm -t 0 -f -a
+# [07:23:58.734208651] 1b8bb81877945d58011baa90ca5eb3b7b0431fdbeca61a11eede281627a19e4b
+#
+# [07:23:58.737178688] $ /usr/bin/podman rm -t 0 -f -a
+#
+# [07:23:58.800334479] $ /usr/bin/podman image list --format {{.ID}} {{.Repository}}
+# [07:23:58.850225362] 5202f9210478 localhost/podman-pause
+# 1f6acd4c4a1d quay.io/libpod/testimage
+#
+# [07:23:58.852802165] $ /usr/bin/podman rmi 5202f9210478
+# [07:23:58.941710891] Untagged: localhost/podman-pause:5.0.3-1715364600
+# Deleted: 5202f921047836038deaec97570136dbcc1392f0e369f82a28990c3587e827a0
+# # [teardown]
+#
+# [07:23:58.944314784] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:23:58.999073538] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:23:59.055155340] $ /usr/bin/podman network prune --force
+# [07:23:59.118182418] podman-default-kube-network
+#
+# [07:23:59.120772152] $ /usr/bin/podman volume rm -a -f
+ok 599 [700] podman kube --network
+ok 600 [700] podman kube play read-only
+ok 601 [700] podman kube play read-only from containers.conf
+ok 602 [700] podman play with user from image
+ok 603 [700] podman play --build --context-dir
+not ok 604 [700] podman kube play --replace external storage
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 445,
+#  in test file test/system/700-play.bats, line 427)
+#   `run_podman rm --force -t0 test_pod-test' failed
+#
+# [07:24:13.165825207] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:24:13.226880592] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:24:13.288104618] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:24:13.359214409] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:24:13.492754182] $ /usr/bin/podman play kube /tmp/podman_bats.XNOLYv/test.yaml
+# [07:24:14.012624622] Pod:
+# dbd7a83963d1314de8de3419dd1d249f355455309dbdaf944a6412abafb912b1
+# Container:
+# f030374a6b4f2d92a16bfeacd57ae138dcc9165b738e8bdf000c7d0175e49c2d
+#
+# [07:24:14.018911052] $ /usr/bin/podman rm --force -t0 test_pod-test
+# [07:24:14.376918240] test_pod-test
+# time="2024-05-28T07:24:14-04:00" level=error msg="Unable to clean up network for container 6f8436227af6c799ac3f40d4fee1343b38f92c9dc80e8c583806de391dcc16df: \"1 error occurred:\\n\\t* rootless netns: cleanup: 1 error occurred:\\n\\t* rootless netns: kill network process: permission denied\\n\\n\\n\\n\""
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: Command succeeded, but issued unexpected warnings
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#
+# [07:24:14.384013620] $ /usr/bin/podman pod rm -t 0 -f -a
+# [07:24:14.462764998] dbd7a83963d1314de8de3419dd1d249f355455309dbdaf944a6412abafb912b1
+#
+# [07:24:14.465773197] $ /usr/bin/podman rm -t 0 -f -a
+#
+# [07:24:14.521887248] $ /usr/bin/podman image list --format {{.ID}} {{.Repository}}
+# [07:24:14.585241491] 3056307ef3d0 localhost/podman-pause
+# 1f6acd4c4a1d quay.io/libpod/testimage
+#
+# [07:24:14.588554584] $ /usr/bin/podman rmi 3056307ef3d0
+# [07:24:14.656981081] Untagged: localhost/podman-pause:5.0.3-1715364600
+# Deleted: 3056307ef3d09635c047ed7513801f9151c06c041113d3dc4fcdc6de6b572862
+# # [teardown]
+#
+# [07:24:14.659465422] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:24:14.724848862] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:24:14.805946469] $ /usr/bin/podman network prune --force
+# [07:24:14.858083770] podman-default-kube-network
+#
+# [07:24:14.860834704] $ /usr/bin/podman volume rm -a -f
+not ok 605 [700] podman kube --annotation
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 445,
+#  in test file test/system/700-play.bats, line 454)
+#   `run_podman stop -a -t 0' failed
+#
+# [07:24:14.954807466] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:24:15.023586098] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:24:15.087655780] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:24:15.145611055] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:24:15.284122881] $ /usr/bin/podman kube play --annotation name=QWLYxrnqK7u7Q5q --annotation anno=comma,c2Ofw /tmp/podman_bats.6L43Z4/test.yaml
+# [07:24:15.830020911] Pod:
+# 4946cb0b535a71ebd5ac017ff08f35d5dd1775b3c094213614ebd4cf04495271
+# Container:
+# e6497086adf5c6aaf38774c3c0465ac63b25963556acd8e1ef70eafa92dd24d0
+#
+# [07:24:15.835730973] $ /usr/bin/podman inspect --format {{ .Config.Annotations }} test_pod-test
+# [07:24:15.891061004] map[anno:comma,c2Ofw io.container.manager:libpod io.kubernetes.cri-o.SandboxID:a0b6a29fbd2cc220eaaf5970dc81eff6c65bd0ee6913f6515acb3f1d3b4817d9 io.podman.annotations.kube.health.check:true name:QWLYxrnqK7u7Q5q org.opencontainers.image.stopSignal:15]
+#
+# [07:24:15.907781047] $ /usr/bin/podman kube play --annotation val /tmp/podman_bats.6L43Z4/test.yaml
+# [07:24:15.962388339] Error: annotation "val" must include an '=' sign
+# [07:24:15.965779212] [ rc=125 (expected) ]
+#
+# [07:24:15.974387161] $ /usr/bin/podman stop -a -t 0
+# [07:24:16.272506041] time="2024-05-28T07:24:16-04:00" level=error msg="Unable to clean up network for container a0b6a29fbd2cc220eaaf5970dc81eff6c65bd0ee6913f6515acb3f1d3b4817d9: \"1 error occurred:\\n\\t* rootless netns: cleanup: 1 error occurred:\\n\\t* rootless netns: kill network process: permission denied\\n\\n\\n\\n\""
+# a0b6a29fbd2cc220eaaf5970dc81eff6c65bd0ee6913f6515acb3f1d3b4817d9
+# e6497086adf5c6aaf38774c3c0465ac63b25963556acd8e1ef70eafa92dd24d0
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: Command succeeded, but issued unexpected warnings
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#
+# [07:24:16.278480367] $ /usr/bin/podman pod rm -t 0 -f -a
+# [07:24:16.359008357] 4946cb0b535a71ebd5ac017ff08f35d5dd1775b3c094213614ebd4cf04495271
+#
+# [07:24:16.361231625] $ /usr/bin/podman rm -t 0 -f -a
+#
+# [07:24:16.410443590] $ /usr/bin/podman image list --format {{.ID}} {{.Repository}}
+# [07:24:16.469613009] 9f19cbf0ceb0 localhost/podman-pause
+# 1f6acd4c4a1d quay.io/libpod/testimage
+#
+# [07:24:16.471775816] $ /usr/bin/podman rmi 9f19cbf0ceb0
+# [07:24:16.527538824] Untagged: localhost/podman-pause:5.0.3-1715364600
+# Deleted: 9f19cbf0ceb0e4a25b2b28334fe6d905ae94b8ae0ae76b8a33f80fd5b056175d
+# # [teardown]
+#
+# [07:24:16.529652980] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:24:16.584215001] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:24:16.651316222] $ /usr/bin/podman network prune --force
+# [07:24:16.711074870] podman-default-kube-network
+#
+# [07:24:16.713079565] $ /usr/bin/podman volume rm -a -f
+ok 606 [700] podman play Yaml deprecated --no-trunc annotation
+ok 607 [700] podman kube play - default log driver
+ok 608 [700] podman kube play - URL
+ok 609 [700] podman play with init container
+ok 610 [700] podman kube play - hostport
+not ok 611 [700] podman kube play - multi-pod YAML
+# (from function `bail-now' in file test/system/helpers.bash, line 235,
+#  from function `die' in file test/system/helpers.bash, line 813,
+#  from function `run_podman' in file test/system/helpers.bash, line 445,
+#  in test file test/system/700-play.bats, line 602)
+#   `run_podman pod stop pod1 pod2' failed
+#
+# [07:24:27.052250774] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:24:27.122312651] $ /usr/bin/podman ps --all --external --format {{.ID}} {{.Names}}
+#
+# [07:24:27.183232064] $ /usr/bin/podman images --all --format {{.Repository}}:{{.Tag}} {{.ID}}
+# [07:24:27.240229646] quay.io/libpod/testimage:20240123 1f6acd4c4a1d
+#
+# [07:24:27.407713579] $ /usr/bin/podman container wait pod1-ctr1 pod2-ctr2 bdeac0245fe3-service --condition=running
+# [07:24:27.459450666] Error: no container with name or ID "pod1-ctr1" found: no such container
+# [07:24:27.462751437] [ rc=125 ]
+#
+# [07:24:27.975159743] $ /usr/bin/podman ps -a
+# [07:24:28.145718464] CONTAINER ID  IMAGE                                    COMMAND     CREATED                 STATUS       PORTS       NAMES
+# a4adb36a3027  localhost/podman-pause:5.0.3-1715364600              Less than a second ago  Up 1 second              bdeac0245fe3-service
+# 4c1c1f1dab09  localhost/podman-pause:5.0.3-1715364600              Less than a second ago  Up 1 second              9cf75c2dfcf3-infra
+# 94ef92948a89  quay.io/libpod/testimage:20240123                    Less than a second ago  Up 1 second              pod1-ctr1
+# 4aee8284205e  localhost/podman-pause:5.0.3-1715364600              Less than a second ago  Created                  4f82e197eb3e-infra
+# 49397397b7b9  quay.io/libpod/testimage:20240123                    Less than a second ago  Created                  pod2-ctr2
+#
+# [07:24:28.152012964] $ /usr/bin/podman container wait pod1-ctr1 pod2-ctr2 bdeac0245fe3-service --condition=running
+# [07:24:28.211035703] -1
+# -1
+# -1
+#
+# [07:24:28.217237182] $ /usr/bin/podman pod stop pod1 pod2
+# [07:24:28.717188429] time="2024-05-28T07:24:28-04:00" level=error msg="Unable to clean up network for container 4aee8284205eb5e45acf664338d41079a5452fb22395d2646bde53a022c5dd8f: \"1 error occurred:\\n\\t* rootless netns: cleanup: 1 error occurred:\\n\\t* rootless netns: kill network process: permission denied\\n\\n\\n\\n\""
+# 9cf75c2dfcf332f66d11bb3f7888a663d300907b91b9ec47251b383e1435df76
+# 4f82e197eb3e0942a479e72d3e87938b2834a3bed894e8b203c85441f3f576c5
+# #/vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# #| FAIL: Command succeeded, but issued unexpected warnings
+# #\^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#
+# [07:24:28.723573740] $ /usr/bin/podman pod rm -t 0 -f -a
+# [07:24:28.837558625] 9cf75c2dfcf332f66d11bb3f7888a663d300907b91b9ec47251b383e1435df76
+# 4f82e197eb3e0942a479e72d3e87938b2834a3bed894e8b203c85441f3f576c5
+#
+# [07:24:28.839571291] $ /usr/bin/podman rm -t 0 -f -a
+#
+# [07:24:28.890596288] $ /usr/bin/podman image list --format {{.ID}} {{.Repository}}
+# [07:24:28.946230213] 3be69b839f10 localhost/podman-pause
+# 1f6acd4c4a1d quay.io/libpod/testimage
+#
+# [07:24:28.948516752] $ /usr/bin/podman rmi 3be69b839f10
+# [07:24:29.005810808] Untagged: localhost/podman-pause:5.0.3-1715364600
+# Deleted: 3be69b839f10d3f6add7399abe2979fdda42b80fc8bc2bae3501e7d02e5a39e5
+# # [teardown]
+#
+# [07:24:29.007953095] $ /usr/bin/podman pod rm -t 0 --all --force --ignore
+#
+# [07:24:29.067346418] $ /usr/bin/podman rm -t 0 --all --force --ignore
+#
+# [07:24:29.120336880] $ /usr/bin/podman network prune --force
+# [07:24:29.184282550] podman-default-kube-network
+#
+# [07:24:29.186706671] $ /usr/bin/podman volume rm -a -f
+ok 612 [700] podman kube generate filetype
+ok 613 [700] podman kube play --wait with siginterrupt
+ok 614 [700] podman kube play --wait - wait for pod to exit
+ok 615 [700] podman kube play with configmaps
+ok 616 [700] podman kube with --authfile=/tmp/bogus
+ok 617 [700] podman kube play with umask from containers.conf
+ok 618 [700] podman kube generate tmpfs on /tmp
+ok 619 [700] podman kube play - pull policy
+ok 620 [700] podman kube play healthcheck should wait initialDelaySeconds before updating status (healthy)
+ok 621 [700] podman kube play healthcheck should wait initialDelaySeconds before updating status (unhealthy)
+ok 622 [700] podman play --build private registry
+ok 623 [710] podman kube generate - usage message
+ok 624 [710] podman kube generate - container
+ok 625 [710] podman kube generate unmasked
+ok 626 [710] podman kube generate - pod
+ok 627 [710] podman kube generate - deployment
+ok 628 [750] podman image trust set
+ok 629 [800] podman CONTAINERS_CONF - CONTAINERS_CONF in conmon
+ok 630 [800] podman CONTAINERS_CONF - override runtime name
+ok 631 [800] podman --module - absolute path
+ok 632 [800] podman --module - append arrays
+ok 633 [800] podman --module - XDG_CONFIG_HOME
+ok 634 [800] podman --module - command-line completion
+ok 635 [800] podman --module - supported fields
+ok 636 [800] podman push CONTAINERS_CONF
+ok 637 [850] podman compose - smoke tests
+ok 638 podman --ssh test # skip only applicable on podman-remote
+ok 639 [950] podman preexec hook # skip test requires sudo
+ok 640 [999] podman database backend has not changed

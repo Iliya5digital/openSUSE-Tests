@@ -1,0 +1,173 @@
+  UNIT                                                                                   LOAD   ACTIVE SUB       DESCRIPTION
+  proc-sys-fs-binfmt_misc.automount                                                      loaded active running   Arbitrary Executable File Formats File System Automount Point
+  sys-devices-pci0000:00-0000:00:03.0-sound-card0-controlC0.device                       loaded active plugged   /sys/devices/pci0000:00/0000:00:03.0/sound/card0/controlC0
+  sys-devices-pci0000:00-0000:00:04.0-virtio0-net-ens4.device                            loaded active plugged   Virtio network device
+  sys-devices-pci0000:00-0000:00:07.0-virtio2-virtio\x2dports-vport2p0.device            loaded active plugged   /sys/devices/pci0000:00/0000:00:07.0/virtio2/virtio-ports/vport2p0
+  sys-devices-pci0000:00-0000:00:07.0-virtio2-virtio\x2dports-vport2p1.device            loaded active plugged   /sys/devices/pci0000:00/0000:00:07.0/virtio2/virtio-ports/vport2p1
+  sys-devices-pci0000:00-0000:00:08.0-virtio3-host0-target0:0:0-0:0:0:0-block-sr0.device loaded active plugged   QEMU_CD-ROM openSUSE-Tumbleweed-DVD-x86_64
+  sys-devices-pci0000:00-0000:00:09.0-virtio4-block-vda-vda1.device                      loaded active plugged   /sys/devices/pci0000:00/0000:00:09.0/virtio4/block/vda/vda1
+  sys-devices-pci0000:00-0000:00:09.0-virtio4-block-vda-vda2.device                      loaded active plugged   /sys/devices/pci0000:00/0000:00:09.0/virtio4/block/vda/vda2
+  sys-devices-pci0000:00-0000:00:09.0-virtio4-block-vda-vda3.device                      loaded active plugged   /sys/devices/pci0000:00/0000:00:09.0/virtio4/block/vda/vda3
+  sys-devices-pci0000:00-0000:00:09.0-virtio4-block-vda.device                           loaded active plugged   /sys/devices/pci0000:00/0000:00:09.0/virtio4/block/vda
+  sys-devices-pci0000:00-0000:00:0a.0-virtio5-block-vdb.device                           loaded active plugged   /sys/devices/pci0000:00/0000:00:0a.0/virtio5/block/vdb
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.1-tty-ttyS1.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.1/tty/ttyS1
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.10-tty-ttyS10.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.10/tty/ttyS10
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.11-tty-ttyS11.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.11/tty/ttyS11
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.12-tty-ttyS12.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.12/tty/ttyS12
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.13-tty-ttyS13.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.13/tty/ttyS13
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.14-tty-ttyS14.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.14/tty/ttyS14
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.15-tty-ttyS15.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.15/tty/ttyS15
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.16-tty-ttyS16.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.16/tty/ttyS16
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.17-tty-ttyS17.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.17/tty/ttyS17
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.18-tty-ttyS18.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.18/tty/ttyS18
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.19-tty-ttyS19.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.19/tty/ttyS19
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.2-tty-ttyS2.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.2/tty/ttyS2
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.20-tty-ttyS20.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.20/tty/ttyS20
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.21-tty-ttyS21.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.21/tty/ttyS21
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.22-tty-ttyS22.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.22/tty/ttyS22
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.23-tty-ttyS23.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.23/tty/ttyS23
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.24-tty-ttyS24.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.24/tty/ttyS24
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.25-tty-ttyS25.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.25/tty/ttyS25
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.26-tty-ttyS26.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.26/tty/ttyS26
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.27-tty-ttyS27.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.27/tty/ttyS27
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.28-tty-ttyS28.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.28/tty/ttyS28
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.29-tty-ttyS29.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.29/tty/ttyS29
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.3-tty-ttyS3.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.3/tty/ttyS3
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.30-tty-ttyS30.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.30/tty/ttyS30
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.31-tty-ttyS31.device         loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.31/tty/ttyS31
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.4-tty-ttyS4.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.4/tty/ttyS4
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.5-tty-ttyS5.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.5/tty/ttyS5
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.6-tty-ttyS6.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.6/tty/ttyS6
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.7-tty-ttyS7.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.7/tty/ttyS7
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.8-tty-ttyS8.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.8/tty/ttyS8
+  sys-devices-platform-serial8250-serial8250:0-serial8250:0.9-tty-ttyS9.device           loaded active plugged   /sys/devices/platform/serial8250/serial8250:0/serial8250:0.9/tty/ttyS9
+  sys-devices-pnp0-00:04-00:04:0-00:04:0.0-tty-ttyS0.device                              loaded active plugged   /sys/devices/pnp0/00:04/00:04:0/00:04:0.0/tty/ttyS0
+  sys-devices-virtual-misc-hw_random.device                                              loaded active plugged   /sys/devices/virtual/misc/hw_random
+  sys-devices-virtual-misc-rfkill.device                                                 loaded active plugged   /sys/devices/virtual/misc/rfkill
+  sys-devices-virtual-net-docker0.device                                                 loaded active plugged   /sys/devices/virtual/net/docker0
+  sys-devices-virtual-tty-hvc0.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc0
+  sys-devices-virtual-tty-hvc1.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc1
+  sys-devices-virtual-tty-hvc2.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc2
+  sys-devices-virtual-tty-hvc3.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc3
+  sys-devices-virtual-tty-hvc4.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc4
+  sys-devices-virtual-tty-hvc5.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc5
+  sys-devices-virtual-tty-hvc6.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc6
+  sys-devices-virtual-tty-hvc7.device                                                    loaded active plugged   /sys/devices/virtual/tty/hvc7
+  sys-module-configfs.device                                                             loaded active plugged   /sys/module/configfs
+  sys-module-fuse.device                                                                 loaded active plugged   /sys/module/fuse
+  sys-subsystem-net-devices-docker0.device                                               loaded active plugged   /sys/subsystem/net/devices/docker0
+  sys-subsystem-net-devices-ens4.device                                                  loaded active plugged   Virtio network device
+  -.mount                                                                                loaded active mounted   Root Mount
+  \x2esnapshots.mount                                                                    loaded active mounted   /.snapshots
+  boot-grub2-i386\x2dpc.mount                                                            loaded active mounted   /boot/grub2/i386-pc
+  boot-grub2-x86_64\x2defi.mount                                                         loaded active mounted   /boot/grub2/x86_64-efi
+  dev-hugepages.mount                                                                    loaded active mounted   Huge Pages File System
+  dev-mqueue.mount                                                                       loaded active mounted   POSIX Message Queue File System
+  home.mount                                                                             loaded active mounted   /home
+  opt.mount                                                                              loaded active mounted   /opt
+  proc-sys-fs-binfmt_misc.mount                                                          loaded active mounted   Arbitrary Executable File Formats File System
+  root.mount                                                                             loaded active mounted   /root
+  run-user-0.mount                                                                       loaded active mounted   /run/user/0
+  srv.mount                                                                              loaded active mounted   /srv
+  sys-fs-fuse-connections.mount                                                          loaded active mounted   FUSE Control File System
+  sys-kernel-config.mount                                                                loaded active mounted   Kernel Configuration File System
+  sys-kernel-debug-tracing.mount                                                         loaded active mounted   /sys/kernel/debug/tracing
+  sys-kernel-debug.mount                                                                 loaded active mounted   Kernel Debug File System
+  sys-kernel-tracing.mount                                                               loaded active mounted   Kernel Trace File System
+  tmp.mount                                                                              loaded active mounted   Temporary Directory /tmp
+  usr-local.mount                                                                        loaded active mounted   /usr/local
+  var.mount                                                                              loaded active mounted   /var
+  btrfsmaintenance-refresh.path                                                          loaded active waiting   Watch /etc/sysconfig/btrfsmaintenance
+  ca-certificates.path                                                                   loaded active waiting   Watch for changes in CA certificates
+  issue-generator.path                                                                   loaded active waiting   Watch for changes in issue snippets
+  smartd_generate_opts.path                                                              loaded active waiting   Watch for changes in smartmontools sysconfig file
+  systemd-ask-password-plymouth.path                                                     loaded active waiting   Forward Password Requests to Plymouth Directory Watch
+  init.scope                                                                             loaded active running   System and Service Manager
+  session-1.scope                                                                        loaded active running   Session 1 of User root
+  apparmor.service                                                                       loaded active exited    Load AppArmor profiles
+  auditd.service                                                                         loaded active running   Security Auditing Service
+  augenrules.service                                                                     loaded active exited    auditd rules generation
+  chronyd.service                                                                        loaded active running   NTP client/server
+  cron.service                                                                           loaded active running   Command Scheduler
+  dbus.service                                                                           loaded active running   D-Bus System Message Bus
+  docker.service                                                                         loaded active running   Docker Application Container Engine
+  dracut-shutdown.service                                                                loaded active exited    Restore /run/initramfs on shutdown
+  getty@tty1.service                                                                     loaded active running   Getty on tty1
+  kbdsettings.service                                                                    loaded active exited    Apply settings from /etc/sysconfig/keyboard
+  kernel-sysctl.service                                                                  loaded active exited    Apply Kernel Variables for 6.9.1-1-default
+  kmod-static-nodes.service                                                              loaded active exited    Create List of Static Device Nodes
+  NetworkManager.service                                                                 loaded active running   Network Manager
+  pcscd.service                                                                          loaded active running   PC/SC Smart Card Daemon
+  plymouth-quit-wait.service                                                             loaded active exited    Hold until boot process finishes up
+  plymouth-quit.service                                                                  loaded active exited    Terminate Plymouth Boot Screen
+  plymouth-read-write.service                                                            loaded active exited    Tell Plymouth To Write Out Runtime Data
+  plymouth-start.service                                                                 loaded active exited    Show Plymouth Boot Screen
+  polkit.service                                                                         loaded active running   Authorization Manager
+  postfix.service                                                                        loaded active running   Postfix Mail Transport Agent
+  rng-tools.service                                                                      loaded active running   Start the rngd daemon
+  serial-getty@hvc0.service                                                              loaded active running   Serial Getty on hvc0
+  serial-getty@hvc1.service                                                              loaded active running   Serial Getty on hvc1
+  serial-getty@ttyS0.service                                                             loaded active running   Serial Getty on ttyS0
+  sshd.service                                                                           loaded active running   OpenSSH Daemon
+  systemd-journal-flush.service                                                          loaded active exited    Flush Journal to Persistent Storage
+  systemd-journald.service                                                               loaded active running   Journal Service
+  systemd-logind.service                                                                 loaded active running   User Login Management
+  systemd-random-seed.service                                                            loaded active exited    Load/Save OS Random Seed
+  systemd-remount-fs.service                                                             loaded active exited    Remount Root and Kernel File Systems
+  systemd-sysctl.service                                                                 loaded active exited    Apply Kernel Variables
+  systemd-tmpfiles-setup-dev-early.service                                               loaded active exited    Create Static Device Nodes in /dev gracefully
+  systemd-tmpfiles-setup-dev.service                                                     loaded active exited    Create Static Device Nodes in /dev
+  systemd-tmpfiles-setup.service                                                         loaded active exited    Create Volatile Files and Directories
+  systemd-udev-trigger.service                                                           loaded active exited    Coldplug All udev Devices
+  systemd-udevd.service                                                                  loaded active running   Rule-based Manager for Device Events and Files
+  systemd-user-sessions.service                                                          loaded active exited    Permit User Sessions
+  systemd-vconsole-setup.service                                                         loaded active exited    Virtual Console Setup
+  user-runtime-dir@0.service                                                             loaded active exited    User Runtime Directory /run/user/0
+  user@0.service                                                                         loaded active running   User Manager for UID 0
+  wtmpdb-update-boot.service                                                             loaded active exited    Write boot and shutdown times into wtmpdb
+  -.slice                                                                                loaded active active    Root Slice
+  system-getty.slice                                                                     loaded active active    Slice /system/getty
+  system-modprobe.slice                                                                  loaded active active    Slice /system/modprobe
+  system-serial\x2dgetty.slice                                                           loaded active active    Slice /system/serial-getty
+  system.slice                                                                           loaded active active    System Slice
+  user-0.slice                                                                           loaded active active    User Slice of UID 0
+  user.slice                                                                             loaded active active    User and Session Slice
+  dbus.socket                                                                            loaded active running   D-Bus System Message Bus Socket
+  dm-event.socket                                                                        loaded active listening Device-mapper event daemon FIFOs
+  docker.socket                                                                          loaded active running   Docker Socket for the API
+  pcscd.socket                                                                           loaded active running   PC/SC Smart Card Daemon Activation Socket
+  systemd-coredump.socket                                                                loaded active listening Process Core Dump Socket
+  systemd-journald-dev-log.socket                                                        loaded active running   Journal Socket (/dev/log)
+  systemd-journald.socket                                                                loaded active running   Journal Socket
+  systemd-rfkill.socket                                                                  loaded active listening Load/Save RF Kill Switch Status /dev/rfkill Watch
+  systemd-sysext.socket                                                                  loaded active listening System Extension Image Management (Varlink)
+  systemd-udevd-control.socket                                                           loaded active running   udev Control Socket
+  systemd-udevd-kernel.socket                                                            loaded active running   udev Kernel Socket
+  dev-disk-by\x2duuid-350ef8df\x2d2937\x2d4484\x2d9b74\x2dcdf0b1f4c465.swap              loaded active active    /dev/disk/by-uuid/350ef8df-2937-4484-9b74-cdf0b1f4c465
+  basic.target                                                                           loaded active active    Basic System
+  cryptsetup.target                                                                      loaded active active    Local Encrypted Volumes
+  getty.target                                                                           loaded active active    Login Prompts
+  integritysetup.target                                                                  loaded active active    Local Integrity Protected Volumes
+  local-fs-pre.target                                                                    loaded active active    Preparation for Local File Systems
+  local-fs.target                                                                        loaded active active    Local File Systems
+  multi-user.target                                                                      loaded active active    Multi-User System
+  network-pre.target                                                                     loaded active active    Preparation for Network
+  network.target                                                                         loaded active active    Network
+  paths.target                                                                           loaded active active    Path Units
+  remote-fs.target                                                                       loaded active active    Remote File Systems
+  slices.target                                                                          loaded active active    Slice Units
+  sockets.target                                                                         loaded active active    Socket Units
+  sound.target                                                                           loaded active active    Sound Card
+  swap.target                                                                            loaded active active    Swaps
+  sysinit.target                                                                         loaded active active    System Initialization
+  time-set.target                                                                        loaded active active    System Time Set
+  time-sync.target                                                                       loaded active active    System Time Synchronized
+  timers.target                                                                          loaded active active    Timer Units
+  veritysetup.target                                                                     loaded active active    Local Verity Protected Volumes
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+165 loaded units listed. Pass --all to see loaded but inactive units, too.
+To show all installed unit files use 'systemctl list-unit-files'.

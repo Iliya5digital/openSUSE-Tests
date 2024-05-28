@@ -1,0 +1,212 @@
+free -h
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       326Mi       1.1Gi       5.0Mi       641Mi       1.6Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+vmstat
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 1  0      0 1184456   2132 654372    0    0  4250  3591  417 1565  7 21 69  3  0
+
+fdisk -l
+Disk /dev/vda: 30 GiB, 32212254720 bytes, 62914560 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: D18F3E4B-5AAA-4415-B7ED-157BB66E2209
+
+Device        Start      End  Sectors Size Type
+/dev/vda1      2048    18431    16384   8M BIOS boot
+/dev/vda2     18432 58718207 58699776  28G Linux filesystem
+/dev/vda3  58718208 62914526  4196319   2G Linux swap
+
+
+Disk /dev/vdb: 20 GiB, 21474836480 bytes, 41943040 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda2        28G  2.3G   26G   9% /
+devtmpfs        4.0M     0  4.0M   0% /dev
+tmpfs           987M   84K  987M   1% /dev/shm
+tmpfs           395M  5.8M  389M   2% /run
+/dev/vda2        28G  2.3G   26G   9% /.snapshots
+/dev/vda2        28G  2.3G   26G   9% /boot/grub2/i386-pc
+/dev/vda2        28G  2.3G   26G   9% /boot/grub2/x86_64-efi
+/dev/vda2        28G  2.3G   26G   9% /opt
+/dev/vda2        28G  2.3G   26G   9% /home
+/dev/vda2        28G  2.3G   26G   9% /root
+/dev/vda2        28G  2.3G   26G   9% /srv
+/dev/vda2        28G  2.3G   26G   9% /usr/local
+/dev/vda2        28G  2.3G   26G   9% /var
+tmpfs           987M   20K  987M   1% /tmp
+tmpfs           198M  4.0K  198M   1% /run/user/0
+shm              63M     0   63M   0% /var/lib/containers/storage/overlay-containers/bd65ab3e2fd9ff6cde077e17ee79e961efefae170b7a4f143440378534d29826/userdata/shm
+overlay          28G  2.3G   26G   9% /var/lib/containers/storage/overlay/9cb0ced15f36b0ffc9a7b19e3282cd7aa0dae62809118f6c0037a3d026c1bcd6/merged
+
+df -i
+Filesystem      Inodes IUsed   IFree IUse% Mounted on
+/dev/vda2            0     0       0     - /
+devtmpfs        248375   487  247888    1% /dev
+tmpfs           252503     2  252501    1% /dev/shm
+tmpfs           819200   790  818410    1% /run
+/dev/vda2            0     0       0     - /.snapshots
+/dev/vda2            0     0       0     - /boot/grub2/i386-pc
+/dev/vda2            0     0       0     - /boot/grub2/x86_64-efi
+/dev/vda2            0     0       0     - /opt
+/dev/vda2            0     0       0     - /home
+/dev/vda2            0     0       0     - /root
+/dev/vda2            0     0       0     - /srv
+/dev/vda2            0     0       0     - /usr/local
+/dev/vda2            0     0       0     - /var
+tmpfs          1048576    16 1048560    1% /tmp
+tmpfs            50500    24   50476    1% /run/user/0
+shm             252503     1  252502    1% /var/lib/containers/storage/overlay-containers/bd65ab3e2fd9ff6cde077e17ee79e961efefae170b7a4f143440378534d29826/userdata/shm
+overlay              0     0       0     - /var/lib/containers/storage/overlay/9cb0ced15f36b0ffc9a7b19e3282cd7aa0dae62809118f6c0037a3d026c1bcd6/merged
+
+Top 10 CPU Processes
+ 3.8     7 root     [kworker/0:0-events_freezable_pwr_ef]
+ 2.1     1 root     /usr/lib/systemd/systemd --switched-root --system --deserialize=44
+ 1.9   419 root     [kworker/0:6-events]
+ 0.4  1276 root     /usr/lib/systemd/systemd --user
+ 0.3   191 root     [kworker/0:4-cgroup_destroy]
+ 0.2    10 root     [kworker/u4:0-btrfs-delayed-meta]
+ 0.1   868 message+ /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+ 0.1   528 root     /usr/lib/systemd/systemd-journald
+ 0.1   384 root     [kworker/0:5-events]
+ 0.1   322 root     [kworker/u4:3-btrfs-endio-write]
+ 0.1   132 root     [kworker/0:2-events]
+
+Top 10 Memory Processes
+ 0.8   970 root     /usr/sbin/NetworkManager --no-daemon
+ 0.7  1276 root     /usr/lib/systemd/systemd --user
+ 0.7   528 root     /usr/lib/systemd/systemd-journald
+ 0.7     1 root     /usr/lib/systemd/systemd --switched-root --system --deserialize=44
+ 0.5   560 root     /usr/lib/systemd/systemd-udevd
+ 0.4  1044 root     sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+ 0.4   961 polkitd  /usr/libexec/polkit-1/polkitd --no-debug
+ 0.4   877 root     /usr/lib/systemd/systemd-logind
+ 0.3 12027 root     (udev-worker)
+ 0.3 12026 root     (udev-worker)
+ 0.3 12020 root     (udev-worker)
+
+ALL Processes
+USER       PID  PPID %CPU %MEM    VSZ   RSS STAT     TIME CMD
+root         1     0  2.1  0.7  23404 15096 Ss   00:00:02 /usr/lib/systemd/systemd --switched-root --system --deserialize=44
+root         2     0  0.0  0.0      0     0 S    00:00:00 [kthreadd]
+root         3     2  0.0  0.0      0     0 S    00:00:00 [pool_workqueue_release]
+root         4     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-rcu_g]
+root         5     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-slub_]
+root         6     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-netns]
+root         7     2  3.8  0.0      0     0 I    00:00:03 [kworker/0:0-events]
+root         8     2  0.0  0.0      0     0 I    00:00:00 [kworker/0:1-events]
+root         9     2  0.0  0.0      0     0 I<   00:00:00 [kworker/0:0H-events_highpri]
+root        10     2  0.2  0.0      0     0 I    00:00:00 [kworker/u4:0-btrfs-delayed-meta]
+root        11     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-mm_pe]
+root        12     2  0.0  0.0      0     0 I    00:00:00 [rcu_tasks_kthread]
+root        13     2  0.0  0.0      0     0 I    00:00:00 [rcu_tasks_rude_kthread]
+root        14     2  0.0  0.0      0     0 I    00:00:00 [rcu_tasks_trace_kthread]
+root        15     2  0.1  0.0      0     0 S    00:00:00 [ksoftirqd/0]
+root        16     2  0.0  0.0      0     0 I    00:00:00 [rcu_preempt]
+root        17     2  0.0  0.0      0     0 S    00:00:00 [rcu_exp_par_gp_kthread_worker/0]
+root        18     2  0.0  0.0      0     0 S    00:00:00 [rcu_exp_gp_kthread_worker]
+root        19     2  0.0  0.0      0     0 S    00:00:00 [migration/0]
+root        20     2  0.0  0.0      0     0 S    00:00:00 [idle_inject/0]
+root        21     2  0.0  0.0      0     0 S    00:00:00 [cpuhp/0]
+root        23     2  0.0  0.0      0     0 S    00:00:00 [kdevtmpfs]
+root        24     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-inet_]
+root        25     2  0.0  0.0      0     0 I    00:00:00 [kworker/u4:1-events_unbound]
+root        26     2  0.0  0.0      0     0 S    00:00:00 [kauditd]
+root        27     2  0.0  0.0      0     0 S    00:00:00 [khungtaskd]
+root        28     2  0.0  0.0      0     0 S    00:00:00 [oom_reaper]
+root        29     2  0.0  0.0      0     0 I    00:00:00 [kworker/u4:2-writeback]
+root        30     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-write]
+root        31     2  0.0  0.0      0     0 S    00:00:00 [kcompactd0]
+root        32     2  0.0  0.0      0     0 SN   00:00:00 [ksmd]
+root        33     2  0.0  0.0      0     0 SN   00:00:00 [khugepaged]
+root        34     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-kinte]
+root        35     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-kbloc]
+root        36     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-blkcg]
+root        37     2  0.0  0.0      0     0 S    00:00:00 [irq/9-acpi]
+root        38     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-tpm_d]
+root        39     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-edac-]
+root        40     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-devfr]
+root        41     2  0.0  0.0      0     0 S    00:00:00 [watchdogd]
+root        42     2  0.0  0.0      0     0 I<   00:00:00 [kworker/0:1H-kblockd]
+root        43     2  0.0  0.0      0     0 S    00:00:00 [kswapd0]
+root        50     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-kthro]
+root        54     2  0.0  0.0      0     0 S    00:00:00 [khvcd]
+root        55     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-mld]
+root        56     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-ipv6_]
+root        61     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-kstrp]
+root        62     2  0.0  0.0      0     0 I<   00:00:00 [kworker/u5:0]
+root       128     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-charg]
+root       131     2  0.0  0.0      0     0 S    00:00:00 [hwrng]
+root       132     2  0.1  0.0      0     0 I    00:00:00 [kworker/0:2-events]
+root       190     2  0.0  0.0      0     0 I    00:00:00 [kworker/0:3-events]
+root       191     2  0.3  0.0      0     0 I    00:00:00 [kworker/0:4-cgroup_destroy]
+root       322     2  0.1  0.0      0     0 I    00:00:00 [kworker/u4:3-btrfs-endio-write]
+root       323     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-crypt]
+root       326     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-kalua]
+root       328     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-ttm]
+root       330     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-kmpat]
+root       339     2  0.0  0.0      0     0 S    00:00:00 [scsi_eh_0]
+root       340     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-scsi_]
+root       344     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-ata_s]
+root       370     2  0.0  0.0      0     0 S    00:00:00 [scsi_eh_1]
+root       372     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-scsi_]
+root       375     2  0.0  0.0      0     0 S    00:00:00 [scsi_eh_2]
+root       376     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-scsi_]
+root       384     2  0.1  0.0      0     0 I    00:00:00 [kworker/0:5-events]
+root       419     2  1.9  0.0      0     0 I    00:00:01 [kworker/0:6-events]
+root       438     2  0.0  0.0      0     0 I    00:00:00 [kworker/0:7]
+root       463     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       464     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       465     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       466     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       467     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       468     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       469     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       470     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       471     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       472     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       473     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       474     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       475     2  0.0  0.0      0     0 I<   00:00:00 [kworker/R-btrfs]
+root       476     2  0.0  0.0      0     0 S    00:00:00 [btrfs-cleaner]
+root       477     2  0.0  0.0      0     0 S    00:00:00 [btrfs-transaction]
+root       498     2  0.0  0.0      0     0 I    00:00:00 [kworker/u4:4-btrfs-endio-write]
+root       528     1  0.1  0.7 100368 14232 Ss   00:00:00 /usr/lib/systemd/systemd-journald
+root       560     1  0.0  0.5  35504 11136 Ss   00:00:00 /usr/lib/systemd/systemd-udevd
+root       809     1  0.0  0.0  12888  1936 S<sl 00:00:00 /sbin/auditd
+message+   868     1  0.1  0.2   9820  5504 Ss   00:00:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root       872     1  0.0  0.2   8460  4808 Ss   00:00:00 /usr/sbin/rngd --foreground --fill-watermark=3700
+root       877     1  0.0  0.4  18540  9344 Ss   00:00:00 /usr/lib/systemd/systemd-logind
+root       955     1  0.0  0.3 315304  7552 Ssl  00:00:00 /usr/sbin/pcscd --foreground
+polkitd    961     1  0.0  0.4 308964  8996 Ssl  00:00:00 /usr/libexec/polkit-1/polkitd --no-debug
+root       970     1  0.0  0.8 401924 17920 Ssl  00:00:00 /usr/sbin/NetworkManager --no-daemon
+root      1032     1  0.0  0.1   3208  2176 Ss+  00:00:00 /sbin/agetty -o -p -- \u --noclear - linux
+root      1035     1  0.0  0.3  11496  6400 Ss   00:00:00 login -- root
+root      1038     1  0.0  0.1   5792  2432 Ss+  00:00:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+root      1042     1  0.0  0.1   5792  2432 Ss+  00:00:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+root      1044     1  0.0  0.4  18248  9088 Ss   00:00:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+chrony    1057     1  0.0  0.1  85128  4016 S    00:00:00 /usr/sbin/chronyd
+root      1240     1  0.0  0.2  39660  4776 Ss   00:00:00 /usr/lib/postfix/bin//master -w
+postfix   1241  1240  0.0  0.3  39696  6656 S    00:00:00 pickup -l -t fifo -u
+postfix   1242  1240  0.0  0.3  56256  6784 S    00:00:00 qmgr -l -t fifo -u
+root      1261     1  0.0  0.1   7748  3328 Ss   00:00:00 /usr/sbin/cron -n
+root      1276     1  0.4  0.7  24480 14976 Ss   00:00:00 /usr/lib/systemd/systemd --user
+root      1278  1276  0.0  0.1  21484  3336 S    00:00:00 (sd-pam)
+root      1287  1035  0.0  0.3   7688  6144 Ss   00:00:00 /bin/bash
+root      1485     2  0.0  0.0      0     0 I    00:00:00 [kworker/u4:5-btrfs-endio-write]
+root      1488     2  0.0  0.0      0     0 I    00:00:00 [kworker/u4:6]
+root     11774  1276  0.0  0.2   9268  4864 Ss   00:00:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root     12020   560  0.0  0.3  35508  6140 S    00:00:00 (udev-worker)
+root     12026   560  0.0  0.3  35508  6140 S    00:00:00 (udev-worker)
+root     12027   560  0.0  0.3  35508  6140 S    00:00:00 (udev-worker)
+root     12309     1  0.0  0.1   8688  2072 Ss   00:00:00 /usr/bin/conmon --api-version 1 -c bd65ab3e2fd9ff6cde077e17ee79e961efefae170b7a4f143440378534d29826 -u bd65ab3e2fd9ff6cde077e17ee79e961efefae170b7a4f143440378534d29826 -r /usr/bin/crun -b /var/lib/containers/storage/overlay-containers/bd65ab3e2fd9ff6cde077e17ee79e961efefae170b7a4f143440378534d29826/userdata -p /run/containers/storage/overlay-containers/bd65ab3e2fd9ff6cde077e17ee79e961efefae170b7a4f143440378534d29826/userdata/pidfile -n sut_container --exit-dir /run/libpod/exits --persist-dir /run/libpod/persist/bd65ab3e2fd9ff6cde077e17ee79e961efefae170b7a4f143440378534d29826 --full-attach -s -l journald --log-level warning --syslog --runtime-arg --log-format=json --runtime-arg --log --runtime-arg=/run/containers/storage/overlay-containers/bd65ab3e2fd9ff6cde077e17ee79e961efefae170b7a4f143440378534d29826/userdata/oci-log -i --conmon-pidfile /run/containers/storage/overlay-containers/bd65ab3e2fd9ff6cde077e17ee79e961efefae170b7a4f143440378534d29826/userdata/conmon.pid --exit-command /usr/bin/podman --exit-command-arg --root --exit-command-arg /var/lib/containers/storage --exit-command-arg --runroot --exit-command-arg /run/containers/storage --exit-command-arg --log-level --exit-command-arg warning --exit-command-arg --cgroup-manager --exit-command-arg systemd --exit-command-arg --tmpdir --exit-command-arg /run/libpod --exit-command-arg --network-config-dir --exit-command-arg  --exit-command-arg --network-backend --exit-command-arg netavark --exit-command-arg --volumepath --exit-command-arg /var/lib/containers/storage/volumes --exit-command-arg --db-backend --exit-command-arg sqlite --exit-command-arg --transient-store=false --exit-command-arg --runtime --exit-command-arg crun --exit-command-arg --storage-driver --exit-command-arg overlay --exit-command-arg --storage-opt --exit-command-arg overlay.mountopt=nodev,metacopy=on --exit-command-arg --events-backend --exit-command-arg journald --exit-command-arg container --exit-command-arg cleanup --exit-command-arg --rm --exit-command-arg bd65ab3e2fd9ff6cde077e17ee79e961efefae170b7a4f143440378534d29826
+root     12312 12309  0.0  0.1   5752  2304 Ss   00:00:00 sleep infinity
+root     12594  1287  0.0  0.1   7452  3328 R+   00:00:00 ps axwwo user,pid,ppid,%cpu,%mem,vsz,rss,stat,time,cmd

@@ -1,0 +1,65 @@
+● susetest
+    State: running
+    Units: 410 loaded (incl. loaded aliases)
+     Jobs: 0 queued
+   Failed: 0 units
+    Since: Tue 2024-05-28 06:51:51 EDT; 2min 1s ago
+  systemd: 255.6+suse.30.g3ea0e1dff3
+   CGroup: /
+           ├─init.scope
+           │ └─1 /usr/lib/systemd/systemd --switched-root --system --deserialize=43
+           ├─system.slice
+           │ ├─NetworkManager.service
+           │ │ └─969 /usr/sbin/NetworkManager --no-daemon
+           │ ├─auditd.service
+           │ │ └─749 /sbin/auditd
+           │ ├─chronyd.service
+           │ │ └─1053 /usr/sbin/chronyd
+           │ ├─cron.service
+           │ │ └─1260 /usr/sbin/cron -n
+           │ ├─dbus.service
+           │ │ └─867 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+           │ ├─docker.service
+           │ │ ├─31366 /usr/bin/dockerd --add-runtime oci=/usr/sbin/runc
+           │ │ └─31371 containerd --config /var/run/docker/containerd/containerd.toml --log-level debug
+           │ ├─pcscd.service
+           │ │ └─954 /usr/sbin/pcscd --foreground
+           │ ├─polkit.service
+           │ │ └─960 /usr/libexec/polkit-1/polkitd --no-debug
+           │ ├─postfix.service
+           │ │ ├─1239 /usr/lib/postfix/bin//master -w
+           │ │ ├─1240 pickup -l -t fifo -u
+           │ │ └─1241 qmgr -l -t fifo -u
+           │ ├─rng-tools.service
+           │ │ └─871 /usr/sbin/rngd --foreground --fill-watermark=3700
+           │ ├─sshd.service
+           │ │ └─1042 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+           │ ├─system-getty.slice
+           │ │ └─getty@tty1.service
+           │ │   └─1028 /sbin/agetty -o "-p -- \\u" --noclear - linux
+           │ ├─system-serial\x2dgetty.slice
+           │ │ ├─serial-getty@hvc1.service
+           │ │ │ └─1036 /sbin/agetty -o "-p -- \\u" --keep-baud 115200,57600,38400,9600 - vt220
+           │ │ └─serial-getty@ttyS0.service
+           │ │   └─1040 /sbin/agetty -o "-p -- \\u" --keep-baud 115200,57600,38400,9600 - vt220
+           │ ├─systemd-journald.service
+           │ │ └─527 /usr/lib/systemd/systemd-journald
+           │ ├─systemd-logind.service
+           │ │ └─873 /usr/lib/systemd/systemd-logind
+           │ └─systemd-udevd.service
+           │   └─udev
+           │     └─559 /usr/lib/systemd/systemd-udevd
+           └─user.slice
+             └─user-0.slice
+               ├─session-1.scope
+               │ ├─ 1033 "login -- root"
+               │ ├─ 1286 /bin/bash
+               │ ├─24802 systemctl status
+               │ └─24803 tee /tmp/systemctl_status.log
+               └─user@0.service
+                 ├─init.scope
+                 │ ├─1275 /usr/lib/systemd/systemd --user
+                 │ └─1277 "(sd-pam)"
+                 └─session.slice
+                   └─dbus.service
+                     └─30888 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
