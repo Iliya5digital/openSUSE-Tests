@@ -1,0 +1,8 @@
+[2024-05-28T07:26:27.808847Z] [info] Preparing cgroup to start isotovideo
+[2024-05-28T07:26:27.809398Z] [info] Using cgroup /sys/fs/cgroup/systemd/openqa.slice/openqa-worker.slice/openqa-worker-auto-restart@16.service/4227087
+[2024-05-28T07:26:27.809604Z] [info] Starting isotovideo container
+[2024-05-28T07:26:27.812075Z] [info] isotovideo has been started (PID: 129170)
+[2024-05-28T07:26:27.812735Z] [info] 129170: WORKING 4227087
+[2024-05-28T07:30:50.639491Z] [info] Uploading video.webm
+[2024-05-28T07:30:50.675640Z] [info] Uploading autoinst-log.txt
+[2024-05-28T07:30:50.698269Z] [info] Uploading worker-log.txt

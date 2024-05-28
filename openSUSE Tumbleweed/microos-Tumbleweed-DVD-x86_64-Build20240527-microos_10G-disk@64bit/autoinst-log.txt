@@ -1,0 +1,537 @@
+[2024-05-28T07:25:37.256239Z] [info] +++ setup notes +++
+[2024-05-28T07:25:37.256566Z] [info] Running on openqaworker23:16 (Linux 5.14.21-150500.55.65-default #1 SMP PREEMPT_DYNAMIC Thu May 23 04:57:11 UTC 2024 (a46829d) x86_64)
+[2024-05-28T07:25:37.263240Z] [debug] Found ASSET_256, caching openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso.sha256
+[2024-05-28T07:25:37.266473Z] [info] Downloading openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso.sha256, request #234243 sent to Cache Service
+[2024-05-28T07:25:47.384134Z] [info] Download of openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso.sha256 processed:
+[info] [#234243] Cache size of "/var/lib/openqa/cache" is 397 GiB, with limit 400 GiB
+[info] [#234243] Downloading "openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso.sha256" from "https://openqa.opensuse.org/tests/4227087/asset/other/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso.sha256"
+[info] [#234243] Size of "/var/lib/openqa/cache/openqa.opensuse.org/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso.sha256" is 121 Byte, with ETag ""6655773b-79""
+[info] [#234243] Download of "/var/lib/openqa/cache/openqa.opensuse.org/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso.sha256" successful (1547.02 Byte/s), new cache size is 397 GiB
+
+[2024-05-28T07:25:47.386614Z] [debug] Found ISO, caching openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso
+[2024-05-28T07:25:47.389427Z] [info] Downloading openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso, request #234244 sent to Cache Service
+[2024-05-28T07:26:17.675549Z] [info] Download of openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso processed:
+[info] [#234244] Cache size of "/var/lib/openqa/cache" is 397 GiB, with limit 400 GiB
+[info] [#234244] Downloading "openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso" from "https://openqa.opensuse.org/tests/4227087/asset/iso/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso"
+[info] [#234244] Size of "/var/lib/openqa/cache/openqa.opensuse.org/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso" is 2.9 GiB, with ETag ""66555d37-b7f00000""
+[info] [#234244] Download of "/var/lib/openqa/cache/openqa.opensuse.org/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso" successful (116 MiB/s), new cache size is 400 GiB
+
+[2024-05-28T07:26:17.678242Z] [info] Rsync from 'rsync://openqa.opensuse.org/tests' to '/var/lib/openqa/cache/openqa.opensuse.org', request #234245 sent to Cache Service
+[2024-05-28T07:26:27.808214Z] [info] Output of rsync:
+[info] [#234245] Calling: rsync -avHP --timeout 1800 rsync://openqa.opensuse.org/tests/ --delete /var/lib/openqa/cache/openqa.opensuse.org/tests/
+Try 1:
+receiving incremental file list
+obs/.git/
+obs/.git/FETCH_HEAD
+              0   0%    0.00kB/s    0:00:00              483 100%  471.68kB/s    0:00:00 (xfr#1, ir-chk=1158/1178)
+obs/.git/index
+              0   0%    0.00kB/s    0:00:00            2,745 100%    2.62MB/s    0:00:00 (xfr#2, ir-chk=1153/1178)
+obs/.git/logs/HEAD
+              0   0%    0.00kB/s    0:00:00      389,763,072  63%  371.71MB/s    0:00:00      616,935,041 100%  370.50MB/s    0:00:01 (xfr#3, ir-chk=1133/1178)
+obs/.git/objects/
+obs/.git/refs/heads/
+openqa/.git/
+openqa/.git/FETCH_HEAD
+              0   0%    0.00kB/s    0:00:00              554 100%    0.63kB/s    0:00:00 (xfr#4, ir-chk=1167/1450)
+openqa/.git/index
+              0   0%    0.00kB/s    0:00:00            3,093 100%    3.54kB/s    0:00:00 (xfr#5, ir-chk=1162/1450)
+openqa/.git/logs/HEAD
+              0   0%    0.00kB/s    0:00:00       10,396,265 100%   11.24MB/s    0:00:00 (xfr#6, ir-chk=1140/1450)
+openqa/.git/objects/
+openqa/.git/refs/heads/
+openqa/products/openqa/needles/.git/
+openqa/products/openqa/needles/.git/FETCH_HEAD
+              0   0%    0.00kB/s    0:00:00              259 100%    0.29kB/s    0:00:00 (xfr#7, ir-chk=1019/1609)
+openqa/products/openqa/needles/.git/index
+              0   0%    0.00kB/s    0:00:00           22,443 100%   24.74kB/s    0:00:00 (xfr#8, ir-chk=1014/1609)
+openqa/products/openqa/needles/.git/logs/HEAD
+              0   0%    0.00kB/s    0:00:00       20,783,749 100%   21.09MB/s    0:00:00 (xfr#9, ir-chk=1002/1619)
+openqa/products/openqa/needles/.git/objects/
+openqa/products/openqa/needles/.git/refs/heads/
+opensuse/.git/
+opensuse/.git/FETCH_HEAD
+              0   0%    0.00kB/s    0:00:00            7,264 100%    7.48kB/s    0:00:00 (xfr#10, ir-chk=1012/1698)
+opensuse/.git/index
+              0   0%    0.00kB/s    0:00:00          636,809 100%  654.61kB/s    0:00:00 (xfr#11, ir-chk=1007/1698)
+opensuse/.git/logs/HEAD
+              0   0%    0.00kB/s    0:00:00       18,946,080  66%   18.07MB/s    0:00:00       28,673,497 100%   26.70MB/s    0:00:01 (xfr#12, ir-chk=1007/1717)
+opensuse/.git/objects/
+opensuse/.git/refs/heads/
+opensuse/products/opensuse/needles/.git/
+opensuse/products/opensuse/needles/.git/FETCH_HEAD
+              0   0%    0.00kB/s    0:00:00              810 100%    3.80kB/s    0:00:00 (xfr#13, ir-chk=1014/21419)
+opensuse/products/opensuse/needles/.git/index
+              0   0%    0.00kB/s    0:00:00        1,574,039 100%    7.05MB/s    0:00:00 (xfr#14, ir-chk=1009/21419)
+opensuse/products/opensuse/needles/.git/logs/HEAD
+              0   0%    0.00kB/s    0:00:00       24,201,544  18%   23.08MB/s    0:00:04      130,867,763 100%   97.73MB/s    0:00:01 (xfr#15, ir-chk=1009/21438)
+opensuse/products/opensuse/needles/.git/objects/
+opensuse/products/opensuse/needles/.git/refs/heads/
+
+sent 347,794 bytes  received 1,392,253 bytes  316,372.18 bytes/sec
+total size is 5,860,243,674  speedup is 3,367.87
+
+
+[2024-05-28T07:26:27.808344Z] [info] Finished to rsync tests
+[2024-05-28T07:26:27.812963Z] [debug] +++ worker notes +++
+[37m[2024-05-28T07:26:28.157324Z] [debug] [pid:129170] Current version is 4.6.1716387241.58dd214 [interface v40][0m
+[37m[2024-05-28T07:26:28.166480Z] [debug] [pid:129170] git hash in 'microos': 62966fab5fb01087482fdf9f80e0ce3c17f41bb0[0m
+[37m[2024-05-28T07:26:28.177345Z] [debug] [pid:129170] git url in 'microos': https://github.com/os-autoinst/os-autoinst-distri-opensuse.git[0m
+[37m[2024-05-28T07:26:28.451022Z] [debug] [pid:129170] scheduling bootloader tests/installation/bootloader.pm[0m
+[37m[2024-05-28T07:26:28.454114Z] [debug] [pid:129170] scheduling welcome tests/installation/welcome.pm[0m
+[37m[2024-05-28T07:26:28.454684Z] [debug] [pid:129170] scheduling installation_mode tests/installation/installation_mode.pm[0m
+[37m[2024-05-28T07:26:28.455185Z] [debug] [pid:129170] scheduling logpackages tests/installation/logpackages.pm[0m
+[37m[2024-05-28T07:26:28.455884Z] [debug] [pid:129170] scheduling system_role tests/installation/system_role.pm[0m
+[37m[2024-05-28T07:26:28.456550Z] [debug] [pid:129170] scheduling ntp_config_settings tests/installation/ntp_config_settings.pm[0m
+[37m[2024-05-28T07:26:28.457524Z] [debug] [pid:129170] scheduling user_settings_root tests/installation/user_settings_root.pm[0m
+[37m[2024-05-28T07:26:28.458574Z] [debug] [pid:129170] scheduling installation_overview tests/installation/installation_overview.pm[0m
+[2024-05-28T07:26:28.465298Z] [info] [pid:129180] cmdsrv: daemon reachable under http://*:20163/hOl2vFX6yVebpw_4/
+[2024-05-28T07:26:28.466735Z] [info] [pid:129180] Listening at "http://[::]:20163"
+Web application available at http://[::]:20163
+[37m[2024-05-28T07:26:28.471243Z] [debug] [pid:129170] git hash in 'microos/products/microos/needles': 9c264ee66e0366e6bfd7b2a1d219ca52ddb44beb[0m
+[37m[2024-05-28T07:26:28.487280Z] [debug] [pid:129170] git url in 'microos/products/microos/needles': git@github.com:os-autoinst/os-autoinst-needles-opensuse.git[0m
+[37m[2024-05-28T07:26:28.487432Z] [debug] [pid:129170] init needles from microos/products/microos/needles[0m
+[37m[2024-05-28T07:26:29.159953Z] [debug] [pid:129170] loaded 7144 needles[0m
+[37m[2024-05-28T07:26:29.268724Z] [debug] [pid:129170] 129170: channel_out 15, channel_in 14[0m
+[37m[2024-05-28T07:26:29.332773Z] [debug] [pid:129377] 129377: cmdpipe 13, rsppipe 16[0m
+[37m[2024-05-28T07:26:29.333147Z] [debug] [pid:129377] started mgmt loop with pid 129377[0m
+[37m[2024-05-28T07:26:29.394275Z] [debug] [pid:129377] Launching external video encoder: ffmpeg -y -hide_banner -nostats -r 24 -f image2pipe -vcodec ppm -i - -pix_fmt yuv420p -c:v libvpx-vp9 -crf 35 -b:v 1500k -cpu-used 1 'video.webm'[0m
+[37m[2024-05-28T07:26:29.468483Z] [debug] [pid:129377] qemu version detected: 7.1.0[0m
+[37m[2024-05-28T07:26:29.470170Z] [debug] [pid:129377] running `/usr/bin/chattr +C /var/lib/openqa/pool/16/raid`[0m
+[37m[2024-05-28T07:26:29.485297Z] [debug] [pid:129377] Command `/usr/bin/chattr +C /var/lib/openqa/pool/16/raid` terminated with 1
+  /usr/bin/chattr: Operation not supported while setting flags on /var/lib/openqa/pool/16/raid[0m
+[37m[2024-05-28T07:26:29.485396Z] [debug] [pid:129377] Configuring storage controllers and block devices[0m
+[37m[2024-05-28T07:26:29.486032Z] [debug] [pid:129377] running `/usr/bin/qemu-img info --output=json /var/lib/openqa/pool/16/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso`[0m
+[37m[2024-05-28T07:26:29.527493Z] [debug] [pid:129377] Initializing block device images[0m
+[37m[2024-05-28T07:26:29.527672Z] [debug] [pid:129377] running `/usr/bin/qemu-img create -f qcow2 /var/lib/openqa/pool/16/raid/hd0 10G`[0m
+[37m[2024-05-28T07:26:29.567082Z] [debug] [pid:129377] Formatting '/var/lib/openqa/pool/16/raid/hd0', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=10737418240 lazy_refcounts=off refcount_bits=16[0m
+[37m[2024-05-28T07:26:29.567210Z] [debug] [pid:129377] running `/usr/bin/qemu-img create -f qcow2 -F raw -b /var/lib/openqa/pool/16/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso /var/lib/openqa/pool/16/raid/cd0-overlay0 3085959168`[0m
+[37m[2024-05-28T07:26:29.605334Z] [debug] [pid:129377] Formatting '/var/lib/openqa/pool/16/raid/cd0-overlay0', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=3085959168 backing_file=/var/lib/openqa/pool/16/openSUSE-MicroOS-DVD-x86_64-Snapshot20240527-Media.iso backing_fmt=raw lazy_refcounts=off refcount_bits=16[0m
+[37m[2024-05-28T07:26:29.605430Z] [debug] [pid:129377] init_blockdev_images: Finished creating block devices[0m
+[37m[2024-05-28T07:26:29.606561Z] [debug] [pid:129377] starting: /usr/bin/qemu-system-x86_64 -device VGA,edid=on,xres=1024,yres=768 -only-migratable -chardev ringbuf,id=serial0,logfile=serial0,logappend=on -serial chardev:serial0 -audiodev none,id=snd0 -device intel-hda -device hda-output,audiodev=snd0 -global isa-fdc.fdtypeA=none -m 1024 -cpu host -netdev user,id=qanet0 -device virtio-net,netdev=qanet0,mac=52:54:00:12:34:56 -object rng-random,filename=/dev/urandom,id=rng0 -device virtio-rng-pci,rng=rng0 -boot once=d -device qemu-xhci -device usb-tablet -smp 1 -enable-kvm -no-shutdown -vnc :106,share=force-shared -device virtio-serial -chardev pipe,id=virtio_console,path=virtio_console,logfile=virtio_console.log,logappend=on -device virtconsole,chardev=virtio_console,name=org.openqa.console.virtio_console -chardev pipe,id=virtio_console_user,path=virtio_console_user,logfile=virtio_console_user.log,logappend=on -device virtconsole,chardev=virtio_console_user,name=org.openqa.console.virtio_console_user -chardev socket,path=qmp_socket,server=on,wait=off,id=qmp_socket,logfile=qmp_socket.log,logappend=on -qmp chardev:qmp_socket -S -device virtio-scsi-pci,id=scsi0 -blockdev driver=file,node-name=hd0-file,filename=/var/lib/openqa/pool/16/raid/hd0,cache.no-flush=on -blockdev driver=qcow2,node-name=hd0,file=hd0-file,cache.no-flush=on,discard=unmap -device virtio-blk,id=hd0-device,drive=hd0,serial=hd0 -blockdev driver=file,node-name=cd0-overlay0-file,filename=/var/lib/openqa/pool/16/raid/cd0-overlay0,cache.no-flush=on -blockdev driver=qcow2,node-name=cd0-overlay0,file=cd0-overlay0-file,cache.no-flush=on,discard=unmap -device scsi-cd,id=cd0-device,drive=cd0-overlay0,serial=cd0[0m
+[37m[2024-05-28T07:26:29.612513Z] [debug] [pid:129377] Waiting for 0 attempts[0m
+[37m[2024-05-28T07:26:30.613063Z] [debug] [pid:129377] Waiting for 1 attempts[0m
+[37m[2024-05-28T07:26:31.613440Z] [debug] [pid:129377] Finished after 2 attempts[0m
+[37m[2024-05-28T07:26:31.626306Z] [debug] [pid:129377] Establishing VNC connection to localhost:6006[0m
+[37m[2024-05-28T07:26:31.628720Z] [debug] [pid:129377] pointer type 0 0 640 480 -257[0m
+[37m[2024-05-28T07:26:31.628796Z] [debug] [pid:129377] led state 0 1 1 -261[0m
+[37m[2024-05-28T07:26:31.682829Z] [debug] [pid:129377] Start CPU[0m
+[37m[2024-05-28T07:26:31.683067Z] [debug] [pid:129377] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"42196","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6006","websocket":false}},"event":"VNC_CONNECTED","timestamp":{"microseconds":626849,"seconds":1716881191}}[0m
+[37m[2024-05-28T07:26:31.683154Z] [debug] [pid:129377] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"42196","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6006","websocket":false}},"event":"VNC_INITIALIZED","timestamp":{"microseconds":627898,"seconds":1716881191}}[0m
+[37m[2024-05-28T07:26:31.683228Z] [debug] [pid:129377] EVENT {"event":"RESUME","timestamp":{"microseconds":683075,"seconds":1716881191}}[0m
+GOT GO
+
+[37m[2024-05-28T07:26:31.688270Z] [debug] [pid:129377] QEMU: QEMU emulator version 7.1.0 (SUSE Linux Enterprise 15)[0m
+[37m[2024-05-28T07:26:31.688318Z] [debug] [pid:129377] QEMU: Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers[0m
+[37m[2024-05-28T07:26:31.690959Z] [debug] [pid:129186] Snapshots are supported[0m
+[1;34m[2024-05-28T07:26:31.691966Z] [debug] [pid:129186] ||| starting bootloader tests/installation/bootloader.pm[0m
+[2024-05-28T07:26:31.693447Z] [debug] [pid:129186] tests/installation/bootloader.pm:43 called bootloader_setup::select_bootmenu_option -> products/microos/../../lib/bootloader_setup.pm:330 called testapi::assert_screen
+[2024-05-28T07:26:31.693669Z] [debug] [pid:129186] <<< testapi::assert_screen(mustmatch="inst-bootmenu", timeout=30)
+[31m[2024-05-28T07:26:33.536406Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.85 seconds for 55 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:26:33.536489Z] [debug] [pid:129377] no match: 29.0s, best candidate: bootloader-grub2-leap-15.5-timeout-uefi-20230219 (0.29)[0m
+Input #0, image2pipe, from 'pipe:':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: ppm, rgb24, 1024x768, 24 fps, 24 tbr, 24 tbn, 24 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (ppm (native) -> vp9 (libvpx-vp9))
+[libvpx-vp9 @ 0x557f3e9aa900] v1.11.0
+Output #0, webm, to 'video.webm':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0: Video: vp9, yuv420p(tv, progressive), 1024x768, q=2-31, 1500 kb/s, 24 fps, 1k tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libvpx-vp9
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+[37m[2024-05-28T07:26:34.059130Z] [debug] [pid:129377] no match: 28.0s, best candidate: bootloader-grub2-leap-15.5-timeout-uefi-20230219 (0.29)[0m
+[32m[2024-05-28T07:26:35.068407Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found bootmenu-TW-kubic-dvd-20191209, similarity 1.00 @ 0/0[0m
+[2024-05-28T07:26:35.069420Z] [debug] [pid:129186] tests/installation/bootloader.pm:43 called bootloader_setup::select_bootmenu_option -> products/microos/../../lib/bootloader_setup.pm:348 called testapi::send_key_until_needlematch
+[2024-05-28T07:26:35.069541Z] [debug] [pid:129186] <<< testapi::check_screen(mustmatch="inst-oninstallation", timeout=0)
+[37m[2024-05-28T07:26:36.068647Z] [debug] [pid:129377] no match: -0.7s, best candidate: inst-oninstallation-20191209 (0.45)[0m
+[32m[2024-05-28T07:26:36.136688Z] [debug] [pid:129186] >>> testapi::_check_backend_response: match=inst-oninstallation timed out after 0 (check_screen)[0m
+[2024-05-28T07:26:36.152305Z] [debug] [pid:129186] tests/installation/bootloader.pm:43 called bootloader_setup::select_bootmenu_option -> products/microos/../../lib/bootloader_setup.pm:348 called testapi::send_key_until_needlematch
+[2024-05-28T07:26:36.152425Z] [debug] [pid:129186] <<< testapi::wait_screen_change(timeout=10, similarity_level=50)
+[2024-05-28T07:26:36.152969Z] [debug] [pid:129186] tests/installation/bootloader.pm:43 called bootloader_setup::select_bootmenu_option -> products/microos/../../lib/bootloader_setup.pm:348 called testapi::send_key_until_needlematch
+[2024-05-28T07:26:36.153048Z] [debug] [pid:129186] <<< testapi::send_key(key="down", wait_screen_change=0)
+[32m[2024-05-28T07:26:36.603454Z] [debug] [pid:129186] >>> testapi::wait_screen_change: screen change seen after 0.177752017974854 seconds (similarity: 25.510891502542)[0m
+[2024-05-28T07:26:36.603647Z] [debug] [pid:129186] tests/installation/bootloader.pm:43 called bootloader_setup::select_bootmenu_option -> products/microos/../../lib/bootloader_setup.pm:348 called testapi::send_key_until_needlematch
+[2024-05-28T07:26:36.603800Z] [debug] [pid:129186] <<< testapi::check_screen(mustmatch="inst-oninstallation", timeout=5)
+[32m[2024-05-28T07:26:36.754729Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found inst-oninstallation-20191209, similarity 1.00 @ 246/192[0m
+[2024-05-28T07:26:36.755194Z] [debug] [pid:129186] tests/installation/bootloader.pm:53 called bootloader_setup::bootmenu_default_params -> products/microos/../../lib/bootloader_setup.pm:623 called bootloader_setup::type_boot_parameters -> products/microos/../../lib/bootloader_setup.pm:1592 called testapi::type_string
+[2024-05-28T07:26:36.755349Z] [debug] [pid:129186] <<< testapi::type_string(string="  console=ttyS0 console=tty reboot_timeout=0  ", max_interval=4, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:27:01.851317Z] [debug] [pid:129186] tests/installation/bootloader.pm:56 called bootloader_setup::specific_bootmenu_params -> products/microos/../../lib/bootloader_setup.pm:913 called bootloader_setup::type_boot_parameters -> products/microos/../../lib/bootloader_setup.pm:1592 called testapi::type_string
+[2024-05-28T07:27:01.851540Z] [debug] [pid:129186] <<< testapi::type_string(string="  kernel.softlockup_panic=1  ", max_interval=4, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:27:17.645136Z] [debug] [pid:129186] tests/installation/bootloader.pm:68 called testapi::send_key
+[2024-05-28T07:27:17.645278Z] [debug] [pid:129186] <<< testapi::send_key(key="ret", wait_screen_change=0)
+[2024-05-28T07:27:17.913404Z] [debug] [pid:129186] tests/installation/bootloader.pm:71 called bootloader_setup::parse_bootparams_in_serial -> products/microos/../../lib/bootloader_setup.pm:1507 called testapi::wait_serial
+[2024-05-28T07:27:17.913668Z] [debug] [pid:129186] <<< testapi::wait_serial(expect_not_found=0, quiet=undef, buffer_size=undef, timeout=90, record_output=undef, regexp=qr/command line:.*\[/msi, no_regex=0)
+[32m[2024-05-28T07:27:19.970411Z] [debug] [pid:129186] >>> testapi::wait_serial: (?^msi:command line:.*\[): ok[0m
+[2024-05-28T07:27:19.970652Z] [debug] [pid:129186] tests/installation/bootloader.pm:71 called bootloader_setup::compare_bootparams -> products/microos/../../lib/bootloader_setup.pm:1530 called testapi::record_info
+[2024-05-28T07:27:19.970808Z] [debug] [pid:129186] <<< testapi::record_info(title="params ok", output="Bootloader parameters are typed correctly.\nVerified parameters:\nconsole=ttyS0\nconsole=tty\nreboot_timeout=0\nkernel.softlockup_panic=1", result="ok")
+[1;34m[2024-05-28T07:27:19.973498Z] [debug] [pid:129186] ||| finished bootloader installation (runtime: 48 s)[0m
+[1;34m[2024-05-28T07:27:19.974928Z] [debug] [pid:129186] ||| starting welcome tests/installation/welcome.pm[0m
+[2024-05-28T07:27:19.975684Z] [debug] [pid:129186] tests/installation/welcome.pm:119 called testapi::wait_still_screen
+[2024-05-28T07:27:19.975795Z] [debug] [pid:129186] <<< testapi::wait_still_screen(similarity_level=47, stilltime=5, timeout=30)
+[37m[2024-05-28T07:27:22.364159Z] [debug] [pid:129377] pointer type 1 0 720 400 -257[0m
+[32m[2024-05-28T07:27:32.421482Z] [debug] [pid:129186] >>> testapi::wait_still_screen: detected same image for 5 seconds (12.4398019313812 s elapsed), last detected similarity is 1000000[0m
+[2024-05-28T07:27:32.421729Z] [debug] [pid:129186] tests/installation/welcome.pm:121 called testapi::assert_screen
+[2024-05-28T07:27:32.421958Z] [debug] [pid:129186] <<< testapi::assert_screen(mustmatch=[
+    "inst-welcome-confirm-self-update-server",
+    "scc-invalid-url",
+    "inst-welcome",
+    "linuxrc-dhcp-question"
+  ], timeout=500)
+[31m[2024-05-28T07:27:33.199866Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.78 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:27:33.199977Z] [debug] [pid:129377] no match: 499.9s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:27:33.906233Z] [debug] [pid:129377] no match: 498.9s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:27:34.910132Z] [debug] [pid:129377] no match: 497.9s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:27:35.907942Z] [debug] [pid:129377] no match: 496.9s, best candidate: inst-welcome-20190303 (0.00)[0m
+[31m[2024-05-28T07:27:40.389016Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 3.96 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:27:40.389124Z] [debug] [pid:129377] no match: 495.9s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:27:40.861454Z] [debug] [pid:129377] no match: 492.0s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:27:41.864627Z] [debug] [pid:129377] no match: 491.0s, best candidate: inst-welcome-20190303 (0.00)[0m
+[31m[2024-05-28T07:27:46.418302Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 4.02 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:27:46.418387Z] [debug] [pid:129377] no match: 490.0s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:27:46.748729Z] [debug] [pid:129377] no match: 486.0s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:27:47.711572Z] [debug] [pid:129377] no match: 484.9s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:27:48.422228Z] [debug] [pid:129377] no change: 484.0s[0m
+[37m[2024-05-28T07:27:48.689114Z] [debug] [pid:129377] no match: 484.0s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:27:49.776722Z] [debug] [pid:129377] no match: 483.0s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:27:50.691269Z] [debug] [pid:129377] no match: 481.9s, best candidate: inst-welcome-20190303 (0.00)[0m
+[31m[2024-05-28T07:27:55.447703Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 4.02 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:27:55.447808Z] [debug] [pid:129377] no match: 480.9s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:27:55.717538Z] [debug] [pid:129377] no match: 476.9s, best candidate: inst-welcome-20190303 (0.00)[0m
+[31m[2024-05-28T07:28:00.404876Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 3.95 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:00.404968Z] [debug] [pid:129377] no match: 475.9s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:28:00.644480Z] [debug] [pid:129377] no match: 472.0s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:28:01.407840Z] [debug] [pid:129377] no change: 471.0s[0m
+[37m[2024-05-28T07:28:01.641431Z] [debug] [pid:129377] no match: 471.0s, best candidate: inst-welcome-20190303 (0.00)[0m
+[31m[2024-05-28T07:28:06.367202Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 3.96 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:06.367302Z] [debug] [pid:129377] no match: 470.0s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:28:06.370568Z] [debug] [pid:129377] no change: 466.0s[0m
+[37m[2024-05-28T07:28:06.610285Z] [debug] [pid:129377] no match: 466.0s, best candidate: inst-welcome-20190303 (0.00)[0m
+[31m[2024-05-28T07:28:11.387555Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 4.01 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:11.387648Z] [debug] [pid:129377] no match: 465.0s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:28:11.632927Z] [debug] [pid:129377] no match: 461.0s, best candidate: inst-welcome-20190303 (0.00)[0m
+[31m[2024-05-28T07:28:38.050798Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 25.66 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:38.050897Z] [debug] [pid:129377] no match: 460.0s, best candidate: inst-welcome-20190303 (0.00)[0m
+[31m[2024-05-28T07:28:38.052207Z] [warn] [pid:129377] !!! backend::baseclass::do_capture: There is some problem with your environment, we detected a stall for 25.6621170043945 seconds[0m
+[31m[2024-05-28T07:28:38.627486Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.57 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:38.627567Z] [debug] [pid:129377] no match: 434.3s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:28:39.053035Z] [debug] [pid:129377] no change: 433.3s[0m
+[31m[2024-05-28T07:28:39.622051Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.57 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:39.622123Z] [debug] [pid:129377] no match: 433.3s, best candidate: inst-welcome-20190303 (0.00)[0m
+[37m[2024-05-28T07:28:40.230873Z] [debug] [pid:129377] no match: 432.3s, best candidate: inst-welcome-20190314 (0.12)[0m
+[37m[2024-05-28T07:28:41.054534Z] [debug] [pid:129377] no change: 431.3s[0m
+[37m[2024-05-28T07:28:41.234408Z] [debug] [pid:129377] no match: 431.3s, best candidate: inst-welcome-20190314 (0.12)[0m
+[31m[2024-05-28T07:28:45.672850Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 3.62 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:45.672955Z] [debug] [pid:129377] no match: 430.3s, best candidate: inst-welcome-20190314 (0.12)[0m
+[37m[2024-05-28T07:28:45.676285Z] [debug] [pid:129377] no change: 426.7s[0m
+[37m[2024-05-28T07:28:45.853776Z] [debug] [pid:129377] no match: 426.7s, best candidate: inst-welcome-20190314 (0.12)[0m
+[31m[2024-05-28T07:28:50.375492Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 3.70 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:50.375613Z] [debug] [pid:129377] no match: 425.7s, best candidate: inst-welcome-20190314 (0.12)[0m
+[37m[2024-05-28T07:28:50.574554Z] [debug] [pid:129377] no match: 422.0s, best candidate: inst-welcome-20190314 (0.12)[0m
+[37m[2024-05-28T07:28:51.379511Z] [debug] [pid:129377] no change: 421.0s[0m
+[37m[2024-05-28T07:28:51.553847Z] [debug] [pid:129377] no match: 421.0s, best candidate: inst-welcome-20190314 (0.12)[0m
+[31m[2024-05-28T07:28:55.938389Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 3.56 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:28:55.938474Z] [debug] [pid:129377] no match: 420.0s, best candidate: inst-welcome-20190314 (0.12)[0m
+[37m[2024-05-28T07:28:55.939629Z] [debug] [pid:129377] considering VNC stalled, no update for 4.81 seconds[0m
+[37m[2024-05-28T07:28:55.944348Z] [debug] [pid:129377] pointer type 1 0 1024 768 -257[0m
+[37m[2024-05-28T07:28:55.944518Z] [debug] [pid:129377] led state 0 1 1 -261[0m
+[37m[2024-05-28T07:28:55.946325Z] [debug] [pid:129377] no change: 416.4s[0m
+[37m[2024-05-28T07:28:56.128135Z] [debug] [pid:129377] no match: 416.4s, best candidate: inst-welcome-20190314 (0.12)[0m
+[31m[2024-05-28T07:29:00.590468Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 3.65 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:29:00.590569Z] [debug] [pid:129377] no match: 415.4s, best candidate: inst-welcome-20190314 (0.12)[0m
+[37m[2024-05-28T07:29:00.591899Z] [debug] [pid:129377] considering VNC stalled, no update for 4.15 seconds[0m
+[37m[2024-05-28T07:29:00.594201Z] [debug] [pid:129377] pointer type 1 0 1024 768 -257[0m
+[37m[2024-05-28T07:29:00.594319Z] [debug] [pid:129377] led state 0 1 1 -261[0m
+[37m[2024-05-28T07:29:00.596878Z] [debug] [pid:129377] no change: 411.8s[0m
+[37m[2024-05-28T07:29:00.773839Z] [debug] [pid:129377] no match: 411.8s, best candidate: inst-welcome-20190314 (0.12)[0m
+[31m[2024-05-28T07:29:05.243841Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 3.65 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:29:05.243926Z] [debug] [pid:129377] no match: 410.8s, best candidate: inst-welcome-20190314 (0.12)[0m
+[37m[2024-05-28T07:29:05.422420Z] [debug] [pid:129377] no match: 407.1s, best candidate: inst-welcome-20190314 (0.12)[0m
+[37m[2024-05-28T07:29:06.246622Z] [debug] [pid:129377] no change: 406.1s[0m
+[37m[2024-05-28T07:29:06.422183Z] [debug] [pid:129377] no match: 406.1s, best candidate: inst-welcome-20190314 (0.12)[0m
+[31m[2024-05-28T07:29:10.825173Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 3.58 seconds for 36 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:29:10.825257Z] [debug] [pid:129377] no match: 405.1s, best candidate: inst-welcome-20190314 (0.12)[0m
+[37m[2024-05-28T07:29:11.004466Z] [debug] [pid:129377] no match: 401.5s, best candidate: inst-welcome-20230406 (0.50)[0m
+[32m[2024-05-28T07:29:15.545279Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found inst-welcome-20230406, similarity 1.00 @ 351/92[0m
+[2024-05-28T07:29:15.545679Z] [debug] [pid:129186] tests/installation/welcome.pm:177 called testapi::assert_screen
+[2024-05-28T07:29:15.545806Z] [debug] [pid:129186] <<< testapi::assert_screen(mustmatch="inst-welcome", timeout=30)
+[37m[2024-05-28T07:29:15.774950Z] [debug] [pid:129377] considering VNC stalled, no update for 4.45 seconds[0m
+[32m[2024-05-28T07:29:15.809615Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found inst-welcome-20230406, similarity 1.00 @ 351/92[0m
+[2024-05-28T07:29:15.809946Z] [debug] [pid:129186] tests/installation/welcome.pm:185 called testapi::mouse_hide
+[2024-05-28T07:29:15.810052Z] [debug] [pid:129186] <<< testapi::mouse_hide(border_offset=0)
+[37m[2024-05-28T07:29:15.810508Z] [debug] [pid:129377] mouse_move 1023, 767[0m
+[37m[2024-05-28T07:29:15.810579Z] [debug] [pid:129377] send_pointer_event 0, 1023, 767, 0[0m
+[2024-05-28T07:29:15.810818Z] [debug] [pid:129186] tests/installation/welcome.pm:186 called testapi::wait_still_screen
+[2024-05-28T07:29:15.810922Z] [debug] [pid:129186] <<< testapi::wait_still_screen(similarity_level=47, stilltime=3, timeout=30)
+[37m[2024-05-28T07:29:16.010502Z] [debug] [pid:129377] pointer type 1 0 1024 768 -257[0m
+[37m[2024-05-28T07:29:16.010592Z] [debug] [pid:129377] led state 0 1 1 -261[0m
+[32m[2024-05-28T07:29:19.527755Z] [debug] [pid:129186] >>> testapi::wait_still_screen: detected same image for 3 seconds (3.71322178840637 s elapsed), last detected similarity is 1000000[0m
+[2024-05-28T07:29:19.528011Z] [debug] [pid:129186] tests/installation/welcome.pm:231 called testapi::send_key
+[2024-05-28T07:29:19.528144Z] [debug] [pid:129186] <<< testapi::send_key(key="alt-n", wait_screen_change=0)
+[1;34m[2024-05-28T07:29:19.923712Z] [debug] [pid:129186] ||| finished welcome installation (runtime: 120 s)[0m
+[1;34m[2024-05-28T07:29:19.925905Z] [debug] [pid:129186] ||| starting installation_mode tests/installation/installation_mode.pm[0m
+[2024-05-28T07:29:19.926558Z] [debug] [pid:129186] tests/installation/installation_mode.pm:18 called testapi::assert_screen
+[2024-05-28T07:29:19.926713Z] [debug] [pid:129186] <<< testapi::assert_screen(mustmatch=[
+    "partitioning-edit-proposal-button",
+    "before-role-selection",
+    "inst-instmode",
+    "online-repos"
+  ], timeout=700)
+[37m[2024-05-28T07:29:20.097769Z] [debug] [pid:129377] no match: 699.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:20.972080Z] [debug] [pid:129377] no match: 698.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:21.929613Z] [debug] [pid:129377] no change: 697.9s[0m
+[37m[2024-05-28T07:29:21.970828Z] [debug] [pid:129377] no match: 697.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:22.930680Z] [debug] [pid:129377] no change: 696.9s[0m
+[37m[2024-05-28T07:29:22.985874Z] [debug] [pid:129377] no match: 696.9s, best candidate: online-repos-20190415 (0.00)[0m
+[31m[2024-05-28T07:29:24.896708Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.96 seconds for 21 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:29:24.896803Z] [debug] [pid:129377] no match: 695.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:24.931675Z] [debug] [pid:129377] no change: 694.9s[0m
+[37m[2024-05-28T07:29:24.972554Z] [debug] [pid:129377] no match: 694.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:25.982636Z] [debug] [pid:129377] no match: 693.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:26.933444Z] [debug] [pid:129377] no change: 692.9s[0m
+[37m[2024-05-28T07:29:26.983569Z] [debug] [pid:129377] no match: 692.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:28.004156Z] [debug] [pid:129377] no match: 691.9s, best candidate: online-repos-20190415 (0.00)[0m
+[31m[2024-05-28T07:29:29.938626Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 1.00 seconds for 21 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:29:29.938719Z] [debug] [pid:129377] no match: 690.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:29.941853Z] [debug] [pid:129377] no change: 689.9s[0m
+[37m[2024-05-28T07:29:29.981969Z] [debug] [pid:129377] no match: 689.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:30.940470Z] [debug] [pid:129377] no change: 688.9s[0m
+[37m[2024-05-28T07:29:30.981042Z] [debug] [pid:129377] no match: 688.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:31.983776Z] [debug] [pid:129377] no match: 687.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:32.942486Z] [debug] [pid:129377] no change: 686.9s[0m
+[37m[2024-05-28T07:29:32.982384Z] [debug] [pid:129377] no match: 686.9s, best candidate: online-repos-20190415 (0.00)[0m
+[31m[2024-05-28T07:29:34.836466Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.89 seconds for 21 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:29:34.836556Z] [debug] [pid:129377] no match: 685.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:34.986319Z] [debug] [pid:129377] no match: 684.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:35.997904Z] [debug] [pid:129377] no match: 683.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:36.945468Z] [debug] [pid:129377] no change: 682.9s[0m
+[37m[2024-05-28T07:29:36.996339Z] [debug] [pid:129377] no match: 682.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:37.946507Z] [debug] [pid:129377] no change: 681.9s[0m
+[37m[2024-05-28T07:29:37.996673Z] [debug] [pid:129377] no match: 681.9s, best candidate: online-repos-20190415 (0.00)[0m
+[31m[2024-05-28T07:29:39.835358Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.89 seconds for 21 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:29:39.835454Z] [debug] [pid:129377] no match: 680.9s, best candidate: partitioning-edit-proposal-button-20230111 (0.06)[0m
+[37m[2024-05-28T07:29:40.000683Z] [debug] [pid:129377] no match: 679.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:40.994620Z] [debug] [pid:129377] no match: 678.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:41.949437Z] [debug] [pid:129377] no change: 677.9s[0m
+[37m[2024-05-28T07:29:41.990029Z] [debug] [pid:129377] no match: 677.9s, best candidate: online-repos-20190415 (0.00)[0m
+[37m[2024-05-28T07:29:42.950522Z] [debug] [pid:129377] no change: 676.9s[0m
+[37m[2024-05-28T07:29:42.990091Z] [debug] [pid:129377] no match: 676.9s, best candidate: online-repos-20190415 (0.00)[0m
+[32m[2024-05-28T07:29:44.881097Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found role-selection-20230405, similarity 1.00 @ 353/99[0m
+[1;34m[2024-05-28T07:29:44.931926Z] [debug] [pid:129186] ||| finished installation_mode installation (runtime: 25 s)[0m
+[1;34m[2024-05-28T07:29:44.932881Z] [debug] [pid:129186] ||| starting logpackages tests/installation/logpackages.pm[0m
+[2024-05-28T07:29:44.933398Z] [debug] [pid:129186] tests/installation/logpackages.pm:22 called testapi::assert_screen
+[2024-05-28T07:29:44.933507Z] [debug] [pid:129186] <<< testapi::assert_screen(mustmatch="before-role-selection", timeout=300)
+[37m[2024-05-28T07:29:44.964315Z] [debug] [pid:129377] no match: 299.9s, best candidate: role-selection-20181119 (0.00)[0m
+[37m[2024-05-28T07:29:45.935756Z] [debug] [pid:129377] no change: 298.9s[0m
+[37m[2024-05-28T07:29:45.971132Z] [debug] [pid:129377] no match: 298.9s, best candidate: role-selection-20181119 (0.00)[0m
+[37m[2024-05-28T07:29:46.936586Z] [debug] [pid:129377] no change: 297.9s[0m
+[37m[2024-05-28T07:29:46.967054Z] [debug] [pid:129377] no match: 297.9s, best candidate: role-selection-20181119 (0.00)[0m
+[37m[2024-05-28T07:29:47.937488Z] [debug] [pid:129377] no change: 296.9s[0m
+[37m[2024-05-28T07:29:47.970209Z] [debug] [pid:129377] no match: 296.9s, best candidate: role-selection-20181119 (0.00)[0m
+[32m[2024-05-28T07:29:49.629536Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found role-selection-20230405, similarity 1.00 @ 353/99[0m
+[2024-05-28T07:29:49.629759Z] [debug] [pid:129186] tests/installation/logpackages.pm:23 called testapi::select_console
+[2024-05-28T07:29:49.629864Z] [debug] [pid:129186] <<< testapi::select_console(testapi_console="install-shell")
+[2024-05-28T07:29:50.033904Z] [debug] [pid:129186] tests/installation/logpackages.pm:23 called testapi::select_console -> lib/susedistribution.pm:832 called testapi::assert_screen
+[2024-05-28T07:29:50.034128Z] [debug] [pid:129186] <<< testapi::assert_screen(mustmatch="inst-console", timeout=30)
+[37m[2024-05-28T07:29:50.048463Z] [debug] [pid:129377] no match: 29.9s, best candidate: bootloader_s390-inst-console-20170130 (0.00)[0m
+[32m[2024-05-28T07:29:51.087714Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found bootloader_s390-inst-console-20170130, similarity 1.00 @ 117/139[0m
+[37m[2024-05-28T07:29:51.087839Z] [debug] [pid:129186] activate_console, console: install-shell, type: shell[0m
+[37m[2024-05-28T07:29:51.087887Z] [debug] [pid:129186] activate_console called with generic type, no action[0m
+[2024-05-28T07:29:51.088648Z] [debug] [pid:129186] tests/installation/logpackages.pm:23 called testapi::select_console -> lib/susedistribution.pm:933 called distribution::script_run
+[2024-05-28T07:29:51.088799Z] [debug] [pid:129186] <<< testapi::type_string(string="setterm -blank 0", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:51.628559Z] [debug] [pid:129186] tests/installation/logpackages.pm:23 called testapi::select_console -> lib/susedistribution.pm:933 called distribution::script_run
+[2024-05-28T07:29:51.628847Z] [debug] [pid:129186] <<< testapi::type_string(string="; echo YpuUt-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:52.742163Z] [debug] [pid:129186] tests/installation/logpackages.pm:23 called testapi::select_console -> lib/susedistribution.pm:933 called distribution::script_run
+[2024-05-28T07:29:52.742405Z] [debug] [pid:129186] <<< testapi::wait_serial(expect_not_found=0, quiet=undef, no_regex=0, record_output=undef, regexp=qr/YpuUt-\d+-/u, buffer_size=undef, timeout=30)
+[32m[2024-05-28T07:29:53.793188Z] [debug] [pid:129186] >>> testapi::wait_serial: (?^u:YpuUt-\d+-): ok[0m
+[2024-05-28T07:29:53.793475Z] [debug] [pid:129186] tests/installation/logpackages.pm:23 called testapi::select_console -> lib/susedistribution.pm:997 called testapi::assert_screen
+[2024-05-28T07:29:53.793612Z] [debug] [pid:129186] <<< testapi::assert_screen(mustmatch="install-shell", no_wait=1, timeout=30)
+[32m[2024-05-28T07:29:53.865417Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found install-shell-no_cursor-20170321, similarity 1.00 @ 103/160[0m
+[2024-05-28T07:29:53.865609Z] [debug] [pid:129186] tests/installation/logpackages.pm:24 called testapi::script_run
+[2024-05-28T07:29:53.865751Z] [debug] [pid:129186] <<< testapi::script_run(cmd="(cat /.timestamp ; echo /.packages.initrd: ; cat /.packages.initrd) > /dev/ttyS0", quiet=undef, die_on_timeout=1, timeout=30, output="")
+[2024-05-28T07:29:53.865882Z] [debug] [pid:129186] tests/installation/logpackages.pm:24 called testapi::script_run
+[2024-05-28T07:29:53.866007Z] [debug] [pid:129186] <<< testapi::type_string(string="(cat /.timestamp ; echo /.packages.initrd: ; cat /.packages.initrd) > /dev/ttyS0", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:56.647119Z] [debug] [pid:129186] tests/installation/logpackages.pm:24 called testapi::script_run
+[2024-05-28T07:29:56.647368Z] [debug] [pid:129186] <<< testapi::type_string(string="; echo IsRws-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:29:57.758920Z] [debug] [pid:129186] tests/installation/logpackages.pm:24 called testapi::script_run
+[2024-05-28T07:29:57.759147Z] [debug] [pid:129186] <<< testapi::wait_serial(expect_not_found=0, quiet=undef, buffer_size=undef, timeout=30, no_regex=0, regexp=qr/IsRws-\d+-/u, record_output=undef)
+[32m[2024-05-28T07:29:59.808091Z] [debug] [pid:129186] >>> testapi::wait_serial: (?^u:IsRws-\d+-): ok[0m
+[2024-05-28T07:29:59.808311Z] [debug] [pid:129186] tests/installation/logpackages.pm:25 called testapi::script_run
+[2024-05-28T07:29:59.808494Z] [debug] [pid:129186] <<< testapi::script_run(cmd="(echo /.packages.root: ; cat /.packages.root) > /dev/ttyS0", quiet=undef, die_on_timeout=1, output="", timeout=30)
+[2024-05-28T07:29:59.808626Z] [debug] [pid:129186] tests/installation/logpackages.pm:25 called testapi::script_run
+[2024-05-28T07:29:59.808790Z] [debug] [pid:129186] <<< testapi::type_string(string="(echo /.packages.root: ; cat /.packages.root) > /dev/ttyS0", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:01.852958Z] [debug] [pid:129186] tests/installation/logpackages.pm:25 called testapi::script_run
+[2024-05-28T07:30:01.853175Z] [debug] [pid:129186] <<< testapi::type_string(string="; echo ZFAYC-\$?- > /dev/ttyS0\n", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[2024-05-28T07:30:03.016574Z] [debug] [pid:129186] tests/installation/logpackages.pm:25 called testapi::script_run
+[2024-05-28T07:30:03.016803Z] [debug] [pid:129186] <<< testapi::wait_serial(expect_not_found=0, quiet=undef, no_regex=0, regexp=qr/ZFAYC-\d+-/u, record_output=undef, buffer_size=undef, timeout=30)
+[32m[2024-05-28T07:30:05.067915Z] [debug] [pid:129186] >>> testapi::wait_serial: (?^u:ZFAYC-\d+-): ok[0m
+[2024-05-28T07:30:05.108496Z] [debug] [pid:129186] tests/installation/logpackages.pm:27 called testapi::select_console
+[2024-05-28T07:30:05.108606Z] [debug] [pid:129186] <<< testapi::select_console(testapi_console="installation")
+[37m[2024-05-28T07:30:05.519290Z] [debug] [pid:129186] activate_console, console: installation, type: [0m
+[37m[2024-05-28T07:30:05.519375Z] [debug] [pid:129186] activate_console called with generic type, no action[0m
+[2024-05-28T07:30:05.519560Z] [debug] [pid:129186] tests/installation/logpackages.pm:27 called testapi::select_console -> lib/susedistribution.pm:997 called testapi::assert_screen
+[2024-05-28T07:30:05.519692Z] [debug] [pid:129186] <<< testapi::assert_screen(mustmatch="installation", timeout=30, no_wait=1)
+[31m[2024-05-28T07:30:06.074404Z] [warn] [pid:129377] !!! backend::baseclass::check_asserted_screen: check_asserted_screen took 0.55 seconds for 64 candidate needles - make your needles more specific[0m
+[37m[2024-05-28T07:30:06.074486Z] [debug] [pid:129377] no match: 29.9s, best candidate: installation_overview-installation-20221206 (0.36)[0m
+[37m[2024-05-28T07:30:06.175301Z] [debug] [pid:129377] no change: 29.3s[0m
+[37m[2024-05-28T07:30:06.395251Z] [debug] [pid:129377] no match: 29.3s, best candidate: installation_overview-installation-20221206 (0.36)[0m
+[37m[2024-05-28T07:30:06.496120Z] [debug] [pid:129377] no change: 29.0s[0m
+[37m[2024-05-28T07:30:06.716432Z] [debug] [pid:129377] no match: 29.0s, best candidate: installation_overview-installation-20221206 (0.36)[0m
+[37m[2024-05-28T07:30:06.817167Z] [debug] [pid:129377] no change: 28.7s[0m
+[37m[2024-05-28T07:30:07.050423Z] [debug] [pid:129377] no match: 28.7s, best candidate: installation_overview-installation-20221206 (0.36)[0m
+[37m[2024-05-28T07:30:07.151230Z] [debug] [pid:129377] no change: 28.3s[0m
+[37m[2024-05-28T07:30:07.406114Z] [debug] [pid:129377] no match: 28.3s, best candidate: installation_overview-installation-20221206 (0.36)[0m
+[37m[2024-05-28T07:30:07.506789Z] [debug] [pid:129377] no change: 28.0s[0m
+[37m[2024-05-28T07:30:07.722865Z] [debug] [pid:129377] no match: 28.0s, best candidate: installation_overview-installation-20221206 (0.36)[0m
+[37m[2024-05-28T07:30:07.823529Z] [debug] [pid:129377] no change: 27.6s[0m
+[37m[2024-05-28T07:30:08.042434Z] [debug] [pid:129377] no match: 27.6s, best candidate: installation_overview-installation-20221206 (0.36)[0m
+[37m[2024-05-28T07:30:08.143184Z] [debug] [pid:129377] no change: 27.3s[0m
+[37m[2024-05-28T07:30:08.363373Z] [debug] [pid:129377] no match: 27.3s, best candidate: installation_overview-installation-20221206 (0.36)[0m
+[37m[2024-05-28T07:30:08.464096Z] [debug] [pid:129377] no change: 27.0s[0m
+[37m[2024-05-28T07:30:08.678760Z] [debug] [pid:129377] no match: 27.0s, best candidate: installation_overview-installation-20221206 (0.36)[0m
+[37m[2024-05-28T07:30:08.779454Z] [debug] [pid:129377] no change: 26.7s[0m
+[37m[2024-05-28T07:30:08.999312Z] [debug] [pid:129377] no match: 26.7s, best candidate: installation_overview-installation-20221206 (0.36)[0m
+[37m[2024-05-28T07:30:09.099976Z] [debug] [pid:129377] no change: 26.4s[0m
+[37m[2024-05-28T07:30:09.312878Z] [debug] [pid:129377] no match: 26.4s, best candidate: installation_overview-installation-20221206 (0.36)[0m
+[37m[2024-05-28T07:30:09.413649Z] [debug] [pid:129377] no change: 26.1s[0m
+[37m[2024-05-28T07:30:09.631201Z] [debug] [pid:129377] no match: 26.1s, best candidate: installation_overview-installation-20221206 (0.36)[0m
+[32m[2024-05-28T07:30:14.118620Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found role-selection-20230405, similarity 1.00 @ 353/99[0m
+[1;34m[2024-05-28T07:30:14.166452Z] [debug] [pid:129186] ||| finished logpackages installation (runtime: 30 s)[0m
+[1;34m[2024-05-28T07:30:14.167759Z] [debug] [pid:129186] ||| starting system_role tests/installation/system_role.pm[0m
+[2024-05-28T07:30:14.168342Z] [debug] [pid:129186] tests/installation/system_role.pm:75 called system_role::assert_system_role -> tests/installation/system_role.pm:58 called testapi::assert_screen
+[2024-05-28T07:30:14.168450Z] [debug] [pid:129186] <<< testapi::assert_screen(mustmatch="before-role-selection", timeout=180)
+[37m[2024-05-28T07:30:14.256337Z] [debug] [pid:129377] no match: 179.9s, best candidate: role-selection-20181119 (0.00)[0m
+[37m[2024-05-28T07:30:14.334076Z] [debug] [pid:129377] considering VNC stalled, no update for 6.29 seconds[0m
+[37m[2024-05-28T07:30:14.587818Z] [debug] [pid:129377] pointer type 1 0 1024 768 -257[0m
+[37m[2024-05-28T07:30:14.587970Z] [debug] [pid:129377] led state 0 1 1 -261[0m
+[37m[2024-05-28T07:30:15.170336Z] [debug] [pid:129377] no change: 178.9s[0m
+[37m[2024-05-28T07:30:15.201427Z] [debug] [pid:129377] no match: 178.9s, best candidate: role-selection-20181119 (0.00)[0m
+[37m[2024-05-28T07:30:16.171570Z] [debug] [pid:129377] no change: 177.9s[0m
+[37m[2024-05-28T07:30:16.206451Z] [debug] [pid:129377] no match: 177.9s, best candidate: role-selection-20181119 (0.00)[0m
+[37m[2024-05-28T07:30:17.172497Z] [debug] [pid:129377] no change: 176.9s[0m
+[37m[2024-05-28T07:30:17.205460Z] [debug] [pid:129377] no match: 176.9s, best candidate: role-selection-20181119 (0.00)[0m
+[32m[2024-05-28T07:30:18.872284Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found role-selection-20230405, similarity 1.00 @ 353/99[0m
+[2024-05-28T07:30:18.872473Z] [debug] [pid:129186] tests/installation/system_role.pm:75 called system_role::assert_system_role -> tests/installation/system_role.pm:62 called testapi::check_screen
+[2024-05-28T07:30:18.872577Z] [debug] [pid:129186] <<< testapi::check_screen(mustmatch="system-role-microos-selected", timeout=0)
+[32m[2024-05-28T07:30:19.458121Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found system_role-system-role-microos-selected-20230110, similarity 0.99 @ 367/194[0m
+[2024-05-28T07:30:19.458274Z] [debug] [pid:129186] tests/installation/system_role.pm:75 called system_role::assert_system_role -> tests/installation/system_role.pm:67 called testapi::send_key
+[2024-05-28T07:30:19.458378Z] [debug] [pid:129186] <<< testapi::send_key(key="alt-n", wait_screen_change=0)
+[1;34m[2024-05-28T07:30:19.845060Z] [debug] [pid:129186] ||| finished system_role installation (runtime: 5 s)[0m
+[1;34m[2024-05-28T07:30:19.846008Z] [debug] [pid:129186] ||| starting ntp_config_settings tests/installation/ntp_config_settings.pm[0m
+[2024-05-28T07:30:19.846569Z] [debug] [pid:129186] tests/installation/ntp_config_settings.pm:16 called testapi::assert_screen
+[2024-05-28T07:30:19.846681Z] [debug] [pid:129186] <<< testapi::assert_screen(mustmatch="ntp_config_settings", timeout=30)
+[37m[2024-05-28T07:30:20.206743Z] [debug] [pid:129377] no match: 29.6s, best candidate: ntp_config_settings-20190822 (0.00)[0m
+[37m[2024-05-28T07:30:21.182090Z] [debug] [pid:129377] no match: 28.6s, best candidate: ntp_config_settings-20190822 (0.00)[0m
+[37m[2024-05-28T07:30:22.176528Z] [debug] [pid:129377] no change: 27.6s[0m
+[37m[2024-05-28T07:30:22.182270Z] [debug] [pid:129377] no match: 27.6s, best candidate: ntp_config_settings-20190822 (0.00)[0m
+[37m[2024-05-28T07:30:23.177484Z] [debug] [pid:129377] no change: 26.6s[0m
+[37m[2024-05-28T07:30:23.182097Z] [debug] [pid:129377] no match: 26.6s, best candidate: ntp_config_settings-20190822 (0.00)[0m
+[37m[2024-05-28T07:30:24.322054Z] [debug] [pid:129377] no match: 25.6s, best candidate: ntp_config_settings-20190822 (0.00)[0m
+[37m[2024-05-28T07:30:25.179517Z] [debug] [pid:129377] no change: 24.6s[0m
+[37m[2024-05-28T07:30:25.185127Z] [debug] [pid:129377] no match: 24.6s, best candidate: ntp_config_settings-20190822 (0.00)[0m
+[32m[2024-05-28T07:30:26.229393Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found ntp_config_settings-20221206, similarity 0.99 @ 8/89[0m
+[2024-05-28T07:30:26.229579Z] [debug] [pid:129186] tests/installation/ntp_config_settings.pm:20 called testapi::assert_screen
+[2024-05-28T07:30:26.229686Z] [debug] [pid:129186] <<< testapi::assert_screen(mustmatch="opensuse-pool", timeout=30)
+[32m[2024-05-28T07:30:27.269316Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found ntp_config_settings-opensuse-pool-20221118, similarity 0.98 @ 478/413[0m
+[2024-05-28T07:30:27.269478Z] [debug] [pid:129186] tests/installation/ntp_config_settings.pm:22 called testapi::send_key
+[2024-05-28T07:30:27.269582Z] [debug] [pid:129186] <<< testapi::send_key(key="alt-n", wait_screen_change=0)
+[1;34m[2024-05-28T07:30:27.646768Z] [debug] [pid:129186] ||| finished ntp_config_settings installation (runtime: 8 s)[0m
+[1;34m[2024-05-28T07:30:27.647700Z] [debug] [pid:129186] ||| starting user_settings_root tests/installation/user_settings_root.pm[0m
+[2024-05-28T07:30:27.648242Z] [debug] [pid:129186] tests/installation/user_settings_root.pm:18 called installation_user_settings::enter_rootinfo -> lib/installation_user_settings.pm:48 called testapi::assert_screen
+[2024-05-28T07:30:27.648357Z] [debug] [pid:129186] <<< testapi::assert_screen(mustmatch="inst-rootpassword", timeout=30)
+[37m[2024-05-28T07:30:28.239117Z] [debug] [pid:129377] no match: 29.4s, best candidate: user_settings_root-inst-rootpassword-20220224 (0.00)[0m
+[37m[2024-05-28T07:30:29.183085Z] [debug] [pid:129377] no change: 28.4s[0m
+[37m[2024-05-28T07:30:29.207986Z] [debug] [pid:129377] no match: 28.4s, best candidate: user_settings_root-inst-rootpassword-20220224 (0.00)[0m
+[37m[2024-05-28T07:30:30.184159Z] [debug] [pid:129377] no change: 27.4s[0m
+[37m[2024-05-28T07:30:30.206898Z] [debug] [pid:129377] no match: 27.4s, best candidate: user_settings_root-inst-rootpassword-20220224 (0.00)[0m
+[37m[2024-05-28T07:30:31.209565Z] [debug] [pid:129377] no match: 26.4s, best candidate: user_settings_root-inst-rootpassword-20220224 (0.00)[0m
+[32m[2024-05-28T07:30:32.411112Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found user_settings_root-inst-rootpassword-20230405, similarity 0.98 @ 536/247[0m
+[2024-05-28T07:30:32.411281Z] [debug] [pid:129186] tests/installation/user_settings_root.pm:18 called installation_user_settings::enter_rootinfo -> lib/installation_user_settings.pm:49 called installation_user_settings::type_password_and_verification -> lib/installation_user_settings.pm:23 called testapi::wait_screen_change
+[2024-05-28T07:30:32.411387Z] [debug] [pid:129186] <<< testapi::wait_screen_change(timeout=10, similarity_level=50)
+[2024-05-28T07:30:32.412178Z] [debug] [pid:129186] tests/installation/user_settings_root.pm:18 called installation_user_settings::enter_rootinfo -> lib/installation_user_settings.pm:49 called installation_user_settings::type_password_and_verification -> lib/installation_user_settings.pm:23 called testapi::wait_screen_change -> lib/installation_user_settings.pm:23 called testapi::type_string
+[2024-05-28T07:30:32.412302Z] [debug] [pid:129186] <<< testapi::type_string(string="nots3cr3t\t", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[32m[2024-05-28T07:30:32.751550Z] [debug] [pid:129186] >>> testapi::wait_screen_change: screen change seen after 9.05990600585938e-06 seconds (similarity: 46.1690757571849)[0m
+[2024-05-28T07:30:32.751699Z] [debug] [pid:129186] tests/installation/user_settings_root.pm:18 called installation_user_settings::enter_rootinfo -> lib/installation_user_settings.pm:49 called installation_user_settings::type_password_and_verification -> lib/installation_user_settings.pm:23 called testapi::wait_screen_change
+[2024-05-28T07:30:32.751821Z] [debug] [pid:129186] <<< testapi::wait_screen_change(timeout=10, similarity_level=50)
+[2024-05-28T07:30:32.752338Z] [debug] [pid:129186] tests/installation/user_settings_root.pm:18 called installation_user_settings::enter_rootinfo -> lib/installation_user_settings.pm:49 called installation_user_settings::type_password_and_verification -> lib/installation_user_settings.pm:23 called testapi::wait_screen_change -> lib/installation_user_settings.pm:23 called testapi::type_string
+[2024-05-28T07:30:32.752485Z] [debug] [pid:129186] <<< testapi::type_string(string="nots3cr3t\t", max_interval=250, wait_screen_change=0, wait_still_screen=0, timeout=30, similarity_level=47)
+[32m[2024-05-28T07:30:33.091309Z] [debug] [pid:129186] >>> testapi::wait_screen_change: screen change seen after 7.15255737304688e-06 seconds (similarity: 34.3185844233765)[0m
+[2024-05-28T07:30:33.091460Z] [debug] [pid:129186] tests/installation/user_settings_root.pm:18 called installation_user_settings::enter_rootinfo -> lib/installation_user_settings.pm:50 called testapi::assert_screen
+[2024-05-28T07:30:33.091578Z] [debug] [pid:129186] <<< testapi::assert_screen(mustmatch="rootpassword-typed", timeout=30)
+[37m[2024-05-28T07:30:33.233082Z] [debug] [pid:129377] no match: 29.9s, best candidate: user_settings_root-rootpassword-typed-20230406 (0.60)[0m
+[32m[2024-05-28T07:30:34.249497Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found user_settings_root-rootpassword-typed-20230406, similarity 1.00 @ 538/252[0m
+[2024-05-28T07:30:34.249652Z] [debug] [pid:129186] tests/installation/user_settings_root.pm:18 called installation_user_settings::enter_rootinfo -> lib/installation_user_settings.pm:51 called testapi::send_key
+[2024-05-28T07:30:34.249759Z] [debug] [pid:129186] <<< testapi::send_key(key="alt-n", wait_screen_change=0)
+[2024-05-28T07:30:34.584631Z] [debug] [pid:129186] tests/installation/user_settings_root.pm:18 called installation_user_settings::enter_rootinfo -> lib/installation_user_settings.pm:52 called installation_user_settings::await_password_check -> lib/installation_user_settings.pm:31 called testapi::assert_screen
+[2024-05-28T07:30:34.584783Z] [debug] [pid:129186] <<< testapi::assert_screen(mustmatch="inst-userpasswdtoosimple", timeout=30)
+[37m[2024-05-28T07:30:35.260474Z] [debug] [pid:129377] no match: 29.3s, best candidate: inst-partitioning-passwdtoosimple-20190304 (0.00)[0m
+[37m[2024-05-28T07:30:36.215015Z] [debug] [pid:129377] no match: 28.3s, best candidate: inst-partitioning-passwdtoosimple-20190304 (0.00)[0m
+[37m[2024-05-28T07:30:37.188455Z] [debug] [pid:129377] no change: 27.3s[0m
+[37m[2024-05-28T07:30:37.214950Z] [debug] [pid:129377] no match: 27.3s, best candidate: inst-partitioning-passwdtoosimple-20190304 (0.00)[0m
+[37m[2024-05-28T07:30:38.227177Z] [debug] [pid:129377] no match: 26.3s, best candidate: inst-partitioning-passwdtoosimple-20190304 (0.00)[0m
+[37m[2024-05-28T07:30:39.551063Z] [debug] [pid:129377] no match: 25.3s, best candidate: inst-partitioning-passwdtoosimple-20190304 (0.00)[0m
+[37m[2024-05-28T07:30:40.217125Z] [debug] [pid:129377] no match: 24.3s, best candidate: inst-partitioning-passwdtoosimple-20190304 (0.00)[0m
+[37m[2024-05-28T07:30:41.218635Z] [debug] [pid:129377] no match: 23.3s, best candidate: inst-partitioning-passwdtoosimple-20190304 (0.00)[0m
+[32m[2024-05-28T07:30:42.262558Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found inst-passwdtoosimple-20230406, similarity 1.00 @ 417/337[0m
+[2024-05-28T07:30:42.262746Z] [debug] [pid:129186] tests/installation/user_settings_root.pm:18 called installation_user_settings::enter_rootinfo -> lib/installation_user_settings.pm:52 called installation_user_settings::await_password_check -> lib/installation_user_settings.pm:32 called testapi::send_key
+[2024-05-28T07:30:42.262857Z] [debug] [pid:129186] <<< testapi::send_key(key="ret", wait_screen_change=0)
+[1;34m[2024-05-28T07:30:42.577600Z] [debug] [pid:129186] ||| finished user_settings_root installation (runtime: 15 s)[0m
+[1;34m[2024-05-28T07:30:42.578601Z] [debug] [pid:129186] ||| starting installation_overview tests/installation/installation_overview.pm[0m
+[2024-05-28T07:30:42.579183Z] [debug] [pid:129186] tests/installation/installation_overview.pm:131 called testapi::assert_screen
+[2024-05-28T07:30:42.579291Z] [debug] [pid:129186] <<< testapi::assert_screen(mustmatch="installation-settings-overview-loaded-impossible-proposal", timeout=30)
+[37m[2024-05-28T07:30:43.254522Z] [debug] [pid:129377] no match: 29.3s, best candidate: installation_overview-installation-settings-overview-loaded-impossible-proposal-20190312 (0.00)[0m
+[37m[2024-05-28T07:30:44.218837Z] [debug] [pid:129377] no match: 28.3s, best candidate: installation_overview-installation-settings-overview-loaded-impossible-proposal-20190312 (0.00)[0m
+[37m[2024-05-28T07:30:45.221373Z] [debug] [pid:129377] no match: 27.3s, best candidate: installation_overview-installation-settings-overview-loaded-impossible-proposal-20190312 (0.00)[0m
+[37m[2024-05-28T07:30:46.196242Z] [debug] [pid:129377] no change: 26.3s[0m
+[37m[2024-05-28T07:30:46.220773Z] [debug] [pid:129377] no match: 26.3s, best candidate: installation_overview-installation-settings-overview-loaded-impossible-proposal-20190312 (0.00)[0m
+[37m[2024-05-28T07:30:47.461798Z] [debug] [pid:129377] no match: 25.3s, best candidate: installation_overview-installation-settings-overview-loaded-impossible-proposal-20230407 (0.18)[0m
+[32m[2024-05-28T07:30:48.285908Z] [debug] [pid:129186] >>> testapi::_handle_found_needle: found installation_overview-installation-settings-overview-loaded-impossible-proposal-20230407, similarity 1.00 @ 357/455[0m
+[1;34m[2024-05-28T07:30:48.345055Z] [debug] [pid:129186] ||| finished installation_overview installation (runtime: 6 s)[0m
+[37m[2024-05-28T07:30:48.346877Z] [debug] [pid:129170] stopping autotest process 129186[0m
+[37m[2024-05-28T07:30:48.357650Z] [debug] [pid:129170] [autotest] process exited: 0[0m
+[37m[2024-05-28T07:30:48.457899Z] [debug] [pid:129170] done with autotest process[0m
+[37m[2024-05-28T07:30:48.458200Z] [debug] [pid:129170] stopping command server 129180 because test execution ended[0m
+[37m[2024-05-28T07:30:48.458275Z] [debug] [pid:129170] isotovideo: informing websocket clients before stopping command server: http://127.0.0.1:20163/hOl2vFX6yVebpw_4/broadcast[0m
+[37m[2024-05-28T07:30:48.477059Z] [debug] [pid:129170] commands process exited: 0[0m
+[37m[2024-05-28T07:30:48.577353Z] [debug] [pid:129170] done with command server[0m
+[37m[2024-05-28T07:30:48.577416Z] [debug] [pid:129170] isotovideo done[0m
+[37m[2024-05-28T07:30:48.577875Z] [debug] [pid:129377] EVENT {"data":{"path":"\/machine\/peripheral-anon\/device[3]\/virtio-backend"},"event":"NIC_RX_FILTER_CHANGED","timestamp":{"microseconds":979824,"seconds":1716881311}}[0m
+[37m[2024-05-28T07:30:48.578028Z] [debug] [pid:129377] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"42196","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6006","websocket":false}},"event":"VNC_DISCONNECTED","timestamp":{"microseconds":939821,"seconds":1716881335}}[0m
+[37m[2024-05-28T07:30:48.578156Z] [debug] [pid:129377] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"35482","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6006","websocket":false}},"event":"VNC_CONNECTED","timestamp":{"microseconds":940316,"seconds":1716881335}}[0m
+[37m[2024-05-28T07:30:48.578280Z] [debug] [pid:129377] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"35482","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6006","websocket":false}},"event":"VNC_INITIALIZED","timestamp":{"microseconds":943663,"seconds":1716881335}}[0m
+[37m[2024-05-28T07:30:48.578404Z] [debug] [pid:129377] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"35482","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6006","websocket":false}},"event":"VNC_DISCONNECTED","timestamp":{"microseconds":592084,"seconds":1716881340}}[0m
+[37m[2024-05-28T07:30:48.578528Z] [debug] [pid:129377] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"35486","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6006","websocket":false}},"event":"VNC_CONNECTED","timestamp":{"microseconds":592420,"seconds":1716881340}}[0m
+[37m[2024-05-28T07:30:48.578647Z] [debug] [pid:129377] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"35486","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6006","websocket":false}},"event":"VNC_INITIALIZED","timestamp":{"microseconds":593775,"seconds":1716881340}}[0m
+[37m[2024-05-28T07:30:48.578774Z] [debug] [pid:129377] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"35486","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6006","websocket":false}},"event":"VNC_DISCONNECTED","timestamp":{"microseconds":775309,"seconds":1716881355}}[0m
+[37m[2024-05-28T07:30:48.578910Z] [debug] [pid:129377] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"41698","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6006","websocket":false}},"event":"VNC_CONNECTED","timestamp":{"microseconds":775462,"seconds":1716881355}}[0m
+[37m[2024-05-28T07:30:48.579035Z] [debug] [pid:129377] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"41698","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6006","websocket":false}},"event":"VNC_INITIALIZED","timestamp":{"microseconds":776896,"seconds":1716881355}}[0m
+[37m[2024-05-28T07:30:48.579160Z] [debug] [pid:129377] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"41698","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6006","websocket":false}},"event":"VNC_DISCONNECTED","timestamp":{"microseconds":334412,"seconds":1716881414}}[0m
+[37m[2024-05-28T07:30:48.579277Z] [debug] [pid:129377] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"42872","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6006","websocket":false}},"event":"VNC_CONNECTED","timestamp":{"microseconds":334810,"seconds":1716881414}}[0m
+[37m[2024-05-28T07:30:48.579390Z] [debug] [pid:129377] EVENT {"data":{"client":{"family":"ipv4","host":"127.0.0.1","service":"42872","websocket":false},"server":{"auth":"none","family":"ipv4","host":"0.0.0.0","service":"6006","websocket":false}},"event":"VNC_INITIALIZED","timestamp":{"microseconds":336921,"seconds":1716881414}}[0m
+[37m[2024-05-28T07:30:48.579511Z] [debug] [pid:129377] QEMU status is not 'shutdown', it is 'running'[0m
+[37m[2024-05-28T07:30:48.579635Z] [debug] [pid:129170] backend shutdown state: [0m
+[33m[2024-05-28T07:30:48.580051Z] [info] [pid:129377] ::: OpenQA::Qemu::Proc::save_state: Saving QEMU state to qemu_state.json[0m
+[37m[2024-05-28T07:30:49.855753Z] [debug] [pid:129377] Passing remaining frames to the video encoder[0m
+frame=  343 fps=1.3 q=0.0 Lsize=     558kB time=00:00:14.25 bitrate= 320.8kbits/s speed=0.0555x    
+video:555kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.497616%
+[37m[2024-05-28T07:30:50.422768Z] [debug] [pid:129377] Waiting for video encoder to finalize the video[0m
+[37m[2024-05-28T07:30:50.422854Z] [debug] [pid:129377] The built-in video encoder (pid 129569) terminated[0m
+[37m[2024-05-28T07:30:50.422912Z] [debug] [pid:129377] The external video encoder (pid 129568) terminated[0m
+[37m[2024-05-28T07:30:50.423457Z] [debug] [pid:129377] QEMU: qemu-system-x86_64: terminating on signal 15 from pid 129377 (/usr/bin/isotovideo: backen)[0m
+[37m[2024-05-28T07:30:50.423959Z] [debug] [pid:129377] sending magic and exit[0m
+[37m[2024-05-28T07:30:50.424212Z] [debug] [pid:129170] received magic close[0m
+[37m[2024-05-28T07:30:50.452733Z] [debug] [pid:129170] backend process exited: 0[0m
+Use of uninitialized value $name in pattern match (m//) at /usr/lib/os-autoinst/OpenQA/Isotovideo/Utils.pm line 332.
+	OpenQA::Isotovideo::Utils::handle_generated_assets(OpenQA::Isotovideo::CommandHandler=HASH(0x5632380c9458), "") called at /usr/bin/isotovideo line 204
+	eval {...} called at /usr/bin/isotovideo line 161
+[37m[2024-05-28T07:30:50.554079Z] [debug] [pid:129170] stopping backend process 129377[0m
+[37m[2024-05-28T07:30:50.554151Z] [debug] [pid:129170] done with backend process[0m
+129170: EXIT 0
+[2024-05-28T07:30:50.614875Z] [info] Isotovideo exit status: 0
+[2024-05-28T07:30:50.633982Z] [info] +++ worker notes +++
+[2024-05-28T07:30:50.634116Z] [info] End time: 2024-05-28 07:30:50
+[2024-05-28T07:30:50.634180Z] [info] Result: done
+[2024-05-28T07:30:50.639632Z] [info] Uploading video.webm
+[2024-05-28T07:30:50.675700Z] [info] Uploading autoinst-log.txt
