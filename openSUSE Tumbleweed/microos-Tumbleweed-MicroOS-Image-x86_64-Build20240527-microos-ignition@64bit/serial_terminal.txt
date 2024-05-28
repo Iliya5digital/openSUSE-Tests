@@ -1,0 +1,1452 @@
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+ens4: 10.0.2.15 fec0::c968:c658:bf09:c75
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:30:03 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# zypper -n ref | cat; ( exit ${PIPESTATUS[0]} ); echo gWclj-$?-
+Retrieving repository 'NON_OSS' metadata [..........done]
+Building repository 'NON_OSS' cache [...done]
+Retrieving repository 'OSS' metadata [...........done]
+Building repository 'OSS' cache [....done]
+Retrieving repository 'OSS_DEBUGINFO' metadata [..........done]
+Building repository 'OSS_DEBUGINFO' cache [....done]
+Retrieving repository 'Open H.264 Codec (openSUSE Tumbleweed)' metadata [.......done]
+Building repository 'Open H.264 Codec (openSUSE Tumbleweed)' cache [...done]
+All repositories have been refreshed.
+gWclj-0-
+# zypper -n --gpg-auto-import-keys ref | cat; ( exit ${PIPESTATUS[0]} ); echo 9AZRZ-$?-
+Repository 'NON_OSS' is up to date.
+Repository 'OSS' is up to date.
+Repository 'OSS_DEBUGINFO' is up to date.
+Repository 'Open H.264 Codec (openSUSE Tumbleweed)' is up to date.
+All repositories have been refreshed.
+9AZRZ-0-
+# cd
+# test -f /var/log/audit/audit.log; echo UfVk_-$?-
+UfVk_-0-
+# cat > /tmp/scriptOSm16.sh << 'EOT_OSm16'; echo OSm16-$?-
+> ausearch -m avc -r
+> EOT_OSm16
+OSm16-0-
+# echo OSm16; bash -oe pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-$?-
+OSm16
+type=AVC msg=audit(1716881450.845:100): avc:  denied  { map_read map_write } for  pid=1917 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881450.859:101): avc:  denied  { map_read map_write } for  pid=1921 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+# clear
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+ens4: 10.0.2.15 fec0::1bf7:b317:f2c2:cea6
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:33:16 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# systemctl --no-pager disable --now 'snapper-cleanup.timer'; echo wJUrn-$?-
+Removed "/etc/systemd/system/timers.target.wants/snapper-cleanup.timer".
+wJUrn-0-
+# systemctl --no-pager disable --now 'fstrim.timer'; echo Wr416-$?-
+Removed "/etc/systemd/system/timers.target.wants/fstrim.timer".
+Wr416-0-
+# systemctl --no-pager disable --now 'transactional-update.timer'; echo zbWnE-$?-
+Removed "/etc/systemd/system/timers.target.wants/transactional-update.timer".
+zbWnE-0-
+# systemctl --no-pager disable --now 'btrfs-balance.timer'; echo 4AcIy-$?-
+Removed "/etc/systemd/system/timers.target.wants/btrfs-balance.timer".
+4AcIy-0-
+# systemctl --no-pager disable --now 'btrfs-defrag.timer'; echo lt_D2-$?-
+Removed "/etc/systemd/system/timers.target.wants/btrfs-defrag.timer".
+lt_D2-0-
+# systemctl --no-pager disable --now 'btrfs-scrub.timer'; echo AoHLY-$?-
+Removed "/etc/systemd/system/timers.target.wants/btrfs-scrub.timer".
+AoHLY-0-
+# systemctl --no-pager disable --now 'btrfs-trim.timer'; echo 0KFvg-$?-
+Removed "/etc/systemd/system/timers.target.wants/btrfs-trim.timer".
+0KFvg-0-
+# cd
+# test -f /var/log/audit/audit.log; echo UfVk_-$?-
+UfVk_-0-
+# cat > /tmp/scriptOSm16.sh << 'EOT_OSm16'; echo OSm16-$?-
+> ausearch -m avc -r
+> EOT_OSm16
+OSm16-0-
+# echo OSm16; bash -oe pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-$?-
+OSm16
+type=AVC msg=audit(1716881450.845:100): avc:  denied  { map_read map_write } for  pid=1917 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881450.859:101): avc:  denied  { map_read map_write } for  pid=1921 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881635.690:105): avc:  denied  { map_read map_write } for  pid=1664 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881635.694:106): avc:  denied  { map_read map_write } for  pid=1666 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.017:127): avc:  denied  { map_read map_write } for  pid=1691 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.027:128): avc:  denied  { map_read map_write } for  pid=1693 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.350:149): avc:  denied  { map_read map_write } for  pid=1718 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.357:150): avc:  denied  { map_read map_write } for  pid=1720 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.677:171): avc:  denied  { map_read map_write } for  pid=1745 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.687:172): avc:  denied  { map_read map_write } for  pid=1747 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.007:193): avc:  denied  { map_read map_write } for  pid=1771 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.014:194): avc:  denied  { map_read map_write } for  pid=1774 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.340:215): avc:  denied  { map_read map_write } for  pid=1800 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.354:216): avc:  denied  { map_read map_write } for  pid=1802 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.684:237): avc:  denied  { map_read map_write } for  pid=1827 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.694:238): avc:  denied  { map_read map_write } for  pid=1829 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+# clear
+# touch /should_fail; echo ZWU0p-$?-
+touch: cannot touch '/should_fail': Read-only file system
+ZWU0p-1-
+# touch /etc/should_succeed; echo ZLdyn-$?-
+ZLdyn-0-
+# touch /var/log/should_succeed; echo AgAqw-$?-
+AgAqw-0-
+# btrfs property get / ro | grep "ro=true"; echo _p1nX-$?-
+ro=true
+_p1nX-0-
+# btrfs property get /var ro | grep "ro=false"; echo uRkrO-$?-
+ro=false
+uRkrO-0-
+# findmnt -s / -n -O ro; echo eH9Se-$?-
+/ UUID=8bc5a620-43f2-4cb4-bc93-ae33026e601c btrfs ro
+eH9Se-0-
+# findmnt / -n -O ro; echo hXsOx-$?-
+/ /dev/vda3[/@/.snapshots/2/snapshot] btrfs ro,relatime,seclabel,discard=async,space_cache=v2,subvolid=268,subvol=/@/.snapshots/2/snapshot
+hXsOx-0-
+# cd
+# test -f /var/log/audit/audit.log; echo UfVk_-$?-
+UfVk_-0-
+# cat > /tmp/scriptOSm16.sh << 'EOT_OSm16'; echo OSm16-$?-
+> ausearch -m avc -r
+> EOT_OSm16
+OSm16-0-
+# echo OSm16; bash -oe pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-$?-
+OSm16
+type=AVC msg=audit(1716881450.845:100): avc:  denied  { map_read map_write } for  pid=1917 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881450.859:101): avc:  denied  { map_read map_write } for  pid=1921 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881635.690:105): avc:  denied  { map_read map_write } for  pid=1664 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881635.694:106): avc:  denied  { map_read map_write } for  pid=1666 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.017:127): avc:  denied  { map_read map_write } for  pid=1691 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.027:128): avc:  denied  { map_read map_write } for  pid=1693 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.350:149): avc:  denied  { map_read map_write } for  pid=1718 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.357:150): avc:  denied  { map_read map_write } for  pid=1720 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.677:171): avc:  denied  { map_read map_write } for  pid=1745 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.687:172): avc:  denied  { map_read map_write } for  pid=1747 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.007:193): avc:  denied  { map_read map_write } for  pid=1771 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.014:194): avc:  denied  { map_read map_write } for  pid=1774 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.340:215): avc:  denied  { map_read map_write } for  pid=1800 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.354:216): avc:  denied  { map_read map_write } for  pid=1802 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.684:237): avc:  denied  { map_read map_write } for  pid=1827 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.694:238): avc:  denied  { map_read map_write } for  pid=1829 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+# clear
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n bootloader; echo XimXu-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n bootloader
+Separate /var detected.
+2024-05-28 07:33:58 tukit 4.6.8 started
+2024-05-28 07:33:58 Options: -c2 open 
+2024-05-28 07:33:58 Using snapshot 2 as base for new snapshot 3.
+2024-05-28 07:33:58 /var/lib/overlay/2/etc
+2024-05-28 07:33:58 Syncing /etc of previous snapshot 1 as base into new snapshot "/.snapshots/3/snapshot"
+2024-05-28 07:33:58 SELinux is enabled.
+ID: 3
+2024-05-28 07:33:59 Transaction completed.
+Creating a new grub2 config
+2024-05-28 07:33:59 tukit 4.6.8 started
+2024-05-28 07:33:59 Options: call 3 bash -c /usr/sbin/grub2-mkconfig > /boot/grub2/grub.cfg 
+2024-05-28 07:34:00 Executing `bash -c /usr/sbin/grub2-mkconfig > /boot/grub2/grub.cfg`:
+Generating grub configuration file ...
+Found theme: /boot/grub2/themes/openSUSE/theme.txt
+Found linux image: /boot/vmlinuz-6.9.1-1-default
+Found initrd image: /boot/initrd-6.9.1-1-default
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+2024-05-28 07:34:01 Application returned with exit status 0.
+2024-05-28 07:34:01 Transaction completed.
+Writing new bootloader
+2024-05-28 07:34:01 tukit 4.6.8 started
+2024-05-28 07:34:01 Options: call 3 /sbin/pbl --install 
+2024-05-28 07:34:02 Executing `/sbin/pbl --install`:
+2024-05-28 07:34:02 Application returned with exit status 0.
+2024-05-28 07:34:02 Transaction completed.
+2024-05-28 07:34:02 tukit 4.6.8 started
+2024-05-28 07:34:02 Options: close 3 
+2024-05-28 07:34:03 New default snapshot is #3 (/.snapshots/3/snapshot).
+2024-05-28 07:34:03 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #3 (/.snapshots/3/snapshot).
+transactional-update finished
+XimXu-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716881667; echo 5_S5o-$?-
+5_S5o-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716881667; echo ALQqf-$?-
+ALQqf-0-
+# diff mnt-1716881667 def-1716881667; echo MHPTJ-$?-
+1c1
+< 268
+---
+> 269
+MHPTJ-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+ens4: 10.0.2.15 fec0::34c7:aa7b:8394:d8b9
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:35:17 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n grub.cfg; echo OR8oA-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n grub.cfg
+Separate /var detected.
+2024-05-28 07:35:36 tukit 4.6.8 started
+2024-05-28 07:35:36 Options: -c3 open 
+2024-05-28 07:35:36 Using snapshot 3 as base for new snapshot 4.
+2024-05-28 07:35:36 /var/lib/overlay/3/etc
+2024-05-28 07:35:36 Syncing /etc of previous snapshot 2 as base into new snapshot "/.snapshots/4/snapshot"
+2024-05-28 07:35:36 SELinux is enabled.
+ID: 4
+2024-05-28 07:35:37 Transaction completed.
+Creating a new grub2 config
+2024-05-28 07:35:37 tukit 4.6.8 started
+2024-05-28 07:35:37 Options: call 4 bash -c /usr/sbin/grub2-mkconfig > /boot/grub2/grub.cfg 
+2024-05-28 07:35:37 Executing `bash -c /usr/sbin/grub2-mkconfig > /boot/grub2/grub.cfg`:
+Generating grub configuration file ...
+Found theme: /boot/grub2/themes/openSUSE/theme.txt
+Found linux image: /boot/vmlinuz-6.9.1-1-default
+Found initrd image: /boot/initrd-6.9.1-1-default
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+2024-05-28 07:35:38 Application returned with exit status 0.
+2024-05-28 07:35:38 Transaction completed.
+2024-05-28 07:35:38 tukit 4.6.8 started
+2024-05-28 07:35:38 Options: close 4 
+2024-05-28 07:35:39 New default snapshot is #4 (/.snapshots/4/snapshot).
+2024-05-28 07:35:39 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #4 (/.snapshots/4/snapshot).
+transactional-update finished
+OR8oA-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716881739; echo gkolp-$?-
+gkolp-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716881739; echo WRFV2-$?-
+WRFV2-0-
+# diff mnt-1716881739 def-1716881739; echo E9ZuO-$?-
+1c1
+< 269
+---
+> 270
+E9ZuO-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+ens4: 10.0.2.15 fec0::d668:e3bb:8e77:ae7b
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:36:28 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n initrd; echo dBELE-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n initrd
+Separate /var detected.
+2024-05-28 07:36:46 tukit 4.6.8 started
+2024-05-28 07:36:46 Options: -c4 open 
+2024-05-28 07:36:46 Using snapshot 4 as base for new snapshot 5.
+2024-05-28 07:36:46 /var/lib/overlay/4/etc
+2024-05-28 07:36:46 Syncing /etc of previous snapshot 3 as base into new snapshot "/.snapshots/5/snapshot"
+2024-05-28 07:36:46 SELinux is enabled.
+ID: 5
+2024-05-28 07:36:47 Transaction completed.
+Creating new initrd
+2024-05-28 07:36:47 tukit 4.6.8 started
+2024-05-28 07:36:47 Options: call 5 dracut --force --regenerate-all 
+2024-05-28 07:36:48 Executing `dracut --force --regenerate-all`:
+dracut[I]: Executing: /usr/bin/dracut --kver=6.9.1-1-default --force
+dracut[I]: Module 'systemd-networkd' will not be installed, because command 'networkctl' could not be found!
+dracut[I]: Module 'systemd-networkd' will not be installed, because command '/usr/lib/systemd/systemd-networkd' could not be found!
+dracut[I]: Module 'systemd-networkd' will not be installed, because command '/usr/lib/systemd/systemd-networkd-wait-online' could not be found!
+dracut[I]: Module 'systemd-pcrphase' will not be installed, because command '/usr/lib/systemd/systemd-pcrextend' could not be found!
+dracut[I]: Module 'systemd-portabled' will not be installed, because command 'portablectl' could not be found!
+dracut[I]: Module 'systemd-portabled' will not be installed, because command '/usr/lib/systemd/systemd-portabled' could not be found!
+dracut[I]: Module 'systemd-resolved' will not be installed, because command 'resolvectl' could not be found!
+dracut[I]: Module 'systemd-resolved' will not be installed, because command '/usr/lib/systemd/systemd-resolved' could not be found!
+dracut[I]: Module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut[I]: Module 'dbus-broker' will not be installed, because command 'dbus-broker' could not be found!
+dracut[I]: Module 'rngd' will not be installed, because command 'rngd' could not be found!
+dracut[I]: Module 'connman' will not be installed, because command 'connmand' could not be found!
+dracut[I]: Module 'connman' will not be installed, because command 'connmanctl' could not be found!
+dracut[I]: Module 'connman' will not be installed, because command 'connmand-wait-online' could not be found!
+dracut[I]: 35network-legacy: Could not find any command of 'dhclient wicked'!
+dracut[I]: 62bluetooth: Could not find any command of '/usr/lib/bluetooth/bluetoothd /usr/libexec/bluetooth/bluetoothd'!
+dracut[I]: Module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut[I]: Module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut[I]: Module 'pcsc' will not be installed, because command 'pcscd' could not be found!
+dracut[I]: Module 'tpm2-tss' will not be installed, because command 'tpm2' could not be found!
+dracut[I]: Module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut[I]: Module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+dracut[I]: Module 'iscsi' will not be installed, because command 'iscsiadm' could not be found!
+dracut[I]: Module 'iscsi' will not be installed, because command 'iscsid' could not be found!
+dracut[I]: 95nfs: Could not find any command of 'rpcbind portmap'!
+dracut[I]: Module 'nvmf' will not be installed, because command 'nvme' could not be found!
+dracut[I]: Module 'nvmf' will not be installed, because command 'jq' could not be found!
+dracut[I]: Module 'memstrack' will not be installed, because command 'memstrack' could not be found!
+dracut[I]: memstrack is not available
+dracut[I]: If you need to use rd.memdebug>=4, please install memstrack and procps-ng
+dracut[I]: Module 'squash' will not be installed, because command 'mksquashfs' could not be found!
+dracut[I]: Module 'squash' will not be installed, because command 'unsquashfs' could not be found!
+dracut[I]: Module 'systemd-pcrphase' will not be installed, because command '/usr/lib/systemd/systemd-pcrextend' could not be found!
+dracut[I]: Module 'systemd-portabled' will not be installed, because command 'portablectl' could not be found!
+dracut[I]: Module 'systemd-portabled' will not be installed, because command '/usr/lib/systemd/systemd-portabled' could not be found!
+dracut[I]: Module 'systemd-resolved' will not be installed, because command 'resolvectl' could not be found!
+dracut[I]: Module 'systemd-resolved' will not be installed, because command '/usr/lib/systemd/systemd-resolved' could not be found!
+dracut[I]: Module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut[I]: Module 'dbus-broker' will not be installed, because command 'dbus-broker' could not be found!
+dracut[I]: Module 'rngd' will not be installed, because command 'rngd' could not be found!
+dracut[I]: Module 'connman' will not be installed, because command 'connmand' could not be found!
+dracut[I]: Module 'connman' will not be installed, because command 'connmanctl' could not be found!
+dracut[I]: Module 'connman' will not be installed, because command 'connmand-wait-online' could not be found!
+dracut[I]: 35network-legacy: Could not find any command of 'dhclient wicked'!
+dracut[I]: 62bluetooth: Could not find any command of '/usr/lib/bluetooth/bluetoothd /usr/libexec/bluetooth/bluetoothd'!
+dracut[I]: Module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut[I]: Module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut[I]: Module 'pcsc' will not be installed, because command 'pcscd' could not be found!
+dracut[I]: Module 'tpm2-tss' will not be installed, because command 'tpm2' could not be found!
+dracut[I]: Module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut[I]: Module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+dracut[I]: Module 'iscsi' will not be installed, because command 'iscsiadm' could not be found!
+dracut[I]: Module 'iscsi' will not be installed, because command 'iscsid' could not be found!
+dracut[I]: 95nfs: Could not find any command of 'rpcbind portmap'!
+dracut[I]: Module 'nvmf' will not be installed, because command 'nvme' could not be found!
+dracut[I]: Module 'nvmf' will not be installed, because command 'jq' could not be found!
+dracut[I]: Module 'memstrack' will not be installed, because command 'memstrack' could not be found!
+dracut[I]: memstrack is not available
+dracut[I]: If you need to use rd.memdebug>=4, please install memstrack and procps-ng
+dracut[I]: Module 'squash' will not be installed, because command 'mksquashfs' could not be found!
+dracut[I]: Module 'squash' will not be installed, because command 'unsquashfs' could not be found!
+dracut[I]: *** Including module: systemd ***
+dracut[I]: *** Including module: systemd-initrd ***
+dracut[I]: *** Including module: i18n ***
+dracut[I]: No KEYMAP configured.
+dracut[I]: *** Including module: drm ***
+dracut[I]: *** Including module: health-checker ***
+dracut[I]: *** Including module: transactional-update ***
+dracut[I]: *** Including module: xen-tools-domU ***
+dracut[I]: *** Including module: btrfs ***
+dracut[I]: *** Including module: kernel-modules ***
+dracut[I]: *** Including module: kernel-modules-extra ***
+dracut[I]: *** Including module: qemu ***
+dracut[I]: *** Including module: rootfs-block ***
+dracut[I]: *** Including module: suse-btrfs ***
+dracut[I]: *** Including module: suse-xfs ***
+dracut[I]: *** Including module: terminfo ***
+dracut[I]: *** Including module: udev-rules ***
+dracut[I]: *** Including module: virtiofs ***
+dracut[I]: *** Including module: biosdevname ***
+dracut[I]: *** Including module: dracut-systemd ***
+dracut[I]: *** Including module: selinux-microos ***
+dracut[I]: *** Including module: usrmount ***
+dracut[I]: *** Including module: base ***
+dracut[I]: *** Including module: fs-lib ***
+dracut[I]: *** Including module: shutdown ***
+dracut[I]: *** Including module: suse ***
+dracut[I]: *** Including module: suse-initrd ***
+dracut[I]: *** Including modules done ***
+dracut[I]: *** Installing kernel module dependencies ***
+dracut[I]: *** Installing kernel module dependencies done ***
+dracut[I]: *** Resolving executable dependencies ***
+dracut[I]: *** Resolving executable dependencies done ***
+dracut[I]: *** Hardlinking files ***
+dracut[I]: *** Hardlinking files done ***
+dracut[I]: *** Generating early-microcode cpio image ***
+dracut[I]: *** Store current command line parameters ***
+dracut[I]: Stored kernel commandline:
+dracut[I]:  rd.driver.pre=btrfs
+dracut[I]: rd.driver.pre=overlay
+dracut[I]:  root=UUID=8bc5a620-43f2-4cb4-bc93-ae33026e601c rootfstype=btrfs rootflags=rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=271,subvol=/@/.snapshots/5/snapshot,subvol=@/.snapshots/5/snapshot
+dracut[I]: *** Stripping files ***
+dracut[I]: *** Stripping files done ***
+dracut[I]: *** Creating image file '/boot/initrd-6.9.1-1-default' ***
+dracut[I]: *** Creating initramfs image file '/boot/initrd-6.9.1-1-default' done ***
+2024-05-28 07:36:54 Application returned with exit status 0.
+2024-05-28 07:36:54 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:36:55 tukit 4.6.8 started
+2024-05-28 07:36:55 Options: close 5 
+2024-05-28 07:36:55 New default snapshot is #5 (/.snapshots/5/snapshot).
+2024-05-28 07:36:55 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #5 (/.snapshots/5/snapshot).
+transactional-update finished
+dBELE-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716881816; echo bm8_j-$?-
+bm8_j-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716881816; echo 42~wx-$?-
+42~wx-0-
+# diff mnt-1716881816 def-1716881816; echo Xopjs-$?-
+1c1
+< 270
+---
+> 271
+Xopjs-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+ens4: 10.0.2.15 fec0::51b3:d14a:cce4:2623
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:37:35 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n kdump; echo P2EBx-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n kdump
+Separate /var detected.
+2024-05-28 07:37:55 tukit 4.6.8 started
+2024-05-28 07:37:55 Options: -c5 open 
+2024-05-28 07:37:55 Using snapshot 5 as base for new snapshot 6.
+2024-05-28 07:37:55 /var/lib/overlay/5/etc
+2024-05-28 07:37:55 Syncing /etc of previous snapshot 4 as base into new snapshot "/.snapshots/6/snapshot"
+2024-05-28 07:37:55 SELinux is enabled.
+ID: 6
+2024-05-28 07:37:56 Transaction completed.
+Trying to rebuild kdump initrd
+INFO: Requested rebuild of kdump initrd, but kdump is not enabled.
+      Did you mean 'setup-kdump'?
+2024-05-28 07:37:56 tukit 4.6.8 started
+2024-05-28 07:37:56 Options: close 6 
+2024-05-28 07:37:57 New default snapshot is #6 (/.snapshots/6/snapshot).
+2024-05-28 07:37:57 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #6 (/.snapshots/6/snapshot).
+transactional-update finished
+P2EBx-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716881877; echo jKtzr-$?-
+jKtzr-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716881877; echo QdA9a-$?-
+QdA9a-0-
+# diff mnt-1716881877 def-1716881877; echo Mt0u1-$?-
+1c1
+< 271
+---
+> 272
+Mt0u1-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+ens4: 10.0.2.15 fec0::fd48:4766:ddf9:40b9
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:38:36 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n cleanup; echo kUm8R-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n cleanup
+Separate /var detected.
+Adding cleanup algorithm to snapshot #5
+Adding "important=yes" to snapshot #5
+Adding cleanup algorithm to snapshot #4
+Adding "important=yes" to snapshot #4
+Adding cleanup algorithm to snapshot #3
+Adding "important=yes" to snapshot #3
+Adding cleanup algorithm to snapshot #2
+Adding "important=yes" to snapshot #2
+Adding cleanup algorithm to snapshot #1
+Adding "important=yes" to snapshot #1
+Mark unused snapshot #5 for deletion
+Mark unused snapshot #4 for deletion
+Mark unused snapshot #3 for deletion
+Mark unused snapshot #2 for deletion
+transactional-update finished
+kUm8R-0-
+# cd
+# test -f /var/log/audit/audit.log; echo UfVk_-$?-
+UfVk_-0-
+# cat > /tmp/scriptOSm16.sh << 'EOT_OSm16'; echo OSm16-$?-
+> ausearch -m avc -r
+> EOT_OSm16
+OSm16-0-
+# echo OSm16; bash -oe pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-$?-
+OSm16
+type=AVC msg=audit(1716881450.845:100): avc:  denied  { map_read map_write } for  pid=1917 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881450.859:101): avc:  denied  { map_read map_write } for  pid=1921 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881635.690:105): avc:  denied  { map_read map_write } for  pid=1664 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881635.694:106): avc:  denied  { map_read map_write } for  pid=1666 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.017:127): avc:  denied  { map_read map_write } for  pid=1691 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.027:128): avc:  denied  { map_read map_write } for  pid=1693 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.350:149): avc:  denied  { map_read map_write } for  pid=1718 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.357:150): avc:  denied  { map_read map_write } for  pid=1720 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.677:171): avc:  denied  { map_read map_write } for  pid=1745 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.687:172): avc:  denied  { map_read map_write } for  pid=1747 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.007:193): avc:  denied  { map_read map_write } for  pid=1771 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.014:194): avc:  denied  { map_read map_write } for  pid=1774 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.340:215): avc:  denied  { map_read map_write } for  pid=1800 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.354:216): avc:  denied  { map_read map_write } for  pid=1802 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.684:237): avc:  denied  { map_read map_write } for  pid=1827 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.694:238): avc:  denied  { map_read map_write } for  pid=1829 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+# clear
+# rebootmgrctl set-strategy off; echo 4ScMr-$?-
+4ScMr-0-
+# curl -O http://10.0.2.2:20273/WiyghNbm7Wj8trtw/data/microos/utt-opensuse-x86_64.tgz; echo ZF5yo-$?-
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 26739  100 26739    0     0  2095k      0 --:--:-- --:--:-- --:--:-- 2176k
+ZF5yo-0-
+# tar xzvf utt-opensuse-x86_64.tgz; echo Wjx7N-$?-
+update-test-trivial/
+update-test-trivial/update-test-32bit-pkg-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-affects-package-manager-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-broken-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-interactive-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-optional-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-reboot-needed-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-relogin-suggested-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-retracted-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-security-5.1-1.20.x86_64.rpm
+update-test-trivial/update-test-trivial-5.1-1.20.x86_64.rpm
+Wjx7N-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n ptf install update-test-trivial/update-test-security-5.1-1.20.x86_64.rpm; echo axmtA-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n ptf install update-test-trivial/update-test-security-5.1-1.20.x86_64.rpm
+Separate /var detected.
+2024-05-28 07:38:58 tukit 4.6.8 started
+2024-05-28 07:38:58 Options: -c6 open 
+2024-05-28 07:38:58 Using snapshot 6 as base for new snapshot 7.
+2024-05-28 07:38:58 /var/lib/overlay/6/etc
+2024-05-28 07:38:58 Syncing /etc of previous snapshot 5 as base into new snapshot "/.snapshots/7/snapshot"
+2024-05-28 07:38:58 SELinux is enabled.
+ID: 7
+2024-05-28 07:38:59 Transaction completed.
+Calling zypper install
+2024-05-28 07:39:01 tukit 4.6.8 started
+2024-05-28 07:39:01 Options: callext 7 zypper -R {} install -y --auto-agree-with-product-licenses update-test-trivial/update-test-security-5.1-1.20.x86_64.rpm 
+2024-05-28 07:39:02 Executing `zypper -R /tmp/transactional-update-ccBmui install -y --auto-agree-with-product-licenses update-test-trivial/update-test-security-5.1-1.20.x86_64.rpm`:
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  update-test-security
+
+1 new package to install.
+Overall download size: 8.9 KiB. Already cached: 0 B. After the operation, additional 338.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-security-5.1-1.20.x86_64 (Plain RPM files cache) (1/1),   8.9 KiB    
+(1/1) Installing: update-test-security-5.1-1.20.x86_64 [..done]
+2024-05-28 07:39:03 Application returned with exit status 0.
+2024-05-28 07:39:03 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:39:03 tukit 4.6.8 started
+2024-05-28 07:39:03 Options: close 7 
+2024-05-28 07:39:04 New default snapshot is #7 (/.snapshots/7/snapshot).
+2024-05-28 07:39:04 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #7 (/.snapshots/7/snapshot).
+transactional-update finished
+axmtA-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716881944; echo 3~Meb-$?-
+3~Meb-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716881944; echo hU32s-$?-
+hU32s-0-
+# diff mnt-1716881944 def-1716881944; echo Vk_j4-$?-
+1c1
+< 272
+---
+> 273
+Vk_j4-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+ens4: 10.0.2.15 fec0::5906:93ef:49aa:1cfc
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:39:43 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# rpm -q --qf '%{V}-%{R}' update-test-security | grep -x 5.1-1.20; echo N5_xB-$?-
+5.1-1.20
+N5_xB-0-
+# cat > /tmp/script20J1E.sh << 'EOT_20J1E'; echo 20J1E-$?-
+> snapper list --columns number | tail -1 | tr -d ' *'
+> EOT_20J1E
+20J1E-0-
+# echo 20J1E; bash -oe pipefail /tmp/script20J1E.sh ; echo SCRIPT_FINISHED20J1E-$?-
+20J1E
+7
+SCRIPT_FINISHED20J1E-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n cleanup up; echo jxhrv-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n cleanup up
+Separate /var detected.
+Adding cleanup algorithm to snapshot #6
+Adding "important=yes" to snapshot #6
+2024-05-28 07:40:03 tukit 4.6.8 started
+2024-05-28 07:40:03 Options: -c7 open 
+2024-05-28 07:40:03 Using snapshot 7 as base for new snapshot 8.
+2024-05-28 07:40:03 /var/lib/overlay/7/etc
+2024-05-28 07:40:03 Syncing /etc of previous snapshot 6 as base into new snapshot "/.snapshots/8/snapshot"
+2024-05-28 07:40:03 SELinux is enabled.
+ID: 8
+2024-05-28 07:40:04 Transaction completed.
+Calling zypper up
+2024-05-28 07:40:05 tukit 4.6.8 started
+2024-05-28 07:40:05 Options: callext 8 zypper -R {} up -y --auto-agree-with-product-licenses 
+2024-05-28 07:40:06 Executing `zypper -R /tmp/transactional-update-6OLz7D up -y --auto-agree-with-product-licenses`:
+Loading repository data...
+Reading installed packages...
+
+The following package is going to be upgraded:
+  update-test-security
+
+1 package to upgrade.
+Overall download size: 9.2 KiB. Already cached: 0 B. After the operation, additional 52.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-security-5.2-1.1.x86_64 (OSS) (1/1),   9.2 KiB    
+Retrieving: update-test-security-5.2-1.1.x86_64.rpm [.done]
+(1/1) Installing: update-test-security-5.2-1.1.x86_64 [..done]
+2024-05-28 07:40:07 Application returned with exit status 0.
+2024-05-28 07:40:07 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:40:08 tukit 4.6.8 started
+2024-05-28 07:40:08 Options: close 8 
+2024-05-28 07:40:09 New default snapshot is #8 (/.snapshots/8/snapshot).
+2024-05-28 07:40:09 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #8 (/.snapshots/8/snapshot).
+transactional-update finished
+jxhrv-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882009; echo 8Xev4-$?-
+8Xev4-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882009; echo ~lrRH-$?-
+~lrRH-0-
+# diff mnt-1716882009 def-1716882009; echo AEIQv-$?-
+1c1
+< 273
+---
+> 274
+AEIQv-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+ens4: 10.0.2.15 fec0::767e:d865:ba62:772d
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:40:48 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptljF8a.sh << 'EOT_ljF8a'; echo ljF8a-$?-
+> rpm -q --qf '%{V}-%{R}' update-test-security
+> EOT_ljF8a
+ljF8a-0-
+# echo ljF8a; bash -oe pipefail /tmp/scriptljF8a.sh ; echo SCRIPT_FINISHEDljF8a-$?-
+ljF8a
+5.2-1.1SCRIPT_FINISHEDljF8a-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n cleanup up; echo 7Dm4i-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n cleanup up
+Separate /var detected.
+Adding cleanup algorithm to snapshot #7
+Adding "important=yes" to snapshot #7
+2024-05-28 07:41:07 tukit 4.6.8 started
+2024-05-28 07:41:07 Options: -c8 open 
+2024-05-28 07:41:07 Using snapshot 8 as base for new snapshot 9.
+2024-05-28 07:41:07 /var/lib/overlay/8/etc
+2024-05-28 07:41:07 Syncing /etc of previous snapshot 7 as base into new snapshot "/.snapshots/9/snapshot"
+2024-05-28 07:41:07 SELinux is enabled.
+ID: 9
+2024-05-28 07:41:08 Transaction completed.
+Calling zypper up
+zypper: nothing to update
+2024-05-28 07:41:10 tukit 4.6.8 started
+2024-05-28 07:41:10 Options: abort 9 
+Removing snapshot #9...
+2024-05-28 07:41:11 Discarding snapshot 9.
+2024-05-28 07:41:11 Transaction completed.
+transactional-update finished
+7Dm4i-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882071; echo n0iLn-$?-
+n0iLn-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882071; echo iD6Dp-$?-
+iD6Dp-0-
+# diff mnt-1716882071 def-1716882071; echo J7uMD-$?-
+J7uMD-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update pkg install update-test-trivial/update-test-broken-5.1-1.20.x86_64.rpm; echo sioresult-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: pkg install update-test-trivial/update-test-broken-5.1-1.20.x86_64.rpm
+Separate /var detected.
+2024-05-28 07:41:11 tukit 4.6.8 started
+2024-05-28 07:41:11 Options: -c8 open 
+2024-05-28 07:41:12 Using snapshot 8 as base for new snapshot 9.
+2024-05-28 07:41:12 /var/lib/overlay/8/etc
+2024-05-28 07:41:12 Syncing /etc of previous snapshot 7 as base into new snapshot "/.snapshots/9/snapshot"
+2024-05-28 07:41:12 SELinux is enabled.
+ID: 9
+2024-05-28 07:41:12 Transaction completed.
+Calling zypper install
+2024-05-28 07:41:14 tukit 4.6.8 started
+2024-05-28 07:41:14 Options: callext 9 zypper -R {} install update-test-trivial/update-test-broken-5.1-1.20.x86_64.rpm 
+2024-05-28 07:41:15 Executing `zypper -R /tmp/transactional-update-BzRBBv install update-test-trivial/update-test-broken-5.1-1.20.x86_64.rpm`:
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  update-test-broken
+
+1 new package to install.
+Overall download size: 8.9 KiB. Already cached: 0 B. After the operation, additional 256.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): 
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-broken-5.1-1.20.x86_64 (Plain RPM files cache) (1/1),   8.9 KiB    
+(1/1) Installing: update-test-broken-5.1-1.20.x86_64 [..done]
+2024-05-28 07:41:16 Application returned with exit status 0.
+2024-05-28 07:41:16 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:41:16 tukit 4.6.8 started
+2024-05-28 07:41:16 Options: close 9 
+2024-05-28 07:41:17 New default snapshot is #9 (/.snapshots/9/snapshot).
+2024-05-28 07:41:17 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #9 (/.snapshots/9/snapshot).
+transactional-update finished
+sioresult-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882077; echo FyokW-$?-
+FyokW-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882077; echo O3GGB-$?-
+O3GGB-0-
+# diff mnt-1716882077 def-1716882077; echo ez5YA-$?-
+1c1
+< 274
+---
+> 276
+ez5YA-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+ens4: 10.0.2.15 fec0::47cd:f1d8:3a2b:235f
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:41:56 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n cleanup up; echo 7Dm4i-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n cleanup up
+Separate /var detected.
+Adding cleanup algorithm to snapshot #8
+Adding "important=yes" to snapshot #8
+2024-05-28 07:42:15 tukit 4.6.8 started
+2024-05-28 07:42:15 Options: -c9 open 
+2024-05-28 07:42:15 Using snapshot 9 as base for new snapshot 10.
+2024-05-28 07:42:15 /var/lib/overlay/9/etc
+2024-05-28 07:42:15 Syncing /etc of previous snapshot 8 as base into new snapshot "/.snapshots/10/snapshot"
+2024-05-28 07:42:15 SELinux is enabled.
+ID: 10
+2024-05-28 07:42:16 Transaction completed.
+Calling zypper up
+2024-05-28 07:42:17 tukit 4.6.8 started
+2024-05-28 07:42:17 Options: callext 10 zypper -R {} up -y --auto-agree-with-product-licenses 
+2024-05-28 07:42:18 Executing `zypper -R /tmp/transactional-update-xRLPoJ up -y --auto-agree-with-product-licenses`:
+Loading repository data...
+Reading installed packages...
+
+The following package is going to be upgraded:
+  update-test-broken
+
+1 package to upgrade.
+Overall download size: 9.3 KiB. Already cached: 0 B. After the operation, additional 52.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-broken-5.2-1.1.x86_64 (OSS) (1/1),   9.3 KiB    
+Retrieving: update-test-broken-5.2-1.1.x86_64.rpm [.done]
+(1/1) Installing: update-test-broken-5.2-1.1.x86_64 [..
+sed: can't read /some/none/existing/file: No such file or directory
+error: %prein(update-test-broken-5.2-1.1.x86_64) scriptlet failed, exit status 2
+error: update-test-broken-5.2-1.1.x86_64: install failed
+error: update-test-broken-5.1-1.20.x86_64: erase skipped
+error]
+Installation of update-test-broken-5.2-1.1.x86_64 failed:
+Error: Subprocess failed. Error: RPM failed: Command exited with status 1.
+Abort, retry, ignore? [a/r/i] (a): a
+Problem occurred during or after installation or removal of packages:
+Installation has been aborted as directed.
+Please see the above error message for a hint.
+2024-05-28 07:42:19 Application returned with exit status 8.
+ERROR: zypper up on /.snapshots/10/snapshot failed with exit code 8!
+Use '--interactive' for manual problem resolution.
+Removing snapshot #10...
+2024-05-28 07:42:19 tukit 4.6.8 started
+2024-05-28 07:42:19 Options: abort 10 
+2024-05-28 07:42:20 Discarding snapshot 10.
+2024-05-28 07:42:20 Transaction completed.
+transactional-update finished
+7Dm4i-1-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882140; echo BpPa9-$?-
+BpPa9-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882140; echo XVMQC-$?-
+XVMQC-0-
+# diff mnt-1716882140 def-1716882140; echo Sg~n5-$?-
+Sg~n5-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n pkg remove update-test-security; echo yj8vd-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n pkg remove update-test-security
+Separate /var detected.
+2024-05-28 07:42:20 tukit 4.6.8 started
+2024-05-28 07:42:20 Options: -c9 open 
+2024-05-28 07:42:21 Using snapshot 9 as base for new snapshot 10.
+2024-05-28 07:42:21 /var/lib/overlay/9/etc
+2024-05-28 07:42:21 Syncing /etc of previous snapshot 8 as base into new snapshot "/.snapshots/10/snapshot"
+2024-05-28 07:42:21 SELinux is enabled.
+ID: 10
+2024-05-28 07:42:21 Transaction completed.
+Calling zypper remove
+2024-05-28 07:42:22 tukit 4.6.8 started
+2024-05-28 07:42:22 Options: callext 10 zypper -R {} remove -y update-test-security 
+2024-05-28 07:42:23 Executing `zypper -R /tmp/transactional-update-xWs1tP remove -y update-test-security`:
+Reading installed packages...
+Resolving package dependencies...
+
+The following package is going to be REMOVED:
+  update-test-security
+
+1 package to remove.
+After the operation, 390.0 B will be freed.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+(1/1) Removing: update-test-security-5.2-1.1.x86_64 [..done]
+2024-05-28 07:42:23 Application returned with exit status 0.
+2024-05-28 07:42:23 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:42:24 tukit 4.6.8 started
+2024-05-28 07:42:24 Options: close 10 
+2024-05-28 07:42:25 New default snapshot is #10 (/.snapshots/10/snapshot).
+2024-05-28 07:42:25 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #10 (/.snapshots/10/snapshot).
+transactional-update finished
+yj8vd-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882145; echo mxxcg-$?-
+mxxcg-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882145; echo TAHD~-$?-
+TAHD~-0-
+# diff mnt-1716882145 def-1716882145; echo TlOPx-$?-
+1c1
+< 276
+---
+> 278
+TlOPx-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+ens4: 10.0.2.15 fec0::5c84:394b:8cf:f125
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:43:02 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# ! rpm -q update-test-security; echo ~H3Nn-$?-
+package update-test-security is not installed
+~H3Nn-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n pkg install update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm; echo eOgJ8-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n pkg install update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm
+Separate /var detected.
+2024-05-28 07:43:20 tukit 4.6.8 started
+2024-05-28 07:43:20 Options: -c10 open 
+2024-05-28 07:43:20 Using snapshot 10 as base for new snapshot 11.
+2024-05-28 07:43:20 /var/lib/overlay/10/etc
+2024-05-28 07:43:20 Syncing /etc of previous snapshot 9 as base into new snapshot "/.snapshots/11/snapshot"
+2024-05-28 07:43:20 SELinux is enabled.
+ID: 11
+2024-05-28 07:43:21 Transaction completed.
+Calling zypper install
+2024-05-28 07:43:22 tukit 4.6.8 started
+2024-05-28 07:43:22 Options: callext 11 zypper -R {} install -y --auto-agree-with-product-licenses update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm 
+2024-05-28 07:43:23 Executing `zypper -R /tmp/transactional-update-Frbjs0 install -y --auto-agree-with-product-licenses update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm`:
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  update-test-feature
+
+1 new package to install.
+Overall download size: 8.9 KiB. Already cached: 0 B. After the operation, additional 329.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-feature-5.1-1.20.x86_64 (Plain RPM files cache) (1/1),   8.9 KiB    
+(1/1) Installing: update-test-feature-5.1-1.20.x86_64 [..done]
+2024-05-28 07:43:24 Application returned with exit status 0.
+2024-05-28 07:43:24 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:43:25 tukit 4.6.8 started
+2024-05-28 07:43:25 Options: close 11 
+2024-05-28 07:43:26 New default snapshot is #11 (/.snapshots/11/snapshot).
+2024-05-28 07:43:26 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #11 (/.snapshots/11/snapshot).
+transactional-update finished
+eOgJ8-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n --continue pkg install update-test-trivial/update-test-optional-5.1-1.20.x86_64.rpm; echo lzSGY-$?-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n --continue pkg install update-test-trivial/update-test-optional-5.1-1.20.x86_64.rpm
+Separate /var detected.
+2024-05-28 07:43:27 tukit 4.6.8 started
+2024-05-28 07:43:27 Options: -c11 open 
+2024-05-28 07:43:27 Using snapshot 11 as base for new snapshot 12.
+2024-05-28 07:43:27 /var/lib/overlay/11/etc
+ID: 12
+2024-05-28 07:43:27 Transaction completed.
+Calling zypper install
+2024-05-28 07:43:29 tukit 4.6.8 started
+2024-05-28 07:43:29 Options: callext 12 zypper -R {} install -y --auto-agree-with-product-licenses update-test-trivial/update-test-optional-5.1-1.20.x86_64.rpm 
+2024-05-28 07:43:30 Executing `zypper -R /tmp/transactional-update-q1j6iS install -y --auto-agree-with-product-licenses update-test-trivial/update-test-optional-5.1-1.20.x86_64.rpm`:
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  update-test-optional
+
+1 new package to install.
+Overall download size: 9.0 KiB. Already cached: 0 B. After the operation, additional 408.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-optional-5.1-1.20.x86_64 (Plain RPM files cache) (1/1),   9.0 KiB    
+(1/1) Installing: update-test-optional-5.1-1.20.x86_64 [..done]
+2024-05-28 07:43:31 Application returned with exit status 0.
+2024-05-28 07:43:31 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 07:43:32 tukit 4.6.8 started
+2024-05-28 07:43:32 Options: close 12 
+2024-05-28 07:43:32 New default snapshot is #12 (/.snapshots/12/snapshot).
+2024-05-28 07:43:32 Transaction completed.
+
+Please reboot your machine to activate the changes and avoid data loss.
+New default snapshot is #12 (/.snapshots/12/snapshot).
+transactional-update finished
+lzSGY-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882212; echo pDKSt-$?-
+pDKSt-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882212; echo wvSIr-$?-
+wvSIr-0-
+# diff mnt-1716882212 def-1716882212; echo JTEDs-$?-
+1c1
+< 278
+---
+> 280
+JTEDs-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+ens4: 10.0.2.15 fe80::c9f7:b137:789d:33cf
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+ens4: 10.0.2.15 fec0::f808:83a4:904e:828b
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:44:12 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# rpm -q --qf '%{V}-%{R}' update-test-feature | grep -x 5.1-1.20; echo pn~B8-$?-
+5.1-1.20
+pn~B8-0-
+# rpm -q --qf '%{V}-%{R}' update-test-optional | grep -x 5.1-1.20; echo LLaVk-$?-
+5.1-1.20
+LLaVk-0-
+# cat > /tmp/scriptS1neP.sh << 'EOT_S1neP'; echo S1neP-$?-
+> systemctl show -p SubState --value rollback.service
+> EOT_S1neP
+S1neP-0-
+# echo S1neP; bash -oe pipefail /tmp/scriptS1neP.sh ; echo SCRIPT_FINISHEDS1neP-$?-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+# transactional-update -n rollback 7; echo oKRdv-$?-
+transactional-update 4.6.8 started
+Options: -n rollback 7
+Separate /var detected.
+Rollback to snapshot 7...
+2024-05-28 07:44:30 tukit 4.6.8 started
+2024-05-28 07:44:30 Options: rollback 7 
+2024-05-28 07:44:30 Transaction completed.
+transactional-update finished
+Please reboot to finish rollback!
+oKRdv-0-
+# mount | grep 'on / ' | grep -E -o 'subvolid=[0-9]*' | cut -d'=' -f2 > mnt-1716882270; echo HY~hA-$?-
+HY~hA-0-
+# btrfs su get-default / | cut -d' ' -f2 > def-1716882270; echo eTOUx-$?-
+eTOUx-0-
+# diff mnt-1716882270 def-1716882270; echo OwxdQ-$?-
+1c1
+< 280
+---
+> 273
+OwxdQ-1-
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+ens4: 10.0.2.15 fec0::405c:b7d1:b90f:bb65
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:45:09 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# rpm -q --qf '%{V}-%{R}' update-test-security | grep -x 5.1-1.20; echo N5_xB-$?-
+5.1-1.20
+N5_xB-0-
+# cd
+# test -f /var/log/audit/audit.log; echo UfVk_-$?-
+UfVk_-0-
+# cat > /tmp/scriptOSm16.sh << 'EOT_OSm16'; echo OSm16-$?-
+> ausearch -m avc -r
+> EOT_OSm16
+OSm16-0-
+# echo OSm16; bash -oe pipefail /tmp/scriptOSm16.sh ; echo SCRIPT_FINISHEDOSm16-$?-
+OSm16
+type=AVC msg=audit(1716881450.845:100): avc:  denied  { map_read map_write } for  pid=1917 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881450.859:101): avc:  denied  { map_read map_write } for  pid=1921 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881635.690:105): avc:  denied  { map_read map_write } for  pid=1664 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881635.694:106): avc:  denied  { map_read map_write } for  pid=1666 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.017:127): avc:  denied  { map_read map_write } for  pid=1691 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.027:128): avc:  denied  { map_read map_write } for  pid=1693 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.350:149): avc:  denied  { map_read map_write } for  pid=1718 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.357:150): avc:  denied  { map_read map_write } for  pid=1720 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.677:171): avc:  denied  { map_read map_write } for  pid=1745 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881636.687:172): avc:  denied  { map_read map_write } for  pid=1747 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.007:193): avc:  denied  { map_read map_write } for  pid=1771 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.014:194): avc:  denied  { map_read map_write } for  pid=1774 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.340:215): avc:  denied  { map_read map_write } for  pid=1800 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.354:216): avc:  denied  { map_read map_write } for  pid=1802 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.684:237): avc:  denied  { map_read map_write } for  pid=1827 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881637.694:238): avc:  denied  { map_read map_write } for  pid=1829 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+SCRIPT_FINISHEDOSm16-0-
+# clear
+# 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+ens4: 10.0.2.15 fec0::4a11:bfa9:dfa0:6f49
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+ens4: 10.0.2.15 fec0::6b4:8cb2:5f8d:7a73
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+ens4: 10.0.2.15 fec0::efd8:1cfa:15ec:45c8
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc0).
+
+SSH host key: SHA256:R/D1+ln0OsStSw2VumS+1jOAxsr8dLUKttofw7QJ/7I (ECDSA)
+SSH host key: SHA256:jwI28q3iqcGqXmF9r/RLVChI42P4grfk4aWv+xUlQ6U (ED25519)
+SSH host key: SHA256:wradl8x0XXlcbbBLoCu4FVvrem1rShfZ+RKNzTt+ftU (RSA)
+ens4: 10.0.2.15 fec0::ccb:4dda:2b96:5fcf
+
+
+localhost login: 
+localhost login: root
+Password: 
+Last login: Tue May 28 07:54:41 UTC 2024 on tty2
+[1mlocalhost:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+localhost:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# cat > /tmp/scriptz_R3j.sh << 'EOT_z_R3j'; echo z_R3j-$?-
+> journalctl --no-pager --quiet -p err -o short-precise
+> EOT_z_R3j
+z_R3j-0-
+# echo z_R3j; bash -oe pipefail /tmp/scriptz_R3j.sh ; echo SCRIPT_FINISHEDz_R3j-$?-
+z_R3j
+May 28 07:54:00.403746 localhost.localdomain root[908]: ERROR: "/usr/libexec/health-checker/fail.sh check" failed
+May 28 07:54:00.856796 localhost.localdomain root[994]: Machine didn't come up correctly, do a rollback
+SCRIPT_FINISHEDz_R3j-0-
+# journalctl --no-pager -o short-precise > /tmp/full_journal.log; echo g7oYx-$?-
+g7oYx-0-
+# curl --form upload=@/tmp/full_journal.log --form upname=journal_check-full_journal.log http://10.0.2.2:20273/WiyghNbm7Wj8trtw/uploadlog/full_journal.log; echo nDDxa-$?-
+OK: journal_check-full_journal.log
+nDDxa-0-
+# cat > /tmp/scriptRThrA.sh << 'EOT_RThrA'; echo RThrA-$?-
+> systemctl --failed --no-legend --plain --no-pager
+> EOT_RThrA
+RThrA-0-
+# echo RThrA; bash -oe pipefail /tmp/scriptRThrA.sh ; echo SCRIPT_FINISHEDRThrA-$?-
+RThrA
+SCRIPT_FINISHEDRThrA-0-
+# test -d /var/log/audit/; echo q7oq8-$?-
+q7oq8-0-
+# tar cvf /tmp/audit.tar  /var/log/audit/*; echo pfP16-$?-
+tar: Removing leading `/' from member names
+/var/log/audit/audit.log
+pfP16-0-
+# curl --form upload=@/tmp/audit.tar --form upname=journal_check-audit.tar http://10.0.2.2:20273/WiyghNbm7Wj8trtw/uploadlog/audit.tar; echo nii~Y-$?-
+OK: journal_check-audit.tar
+nii~Y-0-
+# 
