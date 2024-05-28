@@ -1,0 +1,318 @@
+
+Welcome to openSUSE Tumbleweed 20220719 - Kernel 5.18.11-1-default (hvc0).
+
+ens4:  
+
+
+susetest login: 
+susetest login: root
+Password: 
+Have a lot of fun...
+Last login: Thu Jul 21 22:58:46 from 10.162.2.137
+[1msusetest:~ #[m(B export TERM=dumb; stty cols 2048; exec $SHELL
+susetest:~ # PS1="# "
+# export TERM=dumb; echo Gi8yV-$?-
+Gi8yV-0-
+# echo Logged into $(tty); echo 1XrKo-$?-
+Logged into /dev/hvc0
+1XrKo-0-
+# test -f /etc/named.d/openqa.zones; echo ucejv-$?-
+ucejv-1-
+# grep -q -E "^include \"/etc/named.d/openqa.zones\";" /etc/named.conf.include; echo 2GR6I-$?-
+grep: /etc/named.conf.include: No such file or directory
+2GR6I-2-
+# grep -q -E "^include \"/etc/named.conf.include\";" /etc/named.conf; echo ySlHe-$?-
+ySlHe-1-
+# grep -E "^include \"/etc/named.d/openqa.zones\";" /etc/named.conf; echo 90A1g-$?-
+90A1g-1-
+# readlink /etc/systemd/system/network.service | grep NetworkManager; echo bU_de-$?-
+bU_de-1-
+# echo 'default 10.0.2.2 - -' > /etc/sysconfig/network/routes
+# readlink /etc/systemd/system/network.service | grep NetworkManager; echo bU_de-$?-
+bU_de-1-
+# cat > /tmp/script~Zpx8.sh << 'EOT_~Zpx8'; echo ~Zpx8-$?-
+> grep 52:54:00:12:03:4e /sys/class/net/*/address |cut -d / -f 5
+> EOT_~Zpx8
+~Zpx8-0-
+# echo ~Zpx8; bash -oe pipefail /tmp/script~Zpx8.sh ; echo SCRIPT_FINISHED~Zpx8-$?-
+~Zpx8
+ens4
+SCRIPT_FINISHED~Zpx8-0-
+# arping -w 1 -I ens4 10.0.2.1; echo OC9~O-$?-
+ARPING 10.0.2.1 from 0.0.0.0 ens4
+arping: no source address in not-DAD mode
+OC9~O-2-
+# echo -e "STARTMODE='auto'\nBOOTPROTO='static'\nIPADDR='10.0.2.1/24'\nMTU='1380'" > /etc/sysconfig/network/ifcfg-ens4; echo luvRQ-$?-
+luvRQ-0-
+# readlink /etc/systemd/system/network.service | grep NetworkManager; echo bU_de-$?-
+bU_de-1-
+# sed -i -e 's|^NETCONFIG_DNS_STATIC_SERVERS=.*|NETCONFIG_DNS_STATIC_SERVERS="10.150.1.11"|' /etc/sysconfig/network/config; echo fBVbt-$?-
+fBVbt-0-
+# netconfig -f update; echo jzXUf-$?-
+jzXUf-0-
+# readlink /etc/systemd/system/network.service | grep NetworkManager; echo bU_de-$?-
+bU_de-1-
+# rcnetwork restart; echo ~QVNT-$?-
+~QVNT-0-
+# cat > /tmp/scriptcSng6.sh << 'EOT_cSng6'; echo cSng6-$?-
+> ip address show; echo; ip route show; echo; grep -v "^#" /etc/resolv.conf
+> EOT_cSng6
+cSng6-0-
+# echo cSng6; bash -oe pipefail /tmp/scriptcSng6.sh ; echo SCRIPT_FINISHEDcSng6-$?-
+cSng6
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1380 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 52:54:00:12:03:4e brd ff:ff:ff:ff:ff:ff
+    altname enp0s4
+    inet 10.0.2.1/24 brd 10.0.2.255 scope global ens4
+       valid_lft forever preferred_lft forever
+
+default via 10.0.2.2 dev ens4 
+10.0.2.0/24 dev ens4 proto kernel scope link src 10.0.2.1 
+
+nameserver 10.150.1.11
+SCRIPT_FINISHEDcSng6-0-
+# ping -c 1 10.0.2.2 || journalctl -b --no-pager -o short-precise >/dev/ttyS0; echo GM6hG-$?-
+PING 10.0.2.2 (10.0.2.2) 56(84) bytes of data.
+64 bytes from 10.0.2.2: icmp_seq=1 ttl=64 time=1.07 ms
+
+--- 10.0.2.2 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.070/1.070/1.070/0.000 ms
+GM6hG-0-
+# cat > /tmp/scriptmM~tX.sh << 'EOT_mM~tX'; echo mM~tX-$?-
+> NIC=`grep 52:54:00:12:03:4e /sys/class/net/*/address |cut -d / -f 5`
+> cat > /etc/sysconfig/network/ifcfg-$NIC <<EOT
+> IPADDR=10.0.2.1
+> NETMASK=255.255.255.0
+> STARTMODE='auto'
+> MTU='1380'
+> EOT
+> systemctl restart network
+> FIXED_NIC=`grep 52:54:00:12:03:4e /sys/class/net/*/address |cut -d / -f 5`
+> iptables -F
+> iptables -A INPUT -i $FIXED_NIC -j ACCEPT
+> iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+> iptables -t nat -A POSTROUTING -o $FIXED_NIC -j MASQUERADE
+> echo 1 > /proc/sys/net/ipv4/ip_forward
+> ip route
+> ip addr
+> iptables -v -L
+> systemctl stop dhcpd
+> cat  >/etc/dhcpd.conf <<EOT
+> default-lease-time 14400;
+> ddns-update-style standard;
+> ddns-updates on;
+> update-conflict-detection false;
+> 
+>         zone openqa.test. {
+>             primary 127.0.0.1;
+>         }
+>         zone 2.0.10.in-addr.arpa. {
+>             primary 127.0.0.1;
+>         }
+>         dhcp-cache-threshold 0;
+> 
+> subnet 10.0.2.0 netmask 255.255.255.0 {
+>   range  10.0.2.15  10.0.2.100;
+>   default-lease-time 14400;
+>   max-lease-time 172800;
+>   option interface-mtu 1380;
+>   option domain-name "openqa.test";
+>   option domain-name-servers  10.0.2.1,  10.0.2.1;
+>   option routers 10.0.2.2;
+> }
+> EOT
+> curl -f -v http://10.0.2.2:20083/z4DBE5jnuAaJpF0t/data/supportserver/dhcp/sysconfig/dhcpd  >/etc/sysconfig/dhcpd 
+> NIC_LIST="`grep 52:54:00:12:03:4e /sys/class/net/*/address |cut -d / -f 5` "
+> sed -i -e "s|^DHCPD_INTERFACE=.*|DHCPD_INTERFACE=\"$NIC_LIST\"|" /etc/sysconfig/dhcpd
+> systemctl start dhcpd
+> 
+>         sed -i -e '/^NETCONFIG_DNS_FORWARDER=/ s/=.*/="bind"/' \
+>                -e '/^NETCONFIG_DNS_FORWARDER_FALLBACK=/ s/yes/no/' /etc/sysconfig/network/config
+>         sed -i 's|#forwarders.*;|include "/etc/named.d/forwarders.conf";|' /etc/named.conf
+>         sed -i 's|#dnssec-validation .*;|dnssec-validation no;|' /etc/named.conf
+> 
+>         echo -e '
+> include "/etc/named.d/openqa.zones";' >> /etc/named.conf
+>         curl -f -v http://10.0.2.2:20083/z4DBE5jnuAaJpF0t/data/supportserver/named/openqa.zones > /etc/named.d/openqa.zones
+>         chown :named /etc/named.d/openqa.zones
+> 
+>         curl -f -v http://10.0.2.2:20083/z4DBE5jnuAaJpF0t/data/supportserver/named/openqa.test.zone > /var/lib/named/master/openqa.test.zone
+>         curl -f -v http://10.0.2.2:20083/z4DBE5jnuAaJpF0t/data/supportserver/named/2.0.10.in-addr.arpa.zone > /var/lib/named/master/2.0.10.in-addr.arpa.zone
+>         chown -R named:named /var/lib/named/master
+>     
+>         netconfig update -f
+>         systemctl start named
+>         systemctl status named
+>         systemctl restart dhcpd
+>     
+> EOT_mM~tX
+mM~tX-0-
+# echo mM~tX; bash -oe pipefail /tmp/scriptmM~tX.sh ; echo SCRIPT_FINISHEDmM~tX-$?-
+mM~tX
+default via 10.0.2.2 dev ens4 
+10.0.2.0/24 dev ens4 proto kernel scope link src 10.0.2.1 
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1380 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 52:54:00:12:03:4e brd ff:ff:ff:ff:ff:ff
+    altname enp0s4
+    inet 10.0.2.1/24 brd 10.0.2.255 scope global ens4
+       valid_lft forever preferred_lft forever
+Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 ACCEPT     all  --  ens4   any     anywhere             anywhere            
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 ACCEPT     all  --  any    any     anywhere             anywhere             state RELATED,ESTABLISHED
+*   Trying 10.0.2.2:20083...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to 10.0.2.2 (10.0.2.2) port 20083 (#0)
+> GET /z4DBE5jnuAaJpF0t/data/supportserver/dhcp/sysconfig/dhcpd HTTP/1.1
+> Host: 10.0.2.2:20083
+> User-Agent: curl/7.83.1
+> Accept: */*
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Accept-Ranges: bytes
+< Content-Length: 6405
+< Content-Type: application/octet-stream
+< Date: Tue, 28 May 2024 07:28:22 GMT
+< ETag: "88ddab40377a8f9e2fc34a9f129c91af"
+< Last-Modified: Tue, 25 Jul 2023 12:15:09 GMT
+< Server: Mojolicious (Perl)
+< 
+{ [6405 bytes data]
+100  6405  100  6405    0     0   538k      0 --:--:-- --:--:-- --:--:--  568k
+* Connection #0 to host 10.0.2.2 left intact
+*   Trying 10.0.2.2:20083...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to 10.0.2.2 (10.0.2.2) port 20083 (#0)
+> GET /z4DBE5jnuAaJpF0t/data/supportserver/named/openqa.zones HTTP/1.1
+> Host: 10.0.2.2:20083
+> User-Agent: curl/7.83.1
+> Accept: */*
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Accept-Ranges: bytes
+< Content-Length: 231
+< Content-Type: application/octet-stream
+< Date: Tue, 28 May 2024 07:28:22 GMT
+< ETag: "88ddab40377a8f9e2fc34a9f129c91af"
+< Last-Modified: Tue, 25 Jul 2023 12:15:09 GMT
+< Server: Mojolicious (Perl)
+< 
+{ [231 bytes data]
+100   231  100   231    0     0  26826      0 --:--:-- --:--:-- --:--:-- 28875
+* Connection #0 to host 10.0.2.2 left intact
+*   Trying 10.0.2.2:20083...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to 10.0.2.2 (10.0.2.2) port 20083 (#0)
+> GET /z4DBE5jnuAaJpF0t/data/supportserver/named/openqa.test.zone HTTP/1.1
+> Host: 10.0.2.2:20083
+> User-Agent: curl/7.83.1
+> Accept: */*
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Accept-Ranges: bytes
+< Content-Length: 442
+< Content-Type: application/octet-stream
+< Date: Tue, 28 May 2024 07:28:22 GMT
+< ETag: "88ddab40377a8f9e2fc34a9f129c91af"
+< Last-Modified: Tue, 25 Jul 2023 12:15:09 GMT
+< Server: Mojolicious (Perl)
+< 
+{ [442 bytes data]
+100   442  100   442    0     0  41967      0 --:--:-- --:--:-- --:--:-- 44200
+* Connection #0 to host 10.0.2.2 left intact
+*   Trying 10.0.2.2:20083...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to 10.0.2.2 (10.0.2.2) port 20083 (#0)
+> GET /z4DBE5jnuAaJpF0t/data/supportserver/named/2.0.10.in-addr.arpa.zone HTTP/1.1
+> Host: 10.0.2.2:20083
+> User-Agent: curl/7.83.1
+> Accept: */*
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Accept-Ranges: bytes
+< Content-Length: 449
+< Content-Type: application/octet-stream
+< Date: Tue, 28 May 2024 07:28:22 GMT
+< ETag: "88ddab40377a8f9e2fc34a9f129c91af"
+< Last-Modified: Tue, 25 Jul 2023 12:15:09 GMT
+< Server: Mojolicious (Perl)
+< 
+{ [449 bytes data]
+100   449  100   449    0     0  59047      0 --:--:-- --:--:-- --:--:-- 64142
+* Connection #0 to host 10.0.2.2 left intact
+● named.service - Berkeley Internet Name Domain (DNS)
+     Loaded: loaded (/usr/lib/systemd/system/named.service; disabled; vendor preset: disabled)
+     Active: active (running) since Tue 2024-05-28 03:28:21 EDT; 13ms ago
+    Process: 2797 ExecStartPre=/usr/libexec/bind/named.prep (code=exited, status=0/SUCCESS)
+    Process: 2805 ExecStart=/usr/sbin/named -u named $NAMED_ARGS (code=exited, status=0/SUCCESS)
+   Main PID: 2806 (named)
+      Tasks: 3 (limit: 1122)
+        CPU: 50ms
+     CGroup: /system.slice/named.service
+             └─2806 /usr/sbin/named -u named
+
+May 28 03:28:21 susetest named[2806]: linked to libxml2 version: 20914
+May 28 03:28:21 susetest named[2806]: compiled with json-c version: 0.16
+May 28 03:28:21 susetest systemd[1]: Started Berkeley Internet Name Domain (DNS).
+May 28 03:28:21 susetest named[2806]: linked to json-c version: 0.16
+May 28 03:28:21 susetest named[2806]: compiled with zlib version: 1.2.11
+May 28 03:28:21 susetest named[2806]: linked to zlib version: 1.2.11
+May 28 03:28:21 susetest named[2806]: ----------------------------------------------------
+May 28 03:28:21 susetest named[2806]: BIND 9 is maintained by Internet Systems Consortium,
+May 28 03:28:21 susetest named[2806]: Inc. (ISC), a non-profit 501(c)(3) public-benefit
+May 28 03:28:21 susetest named[2806]: corporation.  Support and training for BIND 9 are
+SCRIPT_FINISHEDmM~tX-0-
+# cat > /tmp/scriptnyOuf.sh << 'EOT_nyOuf'; echo nyOuf-$?-
+> cat /var/lib/dhcp/db/dhcpd.leases
+> 
+> EOT_nyOuf
+nyOuf-0-
+# echo nyOuf; bash -oe pipefail /tmp/scriptnyOuf.sh ; echo SCRIPT_FINISHEDnyOuf-$?-
+nyOuf
+# The format of this file is documented in the dhcpd.leases(5) manual page.
+# This lease file was written by isc-dhcp-4.4.2-P1
+
+# authoring-byte-order entry is generated, DO NOT DELETE
+authoring-byte-order little-endian;
+
+server-duid "\000\001\000\001-\350D\025RT\000\022\003N";
+
+lease 10.0.2.15 {
+  starts 2 2024/05/28 07:29:00;
+  ends 2 2024/05/28 11:29:00;
+  cltt 2 2024/05/28 07:29:00;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 52:54:00:12:01:ec;
+  uid "\377\000\022\001\354\000\001\000\001-\350D;RT\000\022\001\354";
+}
+SCRIPT_FINISHEDnyOuf-0-
+# 

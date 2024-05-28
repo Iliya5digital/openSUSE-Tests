@@ -1,0 +1,1279 @@
+[    0.000000][    T0] Linux version 5.18.11-1-default (geeko@buildhost) (gcc (SUSE Linux) 12.1.1 20220629 [revision 7811663964aa7e31c3939b859bbfa2e16919639f], GNU ld (GNU Binutils; openSUSE Tumbleweed) 2.38.20220525-6) #1 SMP PREEMPT_DYNAMIC Fri Jul 15 05:36:11 UTC 2022 (4fcb983)
+[    0.000000][    T0] Command line: BOOT_IMAGE=/boot/vmlinuz-5.18.11-1-default root=UUID=f61f54aa-dd2c-45f8-ac96-43636fa72cc2 splash=silent video=1024x768 plymouth.ignore-serial-consoles console=ttyS0 console=tty kernel.softlockup_panic=1 resume=/dev/disk/by-uuid/104105b3-3378-4569-b7db-8fe28e06f636 security=apparmor mitigations=auto 3
+[    0.000000][    T0] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000][    T0] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000][    T0] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.000000][    T0] x86/fpu: Supporting XSAVE feature 0x200: 'Protection Keys User registers'
+[    0.000000][    T0] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000][    T0] x86/fpu: xstate_offset[9]:  832, xstate_sizes[9]:    8
+[    0.000000][    T0] x86/fpu: Enabled xstate features 0x207, context size is 840 bytes, using 'compacted' format.
+[    0.000000][    T0] signal: max sigframe size: 3376
+[    0.000000][    T0] BIOS-provided physical RAM map:
+[    0.000000][    T0] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000][    T0] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000][    T0] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000][    T0] BIOS-e820: [mem 0x0000000000100000-0x000000003ffd8fff] usable
+[    0.000000][    T0] BIOS-e820: [mem 0x000000003ffd9000-0x000000003fffffff] reserved
+[    0.000000][    T0] BIOS-e820: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+[    0.000000][    T0] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000][    T0] BIOS-e820: [mem 0x000000fd00000000-0x000000ffffffffff] reserved
+[    0.000000][    T0] NX (Execute Disable) protection: active
+[    0.000000][    T0] SMBIOS 2.8 present.
+[    0.000000][    T0] DMI: QEMU Standard PC (i440FX + PIIX, 1996), BIOS rel-1.16.0-0-gd239552c-rebuilt.opensuse.org 04/01/2014
+[    0.000000][    T0] Hypervisor detected: KVM
+[    0.000000][    T0] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000001][    T0] kvm-clock: using sched offset of 12587194580 cycles
+[    0.000002][    T0] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000005][    T0] tsc: Detected 2199.998 MHz processor
+[    0.000749][    T0] last_pfn = 0x3ffd9 max_arch_pfn = 0x400000000
+[    0.000822][    T0] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.002972][    T0] found SMP MP-table at [mem 0x000f5b50-0x000f5b5f]
+[    0.002986][    T0] Using GB pages for direct mapping
+[    0.003048][    T0] RAMDISK: [mem 0x34d79000-0x366b3fff]
+[    0.003054][    T0] ACPI: Early table checksum verification disabled
+[    0.003056][    T0] ACPI: RSDP 0x00000000000F5970 000014 (v00 BOCHS )
+[    0.003062][    T0] ACPI: RSDT 0x000000003FFE18ED 000034 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.003066][    T0] ACPI: FACP 0x000000003FFE17A1 000074 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.003070][    T0] ACPI: DSDT 0x000000003FFE0040 001761 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.003073][    T0] ACPI: FACS 0x000000003FFE0000 000040
+[    0.003075][    T0] ACPI: APIC 0x000000003FFE1815 000078 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.003078][    T0] ACPI: HPET 0x000000003FFE188D 000038 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.003080][    T0] ACPI: WAET 0x000000003FFE18C5 000028 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+[    0.003083][    T0] ACPI: Reserving FACP table memory at [mem 0x3ffe17a1-0x3ffe1814]
+[    0.003084][    T0] ACPI: Reserving DSDT table memory at [mem 0x3ffe0040-0x3ffe17a0]
+[    0.003085][    T0] ACPI: Reserving FACS table memory at [mem 0x3ffe0000-0x3ffe003f]
+[    0.003086][    T0] ACPI: Reserving APIC table memory at [mem 0x3ffe1815-0x3ffe188c]
+[    0.003087][    T0] ACPI: Reserving HPET table memory at [mem 0x3ffe188d-0x3ffe18c4]
+[    0.003088][    T0] ACPI: Reserving WAET table memory at [mem 0x3ffe18c5-0x3ffe18ec]
+[    0.003376][    T0] No NUMA configuration found
+[    0.003377][    T0] Faking a node at [mem 0x0000000000000000-0x000000003ffd8fff]
+[    0.003384][    T0] NODE_DATA(0) allocated [mem 0x3ffae000-0x3ffd8fff]
+[    0.003645][    T0] Zone ranges:
+[    0.003646][    T0]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.003648][    T0]   DMA32    [mem 0x0000000001000000-0x000000003ffd8fff]
+[    0.003650][    T0]   Normal   empty
+[    0.003651][    T0]   Device   empty
+[    0.003652][    T0] Movable zone start for each node
+[    0.003653][    T0] Early memory node ranges
+[    0.003654][    T0]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.003656][    T0]   node   0: [mem 0x0000000000100000-0x000000003ffd8fff]
+[    0.003657][    T0] Initmem setup node 0 [mem 0x0000000000001000-0x000000003ffd8fff]
+[    0.003664][    T0] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.003683][    T0] On node 0, zone DMA: 97 pages in unavailable ranges
+[    0.003999][    T0] On node 0, zone DMA32: 39 pages in unavailable ranges
+[    0.004496][    T0] ACPI: PM-Timer IO Port: 0x608
+[    0.004505][    T0] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+[    0.004534][    T0] IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+[    0.004536][    T0] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.004538][    T0] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+[    0.004539][    T0] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.004541][    T0] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+[    0.004542][    T0] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+[    0.004544][    T0] ACPI: Using ACPI (MADT) for SMP configuration information
+[    0.004545][    T0] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.004548][    T0] TSC deadline timer available
+[    0.004551][    T0] smpboot: Allowing 1 CPUs, 0 hotplug CPUs
+[    0.004576][    T0] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.004578][    T0] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.004579][    T0] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.004580][    T0] PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.004581][    T0] [mem 0x40000000-0xfeffbfff] available for PCI devices
+[    0.004582][    T0] Booting paravirtualized kernel on KVM
+[    0.004583][    T0] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.008034][    T0] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:1 nr_cpu_ids:1 nr_node_ids:1
+[    0.008151][    T0] percpu: Embedded 64 pages/cpu s225280 r8192 d28672 u2097152
+[    0.008187][    T0] kvm-guest: PV spinlocks disabled, single CPU
+[    0.008190][    T0] Fallback order for Node 0: 0 
+[    0.008192][    T0] Built 1 zonelists, mobility grouping on.  Total pages: 257753
+[    0.008194][    T0] Policy zone: DMA32
+[    0.008195][    T0] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.18.11-1-default root=UUID=f61f54aa-dd2c-45f8-ac96-43636fa72cc2 splash=silent video=1024x768 plymouth.ignore-serial-consoles console=ttyS0 console=tty kernel.softlockup_panic=1 resume=/dev/disk/by-uuid/104105b3-3378-4569-b7db-8fe28e06f636 security=apparmor mitigations=auto 3
+[    0.008291][    T0] Unknown kernel command line parameters "3 BOOT_IMAGE=/boot/vmlinuz-5.18.11-1-default splash=silent", will be passed to user space.
+[    0.008346][    T0] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.008375][    T0] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.008396][    T0] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.009549][    T0] Memory: 260860K/1048028K available (14343K kernel code, 3510K rwdata, 10972K rodata, 2884K init, 5620K bss, 90008K reserved, 0K cma-reserved)
+[    0.010165][    T0] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.010188][    T0] ftrace: allocating 43878 entries in 172 pages
+[    0.017352][    T0] ftrace: allocated 172 pages with 4 groups
+[    0.017839][    T0] Dynamic Preempt: voluntary
+[    0.017902][    T0] rcu: Preemptible hierarchical RCU implementation.
+[    0.017903][    T0] rcu: 	RCU event tracing is enabled.
+[    0.017904][    T0] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=1.
+[    0.017905][    T0] 	Trampoline variant of Tasks RCU enabled.
+[    0.017906][    T0] 	Rude variant of Tasks RCU enabled.
+[    0.017906][    T0] 	Tracing variant of Tasks RCU enabled.
+[    0.017907][    T0] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.017908][    T0] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.021208][    T0] NR_IRQS: 524544, nr_irqs: 256, preallocated irqs: 16
+[    0.021412][    T0] random: crng init done
+[    0.021433][    T0] Console: colour dummy device 80x25
+[    0.021574][    T0] printk: console [tty0] enabled
+[    0.148074][    T0] printk: console [ttyS0] enabled
+[    0.148838][    T0] ACPI: Core revision 20211217
+[    0.149671][    T0] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604467 ns
+[    0.151236][    T0] APIC: Switch to symmetric I/O mode setup
+[    0.152387][    T0] x2apic enabled
+[    0.153200][    T0] Switched APIC routing to physical x2apic.
+[    0.155387][    T0] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.156396][    T0] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x1fb63109b96, max_idle_ns: 440795265316 ns
+[    0.158080][    T0] Calibrating delay loop (skipped) preset value.. 4399.99 BogoMIPS (lpj=8799992)
+[    0.162080][    T0] pid_max: default: 32768 minimum: 301
+[    0.162869][    T0] LSM: Security Framework initializing
+[    0.163690][    T0] AppArmor: AppArmor initialized
+[    0.164424][    T0] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.165612][    T0] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.166348][    T0] x86/cpu: User Mode Instruction Prevention (UMIP) activated
+[    0.167520][    T0] Last level iTLB entries: 4KB 512, 2MB 255, 4MB 127
+[    0.168464][    T0] Last level dTLB entries: 4KB 512, 2MB 255, 4MB 127, 1GB 0
+[    0.170085][    T0] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.171420][    T0] Spectre V2 : Mitigation: Retpolines
+[    0.172223][    T0] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.173547][    T0] Spectre V2 : Enabling Restricted Speculation for firmware calls
+[    0.174080][    T0] Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+[    0.175413][    T0] Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl
+[    0.193179][    T0] Freeing SMP alternatives memory: 36K
+[    0.194064][    T1] smpboot: CPU0: AMD EPYC 7773X 64-Core Processor (family: 0x19, model: 0x1, stepping: 0x2)
+[    0.194078][    T1] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.194078][    T1] cblist_init_generic: Setting shift to 0 and lim to 1.
+[    0.194078][    T1] cblist_init_generic: Setting shift to 0 and lim to 1.
+[    0.194100][    T1] cblist_init_generic: Setting shift to 0 and lim to 1.
+[    0.195121][    T1] Performance Events: Fam17h+ core perfctr, AMD PMU driver.
+[    0.196176][    T1] ... version:                0
+[    0.196855][    T1] ... bit width:              48
+[    0.197550][    T1] ... generic registers:      6
+[    0.198083][    T1] ... value mask:             0000ffffffffffff
+[    0.198962][    T1] ... max period:             00007fffffffffff
+[    0.199827][    T1] ... fixed-purpose events:   0
+[    0.200513][    T1] ... event mask:             000000000000003f
+[    0.201434][    T1] rcu: Hierarchical SRCU implementation.
+[    0.202469][    T1] smp: Bringing up secondary CPUs ...
+[    0.203234][    T1] smp: Brought up 1 node, 1 CPU
+[    0.203915][    T1] smpboot: Max logical packages: 1
+[    0.204632][    T1] smpboot: Total of 1 processors activated (4399.99 BogoMIPS)
+[    0.207156][   T20] node 0 deferred pages initialised in 4ms
+[    0.208071][    T1] devtmpfs: initialized
+[    0.208690][    T1] x86/mm: Memory block size: 128MB
+[    0.209692][    T1] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.210086][    T1] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.211196][    T1] pinctrl core: initialized pinctrl subsystem
+[    0.212225][    T1] PM: RTC time: 07:27:29, date: 2024-05-28
+[    0.213195][    T1] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.214157][    T1] DMA: preallocated 128 KiB GFP_KERNEL pool for atomic allocations
+[    0.215365][    T1] DMA: preallocated 128 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.216575][    T1] DMA: preallocated 128 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.217823][    T1] audit: initializing netlink subsys (disabled)
+[    0.218157][    T1] thermal_sys: Registered thermal governor 'fair_share'
+[    0.218158][    T1] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.219154][    T1] thermal_sys: Registered thermal governor 'step_wise'
+[    0.220144][    T1] thermal_sys: Registered thermal governor 'user_space'
+[    0.221264][   T23] audit: type=2000 audit(1716881250.328:1): state=initialized audit_enabled=0 res=1
+[    0.223414][    T1] cpuidle: using governor ladder
+[    0.224111][    T1] cpuidle: using governor menu
+[    0.225419][    T1] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.226180][    T1] PCI: Using configuration type 1 for base access
+[    0.227086][    T1] PCI: Using configuration type 1 for extended access
+[    0.228796][    T1] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+[    0.230143][    T1] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.231302][    T1] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.232539][    T1] ACPI: Added _OSI(Module Device)
+[    0.233255][    T1] ACPI: Added _OSI(Processor Device)
+[    0.233998][    T1] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.234087][    T1] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.234969][    T1] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.235723][    T1] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.236600][    T1] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    0.238096][    T1] ACPI: 1 ACPI AML tables successfully acquired and loaded
+[    0.239877][    T1] ACPI: Interpreter enabled
+[    0.240532][    T1] ACPI: PM: (supports S0 S3 S4 S5)
+[    0.241257][    T1] ACPI: Using IOAPIC for interrupt routing
+[    0.242090][    T1] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.243606][    T1] ACPI: Enabled 2 GPEs in block 00 to 0F
+[    0.245965][    T1] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.246086][    T1] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    0.247737][    T1] acpiphp: Slot [3] registered
+[    0.248425][    T1] acpiphp: Slot [4] registered
+[    0.249115][    T1] acpiphp: Slot [5] registered
+[    0.249893][    T1] acpiphp: Slot [6] registered
+[    0.250107][    T1] acpiphp: Slot [7] registered
+[    0.250893][    T1] acpiphp: Slot [8] registered
+[    0.251579][    T1] acpiphp: Slot [9] registered
+[    0.252300][    T1] acpiphp: Slot [10] registered
+[    0.253051][    T1] acpiphp: Slot [11] registered
+[    0.253851][    T1] acpiphp: Slot [12] registered
+[    0.254098][    T1] acpiphp: Slot [13] registered
+[    0.254856][    T1] acpiphp: Slot [14] registered
+[    0.255639][    T1] acpiphp: Slot [15] registered
+[    0.256337][    T1] acpiphp: Slot [16] registered
+[    0.257114][    T1] acpiphp: Slot [17] registered
+[    0.257831][    T1] acpiphp: Slot [18] registered
+[    0.258098][    T1] acpiphp: Slot [19] registered
+[    0.258840][    T1] acpiphp: Slot [20] registered
+[    0.259581][    T1] acpiphp: Slot [21] registered
+[    0.260335][    T1] acpiphp: Slot [22] registered
+[    0.261068][    T1] acpiphp: Slot [23] registered
+[    0.262102][    T1] acpiphp: Slot [24] registered
+[    0.262806][    T1] acpiphp: Slot [25] registered
+[    0.263508][    T1] acpiphp: Slot [26] registered
+[    0.264291][    T1] acpiphp: Slot [27] registered
+[    0.265000][    T1] acpiphp: Slot [28] registered
+[    0.265785][    T1] acpiphp: Slot [29] registered
+[    0.266098][    T1] acpiphp: Slot [30] registered
+[    0.266869][    T1] acpiphp: Slot [31] registered
+[    0.267570][    T1] PCI host bridge to bus 0000:00
+[    0.268271][    T1] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.269349][    T1] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.270084][    T1] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.271358][    T1] pci_bus 0000:00: root bus resource [mem 0x40000000-0xfebfffff window]
+[    0.272557][    T1] pci_bus 0000:00: root bus resource [mem 0x100000000-0x17fffffff window]
+[    0.273771][    T1] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.274252][    T1] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+[    0.276396][    T1] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+[    0.277970][    T1] pci 0000:00:01.1: [8086:7010] type 00 class 0x010180
+[    0.280368][    T1] pci 0000:00:01.1: reg 0x20: [io  0xc140-0xc14f]
+[    0.282470][    T1] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.283607][    T1] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.284653][    T1] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.286083][    T1] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.287265][    T1] pci 0000:00:01.3: [8086:7113] type 00 class 0x068000
+[    0.288752][    T1] pci 0000:00:01.3: quirk: [io  0x0600-0x063f] claimed by PIIX4 ACPI
+[    0.289908][    T1] pci 0000:00:01.3: quirk: [io  0x0700-0x070f] claimed by PIIX4 SMB
+[    0.290638][    T1] pci 0000:00:02.0: [1234:1111] type 00 class 0x030000
+[    0.295878][    T1] pci 0000:00:02.0: reg 0x10: [mem 0xfd000000-0xfdffffff pref]
+[    0.304904][    T1] pci 0000:00:02.0: reg 0x18: [mem 0xfebd8000-0xfebd8fff]
+[    0.324989][    T1] pci 0000:00:02.0: reg 0x30: [mem 0xfebc0000-0xfebcffff pref]
+[    0.326168][    T1] pci 0000:00:02.0: BAR 0: assigned to efifb
+[    0.327254][    T1] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.330260][    T1] pci 0000:00:03.0: [8086:2668] type 00 class 0x040300
+[    0.332048][    T1] pci 0000:00:03.0: reg 0x10: [mem 0xfebd0000-0xfebd3fff]
+[    0.337229][    T1] pci 0000:00:04.0: [1af4:1000] type 00 class 0x020000
+[    0.339895][    T1] pci 0000:00:04.0: reg 0x10: [io  0xc100-0xc11f]
+[    0.343150][    T1] pci 0000:00:04.0: reg 0x14: [mem 0xfebd9000-0xfebd9fff]
+[    0.348119][    T1] pci 0000:00:04.0: reg 0x20: [mem 0xfe000000-0xfe003fff 64bit pref]
+[    0.350083][    T1] pci 0000:00:04.0: reg 0x30: [mem 0xfeb80000-0xfebbffff pref]
+[    0.352554][    T1] pci 0000:00:05.0: [1af4:1005] type 00 class 0x00ff00
+[    0.354488][    T1] pci 0000:00:05.0: reg 0x10: [io  0xc120-0xc13f]
+[    0.358083][    T1] pci 0000:00:05.0: reg 0x20: [mem 0xfe004000-0xfe007fff 64bit pref]
+[    0.361892][    T1] pci 0000:00:06.0: [1b36:000d] type 00 class 0x0c0330
+[    0.362838][    T1] pci 0000:00:06.0: reg 0x10: [mem 0xfebd4000-0xfebd7fff 64bit]
+[    0.368550][    T1] pci 0000:00:07.0: [1af4:1003] type 00 class 0x078000
+[    0.370576][    T1] pci 0000:00:07.0: reg 0x10: [io  0xc080-0xc0bf]
+[    0.372540][    T1] pci 0000:00:07.0: reg 0x14: [mem 0xfebda000-0xfebdafff]
+[    0.378684][    T1] pci 0000:00:07.0: reg 0x20: [mem 0xfe008000-0xfe00bfff 64bit pref]
+[    0.382261][    T1] pci 0000:00:08.0: [1af4:1004] type 00 class 0x010000
+[    0.390083][    T1] pci 0000:00:08.0: reg 0x10: [io  0xc0c0-0xc0ff]
+[    0.398086][    T1] pci 0000:00:08.0: reg 0x14: [mem 0xfebdb000-0xfebdbfff]
+[    0.422085][    T1] pci 0000:00:08.0: reg 0x20: [mem 0xfe00c000-0xfe00ffff 64bit pref]
+[    0.432021][    T1] pci 0000:00:09.0: [1af4:1001] type 00 class 0x010000
+[    0.438084][    T1] pci 0000:00:09.0: reg 0x10: [io  0xc000-0xc07f]
+[    0.446086][    T1] pci 0000:00:09.0: reg 0x14: [mem 0xfebdc000-0xfebdcfff]
+[    0.470085][    T1] pci 0000:00:09.0: reg 0x20: [mem 0xfe010000-0xfe013fff 64bit pref]
+[    0.489846][    T1] ACPI: PCI: Interrupt link LNKA configured for IRQ 10
+[    0.490229][    T1] ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+[    0.491501][    T1] ACPI: PCI: Interrupt link LNKC configured for IRQ 11
+[    0.492573][    T1] ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+[    0.493611][    T1] ACPI: PCI: Interrupt link LNKS configured for IRQ 9
+[    0.494307][    T1] iommu: Default domain type: Passthrough 
+[    0.495230][    T1] SCSI subsystem initialized
+[    0.495928][    T1] pps_core: LinuxPPS API ver. 1 registered
+[    0.496758][    T1] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.498085][    T1] PTP clock support registered
+[    0.498763][    T1] EDAC MC: Ver: 3.0.0
+[    0.499677][    T1] NetLabel: Initializing
+[    0.500285][    T1] NetLabel:  domain hash size = 128
+[    0.501026][    T1] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.501960][    T1] NetLabel:  unlabeled traffic allowed by default
+[    0.502085][    T1] mctp: management component transport protocol core
+[    0.503069][    T1] NET: Registered PF_MCTP protocol family
+[    0.503893][    T1] PCI: Using ACPI for IRQ routing
+[    0.504848][    T1] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.505819][    T1] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.506078][    T1] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.506083][    T1] vgaarb: loaded
+[    0.506679][    T1] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+[    0.507493][    T1] hpet0: 3 comparators, 64-bit 100.000000 MHz counter
+[    0.512164][    T1] clocksource: Switched to clocksource kvm-clock
+[    0.517376][    T1] VFS: Disk quotas dquot_6.6.0
+[    0.518069][    T1] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.519472][    T1] AppArmor: AppArmor Filesystem Enabled
+[    0.520272][    T1] pnp: PnP ACPI init
+[    0.521075][    T1] pnp: PnP ACPI: found 6 devices
+[    0.529448][    T1] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.530876][    T1] NET: Registered PF_INET protocol family
+[    0.531747][    T1] IP idents hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.533533][    T1] tcp_listen_portaddr_hash hash table entries: 512 (order: 1, 8192 bytes, linear)
+[    0.534853][    T1] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.536076][    T1] TCP established hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.537307][    T1] TCP bind hash table entries: 8192 (order: 5, 131072 bytes, linear)
+[    0.538483][    T1] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.539569][    T1] MPTCP token hash table entries: 1024 (order: 2, 24576 bytes, linear)
+[    0.540743][    T1] UDP hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    0.541799][    T1] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    0.542945][    T1] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.543981][    T1] NET: Registered PF_XDP protocol family
+[    0.544873][    T1] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    0.545859][    T1] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    0.546859][    T1] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    0.547976][    T1] pci_bus 0000:00: resource 7 [mem 0x40000000-0xfebfffff window]
+[    0.549179][    T1] pci_bus 0000:00: resource 8 [mem 0x100000000-0x17fffffff window]
+[    0.550340][    T1] pci 0000:00:01.0: PIIX3: Enabling Passive Release
+[    0.551299][    T1] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.552273][    T1] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    0.567230][    T1] ACPI: \_SB_.LNKB: Enabled at IRQ 10
+[    0.582354][    T1] pci 0000:00:06.0: quirk_usb_early_handoff+0x0/0x720 took 28351 usecs
+[    0.583592][    T1] PCI: CLS 0 bytes, default 64
+[    0.584295][   T38] Trying to unpack rootfs image as initramfs...
+[    0.590167][    T1] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x1fb63109b96, max_idle_ns: 440795265316 ns
+[    0.591923][    T1] Initialise system trusted keyrings
+[    0.592687][    T1] Key type blacklist registered
+[    0.598136][    T1] workingset: timestamp_bits=36 max_order=18 bucket_order=0
+[    0.600074][    T1] zbud: loaded
+[    0.600675][    T1] integrity: Platform Keyring initialized
+[    0.604759][    T1] Key type asymmetric registered
+[    0.605466][    T1] Asymmetric key parser 'x509' registered
+[    0.673442][   T38] Freeing initrd memory: 25836K
+[    0.677768][    T1] alg: self-tests for CTR-KDF (hmac(sha256)) passed
+[    0.678788][    T1] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.680028][    T1] io scheduler mq-deadline registered
+[    0.680812][    T1] io scheduler kyber registered
+[    0.681522][    T1] io scheduler bfq registered
+[    0.683272][    T1] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    0.699331][    T1] ACPI: \_SB_.LNKD: Enabled at IRQ 11
+[    0.715298][    T1] ACPI: \_SB_.LNKA: Enabled at IRQ 10
+[    0.731119][    T1] ACPI: \_SB_.LNKC: Enabled at IRQ 11
+[    0.787290][    T1] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    0.788615][    T1] 00:04: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    1.009400][    T1] Non-volatile memory driver v1.3
+[    1.010343][    T1] Linux agpgart interface v0.103
+[    1.011334][    T1] ACPI: bus type drm_connector registered
+[    1.012849][    T1] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    1.015314][    T1] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    1.016169][    T1] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    1.017068][    T1] mousedev: PS/2 mouse device common for all mice
+[    1.018341][   T48] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input0
+[    1.020373][   T48] input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input3
+[    1.021769][    T1] rtc_cmos 00:05: RTC can wake from S4
+[    1.022750][   T48] input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input2
+[    1.024582][    T1] rtc_cmos 00:05: registered as rtc0
+[    1.025410][    T1] rtc_cmos 00:05: setting system clock to 2024-05-28T07:27:30 UTC (1716881250)
+[    1.026717][    T1] rtc_cmos 00:05: alarms up to one day, y3k, 242 bytes nvram, hpet irqs
+[    1.028128][    T1] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.029215][    T1] [drm] Initialized simpledrm 1.0.0 20200625 for simple-framebuffer.0 on minor 0
+[    1.030701][    T1] simple-framebuffer simple-framebuffer.0: [drm] User-defined mode not supported: "1024x768": 60 64127 1024 1080 1184 1344 768 769 772 795 0x20 0x6
+[    1.035416][    T1] Console: switching to colour frame buffer device 100x37
+[    1.037918][    T1] simple-framebuffer simple-framebuffer.0: [drm] fb0: simpledrmdrmfb frame buffer device
+[    1.039549][    T1] hid: raw HID events driver (C) Jiri Kosina
+[    1.040524][    T1] drop_monitor: Initializing network drop monitor service
+[    1.051935][    T1] NET: Registered PF_INET6 protocol family
+[    1.056719][    T1] Segment Routing with IPv6
+[    1.057390][    T1] RPL Segment Routing with IPv6
+[    1.058133][    T1] In-situ OAM (IOAM) with IPv6
+[    1.058996][    T1] IPI shorthand broadcast: enabled
+[    1.059771][    T1] sched_clock: Marking stable (925418279, 132681942)->(1211713701, -153613480)
+[    1.061149][    T1] registered taskstats version 1
+[    1.062006][    T1] Loading compiled-in X.509 certificates
+[    1.063556][    T1] Loaded X.509 cert 'openSUSE Secure Boot Signkey: fd9f2c12e599d67cc7f9067541adf426b712469e'
+[    1.066330][    T1] zswap: loaded using pool lzo/zbud
+[    1.067806][    T1] page_owner is disabled
+[    1.069182][    T1] Key type ._fscrypt registered
+[    1.070597][    T1] Key type .fscrypt registered
+[    1.072151][    T1] Key type fscrypt-provisioning registered
+[    1.076611][    T1] Key type encrypted registered
+[    1.077716][    T1] AppArmor: AppArmor sha1 policy hashing enabled
+[    1.079196][    T1] ima: No TPM chip found, activating TPM-bypass!
+[    1.080762][    T1] Loading compiled-in module X.509 certificates
+[    1.082064][    T1] Loaded X.509 cert 'openSUSE Secure Boot Signkey: fd9f2c12e599d67cc7f9067541adf426b712469e'
+[    1.084476][    T1] ima: Allocated hash algorithm: sha256
+[    1.085825][    T1] ima: No architecture policies found
+[    1.087474][    T1] evm: Initialising EVM extended attributes:
+[    1.088705][    T1] evm: security.selinux
+[    1.089675][    T1] evm: security.SMACK64 (disabled)
+[    1.090778][    T1] evm: security.SMACK64EXEC (disabled)
+[    1.092138][    T1] evm: security.SMACK64TRANSMUTE (disabled)
+[    1.093420][    T1] evm: security.SMACK64MMAP (disabled)
+[    1.094707][    T1] evm: security.apparmor
+[    1.095723][    T1] evm: security.ima
+[    1.096608][    T1] evm: security.capability
+[    1.097551][    T1] evm: HMAC attrs: 0x1
+[    1.209194][    T1] PM:   Magic number: 8:764:471
+[    1.210957][    T1] RAS: Correctable Errors collector initialized.
+[    1.213169][    T1] Freeing unused decrypted memory: 2036K
+[    1.214655][    T1] Freeing unused kernel image (initmem) memory: 2884K
+[    1.226094][    T1] Write protecting the kernel read-only data: 28672k
+[    1.228277][    T1] Freeing unused kernel image (text/rodata gap) memory: 2040K
+[    1.230401][    T1] Freeing unused kernel image (rodata/data gap) memory: 1316K
+[    1.232326][    T1] Run /init as init process
+[    1.261423][    T1] systemd[1]: systemd 251.2+suse.21.ge9fc337d97 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR -IMA -SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[    1.268117][    T1] systemd[1]: Detected virtualization kvm.
+[    1.269444][    T1] systemd[1]: Detected architecture x86-64.
+[    1.270820][    T1] systemd[1]: Running in initial RAM disk.
+[    1.274895][    T1] systemd[1]: No hostname configured, using default hostname.
+[    1.276393][    T1] systemd[1]: Hostname set to <localhost>.
+[    1.277687][    T1] systemd[1]: Initializing machine ID from random generator.
+[    1.317515][    T1] systemd[1]: /usr/lib/systemd/system/plymouth-start.service:15: Unit configured to use KillMode=none. This is unsafe, as it disables systemd's process lifecycle management for the service. Please update your service to use a safer KillMode=, such as 'mixed' or 'control-group'. Support for KillMode=none is deprecated and will eventually be removed.
+[    1.329220][    T1] systemd[1]: Queued start job for default target Initrd Default Target.
+[    1.331521][    T1] systemd[1]: Created slice Slice /system/systemd-hibernate-resume.
+[    1.334658][    T1] systemd[1]: Reached target Initrd /usr File System.
+[    1.336615][    T1] systemd[1]: Reached target Slice Units.
+[    1.338794][    T1] systemd[1]: Reached target Swaps.
+[    1.341675][    T1] systemd[1]: Reached target Timer Units.
+[    1.345218][    T1] systemd[1]: Listening on Journal Socket (/dev/log).
+[    1.348595][    T1] systemd[1]: Listening on Journal Socket.
+[    1.351424][    T1] systemd[1]: Listening on udev Control Socket.
+[    1.353667][    T1] systemd[1]: Listening on udev Kernel Socket.
+[    1.357023][    T1] systemd[1]: Reached target Socket Units.
+[    1.360782][    T1] systemd[1]: Starting Create List of Static Device Nodes...
+[    1.364695][    T1] systemd[1]: Started Hardware RNG Entropy Gatherer Daemon.
+[    1.371511][    T1] systemd[1]: Starting Journal Service...
+[    1.375874][    T1] systemd[1]: Starting Load Kernel Modules...
+[    1.378633][    T1] systemd[1]: Starting Setup Virtual Console...
+[    1.390121][    T1] systemd[1]: Finished Create List of Static Device Nodes.
+[    1.395202][    T1] systemd[1]: Starting Create Static Device Nodes in /dev...
+[    1.406874][  T162] alua: device handler registered
+[    1.407338][  T162] emc: device handler registered
+[    1.407842][  T162] rdac: device handler registered
+[    1.408137][    T1] systemd[1]: Finished Create Static Device Nodes in /dev.
+[    1.419767][  T162] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[    1.430658][    T1] systemd[1]: Started Journal Service.
+[    1.432560][  T162] device-mapper: uevent: version 1.0.3
+[    1.433969][  T162] device-mapper: ioctl: 4.46.0-ioctl (2022-02-22) initialised: dm-devel@redhat.com
+[    1.602083][  T262] raid6: avx2x4   gen() 35288 MB/s
+[    1.670083][  T262] raid6: avx2x2   gen() 32875 MB/s
+[    1.738082][  T262] raid6: avx2x1   gen() 27164 MB/s
+[    1.739190][  T262] raid6: using algorithm avx2x4 gen() 35288 MB/s
+[    1.806082][  T262] raid6: .... xor() 4988 MB/s, rmw enabled
+[    1.807356][  T262] raid6: using avx2x2 recovery algorithm
+[    1.809802][  T262] xor: automatically using best checksumming function   avx       
+[    1.850204][  T262] Btrfs loaded, crc32c=crc32c-intel, assert=on, zoned=yes, fsverity=yes
+[    1.935150][  T285] FDC 0 is a S82078B
+[    1.939262][  T285] virtio_blk virtio4: [vda] 83886080 512-byte logical blocks (42.9 GB/40.0 GiB)
+[    1.945805][  T286] Console: switching to colour dummy device 80x25
+[    1.966283][  T284] scsi host0: ata_piix
+[    1.971531][  T279] scsi host1: Virtio SCSI HBA
+[    1.987989][  T286] bochs-drm 0000:00:02.0: vgaarb: deactivate vga console
+[    1.989374][  T286] [drm] Found bochs VGA, ID 0xb0c5.
+[    1.990611][  T286] [drm] Framebuffer size 16384 kB @ 0xfd000000, mmio @ 0xfebd8000.
+[    2.005051][  T282] ACPI: bus type USB registered
+[    2.005775][  T282] usbcore: registered new interface driver usbfs
+[    2.007483][  T284] scsi host2: ata_piix
+[    2.008104][  T284] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc140 irq 14
+[    2.009184][  T284] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc148 irq 15
+[    2.023288][  T286] [drm] Found EDID data blob.
+[    2.030149][  T286] [drm] Initialized bochs-drm 1.0.0 20130925 for 0000:00:02.0 on minor 0
+[    2.039986][  T285]  vda: vda1 vda2 vda3
+[    2.044422][  T282] usbcore: registered new interface driver hub
+[    2.045321][  T282] usbcore: registered new device driver usb
+[    2.050117][  T286] fbcon: bochs-drmdrmfb (fb0) is primary device
+[    2.102231][  T296] scsi 1:0:0:0: CD-ROM            QEMU     QEMU CD-ROM      2.5+ PQ: 0 ANSI: 5
+[    2.114788][  T296] scsi 1:0:0:0: Attached scsi generic sg0 type 5
+[    2.125237][  T286] Console: switching to colour frame buffer device 128x48
+[    2.253399][    C0] sr 1:0:0:0: Power-on or device reset occurred
+[    2.253484][  T279] sr 1:0:0:0: [sr0] scsi3-mmc drive: 16x/50x cd/rw xa/form2 cdda tray
+[    2.253486][  T279] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    2.290639][  T282] xhci_hcd 0000:00:06.0: xHCI Host Controller
+[    2.290646][  T282] xhci_hcd 0000:00:06.0: new USB bus registered, assigned bus number 1
+[    2.291227][  T282] xhci_hcd 0000:00:06.0: hcc params 0x00087001 hci version 0x100 quirks 0x0000000000000010
+[    2.292562][  T282] xhci_hcd 0000:00:06.0: xHCI Host Controller
+[    2.292567][  T282] xhci_hcd 0000:00:06.0: new USB bus registered, assigned bus number 2
+[    2.292570][  T282] xhci_hcd 0000:00:06.0: Host supports USB 3.0 SuperSpeed
+[    2.292621][  T282] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.18
+[    2.292624][  T282] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.292626][  T282] usb usb1: Product: xHCI Host Controller
+[    2.292627][  T282] usb usb1: Manufacturer: Linux 5.18.11-1-default xhci-hcd
+[    2.292628][  T282] usb usb1: SerialNumber: 0000:00:06.0
+[    2.292900][  T282] hub 1-0:1.0: USB hub found
+[    2.292940][  T282] hub 1-0:1.0: 4 ports detected
+[    2.293270][  T282] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    2.293287][  T282] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.18
+[    2.293290][  T282] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.293291][  T282] usb usb2: Product: xHCI Host Controller
+[    2.293292][  T282] usb usb2: Manufacturer: Linux 5.18.11-1-default xhci-hcd
+[    2.293293][  T282] usb usb2: SerialNumber: 0000:00:06.0
+[    2.293415][  T282] hub 2-0:1.0: USB hub found
+[    2.293454][  T282] hub 2-0:1.0: 4 ports detected
+[    2.399848][  T282] BTRFS: device fsid f61f54aa-dd2c-45f8-ac96-43636fa72cc2 devid 1 transid 486 /dev/vda2 scanned by systemd-udevd (282)
+[    2.433923][  T286] bochs-drm 0000:00:02.0: [drm] fb0: bochs-drmdrmfb frame buffer device
+[    2.805195][  T354] BTRFS info (device vda2): flagging fs with big metadata feature
+[    2.806653][  T354] BTRFS info (device vda2): using free space tree
+[    2.807835][  T354] BTRFS info (device vda2): has skinny extents
+[    2.950096][    T6] usb 1-1: new high-speed USB device number 2 using xhci_hcd
+[    3.182552][    T6] usb 1-1: New USB device found, idVendor=0627, idProduct=0001, bcdDevice= 0.00
+[    3.184299][    T6] usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=10
+[    3.185705][    T6] usb 1-1: Product: QEMU USB Tablet
+[    3.186698][    T6] usb 1-1: Manufacturer: QEMU
+[    3.187656][    T6] usb 1-1: SerialNumber: 28754-0000:00:06.0-1
+[    3.279363][  T161] systemd-journald[161]: Received SIGTERM from PID 1 (systemd).
+[    3.460344][    T1] systemd[1]: systemd 251.2+suse.21.ge9fc337d97 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR -IMA -SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[    3.559836][    T1] systemd[1]: Detected virtualization kvm.
+[    3.561058][    T1] systemd[1]: Detected architecture x86-64.
+[    3.678971][    T1] systemd[1]: Hostname set to <susetest>.
+[    3.936536][    T1] systemd[1]: /usr/lib/systemd/system/plymouth-start.service:15: Unit configured to use KillMode=none. This is unsafe, as it disables systemd's process lifecycle management for the service. Please update your service to use a safer KillMode=, such as 'mixed' or 'control-group'. Support for KillMode=none is deprecated and will eventually be removed.
+[    4.068200][    T1] systemd[1]: initrd-switch-root.service: Deactivated successfully.
+[    4.179488][    T1] systemd[1]: Stopped Switch Root.
+[    4.182062][    T1] systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 1.
+[    4.186460][    T1] systemd[1]: Created slice Slice /system/getty.
+[    4.187916][    T1] systemd[1]: Created slice Slice /system/modprobe.
+[    4.189522][    T1] systemd[1]: Created slice Slice /system/serial-getty.
+[    4.190973][    T1] systemd[1]: Created slice User and Session Slice.
+[    4.192263][    T1] systemd[1]: Dispatch Password Requests to Console Directory Watch was skipped because of a failed condition check (ConditionPathExists=!/run/plymouth/pid).
+[    4.195178][    T1] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    4.196991][    T1] systemd[1]: Reached target Local Encrypted Volumes.
+[    4.198423][    T1] systemd[1]: Stopped target Switch Root.
+[    4.199577][    T1] systemd[1]: Stopped target Initrd File Systems.
+[    4.200804][    T1] systemd[1]: Stopped target Initrd Root File System.
+[    4.202101][    T1] systemd[1]: Reached target Local Integrity Protected Volumes.
+[    4.203544][    T1] systemd[1]: Reached target Remote File Systems.
+[    4.204913][    T1] systemd[1]: Reached target Slice Units.
+[    4.206047][    T1] systemd[1]: Reached target System Time Set.
+[    4.207256][    T1] systemd[1]: Reached target Timer Units.
+[    4.208376][    T1] systemd[1]: Reached target Local Verity Protected Volumes.
+[    4.209775][    T1] systemd[1]: Listening on Device-mapper event daemon FIFOs.
+[    4.211227][    T1] systemd[1]: Listening on LVM2 poll daemon socket.
+[    4.300895][    T1] systemd[1]: Listening on udev Control Socket.
+[    4.302648][    T1] systemd[1]: Listening on udev Kernel Socket.
+[    4.304959][    T1] systemd[1]: Mounting Huge Pages File System...
+[    4.309499][    T1] systemd[1]: Mounting POSIX Message Queue File System...
+[    4.311858][    T1] systemd[1]: Mounting Kernel Debug File System...
+[    4.316780][    T1] systemd[1]: Mounting Kernel Trace File System...
+[    4.319342][    T1] systemd[1]: Starting Create List of Static Device Nodes...
+[    4.326271][    T1] systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[    4.331204][    T1] systemd[1]: Starting Load Kernel Module configfs...
+[    4.335011][    T1] systemd[1]: Starting Load Kernel Module drm...
+[    4.344812][    T1] systemd[1]: Starting Load Kernel Module fuse...
+[    4.346713][    T1] systemd[1]: plymouth-switch-root.service: Deactivated successfully.
+[    4.355916][    T1] systemd[1]: Stopped Plymouth switch root service.
+[    4.357883][    T1] systemd[1]: systemd-fsck-root.service: Deactivated successfully.
+[    4.359986][    T1] systemd[1]: Stopped File System Check on Root Device.
+[    4.367094][    T1] systemd[1]: Stopped Journal Service.
+[    4.369688][    T1] systemd[1]: Starting Journal Service...
+[    4.371432][  T436] fuse: init (API version 7.36)
+[    4.375794][    T1] systemd[1]: Starting Load Kernel Modules...
+[    4.386334][    T1] systemd[1]: Starting Remount Root and Kernel File Systems...
+[    4.390431][    T1] systemd[1]: Starting Coldplug All udev Devices...
+[    4.407657][  T441] BTRFS info (device vda2: state M): using free space tree
+[    4.278742] systemd[1]: Queued start job for default target Multi-User System.
+[    4.279780] systemd[1]: systemd-journald.service: Deactivated successfully.
+[    4.542813][    T1] systemd[1]: Started Journal Service.
+[    4.503317] systemd[1]: Mounted Huge Pages File System.
+[    4.504080] systemd[1]: Mounted POSIX Message Queue File System.
+[    4.504976] systemd[1]: Mounted Kernel Debug File System.
+[    4.508633] systemd[1]: Mounted Kernel Trace File System.
+[    4.512852] systemd[1]: Finished Create List of Static Device Nodes.
+[    4.521277] systemd[1]: Finished Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling.
+[    4.524730] systemd[1]: modprobe@configfs.service: Deactivated successfully.
+[    4.528083] systemd[1]: Finished Load Kernel Module configfs.
+[    4.533617] systemd[1]: modprobe@drm.service: Deactivated successfully.
+[    4.536858] systemd[1]: Finished Load Kernel Module drm.
+[    4.541473] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[    4.542627] systemd[1]: Finished Load Kernel Module fuse.
+[    4.543786] systemd[1]: Finished Load Kernel Modules.
+[    4.544603] systemd[1]: Finished Remount Root and Kernel File Systems.
+[    4.555650] systemd[1]: Finished Coldplug All udev Devices.
+[    4.556417] systemd[1]: Mounting FUSE Control File System...
+[    4.557183] systemd[1]: Mounting Kernel Configuration File System...
+[    4.558268] systemd[1]: Apply Kernel Variables for 5.18.11-1-default from /boot was skipped because of a failed condition check (ConditionPathExists=!/usr/lib/modules/5.18.11-1-default/sysctl.conf).
+[    4.563265] systemd[1]: Starting Apply Kernel Variables for 5.18.11-1-default...
+[    4.565918] systemd[1]: First Boot Wizard was skipped because of a failed condition check (ConditionFirstBoot=yes).
+[    4.571130] systemd[1]: Rebuild Hardware Database was skipped because of a failed condition check (ConditionNeedsUpdate=/etc).
+[    4.575975] systemd[1]: Create System Users was skipped because of a failed condition check (ConditionNeedsUpdate=/etc).
+[    4.579463] systemd[1]: Starting Create Static Device Nodes in /dev...
+[    4.581515] systemd[1]: Starting Wait for udev To Complete Device Initialization...
+[    4.582853] systemd[1]: Mounted FUSE Control File System.
+[    4.583721] systemd[1]: Mounted Kernel Configuration File System.
+[    4.585182] systemd[1]: Finished Apply Kernel Variables for 5.18.11-1-default.
+[    4.586316] systemd[1]: Starting Apply Kernel Variables...
+[    4.587240] systemd[1]: Finished Create Static Device Nodes in /dev.
+[    4.588306] systemd[1]: Reached target Preparation for Local File Systems.
+[    4.589448] systemd[1]: Starting Rule-based Manager for Device Events and Files...
+[    4.662534] systemd[1]: Finished Apply Kernel Variables.
+[    4.785387] systemd-udevd[448]: Using default interface naming scheme 'v251'.
+[    5.333935] systemd[1]: Started Rule-based Manager for Device Events and Files.
+[    5.701525][  T452] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input4
+[    5.785089][  T451] piix4_smbus 0000:00:01.3: SMBus Host Controller at 0x700, revision 0
+[    5.667056] systemd[1]: Found device /dev/disk/by-uuid/104105b3-3378-4569-b7db-8fe28e06f636.[    5.812464][  T453] parport_pc 00:03: reported by Plug and Play ACPI
+
+[    5.681127] mtp-probe[461]: checking bus 1, device 2: "/sys/devices/pci0000:00/0000:00:06.0/usb1/1-1"[    5.825803][  T458] input: PC Speaker as /devices/platform/pcspkr/input/input5
+
+[    5.706788] systemd[1]: Activating swap /dev/disk/by-uuid/104105b3-3378-4569-b7db-8fe28e06f636...
+[    5.708207] udevadm[446]: systemd-udev-settle.service is deprecated. Please fix wickedd.service not to pull it in.[    5.845946][  T453] parport0: PC-style at 0x378, irq 7 [PCSPP,TRISTATE]
+[    5.871592][  T464] Adding 2098152k swap on /dev/vda3.  Priority:-2 extents:1 across:2098152k FS
+
+[    5.752828] mtp-probe[461]: bus: 1, device: 2 was not an MTP device
+[    5.758142] systemd[1]: Found device /dev/disk/by-uuid/f61f54aa-dd2c-45f8-ac96-43636fa72cc2.
+[    5.774613] systemd[1]: Mounting /.snapshots...
+[    5.775353] systemd[1]: Mounting /boot/grub2/i386-pc...
+[    5.789367] systemd[1]: Mounting /boot/grub2/x86_64-efi...
+[    5.790232] systemd[1]: Mounting /home...
+[    5.790873] systemd[1]: Mounting /opt...[    5.926605][  T459] usbcore: registered new interface driver usbhid
+[    5.927861][  T459] usbhid: USB HID core driver
+[    5.936172][  T455] cryptd: max_cpu_qlen set to 1000
+
+[    5.816892] systemd[1]: Mounting /root...
+[    5.817626] systemd[1]: Mounting /srv...[    5.957072][  T455] AVX2 version of gcm_enc/dec engaged.
+
+[    5.833269] systemd[1]: Mounting /usr/local...
+[    5.850550] systemd[1]: Mounting /var...
+[    5.851248] systemd[1]: Activated swap /dev/disk/by-uuid/104105b3-3378-4569-b7db-8fe28e06f636.[    5.990821][  T455] AES CTR mode by8 optimization enabled
+
+[    5.867226] systemd[1]: Condition check resulted in /dev/ttyS0 being skipped.
+[    5.868398] systemd[1]: Reached target Swaps.
+[    5.885232] systemd[1]: Mounting Temporary Directory /tmp...
+[    5.890454] systemd[1]: Mounted Temporary Directory /tmp.
+[    5.891204] systemd[1]: Condition check resulted in /dev/hvc0 being skipped.
+[    5.906597] systemd[1]: Dispatch Password Requests to Console Directory Watch was skipped because of a failed condition check (ConditionPathExists=!/run/plymouth/pid).
+[    5.925595] systemd[1]: First Boot Wizard was skipped because of a failed condition check (ConditionFirstBoot=yes).
+[    5.935184] systemd[1]: Rebuild Hardware Database was skipped because of a failed condition check (ConditionNeedsUpdate=/etc).
+[    5.940699] systemd[1]: Create System Users was skipped because of a failed condition check (ConditionNeedsUpdate=/etc).
+[    6.070935][  T451] virtio_net virtio0 ens4: renamed from eth0
+[    6.076374][  T457] input: QEMU QEMU USB Tablet as /devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0/0003:0627:0001.0001/input/input6
+[    6.076485][  T457] hid-generic 0003:0627:0001.0001: input,hidraw0: USB HID v0.01 Mouse [QEMU QEMU USB Tablet] on usb-0000:00:06.0-1/input0
+[    6.093520][  T459] ppdev: user-space parallel port driver
+[    6.165885] systemd[1]: Mounted /.snapshots.
+[    6.171236] systemd[1]: Mounted /boot/grub2/i386-pc.
+[    6.172336] systemd[1]: Mounted /boot/grub2/x86_64-efi.
+[    6.174499] systemd[1]: Mounted /home.
+[    6.176049] systemd[1]: Mounted /opt.
+[    6.178186] systemd[1]: Mounted /root.[    6.311520][  T452] ACPI: button: Power Button [PWRF]
+
+[    6.263857] systemd[1]: Mounted /srv.
+[    6.264804] systemd[1]: Mounted /usr/local.
+[    6.265595] systemd[1]: Mounted /var.
+[    6.266374] systemd[1]: Reached target Local File Systems.
+[    6.267290] systemd[1]: Starting Load AppArmor profiles...
+[    6.305631] systemd[1]: Starting Tell Plymouth To Write Out Runtime Data...
+[    6.307213] systemd[1]: Set Up Additional Binary Formats was skipped because all trigger condition checks failed.
+[    6.319514] systemd[1]: Starting Flush Journal to Persistent Storage...
+[    6.320434] systemd[1]: Starting Load/Save Random Seed...
+[    6.546880][  T437] systemd-journald[437]: Received client request to flush runtime journal.
+[    6.646306][  T530] snd_hda_codec_generic hdaudioC0D0: autoconfig for Generic: line_outs=1 (0x3/0x0/0x0/0x0/0x0) type:line
+[    6.648330][  T530] snd_hda_codec_generic hdaudioC0D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+[    6.649861][  T530] snd_hda_codec_generic hdaudioC0D0:    hp_outs=0 (0x0/0x0/0x0/0x0/0x0)
+[    6.651374][  T530] snd_hda_codec_generic hdaudioC0D0:    mono: mono_out=0x0
+[    6.652646][  T530] snd_hda_codec_generic hdaudioC0D0:    inputs:
+[    6.705589][  T437] systemd-journald[437]: Oldest entry in /var/log/journal/513e606ba55c499dba51aa8c59db6b4c/system.journal is older than the configured file retention duration (1month), suggesting rotation.
+[    6.718264][  T437] systemd-journald[437]: /var/log/journal/513e606ba55c499dba51aa8c59db6b4c/system.journal: Journal header limits reached or header out-of-date, rotating.
+[    6.976198][   T23] audit: type=1400 audit(1716881256.448:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ping" pid=556 comm="apparmor_parser"
+[    7.094336][   T23] audit: type=1400 audit(1716881256.568:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ghostscript" pid=560 comm="apparmor_parser"
+[    7.098156][   T23] audit: type=1400 audit(1716881256.568:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ghostscript///usr/bin/hpijs" pid=560 comm="apparmor_parser"
+[    7.127678][   T23] audit: type=1400 audit(1716881256.580:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lsb_release" pid=566 comm="apparmor_parser"
+[    7.151475] apparmor.systemd[525]: Restarting AppArmor
+[    7.155704] apparmor.systemd[525]: Reloading AppArmor profiles
+[    7.157657] systemd[1]: Received SIGRTMIN+20 from PID 322 (plymouthd).
+[    7.159076] systemd[1]: Finished Tell Plymouth To Write Out Runtime Data.
+[    7.160501] systemd[1]: Finished Load/Save Random Seed.
+[    7.161655] systemd[1]: First Boot Complete was skipped because of a failed condition check (ConditionFirstBoot=yes).
+[    7.163751] systemd[1]: Store a System Token in an EFI Variable was skipped because of a failed condition check (ConditionPathExists=/sys/firmware/efi/efivars/LoaderFeatures-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f).
+[    7.166808] systemd[1]: Commit a transient machine-id on disk was skipped because of a failed condition check (ConditionPathIsMountPoint=/etc/machine-id).
+[    7.168761] systemd-udevd[452]: controlC0: Process '/usr/sbin/alsactl restore 0' failed with exit code 99.
+[    7.170268] systemd[1]: Dispatch Password Requests to Console Directory Watch was skipped because of a failed condition check (ConditionPathExists=!/run/plymouth/pid).
+[    7.172279] systemd[1]: Set Up Additional Binary Formats was skipped because all trigger condition checks failed.
+[    7.173829] systemd[1]: Store a System Token in an EFI Variable was skipped because of a failed condition check (ConditionPathExists=/sys/firmware/efi/efivars/LoaderFeatures-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f).
+[    7.176296] systemd[1]: First Boot Wizard was skipped because of a failed condition check (ConditionFirstBoot=yes).
+[    7.177858] systemd[1]: First Boot Complete was skipped because of a failed condition check (ConditionFirstBoot=yes).
+[    7.179370] systemd[1]: Rebuild Hardware Database was skipped because of a failed condition check (ConditionNeedsUpdate=/etc).
+[    7.181138] systemd[1]: Commit a transient machine-id on disk was skipped because of a failed condition check (ConditionPathIsMountPoint=/etc/machine-id).
+[    7.183197] systemd[1]: Create System Users was skipped because of a failed condition check (ConditionNeedsUpdate=/etc).
+[    7.185128] systemd[1]: Finished Flush Journal to Persistent Storage.
+[    7.186406] systemd[1]: Starting Create Volatile Files and Directories...
+[    7.355403][   T23] audit: type=1400 audit(1716881256.828:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=570 comm="apparmor_parser"
+[    7.358495][   T23] audit: type=1400 audit(1716881256.828:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=570 comm="apparmor_parser"
+[    7.472817][   T23] audit: type=1400 audit(1716881256.944:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="php-fpm" pid=581 comm="apparmor_parser"
+[    7.350939] systemd[1]: Finished Create Volatile Files and Directories.
+[    7.351850] systemd[1]: Starting Security Auditing Service...
+[    7.352624] systemd[1]: Rebuild Journal Catalog was skipped because of a failed condition check (ConditionNeedsUpdate=/var).
+[    7.354169] systemd[1]: Update is Completed was skipped because all trigger condition checks failed.[    7.491585][   T23] audit: type=1400 audit(1716881256.964:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="samba-bgqd" pid=583 comm="apparmor_parser"
+
+[    7.503841][   T23] audit: type=1400 audit(1716881256.976:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="samba-dcerpcd" pid=590 comm="apparmor_parser"
+[    7.512452][   T23] audit: type=1400 audit(1716881256.984:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="samba-rpcd" pid=594 comm="apparmor_parser"
+[    7.694332][  T455] kvm: Nested Virtualization enabled
+[    7.695490][  T455] SVM: kvm: Nested Paging enabled
+[    7.702202] systemd[1]: Finished Wait for udev To Complete Device Initialization.
+[    7.703856] auditd[653]: No plugins found, not dispatching events
+[    7.706338] systemd[1]: Started Security Auditing Service.
+[    7.707241] systemd[1]: Starting Record System Boot/Shutdown in UTMP...
+[    7.709747] auditd[653]: Init complete, auditd 3.0.6 listening for events (startup state enable)
+[    7.719922] systemd[1]: Finished Record System Boot/Shutdown in UTMP.
+[    7.781446] systemd[1]: Finished Load AppArmor profiles.
+[    7.782225] systemd[1]: Reached target System Initialization.
+[    7.783040] systemd[1]: Started Watch /etc/sysconfig/btrfsmaintenance.
+[    7.783968] systemd[1]: Started CUPS Scheduler.
+[    7.784639] systemd[1]: Reached target Path Units.
+[    7.785331] systemd[1]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[    7.793775] systemd[1]: Listening on CUPS Scheduler.
+[    7.794784] systemd[1]: Listening on D-Bus System Message Bus Socket.
+[    7.811228] systemd[1]: Listening on PC/SC Smart Card Daemon Activation Socket.
+[    7.825100] avahi-daemon[677]: Found user 'avahi' (UID 469) and group 'avahi' (GID 469).
+[    7.838113] systemd[1]: Reached target Socket Units.
+[    7.839061] avahi-daemon[677]: Successfully dropped root privileges.
+[    7.851794] systemd[1]: Reached target Basic System.
+[    7.852598] avahi-daemon[677]: avahi-daemon 0.8 starting up.
+[    7.869518] systemd[1]: Starting Save/Restore Sound Card State...
+[    7.878124] polkitd[683]: Started polkitd version 0.120
+[    7.885777] alsactl[675]: Found hardware: "HDA-Intel" "QEMU Generic" "HDA:1af40012,1af40012,00100101" "0x1af4" "0x1100"
+[    7.899521] alsactl[675]: Hardware is initialized using a generic method
+[    7.907423] alsactl[675]: /usr/sbin/alsactl: set_control:1339: failed to obtain info for control #3 (No such file or directory)
+[    7.924099] alsactl[675]: /usr/sbin/alsactl: set_control:1339: failed to obtain info for control #4 (No such file or directory)
+[    7.949632] alsactl[675]: /usr/sbin/alsactl: set_control:1339: failed to obtain info for control #5 (No such file or directory)
+[    7.962860] alsactl[675]: /usr/sbin/alsactl: set_control:1339: failed to obtain info for control #8 (No such file or directory)
+[    7.970848] systemd[1]: Manage Sound Card State (restore and store) was skipped because of a failed condition check (ConditionPathExists=/etc/alsa/state-daemon.conf).
+[    7.989287] /usr/sbin/irqbalance[680]: Balancing is ineffective on systems with a single cpu.  Shutting down
+[    7.991324] systemd[1]: Synchronize AppStream metadata from repositories into AS-cache was skipped because of a failed condition check (ConditionDirectoryNotEmpty=!/var/cache/app-info/xmls).
+[    8.009633] nscd[687]: 687 monitoring file `/etc/passwd` (1)
+[    8.021594] systemd[1]: Starting auditd rules generation...
+[    8.022445] nscd[687]: 687 monitoring directory `/etc` (2)
+[    8.033219] systemd[1]: Starting Avahi mDNS/DNS-SD Stack...
+[    8.037052] nscd[687]: 687 monitoring file `/etc/group` (3)
+[    8.044426] systemd[1]: Starting D-Bus System Message Bus...
+[    8.060725] nscd[687]: 687 monitoring directory `/etc` (2)
+[    8.065747] rngd[685]: Initializing available sources
+[    8.068666] rngd[685]: [hwrng ]: Initialized
+[    8.072355] rngd[685]: [rdrand]: Enabling RDSEED rng support
+[    8.075601] rngd[685]: [rdrand]: Initialized
+[    8.079362] augenrules[676]: /sbin/augenrules: No change
+[    8.085571] systemd[1]: Starting Restore /run/initramfs on shutdown...
+[    8.089557] nscd[687]: 687 monitoring file `/etc/hosts` (4)
+[    8.093818] augenrules[762]: No rules
+[    8.101602] systemd[1]: Started irqbalance daemon.
+[    8.104113] nscd[687]: 687 monitoring directory `/etc` (2)
+[    8.105250] systemd[1]: Starting Apply settings from /etc/sysconfig/keyboard...[    8.240833][  T771] NET: Registered PF_QIPCRTR protocol family
+
+[    8.193580] nscd[687]: 687 monitoring file `/etc/resolv.conf` (5)
+[    8.194617] systemd[1]: Machine Check Exception Logging Daemon was skipped because of a failed condition check (ConditionVirtualization=false).
+[    8.196252] nscd[687]: 687 monitoring directory `/etc` (2)
+[    8.212737] systemd[1]: Starting Name Service Cache Daemon...
+[    8.221621] nscd[687]: 687 disabled inotify-based monitoring for file `/etc/services': No such file or directory
+[    8.225911] systemd[1]: Starting Authorization Manager...
+[    8.226685] nscd[687]: 687 stat failed for file `/etc/services'; will try again later: No such file or directory
+[    8.235184] systemd[1]: Started Start the rngd daemon.
+[    8.235922] nscd[687]: 687 monitoring file `/etc/netgroup` (6)
+[    8.242082] systemd[1]: Self Monitoring and Reporting Technology (SMART) Daemon was skipped because of a failed condition check (ConditionVirtualization=no).
+[    8.243880] nscd[687]: 687 monitoring directory `/etc` (2)
+[    8.253447] systemd[1]: Purge old kernels was skipped because of a failed condition check (ConditionPathExists=/boot/do_purge_kernels).
+[    8.255024] nscd[687]: 687 monitoring file `/etc/nsswitch.conf` (7)
+[    8.261832] systemd[1]: Finished Save/Restore Sound Card State.
+[    8.262775] nscd[687]: 687 monitoring directory `/etc` (2)
+[    8.400916][  T787] No iBFT detected.
+[    8.269786] systemd[1]: Finished Restore /run/initramfs on shutdown.
+[    8.270681] nscd[687]: 687 monitoring file `/etc/nsswitch.conf` (7)
+[    8.271526] systemd[1]: Starting Load extra kernel modules for sound stuff...
+[    8.272458] nscd[687]: 687 monitoring directory `/etc` (2)
+[    8.273206] systemd[1]: irqbalance.service: Deactivated successfully.
+[    8.295968] nscd[687]: 687 monitoring file `/etc/nsswitch.conf` (7)
+[    8.299303] systemd[1]: Started Name Service Cache Daemon.
+[    8.300356] nscd[687]: 687 monitoring directory `/etc` (2)
+[    8.301233] systemd[1]: Reached target Host and Network Name Lookups.
+[    8.302270] nscd[687]: 687 monitoring file `/etc/nsswitch.conf` (7)
+[    8.303270] systemd[1]: Reached target User and Group Name Lookups.
+[    8.304326] nscd[687]: 687 monitoring directory `/etc` (2)
+[    8.305204] systemd[1]: Starting User Login Management...
+[    8.306218] nscd[687]: 687 monitoring file `/etc/nsswitch.conf` (7)
+[    8.307288] systemd[1]: Started D-Bus System Message Bus.
+[    8.308346] nscd[687]: 687 monitoring directory `/etc` (2)
+[    8.309236] systemd[1]: Started Avahi mDNS/DNS-SD Stack.
+[    8.310186] avahi-daemon[677]: No service file found in /etc/avahi/services.
+[    8.311263] systemd[1]: Starting wicked AutoIPv4 supplicant service...
+[    8.312353] avahi-daemon[677]: Joining mDNS multicast group on interface lo.IPv4 with address 127.0.0.1.
+[    8.313788] systemd[1]: Starting wicked DHCPv4 supplicant service...
+[    8.314798] avahi-daemon[677]: New relevant interface lo.IPv4 for mDNS.
+[    8.315926] systemd[1]: Starting wicked DHCPv6 supplicant service...
+[    8.317172] avahi-daemon[677]: Network interface enumeration completed.
+[    8.318650] systemd[1]: Started Authorization Manager.
+[    8.319718] avahi-daemon[677]: Registering new address record for 127.0.0.1 on lo.IPv4.
+[    8.321179] systemd[1]: Starting Modem Manager...
+[    8.322650] polkitd[683]: Loading rules from directory /etc/polkit-1/rules.d
+[    8.324490] systemd[1]: Started wicked DHCPv6 supplicant service.
+[    8.329236] polkitd[683]: Loading rules from directory /usr/share/polkit-1/rules.d
+[    8.330427] systemd[1]: Started wicked DHCPv4 supplicant service.
+[    8.331409] polkitd[683]: Finished loading, compiling and executing 5 rules
+[    8.332471] systemd[1]: Started wicked AutoIPv4 supplicant service.
+[    8.333475] polkitd[683]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+[    8.334746] systemd[1]: Starting wicked network management service daemon...
+[    8.335901] ModemManager[725]: <info>  ModemManager (version 1.18.6) starting in system bus...
+[    8.337240] systemd[1]: sound-extra.service: Deactivated successfully.
+[    8.338278] ModemManager[725]: [qrtr] socket lookup from 1:0
+[    8.339200] systemd[1]: Finished Load extra kernel modules for sound stuff.
+[    8.340284] ModemManager[725]: [qrtr] initial lookup finished
+[    8.341198] systemd[1]: Reached target Sound Card.
+[    8.342084] avahi-daemon[677]: Joining mDNS multicast group on interface lo.IPv6 with address ::1.
+[    8.343492] systemd-logind[705]: New seat seat0.
+[    8.344311] avahi-daemon[677]: New relevant interface lo.IPv6 for mDNS.
+[    8.345343] systemd[1]: Started User Login Management.
+[    8.346207] avahi-daemon[677]: Registering new address record for ::1 on lo.*.
+[    8.347310] systemd-logind[705]: Watching system buttons on /dev/input/event3 (Power Button)
+[    8.348546] systemd-logind[705]: Watching system buttons on /dev/input/event0 (AT Translated Set 2 keyboard)
+[    8.349969] systemd[1]: Started PC/SC Smart Card Daemon.
+[    8.350855] systemd[1]: Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[    8.352062] systemd[1]: Started wicked network management service daemon.
+[    8.353105] systemd[1]: Starting wicked network nanny service...
+[    8.354135] systemd[1]: Finished auditd rules generation.
+[    8.355026] systemd[1]: Started wicked network nanny service.
+[    8.355954] systemd[1]: Starting wicked managed network interfaces...
+[    8.356964] systemd[1]: Started Modem Manager.
+[    8.357829] systemd[1]: Finished Apply settings from /etc/sysconfig/keyboard.
+[    8.509150] wickedd-dhcp4[714]: ens4: Request to acquire DHCPv4 lease with UUID 6a875566-27ba-0100-d902-000004000000
+[    8.652691][  T794] NET: Registered PF_PACKET protocol family
+[    8.617678] rngd[685]: [pkcs11]: No pkcs11 slots available
+[    8.618962] rngd[685]: [pkcs11]: Initialization Failed
+[    8.622005] rngd[685]: unable to adjust write_wakeup_threshold: Read-only file system
+[    8.659008] nscd[687]: 687 ignored inotify event for `/etc/resolv.conf` (file exists)
+[    8.660143] avahi-daemon[677]: Files changed, reloading.
+[    8.660887] avahi-daemon[677]: No service file found in /etc/avahi/services.
+[    8.661898] nscd[687]: 687 ignored inotify event for `/etc/resolv.conf` (file exists)
+[    8.663443] avahi-daemon[677]: Files changed, reloading.
+[    8.664177] avahi-daemon[677]: No service file found in /etc/avahi/services.
+[    9.364184] avahi-daemon[677]: Server startup complete. Host name is susetest.local. Local service cookie is 518157266.
+[   10.778863] ModemManager[725]: <info>  [base-manager] couldn't check support for device '/sys/devices/pci0000:00/0000:00:04.0': not supported by any plugin
+[   18.513829] wickedd-dhcp4[714]: ens4: unable to confirm lease
+[   23.509968] wickedd-dhcp4[714]: ens4: defer timeout 15 reached (state SELECTING)
+[   25.852154] nscd[687]: 687 checking for monitored file `/etc/services': No such file or directory
+[   38.307962] wicked[779]: lo              up
+[   38.308835] wicked[779]: ens4            setup-in-progress
+[   38.313736] systemd[1]: Finished wicked managed network interfaces.
+[   38.314773] systemd[1]: Reached target Network.
+[   38.315472] systemd[1]: Starting NTP client/server...
+[   38.327193] systemd[1]: Starting CUPS Scheduler...
+[   38.327921] systemd[1]: Starting OpenSSH Daemon...
+[   38.334962] systemd[1]: Starting Permit User Sessions...
+[   38.335796] sshd-gen-keys-start[1031]: Checking for missing server keys in /etc/ssh
+[   38.349467] systemd[1]: Finished Permit User Sessions.
+[   38.351932] systemd[1]: Starting Hold until boot process finishes up...
+[   38.441803] systemd[1]: Starting Terminate Plymouth Boot Screen...
+[   38.443219] systemd[1]: Received SIGRTMIN+21 from PID 322 (plymouthd).
+[   38.476068] sshd[1037]: Server listening on 0.0.0.0 port 22.
+[   38.477115] sshd[1037]: Server listening on :: port 22.
+[   38.479262] systemd[1]: Started OpenSSH Daemon.
+[   38.489619] systemd[1]: Finished Hold until boot process finishes up.
+[   38.490538] systemd[1]: Finished Terminate Plymouth Boot Screen.
+[   38.491463] systemd[1]: Received SIGRTMIN+21 from PID 322 (n/a).
+[   38.492306] systemd[1]: Started Getty on tty1.
+[   38.492943] systemd[1]: Started Serial Getty on hvc0.
+[   38.618128] systemd[1]: Started Serial Getty on ttyS0.
+[   38.618880] systemd[1]: Reached target Login Prompts.
+[   38.619594] systemd[1]: /etc/init.d/after.local Compatibility was skipped because of a failed condition check (ConditionFileIsExecutable=/etc/init.d/after.local).
+[   38.624153] chronyd[1042]: chronyd version 4.2 starting (+CMDMON +NTP +REFCLOCK +RTC +PRIVDROP +SCFILTER +SIGND +ASYNCDNS +NTS +SECHASH +IPV6 -DEBUG)
+[   38.627792] chronyd[1042]: Frequency -17.270 +/- 0.033 ppm read from /var/lib/chrony/drift
+[   38.632504] systemd[1]: Started CUPS Scheduler.
+[   38.662872] systemd[1]: Started NTP client/server.
+[   38.663665] systemd[1]: Reached target System Time Synchronized.
+[   38.665733] systemd[1]: Starting Postfix Mail Transport Agent...
+[   38.683870] echo[1069]: Starting mail service (Postfix)
+[   38.977645] postfix/postfix-script[1152]: starting the Postfix mail system
+[   38.983307] postfix/master[1154]: daemon started -- version 3.6.6, configuration /etc/postfix
+[   39.058212] systemd[1]: Started Postfix Mail Transport Agent.
+[   39.059253] systemd[1]: Reached target Multi-User System.
+[   39.060204] systemd[1]: Startup finished in 1.104s (kernel) + 2.208s (initrd) + 35.745s (userspace) = 39.058s.
+[   40.087771] login[1039]: gkr-pam: unable to locate daemon control file
+[   40.088722] login[1039]: gkr-pam: stashed password to try later in open session
+[   40.097232] systemd[1]: Created slice User Slice of UID 0.
+[   40.099307] systemd[1]: Starting User Runtime Directory /run/user/0...
+[   40.102216] systemd-logind[705]: New session 1 of user root.
+[   40.109559] systemd[1]: Finished User Runtime Directory /run/user/0.
+[   40.111670] systemd[1]: Starting User Manager for UID 0...
+[   40.115996] systemd[1180]: pam_unix(systemd-user:session): session opened for user root(uid=0) by (uid=0)
+
+Welcome to openSUSE Tumbleweed 20220719 - Kernel 5.18.11-1-default (ttyS0).
+
+ens4:  
+
+
+susetest login: [   40.198887] systemd[1180]: Queued start job for default target Main User Target.
+[   40.200735] systemd[1180]: Created slice User Application Slice.
+[   40.201749] systemd[1180]: Started Daily Cleanup of User's Temporary Directories.
+[   40.203394] systemd[1180]: Reached target Paths.
+[   40.204321] systemd[1180]: Reached target Timers.
+[   40.205664] systemd[1180]: Starting D-Bus User Message Bus Socket...
+[   40.206540] systemd[1180]: PipeWire PulseAudio was skipped because of a failed condition check (ConditionUser=!root).
+[   40.207876] systemd[1180]: Listening on PipeWire Multimedia System Socket.
+[   40.208775] systemd[1180]: Starting Create User's Volatile Files and Directories...
+[   40.226372] systemd[1180]: Finished Create User's Volatile Files and Directories.
+[   40.227351] login[1039]: pam_unix(login:session): session opened for user root(uid=0) by LOGIN(uid=0)
+[   40.228541] systemd[1180]: Listening on D-Bus User Message Bus Socket.
+[   40.230453] login[1039]: ROOT LOGIN ON hvc0
+[   40.231567] systemd[1180]: Reached target Sockets.
+[   40.232329] systemd[1180]: Reached target Basic System.
+[   40.233082] systemd[1180]: Reached target Main User Target.
+[   40.234228] systemd[1180]: Startup finished in 97ms.
+[   40.234923] systemd[1]: Started User Manager for UID 0.
+[   40.235631] systemd[1]: Started Session 1 of User root.
+[   40.453193] avahi-daemon[677]: Files changed, reloading.
+[   40.454064] avahi-daemon[677]: No service file found in /etc/avahi/services.
+[   40.455164] avahi-daemon[677]: Files changed, reloading.
+[   40.455967] avahi-daemon[677]: No service file found in /etc/avahi/services.
+[   40.539331] systemd[1]: Stopping wicked managed network interfaces...
+[   40.565611] wickedd-dhcp4[714]: ni_dhcp4_device_close: timer active for ens4
+[   40.827617] wicked[1378]: ens4            device-ready
+[   40.828948] systemd[1]: wicked.service: Deactivated successfully.
+[   40.830035] systemd[1]: Stopped wicked managed network interfaces.
+[   40.832814] systemd[1]: Starting wicked managed network interfaces...
+[   42.012825] avahi-daemon[677]: Joining mDNS multicast group on interface ens4.IPv4 with address 10.0.2.1.
+[   42.096673] avahi-daemon[677]: New relevant interface ens4.IPv4 for mDNS.
+[   42.097628] avahi-daemon[677]: Registering new address record for 10.0.2.1 on ens4.IPv4.
+
+Welcome to openSUSE Tumbleweed 20220719 - Kernel 5.18.11-1-default (ttyS0).
+
+ens4: 10.0.2.1 
+
+
+susetest login: [   45.930330] wicked[1495]: lo              up
+[   45.931212] wicked[1495]: ens4            up
+[   45.934471] systemd[1]: Finished wicked managed network interfaces.
+[   45.994291] systemd[1]: Stopping wicked managed network interfaces...
+[   46.118605] avahi-daemon[677]: Withdrawing address record for 10.0.2.1 on ens4.
+[   46.119705] avahi-daemon[677]: Leaving mDNS multicast group on interface ens4.IPv4 with address 10.0.2.1.
+[   46.120975] avahi-daemon[677]: Interface ens4.IPv4 no longer relevant for mDNS.
+[   46.219888] wicked[1902]: ens4            device-ready
+[   46.221242] systemd[1]: wicked.service: Deactivated successfully.
+[   46.222446] systemd[1]: Stopped wicked managed network interfaces.
+[   46.224905] systemd[1]: Starting wicked managed network interfaces...
+
+Welcome to openSUSE Tumbleweed 20220719 - Kernel 5.18.11-1-default (ttyS0).
+
+ens4:  
+
+
+susetest login: [   47.283655] avahi-daemon[677]: Joining mDNS multicast group on interface ens4.IPv4 with address 10.0.2.1.
+[   47.285227] avahi-daemon[677]: New relevant interface ens4.IPv4 for mDNS.
+[   47.367890] avahi-daemon[677]: Registering new address record for 10.0.2.1 on ens4.IPv4.
+
+Welcome to openSUSE Tumbleweed 20220719 - Kernel 5.18.11-1-default (ttyS0).
+
+ens4: 10.0.2.1 
+
+
+susetest login: [   51.416134] wicked[2027]: lo              up
+[   51.416978] wicked[2027]: ens4            up
+[   51.420075] systemd[1]: Finished wicked managed network interfaces.
+[   51.569329][ T2435] bpfilter: Loaded bpfilter_umh pid 2436
+[   51.572912][ T2436] Started bpfilter
+[   51.531224] systemd[1]: Starting ISC DHCPv4 Server...
+[   51.661772] dhcpd[2612]: Internet Systems Consortium DHCP Server 4.4.2-P1
+[   51.663029] dhcpd[2612]: Copyright 2004-2021 Internet Systems Consortium.
+[   51.664205] dhcpd[2612]: All rights reserved.
+[   51.664974] dhcpd[2612]: For info, please visit https://www.isc.org/software/dhcp/
+[   51.670521] dhcpd[2612]: Not searching LDAP since ldap-server, ldap-port and ldap-base-dn were not specified in the config file
+[   51.673961] dhcpd[2612]: Config file: /var/lib/dhcp//etc/dhcpd.conf
+[   51.674824] dhcpd[2612]: Database file: /var/lib/dhcp/db/dhcpd.leases
+[   51.675677] dhcpd[2612]: PID file: /run/dhcpd.pid
+[   51.676331] dhcpd[2612]: Source compiled to use binary-leases
+[   51.678797] dhcpd[2614]: Internet Systems Consortium DHCP Server 4.4.2-P1
+[   51.679752] dhcpd[2614]: Copyright 2004-2021 Internet Systems Consortium.
+[   51.680670] dhcpd[2614]: All rights reserved.
+[   51.681326] dhcpd[2614]: For info, please visit https://www.isc.org/software/dhcp/
+[   51.684072] dhcpd[2614]: Not searching LDAP since ldap-server, ldap-port and ldap-base-dn were not specified in the config file
+[   51.686942] dhcpd[2614]: Config file: /etc/dhcpd.conf
+[   51.687822] dhcpd[2614]: Database file: /db/dhcpd.leases
+[   51.688553] dhcpd[2614]: PID file: /run/dhcpd.pid
+[   51.689210] dhcpd[2614]: Source compiled to use binary-leases
+[   51.690205] dhcpd[2614]: Wrote 0 leases to leases file.
+[   51.697837] dhcpd[2614]: Listening on LPF/ens4/52:54:00:12:03:4e/10.0.2.0/24
+[   51.698933] dhcpd[2614]: Sending on   LPF/ens4/52:54:00:12:03:4e/10.0.2.0/24
+[   51.699869] dhcpd[2614]: Sending on   Socket/fallback/fallback-net
+[   51.700776] dhcpd[2614]: Server starting service.
+[   51.705206] systemd[1]: Started ISC DHCPv4 Server.
+[   51.705977] dhcpd[2460]: Starting ISC DHCPv4 Server [chroot]
+[   51.793515] avahi-daemon[677]: Files changed, reloading.
+[   51.794315] avahi-daemon[677]: No service file found in /etc/avahi/services.
+[   51.795338] avahi-daemon[677]: Files changed, reloading.
+[   51.796100] avahi-daemon[677]: No service file found in /etc/avahi/services.
+[   51.890792] systemd[1]: Starting Berkeley Internet Name Domain (DNS)...
+[   51.904117] root[2800]: Warning: File /var/lib/named/rndc.key not found. Creating it.
+[   51.920644] named.prep[2801]: wrote key file "/var/lib/named/rndc.key"
+[   51.957982] named[2806]: starting BIND 9.18.4 (Stable Release) <id:>
+[   51.958926] named[2806]: running on Linux x86_64 5.18.11-1-default #1 SMP PREEMPT_DYNAMIC Fri Jul 15 05:36:11 UTC 2022 (4fcb983)
+[   51.961060] named[2806]: built with  '--host=x86_64-suse-linux-gnu' '--build=x86_64-suse-linux-gnu' '--program-prefix=' '--disable-dependency-tracking' '--prefix=/usr' '--exec-prefix=/usr' '--bindir=/usr/bin' '--sbindir=/usr/sbin' '--sysconfdir=/etc' '--datadir=/usr/share' '--includedir=/usr/include' '--libdir=/usr/lib64' '--libexecdir=/usr/libexec' '--localstatedir=/var' '--sharedstatedir=/var/lib' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--with-python=/usr/bin/python3' '--includedir=/usr/include/bind' '--disable-static' '--with-openssl' '--enable-threads' '--with-libtool' '--with-libxml2' '--with-dlz_filesystem' '--with-json-c' '--with-libidn2' '--with-randomdev=/dev/urandom' '--enable-ipv6' '--with-pic' '--disable-openssl-version-check' '--with-tuning=large' '--with-maxminddb' '--with-dlopen=auto' '--with-gssapi=yes' '--disable-isc-spnego' '--enable-fixed-rrset' '--enable-filter-aaaa' '--with-systemd' '--enable-full-report' 'build_alias=x86_64-suse-linux-gnu' 'host_alias=x86_64-suse-linux-gnu' 'CFLAGS=-O2 -Wall -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=3 -fstack-protector-strong -funwind-tables -fasynchronous-unwind-tables -fstack-clash-protection -Werror=return-type -flto=auto -g -fPIE -DNO_VERSION_DATE' 'LDFLAGS=-pie' 'PKG_CONFIG_PATH=:/usr/lib64/pkgconfig:/usr/share/pkgconfig'
+[   51.975867] named[2806]: running as: named -u named
+[   51.979813] named[2806]: compiled by GCC 12.1.0
+[   51.980471] named[2806]: compiled with OpenSSL version: OpenSSL 1.1.1o  3 May 2022
+[   51.983529] named[2806]: linked to OpenSSL version: OpenSSL 1.1.1q  5 Jul 2022
+[   51.984497] named[2806]: compiled with libxml2 version: 2.9.14
+[   51.985305] named[2806]: linked to libxml2 version: 20914
+[   51.993897] named[2806]: compiled with json-c version: 0.16
+[   51.994668] systemd[1]: Started Berkeley Internet Name Domain (DNS).
+[   51.995549] named[2806]: linked to json-c version: 0.16
+[   51.996269] named[2806]: compiled with zlib version: 1.2.11
+[   51.997020] named[2806]: linked to zlib version: 1.2.11
+[   52.003306] named[2806]: ----------------------------------------------------
+[   52.004253] named[2806]: BIND 9 is maintained by Internet Systems Consortium,
+[   52.005192] named[2806]: Inc. (ISC), a non-profit 501(c)(3) public-benefit
+[   52.007659] named[2806]: corporation.  Support and training for BIND 9 are
+[   52.011324] named[2806]: available at https://www.isc.org/support
+[   52.016383] named[2806]: ----------------------------------------------------
+[   52.017621] named[2806]: adjusted limit on open files from 524288 to 1048576
+[   52.018578] named[2806]: found 1 CPU, using 1 worker thread
+[   52.019332] named[2806]: using 1 UDP listener per interface
+[   52.020080] named[2806]: config.c: option 'trust-anchor-telemetry' is experimental and subject to change in the future
+[   52.027462] named[2806]: loading configuration from '/etc/named.conf'
+[   52.028351] systemd[1]: Stopping ISC DHCPv4 Server...
+[   52.029071] named[2806]: reading built-in trust anchors from file '/etc/bind.keys'
+[   52.033992] named[2806]: using default UDP/IPv4 port range: [32768, 60999]
+[   52.034921] named[2806]: using default UDP/IPv6 port range: [32768, 60999]
+[   52.041437] named[2806]: listening on IPv4 interface lo, 127.0.0.1#53
+[   52.042340] named[2806]: listening on IPv4 interface ens4, 10.0.2.1#53
+[   52.043208] named[2806]: IPv6 socket API is incomplete; explicitly binding to each IPv6 address separately
+[   52.044434] named[2806]: listening on IPv6 interface lo, ::1#53
+[   52.045237] named[2806]: generating session key for dynamic DNS
+[   52.049527] named[2806]: sizing zone task pool based on 6 zones
+[   52.050358] named[2806]: none:97: 'max-cache-size 90%' - setting to 872MB (out of 968MB)
+[   52.051408] named[2806]: set up managed keys zone for view _default, file '/var/lib/named/dyn//managed-keys.bind'
+[   52.052712] named[2806]: automatic empty zone: 10.IN-ADDR.ARPA
+[   52.057521] named[2806]: automatic empty zone: 16.172.IN-ADDR.ARPA
+[   52.058374] named[2806]: automatic empty zone: 17.172.IN-ADDR.ARPA
+[   52.059222] named[2806]: automatic empty zone: 18.172.IN-ADDR.ARPA
+[   52.060052] named[2806]: automatic empty zone: 19.172.IN-ADDR.ARPA
+[   52.060883] named[2806]: automatic empty zone: 20.172.IN-ADDR.ARPA
+[   52.065529] named[2806]: automatic empty zone: 21.172.IN-ADDR.ARPA
+[   52.066377] named[2806]: automatic empty zone: 22.172.IN-ADDR.ARPA
+[   52.067210] named[2806]: automatic empty zone: 23.172.IN-ADDR.ARPA
+[   52.068048] named[2806]: automatic empty zone: 24.172.IN-ADDR.ARPA
+[   52.068868] named[2806]: automatic empty zone: 25.172.IN-ADDR.ARPA
+[   52.073539] named[2806]: automatic empty zone: 26.172.IN-ADDR.ARPA
+[   52.074405] named[2806]: automatic empty zone: 27.172.IN-ADDR.ARPA
+[   52.075245] named[2806]: automatic empty zone: 28.172.IN-ADDR.ARPA
+[   52.076085] named[2806]: automatic empty zone: 29.172.IN-ADDR.ARPA
+[   52.076920] named[2806]: automatic empty zone: 30.172.IN-ADDR.ARPA
+[   52.079083] named[2806]: automatic empty zone: 31.172.IN-ADDR.ARPA
+[   52.080060] named[2806]: automatic empty zone: 168.192.IN-ADDR.ARPA
+[   52.081176] named[2806]: automatic empty zone: 64.100.IN-ADDR.ARPA
+[   52.082834] named[2806]: automatic empty zone: 65.100.IN-ADDR.ARPA
+[   52.083688] named[2806]: automatic empty zone: 66.100.IN-ADDR.ARPA
+[   52.084509] named[2806]: automatic empty zone: 67.100.IN-ADDR.ARPA
+[   52.085330] named[2806]: automatic empty zone: 68.100.IN-ADDR.ARPA
+[   52.086190] named[2806]: automatic empty zone: 69.100.IN-ADDR.ARPA
+[   52.087014] named[2806]: automatic empty zone: 70.100.IN-ADDR.ARPA
+[   52.087841] named[2806]: automatic empty zone: 71.100.IN-ADDR.ARPA
+[   52.088660] named[2806]: automatic empty zone: 72.100.IN-ADDR.ARPA
+[   52.089939] named[2806]: automatic empty zone: 73.100.IN-ADDR.ARPA
+[   52.090770] named[2806]: automatic empty zone: 74.100.IN-ADDR.ARPA
+[   52.091593] named[2806]: automatic empty zone: 75.100.IN-ADDR.ARPA
+[   52.092417] named[2806]: automatic empty zone: 76.100.IN-ADDR.ARPA
+[   52.093240] named[2806]: automatic empty zone: 77.100.IN-ADDR.ARPA
+[   52.094126] named[2806]: automatic empty zone: 78.100.IN-ADDR.ARPA
+[   52.094950] named[2806]: automatic empty zone: 79.100.IN-ADDR.ARPA
+[   52.095761] named[2806]: automatic empty zone: 80.100.IN-ADDR.ARPA
+[   52.096574] named[2806]: automatic empty zone: 81.100.IN-ADDR.ARPA
+[   52.097385] named[2806]: automatic empty zone: 82.100.IN-ADDR.ARPA
+[   52.098257] named[2806]: automatic empty zone: 83.100.IN-ADDR.ARPA
+[   52.099076] named[2806]: automatic empty zone: 84.100.IN-ADDR.ARPA
+[   52.099892] named[2806]: automatic empty zone: 85.100.IN-ADDR.ARPA
+[   52.100716] named[2806]: automatic empty zone: 86.100.IN-ADDR.ARPA
+[   52.101571] named[2806]: automatic empty zone: 87.100.IN-ADDR.ARPA
+[   52.102413] named[2806]: automatic empty zone: 88.100.IN-ADDR.ARPA
+[   52.103231] named[2806]: automatic empty zone: 89.100.IN-ADDR.ARPA
+[   52.104047] named[2806]: automatic empty zone: 90.100.IN-ADDR.ARPA
+[   52.104866] named[2806]: automatic empty zone: 91.100.IN-ADDR.ARPA
+[   52.105723] named[2806]: automatic empty zone: 92.100.IN-ADDR.ARPA
+[   52.106561] named[2806]: automatic empty zone: 93.100.IN-ADDR.ARPA
+[   52.107385] named[2806]: automatic empty zone: 94.100.IN-ADDR.ARPA
+[   52.108195] named[2806]: automatic empty zone: 95.100.IN-ADDR.ARPA
+[   52.109010] named[2806]: automatic empty zone: 96.100.IN-ADDR.ARPA
+[   52.109854] named[2806]: automatic empty zone: 97.100.IN-ADDR.ARPA
+[   52.110684] named[2806]: automatic empty zone: 98.100.IN-ADDR.ARPA
+[   52.111507] named[2806]: automatic empty zone: 99.100.IN-ADDR.ARPA
+[   52.112327] named[2806]: automatic empty zone: 100.100.IN-ADDR.ARPA
+[   52.113158] named[2806]: automatic empty zone: 101.100.IN-ADDR.ARPA
+[   52.114032] named[2806]: automatic empty zone: 102.100.IN-ADDR.ARPA
+[   52.114861] named[2806]: automatic empty zone: 103.100.IN-ADDR.ARPA
+[   52.115694] named[2806]: automatic empty zone: 104.100.IN-ADDR.ARPA
+[   52.116527] named[2806]: automatic empty zone: 105.100.IN-ADDR.ARPA
+[   52.117360] named[2806]: automatic empty zone: 106.100.IN-ADDR.ARPA
+[   52.118223] named[2806]: automatic empty zone: 107.100.IN-ADDR.ARPA
+[   52.119045] named[2806]: automatic empty zone: 108.100.IN-ADDR.ARPA
+[   52.119878] named[2806]: automatic empty zone: 109.100.IN-ADDR.ARPA
+[   52.120703] named[2806]: automatic empty zone: 110.100.IN-ADDR.ARPA
+[   52.121561] named[2806]: automatic empty zone: 111.100.IN-ADDR.ARPA
+[   52.122538] named[2806]: automatic empty zone: 112.100.IN-ADDR.ARPA
+[   52.123373] named[2806]: automatic empty zone: 113.100.IN-ADDR.ARPA
+[   52.124201] named[2806]: automatic empty zone: 114.100.IN-ADDR.ARPA
+[   52.125032] named[2806]: automatic empty zone: 115.100.IN-ADDR.ARPA
+[   52.125901] named[2806]: automatic empty zone: 116.100.IN-ADDR.ARPA
+[   52.126746] named[2806]: automatic empty zone: 117.100.IN-ADDR.ARPA
+[   52.127581] named[2806]: automatic empty zone: 118.100.IN-ADDR.ARPA
+[   52.128412] named[2806]: automatic empty zone: 119.100.IN-ADDR.ARPA
+[   52.129245] named[2806]: automatic empty zone: 120.100.IN-ADDR.ARPA
+[   52.130114] named[2806]: automatic empty zone: 121.100.IN-ADDR.ARPA
+[   52.130947] named[2806]: automatic empty zone: 122.100.IN-ADDR.ARPA
+[   52.131781] named[2806]: automatic empty zone: 123.100.IN-ADDR.ARPA
+[   52.132611] named[2806]: automatic empty zone: 124.100.IN-ADDR.ARPA
+[   52.133468] named[2806]: automatic empty zone: 125.100.IN-ADDR.ARPA
+[   52.134320] named[2806]: automatic empty zone: 126.100.IN-ADDR.ARPA
+[   52.135151] named[2806]: automatic empty zone: 127.100.IN-ADDR.ARPA
+[   52.135980] named[2806]: automatic empty zone: 0.IN-ADDR.ARPA
+[   52.136746] named[2806]: automatic empty zone: 127.IN-ADDR.ARPA
+[   52.137567] named[2806]: automatic empty zone: 254.169.IN-ADDR.ARPA
+[   52.138408] named[2806]: automatic empty zone: 2.0.192.IN-ADDR.ARPA
+[   52.139243] named[2806]: automatic empty zone: 100.51.198.IN-ADDR.ARPA
+[   52.140105] named[2806]: automatic empty zone: 113.0.203.IN-ADDR.ARPA
+[   52.140953] named[2806]: automatic empty zone: 255.255.255.255.IN-ADDR.ARPA
+[   52.141898] named[2806]: automatic empty zone: 0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.IP6.ARPA
+[   52.143513] named[2806]: automatic empty zone: D.F.IP6.ARPA
+[   52.144268] named[2806]: automatic empty zone: 8.E.F.IP6.ARPA
+[   52.145028] named[2806]: automatic empty zone: 9.E.F.IP6.ARPA
+[   52.145997] named[2806]: automatic empty zone: A.E.F.IP6.ARPA
+[   52.146939] named[2806]: automatic empty zone: B.E.F.IP6.ARPA
+[   52.148614] named[2806]: automatic empty zone: 8.B.D.0.1.0.0.2.IP6.ARPA
+[   52.149524] named[2806]: automatic empty zone: EMPTY.AS112.ARPA
+[   52.150339] named[2806]: automatic empty zone: HOME.ARPA
+[   52.151061] named[2806]: configuring command channel from '/etc/rndc.key'
+[   52.151946] named[2806]: command channel listening on 127.0.0.1#953
+[   52.152780] named[2806]: configuring command channel from '/etc/rndc.key'
+[   52.158495] named[2806]: command channel listening on ::1#953
+[   52.159310] dhcpd[2812]: Shutting down ISC DHCPv4 Server
+[   52.160053] systemd[1]: dhcpd.service: Deactivated successfully.
+[   52.160872] named[2806]: managed-keys-zone: loaded serial 0
+[   52.165649] systemd[1]: Stopped ISC DHCPv4 Server.
+[   52.166347] named[2806]: zone 2.0.10.in-addr.arpa/IN: loaded serial 2016020901
+[   52.167664] systemd[1]: Starting ISC DHCPv4 Server...
+[   52.168539] named[2806]: zone openqa.test/IN: loaded serial 2016020901
+[   52.173446] named[2806]: zone 0.0.127.in-addr.arpa/IN: loaded serial 42
+[   52.174340] named[2806]: zone 0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa/IN: loaded serial 42
+[   52.175714] named[2806]: zone localhost/IN: loaded serial 42
+[   52.176467] named[2806]: all zones loaded
+[   52.177035] named[2806]: running
+[   52.269318] dhcpd[2966]: Internet Systems Consortium DHCP Server 4.4.2-P1
+[   52.270392] dhcpd[2966]: Copyright 2004-2021 Internet Systems Consortium.
+[   52.271349] dhcpd[2966]: All rights reserved.
+[   52.272068] dhcpd[2966]: For info, please visit https://www.isc.org/software/dhcp/
+[   52.275201] dhcpd[2966]: Not searching LDAP since ldap-server, ldap-port and ldap-base-dn were not specified in the config file
+[   52.278345] dhcpd[2966]: Config file: /var/lib/dhcp//etc/dhcpd.conf
+[   52.279218] dhcpd[2966]: Database file: /var/lib/dhcp/db/dhcpd.leases
+[   52.280077] dhcpd[2966]: PID file: /run/dhcpd.pid
+[   52.280733] dhcpd[2966]: Source compiled to use binary-leases
+[   52.283282] dhcpd[2968]: Internet Systems Consortium DHCP Server 4.4.2-P1
+[   52.284227] dhcpd[2968]: Copyright 2004-2021 Internet Systems Consortium.
+[   52.285176] dhcpd[2968]: All rights reserved.
+[   52.287623] dhcpd[2968]: For info, please visit https://www.isc.org/software/dhcp/
+[   52.288631] dhcpd[2968]: Not searching LDAP since ldap-server, ldap-port and ldap-base-dn were not specified in the config file
+[   52.291665] dhcpd[2968]: Config file: /etc/dhcpd.conf
+[   52.292627] dhcpd[2968]: Database file: /db/dhcpd.leases
+[   52.293683] dhcpd[2968]: PID file: /run/dhcpd.pid
+[   52.294634] dhcpd[2968]: Source compiled to use binary-leases
+[   52.295729] dhcpd[2968]: Wrote 0 leases to leases file.
+[   52.309832] dhcpd[2968]: Listening on LPF/ens4/52:54:00:12:03:4e/10.0.2.0/24
+[   52.310930] dhcpd[2968]: Sending on   LPF/ens4/52:54:00:12:03:4e/10.0.2.0/24
+[   52.311858] dhcpd[2968]: Sending on   Socket/fallback/fallback-net
+[   52.312765] dhcpd[2968]: Server starting service.
+[   52.316467] systemd[1]: Started ISC DHCPv4 Server.
+[   52.317195] dhcpd[2816]: Starting ISC DHCPv4 Server [chroot]
+[   66.658571] named[2806]: network unreachable resolving './NS/IN': 2001:500:2f::f#53
+[   66.660044] named[2806]: network unreachable resolving './NS/IN': 2001:7fe::53#53
+[   66.661286] named[2806]: network unreachable resolving './NS/IN': 2001:500:2::c#53
+[   66.663147] named[2806]: network unreachable resolving './NS/IN': 2001:500:9f::42#53
+[   66.664405] named[2806]: network unreachable resolving './NS/IN': 2001:500:1::53#53
+[   66.666128] named[2806]: network unreachable resolving './NS/IN': 2001:500:12::d0d#53
+[   66.667624] named[2806]: network unreachable resolving './NS/IN': 2001:500:200::b#53
+[   66.668662] named[2806]: network unreachable resolving './NS/IN': 2001:7fd::1#53
+[   66.669719] named[2806]: network unreachable resolving './NS/IN': 2001:500:a8::e#53
+[   66.670728] named[2806]: network unreachable resolving './NS/IN': 2001:503:ba3e::2:30#53
+[   66.671771] named[2806]: network unreachable resolving './NS/IN': 2001:dc3::35#53
+[   66.672744] named[2806]: network unreachable resolving './NS/IN': 2001:500:2d::d#53
+[   66.673775] named[2806]: network unreachable resolving './NS/IN': 2001:503:c27::2:30#53
+[   66.674938] named[2806]: resolver priming query complete: success
+[   66.675760] named[2806]: checkhints: b.root-servers.net/A (170.247.170.2) missing from hints
+[   66.676833] named[2806]: checkhints: b.root-servers.net/A (199.9.14.201) extra record in hints
+[   66.678061] named[2806]: checkhints: b.root-servers.net/AAAA (2801:1b8:10::b) missing from hints
+[   66.679241] named[2806]: checkhints: b.root-servers.net/AAAA (2001:500:200::b) extra record in hints
+[   71.668462] nscd[687]: 687 checking for monitored file `/etc/services': No such file or directory
+[   72.373333] chronyd[1042]: Selected source 212.18.3.18 (1.opensuse.pool.ntp.org)
+[   86.668631] nscd[687]: 687 checking for monitored file `/etc/services': No such file or directory
+[   89.484187] dhcpd[2968]: DHCPDISCOVER from 52:54:00:12:01:ec via ens4
+[   90.485367] dhcpd[2968]: DHCPOFFER on 10.0.2.15 to 52:54:00:12:01:ec via ens4
+[   90.487165] dhcpd[2968]: DHCPREQUEST for 10.0.2.15 (10.0.2.1) from 52:54:00:12:01:ec via ens4
+[   90.489056] dhcpd[2968]: DHCPACK on 10.0.2.15 to 52:54:00:12:01:ec via ens4
+[  128.858912] systemd[1]: Started Getty on tty4.
+[  132.777626] login[2975]: gkr-pam: unable to locate daemon control file
+[  132.778828] login[2975]: gkr-pam: stashed password to try later in open session
+[  132.786389] systemd[1]: Created slice User Slice of UID 1000.
+[  132.788192] systemd[1]: Starting User Runtime Directory /run/user/1000...
+[  132.792546] systemd-logind[705]: New session 3 of user bernhard.
+[  132.801121] systemd[1]: Finished User Runtime Directory /run/user/1000.
+[  132.803475] systemd[1]: Starting User Manager for UID 1000...
+[  132.807012] systemd[2977]: pam_unix(systemd-user:session): session opened for user bernhard(uid=1000) by (uid=0)
+[  132.879236] systemd[2977]: Queued start job for default target Main User Target.
+[  132.885249] systemd[2977]: Created slice User Application Slice.
+[  132.886942] systemd[2977]: Started Daily Cleanup of User's Temporary Directories.
+[  132.887927] systemd[2977]: Reached target Paths.
+[  132.888574] systemd[2977]: Reached target Timers.
+[  132.889235] systemd[2977]: Starting D-Bus User Message Bus Socket...
+[  132.906170] systemd[2977]: Listening on PipeWire PulseAudio.
+[  132.906983] login[2975]: pam_unix(login:session): session opened for user bernhard(uid=1000) by LOGIN(uid=0)
+[  132.908253] systemd[2977]: Listening on PipeWire Multimedia System Socket.
+[  132.909240] login[2975]: LOGIN ON tty4 BY bernhard
+[  132.911215] systemd[2977]: Starting Create User's Volatile Files and Directories...
+[  132.912459] systemd[2977]: Finished Create User's Volatile Files and Directories.
+[  132.913498] systemd[2977]: Listening on D-Bus User Message Bus Socket.
+[  132.914370] systemd[2977]: Reached target Sockets.
+[  132.915040] systemd[2977]: Reached target Basic System.
+[  132.915758] systemd[2977]: Reached target Main User Target.
+[  132.916513] systemd[2977]: Startup finished in 86ms.
+[  132.917191] systemd[1]: Started User Manager for UID 1000.
+[  132.919027] systemd[1]: Started Session 3 of User bernhard.
+YpuUt-0-
+[  255.672416] named[2806]: missing expected cookie from 10.150.1.11#53
+[  255.674099] named[2806]: missing expected cookie from 10.150.1.11#53
+[  290.678947] named[2806]: missing expected cookie from 10.150.1.11#53
+[  290.690357] named[2806]: missing expected cookie from 10.150.1.11#53
+[  290.727922] named[2806]: missing expected cookie from 10.150.1.11#53
+[  290.729302] named[2806]: missing expected cookie from 10.150.1.11#53
+[  395.498326] systemd[1180]: Created slice User Background Tasks Slice.
+[  395.500698] systemd[1180]: Starting Cleanup of User's Temporary Files and Directories...
+[  395.506725] systemd[1180]: Finished Cleanup of User's Temporary Files and Directories.
+[  420.732565] named[2806]: missing expected cookie from 10.150.1.11#53
+[  420.733889] named[2806]: missing expected cookie from 10.150.1.11#53
+[  435.737332] named[2806]: missing expected cookie from 10.150.1.11#53
+[  435.766395] named[2806]: missing expected cookie from 10.150.1.11#53
+[  455.498217] systemd[2977]: Created slice User Background Tasks Slice.
+[  455.500768] systemd[2977]: Starting Cleanup of User's Temporary Files and Directories...
+[  455.506279] systemd[2977]: Finished Cleanup of User's Temporary Files and Directories.
+[  543.780826] named[2806]: missing expected cookie from 10.150.1.11#53
+[  543.782461] named[2806]: missing expected cookie from 10.150.1.11#53
+[  556.452336] named[2806]: missing expected cookie from 10.150.1.11#53
+[  556.460557] named[2806]: missing expected cookie from 10.150.1.11#53
+[  556.482393] named[2806]: missing expected cookie from 10.150.1.11#53
+[  557.490977] named[2806]: missing expected cookie from 10.150.1.11#53
+[  557.643201] named[2806]: missing expected cookie from 10.150.1.11#53
+[  557.644740] named[2806]: missing expected cookie from 10.150.1.11#53
+[  558.675288] named[2806]: missing expected cookie from 10.150.1.11#53
+[  558.683120] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.339463] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.341028] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.343140] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.344467] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.354623] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.359590] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.361083] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.362563] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.364445] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.365897] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.367962] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.369111] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.375920] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.379761] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.961210] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.962716] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.976607] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.978498] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.980402] named[2806]: missing expected cookie from 10.150.1.11#53
+[  559.982120] named[2806]: missing expected cookie from 10.150.1.11#53
+[  561.876392] named[2806]: missing expected cookie from 10.150.1.11#53
+[  561.877578] named[2806]: missing expected cookie from 10.150.1.11#53
+[  580.785583] named[2806]: missing expected cookie from 10.150.1.11#53
+[  580.787068] named[2806]: missing expected cookie from 10.150.1.11#53
+[  610.776927] named[2806]: missing expected cookie from 10.150.1.11#53
+[  622.031917] systemd[1]: Started Getty on tty2.
+[  629.893615] login[3028]: gkr-pam: unable to locate daemon control file
+[  629.894652] login[3028]: gkr-pam: stashed password to try later in open session
+[  629.899744] systemd[1]: Started Session 5 of User root.
+[  629.902036] systemd-logind[705]: New session 5 of user root.
+[  629.906943] login[3028]: pam_unix(login:session): session opened for user root(uid=0) by LOGIN(uid=0)
+[  629.910178] login[3028]: ROOT LOGIN ON tty2
+YpuUt-0-
+[  652.240528] dhcpd[2968]: DHCPDISCOVER from 52:54:00:12:01:ec via ens4
+[  653.241689] dhcpd[2968]: DHCPOFFER on 10.0.2.16 to 52:54:00:12:01:ec via ens4
+[  653.243056] dhcpd[2968]: DHCPREQUEST for 10.0.2.16 (10.0.2.1) from 52:54:00:12:01:ec via ens4
+[  653.244714] dhcpd[2968]: DHCPACK on 10.0.2.16 to 52:54:00:12:01:ec via ens4
+[  653.295159] named[2806]: missing expected cookie from 10.150.1.11#53
+[  657.742637] named[2806]: missing expected cookie from 10.150.1.11#53
+[  657.746498] named[2806]: missing expected cookie from 10.150.1.11#53
+[  657.755563] named[2806]: missing expected cookie from 10.150.1.11#53
+[  657.870664] named[2806]: missing expected cookie from 10.150.1.11#53
+[  657.872292] named[2806]: missing expected cookie from 10.150.1.11#53
+[  657.892267] named[2806]: missing expected cookie from 10.150.1.11#53
