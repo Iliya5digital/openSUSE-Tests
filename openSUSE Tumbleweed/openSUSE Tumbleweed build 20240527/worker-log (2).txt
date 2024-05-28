@@ -1,0 +1,22 @@
+[2024-05-28T07:30:58.793534Z] [info] Preparing cgroup to start isotovideo
+[2024-05-28T07:30:58.794097Z] [info] Using cgroup /sys/fs/cgroup/systemd/openqa.slice/openqa-worker.slice/openqa-worker-auto-restart@1.service/4227107
+[2024-05-28T07:30:58.794315Z] [info] Starting isotovideo container
+[2024-05-28T07:30:58.796446Z] [info] isotovideo has been started (PID: 97655)
+[2024-05-28T07:30:58.797565Z] [info] 97655: WORKING 4227107
+[2024-05-28T08:09:52.012265Z] [info] Uploading journal_check-audit.tar
+[2024-05-28T08:09:52.117380Z] [info] Uploading journal_check-basic_health_check.txt
+[2024-05-28T08:09:52.162354Z] [info] Uploading journal_check-dmesg.log
+[2024-05-28T08:09:52.210594Z] [info] Uploading journal_check-full_journal.log
+[2024-05-28T08:09:52.272204Z] [info] Uploading journal_check-ip-addr-show.log
+[2024-05-28T08:09:52.310517Z] [info] Uploading journal_check-journal.log
+[2024-05-28T08:09:52.399673Z] [info] Uploading journal_check-loadavg.txt
+[2024-05-28T08:09:52.440015Z] [info] Uploading journal_check-problem_detection_logs.tar.xz
+[2024-05-28T08:09:52.517559Z] [info] Uploading journal_check-psaxf.log
+[2024-05-28T08:09:52.571645Z] [info] Uploading journal_check-resolv-conf.log
+[2024-05-28T08:09:52.637013Z] [info] Uploading journal_check-sysconfig.tar.gz
+[2024-05-28T08:09:52.680841Z] [info] Uploading journal_check-systemctl.log
+[2024-05-28T08:09:52.736932Z] [info] Uploading journal_check-systemctl_status.log
+[2024-05-28T08:09:52.815684Z] [info] Uploading journal_check-systemctl_unit-files.log
+[2024-05-28T08:09:52.885844Z] [info] Uploading video.webm
+[2024-05-28T08:09:52.985140Z] [info] Uploading autoinst-log.txt
+[2024-05-28T08:09:53.083112Z] [info] Uploading worker-log.txt

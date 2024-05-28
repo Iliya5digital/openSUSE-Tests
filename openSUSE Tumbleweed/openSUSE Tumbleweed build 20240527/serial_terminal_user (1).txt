@@ -1,0 +1,204 @@
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+ens4: 10.0.2.15 fec0::b02f:9b5:dc81:e291
+Encryption recovery key:
+  uvghclfc-rubriibk-htdrbkhn-vnidhtef-rnhfrjlb-rnlnillh-bngfbnhk-kgfrgguc
+
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+ens4: 10.0.2.15 fe80::ab51:9d9:b7d9:e1ce
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+ens4: 10.0.2.15 fec0::ea57:d896:94d6:4f43
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fec0::d1c6:6b4b:16f:c1a1
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fec0::f356:524d:4bdd:91dc
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fec0::2b41:a29b:473:6bfe
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fec0::7c48:4077:6cfd:a79b
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fec0::7725:10c6:a5bf:da50
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fec0::dae4:abc9:d2b7:50ea
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fec0::a542:ef8a:6d9:b7ea
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fec0::c4ab:18b3:855e:6e5a
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fe80::ab51:9d9:b7d9:e1ce
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fec0::4b0f:ac28:f23c:cbf4
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fec0::b205:2e41:eefa:cd6c
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fec0::28df:2626:a968:7850
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fec0::5624:ebab:4313:ca74
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fec0::7e1a:d28d:157b:bf59
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fe80::ab51:9d9:b7d9:e1ce
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fec0::1513:367:ca4c:1865
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (hvc1).
+
+SSH host key: SHA256:3j2VIjkIfnNlxw3W4qjdHGeUOR81a8GELTxwB2Mn6SY (ECDSA)
+SSH host key: SHA256:5Plh/DZ83BQ0neEPL3Zae1OIw4kzqcxomRHkuh/qkLk (ED25519)
+SSH host key: SHA256:7SOtT9NXdqZNeDqmSG1Y4/RN6xgpj2UIO35obCM/gPw (RSA)
+ens4: 10.0.2.15 fec0::30c8:b90e:dd34:3c31
+
+
+localhost login: 

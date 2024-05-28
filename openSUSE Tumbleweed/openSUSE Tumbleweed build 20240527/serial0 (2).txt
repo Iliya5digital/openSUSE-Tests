@@ -1,0 +1,819 @@
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0001 "UEFI Misc Device" from PciRoot(0x0)/Pci(0x9,0x0)
+BdsDxe: starting Boot0001 "UEFI Misc Device" from PciRoot(0x0)/Pci(0x9,0x0)
+ [2J[01;01H[15;33H[0m[30m[42m          openSUSE MicroOS          [16;33H[0m[37m[40m         EFI Default Loader         [17;33H   Reboot Into Firmware Interface   [19;01H                                            Boot in 5 s.                                           [18;30HÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ[19;01H                                            Boot in 4 s.                                           [18;30HÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ[19;01H                                            Boot in 3 s.                                           [18;30HÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ[19;01H                                            Boot in 2 s.                                           [18;30HÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ[19;01H                                            Boot in 1 s.                                           [18;30HÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ[2J[01;01H[   63.105128][ T3623] systemd-gpt-auto-generator[3623]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   63.142226][ T3615] (sd-exec-[3615]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+)0[1;24r[m[4l[?7h[?1000h[39;49m[39;49m[m[H[J[17d[0;10;1m[36m[44m[J[H openSUSE MicroOS[K[2d â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€[K[3d[K[4d[K[5d[K[6d[K[7d[K[8d[K[9;22H[1K [37m[47mâ”Œâ”€â”€â”€â”€â”€â”€â”€â”€[34m[47mJeOS Firstboot[37m[47mâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€[0;10m[30m[47mâ”[0;10;1m[36m[44m[K[10;22H[1K [37m[47mâ”‚[0;10m[30m[47m[32X[10;56Hâ”‚[0;10;1m[30m[40m  [36m[44m[K[11;22H[1K [37m[47mâ”‚[0;10m[30m[47m[32X[11;56Hâ”‚[0;10;1m[30m[40m  [36m[44m[K[12;22H[1K [37m[47mâ”‚[0;10m[30m[47m[32X[12;56Hâ”‚[0;10;1m[30m[40m  [36m[44m[K[13;22H[1K [37m[47mâ”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€[0;10m[30m[47mâ”¤[0;10;1m[30m[40m  [36m[44m[K[14;22H[1K [37m[47mâ”‚[0;10m[30m[47m           [0;10;1m[37m[44m<S[33m[44mtart[37m[44m>[0;10m[30m[47m[14X[14;56Hâ”‚[0;10;1m[30m[40m  [36m[44m[K[15;22H[1K [37m[47mâ””[0;10m[30m[47mâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜[0;10;1m[30m[40m  [36m[44m[K[16;24H[1K [30m[40m[34X[16;59H[36m[44m[K[14;36H[39;49m[m[10;25H[30m[47mWelcome to openSUSE MicroOS![11;25HThe initial configuration[12;25Htakes just a few steps.[14;36H[39;49m[m[?1000l[24;1H)0[1;24r[m[4l[?7h[H[J[24;1H
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+ens4: 10.0.2.15 fec0::224c:ab61:5e56:78b1
+Encryption recovery key:
+  hkrnhtbd-vntekiii-jbiulbgv-icuugvvn-rfnrhbfl-jevcubln-hbkjnrve-nkflhjgv
+
+
+
+localhost login: tnTFj-0-
+eP9vj-0-
+dtTka-0-
+87PUi-0-
+xRatn-0-
+GuucX-2-
+npH4p-0-
+H0cJi-0-
+avWL9-0-
+S9bln
+  serial-getty@hvc0.service                                                      loaded active running   Serial Getty on hvc0
+  serial-getty@ttyS0.service                                                     loaded active running   Serial Getty on ttyS0
+  system-serial\x2dgetty.slice                                                   loaded active active    Slice /system/serial-getty
+SCRIPT_FINISHEDS9bln-0-
+[  177.108126][ T7657] systemd-gpt-auto-generator[7657]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+E~LIs-0-
+S9bln
+  serial-getty@hvc0.service                                                      loaded active running   Serial Getty on hvc0
+  serial-getty@hvc1.service                                                      loaded active running   Serial Getty on hvc1
+  serial-getty@ttyS0.service                                                     loaded active running   Serial Getty on ttyS0
+  system-serial\x2dgetty.slice                                                   loaded active active    Slice /system/serial-getty
+SCRIPT_FINISHEDS9bln-0-
+YpuUt-0-
+eP9vj-0-
+dtTka-0-
+87PUi-0-
+xRatn-0-
+0mu~0
+/
+   [ ] target exists
+   [ ] VFS options: ro
+   [ ] UUID=8e1db0e5-66e2-4309-9280-394cf494d447 translated to /dev/mapper/cr_root
+   [ ] source /dev/mapper/cr_root exists
+   [ ] FS type is btrfs
+/.snapshots
+   [ ] target exists
+   [ ] FS options: subvol=@/.snapshots
+   [ ] UUID=8e1db0e5-66e2-4309-9280-394cf494d447 translated to /dev/mapper/cr_root
+   [ ] source /dev/mapper/cr_root exists
+   [ ] FS type is btrfs
+/home
+   [ ] target exists
+   [ ] FS options: subvol=@/home
+   [ ] UUID=8e1db0e5-66e2-4309-9280-394cf494d447 translated to /dev/mapper/cr_root
+   [ ] source /dev/mapper/cr_root exists
+   [ ] FS type is btrfs
+/opt
+   [ ] target exists
+   [ ] FS options: subvol=@/opt
+   [ ] UUID=8e1db0e5-66e2-4309-9280-394cf494d447 translated to /dev/mapper/cr_root
+   [ ] source /dev/mapper/cr_root exists
+   [ ] FS type is btrfs
+/root
+   [ ] target exists
+   [ ] FS options: subvol=@/root
+   [ ] userspace options: x-initrd.mount
+   [ ] UUID=8e1db0e5-66e2-4309-9280-394cf494d447 translated to /dev/mapper/cr_root
+   [ ] source /dev/mapper/cr_root exists
+   [ ] FS type is btrfs
+/srv
+   [ ] target exists
+   [ ] FS options: subvol=@/srv
+   [ ] UUID=8e1db0e5-66e2-4309-9280-394cf494d447 translated to /dev/mapper/cr_root
+   [ ] source /dev/mapper/cr_root exists
+   [ ] FS type is btrfs
+/var
+   [ ] target exists
+   [ ] FS options: subvol=@/var
+   [ ] userspace options: x-initrd.mount
+   [ ] UUID=8e1db0e5-66e2-4309-9280-394cf494d447 translated to /dev/mapper/cr_root
+   [ ] source /dev/mapper/cr_root exists
+   [ ] FS type is btrfs
+/boot/efi
+   [ ] target exists
+   [ ] UUID=D27B-37E5 translated to /dev/vda2
+   [ ] source /dev/vda2 exists
+   [ ] FS type is vfat
+/usr/local
+   [ ] target exists
+   [ ] FS options: subvol=@/usr/local
+   [ ] UUID=8e1db0e5-66e2-4309-9280-394cf494d447 translated to /dev/mapper/cr_root
+   [ ] source /dev/mapper/cr_root exists
+   [ ] FS type is btrfs
+/etc
+   [ ] target exists
+   [ ] FS options: lowerdir=/sysroot/etc,upperdir=/sysroot/var/lib/overlay/1/etc,workdir=/sysroot/var/lib/overlay/work-etc
+   [ ] userspace options: x-systemd.requires-mounts-for=/var,x-systemd.requires-mounts-for=/sysroot/var,x-initrd.mount
+   [ ] do not check overlay source (pseudo/net)
+   [ ] do not check overlay FS type (pseudo/net)
+Success, no errors or warnings detected
+SCRIPT_FINISHED0mu~0-0-
+1spU0
+UUID=8e1db0e5-66e2-4309-9280-394cf494d447 btrfs 29.5G 590.3M 28.4G 2% /
+UUID=8e1db0e5-66e2-4309-9280-394cf494d447 btrfs 29.5G 590.3M 28.4G 2% /.snapshots
+UUID=8e1db0e5-66e2-4309-9280-394cf494d447 btrfs 29.5G 590.3M 28.4G 2% /home
+UUID=8e1db0e5-66e2-4309-9280-394cf494d447 btrfs 29.5G 590.3M 28.4G 2% /opt
+UUID=8e1db0e5-66e2-4309-9280-394cf494d447 btrfs 29.5G 590.3M 28.4G 2% /root
+UUID=8e1db0e5-66e2-4309-9280-394cf494d447 btrfs 29.5G 590.3M 28.4G 2% /srv
+UUID=8e1db0e5-66e2-4309-9280-394cf494d447 btrfs 29.5G 590.3M 28.4G 2% /var
+UUID=D27B-37E5 vfat 499.7M 113.5M 386.2M 23% /boot/efi
+UUID=8e1db0e5-66e2-4309-9280-394cf494d447 btrfs 29.5G 590.3M 28.4G 2% /usr/local
+SCRIPT_FINISHED1spU0-0-
+kgimy-0-
+bYeCh
+kvm
+SCRIPT_FINISHEDbYeCh-0-
+[  277.639485][ T7771] systemd-gpt-auto-generator[7771]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+WgXp8-0-
+c6eFV-0-
+unneed_repos_removed
+JL9pQ-0-
+c6eFV-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716881649.847:175): avc:  denied  { map_read map_write } for  pid=7655 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.850:176): avc:  denied  { map_read map_write } for  pid=7657 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.890:177): avc:  denied  { write } for  pid=7657 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3181 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+type=AVC msg=audit(1716881750.374:230): avc:  denied  { map_read map_write } for  pid=7769 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.384:231): avc:  denied  { map_read map_write } for  pid=7771 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.421:232): avc:  denied  { write } for  pid=7771 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3264 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDOSm16-0-
+1xBk1-0-
+GfrcR-0-
+fDmt2-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716881649.847:175): avc:  denied  { map_read map_write } for  pid=7655 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.850:176): avc:  denied  { map_read map_write } for  pid=7657 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.890:177): avc:  denied  { write } for  pid=7657 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3181 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+type=AVC msg=audit(1716881750.374:230): avc:  denied  { map_read map_write } for  pid=7769 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.384:231): avc:  denied  { map_read map_write } for  pid=7771 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.421:232): avc:  denied  { write } for  pid=7771 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3264 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDOSm16-0-
+pjflL-0-
+7sEnU
+Repository priorities are without effect. All enabled repositories share the same priority.
+
+# | Alias         | Name                                   | Enabled | GPG Check | Refresh | URI
+--+---------------+----------------------------------------+---------+-----------+---------+-------------------------------------------------------------------------------------------------
+1 | NON_OSS       | NON_OSS                                | Yes     | (r ) Yes  | No      | http://openqa.opensuse.org/assets/repo/openSUSE-Tumbleweed-non-oss-x86_64-Snapshot20240527
+2 | OSS           | OSS                                    | Yes     | (r ) Yes  | No      | http://openqa.opensuse.org/assets/repo/openSUSE-Tumbleweed-oss-x86_64-Snapshot20240527
+3 | OSS_DEBUGINFO | OSS_DEBUGINFO                          | Yes     | (r ) Yes  | No      | http://openqa.opensuse.org/assets/repo/openSUSE-Tumbleweed-oss-x86_64-Snapshot20240527-debuginfo
+4 | repo-openh264 | Open H.264 Codec (openSUSE Tumbleweed) | Yes     | (r ) Yes  | Yes     | http://codecs.opensuse.org/openh264/openSUSE_Tumbleweed
+SCRIPT_FINISHED7sEnU-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716881649.847:175): avc:  denied  { map_read map_write } for  pid=7655 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.850:176): avc:  denied  { map_read map_write } for  pid=7657 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.890:177): avc:  denied  { write } for  pid=7657 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3181 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+type=AVC msg=audit(1716881750.374:230): avc:  denied  { map_read map_write } for  pid=7769 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.384:231): avc:  denied  { map_read map_write } for  pid=7771 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.421:232): avc:  denied  { write } for  pid=7771 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3264 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDOSm16-0-
+QSjG0-0-
+T_TZ1-0-
+TyESo-0-
+qD76J-0-
+DMHh2-0-
+_dygn-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716881649.847:175): avc:  denied  { map_read map_write } for  pid=7655 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.850:176): avc:  denied  { map_read map_write } for  pid=7657 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.890:177): avc:  denied  { write } for  pid=7657 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3181 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+type=AVC msg=audit(1716881750.374:230): avc:  denied  { map_read map_write } for  pid=7769 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.384:231): avc:  denied  { map_read map_write } for  pid=7771 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.421:232): avc:  denied  { write } for  pid=7771 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3264 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDOSm16-0-
+VipvD
+/dev/mapper/cr_root
+SCRIPT_FINISHEDVipvD-0-
+QVY2I
+/dev/vda3
+SCRIPT_FINISHEDQVY2I-0-
+qhLLl
+vda
+SCRIPT_FINISHEDqhLLl-0-
+uUK6D
+31457280
+SCRIPT_FINISHEDuUK6D-0-
+2XE7~
+SCRIPT_FINISHED2XE7~-0-
+KhNOM
+Unpartitioned space /dev/vda: 0 B, 0 bytes, 0 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+SCRIPT_FINISHEDKhNOM-0-
+UqNou
+31668023296
+SCRIPT_FINISHEDUqNou-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716881649.847:175): avc:  denied  { map_read map_write } for  pid=7655 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.850:176): avc:  denied  { map_read map_write } for  pid=7657 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.890:177): avc:  denied  { write } for  pid=7657 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3181 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+type=AVC msg=audit(1716881750.374:230): avc:  denied  { map_read map_write } for  pid=7769 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.384:231): avc:  denied  { map_read map_write } for  pid=7771 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.421:232): avc:  denied  { write } for  pid=7771 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3264 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDOSm16-0-
+vLUA6-0-
+zaJnE-0-
+q3DCk-0-
+3NgKX-104-
+6omrr-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716881649.847:175): avc:  denied  { map_read map_write } for  pid=7655 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.850:176): avc:  denied  { map_read map_write } for  pid=7657 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.890:177): avc:  denied  { write } for  pid=7657 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3181 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+type=AVC msg=audit(1716881750.374:230): avc:  denied  { map_read map_write } for  pid=7769 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.384:231): avc:  denied  { map_read map_write } for  pid=7771 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.421:232): avc:  denied  { write } for  pid=7771 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3264 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDOSm16-0-
+3Aps~-0-
+D9iTz-0-
+6R6QK-0-
+Y~qoi-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716881649.847:175): avc:  denied  { map_read map_write } for  pid=7655 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.850:176): avc:  denied  { map_read map_write } for  pid=7657 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.890:177): avc:  denied  { write } for  pid=7657 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3181 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+type=AVC msg=audit(1716881750.374:230): avc:  denied  { map_read map_write } for  pid=7769 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.384:231): avc:  denied  { map_read map_write } for  pid=7771 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.421:232): avc:  denied  { write } for  pid=7771 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3264 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDOSm16-0-
+[  577.231728][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[  577.354684][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[14;25H[0m[30m[42m   openSUSE MicroOS 20240527 (2@6.9.1-1-default)   [14;25H >[15;25H[0m[37m[40m   openSUSE MicroOS 20240527 (1@6.9.1-1-default)   [16;25H                EFI Default Loader                 [17;25H          Reboot Into Firmware Interface           [18;01H                                                                                                    [19;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   10.446625][  T777] systemd-gpt-auto-generator[777]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   10.456323][  T769] (sd-exec-[769]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+ens4: 10.0.2.15 fec0::b5d2:cd0c:e397:3c84
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:41:34 localhost kernel: audit: type=1400 audit(1716882094.256:6): avc:  denied  { map_read map_write } for  pid=775 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:41:34 localhost kernel: audit: type=1400 audit(1716882094.273:7): avc:  denied  { map_read map_write } for  pid=777 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:41:34 localhost kernel: audit: type=1400 audit(1716882094.319:8): avc:  denied  { write } for  pid=777 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=661 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[  126.117232][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[  126.238410][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[14;25H[0m[30m[42m   openSUSE MicroOS 20240527 (3@6.9.1-1-default)   [14;25H >[15;25H[0m[37m[40m   openSUSE MicroOS 20240527 (2@6.9.1-1-default)   [16;25H   openSUSE MicroOS 20240527 (1@6.9.1-1-default)   [17;25H                EFI Default Loader                 [18;25H          Reboot Into Firmware Interface           [19;01H                                                                                                    [20;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   10.815604][  T777] systemd-gpt-auto-generator[777]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   10.819909][  T769] (sd-exec-[769]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fe80::e263:92c6:138e:c5fb
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fec0::8323:2202:8cf4:54e9
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:43:50 localhost kernel: audit: type=1400 audit(1716882229.629:6): avc:  denied  { map_read map_write } for  pid=775 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:43:50 localhost kernel: audit: type=1400 audit(1716882229.646:7): avc:  denied  { map_read map_write } for  pid=777 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:43:50 localhost kernel: audit: type=1400 audit(1716882229.696:8): avc:  denied  { write } for  pid=777 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=657 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   82.019748][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[   82.159977][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[13;25H[0m[30m[42m   openSUSE MicroOS 20240527 (4@6.9.1-1-default)   [13;25H >[14;25H[0m[37m[40m   openSUSE MicroOS 20240527 (3@6.9.1-1-default)   [15;25H   openSUSE MicroOS 20240527 (2@6.9.1-1-default)   [16;25H   openSUSE MicroOS 20240527 (1@6.9.1-1-default)   [17;25H                EFI Default Loader                 [18;25H          Reboot Into Firmware Interface           [19;01H                                                                                                    [20;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   10.433767][  T776] systemd-gpt-auto-generator[776]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   10.443161][  T768] (sd-exec-[768]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fec0::d690:d7ff:929b:51ba
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:45:19 localhost kernel: audit: type=1400 audit(1716882319.239:6): avc:  denied  { map_read map_write } for  pid=774 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:45:19 localhost kernel: audit: type=1400 audit(1716882319.249:7): avc:  denied  { map_read map_write } for  pid=776 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:45:19 localhost kernel: audit: type=1400 audit(1716882319.296:8): avc:  denied  { write } for  pid=776 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=655 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   67.492785][ T1363] systemd-gpt-auto-generator[1363]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   67.861916][ T1391] systemd-gpt-auto-generator[1391]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   68.227408][ T1419] systemd-gpt-auto-generator[1419]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   68.570644][ T1447] systemd-gpt-auto-generator[1447]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   68.937103][ T1474] systemd-gpt-auto-generator[1474]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   69.295181][ T1503] systemd-gpt-auto-generator[1503]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   69.650279][ T1531] systemd-gpt-auto-generator[1531]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   77.089153][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[   77.235502][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[13;25H[0m[30m[42m   openSUSE MicroOS 20240527 (5@6.9.1-1-default)   [13;25H >[14;25H[0m[37m[40m   openSUSE MicroOS 20240527 (4@6.9.1-1-default)   [15;25H   openSUSE MicroOS 20240527 (3@6.9.1-1-default)   [16;25H   openSUSE MicroOS 20240527 (2@6.9.1-1-default)   [17;25H   openSUSE MicroOS 20240527 (1@6.9.1-1-default)   [18;25H                EFI Default Loader                 [19;25H          Reboot Into Firmware Interface           [20;01H                                                                                                    [21;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   10.490371][  T777] systemd-gpt-auto-generator[777]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   10.494619][  T769] (sd-exec-[769]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fe80::e263:92c6:138e:c5fb
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fec0::ef47:3e8a:8f8b:1e39
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:46:48 localhost kernel: audit: type=1400 audit(1716882408.253:6): avc:  denied  { map_read map_write } for  pid=775 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:46:48 localhost kernel: audit: type=1400 audit(1716882408.269:7): avc:  denied  { map_read map_write } for  pid=777 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:46:48 localhost kernel: audit: type=1400 audit(1716882408.319:8): avc:  denied  { write } for  pid=777 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=659 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   74.264159][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[   74.420774][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[12;25H[0m[30m[42m   openSUSE MicroOS 20240527 (6@6.9.1-1-default)   [12;25H >[13;25H[0m[37m[40m   openSUSE MicroOS 20240527 (5@6.9.1-1-default)   [14;25H   openSUSE MicroOS 20240527 (4@6.9.1-1-default)   [15;25H   openSUSE MicroOS 20240527 (3@6.9.1-1-default)   [16;25H   openSUSE MicroOS 20240527 (2@6.9.1-1-default)   [17;25H   openSUSE MicroOS 20240527 (1@6.9.1-1-default)   [18;25H                EFI Default Loader                 [19;25H          Reboot Into Firmware Interface           [20;01H                                                                                                    [21;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   10.412549][  T778] systemd-gpt-auto-generator[778]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   10.416829][  T770] (sd-exec-[770]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fec0::83c7:ac8f:4de:3ca5
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:48:10 localhost kernel: audit: type=1400 audit(1716882490.203:6): avc:  denied  { map_read map_write } for  pid=776 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:48:10 localhost kernel: audit: type=1400 audit(1716882490.206:7): avc:  denied  { map_read map_write } for  pid=778 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:48:10 localhost kernel: audit: type=1400 audit(1716882490.263:8): avc:  denied  { write } for  pid=778 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=661 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   81.839774][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[   81.985715][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[12;25H[0m[30m[42m   openSUSE MicroOS 20240527 (7@6.9.1-1-default)   [12;25H >[13;25H[0m[37m[40m   openSUSE MicroOS 20240527 (6@6.9.1-1-default)   [14;25H   openSUSE MicroOS 20240527 (5@6.9.1-1-default)   [15;25H   openSUSE MicroOS 20240527 (4@6.9.1-1-default)   [16;25H   openSUSE MicroOS 20240527 (3@6.9.1-1-default)   [17;25H   openSUSE MicroOS 20240527 (2@6.9.1-1-default)   [18;25H   openSUSE MicroOS 20240527 (1@6.9.1-1-default)   [19;25H                EFI Default Loader                 [20;25H          Reboot Into Firmware Interface           [21;01H                                                                                                    [22;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   10.396937][  T776] systemd-gpt-auto-generator[776]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   10.401600][  T768] (sd-exec-[768]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fec0::d1d7:7bc9:46d1:c326
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:49:40 localhost kernel: audit: type=1400 audit(1716882580.233:6): avc:  denied  { map_read map_write } for  pid=774 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:49:40 localhost kernel: audit: type=1400 audit(1716882580.239:7): avc:  denied  { map_read map_write } for  pid=776 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:49:40 localhost kernel: audit: type=1400 audit(1716882580.283:8): avc:  denied  { write } for  pid=776 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=669 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   73.978623][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[   74.101609][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[11;25H[0m[30m[42m   openSUSE MicroOS 20240527 (8@6.9.1-1-default)   [11;25H >[12;25H[0m[37m[40m   openSUSE MicroOS 20240527 (7@6.9.1-1-default)   [13;25H   openSUSE MicroOS 20240527 (6@6.9.1-1-default)   [14;25H   openSUSE MicroOS 20240527 (5@6.9.1-1-default)   [15;25H   openSUSE MicroOS 20240527 (4@6.9.1-1-default)   [16;25H   openSUSE MicroOS 20240527 (3@6.9.1-1-default)   [17;25H   openSUSE MicroOS 20240527 (2@6.9.1-1-default)   [18;25H   openSUSE MicroOS 20240527 (1@6.9.1-1-default)   [19;25H                EFI Default Loader                 [20;25H          Reboot Into Firmware Interface           [21;01H                                                                                                    [22;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   10.417451][  T776] systemd-gpt-auto-generator[776]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   10.421632][  T768] (sd-exec-[768]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fec0::89dd:c91:bcdc:794b
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:51:03 localhost kernel: audit: type=1400 audit(1716882663.259:6): avc:  denied  { map_read map_write } for  pid=774 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:51:03 localhost kernel: audit: type=1400 audit(1716882663.266:7): avc:  denied  { map_read map_write } for  pid=776 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:51:03 localhost kernel: audit: type=1400 audit(1716882663.316:8): avc:  denied  { write } for  pid=776 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=661 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   79.296099][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[   79.418151][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[11;25H[0m[30m[42m   openSUSE MicroOS 20240527 (9@6.9.1-1-default)   [11;25H >[12;25H[0m[37m[40m   openSUSE MicroOS 20240527 (8@6.9.1-1-default)   [13;25H   openSUSE MicroOS 20240527 (7@6.9.1-1-default)   [14;25H   openSUSE MicroOS 20240527 (6@6.9.1-1-default)   [15;25H   openSUSE MicroOS 20240527 (5@6.9.1-1-default)   [16;25H   openSUSE MicroOS 20240527 (4@6.9.1-1-default)   [17;25H   openSUSE MicroOS 20240527 (3@6.9.1-1-default)   [18;25H   openSUSE MicroOS 20240527 (2@6.9.1-1-default)   [19;25H   openSUSE MicroOS 20240527 (1@6.9.1-1-default)   [20;25H                EFI Default Loader                 [21;25H          Reboot Into Firmware Interface           [22;01H                                                                                                    [23;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   10.336402][  T778] systemd-gpt-auto-generator[778]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   10.340580][  T770] (sd-exec-[770]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fec0::632d:11b7:c80a:8909
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:52:30 localhost kernel: audit: type=1400 audit(1716882750.116:6): avc:  denied  { map_read map_write } for  pid=776 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:52:30 localhost kernel: audit: type=1400 audit(1716882750.129:7): avc:  denied  { map_read map_write } for  pid=778 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:52:30 localhost kernel: audit: type=1400 audit(1716882750.183:8): avc:  denied  { write } for  pid=778 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=661 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   78.266836][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[   78.393118][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[10;25H[0m[30m[42m   openSUSE MicroOS 20240527 (10@6.9.1-1-default)   [10;25H >[11;25H[0m[37m[40m   openSUSE MicroOS 20240527 (9@6.9.1-1-default)    [12;25H   openSUSE MicroOS 20240527 (8@6.9.1-1-default)    [13;25H   openSUSE MicroOS 20240527 (7@6.9.1-1-default)    [14;25H   openSUSE MicroOS 20240527 (6@6.9.1-1-default)    [15;25H   openSUSE MicroOS 20240527 (5@6.9.1-1-default)    [16;25H   openSUSE MicroOS 20240527 (4@6.9.1-1-default)    [17;25H   openSUSE MicroOS 20240527 (3@6.9.1-1-default)    [18;25H   openSUSE MicroOS 20240527 (2@6.9.1-1-default)    [19;25H   openSUSE MicroOS 20240527 (1@6.9.1-1-default)    [20;25H                 EFI Default Loader                 [21;25H           Reboot Into Firmware Interface           [22;01H                                                                                                    [23;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   10.367991][  T778] systemd-gpt-auto-generator[778]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   10.372092][  T770] (sd-exec-[770]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fec0::62fb:7313:e13f:8436
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:53:58 localhost kernel: audit: type=1400 audit(1716882838.160:6): avc:  denied  { map_read map_write } for  pid=776 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:53:58 localhost kernel: audit: type=1400 audit(1716882838.170:7): avc:  denied  { map_read map_write } for  pid=778 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:53:58 localhost kernel: audit: type=1400 audit(1716882838.230:8): avc:  denied  { write } for  pid=778 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=657 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   83.192911][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[   83.315438][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[10;25H[0m[30m[42m   openSUSE MicroOS 20240527 (11@6.9.1-1-default)   [10;25H >[11;25H[0m[37m[40m   openSUSE MicroOS 20240527 (10@6.9.1-1-default)   [12;25H   openSUSE MicroOS 20240527 (9@6.9.1-1-default)    [13;25H   openSUSE MicroOS 20240527 (8@6.9.1-1-default)    [14;25H   openSUSE MicroOS 20240527 (7@6.9.1-1-default)    [15;25H   openSUSE MicroOS 20240527 (6@6.9.1-1-default)    [16;25H   openSUSE MicroOS 20240527 (5@6.9.1-1-default)    [17;25H   openSUSE MicroOS 20240527 (4@6.9.1-1-default)    [18;25H   openSUSE MicroOS 20240527 (3@6.9.1-1-default)    [19;25H   openSUSE MicroOS 20240527 (2@6.9.1-1-default)    [20;25H   openSUSE MicroOS 20240527 (1@6.9.1-1-default)    [21;25H                 EFI Default Loader                 [22;25H           Reboot Into Firmware Interface           [23;01H                                                                                                    [24;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   11.284760][  T775] systemd-gpt-auto-generator[775]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   11.289423][  T767] (sd-exec-[767]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fec0::2a9f:a219:d89b:a1a5
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:55:30 localhost kernel: audit: type=1400 audit(1716882930.110:6): avc:  denied  { map_read map_write } for  pid=773 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:55:30 localhost kernel: audit: type=1400 audit(1716882930.113:7): avc:  denied  { map_read map_write } for  pid=775 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:55:30 localhost kernel: audit: type=1400 audit(1716882930.173:8): avc:  denied  { write } for  pid=775 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=662 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   84.511864][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[   84.658357][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[09;25H[0m[30m[42m   openSUSE MicroOS 20240527 (12@6.9.1-1-default)   [09;25H >[10;25H[0m[37m[40m   openSUSE MicroOS 20240527 (11@6.9.1-1-default)   [11;25H   openSUSE MicroOS 20240527 (10@6.9.1-1-default)   [12;25H   openSUSE MicroOS 20240527 (9@6.9.1-1-default)    [13;25H   openSUSE MicroOS 20240527 (8@6.9.1-1-default)    [14;25H   openSUSE MicroOS 20240527 (7@6.9.1-1-default)    [15;25H   openSUSE MicroOS 20240527 (6@6.9.1-1-default)    [16;25H   openSUSE MicroOS 20240527 (5@6.9.1-1-default)    [17;25H   openSUSE MicroOS 20240527 (4@6.9.1-1-default)    [18;25H   openSUSE MicroOS 20240527 (3@6.9.1-1-default)    [19;25H   openSUSE MicroOS 20240527 (2@6.9.1-1-default)    [20;25H   openSUSE MicroOS 20240527 (1@6.9.1-1-default)    [21;25H                 EFI Default Loader                 [22;25H           Reboot Into Firmware Interface           [23;01H                                                                                                    [24;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   10.479815][  T784] systemd-gpt-auto-generator[784]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   10.486434][  T776] (sd-exec-[776]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fec0::d086:9cc3:8e5c:1e2c
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:57:07 localhost kernel: audit: type=1400 audit(1716883027.326:6): avc:  denied  { map_read map_write } for  pid=782 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:57:07 localhost kernel: audit: type=1400 audit(1716883027.333:7): avc:  denied  { map_read map_write } for  pid=784 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:57:07 localhost kernel: audit: type=1400 audit(1716883027.389:8): avc:  denied  { write } for  pid=784 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=660 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   85.245315][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[   85.366135][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[08;25H[0m[30m[42m   openSUSE MicroOS 20240527 (14@6.9.1-1-default)   [08;25H >[09;25H[0m[37m[40m   openSUSE MicroOS 20240527 (13@6.9.1-1-default)   [10;25H   openSUSE MicroOS 20240527 (12@6.9.1-1-default)   [11;25H   openSUSE MicroOS 20240527 (11@6.9.1-1-default)   [12;25H   openSUSE MicroOS 20240527 (10@6.9.1-1-default)   [13;25H   openSUSE MicroOS 20240527 (9@6.9.1-1-default)    [14;25H   openSUSE MicroOS 20240527 (8@6.9.1-1-default)    [15;25H   openSUSE MicroOS 20240527 (7@6.9.1-1-default)    [16;25H   openSUSE MicroOS 20240527 (6@6.9.1-1-default)    [17;25H   openSUSE MicroOS 20240527 (5@6.9.1-1-default)    [18;25H   openSUSE MicroOS 20240527 (4@6.9.1-1-default)    [19;25H   openSUSE MicroOS 20240527 (3@6.9.1-1-default)    [20;25H   openSUSE MicroOS 20240527 (2@6.9.1-1-default)    [21;25H   openSUSE MicroOS 20240527 (1@6.9.1-1-default)    [22;25H                 EFI Default Loader                 [23;25H           Reboot Into Firmware Interface           [24;01H                                                                                                    [25;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   10.401899][  T776] systemd-gpt-auto-generator[776]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   10.406148][  T768] (sd-exec-[768]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fec0::2e7f:cd64:6423:a73a
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:58:40 localhost kernel: audit: type=1400 audit(1716883120.209:6): avc:  denied  { map_read map_write } for  pid=774 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:58:40 localhost kernel: audit: type=1400 audit(1716883120.226:7): avc:  denied  { map_read map_write } for  pid=776 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:58:40 localhost kernel: audit: type=1400 audit(1716883120.269:8): avc:  denied  { write } for  pid=776 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=656 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+[   71.155041][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[   71.281726][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[08;25H   openSUSE MicroOS 20240527 (14@6.9.1-1-default)   [09;25H   openSUSE MicroOS 20240527 (13@6.9.1-1-default)   [10;25H   openSUSE MicroOS 20240527 (12@6.9.1-1-default)   [11;25H   openSUSE MicroOS 20240527 (11@6.9.1-1-default)   [12;25H   openSUSE MicroOS 20240527 (10@6.9.1-1-default)   [13;25H[0m[30m[42m   openSUSE MicroOS 20240527 (9@6.9.1-1-default)    [13;25H >[14;25H[0m[37m[40m   openSUSE MicroOS 20240527 (8@6.9.1-1-default)    [15;25H   openSUSE MicroOS 20240527 (7@6.9.1-1-default)    [16;25H   openSUSE MicroOS 20240527 (6@6.9.1-1-default)    [17;25H   openSUSE MicroOS 20240527 (5@6.9.1-1-default)    [18;25H   openSUSE MicroOS 20240527 (4@6.9.1-1-default)    [19;25H   openSUSE MicroOS 20240527 (3@6.9.1-1-default)    [20;25H   openSUSE MicroOS 20240527 (2@6.9.1-1-default)    [21;25H   openSUSE MicroOS 20240527 (1@6.9.1-1-default)    [22;25H                 EFI Default Loader                 [23;25H           Reboot Into Firmware Interface           [24;01H                                                                                                    [25;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   10.280407][  T766] systemd-gpt-auto-generator[766]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   10.284748][  T758] (sd-exec-[758]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fec0::a76f:808d:4fff:fdb2
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 07:59:59 localhost kernel: audit: type=1400 audit(1716883199.109:6): avc:  denied  { map_read map_write } for  pid=764 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:59:59 localhost kernel: audit: type=1400 audit(1716883199.126:7): avc:  denied  { map_read map_write } for  pid=766 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 07:59:59 localhost kernel: audit: type=1400 audit(1716883199.173:8): avc:  denied  { write } for  pid=766 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=659 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+Rfafg-0-
+Wjx7N-0-
+V5ZHC-0-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n reboot ptf install update-test-trivial/update-test-interactive-5.1-1.20.x86_64.rpm
+Separate /var detected.
+2024-05-28 08:01:24 tukit 4.6.8 started
+2024-05-28 08:01:24 Options: -c9 open 
+2024-05-28 08:01:24 Using snapshot 9 as base for new snapshot 15.
+2024-05-28 08:01:24 /var/lib/overlay/9/etc
+2024-05-28 08:01:24 Syncing /etc of previous snapshot 8 as base into new snapshot "/.snapshots/15/snapshot"
+2024-05-28 08:01:24 SELinux is enabled.
+ID: 15
+2024-05-28 08:01:25 Transaction completed.
+Calling zypper install
+2024-05-28 08:01:26 tukit 4.6.8 started
+2024-05-28 08:01:26 Options: callext 15 zypper -R {} install -y --auto-agree-with-product-licenses update-test-trivial/update-test-interactive-5.1-1.20.x86_64.rpm 
+2024-05-28 08:01:27 Executing `zypper -R /tmp/transactional-update-QTi135 install -y --auto-agree-with-product-licenses update-test-trivial/update-test-interactive-5.1-1.20.x86_64.rpm`:
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  update-test-interactive
+
+1 new package to install.
+Overall download size: 9.0 KiB. Already cached: 0 B. After the operation, additional 384.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-interactive-5.1-1.20.x86_64 (Plain RPM files cache) (1/1),   9.0 KiB    
+(1/1) Installing: update-test-interactive-5.1-1.20.x86_64 [..done]
+2024-05-28 08:01:28 Application returned with exit status 0.
+2024-05-28 08:01:28 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 08:01:29 tukit 4.6.8 started
+2024-05-28 08:01:29 Options: close 15 
+2024-05-28 08:01:30 New default snapshot is #15 (/.snapshots/15/snapshot).
+2024-05-28 08:01:30 Transaction completed.
+New default snapshot is #15 (/.snapshots/15/snapshot).
+transactional-update finished
+2024-05-28 08:01:30 tukit 4.6.8 started
+2024-05-28 08:01:30 Options: reboot auto 
+2024-05-28 08:01:30 Requesting reboot using rebootmgr (soft-reboot required).
+2024-05-28 08:01:30 Transaction completed.
+[  103.758907][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[  103.893263][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[08;25H[0m[30m[42m   openSUSE MicroOS 20240527 (15@6.9.1-1-default)   [08;25H >[09;25H[0m[37m[40m   openSUSE MicroOS 20240527 (14@6.9.1-1-default)   [10;25H   openSUSE MicroOS 20240527 (13@6.9.1-1-default)   [11;25H   openSUSE MicroOS 20240527 (12@6.9.1-1-default)   [12;25H   openSUSE MicroOS 20240527 (11@6.9.1-1-default)   [13;25H   openSUSE MicroOS 20240527 (10@6.9.1-1-default)   [14;25H   openSUSE MicroOS 20240527 (9@6.9.1-1-default)    [15;25H   openSUSE MicroOS 20240527 (8@6.9.1-1-default)    [16;25H   openSUSE MicroOS 20240527 (7@6.9.1-1-default)    [17;25H   openSUSE MicroOS 20240527 (6@6.9.1-1-default)    [18;25H   openSUSE MicroOS 20240527 (5@6.9.1-1-default)    [19;25H   openSUSE MicroOS 20240527 (4@6.9.1-1-default)    [20;25H   openSUSE MicroOS 20240527 (3@6.9.1-1-default)    [21;25H   openSUSE MicroOS 20240527 (2@6.9.1-1-default)    [22;25H   openSUSE MicroOS 20240527 (1@6.9.1-1-default)    [23;25H                 EFI Default Loader                 [24;25H           Reboot Into Firmware Interface           [25;01H                                                                                                    [26;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   10.445426][  T776] systemd-gpt-auto-generator[776]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   10.450668][  T768] (sd-exec-[768]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fec0::2284:9646:1514:69d6
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 08:01:52 localhost kernel: audit: type=1400 audit(1716883312.176:6): avc:  denied  { map_read map_write } for  pid=774 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 08:01:52 localhost kernel: audit: type=1400 audit(1716883312.186:7): avc:  denied  { map_read map_write } for  pid=776 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 08:01:52 localhost kernel: audit: type=1400 audit(1716883312.239:8): avc:  denied  { write } for  pid=776 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=661 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+AYrmx-0-
+IUx2x-0-
+3Yf_J-0-
+S1neP
+dead
+SCRIPT_FINISHEDS1neP-0-
+Checking for newer version.
+transactional-update 4.6.8 started
+Options: -n reboot pkg install update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm
+Separate /var detected.
+2024-05-28 08:03:13 tukit 4.6.8 started
+2024-05-28 08:03:13 Options: -c15 open 
+2024-05-28 08:03:13 Using snapshot 15 as base for new snapshot 16.
+2024-05-28 08:03:13 /var/lib/overlay/15/etc
+2024-05-28 08:03:13 Syncing /etc of previous snapshot 9 as base into new snapshot "/.snapshots/16/snapshot"
+2024-05-28 08:03:13 SELinux is enabled.
+ID: 16
+2024-05-28 08:03:14 Transaction completed.
+Calling zypper install
+2024-05-28 08:03:16 tukit 4.6.8 started
+2024-05-28 08:03:16 Options: callext 16 zypper -R {} install -y --auto-agree-with-product-licenses update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm 
+2024-05-28 08:03:16 Executing `zypper -R /tmp/transactional-update-KLt6Pk install -y --auto-agree-with-product-licenses update-test-trivial/update-test-feature-5.1-1.20.x86_64.rpm`:
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  update-test-feature
+
+1 new package to install.
+Overall download size: 8.9 KiB. Already cached: 0 B. After the operation, additional 329.0 B will be used.
+
+Backend:  classic_rpmtrans
+Continue? [y/n/v/...? shows all options] (y): y
+
+Checking for file conflicts: [...done]
+Warning: 1 package had to be excluded from file conflicts check because it is not yet download.
+
+    Note: Checking for file conflicts requires not installed packages to be downloaded in advance in
+    order to access their file lists. See option '--download-in-advance / --dry-run --download-only'
+    in the zypper manual page for details.
+
+Retrieving: update-test-feature-5.1-1.20.x86_64 (Plain RPM files cache) (1/1),   8.9 KiB    
+(1/1) Installing: update-test-feature-5.1-1.20.x86_64 [..done]
+2024-05-28 08:03:17 Application returned with exit status 0.
+2024-05-28 08:03:17 Transaction completed.
+Trying to rebuild kdump initrd
+2024-05-28 08:03:18 tukit 4.6.8 started
+2024-05-28 08:03:18 Options: close 16 
+2024-05-28 08:03:19 New default snapshot is #16 (/.snapshots/16/snapshot).
+2024-05-28 08:03:19 Transaction completed.
+New default snapshot is #16 (/.snapshots/16/snapshot).
+transactional-update finished
+2024-05-28 08:03:19 tukit 4.6.8 started
+2024-05-28 08:03:19 Options: reboot auto 
+2024-05-28 08:03:19 Requesting reboot using rebootmgr (soft-reboot required).
+2024-05-28 08:03:19 Transaction completed.
+[   99.857029][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[  100.005688][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[07;25H[0m[30m[42m   openSUSE MicroOS 20240527 (16@6.9.1-1-default)   [07;25H >[08;25H[0m[37m[40m   openSUSE MicroOS 20240527 (15@6.9.1-1-default)   [09;25H   openSUSE MicroOS 20240527 (14@6.9.1-1-default)   [10;25H   openSUSE MicroOS 20240527 (13@6.9.1-1-default)   [11;25H   openSUSE MicroOS 20240527 (12@6.9.1-1-default)   [12;25H   openSUSE MicroOS 20240527 (11@6.9.1-1-default)   [13;25H   openSUSE MicroOS 20240527 (10@6.9.1-1-default)   [14;25H   openSUSE MicroOS 20240527 (9@6.9.1-1-default)    [15;25H   openSUSE MicroOS 20240527 (8@6.9.1-1-default)    [16;25H   openSUSE MicroOS 20240527 (7@6.9.1-1-default)    [17;25H   openSUSE MicroOS 20240527 (6@6.9.1-1-default)    [18;25H   openSUSE MicroOS 20240527 (5@6.9.1-1-default)    [19;25H   openSUSE MicroOS 20240527 (4@6.9.1-1-default)    [20;25H   openSUSE MicroOS 20240527 (3@6.9.1-1-default)    [21;25H   openSUSE MicroOS 20240527 (2@6.9.1-1-default)    [22;25H   openSUSE MicroOS 20240527 (1@6.9.1-1-default)    [23;25H                 EFI Default Loader                 [24;25H           Reboot Into Firmware Interface           [25;01H                                                                                                    [26;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   10.358892][  T775] systemd-gpt-auto-generator[775]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   10.366973][  T767] (sd-exec-[767]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fe80::e263:92c6:138e:c5fb
+
+
+localhost login: 
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fec0::1b94:79b3:ba8c:f563
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 08:03:42 localhost kernel: audit: type=1400 audit(1716883422.156:6): avc:  denied  { map_read map_write } for  pid=773 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 08:03:42 localhost kernel: audit: type=1400 audit(1716883422.169:7): avc:  denied  { map_read map_write } for  pid=775 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 08:03:42 localhost kernel: audit: type=1400 audit(1716883422.219:8): avc:  denied  { write } for  pid=775 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=659 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+aGmca-0-
+drbpC-0-
+~YF5G-2-
+[  237.033854][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[  237.158640][    T1] reboot: Restarting system
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01HBdsDxe: loading Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+BdsDxe: starting Boot0002 "openSUSE Boot Manager" from HD(2,GPT,5E7C98BA-D6F6-495B-AE14-D82B239D4937,0x1800,0xFA000)/\EFI\systemd\shim.efi
+ [2J[01;01H[07;25H[0m[30m[42m   openSUSE MicroOS 20240527 (16@6.9.1-1-default)   [07;25H >[08;25H[0m[37m[40m   openSUSE MicroOS 20240527 (15@6.9.1-1-default)   [09;25H   openSUSE MicroOS 20240527 (14@6.9.1-1-default)   [10;25H   openSUSE MicroOS 20240527 (13@6.9.1-1-default)   [11;25H   openSUSE MicroOS 20240527 (12@6.9.1-1-default)   [12;25H   openSUSE MicroOS 20240527 (11@6.9.1-1-default)   [13;25H   openSUSE MicroOS 20240527 (10@6.9.1-1-default)   [14;25H   openSUSE MicroOS 20240527 (9@6.9.1-1-default)    [15;25H   openSUSE MicroOS 20240527 (8@6.9.1-1-default)    [16;25H   openSUSE MicroOS 20240527 (7@6.9.1-1-default)    [17;25H   openSUSE MicroOS 20240527 (6@6.9.1-1-default)    [18;25H   openSUSE MicroOS 20240527 (5@6.9.1-1-default)    [19;25H   openSUSE MicroOS 20240527 (4@6.9.1-1-default)    [20;25H   openSUSE MicroOS 20240527 (3@6.9.1-1-default)    [21;25H   openSUSE MicroOS 20240527 (2@6.9.1-1-default)    [22;25H   openSUSE MicroOS 20240527 (1@6.9.1-1-default)    [23;25H                 EFI Default Loader                 [24;25H           Reboot Into Firmware Interface           [25;01H                                                                                                    [26;01H                                                                                                   [2J[01;01H[0;1;39mPlease enter passphrase or recovery key for disk p.lxroot (cr_root): (press TAB for no echo) [0m
+[   10.367922][  T765] systemd-gpt-auto-generator[765]: Failed to create symlink "/run/systemd/generator.late/local-fs.target.wants/systemd-remount-fs.service": No such file or directory
+[   10.377990][  T757] (sd-exec-[757]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator failed with exit status 1.
+
+
+Welcome to openSUSE MicroOS (x86_64) - Kernel 6.9.1-1-default (ttyS0).
+
+SSH host key: SHA256:qqfcmc8ochA7H3GQd3zu1oFpHVGO4EAG3U4MB5lcDJM (ECDSA)
+SSH host key: SHA256:2VTmG+yRt7Gqe6ypt6puwEBnFIPOmVlulWdK3YGRz6Q (ED25519)
+SSH host key: SHA256:GxswKat+2XFoCoIT+4x5klRIHvwpmoxK7V4TZuSvGPM (RSA)
+ens4: 10.0.2.15 fec0::c38a:a8ab:cc4c:9524
+
+
+localhost login: YpuUt-0-
+cqMh2-0-
+EKjwm
+May 28 08:07:49 localhost kernel: audit: type=1400 audit(1716883669.186:6): avc:  denied  { map_read map_write } for  pid=763 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 08:07:49 localhost kernel: audit: type=1400 audit(1716883669.200:7): avc:  denied  { map_read map_write } for  pid=765 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+May 28 08:07:49 localhost kernel: audit: type=1400 audit(1716883669.240:8): avc:  denied  { write } for  pid=765 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=657 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDEKjwm-0-
+W19Lw-0-
+drbpC-0-
+~YF5G-2-
+PL5Gk-0-
+~YF5G-0-
+UfVk_-0-
+OSm16
+type=AVC msg=audit(1716881649.847:175): avc:  denied  { map_read map_write } for  pid=7655 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.850:176): avc:  denied  { map_read map_write } for  pid=7657 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881649.890:177): avc:  denied  { write } for  pid=7657 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3181 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+type=AVC msg=audit(1716881750.374:230): avc:  denied  { map_read map_write } for  pid=7769 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.384:231): avc:  denied  { map_read map_write } for  pid=7771 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716881750.421:232): avc:  denied  { write } for  pid=7771 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=3264 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+type=AVC msg=audit(1716882375.290:126): avc:  denied  { map_read map_write } for  pid=1360 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882375.297:127): avc:  denied  { map_read map_write } for  pid=1363 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882375.334:128): avc:  denied  { write } for  pid=1363 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=1578 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+type=AVC msg=audit(1716882375.660:161): avc:  denied  { map_read map_write } for  pid=1388 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882375.670:162): avc:  denied  { map_read map_write } for  pid=1391 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882375.697:163): avc:  denied  { write } for  pid=1391 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=1614 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+type=AVC msg=audit(1716882376.027:184): avc:  denied  { map_read map_write } for  pid=1416 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882376.034:185): avc:  denied  { map_read map_write } for  pid=1419 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882376.067:186): avc:  denied  { write } for  pid=1419 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=1650 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+type=AVC msg=audit(1716882376.370:207): avc:  denied  { map_read map_write } for  pid=1444 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882376.377:208): avc:  denied  { map_read map_write } for  pid=1447 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882376.407:209): avc:  denied  { write } for  pid=1447 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=1686 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+type=AVC msg=audit(1716882376.737:230): avc:  denied  { map_read map_write } for  pid=1472 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882376.747:231): avc:  denied  { map_read map_write } for  pid=1474 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882376.777:232): avc:  denied  { write } for  pid=1474 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=1722 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+type=AVC msg=audit(1716882377.094:253): avc:  denied  { map_read map_write } for  pid=1500 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882377.107:254): avc:  denied  { map_read map_write } for  pid=1503 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882377.134:255): avc:  denied  { write } for  pid=1503 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=1760 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+type=AVC msg=audit(1716882377.450:276): avc:  denied  { map_read map_write } for  pid=1528 comm="systemd-fstab-g" scontext=system_u:system_r:systemd_fstab_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882377.457:277): avc:  denied  { map_read map_write } for  pid=1531 comm="systemd-gpt-aut" scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=bpf permissive=0
+type=AVC msg=audit(1716882377.490:278): avc:  denied  { write } for  pid=1531 comm="systemd-gpt-aut" name="generator.late" dev="tmpfs" ino=1796 scontext=system_u:system_r:systemd_gpt_generator_t:s0 tcontext=system_u:object_r:init_var_run_t:s0 tclass=dir permissive=0
+SCRIPT_FINISHEDOSm16-0-
+IblXB-0-
+[  388.718149][    T1] systemd-shutdown[1]: Unable to finalize remaining DM devices, ignoring.
+[  388.875378][    T1] reboot: Power down

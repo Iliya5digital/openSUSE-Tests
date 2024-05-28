@@ -1,0 +1,31 @@
+
+Welcome to openSUSE Tumbleweed 20240527 - Kernel 6.9.1-1-default (hvc0).
+
+ens4: 10.0.2.15 fe80::5054:ff:fe12:3456
+
+
+localhost login: 
+Welcome to openSUSE Tumbleweed 20240527 - Kernel 6.9.1-1-default (hvc0).
+
+ens4: 10.0.2.15 fec0::b2ca:b0b9:2da:4da5
+
+
+localhost login: 
+Welcome to openSUSE Tumbleweed 20240527 - Kernel 6.9.1-1-default (hvc0).
+
+ens4:  
+
+
+susetest login: 
+Welcome to openSUSE Tumbleweed 20240527 - Kernel 6.9.1-1-default (hvc0).
+
+ens4: 10.0.2.15 fe80::5054:ff:fe12:3456
+
+
+susetest login: 
+Welcome to openSUSE Tumbleweed 20240527 - Kernel 6.9.1-1-default (hvc0).
+
+ens4: 10.0.2.15 fec0::8ffc:7d8:72e7:bca2
+
+
+susetest login: 

@@ -1,0 +1,58 @@
+● localhost.localdomain
+    State: running
+    Units: 377 loaded (incl. loaded aliases)
+     Jobs: 0 queued
+   Failed: 0 units
+    Since: Tue 2024-05-28 08:01:12 UTC; 1min 31s ago
+  systemd: 255.6+suse.30.g3ea0e1dff3
+   CGroup: /
+           ├─init.scope
+           │ └─1 /usr/lib/systemd/systemd --switched-root --system --deserialize=36
+           ├─system.slice
+           │ ├─ModemManager.service
+           │ │ └─930 /usr/sbin/ModemManager
+           │ ├─NetworkManager.service
+           │ │ └─868 /usr/sbin/NetworkManager --no-daemon
+           │ ├─auditd.service
+           │ │ └─837 /sbin/auditd
+           │ ├─chronyd.service
+           │ │ └─993 /usr/sbin/chronyd
+           │ ├─dbus.service
+           │ │ └─842 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+           │ ├─polkit.service
+           │ │ └─849 /usr/libexec/polkit-1/polkitd --no-debug
+           │ ├─rebootmgr.service
+           │ │ └─873 /usr/sbin/rebootmgrd --verbose
+           │ ├─sshd.service
+           │ │ └─977 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+           │ ├─system-getty.slice
+           │ │ └─getty@tty1.service
+           │ │   └─1047 /sbin/agetty -o "-p -- \\u" --noclear - linux
+           │ ├─system-serial\x2dgetty.slice
+           │ │ ├─serial-getty@hvc1.service
+           │ │ │ └─1051 /sbin/agetty -o "-p -- \\u" --keep-baud 115200,57600,38400,9600 - vt220
+           │ │ └─serial-getty@ttyS0.service
+           │ │   └─1053 /sbin/agetty -o "-p -- \\u" --keep-baud 115200,57600,38400,9600 - vt220
+           │ ├─systemd-hostnamed.service
+           │ │ └─1293 /usr/lib/systemd/systemd-hostnamed
+           │ ├─systemd-journald.service
+           │ │ └─691 /usr/lib/systemd/systemd-journald
+           │ ├─systemd-logind.service
+           │ │ └─859 /usr/lib/systemd/systemd-logind
+           │ └─systemd-udevd.service
+           │   └─udev
+           │     └─735 /usr/lib/systemd/systemd-udevd
+           └─user.slice
+             └─user-0.slice
+               ├─session-1.scope
+               │ ├─1122 "login -- root"
+               │ └─1140 -bash
+               ├─session-3.scope
+               │ ├─ 1049 "login -- root"
+               │ ├─ 1196 /bin/bash
+               │ ├─13596 systemctl status
+               │ └─13597 tee /tmp/systemctl_status.log
+               └─user@0.service
+                 └─init.scope
+                   ├─1129 /usr/lib/systemd/systemd --user
+                   └─1131 "(sd-pam)"

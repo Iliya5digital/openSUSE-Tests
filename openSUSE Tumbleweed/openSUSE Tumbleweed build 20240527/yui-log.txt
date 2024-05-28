@@ -1,0 +1,597 @@
+[37m[2024-05-28T07:01:16.944427Z] [debug] [pid:29888] Check connection to the app by url: http://localhost:39116/v1/widgets
+[0m[34m[2024-05-28T07:02:23.664624Z] [info] [pid:29888] accept_license test module started
+[0m[37m[2024-05-28T07:02:23.665394Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22CWM%3A%3ARichText%22
+[0m[1;31m[2024-05-28T07:02:24.668632Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=%22CWM%3A%3ARichText%22
+[0m[37m[2024-05-28T07:02:26.674074Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:02:27.676755Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[34m[2024-05-28T07:02:28.727744Z] [info] [pid:29888] accept_license test module finished
+[0m[34m[2024-05-28T07:02:28.729427Z] [info] [pid:29888] disable_online_repos test module started
+[0m[37m[2024-05-28T07:02:28.729790Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=yes
+[0m[1;31m[2024-05-28T07:02:29.732111Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=yes
+[0m[37m[2024-05-28T07:02:31.735898Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets
+[0m[37m[2024-05-28T07:02:32.740048Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=no
+[0m[34m[2024-05-28T07:02:33.788916Z] [info] [pid:29888] disable_online_repos test module finished
+[0m[34m[2024-05-28T07:02:33.790732Z] [info] [pid:29888] installation_mode test module started
+[0m[34m[2024-05-28T07:02:34.926570Z] [info] [pid:29888] installation_mode test module finished
+[0m[34m[2024-05-28T07:02:34.928177Z] [info] [pid:29888] logpackages test module started
+[0m[34m[2024-05-28T07:02:51.888880Z] [info] [pid:29888] logpackages test module finished
+[0m[34m[2024-05-28T07:02:51.898108Z] [info] [pid:29888] select_role_generic_desktop test module started
+[0m[37m[2024-05-28T07:02:51.898514Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=role_selector
+[0m[37m[2024-05-28T07:02:52.902244Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=role_selector
+[0m[37m[2024-05-28T07:02:53.905376Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=role_selector&value=%26Generic+Desktop
+[0m[37m[2024-05-28T07:02:54.908066Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=role_selector
+[0m[37m[2024-05-28T07:02:55.911383Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:02:56.913854Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[34m[2024-05-28T07:02:57.963674Z] [info] [pid:29888] select_role_generic_desktop test module finished
+[0m[34m[2024-05-28T07:02:57.965402Z] [info] [pid:29888] raid_gpt test module started
+[0m[37m[2024-05-28T07:03:00.662695Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:03:01.666234Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22
+[0m[37m[2024-05-28T07:03:02.669383Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22&value=Hard+Disks%7Cvda
+[0m[37m[2024-05-28T07:03:03.672490Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3AConfigurableBlkDevicesTable%22&row=0
+[0m[37m[2024-05-28T07:03:04.675673Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:03:05.679185Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=%22Y2Partitioner%3A%3AWidgets%3A%3APartitionAddButton%22
+[0m[37m[2024-05-28T07:03:06.682930Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=custom_size
+[0m[37m[2024-05-28T07:03:07.685726Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=custom_size
+[0m[37m[2024-05-28T07:03:08.688806Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=enter_text&id=%22Y2Partitioner%3A%3ADialogs%3A%3APartitionSize%3A%3ACustomSizeInput%22&value=2mb
+[0m[37m[2024-05-28T07:03:09.692544Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:03:10.695169Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:03:11.698574Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=raw
+[0m[37m[2024-05-28T07:03:12.702658Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:03:13.705514Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:03:14.709039Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3APartitionIdComboBox%22&value=BIOS+Boot+Partition
+[0m[37m[2024-05-28T07:03:15.712405Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:03:16.715227Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:03:17.718992Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:03:18.722273Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22
+[0m[37m[2024-05-28T07:03:19.725877Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22&value=Hard+Disks%7Cvda
+[0m[37m[2024-05-28T07:03:20.729324Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3AConfigurableBlkDevicesTable%22&row=0
+[0m[37m[2024-05-28T07:03:21.732686Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:03:22.735556Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=%22Y2Partitioner%3A%3AWidgets%3A%3APartitionAddButton%22
+[0m[37m[2024-05-28T07:03:23.738611Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=custom_size
+[0m[37m[2024-05-28T07:03:24.741442Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=custom_size
+[0m[37m[2024-05-28T07:03:25.744903Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=enter_text&id=%22Y2Partitioner%3A%3ADialogs%3A%3APartitionSize%3A%3ACustomSizeInput%22&value=8000mb
+[0m[37m[2024-05-28T07:03:26.748901Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:03:27.752090Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:03:28.756914Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=raw
+[0m[37m[2024-05-28T07:03:29.760631Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:03:30.763749Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:03:31.768098Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3APartitionIdComboBox%22&value=Linux+RAID
+[0m[37m[2024-05-28T07:03:32.771348Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:03:33.774705Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:03:34.778804Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:03:35.782842Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22
+[0m[37m[2024-05-28T07:03:36.786707Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22&value=Hard+Disks%7Cvda
+[0m[37m[2024-05-28T07:03:37.790627Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3AConfigurableBlkDevicesTable%22&row=0
+[0m[37m[2024-05-28T07:03:38.793657Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:03:39.797537Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=%22Y2Partitioner%3A%3AWidgets%3A%3APartitionAddButton%22
+[0m[37m[2024-05-28T07:03:40.801971Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=custom_size
+[0m[37m[2024-05-28T07:03:41.805762Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=custom_size
+[0m[37m[2024-05-28T07:03:42.810258Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=enter_text&id=%22Y2Partitioner%3A%3ADialogs%3A%3APartitionSize%3A%3ACustomSizeInput%22&value=100mb
+[0m[37m[2024-05-28T07:03:43.815144Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:03:44.818921Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:03:45.824060Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=raw
+[0m[37m[2024-05-28T07:03:46.828809Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:03:47.832630Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:03:48.837548Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3APartitionIdComboBox%22&value=Linux+RAID
+[0m[37m[2024-05-28T07:03:49.842291Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:03:50.845377Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:03:51.848510Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:03:52.851285Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22
+[0m[37m[2024-05-28T07:03:53.853622Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22
+[0m[37m[2024-05-28T07:03:54.856084Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22&value=Hard+Disks%7Cvda
+[0m[37m[2024-05-28T07:03:55.858208Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3AConfigurableBlkDevicesTable%22&row=0
+[0m[37m[2024-05-28T07:03:56.861616Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3AConfigurableBlkDevicesTable%22&row=0
+[0m[37m[2024-05-28T07:03:58.401967Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=menu_bar&value=%26Device%7C%26Clone+Partitions+to+Another+Device...
+[0m[37m[2024-05-28T07:03:59.404895Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22Y2Partitioner%3A%3ADialogs%3A%3APartitionTableClone%3A%3ADevicesSelector%22
+[0m[37m[2024-05-28T07:04:00.407684Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=check&id=%22Y2Partitioner%3A%3ADialogs%3A%3APartitionTableClone%3A%3ADevicesSelector%22&value=%2Fdev%2Fvdb+%2820.00+GiB%29
+[0m[37m[2024-05-28T07:04:01.410590Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=check&id=%22Y2Partitioner%3A%3ADialogs%3A%3APartitionTableClone%3A%3ADevicesSelector%22&value=%2Fdev%2Fvdc+%2820.00+GiB%29
+[0m[37m[2024-05-28T07:04:02.413365Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=check&id=%22Y2Partitioner%3A%3ADialogs%3A%3APartitionTableClone%3A%3ADevicesSelector%22&value=%2Fdev%2Fvdd+%2820.00+GiB%29
+[0m[37m[2024-05-28T07:04:03.416578Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=ok
+[0m[37m[2024-05-28T07:04:04.419758Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:04:05.423160Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22
+[0m[37m[2024-05-28T07:04:06.426276Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22&value=RAID
+[0m[37m[2024-05-28T07:04:07.428770Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:04:08.431626Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=%22Y2Partitioner%3A%3AWidgets%3A%3AMdAddButton%22
+[0m[37m[2024-05-28T07:04:09.434379Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=raid0
+[0m[37m[2024-05-28T07:04:10.437553Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=raid0
+[0m[37m[2024-05-28T07:04:11.440066Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=raid0
+[0m[37m[2024-05-28T07:04:12.442999Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22unselected%22
+[0m[37m[2024-05-28T07:04:13.446484Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22unselected%22&value=%2Fdev%2Fvda2
+[0m[37m[2024-05-28T07:04:14.449022Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=add
+[0m[37m[2024-05-28T07:04:15.452175Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:04:16.455567Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:04:17.458730Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22unselected%22
+[0m[37m[2024-05-28T07:04:18.462295Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22unselected%22&value=%2Fdev%2Fvdb2
+[0m[37m[2024-05-28T07:04:19.465104Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=add
+[0m[37m[2024-05-28T07:04:20.468350Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:04:21.471394Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:04:22.474426Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22unselected%22
+[0m[37m[2024-05-28T07:04:23.478042Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22unselected%22&value=%2Fdev%2Fvdc2
+[0m[37m[2024-05-28T07:04:24.480770Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=add
+[0m[37m[2024-05-28T07:04:25.483565Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:04:26.486538Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:04:27.489565Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22unselected%22
+[0m[37m[2024-05-28T07:04:28.493211Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22unselected%22&value=%2Fdev%2Fvdd2
+[0m[37m[2024-05-28T07:04:29.496070Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=add
+[0m[37m[2024-05-28T07:04:30.498850Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:04:31.502537Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:04:32.505924Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:04:33.509449Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:04:34.513880Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3ADialogs%3A%3AMdOptions%3A%3AChunkSize%22&value=64+KiB
+[0m[37m[2024-05-28T07:04:35.517061Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:04:36.519903Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:04:37.523634Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:04:38.526896Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22
+[0m[37m[2024-05-28T07:04:39.529917Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22&value=RAID
+[0m[37m[2024-05-28T07:04:40.533723Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:04:41.537133Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=%22Y2Partitioner%3A%3AWidgets%3A%3APartitionAddButton%22
+[0m[37m[2024-05-28T07:04:42.540369Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:04:43.542829Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:04:44.546332Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=system
+[0m[37m[2024-05-28T07:04:45.549551Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:04:46.552026Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:04:47.555865Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=format_device
+[0m[37m[2024-05-28T07:04:48.558686Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22Y2Partitioner%3A%3AWidgets%3A%3ABlkDeviceFilesystem%22
+[0m[37m[2024-05-28T07:04:49.561624Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=mount_device
+[0m[37m[2024-05-28T07:04:50.565066Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:04:51.567796Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:04:52.572449Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:04:53.575473Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22
+[0m[37m[2024-05-28T07:04:54.578515Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22&value=RAID
+[0m[37m[2024-05-28T07:04:55.581534Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:04:56.584689Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=%22Y2Partitioner%3A%3AWidgets%3A%3AMdAddButton%22
+[0m[37m[2024-05-28T07:04:57.588009Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=raid0
+[0m[37m[2024-05-28T07:04:58.591457Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=raid0
+[0m[37m[2024-05-28T07:04:59.594745Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=raid0
+[0m[37m[2024-05-28T07:05:00.598634Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22unselected%22
+[0m[37m[2024-05-28T07:05:01.602362Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22unselected%22&value=%2Fdev%2Fvda3
+[0m[37m[2024-05-28T07:05:02.605674Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=add
+[0m[37m[2024-05-28T07:05:03.608755Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:05:04.612196Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:05:05.615431Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22unselected%22
+[0m[37m[2024-05-28T07:05:06.619489Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22unselected%22&value=%2Fdev%2Fvdb3
+[0m[37m[2024-05-28T07:05:07.622153Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=add
+[0m[37m[2024-05-28T07:05:08.625904Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:05:09.628891Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:05:10.631562Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22unselected%22
+[0m[37m[2024-05-28T07:05:11.635733Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22unselected%22&value=%2Fdev%2Fvdc3
+[0m[37m[2024-05-28T07:05:12.639211Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=add
+[0m[37m[2024-05-28T07:05:13.642431Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:05:14.645769Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:05:15.649249Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22unselected%22
+[0m[37m[2024-05-28T07:05:16.652894Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22unselected%22&value=%2Fdev%2Fvdd3
+[0m[37m[2024-05-28T07:05:17.656141Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=add
+[0m[37m[2024-05-28T07:05:18.659053Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:05:19.662574Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22selected%22
+[0m[37m[2024-05-28T07:05:20.666661Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:05:21.669659Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:05:22.674818Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3ADialogs%3A%3AMdOptions%3A%3AChunkSize%22&value=64+KiB
+[0m[37m[2024-05-28T07:05:23.678642Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:05:24.681271Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:05:25.685281Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:05:26.689162Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22
+[0m[37m[2024-05-28T07:05:27.693121Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3AOverviewTree%22&value=RAID
+[0m[37m[2024-05-28T07:05:28.696168Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:05:29.699246Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=%22Y2Partitioner%3A%3AWidgets%3A%3APartitionAddButton%22
+[0m[37m[2024-05-28T07:05:30.702981Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:05:31.705916Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:05:32.709645Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=swap
+[0m[37m[2024-05-28T07:05:33.713669Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:05:34.716728Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:05:35.722462Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=format_device
+[0m[37m[2024-05-28T07:05:36.725351Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22Y2Partitioner%3A%3AWidgets%3A%3ABlkDeviceFilesystem%22
+[0m[37m[2024-05-28T07:05:37.728293Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22Y2Partitioner%3A%3AWidgets%3A%3ABlkDeviceFilesystem%22&value=Swap
+[0m[37m[2024-05-28T07:05:38.731249Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=mount_device
+[0m[37m[2024-05-28T07:05:39.735126Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:05:40.738008Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:05:41.742023Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=menu_bar
+[0m[37m[2024-05-28T07:05:42.745561Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?label=Accept
+[0m[37m[2024-05-28T07:05:43.749137Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&label=Accept
+[0m[34m[2024-05-28T07:05:46.217165Z] [info] [pid:29888] raid_gpt test module finished
+[0m[34m[2024-05-28T07:05:46.219037Z] [info] [pid:29888] accept_timezone_configuration test module started
+[0m[37m[2024-05-28T07:05:46.219421Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=timezone
+[0m[1;31m[2024-05-28T07:05:47.221938Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=timezone
+[0m[1;31m[2024-05-28T07:05:49.225712Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=timezone
+[0m[1;31m[2024-05-28T07:05:51.229917Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=timezone
+[0m[37m[2024-05-28T07:05:53.235319Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:05:54.238708Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[34m[2024-05-28T07:05:55.307941Z] [info] [pid:29888] accept_timezone_configuration test module finished
+[0m[34m[2024-05-28T07:05:55.309823Z] [info] [pid:29888] disable_autologin test module started
+[0m[37m[2024-05-28T07:05:55.310296Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=full_name
+[0m[37m[2024-05-28T07:05:56.376895Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=uncheck&id=autologin
+[0m[37m[2024-05-28T07:05:57.380602Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=full_name
+[0m[37m[2024-05-28T07:05:58.426735Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=autologin
+[0m[34m[2024-05-28T07:05:59.478810Z] [info] [pid:29888] disable_autologin test module finished
+[0m[34m[2024-05-28T07:05:59.480469Z] [info] [pid:29888] default_user_simple_pwd test module started
+[0m[37m[2024-05-28T07:05:59.480870Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=full_name
+[0m[37m[2024-05-28T07:06:00.540954Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=enter_text&id=full_name&value=Bernhard+M.+Wiedemann
+[0m[37m[2024-05-28T07:06:01.545003Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=full_name
+[0m[37m[2024-05-28T07:06:02.599835Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=enter_text&id=pw1&value=nots3cr3t
+[0m[37m[2024-05-28T07:06:03.602904Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=full_name
+[0m[37m[2024-05-28T07:06:04.654191Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=enter_text&id=pw2&value=nots3cr3t
+[0m[37m[2024-05-28T07:06:05.659015Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:06:06.662458Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[37m[2024-05-28T07:06:07.666038Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=yes
+[0m[37m[2024-05-28T07:06:08.669146Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?type=YLabel
+[0m[37m[2024-05-28T07:06:09.672748Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=yes
+[0m[34m[2024-05-28T07:06:10.727422Z] [info] [pid:29888] default_user_simple_pwd test module finished
+[0m[34m[2024-05-28T07:06:10.729124Z] [info] [pid:29888] installation_overview test module started
+[0m[34m[2024-05-28T07:06:11.921111Z] [info] [pid:29888] installation_overview test module finished
+[0m[34m[2024-05-28T07:06:11.922874Z] [info] [pid:29888] disable_boot_menu_timeout test module started
+[0m[37m[2024-05-28T07:06:11.923681Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=proposal
+[0m[37m[2024-05-28T07:06:12.926962Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=proposal&value=bootloader_stuff
+[0m[37m[2024-05-28T07:06:13.931050Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets
+[0m[37m[2024-05-28T07:06:14.935781Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22Bootloader%3A%3ALoaderTypeWidget%22
+[0m[37m[2024-05-28T07:06:15.939775Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22CWM%3A%3ADumbTabPager%22
+[0m[37m[2024-05-28T07:06:16.943424Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=select&id=%22CWM%3A%3ADumbTabPager%22&value=Boo%26tloader+Options
+[0m[37m[2024-05-28T07:06:17.947292Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets
+[0m[37m[2024-05-28T07:06:18.952109Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22Bootloader%3A%3AGrub2Widget%3A%3ATimeoutWidget%22
+[0m[37m[2024-05-28T07:06:19.956558Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=enter_text&id=%22Bootloader%3A%3AGrub2Widget%3A%3ATimeoutWidget%22&value=-1
+[0m[37m[2024-05-28T07:06:20.959830Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=%22Bootloader%3A%3AGrub2Widget%3A%3ATimeoutWidget%22
+[0m[37m[2024-05-28T07:06:21.962950Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=next
+[0m[37m[2024-05-28T07:06:22.965316Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[34m[2024-05-28T07:06:24.009826Z] [info] [pid:29888] disable_boot_menu_timeout test module finished
+[0m[34m[2024-05-28T07:06:24.011582Z] [info] [pid:29888] launch_installation test module started
+[0m[37m[2024-05-28T07:06:24.012308Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=proposal
+[0m[37m[2024-05-28T07:06:25.015428Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=next
+[0m[34m[2024-05-28T07:06:26.076352Z] [info] [pid:29888] launch_installation test module finished
+[0m[34m[2024-05-28T07:06:26.078023Z] [info] [pid:29888] confirm_installation test module started
+[0m[37m[2024-05-28T07:06:26.078368Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:06:27.081546Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?type=YRichText
+[0m[37m[2024-05-28T07:06:28.084282Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=ok
+[0m[34m[2024-05-28T07:06:29.134104Z] [info] [pid:29888] confirm_installation test module finished
+[0m[34m[2024-05-28T07:06:29.135945Z] [info] [pid:29888] perform_installation test module started
+[0m[37m[2024-05-28T07:06:29.136407Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=progressTotal
+[0m[37m[2024-05-28T07:06:30.192187Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:06:30.194115Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:06:32.197659Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:06:32.200327Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:06:34.203786Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:06:34.208862Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:06:36.211677Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:06:36.217385Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:06:38.220238Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:06:38.222644Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:06:40.225459Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:06:40.227344Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:06:42.230734Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:06:42.233188Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:06:44.236039Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:06:44.238985Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:06:46.241846Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:06:46.243823Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:06:48.247019Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:06:48.248941Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:06:50.252180Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:06:50.256066Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:06:52.259036Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:06:52.260890Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:06:54.264099Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:06:54.266398Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:06:56.271209Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:06:56.273261Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:06:58.276578Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:06:58.279185Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:00.283892Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:00.287866Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:02.291983Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:02.293644Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:04.296800Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:04.299110Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:06.302445Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:06.305096Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:08.309323Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:08.311118Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:10.314280Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:10.316047Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:12.319483Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:12.321471Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:14.324791Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:14.326580Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:16.329938Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:16.331733Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:18.334947Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:18.337116Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:20.340406Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:20.343257Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:22.346346Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:22.348468Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:24.351943Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:24.353634Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:26.356516Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:26.359021Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:28.362313Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:28.367401Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:30.370597Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:30.372334Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:32.375573Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:32.377547Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:34.380735Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:34.382586Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:36.385933Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:36.387974Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:38.391307Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:38.393774Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:40.398969Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:40.401434Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:42.406458Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:42.409094Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:44.412351Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:44.414541Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:46.417603Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:46.419871Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:48.423028Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:48.424879Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:50.428069Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:50.429994Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:52.433176Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:52.435424Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:54.439170Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:54.441009Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:56.443725Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:56.445956Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:07:58.449259Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:07:58.451202Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:00.454673Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:00.456818Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:02.460074Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:02.462010Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:04.465191Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:04.467817Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:06.471977Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:06.475908Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:08.480115Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:08.482286Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:10.486149Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:10.488631Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:12.493108Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:12.494847Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:14.498363Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:14.500141Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:16.503511Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:16.505266Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:18.507948Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:18.509794Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:20.512961Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:20.514821Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:22.518087Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:22.521494Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:24.525538Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:24.528633Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:26.534028Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:26.537609Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:28.543090Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:28.545335Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:30.549659Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:30.551430Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:32.554583Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:32.556231Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:34.558929Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:34.561028Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:36.563743Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:36.565878Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:38.569247Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:38.571308Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:40.574665Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:40.576531Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:42.579851Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:42.582329Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:44.586660Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:44.588467Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:46.591588Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:46.593193Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:48.596048Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:48.598661Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:50.602924Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:50.604667Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:52.607830Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:52.609582Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:54.612920Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:54.614699Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:56.618809Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:56.620576Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:08:58.623904Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:08:58.626104Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:00.628859Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:00.630626Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:02.633806Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:02.635641Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:04.638826Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:04.640629Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:06.643794Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:06.645548Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:08.648797Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:08.650638Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:10.654015Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:10.656512Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:12.660913Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:12.663437Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:14.668672Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:14.671082Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:16.676426Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:16.678013Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:18.681268Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:18.683642Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:20.688782Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:20.692948Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:22.697031Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:22.698865Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:24.702082Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:24.704581Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:26.707765Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:26.709692Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:28.712881Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:28.715204Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:30.718399Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:30.720462Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:32.723560Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:32.725359Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:34.728551Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:34.730608Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:36.733851Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:36.736958Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:38.740246Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:38.742146Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:40.745371Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:40.748573Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:42.751731Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:42.754307Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:44.759694Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:44.762058Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:46.767228Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:46.769280Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:48.772427Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:48.774234Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:50.777465Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:50.779238Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:52.782572Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:52.786704Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:54.789986Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:54.791705Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:56.794429Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:56.796518Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:09:58.799789Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:09:58.802372Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:00.805655Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:00.807394Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:02.810675Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:02.813622Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:04.816834Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:04.818628Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:06.821798Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:06.823878Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:08.826627Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:08.828399Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:10.831765Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:10.833604Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:12.836374Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:12.837978Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:14.840637Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:14.842428Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:16.845583Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:16.847726Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:18.851243Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:18.853131Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:20.856307Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:20.858011Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:22.861386Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:22.866902Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:24.869858Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:24.871956Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:26.876152Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:26.878314Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:28.882365Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:28.884447Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:30.887641Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:30.889449Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:32.892851Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:32.894879Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:34.898239Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:34.900150Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:36.902943Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:36.906083Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:38.910035Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:38.912371Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:40.915624Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:40.917712Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:42.921008Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:42.923685Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:44.926427Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:44.931178Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:46.934405Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:46.936221Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:48.939390Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:48.941882Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:50.945557Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:50.947982Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:52.950734Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:52.952394Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:54.955486Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:54.957087Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:56.959701Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:56.961379Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:10:58.964143Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:10:58.965955Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:00.968646Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:00.970278Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:02.972955Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:02.976906Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:04.980221Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:04.982476Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:06.985961Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:06.988502Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:08.991894Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:08.994199Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:10.997654Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:10.999762Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:13.003134Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:13.004822Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:15.008021Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:15.009692Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:17.012479Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:17.014395Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:19.017670Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:19.019527Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:21.022973Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:21.024745Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:23.028087Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:23.031721Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:25.035108Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:25.036980Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:27.040475Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:27.045444Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:29.048465Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:29.050988Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:31.054274Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:31.056104Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:33.059294Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:33.106487Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:35.110740Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:35.113704Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:37.116970Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:37.119817Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:39.122873Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:39.127146Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:41.131942Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:41.135292Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:43.138533Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:43.140334Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:45.143758Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:45.146376Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:47.149664Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:47.151463Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:49.154859Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:49.158642Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:51.163763Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:51.165680Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:53.168869Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:53.170666Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:55.173846Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:55.175593Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:57.178967Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:57.181280Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:11:59.185597Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:11:59.188563Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:12:01.191400Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:12:01.193578Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:12:03.196254Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:12:03.197966Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:12:05.201155Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:12:05.203288Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:12:07.206647Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[1;31m[2024-05-28T07:12:07.210799Z] [error] [pid:29888] Widget not found by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:12:09.214317Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:12:09.896629Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:12:10.899097Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?type=YRichText
+[0m[37m[2024-05-28T07:12:11.902838Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?type=YRichText
+[0m[34m[2024-05-28T07:12:12.951021Z] [info] [pid:29888] perform_installation test module finished
+[0m[34m[2024-05-28T07:12:12.952808Z] [info] [pid:29888] logs_from_installation_system test module started
+[0m[34m[2024-05-28T07:13:02.228693Z] [info] [pid:29888] logs_from_installation_system test module finished
+[0m[34m[2024-05-28T07:13:02.231748Z] [info] [pid:29888] confirm_reboot test module started
+[0m[37m[2024-05-28T07:13:02.232181Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?id=ok
+[0m[37m[2024-05-28T07:13:03.234836Z] [debug] [pid:29888] Finding widget by url: http://localhost:39116/v1/widgets?type=YRichText
+[0m[37m[2024-05-28T07:13:04.237728Z] [debug] [pid:29888] Sending action to widget by url: http://localhost:39116/v1/widgets?action=press&id=ok
+[0m[34m[2024-05-28T07:13:05.287604Z] [info] [pid:29888] confirm_reboot test module finished
+[0m[34m[2024-05-28T07:19:36.121209Z] [info] [pid:29888] grub_set_bootargs test module started
+[0m[34m[2024-05-28T07:20:01.597177Z] [info] [pid:29888] grub_set_bootargs test module finished
+[0m
